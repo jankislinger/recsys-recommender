@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: EX3: Explainable Attribute-aware Item-set Recommendations
+Abstract:
+Existing recommender systems in the e-commerce domain primarily focus on generating a set of relevant items as recommendations; however, few existing systems utilize underlying item attributes as a key organizing principle in presenting recommendations to users. Mining important attributes of items from customer perspectives and presenting them along with item sets as recommendations can provide users more explainability and help them make better purchase decision. In this work, we generalize the attribute-aware item-set recommendation problem, and develop a new approach to generate sets of items (recommendations) with corresponding important attributes (explanations) that can best justify why the items are recommended to users. In particular, we propose a system that learns important attributes from historical user behavior to derive item set recommendations, so that an organized view of recommendations and their attribute-driven explanations can help users more easily understand how the recommendations relate to their preferences. Our approach is geared towards real world scenarios: we expect a solution to be scalable to billions of items, and be able to learn item and attribute relevance automatically from user behavior without human annotations. To this end, we propose a multi-step learning-based framework called Extract-Expect-Explain (EX3), which is able to adaptively select recommended items and important attributes for users. We experiment on a large-scale real-world benchmark and the results show that our model outperforms state-of-the-art baselines by an 11.35% increase on NDCG with adaptive explainability for item set recommendation.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its content and the guidelines provided. Let me start by reading the title and abstract carefully.
+
+The title is &#34;EX3: Explainable Attribute-aware Item-set Recommendations.&#34; From that, I can gather it&#39;s about recommendation systems, specifically ones that are explainable and take item attributes into account. The word &#34;explainable&#34; suggests it deals with transparency or providing reasons behind recommendations.
+
+Looking at the abstract, the authors mention that existing recommender systems in e-commerce focus on generating relevant items but don&#39;t use underlying item attributes effectively when presenting recommendations to users. They propose a system that learns important attributes from user behavior without needing human annotations. The approach is scalable for large datasets and uses a framework called EX3, which includes steps like Extract, Expect, Explain.
+
+So the key themes here are explainability in recommendation systems, attribute-aware recommendations, scalability, real-world applications (like e-commerce), and evaluation through metrics such as NDCG with adaptive explainability. They also mention mining important attributes from user behavior, which ties into learning relevance from data without annotations.
+
+Now, mapping these to categories:
+
+1. **Recommendation Systems**: The article is about developing a recommendation system.
+2. **Explainable AI (XAI)**: It focuses on making recommendations explainable to users.
+3. **Attribute-aware Recommendations**: Deals with using item attributes in recommendations.
+4. **E-commerce Applications**: Since it&#39;s applied in e-commerce.
+5. **Scalability**: The approach is designed to scale for large datasets.
+6. **User Behavior Analysis**: Uses historical user behavior to learn attributes.
+7. **Learning without Annotations (Unsupervised Learning?)**: They mention deriving relevance from user behavior without human annotations, so maybe a category like &#34;Self-supervised Learning&#34; or something similar, but I think &#34;Learning without Annotations&#34; is more precise as per the example categories given.
+8. **Evaluation Metrics**: NDCG and explainability metrics are mentioned.
+9. **Real-world Applications**: The system is tested on real-world data.
+10. **Multi-step Frameworks**: EX3 has multiple steps (Extract, Expect, Explain), so this could be a category.
+
+Wait, looking at the example categories provided earlier: Family of algorithm, Domain of problem, Specific recommendation aspects, evaluation aspects, real-world applications. So I need to make sure each article is in 8-12 relevant categories.
+
+From my initial list:
+
+- Recommendation Systems (domain)
+- Explainable AI/XAI (aspect of recommendations)
+- Attribute-aware Recommendations
+- E-commerce
+- Scalability (algorithm aspect)
+- User Behavior Analysis (maybe falls under evaluation or another category)
+- Learning without Annotations (algorithm aspect)
+- Evaluation Metrics (aspects like NDCG and explainability)
+- Real-world Applications (since they tested it on real data)
+- Multi-step Frameworks
+
+I might need to adjust some of these. Let&#39;s see:
+
+1. **Recommendation Systems**: Core domain.
+2. **Explainable AI/XAI**: Important aspect as the system provides explanations.
+3. **Attribute-aware Recommendations**: Specific technique used.
+4. **E-commerce Applications**: Domain application.
+5. **Scalability**: Algorithm feature, important for real-world use.
+6. **Learning from User Behavior**: Technique used to derive attributes.
+7. **Unsupervised Learning** or &#34;Learning without Annotations&#34;: Since they don&#39;t use human annotations but learn from behavior.
+8. **Evaluation Metrics (e.g., NDCG)**: They mention using NDCG as a metric.
+9. **Real-world Applications**: Tested on real data, so this fits.
+10. **Multi-step Frameworks**: EX3 has multiple steps.
+
+Wait, the user&#39;s example output included categories like &#34;Explainability,&#34; which is more concise than XAI or Explainable AI. Maybe I should use that instead for brevity and clarity.
+
+Also, looking back at the example workflow: assign each article to 8-12 categories. So let me compile a list:
+
+1. **Recommendation Systems**: Primary domain.
+2. **Explainability**: Focuses on making recommendations understandable.
+3. **Attribute-aware Recommendations**: Central to their approach.
+4. **E-commerce**: Application area.
+5. **Scalability**: System is scalable for large datasets.
+6. **User Behavior Analysis**: Uses user data to learn attributes.
+7. **Learning without Annotations**: No human annotations used; learns from behavior.
+8. **Evaluation Metrics**: They use NDCG and explainability metrics.
+9. **Real-world Applications**: Tested in real-world settings.
+10. **Multi-step Frameworks**: The EX3 framework has multiple steps.
+
+That&#39;s 10 categories, which fits within the 8-12 range. I think this covers all key aspects of the article: the domain (recommendation systems and e-commerce), specific techniques (attribute-aware, explainability), algorithmic considerations (scalability, learning without annotations), evaluation (metrics), application context (real-world), and framework structure.
+
+I should ensure that each category is clear and user-friendly. For example, &#34;Learning without Annotations&#34; might be a bit wordy; maybe &#34;Self-supervised Learning&#34; or &#34;Unsupervised Learning,&#34; but since the article specifically mentions learning from behavior without annotations, perhaps the former is more accurate.
+
+Alternatively, if &#34;Attribute-aware Recommendations&#34; can be considered part of the family of algorithms (like Matrix Factorization), but in this case, it&#39;s a specific approach within recommendation systems. So keeping it as a separate category makes sense.
+
+I think I&#39;ve covered all necessary categories without overlapping too much. Each one adds value for users exploring content.
+&lt;/think&gt;
+
+Recommendation Systems, Explainability, Attribute-aware Recommendations, E-commerce, Scalability, Learning without Annotations, User Behavior Analysis, Evaluation Metrics, Real-world Applications, Multi-step Frameworks</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: EX3: Explainable Attribute-aware Item-set Recommendations
+Abstract:
+Existing recommender systems in the e-commerce domain primarily focus on generating a set of relevant items as recommendations; however, few existing systems utilize underlying item attributes as a key organizing principle in presenting recommendations to users. Mining important attributes of items from customer perspectives and presenting them along with item sets as recommendations can provide users more explainability and help them make better purchase decision. In this work, we generalize the attribute-aware item-set recommendation problem, and develop a new approach to generate sets of items (recommendations) with corresponding important attributes (explanations) that can best justify why the items are recommended to users. In particular, we propose a system that learns important attributes from historical user behavior to derive item set recommendations, so that an organized view of recommendations and their attribute-driven explanations can help users more easily understand how the recommendations relate to their preferences. Our approach is geared towards real world scenarios: we expect a solution to be scalable to billions of items, and be able to learn item and attribute relevance automatically from user behavior without human annotations. To this end, we propose a multi-step learning-based framework called Extract-Expect-Explain (EX3), which is able to adaptively select recommended items and important attributes for users. We experiment on a large-scale real-world benchmark and the results show that our model outperforms state-of-the-art baselines by an 11.35% increase on NDCG with adaptive explainability for item set recommendation.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me read through the information carefully.
+
+The title is &#34;EX3: Explainable Attribute-aware Item-set Recommendations.&#34; So it&#39;s about recommendations in e-commerce, focusing on items and their attributes. The abstract mentions that existing systems don&#39;t use item attributes much for presenting recommendations, which affects explainability. The article proposes a system that learns important attributes from user behavior to create item sets with explanations.
+
+Key points:
+- Recommender systems in e-commerce.
+- Attribute-aware item-set recommendations.
+- Explainable recommendations.
+- Scalability (billions of items).
+- Real-world applications like user behavior analysis.
+- Evaluation aspects like NDCG improvement.
+
+Now, mapping these to categories. The main focus is on explainable and attribute-based recommendations. So the primary category would be &#34;Explainable Recommendations.&#34; Since it&#39;s about item sets, &#34;Item Set Recommendations&#34; fits. It also deals with attributes, so &#34;Attribute-Aware.&#34;
+
+Scalability is mentioned as a requirement, so that&#39;s another category. Evaluation metrics like NDCG are part of evaluation aspects, so &#34;Evaluation Metrics.&#34; The system uses real-world applications, specifically user behavior data, so &#34;Real-World Applications&#34; applies.
+
+The approach involves machine learning, which ties into recommendation algorithms, so &#34;Recommendation Algorithms.&#34; Lastly, it addresses the e-commerce domain, so that&#39;s another category.
+
+I think these cover all aspects without being too specific or too broad. Each category should have enough articles to be useful.
+&lt;/think&gt;
+
+Explainable Recommendations, Item Set Recommendations, Attribute-Aware, Scalability, Real-World Applications, Evaluation Metrics, Recommendation Algorithms, E-Commerce</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

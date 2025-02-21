@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Tool for Explainable Pension Fund Recommendations using Large Language Models
+Abstract:
+In this demo, we present a prototype tool designed to help financial advisors recommend private pension funds to investors based on their preferences, offering personalized investment suggestions. The tool leverages Large Language Models (LLMs), which enhance explainability by providing clear and understandable rationales for recommendations and effectively handles both sequential and cold-start scenarios. We outline the design, implementation, and results of a user-based evaluation using real-world data. The evaluation shows a high recommendation acceptance rate among financial advisors, highlighting the tool’s potential to improve decision-making in financial advisory services.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article about a tool for explainable pension fund recommendations using Large Language Models. Let me break it down step by step.
+
+First, looking at the title: It mentions &#34;Explainable Pension Fund Recommendations&#34; and uses LLMs. So right away, I think categories like Explainability and Large Language Models are relevant.
+
+The abstract talks about financial advisors recommending private pension funds based on investor preferences. That makes me think of domains like Financial Services or maybe Wealth Management as specific areas.
+
+It also mentions personalized investment suggestions, which points to Personalization in recommendations. The tool uses LLMs, so that&#39;s another category. Explainability is highlighted again because the tool provides clear rationales, so that should definitely be included.
+
+The article addresses both sequential and cold-start scenarios. Cold Start is a specific issue in recommendation systems, so that&#39;s an important category to include. There&#39;s also mention of user evaluation with real-world data, which suggests A/B Test or User Evaluation categories, but since it&#39;s a demo tool, maybe Real-World Applications would fit better.
+
+The evaluation shows high acceptance among financial advisors, indicating effectiveness in decision-making. So aspects like Decision-Making and Financial Advisory could be relevant categories.
+
+Considering the user-centric design, categories should align with what users (like financial advisors) are interested in. They might look for tools that help them make decisions, provide explanations, or handle cold-start problems in their domain.
+
+I also need to ensure a balanced distribution across categories without overcrowding any single category. Each article can be part of multiple categories, so including specific ones like Pension Fund Recommendations and general ones like Financial Services makes sense.
+
+So compiling all these thoughts, the relevant categories should include Algorithm (LLMs), Domain (Financial Services, Wealth Management), Recommendation aspects (Personalization, Cold Start), Evaluation methods (Real-World Applications, User Evaluation?), and application areas (Decision-Making in Financial Advisory).
+
+Wait, maybe instead of A/B Test, since it&#39;s an evaluation using real data, Real-World Applications is better. Also, Explainability is a key feature here, so that should definitely be included.
+
+Putting it all together, the categories I came up with are: Explainable AI, Large Language Models, Pension Fund Recommendations, Financial Services, Wealth Management, Personalization, Cold Start, Recommendation Systems, Real-World Applications, User Evaluation. Wait, but maybe some of these can be grouped or rephrased for clarity.
+
+Alternatively, considering category labels should be clear and concise, perhaps &#34;Explainability&#34; instead of Explainable AI, &#34;Real-World Applications&#34; as mentioned, and others like &#34;Financial Domain,&#34; &#34;Wealth Management,&#34; etc.
+
+But looking back at the examples given in the guidelines, categories like Family of algorithm (e.g., Matrix Factorization), Domain of problem (Books, Movies, Healthcare, Education), something specific in recommendation space (Cold Start), aspects of evaluation (Diversity of Recommendations), real-world applications (A/B Test, User Survey).
+
+So perhaps:
+
+- Algorithm: Large Language Models
+- Domain: Financial Services, Wealth Management
+- Recommendation Features: Explainability, Personalization, Cold Start
+- Evaluation: Real-World Applications, User Survey or Evaluation
+
+But the example given in the output format uses terms like &#34;Scalability, Web Systems, Implicit Feedback,&#34; so perhaps using similar terminology.
+
+Alternatively, considering the tool&#39;s use case, maybe categories like Financial Advisory Services, Decision-Making Support, etc., could also apply.
+
+Hmm, I think to cover all aspects without overcrowding, the main relevant categories would be: Explainable AI (or Explainability), Large Language Models, Pension Fund Recommendations, Financial Domain or Financial Services, Wealth Management, Personalization, Cold Start, Recommendation Systems, Real-World Applications, and User Evaluation. But since the output requires 8-12 categories, maybe some can be combined.
+
+Wait, let me see: The article uses LLMs (so Large Language Models), it&#39;s in the financial domain specifically pension funds (Financial Services, Wealth Management, Pension Fund Recommendations), explains recommendations (Explainability), personalizes them (Personalization), handles cold start (Cold Start), evaluated with real data (Real-World Applications), and the tool is for financial advisors to help decision-making (Decision-Making Support). 
+
+So perhaps the categories are: Explainability, Large Language Models, Financial Services, Wealth Management, Pension Fund Recommendations, Personalization, Cold Start, Real-World Applications, Decision-Making.
+
+But looking back at the user&#39;s example, they used &#34;Scalability, Web Systems, Implicit Feedback,&#34; which are concise. Maybe I should adjust to similar brevity.
+
+Alternatively, categories could be: Explainable AI, Large Language Models, Financial Domain, Wealth Management, Personalization, Cold Start, Real-World Applications, User Evaluation, Recommendation System.
+
+Wait, but the output needs to be 8-12 comma-separated keywords. Let me see:
+
+Explainability, Large Language Models, Pension Funds, Financial Services, Wealth Management, Personalization, Cold Start, Decision-Making, User Evaluation, Real-World Applications.
+
+That&#39;s 10 categories. Maybe I can adjust some for clarity and relevance.
+&lt;/think&gt;
+
+Explainability, Large Language Models, Financial Services, Wealth Management, Personalization, Cold Start, Pension Fund Recommendations, Decision-Making, User Evaluation, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

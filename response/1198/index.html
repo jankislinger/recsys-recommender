@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: User knowledge prompt for sequential recommendation
+Abstract:
+The large language model (LLM) based recommendation system is effective for sequential recommendation, because general knowledge of popular items is included in the LLM. To add domain knowledge of items, the conventional method uses a knowledge prompt obtained from the item knowledge graphs and has achieved SOTA performance. However, for personalized recommendation, it is necessary to consider user knowledge, which the conventional method does not fully consider because user knowledge is not included in the item knowledge graphs; thus, we propose a user knowledge prompt, which converts a user knowledge graph into a prompt using the relationship template. The existing prompt denoising framework is extended to prevent hallucination caused by undesirable interactions between knowledge graph prompts. We propose user knowledge prompts of user traits and user preferences and associate relevant items. Experiments on three types of dataset (movie, music, and book) show the significant and consistent improvement of our proposed user knowledge prompt.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article about a user knowledge prompt for sequential recommendation. The title is &#34;User knowledge prompt for sequential recommendation,&#34; and the abstract talks about using large language models (LLMs) in recommendation systems. They mention that LLMs are effective because they include general knowledge of popular items. But the conventional method uses a knowledge prompt from item knowledge graphs, which doesn&#39;t fully consider user knowledge.
+
+The authors propose adding a user knowledge prompt by converting user traits and preferences into prompts using relationship templates. They also extend an existing prompt denoising framework to prevent hallucination issues between the prompts. Their experiments show significant improvement across movie, music, and book datasets.
+
+Alright, so I need to assign this article to multiple categories based on the guidelines provided. Let me break it down step by step.
+
+First, looking at the family of algorithms mentioned. They&#39;re using large language models (LLMs) for recommendations. So that&#39;s one category: Large Language Models (LLMs). They also talk about knowledge graphs and prompt engineering, which are techniques used in recommendation systems. So categories here could be Knowledge Graphs and Prompt Engineering.
+
+Next, considering the domain of the problem. The experiments were done on movies, music, and books, so those are specific domains to include: Movies, Music, Books.
+
+Specific aspects within recommendation space—sequential recommendations are a key area, so Sequential Recommendations is another category. They mention cold start issues but I&#39;m not sure if this article addresses it directly; maybe better to skip unless clearly stated. They talk about user knowledge and personalization, so User Modeling and Personalized Recommendation fit here as well.
+
+Evaluation aspects: The study uses experiments on datasets across different domains, which implies empirical evaluation. So Empirical Evaluation is a relevant category.
+
+Real-world applications: They mention using A/B tests and user surveys in examples but the abstract doesn&#39;t explicitly state they used these methods. However, since their prompts are applied to real recommendation scenarios, maybe Real-World Applications could be included, but I&#39;m not entirely sure if that&#39;s explicit enough.
+
+Other relevant categories might include Prompt Denoising (since they extended a framework for this), User Preferences and Traits as specific user aspects addressed.
+
+So compiling all these points:
+
+1. Large Language Models (LLMs) - because the system is LLM-based.
+2. Knowledge Graphs - used in their approach with item and user knowledge.
+3. Sequential Recommendations - main focus area.
+4. Personalized Recommendation - they emphasize personalization through user knowledge.
+5. Prompt Engineering - creating user prompts.
+6. Movies, Music, Books - domains tested.
+7. User Modeling - since they model user traits and preferences.
+8. Empirical Evaluation - as they conducted experiments across datasets.
+
+Wait, that&#39;s 8 categories. Maybe I can include more to reach the 8-12 range.
+
+Looking again: They also talk about preventing hallucination using a denoising framework, so Prompt Denoising is another category. Also, User Preferences and Traits are specific aspects addressed, which could be separate or combined under User Modeling. Alternatively, considering it as part of Personalized Recommendation might suffice, but to make it more granular, maybe split them.
+
+Also, the extension of existing frameworks suggests an aspect of Methodology or Frameworks. But since they extended a denoising framework specifically related to prompts, Prompt Denoising is better.
+
+So revised list:
+
+1. Large Language Models (LLMs)
+2. Knowledge Graphs
+3. Sequential Recommendations
+4. Personalized Recommendation
+5. Prompt Engineering
+6. Movies
+7. Music
+8. Books
+9. User Modeling
+10. Empirical Evaluation
+11. Prompt Denoising
+
+That&#39;s 11 categories, which fits the 8-12 range. Alternatively, if some can be combined, like under Domain of Problem, but since they are specific domains (Movies, Music, Books), it&#39;s better to keep them separate for discoverability.
+
+I think this covers all relevant aspects: the algorithm family, problem domain, recommendation specifics, user aspects, evaluation methods, and technical approaches used in the article. This should help users find the article when searching under any of these categories.
+&lt;/think&gt;
+
+Large Language Models (LLMs), Knowledge Graphs, Sequential Recommendations, Personalized Recommendation, Prompt Engineering, Movies, Music, Books, User Modeling, Empirical Evaluation, Prompt Denoising</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

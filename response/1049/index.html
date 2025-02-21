@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Instructing and Prompting Large Language Models for Explainable Cross-domain Recommendations
+Abstract:
+In this paper, we present a strategy to provide users with explainable cross-domain recommendations (CDR) that exploits large language models (LLMs). Generally speaking, cross-domain recommender systems typically suffer of data sparsity issues, since they require a large amount of data labeled in both base and target domains, which are not easy to collect. Accordingly, our approach relies on the intuition that the knowledge that is already encoded in LLMs can be used to bridge the domains and seamlessly provide users with personalized cross-domain suggestions. To this end, we designed a pipeline to: (a) instruct a LLM to handle a CDR task; (b) design a personalized prompt, based on the preferences of the user in a base domain, in both zero-shot and one-shot settings; (c) feed the LLM with the prompt, and process the answer in order to extract the recommendations in a target domain, together with a natural language explanation supporting the suggestion. As shown in the experimental evaluation, our approach beats several established state-of-the-art baselines for CDR in most of the experimental settings, thus showing the effectiveness of LLMs also in this novel and scarcely investigated scenario.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article into multiple relevant categories based on its title and abstract. Let&#39;s break it down step by step.
+
+First, looking at the title: &#34;Instructing and Prompting Large Language Models for Explainable Cross-domain Recommendations.&#34; The key terms here are &#34;Large Language Models (LLMs),&#34; &#34;Explainable,&#34; and &#34;Cross-domain Recommendations.&#34;
+
+The abstract mentions that cross-domain recommender systems often face data sparsity issues because they require a lot of labeled data across different domains. To tackle this, the authors use LLMs to bridge these domains by instructing them and designing personalized prompts. They also extract recommendations with natural language explanations.
+
+Now, I need to map these elements into appropriate categories. Let&#39;s consider each part:
+
+1. **Large Language Models (LLMs)**: This is a specific algorithm family, so that should be one category.
+2. **Cross-domain Recommendations**: That&#39;s a specific area within recommendation systems, so another category here.
+3. **Explainable Recommendations**: Since the system provides explanations, this aspect of evaluation is important.
+4. **Recommendation Systems**: The broader domain where this falls under.
+5. **Personalization**: Because they&#39;re tailoring recommendations based on user preferences.
+6. **Zero-shot and One-shot Learning**: These are techniques used in machine learning for handling data scarcity.
+7. **Data Sparsity**: A common challenge addressed here, so it&#39;s a relevant category.
+8. **Natural Language Processing (NLP)**: Since LLMs are involved in processing language.
+
+I should also think about other categories that might fit but aren&#39;t explicitly mentioned. The pipeline they designed uses instructions and prompts, which relates to how models are applied for specific tasks, so &#34;Instruction Following&#34; or similar could be another category. Additionally, since the approach is novel, it&#39;s a cutting-edge method in recommendation systems.
+
+Putting this together, I think the categories should include both broad areas like Recommendation Systems and specific techniques like Cross-domain Recommendations. Also, including evaluation aspects like Explainability ensures that users interested in understanding how recommendations are made can find this article. The technical methods used, such as LLMs and Zero-shot Learning, are important for categorization to help others working on similar problems.
+
+I should ensure each category is clear and user-friendly. Maybe &#34;Large Language Models&#34; instead of just &#34;LLMs&#34; for clarity. Also, considering that the approach improves upon existing baselines, it&#39;s a state-of-the-art method, which might be another category but perhaps more specific than needed here.
+
+After reviewing, I think I have all the relevant categories covered without being too redundant or overlapping.
+&lt;/think&gt;
+
+Large Language Models (LLMs), Cross-domain Recommendations, Explainable Recommendations, Recommendation Systems, Personalization, Zero-shot Learning, One-shot Learning, Data Sparsity, Natural Language Processing (NLP), Instruction Following</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

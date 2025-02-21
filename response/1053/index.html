@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Not All Videos Become Outdated: Short-Video Recommendation by Learning to Deconfound Release Interval Bias
+Abstract:
+Short-video recommender systems often exhibit a biased preference to recently released videos. However, not all videos become outdated; certain classic videos can still attract user’s attention. Such bias along temporal dimension can be further aggravated by the matching model between users and videos, because the model learns from preexisting interactions. From real data, we observe that different videos have varying sensitivities to recency in attracting users’ attention. Our analysis, based on a causal graph modeling short-video recommendation, suggests that the release interval serves as a confounder, establishing a backdoor path between users and videos. To address this confounding effect, we propose a model-agnostic causal architecture called Learning to Deconfound the Release Interval Bias (LDRI). LDRI enables jointly learning of the matching model and the video recency sensitivity perceptron. In the inference stage, we apply a backdoor adjustment, effectively blocking the backdoor path by intervening on each video. Extensive experiments on two benchmarks demonstrate that LDRI consistently outperforms backbone models and exhibits superior performance against state-of-the-art models. Additional comprehensive analyses confirm the deconfounding capability of LDRI. Our code is available online: https://anonymous.4open.science/r/LDRI/.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to help create a user-friendly interface where users can easily find the content they&#39;re interested in.
+
+First, looking at the title: &#34;Not All Videos Become Outdated: Short-Video Recommendation by Learning to Deconfound Release Interval Bias.&#34; It mentions short-video recommendation systems, so that&#39;s a primary category. The focus seems to be on addressing bias related to the release interval of videos. So, I should include categories related to bias mitigation and temporal dynamics.
+
+The abstract discusses how short-video recommenders often prefer recent videos, but some classic ones remain popular. This indicates issues with temporal aspects and bias in recommendation systems. Therefore, categories like Temporal Dynamics and Bias Mitigation are relevant.
+
+They propose a model called LDRI which is causal in nature. So, Causal Inference should be another category. Since the approach doesn&#39;t depend on a specific algorithm, it&#39;s model-agnostic, so that&#39;s another important category.
+
+The article also talks about user-video matching models and how they learn from existing interactions. This relates to User Modeling or maybe Matching Models specifically. Additionally, since the solution is applied in recommendation systems, categories like Recommendation Systems and Short-Video Recommendations are necessary.
+
+They mention extensive experiments on benchmarks, which ties into Evaluation Methods, so that should be included. The approach addresses confounding effects, which falls under Confounding Variables. Also, their method adjusts for recency sensitivity, so another category could be Recency Sensitivity.
+
+Putting it all together, the categories should cover the specific techniques used (Causal Inference, Model Agnostic), the problem addressed (Bias Mitigation, Temporal Dynamics), the application area (Recommendation Systems, Short-Video Recommendations), the methodological aspects (Evaluation Methods, User Modeling, Matching Models), and the specific issue tackled (Confounding Variables, Recency Sensitivity).
+
+I need to ensure that each category is clear and descriptive. Also, I should have at least 8-12 categories as per guidelines. Let me list them out:
+
+1. Recommendation Systems - The main application area.
+2. Short-Video Recommendations - Specific to the domain of short videos.
+3. Bias Mitigation - Addressing the bias in recommendations.
+4. Temporal Dynamics - Dealing with time-related aspects.
+5. Model Agnostic - The method isn&#39;t tied to a specific algorithm.
+6. Causal Inference - Uses causal models to address issues.
+7. User Modeling - Relates to understanding user behavior.
+8. Evaluation Methods - Discusses experiments and benchmarking.
+9. Matching Models - Focuses on matching users with videos.
+10. Confounding Variables - Addresses confounding factors in recommendations.
+11. Recency Sensitivity - Deals with how recent content affects recommendations.
+
+That should cover all the necessary aspects without overcrowding any single category. These categories are specific enough to be useful and broad enough to include related articles, making navigation intuitive for users interested in recommendation systems, bias issues, or causal methods.
+&lt;/think&gt;
+
+Recommendation Systems, Short-Video Recommendations, Bias Mitigation, Temporal Dynamics, Model Agnostic, Causal Inference, User Modeling, Evaluation Methods, Matching Models, Confounding Variables, Recency Sensitivity</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Not All Videos Become Outdated: Short-Video Recommendation by Learning to Deconfound Release Interval Bias
+Abstract:
+Short-video recommender systems often exhibit a biased preference to recently released videos. However, not all videos become outdated; certain classic videos can still attract user’s attention. Such bias along temporal dimension can be further aggravated by the matching model between users and videos, because the model learns from preexisting interactions. From real data, we observe that different videos have varying sensitivities to recency in attracting users’ attention. Our analysis, based on a causal graph modeling short-video recommendation, suggests that the release interval serves as a confounder, establishing a backdoor path between users and videos. To address this confounding effect, we propose a model-agnostic causal architecture called Learning to Deconfound the Release Interval Bias (LDRI). LDRI enables jointly learning of the matching model and the video recency sensitivity perceptron. In the inference stage, we apply a backdoor adjustment, effectively blocking the backdoor path by intervening on each video. Extensive experiments on two benchmarks demonstrate that LDRI consistently outperforms backbone models and exhibits superior performance against state-of-the-art models. Additional comprehensive analyses confirm the deconfounding capability of LDRI. Our code is available online: https://anonymous.4open.science/r/LDRI/.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article about short-video recommendation systems. Let&#39;s start by reading through the title and abstract carefully.
+
+The title mentions &#34;Short-Video Recommendation&#34; and talks about learning to deconfound release interval bias. That suggests they&#39;re dealing with temporal aspects of video popularity and trying to correct for biases in their models.
+
+Looking at the abstract, the main issue is that recommendation systems prefer recent videos, but some classic ones can still be popular. They&#39;ve identified that release intervals act as a confounder, affecting how users interact with videos. Their solution is LDRI, which uses causal modeling to adjust for this bias.
+
+Key themes here are temporal dynamics in recommendations, causality, and model adjustment. The domain is clearly recommendation systems within the short-video space. They&#39;re addressing issues like recency bias and dealing with evaluation metrics related to model accuracy and beyond that.
+
+Since they propose a new method and compare it against existing models, this falls under methodology advancements. The fact that their solution improves performance suggests it&#39;s effective, which ties into evaluation aspects like effectiveness and generalizability.
+
+So, breaking down the categories:
+
+1. **Short Video**: Directly from the domain.
+2. **Recommendation Systems**: Core area of study.
+3. **Temporal Dynamics**: Related to how time affects recommendations.
+4. **Causality**: Their approach uses causal graphs to model the problem.
+5. **Bias and Fairness**: They&#39;re addressing release interval bias, which is a fairness issue in recommendation.
+6. **Evaluation Metrics**: Their experiments show improvements over existing models, touching on evaluation.
+7. **Model-Agnostic Methods**: LDRI is model-agnostic, so that&#39;s relevant.
+8. **Real-World Applications**: The solution addresses a real problem faced by recommendation systems.
+9. **Debiasing Techniques**: Specifically targeting release interval bias.
+
+I think these cover the main aspects without making any category too narrow or too broad. Each should be useful and have enough articles if more come in. I don&#39;t see any other major themes that need categorizing here.
+&lt;/think&gt;
+
+Short-Video, Recommendation Systems, Temporal Dynamics, Causality, Bias and Fairness, Evaluation Metrics, Model-Agnostic Methods, Real-World Applications, Debiasing Techniques</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt &amp; Predict Paradigm (P5)
+Abstract:
+For a long time, different recommendation tasks require designing task-specific architectures and training objectives. As a result, it is hard to transfer the knowledge and representations from one task to another, thus restricting the generalization ability of existing recommendation approaches. To deal with such issues, considering that language can describe almost anything and language grounding is a powerful medium to represent various problems or tasks, we present a flexible and unified text-to-text paradigm called “Pretrain, Personalized Prompt, and Predict Paradigm” (P5) for recommendation, which unifies various recommendation tasks in a shared framework. In P5, all data such as user-item interactions, user descriptions, item metadata, and user reviews are converted to a common format — natural language sequences. The rich information from natural language assists P5 to capture deeper semantics for personalization and recommendation. Specifically, P5 learns different tasks with the same language modeling objective during pretraining. Thus, it serves as the foundation model for various downstream recommendation tasks, allows easy integration with other modalities, and enables instruction-based recommendation. P5 advances recommender systems from shallow model to deep model to big model, and will revolutionize the technical form of recommender systems towards universal recommendation engine. With adaptive personalized prompt for different users, P5 is able to make predictions in a zero-shot or few-shot manner and largely reduces the necessity for extensive fine-tuning. On several benchmarks, we conduct experiments to show the effectiveness of P5. To help advance future research on Recommendation as Language Processing (RLP), Personalized Foundation Models (PFM), and Universal Recommendation Engine (URE), we release the source code, dataset, prompts, and pretrained P5 model at https://github.com/jeykigung/P5.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article into multiple relevant categories based on its content. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt &amp; Predict Paradigm (P5)&#34;. Hmm, that suggests it&#39;s about recommendation systems using language processing techniques. The acronym P5 stands out—Pretrain, Personalized Prompt, and Predict Paradigm.
+
+Looking at the abstract, it mentions that different recommendation tasks require task-specific architectures, which limits transferability. So they propose a unified framework called P5 that converts various data types into natural language sequences. They talk about pretraining on language modeling objectives to create a foundation model for downstream tasks. This sounds like it&#39;s leveraging NLP techniques in recommendation systems.
+
+They also mention personalized prompts and zero-shot or few-shot predictions, which reduces the need for extensive fine-tuning. The experiments are conducted on several benchmarks, showing effectiveness. They&#39;re releasing code, datasets, etc., so there&#39;s a real-world application aspect here with their framework.
+
+Now, thinking about the categories:
+
+1. **Algorithm Family**: Since they mention pretraining and language models, it&#39;s related to Language Models in recommendation.
+2. **Unified Frameworks**: P5 is a unified approach that brings together different recommendation tasks under one paradigm.
+3. **Personalization**: The system uses personalized prompts for predictions, so this is key.
+4. **Natural Language Processing (NLP)**: Clearly central to their approach, using text data for recommendations.
+5. **Foundation Models**: They&#39;re creating a foundation model for various downstream tasks, which is a big trend in ML.
+6. **Transfer Learning**: The idea of transferring knowledge across different recommendation tasks fits here.
+7. **Zero-shot/Few-shot Learning**: Their method enables predictions without extensive fine-tuning, so this category applies.
+8. **Real-world Applications**: They&#39;ve developed and released a model, which is applied in real scenarios.
+
+I think these cover the main aspects. Maybe also consider scalability or evaluation metrics, but the abstract doesn&#39;t go into much detail on those. The focus seems more on the methodological approach rather than specific evaluations beyond showing effectiveness through experiments.
+&lt;/think&gt;
+
+Language Models, Unified Frameworks, Personalization, Natural Language Processing (NLP), Foundation Models, Transfer Learning, Zero-shot/Few-shot Learning, Real-world Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt &amp; Predict Paradigm (P5)
+Abstract:
+For a long time, different recommendation tasks require designing task-specific architectures and training objectives. As a result, it is hard to transfer the knowledge and representations from one task to another, thus restricting the generalization ability of existing recommendation approaches. To deal with such issues, considering that language can describe almost anything and language grounding is a powerful medium to represent various problems or tasks, we present a flexible and unified text-to-text paradigm called “Pretrain, Personalized Prompt, and Predict Paradigm” (P5) for recommendation, which unifies various recommendation tasks in a shared framework. In P5, all data such as user-item interactions, user descriptions, item metadata, and user reviews are converted to a common format — natural language sequences. The rich information from natural language assists P5 to capture deeper semantics for personalization and recommendation. Specifically, P5 learns different tasks with the same language modeling objective during pretraining. Thus, it serves as the foundation model for various downstream recommendation tasks, allows easy integration with other modalities, and enables instruction-based recommendation. P5 advances recommender systems from shallow model to deep model to big model, and will revolutionize the technical form of recommender systems towards universal recommendation engine. With adaptive personalized prompt for different users, P5 is able to make predictions in a zero-shot or few-shot manner and largely reduces the necessity for extensive fine-tuning. On several benchmarks, we conduct experiments to show the effectiveness of P5. To help advance future research on Recommendation as Language Processing (RLP), Personalized Foundation Models (PFM), and Universal Recommendation Engine (URE), we release the source code, dataset, prompts, and pretrained P5 model at https://github.com/jeykigung/P5.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories. The title is &#34;Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt &amp; Predict Paradigm (P5)&#34;. Let me read the abstract carefully.
+
+The article talks about how traditional recommendation systems require task-specific architectures and training objectives, making it hard to transfer knowledge between tasks. They propose a new approach called P5, which stands for Pretrain, Personalized Prompt, and Predict Paradigm. This approach converts various data types like user-item interactions, descriptions, metadata, etc., into natural language sequences. The idea is that language can represent different problems well, so this unified framework helps in capturing deeper semantics for personalization.
+
+They mention that P5 uses the same language modeling objective during pretraining, serving as a foundation model for various downstream tasks. It allows integrating other modalities and enables instruction-based recommendations. This moves recommendation systems from shallow to deep and big models, aiming to create universal recommendation engines. The personalized prompts adapt for different users, allowing zero-shot or few-shot predictions with minimal fine-tuning.
+
+The categories I need to assign should cover the key aspects: the approach (unified paradigm, language processing), the method (pretrain, personalized prompt), applications (recommendation systems), evaluation aspects like generalization and scalability, and maybe something about deep learning or foundation models.
+
+So possible categories could be:
+
+- Unified Recommendation Frameworks
+- Language Processing in Recommendations (RLP)
+- Pretraining Methods
+- Personalized Prompts
+- Zero-Shot Learning
+- Few-Shot Learning
+- Universal Recommender Systems
+- Foundation Models in Recommendation
+- Scalability of Recommendation Systems
+- Generalization in Recommendation Algorithms
+
+I should make sure each category is clear and relevant, and that they cover both the specific methods and broader applications. I need at least 8 categories as per guidelines.
+&lt;/think&gt;
+
+Unified Recommendation Frameworks, Language Processing in Recommendations (RLP), Pretraining Methods, Personalized Prompts, Zero-Shot Learning, Few-Shot Learning, Universal Recommender Systems, Foundation Models in Recommendation, Scalability of Recommendation Systems, Generalization in Recommendation Algorithms</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

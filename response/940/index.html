@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Challenging the Myth of Graph Collaborative Filtering: a Reasoned and Reproducibility-driven Analysis
+Abstract:
+Among the most successful research directions in recommender systems, there are undoubtedly graph neural network-based models (GNNs). Through the natural modeling of users and items as a bipartite, undirected graph, GNNs have pushed up the performance bar for modern recommenders. Unfortunately, most of the original graph-based works cherry-pick results from previous baseline papers without bothering to check whether the results are valid for the configuration under analysis. Thus, our work stands first and foremost as a work on the replicability of results. We provide a code that succeeds in replicating the results proposed in the articles introducing six of the most popular and recent graph recommendation models (i.e., NGCF, DGCF, LightGCN, SGL, UltraGCN, and GFCF). In our experimental setup, we test these six models on three common benchmarking datasets (i.e., Gowalla, Yelp 2018, and Amazon Book). In addition, to understand how these models perform with respect to traditional models for collaborative filtering, we compare the graph models under analysis with some models that have historically emerged as the best performers in an offline evaluation context. Then, the study is extended on two new datasets (i.e., Allrecipes and BookCrossing) for which no known setup exists in the literature. Since the performance on such datasets is not entirely aligned with the previous benchmarking one, we further analyze the possible impact of specific dataset characteristics on the recommendation accuracy performance. By investigating the information flow to the users from their neighborhoods, the analysis aims to identify for which models these intrinsic features in the dataset structure impact accuracy performance. The code to reproduce the experiments is available at: https://split.to/Graph-Reproducibility.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Challenging the Myth of Graph Collaborative Filtering: a Reasoned and Reproducibility-driven Analysis.&#34; So it&#39;s about collaborative filtering using graph neural networks, specifically challenging their effectiveness and focusing on reproducibility.
+
+Looking at the abstract, the article discusses graph-based models (GNNs) in recommender systems. It mentions replicating results from six popular models like NGCF and LightGCN. They test these on datasets such as Gowalla, Yelp 2018, Amazon Book, Allrecipes, and BookCrossing. The study also compares GNN models with traditional collaborative filtering methods.
+
+Now, I need to assign at least 8-12 categories. Let&#39;s go through each guideline step by step.
+
+First, identify core themes: Reproducibility is a big one since they focus on replicating results. Collaborative Filtering is the main area. They use Graph Neural Networks (GNNs) as the family of algorithms. The domains tested are Books and Yelp (which falls under Restaurants or more generally, Business), but looking at datasets like Amazon Book, Allrecipes, and BookCrossing, the domains are Books, Restaurants, and possibly Food/Recipes.
+
+Next, specific aspects in recommendation space: They address issues with reproducibility and the effectiveness of GNN models. Cold Start isn&#39;t directly mentioned, but reproducibility and model analysis are key.
+
+Evaluation aspects: The article looks at accuracy performance and how dataset characteristics affect it, so &#34;Accuracy&#34; and perhaps &#34;Beyond Accuracy&#34; if they discuss other metrics, though the abstract doesn&#39;t specify beyond that. They do mention traditional models, which might relate to diversity or other factors.
+
+Real-world applications aren&#39;t explicitly mentioned beyond datasets, but their focus is more on reproducibility rather than actual real-world deployments like A/B testing.
+
+Other categorizations: The study uses benchmarking and different datasets, so dataset analysis is relevant. They also compare with traditional models, which ties into collaborative filtering methods.
+
+Putting it all together, the categories would include Reproducibility, Collaborative Filtering, Graph Neural Networks, Books, Restaurants, Recommender Systems, Accuracy, Dataset Analysis, Beyond Accuracy, Model Comparison, Traditional Methods, and Evaluation Metrics.
+&lt;/think&gt;
+
+Reproducibility, Collaborative Filtering, Graph Neural Networks, Books, Restaurants, Recommender Systems, Accuracy, Dataset Analysis, Beyond Accuracy, Model Comparison, Traditional Methods, Evaluation Metrics</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Challenging the Myth of Graph Collaborative Filtering: a Reasoned and Reproducibility-driven Analysis
+Abstract:
+Among the most successful research directions in recommender systems, there are undoubtedly graph neural network-based models (GNNs). Through the natural modeling of users and items as a bipartite, undirected graph, GNNs have pushed up the performance bar for modern recommenders. Unfortunately, most of the original graph-based works cherry-pick results from previous baseline papers without bothering to check whether the results are valid for the configuration under analysis. Thus, our work stands first and foremost as a work on the replicability of results. We provide a code that succeeds in replicating the results proposed in the articles introducing six of the most popular and recent graph recommendation models (i.e., NGCF, DGCF, LightGCN, SGL, UltraGCN, and GFCF). In our experimental setup, we test these six models on three common benchmarking datasets (i.e., Gowalla, Yelp 2018, and Amazon Book). In addition, to understand how these models perform with respect to traditional models for collaborative filtering, we compare the graph models under analysis with some models that have historically emerged as the best performers in an offline evaluation context. Then, the study is extended on two new datasets (i.e., Allrecipes and BookCrossing) for which no known setup exists in the literature. Since the performance on such datasets is not entirely aligned with the previous benchmarking one, we further analyze the possible impact of specific dataset characteristics on the recommendation accuracy performance. By investigating the information flow to the users from their neighborhoods, the analysis aims to identify for which models these intrinsic features in the dataset structure impact accuracy performance. The code to reproduce the experiments is available at: https://split.to/Graph-Reproducibility.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article based on its title and abstract. Let me read through them carefully.
+
+The title mentions &#34;Graph Collaborative Filtering&#34; and talks about challenging a myth regarding GNN models in recommendation systems. The abstract explains that the authors are focusing on the replicability of results from several popular graph-based recommendation models like NGCF, DGCF, LightGCN, SGL, UltraGCN, and GFCF. They&#39;ve replicated experiments using these models across various datasets and compared them with traditional collaborative filtering methods.
+
+First, I&#39;ll look for the main themes. The article is about recommender systems, specifically graph-based ones. It&#39;s discussing replicability issues in existing research, so that&#39;s a key point. They&#39;re using benchmark datasets like Gowalla, Yelp 2018, Amazon Book, Allrecipes, and BookCrossing, which are standard in recommendation studies.
+
+The methodology involves experiments with GNNs and traditional models, aiming to understand performance differences across datasets. The analysis includes factors like dataset characteristics and information flow from user neighborhoods.
+
+So, the categories should reflect these elements: the focus on graph-based recommenders, replicability, benchmarking, evaluation methods, performance comparison between models, dataset-specific impacts, reproducibility of results, and perhaps a mention of collaborative filtering in general.
+
+I also need to ensure that each category is clear and user-friendly. The list provided seems comprehensive, covering both specific aspects like &#34;Graph Neural Networks&#34; and broader areas like &#34;Reproducibility.&#34;
+&lt;/think&gt;
+
+Graph-Based Recommenders, Graph Neural Networks (GNNs), Replicability, Benchmark Datasets, Collaborative Filtering, Model Comparison, Dataset Characteristics, Recommendation Accuracy, Experimental Setup, Information Flow Analysis, Reproducible Research, Performance Evaluation</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Challenging the Myth of Graph Collaborative Filtering: a Reasoned and Reproducibility-driven Analysis
+Abstract:
+Among the most successful research directions in recommender systems, there are undoubtedly graph neural network-based models (GNNs). Through the natural modeling of users and items as a bipartite, undirected graph, GNNs have pushed up the performance bar for modern recommenders. Unfortunately, most of the original graph-based works cherry-pick results from previous baseline papers without bothering to check whether the results are valid for the configuration under analysis. Thus, our work stands first and foremost as a work on the replicability of results. We provide a code that succeeds in replicating the results proposed in the articles introducing six of the most popular and recent graph recommendation models (i.e., NGCF, DGCF, LightGCN, SGL, UltraGCN, and GFCF). In our experimental setup, we test these six models on three common benchmarking datasets (i.e., Gowalla, Yelp 2018, and Amazon Book). In addition, to understand how these models perform with respect to traditional models for collaborative filtering, we compare the graph models under analysis with some models that have historically emerged as the best performers in an offline evaluation context. Then, the study is extended on two new datasets (i.e., Allrecipes and BookCrossing) for which no known setup exists in the literature. Since the performance on such datasets is not entirely aligned with the previous benchmarking one, we further analyze the possible impact of specific dataset characteristics on the recommendation accuracy performance. By investigating the information flow to the users from their neighborhoods, the analysis aims to identify for which models these intrinsic features in the dataset structure impact accuracy performance. The code to reproduce the experiments is available at: https://split.to/Graph-Reproducibility.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article based on its title and abstract. Let&#39;s start by reading through them carefully.
+
+The title mentions &#34;graph collaborative filtering&#34; and challenges myths about it through a reproducibility-driven analysis. So the main focus seems to be on graph neural networks (GNNs) in recommendation systems, specifically looking at whether previous studies&#39; results can be replicated.
+
+Looking at the abstract, the authors are focusing on replicating results of popular GNN-based models like NGCF, DGCF, etc., across several datasets. They also compare these models with traditional collaborative filtering methods and analyze how dataset characteristics affect performance.
+
+So first, I should identify the family of algorithms involved. Here, it&#39;s clearly about Graph Collaborative Filtering, which falls under Collaborative Filtering techniques but specifically using graph neural networks. So categories would include &#34;Graph Neural Networks&#34; and &#34;Collaborative Filtering.&#34;
+
+Next, the domain is recommendation systems since they&#39;re evaluating models like these for recommendations. They test on datasets like Gowalla, Yelp, Amazon Books, Allrecipes, BookCrossing—these are all part of the recommendation space, so &#34;Recommendation Systems&#34; is a primary category.
+
+The problem&#39;s aspect here is reproducibility and replicability of results, which is crucial for ensuring the validity of research. So adding &#34;Reproducibility&#34; as a category makes sense.
+
+They also discuss performance comparisons between GNN models and traditional methods, which ties into evaluation aspects like model comparison. So I&#39;ll include &#34;Model Comparison.&#34;
+
+The study uses several datasets, indicating an empirical approach with multiple data sources. Thus, &#34;Empirical Study&#34; fits as a category.
+
+Since the article challenges existing myths and provides a critical analysis of previous work, it&#39;s part of the critical review or analysis in the field. Therefore, &#34;Critical Analysis&#34; should be another category.
+
+The methodology involves replicating experiments and comparing performance across datasets, which relates to experimental design. So adding &#34;Experimental Design&#34; is appropriate.
+
+Lastly, the paper addresses issues in reproducibility, which ties into the broader discussion about research practices and ensuring reliable results—so &#34;Research Practices&#34; as a category.
+
+I should make sure each category is relevant and that there&#39;s enough coverage without being too broad or narrow. Each of these categories seems to fit well with the article&#39;s content and purpose.
+&lt;/think&gt;
+
+Graph Neural Networks, Collaborative Filtering, Recommendation Systems, Reproducibility, Model Comparison, Empirical Study, Critical Analysis, Experimental Design, Research Practices</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

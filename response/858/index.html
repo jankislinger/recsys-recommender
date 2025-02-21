@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: DREAM: Decoupled Representation via Extraction Attention Module and Supervised Contrastive Learning for Cross-Domain Sequential Recommender
+Abstract:
+Cross-Domain Sequential Recommendation(CDSR) aims to generate accurate predictions for future interactions by leveraging users’ cross-domain historical interactions.  One major challenge of CDSR is how to jointly learn the single- and cross-domain user preferences efficiently. To enhance the target domain’s performance, most existing solutions start by learning the single-domain user preferences within each domain and then transferring the acquired knowledge from the rich domain to the target domain. However, this approach ignores the inter-sequence item relationship and also limits the opportunities for target domain knowledge to enhance the rich domain performance. Moreover, it also ignores the information within the cross-domain sequence. Despite cross-domain sequences being generally noisy and hard to learn directly, they contain valuable user behavior patterns with great potential to enhance performance. Another key challenge of CDSR is data sparsity, which also exists in other recommendation system problems. In the real world, the data distribution of the recommendation system is highly skewed to the popular products, especially on the large-scale dataset with millions of users and items. One more challenge is the class imbalance problem, inherited by the Sequential Recommendation problem. Generally, each sample only has one positive and thousands of negative samples. To address the above problems together, an innovative Decoupled Representation via Extraction Attention Module (DREAM) is proposed for CDSR to simultaneously learn single- and cross-domain user preference via decoupled representations. A novel Supervised Contrastive Learning framework is introduced to model the inter-sequence relationship as well as address the data sparsity via data augmentations. DREAM also leverages Focal Loss to put more weight on misclassified samples to address the class-imbalance problem, with another uplift on the overall model performance. Extensive experiments had been conducted on two cross-domain recommendation datasets, demonstrating DREAM outperforms various SOTA cross-domain recommendation algorithms achieving up to a 75% uplift in Movie-Book Scenarios.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s tackle this categorization task for the given research article. The goal is to assign multiple relevant categories to ensure the interface is user-friendly and navigable. 
+
+First, I&#39;ll start by analyzing the title and abstract of the article to identify its core themes. The title mentions &#34;Decoupled Representation via Extraction Attention Module and Supervised Contrastive Learning for Cross-Domain Sequential Recommender.&#34; This indicates that it&#39;s about recommendation systems, specifically focusing on cross-domain sequential recommendations.
+
+Looking at the abstract, the main challenge addressed is how to efficiently learn single- and cross-domain user preferences. The article proposes a method called DREAM, which uses an Extraction Attention Module and Supervised Contrastive Learning. It also mentions tackling data sparsity and class imbalance problems common in recommendation systems.
+
+Now, I need to map these elements into appropriate categories based on the guidelines provided. Let&#39;s go through each aspect:
+
+1. **Algorithm Family**: The article introduces DREAM with Extraction Attention Module (EAM) and Supervised Contrastive Learning (SCL). These are specific techniques used in machine learning, so categories like &#34;Extraction Attention Module,&#34; &#34;Supervised Contrastive Learning,&#34; and &#34;Focal Loss&#34; (used to address class imbalance) fit here.
+
+2. **Domain of the Problem**: The study is within recommendation systems, specifically cross-domain sequential recommendations, which involve different domains like movies and books. So categories such as &#34;Cross-Domain Sequential Recommendation&#34; and &#34;Recommendation Systems&#34; are relevant.
+
+3. **Specific Aspects in Recommender Space**: The article deals with challenges like cold start (though not explicitly mentioned, it&#39;s implied by data sparsity) and decoupled representations. Therefore, categories like &#34;Cold Start,&#34; &#34;Decoupled Representation,&#34; and aspects like &#34;Data Sparsity&#34; and &#34;Class Imbalance&#34; are important.
+
+4. **Evaluation Aspects**: The paper discusses performance improvements using metrics from experiments on datasets, so &#34;Performance Evaluation&#34; is a suitable category.
+
+5. **Real-World Applications**: Although the article doesn&#39;t mention specific applications like A/B testing or user surveys, it does refer to real-world data distribution issues (e.g., skewed towards popular products), which suggests categories related to practical aspects of recommendation systems.
+
+Putting this all together, I need to ensure each article is assigned 8-12 categories. Considering the elements above, the relevant categories would include:
+
+- **Cross-Domain Sequential Recommendation**: Directly from the title and problem addressed.
+- **Recommendation Systems**: The overarching field.
+- **Extraction Attention Module (EAM)**: A specific algorithm component.
+- **Supervised Contrastive Learning (SCL)**: Another key technique used.
+- **Focal Loss**: Used for handling class imbalance.
+- **Cold Start**: An implied challenge related to data sparsity in recommendations.
+- **Decoupled Representation**: The approach taken by the method.
+- **Data Sparsity**: A major challenge addressed.
+- **Class Imbalance**: Another problem tackled in the study.
+- **Performance Evaluation**: Since experiments were conducted with results.
+
+I should check if these categories are clear, descriptive, and align with user interests. They seem to cover both technical aspects (like algorithms) and challenges within recommendation systems, which would be useful for users searching for solutions or related studies. Also, ensuring consistency across categorization will help maintain a cohesive interface.
+&lt;/think&gt;
+
+Cross-Domain Sequential Recommendation, Recommendation Systems, Extraction Attention Module (EAM), Supervised Contrastive Learning (SCL), Focal Loss, Cold Start, Decoupled Representation, Data Sparsity, Class Imbalance, Performance Evaluation</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: DREAM: Decoupled Representation via Extraction Attention Module and Supervised Contrastive Learning for Cross-Domain Sequential Recommender
+Abstract:
+Cross-Domain Sequential Recommendation(CDSR) aims to generate accurate predictions for future interactions by leveraging users’ cross-domain historical interactions.  One major challenge of CDSR is how to jointly learn the single- and cross-domain user preferences efficiently. To enhance the target domain’s performance, most existing solutions start by learning the single-domain user preferences within each domain and then transferring the acquired knowledge from the rich domain to the target domain. However, this approach ignores the inter-sequence item relationship and also limits the opportunities for target domain knowledge to enhance the rich domain performance. Moreover, it also ignores the information within the cross-domain sequence. Despite cross-domain sequences being generally noisy and hard to learn directly, they contain valuable user behavior patterns with great potential to enhance performance. Another key challenge of CDSR is data sparsity, which also exists in other recommendation system problems. In the real world, the data distribution of the recommendation system is highly skewed to the popular products, especially on the large-scale dataset with millions of users and items. One more challenge is the class imbalance problem, inherited by the Sequential Recommendation problem. Generally, each sample only has one positive and thousands of negative samples. To address the above problems together, an innovative Decoupled Representation via Extraction Attention Module (DREAM) is proposed for CDSR to simultaneously learn single- and cross-domain user preference via decoupled representations. A novel Supervised Contrastive Learning framework is introduced to model the inter-sequence relationship as well as address the data sparsity via data augmentations. DREAM also leverages Focal Loss to put more weight on misclassified samples to address the class-imbalance problem, with another uplift on the overall model performance. Extensive experiments had been conducted on two cross-domain recommendation datasets, demonstrating DREAM outperforms various SOTA cross-domain recommendation algorithms achieving up to a 75% uplift in Movie-Book Scenarios.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article based on its title and abstract. Let&#39;s start by reading through the details.
+
+The title is &#34;DREAM: Decoupled Representation via Extraction Attention Module and Supervised Contrastive Learning for Cross-Domain Sequential Recommender&#34;. The key elements here are DREAM, which stands for a specific method, and cross-domain sequential recommendation.
+
+Looking at the abstract, the focus is on improving predictions by leveraging users&#39; cross-domain interactions. They address challenges like single- and cross-domain user preferences, inter-sequence item relationships, data sparsity, and class imbalance. The proposed solution uses an Extraction Attention Module (EAM) and Supervised Contrastive Learning (SCL), along with Focal Loss to tackle these issues.
+
+So, breaking this down:
+
+1. **Cross-Domain Recommendation**: This is a core theme since the entire paper revolves around recommendations across different domains.
+2. **Sequential Recommendations**: The method deals with sequences of user interactions over time.
+3. **Attention Mechanisms**: The use of an extraction attention module indicates that attention mechanisms are a key component.
+4. **Contrastive Learning**: They introduce a supervised contrastive learning framework, which falls under this category.
+5. **Data Sparsity**: Addressing data sparsity is explicitly mentioned as one of the challenges tackled.
+6. **Class Imbalance**: The paper uses Focal Loss to handle class imbalance in recommendation systems.
+
+Additionally, since the paper proposes a new algorithm and evaluates it on real-world datasets with significant improvements, categories like **Algorithm** and **Real-World Applications** are relevant too.
+
+I should make sure each article is placed in at least 8 categories as per guidelines. Let me list them:
+
+1. Cross-Domain Recommendation
+2. Sequential Recommendations
+3. Attention Mechanisms
+4. Contrastive Learning
+5. Data Sparsity
+6. Class Imbalance
+7. Algorithm (since they propose DREAM)
+8. Real-World Applications
+
+I think these cover the main points without making any category too specific or too broad. Each is relevant and should help users navigate easily.
+&lt;/think&gt;
+
+Cross-Domain Recommendation, Sequential Recommendations, Attention Mechanisms, Contrastive Learning, Data Sparsity, Class Imbalance, Algorithm, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

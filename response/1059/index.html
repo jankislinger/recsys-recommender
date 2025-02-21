@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Scalable Cross-Entropy Loss for Sequential Recommendations with Large Item Catalogs
+Abstract:
+Scalability issue plays a crucial role in productionizing modern recommender systems. Even lightweight architectures may suffer from high computational overload due to intermediate calculations, limiting their practicality in real-world applications. Specifically, applying full Cross-Entropy (CE) loss often yields state-of-the-art performance in terms of recommendations quality. Still, it suffers from excessive GPU memory utilization when dealing with large item catalogs. This paper introduces a novel Scalable Cross-Entropy (SCE) loss function in the sequential learning setup. It approximates the CE loss for datasets with large-size catalogs, enhancing both time efficiency and memory usage without compromising recommendations quality. Unlike traditional negative sampling methods, our approach utilizes a selective GPU-efficient computation strategy, focusing on the most informative elements of the catalog, particularly those most likely to be false positives. This is achieved by approximating the softmax distribution over a subset of the model outputs through the maximum inner product search. Experimental results on multiple datasets demonstrate the effectiveness of SCE in reducing peak memory usage by a factor of up to 100 compared to the alternatives, retaining or even exceeding their metrics values. The proposed approach also opens new perspectives for large-scale developments in different domains, such as large language models.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on its content and themes. Let me read through the title and abstract again to understand what it&#39;s about.
+
+The title is &#34;Scalable Cross-Entropy Loss for Sequential Recommendations with Large Item Catalogs.&#34; So right away, I know it&#39;s about recommendation systems, specifically dealing with scalability issues when using cross-entropy loss in sequential recommendations where there are a lot of items. 
+
+Looking at the abstract: It talks about scalability being crucial in productionizing recommender systems. Even lightweight architectures can have high computational costs due to intermediate calculations. Full Cross-Entropy (CE) loss is effective for recommendation quality but uses too much GPU memory with large item catalogs. The paper introduces Scalable Cross-Entropy (SCE) loss, which approximates CE loss and improves time efficiency and memory usage without losing quality.
+
+They mention that SCE focuses on the most informative elements, especially false positives, using a selective computation strategy. It uses maximum inner product search to approximate softmax over a subset of model outputs. Experiments show up to 100x reduction in peak memory usage while maintaining or improving metrics. They also note potential applications beyond recommendations, like large language models.
+
+Now, based on the guidelines, I need to assign at least 8-12 categories that are relevant and useful for navigation. Let&#39;s break down the key elements:
+
+1. **Recommendation Systems**: Definitely a primary category since the paper is about improving recommendation algorithms.
+2. **Loss Functions**: Since it discusses Cross-Entropy loss and introduces Scalable Cross-Entropy (SCE) loss, this is crucial.
+3. **Scalability**: The main issue addressed is scalability in large item catalogs, so this should be included.
+4. **Sequential Recommendations**: The SCE loss is applied in a sequential learning setup, so this category fits.
+5. **GPU Memory Optimization**: The paper focuses on reducing GPU memory usage, which is an important aspect of computational efficiency.
+6. **Large Item Catalogs**: Directly mentioned as the context where traditional methods struggle.
+7. **Efficiency and Performance**: Since SCE improves time and memory efficiency without compromising quality, this category is relevant.
+8. **False Positives Handling**: The approach focuses on elements likely to be false positives, which is a specific aspect of recommendation systems.
+9. **Max Inner Product Search (MIPS)**: A technique used in the proposed method, so it&#39;s a key component.
+10. **Large Language Models**: The paper suggests applications beyond recommendations, like LLMs, making this an additional category.
+
+I think these categories cover the main aspects of the research. They are specific enough to be useful but broad enough to include related articles. I should avoid creating too many niche categories that might not be frequently searched. These 10 categories seem balanced and align well with user interests in recommendation systems, efficiency, and scalability.
+&lt;/think&gt;
+
+Recommendation Systems, Loss Functions, Scalability, Sequential Recommendations, GPU Memory Optimization, Large Item Catalogs, Efficiency and Performance, False Positives Handling, Max Inner Product Search (MIPS), Large Language Models</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: InTune: Reinforcement Learning-based Data Pipeline Optimization for Deep Recommendation Models
+Abstract:
+Deep learning-based recommendation models (DLRMs) have become an essential component of many modern recommender systems. Several companies are now building large compute clusters reserved only for DLRM training, driving new interest in cost- &amp; time- saving optimizations. The systems challenges faced in this setting are unique; while typical deep learning (DL) training jobs are dominated by model execution times, the most important factor in DLRM training performance is often online data ingestion. In this paper, we explore the unique characteristics of this data ingestion problem and provide insights into the specific bottlenecks and challenges of the DLRM training pipeline at scale. We study real-world DLRM data processing pipelines taken from our compute cluster to both observe the performance impacts of online ingestion and to identify shortfalls in existing data pipeline optimizers. We find that current tooling either yields sub-optimal performance, frequent crashes, or else requires impractical cluster re-organization to adopt. Our studies lead us to design and build a new solution for data pipeline optimization, InTune. InTune employs a reinforcement learning (RL) agent to learn how to distribute CPU resources across a DLRM data pipeline to more effectively parallelize data-loading and improve throughput. Our experiments show that InTune can build an optimized data pipeline configuration within only a few minutes, and can easily be integrated into existing training workflows. By exploiting the responsiveness and adaptability of RL, InTune achieves significantly higher online data ingestion rates than existing optimizers, thus reducing idle times in model execution and increasing efficiency. We apply InTune to our real-world cluster, and find that it increases data ingestion throughput by as much as 2.29X versus current state-of-the-art data pipeline optimizers while also improving both CPU &amp; GPU utilization.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article into multiple relevant categories based on the provided guidelines. The title is &#34;InTune: Reinforcement Learning- based Data Pipeline Optimization for Deep Recommendation Models&#34; and the abstract discusses how InTune uses RL to optimize data pipelines in DLRMs, improving efficiency and performance.
+
+First, looking at the algorithm family. The article mentions Reinforcement Learning, so that&#39;s one category. It&#39;s about recommendation systems, which ties into Deep Learning Recommender Models as another category.
+
+Next, considering the domain of the problem. Since it&#39;s focused on optimizing data pipelines for large-scale training, the domain is likely Large-Scale Systems and Compute Clusters.
+
+The specific focus is on Data Pipeline Optimization, so that should be a separate category. It deals with Resource Allocation because InTune manages CPU resources efficiently.
+
+The aspect of evaluation here is about Performance Optimization, as they&#39;re improving data ingestion rates and efficiency. They tested their solution in a real-world setting, which falls under Real-World Applications.
+
+Additionally, the article discusses how RL improves resource utilization, so another category could be Resource Utilization. It&#39;s also related to Deep Learning since DLRMs are involved. The problem involves Scalability because it&#39;s about handling large-scale computations efficiently.
+
+Putting this all together, I think the categories should cover both general and specific aspects of the research, ensuring they&#39;re relevant for users interested in recommendation systems, machine learning optimization, and system performance.
+&lt;/think&gt;
+
+Reinforcement Learning, Deep Learning Recommender Models, Data Pipeline Optimization, Resource Allocation, Performance Optimization, Real-World Applications, Large-Scale Systems, Compute Clusters, Resource Utilization, Deep Learning, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

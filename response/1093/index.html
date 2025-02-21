@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: MAWI Rec: Leveraging Severe Weather Data in Recommendation
+Abstract:
+Inferring user intent in recommender systems can help performance but is difficult because intent is personal and not directly observable. Previous work has leveraged signals to stand as a proxy for intent (e.g. user interactions with resource pages), but such signals are not always available. In this paper, we instead recognize that certain events, which are observable, directly influence user intent. For example, after a flood, home improvement customers are more likely to undertake a renovation project to dry out their basement. We introduce MAWI Rec, a recommender system that leverages severe weather data to improve recommendation. Our weather-aware system achieves a significant improvement over a state-of-the-art baseline for online and in-store datasets of home improvement customers. This gain is most significant for weather-related product categories such as roof panels and flashings.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article about MAWI Rec: Leveraging Severe Weather Data in Recommendation. Let me start by understanding what the article is about.
+
+The title suggests that they&#39;re using severe weather data in recommendation systems. The abstract explains that the goal is to infer user intent better because current methods rely on signals like user interactions, which aren&#39;t always available. Instead, they use observable events like severe weather to influence recommendations. For example, after a flood, people might be more interested in home improvement products like roof panels or flashings.
+
+Now, I need to map this article into the appropriate categories. Let me go through each guideline step by step.
+
+1. **Categorization Accuracy**: The article is about recommendation systems using weather data as an external signal. So, core themes include Recommendation Systems, External Signals, User Intent, and maybe even Event-Based Recommendations.
+
+2. **Domain of the Problem**: They mention home improvement products, so that&#39;s a specific domain. But also, since it involves weather, maybe Natural Disasters or Emergency Management could be relevant?
+
+3. **Algorithm Family**: The article doesn&#39;t specify particular algorithms but mentions leveraging data to improve recommendations. Maybe they&#39;re using some form of contextual bandits or event-driven models? Not sure, so perhaps just stick with External Signals.
+
+4. **Evaluation Aspects**: They talk about improvement over a baseline and mention specific product categories where the gain is significant. So evaluation aspects like Performance Improvement, A/B Testing (since they have online and in-store datasets), and maybe Impact Analysis.
+
+5. **Real-World Applications**: They applied this to real-world data from home improvement customers, so Real-World Applications makes sense.
+
+6. **Other Categories**: Maybe Context-Aware Recommendations since it&#39;s using context (weather) to inform the system. Also, Emergency Response as an application area? Or maybe something like Crisis Management?
+
+Let me list potential categories:
+
+- Recommendation Systems
+- External Signals
+- User Intent Inference
+- Event-Based Recommendations
+- Home Improvement Domain
+- Natural Disasters/Weather Events
+- Context-Aware Recommendations
+- Real-World Applications
+- Performance Improvement (Evaluation)
+- Impact Analysis
+- Emergency Response
+
+Wait, the guidelines say to assign at least 8-12 categories. Let me check if I have enough.
+
+Looking back:
+
+1. Recommendation Systems - definitely.
+2. External Signals - yes, they use weather as a signal.
+3. User Intent Inference - core of their approach.
+4. Event-Based Recommendations - using events (weather) to influence recs.
+5. Home Improvement Domain - specific application area.
+6. Natural Disasters/Weather Events - the type of external data used.
+7. Context-Aware Recommendations - broader category encompassing event-based.
+8. Real-World Applications - they applied it in real scenarios.
+9. Performance Evaluation - comparing to a baseline.
+10. Impact Analysis - showing gains in certain product categories.
+
+That&#39;s 10 categories, which fits the requirement. Maybe adding one more like A/B Testing since they tested online and in-store, but I&#39;m not sure if that&#39;s explicit enough. Alternatively, maybe Scalability isn&#39;t relevant here because they don&#39;t discuss system size or efficiency beyond using weather data.
+
+Alternatively, could include something about Domain-Specific Recommendations, but Home Improvement is specific enough.
+
+So my final categories would be:
+
+Recommendation Systems, External Signals, User Intent Inference, Event-Based Recommendations, Context-Aware Recommendations, Natural Disasters/Weather Events, Real-World Applications, Performance Evaluation, Impact Analysis, and maybe Home Improvement Domain.
+&lt;/think&gt;
+
+Recommendation Systems, External Signals, User Intent Inference, Event-Based Recommendations, Context-Aware Recommendations, Natural Disasters/Weather Events, Real-World Applications, Performance Evaluation, Impact Analysis</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

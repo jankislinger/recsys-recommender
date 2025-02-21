@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Beyond the Sequence: Statistics-driven Pre-training for Stabilizing Sequential Recommendation Model
+Abstract:
+The sequential recommendation task aims to predict the item that user is interested in according to his/her historical action sequence. However, inevitable random action, i.e. user randomly accesses an item among multiple candidates or clicks several items at random order, cause the sequence fails to provide stable and high-quality signals. To alleviate the issue, we propose the StatisTics-Driven Pre-traing framework (called STDP briefly). The main idea of the work lies in the exploration of utilizing the statistics information along with the pre-training paradigm to stabilize the optimization of recommendation model. Specifically, we derive two types of statistical information: item co-occurrence across sequence and attribute frequency within the sequence. And we design the following pre-training tasks: 1) The co-occurred items prediction task, which encourages the model to distribute its attention on multiple suitable targets instead of just focusing on the next item that may be unstable. 2) We generate a paired sequence by replacing items with their co-occurred items and enforce its representation close with the original one, thus enhancing the model’s robustness to the random noise. 3) To reduce the impact of random on user’s long-term preferences, we encourage the model to capture sequence-level frequent attributes. The significant improvement over six datasets demonstrates the effectiveness and superiority of the proposal, and further analysis verified the generalization of the STDP framework on other models.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article based on its title and abstract into multiple relevant categories as per the given guidelines. Let me start by reading through the provided information carefully.
+
+The title is &#34;Beyond the Sequence: Statistics-Driven Pre-Training for Stabilizing Sequential Recommendation Model.&#34; This suggests that the article focuses on improving sequential recommendation models using statistics-driven pre-training methods. The abstract elaborates on this, explaining that random user actions can destabilize sequence signals in recommendations and introduces a framework called STDP to address this issue.
+
+First, I&#39;ll identify the core themes of the article. It&#39;s about sequential recommendation models, which fall under recommendation systems. The problem being addressed is instability caused by random user actions, so &#34;Sequential Recommendations&#34; is definitely a relevant category. They use statistics-driven pre-training, so that points towards &#34;Pre-Training Methods.&#34;
+
+The framework STDP utilizes co-occurrence and attribute frequency information. This indicates an emphasis on statistical analysis of user behavior, so categories like &#34;User Behavior Analysis&#34; and &#34;Co-Occurrence Analysis&#34; make sense here.
+
+Looking at the specific tasks they designed: predicting co-occurred items, generating paired sequences for robustness, and capturing frequent attributes. These aspects touch on &#34;Recommendation Quality,&#34; as improving quality is a key goal. Also, since they&#39;re addressing issues with random actions affecting long-term preferences, this relates to &#34;User Preferences.&#34;
+
+The article also discusses the effectiveness across multiple datasets and generalization to other models. This suggests methodological contributions, so categories like &#34;Algorithmic Methods&#34; are appropriate. Additionally, their approach involves leveraging statistical information alongside pre-training, which ties into both &#34;Statistical Analysis&#34; and &#34;Recommendation Stability,&#34; as they&#39;re aiming to stabilize model optimization.
+
+Considering the broader context, this work is part of machine learning advancements in recommendation systems. Therefore, categories like &#34;Machine Learning&#34; and &#34;Recommender Systems&#34; are essential for categorization.
+
+I should ensure that each category is both specific enough to be useful and broad enough to capture related works. Avoiding overly narrow categories that might not have enough articles is important for the utility of the interface. Also, maintaining consistency with how other similar articles are categorized will help in providing a cohesive user experience.
+
+To summarize, the key aspects I identified include sequential recommendations, pre-training, statistical methods, handling random actions, and improving recommendation quality. Translating these into appropriate categories gives me a list that should cover all relevant areas without redundancy or overlap.
+&lt;/think&gt;
+
+Sequential Recommendations, Pre-Training Methods, Recommendation Quality, User Behavior Analysis, Co-Occurrence Analysis, Random Action Mitigation, Statistical Information Utilization, Model Robustness, Attribute Frequency Analysis, Machine Learning, Recommender Systems, User Preferences</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Beyond the Sequence: Statistics-driven Pre-training for Stabilizing Sequential Recommendation Model
+Abstract:
+The sequential recommendation task aims to predict the item that user is interested in according to his/her historical action sequence. However, inevitable random action, i.e. user randomly accesses an item among multiple candidates or clicks several items at random order, cause the sequence fails to provide stable and high-quality signals. To alleviate the issue, we propose the StatisTics-Driven Pre-traing framework (called STDP briefly). The main idea of the work lies in the exploration of utilizing the statistics information along with the pre-training paradigm to stabilize the optimization of recommendation model. Specifically, we derive two types of statistical information: item co-occurrence across sequence and attribute frequency within the sequence. And we design the following pre-training tasks: 1) The co-occurred items prediction task, which encourages the model to distribute its attention on multiple suitable targets instead of just focusing on the next item that may be unstable. 2) We generate a paired sequence by replacing items with their co-occurred items and enforce its representation close with the original one, thus enhancing the model’s robustness to the random noise. 3) To reduce the impact of random on user’s long-term preferences, we encourage the model to capture sequence-level frequent attributes. The significant improvement over six datasets demonstrates the effectiveness and superiority of the proposal, and further analysis verified the generalization of the STDP framework on other models.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let me try to figure out how to categorize this research article based on its title and abstract. 
+
+The title is &#34;Beyond the Sequence: Statistics-driven Pre-training for Stabilizing Sequential Recommendation Model.&#34; So it&#39;s about recommendation systems, specifically sequential ones where the order of user actions matters. The main issue they&#39;re addressing is random actions or noise in the sequences, which affects the model&#39;s stability.
+
+Looking at the abstract, the article proposes a new framework called STDP (StatisTics-Driven Pre-training). They use statistics like item co-occurrence and attribute frequency to help stabilize the recommendation model. They have three pre-training tasks: predicting co-occurred items, creating paired sequences by replacing items with their co-occurring ones, and encouraging models to capture frequent attributes in the sequence.
+
+So, for categories:
+
+1. **Sequential Recommendation**: This is central to the article&#39;s focus.
+2. **Pre-training**: The STDP framework involves pre-training tasks.
+3. **Statistics/Statistical Analysis**: They derive statistical information like co-occurrence and frequency.
+4. **Robustness**: Their approach aims to make models more robust against random noise.
+5. **Recommendation Systems**: General category for recommendation-related articles.
+6. **Model Stabilization**: The framework is about stabilizing the model&#39;s performance.
+
+I think these categories cover the main aspects without being too specific or too broad. They should help users navigate and find relevant content easily.
+&lt;/think&gt;
+
+Sequential Recommendation, Pre-training, Statistics, Robustness, Recommendation Systems, Model Stabilization</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

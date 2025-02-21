@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Towards Open-World Recommendation with Knowledge Augmentation from Large Language Models
+Abstract:
+Recommender system plays a vital role in various online services. However, its insulated nature of training and deploying separately within a specific closed domain limits its access to open-world knowledge. Recently, the emergence of large language models (LLMs) has shown promise in bridging this gap by encoding extensive world knowledge and demonstrating reasoning capabilities. Nevertheless, previous attempts to directly use LLMs as recommenders cannot meet the inference latency demand of industrial recommender systems. In this work, we propose an Open-World Knowledge Augmented Recommendation Framework with Large Language Models, dubbed KAR, to acquire two types of external knowledge from LLMs — the reasoning knowledge on user preferences and the factual knowledge on items. We introduce factorization prompting to elicit accurate reasoning on user preferences. The generated reasoning and factual knowledge are effectively transformed and condensed into augmented vectors by a hybrid-expert adaptor in order to be compatible with the recommendation task. The obtained vectors can then be directly used to enhance the performance of any recommendation model. We also ensure efficient inference by preprocessing and prestoring the knowledge from the LLM. Extensive experiments show that KAR significantly outperforms the state-of-the-art baselines and is compatible with a wide range of recommendation algorithms. We deploy KAR to Huawei’s news and music recommendation platforms and gain a 7% and 1.7% improvement in the online A/B test, respectively.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to make sure users can easily find the article through various search paths. Let me go through this step by step.
+
+First, looking at the title: &#34;Towards Open-World Recommendation with Knowledge Augmentation from Large Language Models.&#34; This tells me it&#39;s about recommendation systems, specifically using large language models (LLMs) to enhance recommendations in an open-world setting. So, categories related to recommendation systems and LLMs seem important here.
+
+The abstract starts by talking about recommender systems being limited to closed domains. That makes me think the article addresses issues with traditional recommendation methods that are confined to specific areas. It mentions using LLMs to bridge this gap because they have extensive knowledge. So, categories like &#34;Knowledge Augmentation&#34; and &#34;Large Language Models (LLMs)&#34; come to mind.
+
+The authors propose a framework called KAR, which uses two types of external knowledge: reasoning about user preferences and factual item information. This indicates that the article is discussing methods for improving recommendation accuracy through better understanding of users and items. So, categories like &#34;Knowledge Graphs&#34; and &#34;User Preference Modeling&#34; might be appropriate.
+
+They mention using factorization prompting to get accurate user preference reasoning. Factorization prompting sounds like a technique used in machine learning or natural language processing, so &#34;Factorization Prompting&#34; should be a category here.
+
+The generated knowledge is transformed into augmented vectors using a hybrid-expert adaptor. This suggests techniques related to feature extraction and representation learning, so I&#39;ll include &#34;Feature Extraction,&#34; &#34;Representation Learning,&#34; and perhaps &#34;Hybrid Models.&#34;
+
+They also talk about efficient inference by preprocessing knowledge from LLMs, which means the article addresses performance optimization in recommendation systems. So categories like &#34;Efficiency Optimization&#34; and &#34;Scalability&#34; would fit.
+
+The experiments show that KAR outperforms existing methods and is compatible with various recommendation algorithms, indicating it&#39;s a state-of-the-art approach applicable across different models. Thus, &#34;State-of-the-Art Methods&#34; and &#34;Compatibility&#34; are relevant.
+
+Deployment on Huawei’s platforms with A/B test improvements of 7% and 1.7% shows real-world application. So categories like &#34;Real-World Applications,&#34; &#34;A/B Testing,&#34; and &#34;Industrial Applications&#34; make sense here.
+
+The domains mentioned in the deployment are news and music, so including specific domains like &#34;News&#34; and &#34;Music&#34; would help users find this article when searching within those areas.
+
+Lastly, since the framework enhances recommendation performance beyond accuracy, considering aspects like diversity or relevance could be part of evaluation metrics. So, &#34;Beyond Accuracy&#34; is a good category to include.
+
+Putting it all together, I need to list these categories in a clear, user-friendly way without being too redundant. Each should accurately reflect an aspect of the article&#39;s content to aid discoverability.
+&lt;/think&gt;
+
+Large Language Models (LLMs), Knowledge Augmentation, Recommender Systems, Open-World Recommendation, Knowledge Graphs, User Preference Modeling, Factorization Prompting, Feature Extraction, Representation Learning, Hybrid Models, Efficiency Optimization, Scalability, State-of-the-Art Methods, Real-World Applications, A/B Testing, News, Music, Beyond Accuracy, Compatibility</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Towards Open-World Recommendation with Knowledge Augmentation from Large Language Models
+Abstract:
+Recommender system plays a vital role in various online services. However, its insulated nature of training and deploying separately within a specific closed domain limits its access to open-world knowledge. Recently, the emergence of large language models (LLMs) has shown promise in bridging this gap by encoding extensive world knowledge and demonstrating reasoning capabilities. Nevertheless, previous attempts to directly use LLMs as recommenders cannot meet the inference latency demand of industrial recommender systems. In this work, we propose an Open-World Knowledge Augmented Recommendation Framework with Large Language Models, dubbed KAR, to acquire two types of external knowledge from LLMs — the reasoning knowledge on user preferences and the factual knowledge on items. We introduce factorization prompting to elicit accurate reasoning on user preferences. The generated reasoning and factual knowledge are effectively transformed and condensed into augmented vectors by a hybrid-expert adaptor in order to be compatible with the recommendation task. The obtained vectors can then be directly used to enhance the performance of any recommendation model. We also ensure efficient inference by preprocessing and prestoring the knowledge from the LLM. Extensive experiments show that KAR significantly outperforms the state-of-the-art baselines and is compatible with a wide range of recommendation algorithms. We deploy KAR to Huawei’s news and music recommendation platforms and gain a 7% and 1.7% improvement in the online A/B test, respectively.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article based on its title and abstract. The article is about improving recommendation systems using large language models (LLMs). Let me go through it step by step.
+
+First, the title mentions &#34;Open-World Recommendation&#34; which suggests that the system isn&#39;t limited to a specific domain but can handle a broader range of knowledge. It also talks about using LLMs for knowledge augmentation, so that&#39;s key.
+
+Looking at the abstract: The main problem is that traditional recommendation systems are closed and don&#39;t access open-world knowledge effectively. They use LLMs to bridge this gap by incorporating reasoning and factual knowledge from these models. 
+
+The proposed framework is called KAR (Knowledge Augmented Recommendation). It uses factorization prompting for user preference reasoning and a hybrid-expert adaptor to transform this into augmented vectors that enhance recommendation models. The focus on efficiency is important because they mention preprocessing and storing knowledge for fast inference.
+
+They evaluated KAR extensively and saw improvements over state-of-the-art methods, even deploying it in real-world scenarios like news and music recommendations with positive results (7% and 1.7% improvements).
+
+So, the categories should reflect the method used (LLMs), the application area (Recommendation Systems), specific aspects like Open-World and Knowledge Augmentation. Also, since they mention deployment and real-world applications through A/B testing, that&#39;s another category.
+
+I need to make sure each article goes into multiple categories to enhance discoverability. Let me list out possible categories:
+
+1. **Large Language Models (LLMs)** - Since the paper heavily uses LLMs.
+2. **Recommendation Systems** - Core topic.
+3. **Knowledge Augmentation** - They specifically use knowledge from LLMs.
+4. **Open-World Recommendation** - As per the title.
+5. **Factorization Prompting** - A method they introduced.
+6. **Real-World Applications** - They deployed it in platforms and tested with A/B.
+7. **Efficiency/Scalability** - Focus on preprocessing for speed.
+8. **Evaluation Metrics (A/B Testing)** - Used to measure performance.
+
+I should ensure these categories are clear, relevant, and cover both the technical aspects and real-world applications mentioned in the paper. Also, each category is distinct enough to be useful but not too narrow.
+&lt;/think&gt;
+
+Large Language Models, Recommendation Systems, Knowledge Augmentation, Open-World Recommendation, Factorization Prompting, Real-World Applications, Efficiency/Scalability, Evaluation Metrics</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

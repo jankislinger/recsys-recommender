@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Everyone’s a Winner! On Hyperparameter Tuning of Recommendation Models
+Abstract:
+The performance of a recommender system algorithm in terms of common offline accuracy measures often strongly depends on the chosen hyperparameters. Therefore, when comparing algorithms in offline experiments, we can obtain reliable insights regarding the effectiveness of a newly proposed algorithm only if we compare it to a number of state-of-the-art baselines that are carefully tuned for each of the considered datasets. While this fundamental principle of any area of applied machine learning is undisputed, we find that the tuning process for the baselines in the current literature is barely documented in much of today’s published research. Ultimately, in case the baselines are actually not carefully tuned, progress may remain unclear. In this paper, we showcase how every method in such an unsound comparison can be reported to be outperforming the state-of-the-art. Finally, we iterate appropriate research practices to avoid unreliable algorithm comparisons in the future.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let me try to figure out how to categorize this article based on the guidelines provided.
+
+First, I&#39;ll read through the title and abstract carefully. The title is &#34;Everyone’s a Winner! On Hyperparameter Tuning of Recommendation Models.&#34; From that, it seems like the focus is on hyperparameters in recommendation systems.
+
+The abstract mentions that the performance of recommender algorithms depends heavily on hyperparameters. It talks about comparing algorithms offline and how important it is to tune baselines properly. It also points out a lack of documentation on this process in current literature and suggests that not tuning can lead to unreliable results, where every method might seem better than others.
+
+So, the core themes here are hyperparameter tuning, recommendation models, algorithm comparison, and reproducibility. I should map these into relevant categories.
+
+Looking at the examples provided earlier, some categories include things like Model Evaluation, Research Methodology, Reproducibility, Best Practices, etc. Since the article is about how hyperparameters affect performance and the need for proper tuning in experiments, it falls under evaluating models accurately.
+
+I think categories like &#34;Algorithm Comparison,&#34; &#34;Hyperparameter Tuning,&#34; &#34;Reproducibility,&#34; and &#34;Research Methodology&#34; are definitely relevant. It also touches on the importance of proper experimental setup, so maybe &#34;Experimental Design.&#34; The fact that they discuss best practices to avoid unreliable results could fit under &#34;Best Practices.&#34;
+
+I should also consider domain-specific categories but since this is more about the methodology rather than a specific application area like healthcare or education, I might skip those. But maybe &#34;Recommendation Systems&#34; as a broad category makes sense.
+
+Additionally, the article talks about documentation of tuning processes being lacking, so perhaps &#34;Documentation and Reporting&#34; could be another category.
+
+I need to make sure each article is assigned 8-12 categories, so let me see:
+
+1. Algorithm Comparison - Yes, because they discuss comparing algorithms.
+2. Hyperparameter Tuning - Directly mentioned in the title and abstract.
+3. Reproducibility - The lack of proper tuning can lead to non-reproducible results.
+4. Research Methodology - They&#39;re talking about how research should be conducted.
+5. Model Evaluation - Evaluating models based on hyperparameters.
+6. Experimental Design - How experiments are set up, especially regarding hyperparameter tuning.
+7. Best Practices - They suggest appropriate practices for future research.
+8. Recommendation Systems - The field they&#39;re working in.
+9. Research Practices - Similar to methodology but more specific about the practices used.
+
+I think that covers it. Maybe &#34;Offline Evaluation&#34; as well since they mention offline experiments. But I&#39;m not sure if that&#39;s necessary. Alternatively, &#34;Research Ethics&#34; could be considered because of the discussion on accurate reporting and reliable results.
+
+Wait, &#34;Research Practices&#34; might overlap with &#34;Best Practices,&#34; so maybe I can combine or adjust. Also, &#34;Reproducibility&#34; is a key point here since they emphasize the need for proper tuning to ensure that comparisons are valid and reproducible.
+
+So my final categories would be:
+
+- Algorithm Comparison
+- Hyperparameter Tuning
+- Reproducibility
+- Research Methodology
+- Model Evaluation
+- Experimental Design
+- Best Practices
+- Recommendation Systems
+- Research Practices
+
+That&#39;s nine categories. I think this covers the main aspects of the article without being too redundant.
+&lt;/think&gt;
+
+Algorithm Comparison, Hyperparameter Tuning, Reproducibility, Research Methodology, Model Evaluation, Experimental Design, Best Practices, Recommendation Systems, Research Practices</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Everyone’s a Winner! On Hyperparameter Tuning of Recommendation Models
+Abstract:
+The performance of a recommender system algorithm in terms of common offline accuracy measures often strongly depends on the chosen hyperparameters. Therefore, when comparing algorithms in offline experiments, we can obtain reliable insights regarding the effectiveness of a newly proposed algorithm only if we compare it to a number of state-of-the-art baselines that are carefully tuned for each of the considered datasets. While this fundamental principle of any area of applied machine learning is undisputed, we find that the tuning process for the baselines in the current literature is barely documented in much of today’s published research. Ultimately, in case the baselines are actually not carefully tuned, progress may remain unclear. In this paper, we showcase how every method in such an unsound comparison can be reported to be outperforming the state-of-the-art. Finally, we iterate appropriate research practices to avoid unreliable algorithm comparisons in the future.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this article titled &#34;Everyone’s a Winner! On Hyperparameter Tuning of Recommendation Models.&#34; The abstract talks about how hyperparameters significantly affect the performance of recommendation systems and that many studies don&#39;t document their tuning processes properly. It emphasizes the importance of careful baseline comparisons.
+
+First, looking at the key themes: hyperparameter tuning, recommendation models, algorithm comparison, research practices. 
+
+I should start by identifying obvious categories like &#34;Hyperparameter Tuning&#34; since it&#39;s central to the paper. Next, the focus is on recommendation systems, so that&#39;s a must.
+
+The article discusses how different algorithms are compared, which points me towards &#34;Algorithm Comparison.&#34; It also talks about evaluation practices in research, so &#34;Research Practices&#34; fits here.
+
+Another important aspect is methodological issues in experiments, so &#34;Methodology&#34; would be a good category. Since hyperparameters affect performance, &#34;Performance Evaluation&#34; is relevant too.
+
+The paper addresses problems within the field, so adding &#34;Challenges and Limitations.&#34; Also, it&#39;s about improving research practices, hence &#34;Improving Research Quality.&#34;
+
+Lastly, it relates to how studies are conducted, so &#34;Study Design&#34; is appropriate.
+&lt;/think&gt;
+
+Hyperparameter Tuning, Recommendation Models, Algorithm Comparison, Research Practices, Methodology, Performance Evaluation, Challenges and Limitations, Improving Research Quality, Study Design</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

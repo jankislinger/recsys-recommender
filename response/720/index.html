@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Elsevier, Fairness in Recommendations
+Abstract:
+At Elsevier we aim to help scientists further their research. On the one hand, by offering a platform for publishing ground-breaking research, and on the other by helping researchers discover relevant content to assist their work. In our team, Editorial Data Science, we support the former goal by providing tools to help editors in the decisions that they make, from finding reviewers to recommending transfers for manuscripts to more appropriate journals. To improve the workflows for publishing research and help editors in finding relevant reviewers we developed a reviewer recommender. The reviewer recommender will, based on a submitted manuscript, recommend reviewers that optimise the fit between the manuscript, the journal, and the reviewer themselves. To achieve this, the reviewer recommender is built on top of the three principles of quality data, expert knowledge, and experimentation. We leverage data from across Elsevier, ranging from Scopus profiles which includes publication histories and academic impact data, to data from our publishing platform which includes historic invites and subsequent actions around submitted manuscripts. All this data is used to develop and evaluate appropriate models for recommending reviewers. There are many factors to consider when deciding if someone is relevant to review a submitted manuscript. To name a few, the topic of interest of the reviewer, level of expertise of the reviewer, fit of the reviewer to the journal. But we are ultimately looking for the fit between the three stake holders: the manuscript, the journal, and the reviewer. However, it is not as simple as looking for a fit purely on topic or relevance. We can find evidence for that in the growth of research into recommender systems for multi-sided market [ 7] places where all sides within the systems must be considered. In our case, in addition to topical fit, we must consider fairness in recommendations, where minority groups get equal and fair treatment. For this reason, we consider two ’additional’ constraints when developing recommender systems at Elsevier, fairness in the recommendations and respecting the reviewers time and privacy. Fairness in Recommendations is important in recommending people particular within academic fields where there are known biases against minority groups. This bias is present in data which we use. [REF] showed that women and minorities over their academic and research careers are disadvantaged compared to members of the majority groups, either through less research output due to more teaching [ 6] or taking time out to raise families which resulted in lower number of research output [8]. Though bias is not only limited to quantities of research output [ 4 ] showed that women receive fewer citations even when controlling to quantity of research output and gender. This effect of receiving proportionally fewer citation is also amplified [ 5] identified that women are disproportionally ranked lower on the author list of a paper. These observations are not limited to gender but also race and age. Using these features derived from bibliometric analysis without due care within a model could lead to adverse impact against minority groups, resulting in the reviewers from these groups being recommended less and thus less invites to review manuscripts, whilst making sure any interventions does not create additional harms. Respecting user privacy and time. We know through user research that there is also the need to respect the researcher whom we are asking to review these manuscripts. Either because they are too busy to accept another review, or that they feel the manuscript is out of their scope and they are invited to review irrelevant papers. In this talk we show how at Elsevier we build fairness and understanding of stake holders into our recommenders, particularly the reviewer recommender. We experimented with a variety of technologies, ranging from simple search to sophisticated ML models. They all follow the common IR approach of candidate selection followed by re-ranking. All approaches use roughly the same features representing the reviewer (topics they have published in), the journal (topics the journal publishes and metrics about the reviewers they have selected before), the manuscript (key concepts within the manuscript). Through iterating over different models and techniques, we understand the importance of different features, along with their impact on model performance. But more specifically which features have inherent bias built into them, which feature are most predictive , and which fairness aware methods have been used to mitigate these biases [1, 2]. We will then discuss the methods and challenges of including bias metrics in the evaluation and development of the reviewer recommender. In this we focus on how we evaluate fairness from historical data along with group-wise fairness metrics such as demographic parity and equal opportunity. We then discuss the challenges and successes of monitoring these metrics in production [3]. This combination of feature understanding and fairness evaluation at every stage in the model development means we have a deep understanding of how the model works, who it impacts, and how. Resulting in a fair model which keeps the reviewers at the heart of the review process. However, we must not forget, this work sits within the wider academic review system, where bias is introduced on many levels through hiring, promotions and research engagement. Even though a reviewer recommender can not correct the underlying bias, it can contribute to a fairer and more equal outcome.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this article about Elsevier&#39;s work on fairness in recommendations for reviewers. Let me go through it step by step.
+
+First, looking at the title: &#34;Elsevier, Fairness in Recommendations&#34;. So clearly, the main topic is about recommendation systems and specifically addressing fairness within them.
+
+The abstract mentions that they developed a reviewer recommender system to help editors find suitable reviewers based on manuscript topics, journal fit, and reviewer expertise. This immediately makes me think of categories like Recommendation Systems, Reviewer Recommenders, Academic Publishing, and Editor Tools since it&#39;s tailored for editors in an academic setting.
+
+They talk about using data from Scopus profiles and other platforms, which indicates they&#39;re leveraging bibliometric analysis or academic impact metrics. So I should include those as relevant categories.
+
+The article emphasizes fairness in recommendations, especially concerning minority groups like women, minorities, and the impact of factors such as family responsibilities on research output. This points to Fairness, Bias Mitigation, Gender Bias, Minority Groups, and perhaps even Social Justice within the context of academia.
+
+They mention evaluating models with metrics like demographic parity and equal opportunity, which are types of Group-wise Fairness Metrics. So I&#39;ll add those.
+
+The system they built uses machine learning models along with traditional information retrieval techniques, so categories like Machine Learning Models and Information Retrieval should be included.
+
+Since they&#39;re working within Elsevier, an academic publisher, the domain is clearly Academic Publishing. They also talk about respecting reviewers&#39; time and privacy, which adds another layer to their considerations beyond just technical aspects, so I&#39;ll note that as Reviewer Privacy and Time Management.
+
+They discuss the challenges of bias in the wider academic system, not just the recommender itself, so it&#39;s important to mention Systemic Bias in academia. Their approach involves understanding features and how they might introduce biases, which ties into Feature Analysis and Model Transparency.
+
+Putting this all together, I need to ensure each category is relevant and that we have enough without overcrowding any single category. The categories should help users find the article if they&#39;re interested in fairness, recommendation systems, academic publishing, or machine learning applications in such contexts.
+&lt;/think&gt;
+
+Fairness in Recommendations, Academic Publishing, Reviewer Recommenders, Machine Learning Models, Information Retrieval, Bias Mitigation, Gender Bias, Minority Groups, Group-wise Fairness Metrics, Demographic Parity, Equal Opportunity, Systemic Bias, Feature Analysis, Model Transparency, Reviewer Privacy, Time Management</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Elsevier, Fairness in Recommendations
+Abstract:
+At Elsevier we aim to help scientists further their research. On the one hand, by offering a platform for publishing ground-breaking research, and on the other by helping researchers discover relevant content to assist their work. In our team, Editorial Data Science, we support the former goal by providing tools to help editors in the decisions that they make, from finding reviewers to recommending transfers for manuscripts to more appropriate journals. To improve the workflows for publishing research and help editors in finding relevant reviewers we developed a reviewer recommender. The reviewer recommender will, based on a submitted manuscript, recommend reviewers that optimise the fit between the manuscript, the journal, and the reviewer themselves. To achieve this, the reviewer recommender is built on top of the three principles of quality data, expert knowledge, and experimentation. We leverage data from across Elsevier, ranging from Scopus profiles which includes publication histories and academic impact data, to data from our publishing platform which includes historic invites and subsequent actions around submitted manuscripts. All this data is used to develop and evaluate appropriate models for recommending reviewers. There are many factors to consider when deciding if someone is relevant to review a submitted manuscript. To name a few, the topic of interest of the reviewer, level of expertise of the reviewer, fit of the reviewer to the journal. But we are ultimately looking for the fit between the three stake holders: the manuscript, the journal, and the reviewer. However, it is not as simple as looking for a fit purely on topic or relevance. We can find evidence for that in the growth of research into recommender systems for multi-sided market [ 7] places where all sides within the systems must be considered. In our case, in addition to topical fit, we must consider fairness in recommendations, where minority groups get equal and fair treatment. For this reason, we consider two ’additional’ constraints when developing recommender systems at Elsevier, fairness in the recommendations and respecting the reviewers time and privacy. Fairness in Recommendations is important in recommending people particular within academic fields where there are known biases against minority groups. This bias is present in data which we use. [REF] showed that women and minorities over their academic and research careers are disadvantaged compared to members of the majority groups, either through less research output due to more teaching [ 6] or taking time out to raise families which resulted in lower number of research output [8]. Though bias is not only limited to quantities of research output [ 4 ] showed that women receive fewer citations even when controlling to quantity of research output and gender. This effect of receiving proportionally fewer citation is also amplified [ 5] identified that women are disproportionally ranked lower on the author list of a paper. These observations are not limited to gender but also race and age. Using these features derived from bibliometric analysis without due care within a model could lead to adverse impact against minority groups, resulting in the reviewers from these groups being recommended less and thus less invites to review manuscripts, whilst making sure any interventions does not create additional harms. Respecting user privacy and time. We know through user research that there is also the need to respect the researcher whom we are asking to review these manuscripts. Either because they are too busy to accept another review, or that they feel the manuscript is out of their scope and they are invited to review irrelevant papers. In this talk we show how at Elsevier we build fairness and understanding of stake holders into our recommenders, particularly the reviewer recommender. We experimented with a variety of technologies, ranging from simple search to sophisticated ML models. They all follow the common IR approach of candidate selection followed by re-ranking. All approaches use roughly the same features representing the reviewer (topics they have published in), the journal (topics the journal publishes and metrics about the reviewers they have selected before), the manuscript (key concepts within the manuscript). Through iterating over different models and techniques, we understand the importance of different features, along with their impact on model performance. But more specifically which features have inherent bias built into them, which feature are most predictive , and which fairness aware methods have been used to mitigate these biases [1, 2]. We will then discuss the methods and challenges of including bias metrics in the evaluation and development of the reviewer recommender. In this we focus on how we evaluate fairness from historical data along with group-wise fairness metrics such as demographic parity and equal opportunity. We then discuss the challenges and successes of monitoring these metrics in production [3]. This combination of feature understanding and fairness evaluation at every stage in the model development means we have a deep understanding of how the model works, who it impacts, and how. Resulting in a fair model which keeps the reviewers at the heart of the review process. However, we must not forget, this work sits within the wider academic review system, where bias is introduced on many levels through hiring, promotions and research engagement. Even though a reviewer recommender can not correct the underlying bias, it can contribute to a fairer and more equal outcome.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article about Elsevier&#39;s work on fairness in recommendations for their reviewer recommender system. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;Elsevier, Fairness in Recommendations.&#34; That already gives a hint that the focus is on fairness within recommendation systems, specifically in an academic publishing context. 
+
+Looking at the abstract, it mentions Elsevier&#39;s role in helping researchers publish and discover content. They developed a reviewer recommender system to assist editors in finding suitable reviewers for manuscripts. The key principles they used were quality data, expert knowledge, and experimentation.
+
+The article emphasizes fairness in recommendations, especially concerning minority groups like women and minorities who might be disadvantaged in academic publishing. They talk about how biases can exist in the data used for recommendation models, leading to unfair treatment of these groups. They also mention respecting user privacy and time, which are important considerations in their model.
+
+They discuss using a variety of technologies, from simple search to machine learning models, following an IR approach with candidate selection and re-ranking. Features include topics reviewers have published in, journal metrics, and manuscript key concepts. They experiment with different models to understand feature impacts and biases.
+
+The evaluation includes fairness metrics like demographic parity and equal opportunity, along with monitoring these in production. The goal is to create a fair model that respects reviewers&#39; privacy and time while contributing to a more equitable review process.
+
+Now, considering the categories I need to assign:
+
+1. **Fairness in Recommendations**: Directly related as the article focuses on this aspect.
+2. **Recommendation Systems**: Since it&#39;s about recommender systems for reviewers.
+3. **Bias and Discrimination**: As they discuss existing biases against minority groups.
+4. **Ethical Considerations**: Ethical aspects of recommendation algorithms.
+5. **Evaluation Metrics**: They mention using metrics like demographic parity and equal opportunity, so this fits.
+6. **User Privacy**: The article emphasizes respecting user privacy.
+7. **Academic Publishing**: Context is within academic publishing.
+8. **Algorithmic Fairness**: Related to the fairness in algorithms aspect.
+9. **Model Evaluation**: Since they evaluate models for fairness and performance.
+10. **Recommender Systems Evaluation**: Specific to how recommendation systems are evaluated, especially regarding fairness.
+
+I think these cover the main points from the abstract. Each category is relevant and should help users navigate the content effectively.
+&lt;/think&gt;
+
+The article &#34;Elsevier, Fairness in Recommendations&#34; can be categorized as follows:
+
+1. **Fairness in Recommendations**
+2. **Recommendation Systems**
+3. **Bias and Discrimination**
+4. **Ethical Considerations**
+5. **Evaluation Metrics**
+6. **User Privacy**
+7. **Academic Publishing**
+8. **Algorithmic Fairness**
+9. **Model Evaluation**
+10. **Recommender Systems Evaluation**
+
+These categories encapsulate the key themes of the article, focusing on fairness, ethical considerations, and evaluation within recommendation systems in an academic context.</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

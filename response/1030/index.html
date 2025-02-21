@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Bridging Search and Recommendation in Generative Retrieval: Does One Task Help the Other?
+Abstract:
+Generative retrieval for search and recommendation is a promising paradigm for retrieving items, offering an alternative to traditional methods that depend on external indexes and nearest-neighbor searches. Instead, generative models directly associate inputs with item IDs. Given the impressive capabilities of Large Language Models (LLMs), these generative systems play a crucial role in centralizing a variety of Information Retrieval (IR) tasks in a single model that performs tasks such as query understanding, retrieval, recommendation, explanation, re-ranking, and response generation. Despite the growing interest in such a unified generative approach for IR systems, the advantages of using a single, multi-task model over multiple specialized models are not well established in the literature. This paper investigates whether and when such a unified approach can outperform task-specific models in the IR tasks of search and recommendation, broadly co-existing in multiple industrial online platforms, such as Spotify, YouTube, and Netflix. Previous work shows that (1) the latent representations of items, learned by generative recommenders, are biased towards popularity, and (2) content-based and collaborative-filtering-based information can improve an item’s representations. Motivated by this, our study is guided by two hypotheses: [H1] the joint training regularizes the estimation of each item’s popularity, and [H2] the joint training regularizes the item’s latent representations, where search captures content-based aspects of an item and recommendation captures collaborative-filtering aspects. Our extensive experiments with both simulated and real-world data support both [H1] and [H2] as key contributors to the effectiveness improvements observed in the unified search and recommendation generative models over the single-task approaches.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about bridging search and recommendation in generative retrieval. The title suggests it&#39;s looking into whether integrating these two tasks can be beneficial. Let me read through the abstract again.
+
+The paper discusses using Large Language Models for a unified approach in Information Retrieval, combining tasks like query understanding, retrieval, recommendation, explanation, re-ranking, and response generation. It compares this multi-task model against specialized models. The experiments show that joint training improves effectiveness by better capturing both content-based and collaborative-filtering aspects.
+
+So, I need to assign multiple relevant categories. First, the family of algorithms involved: generative models and large language models are key here. The domain is information retrieval, which includes both search and recommendation systems. Since it&#39;s about combining these two tasks, cross-domain or multi-task learning would be appropriate.
+
+The study uses real-world data from platforms like Spotify and Netflix, so that should be included as a category. They also mention aspects of evaluation related to effectiveness improvements, so evaluation metrics are relevant. The paper discusses latent representations and popularity bias in recommendations, which ties into recommendation techniques and explainability.
+
+Additionally, the approach is unified, touching on system design aspects for industrial applications. So categories like unified systems or industrial applications make sense too.
+
+I should ensure each category is clear and user-friendly. Maybe something like Generative Models, Large Language Models, Information Retrieval, Search Systems, Recommendation Systems, Multi-Task Learning, Real-World Applications (Spotify, YouTube, Netflix), Evaluation Metrics, Latent Representations, Popularity Bias, Collaborative Filtering, Content-Based Filtering, Explanation Generation, and Industrial Applications.
+
+Wait, some of these might be too specific. Let me check if I&#39;m covering both broad and specific categories as per the guidelines. Also, making sure there are enough without overcrowding any category.
+&lt;/think&gt;
+
+Generative Models, Large Language Models (LLMs), Information Retrieval (IR), Search Systems, Recommendation Systems, Multi-Task Learning, Real-World Applications, Evaluation Metrics, Latent Representations, Popularity Bias, Collaborative Filtering, Content-Based Filtering, Explanation Generation, Industrial Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Bridging Search and Recommendation in Generative Retrieval: Does One Task Help the Other?
+Abstract:
+Generative retrieval for search and recommendation is a promising paradigm for retrieving items, offering an alternative to traditional methods that depend on external indexes and nearest-neighbor searches. Instead, generative models directly associate inputs with item IDs. Given the impressive capabilities of Large Language Models (LLMs), these generative systems play a crucial role in centralizing a variety of Information Retrieval (IR) tasks in a single model that performs tasks such as query understanding, retrieval, recommendation, explanation, re-ranking, and response generation. Despite the growing interest in such a unified generative approach for IR systems, the advantages of using a single, multi-task model over multiple specialized models are not well established in the literature. This paper investigates whether and when such a unified approach can outperform task-specific models in the IR tasks of search and recommendation, broadly co-existing in multiple industrial online platforms, such as Spotify, YouTube, and Netflix. Previous work shows that (1) the latent representations of items, learned by generative recommenders, are biased towards popularity, and (2) content-based and collaborative-filtering-based information can improve an item’s representations. Motivated by this, our study is guided by two hypotheses: [H1] the joint training regularizes the estimation of each item’s popularity, and [H2] the joint training regularizes the item’s latent representations, where search captures content-based aspects of an item and recommendation captures collaborative-filtering aspects. Our extensive experiments with both simulated and real-world data support both [H1] and [H2] as key contributors to the effectiveness improvements observed in the unified search and recommendation generative models over the single-task approaches.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article into multiple relevant categories. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;Bridging Search and Recommendation in Generative Retrieval: Does One Task Help the Other?&#34; It seems like it&#39;s about integrating search and recommendation tasks using generative retrieval models, possibly involving large language models (LLMs). 
+
+Looking at the abstract, the article discusses how generative retrieval systems can centralize various IR tasks into a single model. It mentions that these models handle query understanding, retrieval, recommendation, explanation, re-ranking, and response generation. The study compares unified multi-task models against task-specific ones in search and recommendation, particularly within platforms like Spotify, YouTube, and Netflix.
+
+Key points from the abstract:
+- Generative retrieval for search and recommendations
+- Use of LLMs in IR tasks
+- Comparison between multi-task vs single-task models
+- Issues with item representation bias towards popularity
+- Hypotheses about joint training&#39;s impact on item representations
+
+Now, applying the categorization guidelines:
+
+1. **Family of Algorithm**: The paper talks about generative retrieval and recommendation systems, which are part of deep learning or neural network methods. So categories like &#34;Generative Models&#34; and possibly &#34;Neural Networks&#34; fit here.
+
+2. **Domain of Problem**: It&#39;s clearly in the recommendation and search domains, so &#34;Recommendation Systems&#34; and &#34;Search Engines&#34; are appropriate.
+
+3. **Specific Aspects in Recommendation Space**: The paper discusses multi-task learning since it integrates search and recommendation into one model. So &#34;Multi-Task Learning&#34; is a good category. Also, it deals with evaluation aspects like effectiveness, which could fall under &#34;Evaluation Metrics.&#34;
+
+4. **Real World Applications**: Since the study references platforms like Spotify and Netflix, it&#39;s applicable in industry, so &#34;Industry Applications&#34; makes sense.
+
+5. **Other Relevant Categories**: The paper touches on item representation bias and latent representations, which relates to model architectures. So &#34;Model Architecture&#34; is a fit. Additionally, the discussion about recommendation systems generally falls under that category as well.
+
+Considering these points, I&#39;ll list the categories ensuring they&#39;re relevant, clear, and cover both specific aspects and broader domains without being too narrow or overlapping excessively.
+&lt;/think&gt;
+
+Generative Models, Search Engines, Recommendation Systems, Multi-Task Learning, Industry Applications, Model Architecture, Evaluation Metrics</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Democratizing Urban Mobility Through an Open-Source, Multi-Criteria Route Recommendation System
+Abstract:
+Urban navigation systems traditionally optimize for efficiency, thereby overlooking environmental factors and personal preferences. This paper introduces Routify, a novel multi-criteria recommender system for personalized urban route selection. Routify advances the state-of-the-art in route recommendation through: (1) integration of diverse environmental data (air quality, noise levels, green spaces) with real-time IoT inputs; (2) a dynamic weighting algorithm allowing fine-grained user control over routing parameters; (3) transparent decision-making via an interactive interface displaying edge-level information; and (4) a community-driven feedback mechanism that continuously refines recommendations. We have implemented Routify as an open-source platform, facilitating further research and development. Experimental results from 1000 origin-destination pairs demonstrate significant improvements in user-defined environmental metrics (up to 32.98% increase in green index for walking and 16.91% reduction in noise levels for cycling) compared to traditional routing systems. These improvements come with slight trade-offs in distance, especially in walking mode. Our research contributes a comprehensive framework for multi-criteria route recommendation, balancing individual preferences, environmental factors, and community insights in urban navigation.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this article about Routify, the open-source route recommendation system. Let me go through the process step by step.
+
+First, looking at the title: &#34;Democratizing Urban Mobility Through an Open-Source, Multi-Criteria Route Recommendation System.&#34; Okay, so it&#39;s about urban mobility and a recommendation system that uses multiple criteria.
+
+The abstract mentions integrating diverse environmental data like air quality, noise levels, and green spaces. That makes me think of categories related to sustainability or environment because these are key factors they&#39;re considering beyond just efficiency.
+
+They talk about personal preferences, which is important in recommendation systems. So maybe something like Personalization would be a relevant category here since the system allows users to control their routing parameters dynamically.
+
+The system uses real-time IoT inputs, so that&#39;s definitely connected to IoT technologies. Also, since it&#39;s an open-source platform, Open Source could be another category because accessibility and community-driven development are emphasized.
+
+Looking at the technical aspects, they mention a multi-criteria recommender system, which is a type of recommendation algorithm. So Multi-Criteria Recommendation would fit here. Additionally, the dynamic weighting algorithm suggests some form of machine learning or optimization techniques, maybe Machine Learning as a broader category.
+
+The platform&#39;s implementation in an open-source manner could also fall under Community-Driven Development since they mention feedback mechanisms that refine recommendations over time.
+
+They talk about experimental results with improvements in environmental metrics while considering trade-offs in distance. This evaluation aspect points towards categories like System Evaluation or Performance Analysis, as they&#39;re measuring how effective their approach is compared to traditional systems.
+
+Since this is focused on urban navigation and mobility, the domain category would be Urban Mobility. It&#39;s specific enough but still broad enough for user discoverability.
+
+The interactive interface that shows edge-level information sounds like User Interaction Design because it&#39;s about making decisions transparent and user-friendly.
+
+Considering all these points, I need to assign at least 8-12 categories. Let me list them out:
+
+1. Multi-Criteria Recommendation: Because the system uses multiple factors for recommendations.
+2. Open Source: Since it&#39;s implemented as an open-source platform.
+3. Sustainability: Environmental data is a key part of their approach.
+4. Urban Mobility: The domain they&#39;re targeting.
+5. IoT Integration: They use real-time IoT inputs.
+6. Personalization: Allowing users to control their preferences.
+7. Community-Driven Development: Feedback mechanisms from the community are mentioned.
+8. Machine Learning: Dynamic weighting and optimization might involve ML techniques.
+9. User Interaction Design: The interactive interface for transparency.
+10. System Evaluation: They provided experimental results evaluating performance.
+
+I think these cover the main aspects of the article, ensuring that it&#39;s discoverable under both technical and application-specific categories. I also made sure to balance between specific terms like Multi-Criteria Recommendation and broader ones like Sustainability and Urban Mobility. This should help users find the article whether they&#39;re searching for recommendation systems in general or something more niche like sustainability in urban mobility.
+&lt;/think&gt;
+
+Multi-Criteria Recommendation, Open Source, Sustainability, Urban Mobility, IoT Integration, Personalization, Community-Driven Development, Machine Learning, User Interaction Design, System Evaluation</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Democratizing Urban Mobility Through an Open-Source, Multi-Criteria Route Recommendation System
+Abstract:
+Urban navigation systems traditionally optimize for efficiency, thereby overlooking environmental factors and personal preferences. This paper introduces Routify, a novel multi-criteria recommender system for personalized urban route selection. Routify advances the state-of-the-art in route recommendation through: (1) integration of diverse environmental data (air quality, noise levels, green spaces) with real-time IoT inputs; (2) a dynamic weighting algorithm allowing fine-grained user control over routing parameters; (3) transparent decision-making via an interactive interface displaying edge-level information; and (4) a community-driven feedback mechanism that continuously refines recommendations. We have implemented Routify as an open-source platform, facilitating further research and development. Experimental results from 1000 origin-destination pairs demonstrate significant improvements in user-defined environmental metrics (up to 32.98% increase in green index for walking and 16.91% reduction in noise levels for cycling) compared to traditional routing systems. These improvements come with slight trade-offs in distance, especially in walking mode. Our research contributes a comprehensive framework for multi-criteria route recommendation, balancing individual preferences, environmental factors, and community insights in urban navigation.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m looking at this article about Routify, an open-source multi-criteria route recommendation system. The title mentions democratizing urban mobility, which suggests it&#39;s making something more accessible or equitable. The abstract talks about integrating environmental data like air quality, noise levels, and green spaces with real-time IoT inputs. So, environmental impact is a key theme here.
+
+The paper introduces a dynamic weighting algorithm that allows users to control parameters finely. This customization aspect falls under personalization in recommendation systems. There&#39;s also an interactive interface displaying edge-level info, which relates to transparency and user experience design. Additionally, the community-driven feedback mechanism indicates collaborative filtering or crowd-sourced improvements, making it a social/recommender system category.
+
+The domain here is urban mobility, so that&#39;s another category. They mention experimental results showing improvements in environmental metrics, which ties into evaluation metrics beyond accuracy—specifically, beyond traditional measures like distance or time to include environmental factors.
+
+Real-world applications are highlighted since it&#39;s an open-source platform with actual implementations tested on 1000 origin-destination pairs. This points to real-world deployment and user studies, so those should be included.
+
+Looking at the recommendation space specifics, multi-criteria recommendation is a key area, as they balance various factors like environmental and personal preferences. Democratizing suggests broader accessibility, which fits under democratization of technology.
+
+Putting this all together, I need to assign 8-12 categories that accurately reflect these aspects without being too narrow or too broad. I&#39;ll make sure each category has enough relevance and ensures the article is discoverable through multiple paths.
+&lt;/think&gt;
+
+Environmental Impact, Personalized Recommendations, Urban Mobility, Multi-Criteria Recommendation, Open-Source Systems, Real-Time Data, Collaborative Filtering, Evaluation Metrics, User Feedback Mechanisms, Transparency in AI, Social Recommender Systems, Democratization of Technology</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

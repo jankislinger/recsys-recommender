@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Offline Evaluation Standards for Recommender Systems
+Abstract:
+Offline evaluation has nowadays become a major step in developing Recommendation Systems in both academia and industry [4, 5]. While academia anchors on offline evaluation due to the lack of proper environments for conducting online tests with real users, the industry uses offline evaluation to filter the most promising solutions for further online testing, aiming at reducing costs and potential damage to customers. Despite the blunt advances observed on this topic recently, consolidating a reliable, replicable, flexible and efficient offline evaluation process capable of satisfactorily predicting online test results remains an open challenge [2]. The community still lacks an integrated and updated view on this topic, useful for practitioners to inspect and refine their current offline evaluation stack.
+The main Recommendation Systems venues have plenty of studies with relevant findings, presenting new challenges, pitfalls and divergent guidelines for better offline evaluation procedures [3, 5]. However, inspecting all those studies and keeping an updated perspective about where they agree is impractical, especially for the industry, given the need for fast iterations and deliveries. Thus, it is not rare to observe professionals struggle to obtain solid answers to practical and high-impact questions, such as: What are the main existing pitfalls we should be aware of when setting up an offline evaluation in a given domain? What is the desired evaluation framework for a given recommendation task? How reliable is a given offline evaluation stack, and how far is it from an ideal setting?
+In this work, we bring an updated snapshot of offline evaluation standards for Recommendation Systems. For this, we reviewed dozens of studies published in the main Recommendation Systems venues in the last five years, dealing with recurring questions related to offline evaluation design and compiling the main findings in the literature. Then, we contrasted this curated body of knowledge against practical issues we face internally at SEEK, aiming to identify the most valuable guidelines. As a result of this process, we propose an integrated evaluation framework for offline stacks, a reliability score to monitor signs of progress on our stack over time, and a list of best practices to bear in mind when starting a new evaluation. Hence, we have organised the work into three parts:
+Part I - Integrated Evaluation Framework. We present an offline evaluation framework that compiles the primary directives, pitfalls, and knowledge raised in the last five years by representative studies in the Recommendation Systems literature. This framework aims to compile the main steps, flaws and decisions to be aware of when designing offline tests. Also, it aims to present the leading solutions suggested in the literature for each known issue. The proposed framework can be seen as an extension of Cañamares’ work [1], in which we expand the factors, steps and decisions related to the design of offline experiments for recommenders. Figure 1 depicts the main steps of the framework along with some of the main pitfalls recurrently related to each step. It is noteworthy that this framework should not be deemed as a rigid and thorough set of steps and rules that all professionals must consider in every scenario. It is rather an organized collection of concerns raised in different situations, in which the strength and potential impact of each of them should be carefully inspected through the lens of each evaluation scenario.
+Part II - Reliability Score. We also propose a Reliability Score to quantify how close a given offline evaluation setting is from the idealised framework instantiated to a given domain and task. This score is derived from a question-driven process that estimates the current state, effort, and impact that each known issue has for each team or company. These questions represent a non-closed set of concerns related to distinct steps of the evaluation process that should be addressed by a reliable evaluation framework. The final score ranges from 0 to 1 and the higher its value, the more reliable a given offline evaluation setting is, considering the specific needs and perspectives of a team or company. Further, this score allows teams of professionals to monitor progress in their offline evaluation settings over time. The proposed score empowers companies to compare the maturity of different teams w.r.t. offline assessments using a unified view. In order to illustrate the practical utility of the Reliability Score, we also present a few internal use cases that demonstrate how the proposed score helped us at SEEK to identify the main flaws in our offline settings and outline strategies for refining our current evaluation stack.
+Part III - Best Practices &amp; Limitations. Finally, we compiled a list of best practices derived from academic works, experience reports from other companies, and our own experience at SEEK. We expect the proposed list to serve as a starting point for practitioners to qualitatively review their decisions when designing offline assessments, as well as that these professionals would contribute to refining and growing it over time.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about Offline Evaluation Standards for Recommender Systems. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Offline Evaluation Standards for Recommender Systems.&#34; The abstract talks about how offline evaluation has become a major step in developing recommendation systems both in academia and industry. It mentions that while academia relies on it due to the lack of real user environments, industry uses it to filter solutions before online testing to reduce costs. Despite advances, there&#39;s still a need for reliable, replicable, flexible, and efficient offline processes.
+
+The article seems to address challenges in setting up effective offline evaluations, recurring issues in evaluation design, and offers an integrated framework along with a reliability score and best practices. It also touches on how this impacts practitioners in both academia and industry.
+
+Now, I&#39;ll think about the categories based on the provided guidelines.
+
+1. **Evaluation Methods**: Since the article is all about evaluating recommendation systems offline.
+2. **Recommender Systems**: The main topic of the research.
+3. **Offline Evaluation**: Specific to the evaluation done without live users.
+4. **Best Practices**: They mention compiling best practices for practitioners.
+5. **Research Methodology**: Discusses how they reviewed studies and developed their framework.
+6. **Industry Applications**: Talks about industry use cases, like at SEEK.
+7. **Algorithm Design**: Although it&#39;s more about evaluation, the framework could influence algorithm design considerations.
+8. **Data Analysis**: Involves analyzing data from offline evaluations to improve systems.
+9. **Practical Guidelines**: They provide guidelines that can be applied in real-world scenarios.
+10. **Reproducibility**: The need for reliable and replicable processes is emphasized.
+
+I think these categories cover the main aspects of the article without being too narrow or too broad. Each category helps users interested in different facets of recommendation systems find this article relevant.
+&lt;/think&gt;
+
+Evaluation Methods, Recommender Systems, Offline Evaluation, Best Practices, Research Methodology, Industry Applications, Algorithm Design, Data Analysis, Practical Guidelines, Reproducibility</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Offline Evaluation Standards for Recommender Systems
+Abstract:
+Offline evaluation has nowadays become a major step in developing Recommendation Systems in both academia and industry [4, 5]. While academia anchors on offline evaluation due to the lack of proper environments for conducting online tests with real users, the industry uses offline evaluation to filter the most promising solutions for further online testing, aiming at reducing costs and potential damage to customers. Despite the blunt advances observed on this topic recently, consolidating a reliable, replicable, flexible and efficient offline evaluation process capable of satisfactorily predicting online test results remains an open challenge [2]. The community still lacks an integrated and updated view on this topic, useful for practitioners to inspect and refine their current offline evaluation stack.
+The main Recommendation Systems venues have plenty of studies with relevant findings, presenting new challenges, pitfalls and divergent guidelines for better offline evaluation procedures [3, 5]. However, inspecting all those studies and keeping an updated perspective about where they agree is impractical, especially for the industry, given the need for fast iterations and deliveries. Thus, it is not rare to observe professionals struggle to obtain solid answers to practical and high-impact questions, such as: What are the main existing pitfalls we should be aware of when setting up an offline evaluation in a given domain? What is the desired evaluation framework for a given recommendation task? How reliable is a given offline evaluation stack, and how far is it from an ideal setting?
+In this work, we bring an updated snapshot of offline evaluation standards for Recommendation Systems. For this, we reviewed dozens of studies published in the main Recommendation Systems venues in the last five years, dealing with recurring questions related to offline evaluation design and compiling the main findings in the literature. Then, we contrasted this curated body of knowledge against practical issues we face internally at SEEK, aiming to identify the most valuable guidelines. As a result of this process, we propose an integrated evaluation framework for offline stacks, a reliability score to monitor signs of progress on our stack over time, and a list of best practices to bear in mind when starting a new evaluation. Hence, we have organised the work into three parts:
+Part I - Integrated Evaluation Framework. We present an offline evaluation framework that compiles the primary directives, pitfalls, and knowledge raised in the last five years by representative studies in the Recommendation Systems literature. This framework aims to compile the main steps, flaws and decisions to be aware of when designing offline tests. Also, it aims to present the leading solutions suggested in the literature for each known issue. The proposed framework can be seen as an extension of Cañamares’ work [1], in which we expand the factors, steps and decisions related to the design of offline experiments for recommenders. Figure 1 depicts the main steps of the framework along with some of the main pitfalls recurrently related to each step. It is noteworthy that this framework should not be deemed as a rigid and thorough set of steps and rules that all professionals must consider in every scenario. It is rather an organized collection of concerns raised in different situations, in which the strength and potential impact of each of them should be carefully inspected through the lens of each evaluation scenario.
+Part II - Reliability Score. We also propose a Reliability Score to quantify how close a given offline evaluation setting is from the idealised framework instantiated to a given domain and task. This score is derived from a question-driven process that estimates the current state, effort, and impact that each known issue has for each team or company. These questions represent a non-closed set of concerns related to distinct steps of the evaluation process that should be addressed by a reliable evaluation framework. The final score ranges from 0 to 1 and the higher its value, the more reliable a given offline evaluation setting is, considering the specific needs and perspectives of a team or company. Further, this score allows teams of professionals to monitor progress in their offline evaluation settings over time. The proposed score empowers companies to compare the maturity of different teams w.r.t. offline assessments using a unified view. In order to illustrate the practical utility of the Reliability Score, we also present a few internal use cases that demonstrate how the proposed score helped us at SEEK to identify the main flaws in our offline settings and outline strategies for refining our current evaluation stack.
+Part III - Best Practices &amp; Limitations. Finally, we compiled a list of best practices derived from academic works, experience reports from other companies, and our own experience at SEEK. We expect the proposed list to serve as a starting point for practitioners to qualitatively review their decisions when designing offline assessments, as well as that these professionals would contribute to refining and growing it over time.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m looking at this research article titled &#34;Offline Evaluation Standards for Recommender Systems.&#34; The abstract talks about how offline evaluation is crucial in both academia and industry. It mentions that while academia can&#39;t always do online tests due to real-world environments, the industry uses offline evaluations to filter solutions before moving them to online testing. They point out that despite some progress, there&#39;s still a need for reliable and efficient offline evaluation processes.
+
+The article reviews studies from major recommendation system venues over five years, trying to compile existing knowledge into an integrated framework. They also propose a reliability score and best practices based on their findings and internal experiences at SEEK.
+
+I need to categorize this article. Let me think about the categories provided earlier: Evaluation Metrics, Offline Evaluation, Best Practices, Industry Applications, Research Review, Reliability, and Frameworks &amp; Methods.
+
+- **Evaluation Metrics**: Since the article focuses on evaluation processes and standards, this seems relevant.
+- **Offline Evaluation**: Definitely a primary category as the title itself is about offline evaluation.
+- **Best Practices**: The article presents best practices for setting up evaluations, so that&#39;s another fit.
+- **Industry Applications**: They mention how industry uses offline evaluation to filter solutions before online testing, which aligns here.
+- **Research Review**: They reviewed numerous studies over five years, so this category fits.
+- **Reliability**: The proposed Reliability Score is a key part of the article, so that&#39;s another category.
+- **Frameworks &amp; Methods**: They present an integrated evaluation framework, so this category applies.
+
+I don&#39;t see any other obvious categories from the provided list. Maybe &#34;Standards&#34; could be relevant, but it&#39;s not in the example list. The existing categories seem sufficient and cover all aspects of the article. So I&#39;ll stick with these seven.
+&lt;/think&gt;
+
+**Categorization:**
+
+- Evaluation Metrics
+- Offline Evaluation
+- Best Practices
+- Industry Applications
+- Research Review
+- Reliability
+- Frameworks &amp; Methods</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

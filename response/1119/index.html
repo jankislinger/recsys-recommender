@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Large Language Models as Evaluators for Recommendation Explanations
+Abstract:
+The explainability of recommender systems has attracted significant attention in academia and industry. Many efforts have been made for explainable recommendations, yet evaluating the quality of the explanations remains a challenging and unresolved issue. In recent years, leveraging LLMs as evaluators presents a promising avenue in Natural Language Processing tasks (e.g., sentiment classification, information extraction), as they perform strong capabilities in instruction following and common-sense reasoning. However, evaluating recommendation explanatory texts is different from these NLG tasks, as its criteria are related to human perceptions and are usually subjective. In this paper, we investigate whether LLMs can serve as evaluators of recommendation explanations. To answer the question, we utilize real user feedback on explanations given from previous work and additionally collect third-party annotations and LLM evaluations. We design and apply a 3-level meta-evaluation strategy to measure the correlation between evaluator labels and the ground truth provided by users. Our experiments reveal that LLMs, such as GPT4, can provide comparable evaluations with appropriate prompts and settings. We also provide further insights into combining human labels with the LLM evaluation process and utilizing ensembles of multiple heterogeneous LLM evaluators to enhance the accuracy and stability of evaluations. Our study verifies that utilizing LLMs as evaluators can be an accurate, reproducible and cost-effective solution for evaluating recommendation explanation texts. Our code is available at https://anonymous.4open.science/r/LLMasAnnotator-0043.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article into multiple relevant categories based on the provided guidelines. Let me start by carefully reading the title and abstract to understand its core themes.
+
+The title is &#34;Large Language Models as Evaluators for Recommendation Explanations.&#34; This immediately tells me that the paper focuses on using LLMs in the context of recommendation systems, specifically for evaluating explanations. 
+
+Looking at the abstract, it discusses explainability in recommender systems, which is a key area within recommendation systems research. The authors are addressing the challenge of evaluating explanation quality, which traditionally has been difficult and subjective. They explore the use of large language models (LLMs) as evaluators, mentioning their strong capabilities in tasks like sentiment classification and information extraction. 
+
+The study uses real user feedback and third-party annotations to assess how well LLMs can evaluate recommendation explanations. They developed a 3-level meta-evaluation strategy and found that certain LLMs, such as GPT-4, perform comparably with appropriate prompts. Additionally, they provide insights into combining human labels with LLM evaluations and using ensembles of multiple models to enhance accuracy.
+
+Now, considering the guidelines, I need to assign this article to 8-12 categories. Let&#39;s break down the key themes:
+
+1. **Explainability in Recommender Systems**: The paper focuses on evaluating explanations, so this is a primary category.
+2. **Evaluation Metrics for Recommendations**: Since it&#39;s about assessing explanation quality, this fits here.
+3. **Large Language Models (LLMs)**: The use of LLMs as evaluators is central to the research.
+4. **Natural Language Processing (NLP) Tasks**: Although more general, the paper ties into NLP since LLMs are used for tasks like sentiment analysis.
+5. **Human-Centered AI**: The study involves real user feedback and annotations, highlighting human involvement.
+6. **Recommendation Systems**: The broader area of research is recommendation systems, so this is a key category.
+7. **Explainability Evaluation**: Specifically about evaluating explanations, which is a niche within explainability.
+8. **User Feedback in Recommendations**: The use of real user feedback for evaluation makes this relevant.
+
+I also need to consider other possible categories like &#34;Beyond Accuracy&#34; since it&#39;s about evaluation beyond just accuracy metrics, and &#34;Cost-Effective Solutions&#34; as the paper mentions LLMs being cost-effective. However, these might be less direct but still applicable.
+
+Now, mapping these to the examples provided:
+
+- **Family of algorithm**: Not directly applicable here, unless we consider LLMs themselves as a family.
+- **Domain of problem**: Recommender systems, specifically.
+- **Specific recommendation aspect**: Explainability, evaluation metrics.
+- **Evaluation aspects**: Beyond accuracy, diversity might be a stretch but could fit if explanations cover diverse aspects.
+- **Real-world applications**: The paper mentions using real user feedback and third-party annotations.
+
+I think the categories I identified earlier cover these aspects. To reach 8-12, let me see:
+
+1. Explainability in Recommender Systems
+2. Evaluation Metrics for Recommendations
+3. Large Language Models (LLMs)
+4. Natural Language Processing (NLP) Tasks
+5. Human-Centered AI
+6. Recommendation Systems
+7. Explainability Evaluation
+8. User Feedback in Recommendations
+
+That&#39;s 8 categories, which is within the recommended range. Each of these is specific enough to be useful but also broad enough to cover other related articles.
+&lt;/think&gt;
+
+Explainability in Recommender Systems, Evaluation Metrics for Recommendations, Large Language Models (LLMs), Natural Language Processing (NLP) Tasks, Human-Centered AI, Recommendation Systems, Explainability Evaluation, User Feedback in Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Large Language Models as Evaluators for Recommendation Explanations
+Abstract:
+The explainability of recommender systems has attracted significant attention in academia and industry. Many efforts have been made for explainable recommendations, yet evaluating the quality of the explanations remains a challenging and unresolved issue. In recent years, leveraging LLMs as evaluators presents a promising avenue in Natural Language Processing tasks (e.g., sentiment classification, information extraction), as they perform strong capabilities in instruction following and common-sense reasoning. However, evaluating recommendation explanatory texts is different from these NLG tasks, as its criteria are related to human perceptions and are usually subjective. In this paper, we investigate whether LLMs can serve as evaluators of recommendation explanations. To answer the question, we utilize real user feedback on explanations given from previous work and additionally collect third-party annotations and LLM evaluations. We design and apply a 3-level meta-evaluation strategy to measure the correlation between evaluator labels and the ground truth provided by users. Our experiments reveal that LLMs, such as GPT4, can provide comparable evaluations with appropriate prompts and settings. We also provide further insights into combining human labels with the LLM evaluation process and utilizing ensembles of multiple heterogeneous LLM evaluators to enhance the accuracy and stability of evaluations. Our study verifies that utilizing LLMs as evaluators can be an accurate, reproducible and cost-effective solution for evaluating recommendation explanation texts. Our code is available at https://anonymous.4open.science/r/LLMasAnnotator-0043.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article based on the given guidelines. The title is &#34;Large Language Models as Evaluators for Recommendation Explanations,&#34; and the abstract talks about using LLMs like GPT4 to evaluate recommendation explanations. Let me break down the key points.
+
+First, the main focus is on explainability in recommender systems. So, categories related to Explainability are definitely relevant. The article discusses evaluating explanations, which ties into Evaluation Methods and specifically Evaluation of Explanations.
+
+They mention leveraging LLMs as evaluators, so categories like Large Language Models (LLMs), AI Tools for Evaluation make sense. Since it&#39;s about recommendation systems, I should include Recommender Systems and Explainable Recommendations.
+
+The abstract also touches on combining human labels with LLM evaluations, which brings in Human-AI Collaboration. They use a meta-evaluation strategy, so that&#39;s another category: Meta-Evaluation Strategy.
+
+They discuss real user feedback and annotations, leading to categories like User Feedback, Annotation, and Ground Truth. The experiments involve prompt engineering with GPT4, so Prompt Engineering is relevant too.
+
+The study highlights the cost-effectiveness of using LLMs as evaluators, pointing towards Cost-Effective Solutions. Lastly, since it&#39;s about enhancing accuracy and stability through ensembles, Ensembling Evaluators fits well.
+
+I need to ensure these categories are user-friendly and cover both broad and specific aspects. They should help users find related content easily without overcrowding any category.
+&lt;/think&gt;
+
+Large Language Models (LLMs), Explainability, Evaluation Methods, Recommender Systems, Human-AI Collaboration, Ground Truth, Annotation, User Feedback, Meta-Evaluation Strategy, Prompt Engineering, Ensembling Evaluators, Explainable Recommendations, Cost-Effective Solutions</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

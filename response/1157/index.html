@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Embedding based retrieval for long tail search queries in ecommerce
+Abstract:
+In this abstract we present a series of optimizations we performed on the two-tower model architecture [14], and training and evaluation datasets to implement semantic product search at Best Buy. Search queries on bestbuy.com follow the pareto distribution whereby a minority of them account for most searches. This leaves us with a long tail of search queries that have low frequency of issuance. The queries in the long tail suffer from very spare interaction signals. Our current work focuses on building a model to serve the long tail queries. We present a series of optimizations we have done to this model to maximize conversion for the purpose of retrieval from the catalog. The first optimization we present is using a large language model to improve the sparsity of conversion signals. The second optimization is pretraining an off-the-shelf transformer-based model on the Best Buy catalog data. The third optimization we present is on the finetuning front. We use query-to-query pairs in addition to query-to-product pairs and combining the above strategies for finetuning the model. We also demonstrate how merging the weights of these finetuned models improves the evaluation metrics. Finally, we provide a recipe for curating an evaluation dataset for continuous monitoring of model performance with human-in-the-loop evaluation. We found that adding this recall mechanism to our current term match-based recall improved conversion by 3% in an online A/B test.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article based on the title and abstract provided. The goal is to assign it to multiple relevant categories so users can easily navigate and discover content. Let&#39;s start by understanding what the article is about.
+
+The title mentions &#34;Embedding based retrieval for long tail search queries in e-commerce.&#34; So, it seems like the focus is on improving search results, especially for less common or longer search terms that people might use when shopping online.
+
+Looking at the abstract, they talk about optimizing a two-tower model architecture. I&#39;m not super familiar with all the models out there, but I remember that in recommendation systems, the two-tower approach typically involves separate neural networks for user and item embeddings. So maybe this falls under that family of algorithms.
+
+The problem domain here is clearly e-commerce, since they mention Best Buy and their search queries. That&#39;s one category right there: E-Commerce.
+
+They specifically address long-tail search queries. I think &#34;Long-Tail Queries&#34; is a specific issue in information retrieval where less frequent searches are harder to handle because of sparse data. So that should be another category.
+
+The abstract mentions using large language models and pretraining transformer-based models on their catalog data. This points towards Natural Language Processing (NLP) techniques being central here, so NLP is definitely relevant.
+
+They also talk about finetuning the model with query-to-query pairs and combining strategies for better performance. Finetuning in this context would be a method within machine learning, particularly transfer learning, where models are adjusted from pretraining to specific tasks. So Transfer Learning should be included.
+
+Another point they make is about evaluation datasets and human-in-the-loop evaluation. This suggests that the article discusses Evaluation Methods or maybe more specifically, Human Evaluation as a category.
+
+The improvement in conversion rates through an online A/B test indicates that they applied their solution in a real-world setting. Therefore, Real-World Applications would be appropriate here.
+
+They mention optimizing for retrieval from the catalog and improving recall mechanisms, which ties into Information Retrieval as a broader field.
+
+Putting this all together, I should also think about whether there are any other relevant categories. They use embeddings, which is a general technique in machine learning but might not need a separate category if &#34;Transfer Learning&#34; covers that aspect. The focus on e-commerce and search suggests it&#39;s more applied rather than theoretical, so maybe something like Applied Machine Learning? But I&#39;m not sure if that&#39;s one of the specified categories.
+
+I should also consider whether any specific aspects like Cold Start are addressed, but the abstract doesn&#39;t mention that. It&#39;s more about handling low-frequency queries, which is similar to long-tail issues rather than cold start problems where new items or users have little data.
+
+So compiling all these points, the categories I can extract are:
+- E-commerce
+- Long-Tail Queries
+- NLP (Natural Language Processing)
+- Two-Tower Model
+- Transfer Learning
+- Finetuning
+- Evaluation Methods
+- Human Evaluation
+- Real-World Applications
+- Information Retrieval
+
+Wait, but the user mentioned &#34;at least 8-12 categories.&#34; Let me check if I missed any. The two-tower model is a specific algorithm family, so that&#39;s covered under Family of Algorithm. Pretraining and finetuning are part of Transfer Learning techniques. They also talk about evaluation datasets and human-in-the-loop, which might fall under Evaluation Metrics or Aspects of Evaluation.
+
+I think I have enough categories now, ensuring each is relevant without being too niche unless it adds value.
+&lt;/think&gt;
+
+E-commerce, Long-Tail Queries, Natural Language Processing (NLP), Two-Tower Model, Transfer Learning, Finetuning, Evaluation Methods, Human Evaluation, Real-World Applications, Information Retrieval.</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

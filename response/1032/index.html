@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: ConFit: Improving Resume-Job Matching using Data Augmentation and Contrastive Learning
+Abstract:
+A reliable resume-job matching system helps a company find suitable candidates from a pool of resumes, and helps a job seeker find relevant jobs from a list of job posts. However, since job seekers apply only to a few jobs, interaction records in resume-job datasets are sparse. Different from many prior work that use complex modeling techniques, we tackle this sparsity problem using data augmentations and a simple contrastive learning approach. ConFit first formulates resume-job datasets as a sparse bipartite graph, and creates an augmented dataset by paraphrasing specific sections in a resume or a job post. Then, ConFit finetunes pre-trained encoders with contrastive learning to further increase training samples from B pairs per batch to O(B^2) per batch. We evaluate ConFit on two real-world datasets and find it outperforms prior methods (including BM25 and OpenAI text-ada-002) by up to 19% and 31% absolute in nDCG@10 for ranking jobs and ranking resumes, respectively. We believe ConFit’s simple yet highly performant approach lays a strong foundation for future research in modeling person-job fit.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this article about ConFit: Improving Resume-Job Matching using Data Augmentation and Contrastive Learning. Let&#39;s break it down step by step.
+
+First, the title mentions resume-job matching, so that points towards a specific application in recruitment or job matching systems. So categories like &#34;Job Matching&#34; and &#34;Recruitment Systems&#34; make sense here.
+
+The abstract talks about tackling sparse interaction records using data augmentation and contrastive learning. Data augmentation is a technique used to increase the amount of training data, which relates to techniques for handling sparsity. Contrastive learning is a type of self-supervised learning method, so that&#39;s another category: &#34;Contrastive Learning.&#34;
+
+They mention formulating the problem as a sparse bipartite graph. Bipartite graphs are often used in recommendation systems and matching problems, so categories like &#34;Bipartite Graphs&#34; and &#34;Recommendation Systems&#34; fit here.
+
+The approach involves paraphrasing specific sections of resumes or job posts to create an augmented dataset. This is a data augmentation technique, specifically focused on text, so adding &#34;Data Augmentation&#34; makes sense.
+
+They finetune pre-trained encoders, which relates to transfer learning, as they&#39;re using models that have been trained on other tasks and adapting them here. So including &#34;Transfer Learning&#34; is appropriate.
+
+The evaluation shows improvements over BM25 and OpenAI&#39;s text-ada-002 models in terms of nDCG@10 for ranking jobs and resumes. This indicates a focus on ranking performance, so &#34;Ranking Performance&#34; should be included.
+
+Additionally, the system is applied to real-world datasets, which means it has practical applications beyond just theoretical research. Therefore, categories like &#34;Real-World Applications&#34; would be fitting.
+
+Looking at the example categories provided, I can also consider whether any specific aspects of recommendation are addressed. The problem here isn&#39;t exactly cold start but more about improving matching through data techniques, so maybe not that. However, since it&#39;s a recommendation system for job matches, &#34;Job Matching&#34; is a specific enough category.
+
+I should make sure to cover both the technical methods (data augmentation, contrastive learning) and the application areas (job matching, recruitment systems). Also, considering aspects like sparsity handling is important because it addresses a common issue in recommendation systems where data can be sparse due to limited interactions.
+
+I need to assign at least 8-12 categories. Let me list them out:
+
+1. Job Matching
+2. Recruitment Systems
+3. Data Augmentation
+4. Contrastive Learning
+5. Bipartite Graphs
+6. Recommendation Systems
+7. Sparse Interaction Records
+8. Transfer Learning
+9. Ranking Performance
+10. Real-World Applications
+
+I think these cover the main aspects of the article: the problem domain (job matching, recruitment), the methods used (data augmentation, contrastive learning, transfer learning), and the evaluation focus on ranking performance with real-world applications.
+
+I should double-check if any other categories are relevant. The abstract doesn&#39;t mention specific domains beyond job and resumes, so adding &#34;Human Resources&#34; might also be useful for broader categorization but perhaps it&#39;s redundant with &#34;Recruitment Systems.&#34;
+
+Also, since they&#39;re using a simple approach to handle sparsity, maybe &#34;Simplicity in Modeling&#34; could be another category, but that&#39;s not among the examples provided. The example categories suggest focusing on families of algorithms and specific recommendation aspects, so sticking with more standard terms is better.
+
+Finalizing the list, I think 10 categories are sufficient and cover all necessary aspects without being too granular.
+&lt;/think&gt;
+
+Job Matching, Recruitment Systems, Data Augmentation, Contrastive Learning, Bipartite Graphs, Recommendation Systems, Sparse Interaction Records, Transfer Learning, Ranking Performance, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>
