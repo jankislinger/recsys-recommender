@@ -1,0 +1,30 @@
+[project]
+name = "recsys-recommender"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "gunicorn>=21.2",
+  "pydantic>=2.11.7",
+  "full-page-recommender",
+  "recombee-api-client>=5.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "ruff>=0.12.12",
+]
+
+[tool.uv.sources]
+full-page-recommender = { git = "https://github.com/jankislinger/full-page-recommender" }
+
+[tool.ruff]
+line-length = 100
+exclude = ["build", "dist", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
