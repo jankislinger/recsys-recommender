@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Efficient Inference of Sub-Item Id-based Sequential Recommendation Models with Millions of Items
+Abstract:
+Transformer-based recommender systems, such as BERT4Rec or SASRec, achieve state-of-the-art results in sequential recommendation. However, it is challenging to use these models in production environments with catalogues of millions of items: scaling Transformers beyond a few thousand items is problematic for several reasons, including high model memory consumption and slow inference. In this respect, RecJPQ is a state-of-the-art method of reducing the models’ memory consumption; RecJPQ compresses item catalogues by decomposing item IDs into a small number of shared sub-item IDs. Despite reporting the reduction of memory consumption by a factor of up to 50x, the original RecJPQ paper did not report inference efficiency improvements over the baseline Transformer-based models. On analysis of RecJPQ’s scoring algorithm, we find that its efficiency is limited by its use of item score accumulators, which prevent parallelisation. On the other hand, LightRec (a non-sequential method that uses a similar idea of sub-ids) reported large inference efficiency improvements using an algorithm we call PQTopK. We show that it is also possible to improve RecJPQ-based models’ inference efficiency using the PQTopK algorithm. In particular, we speed up RecJPQ-enhanced SASRec by a factor of 4.5x compared to the original SASRec’s inference method and by the factor of 1.56x compared to the method implemented in RecJPQ code on a large-scale Gowalla dataset with more than a million items. Further, using simulated data, we show that PQTopK remains efficient with catalogues of up to tens of millions of items, removing one of the last obstacles to using Transformer-based models in production environments with large catalogues.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article into multiple relevant categories based on its content and themes. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;Efficient Inference of Sub-Item Id-based Sequential Recommendation Models with Millions of Items.&#34; So it&#39;s about recommendation models that handle a large number of items efficiently using sub-item IDs.
+
+Looking at the abstract, they mention Transformer-based recommender systems like BERT4Rec and SASRec. They discuss challenges in scaling these models for production environments with millions of items due to high memory consumption and slow inference times. The article talks about RecJPQ, which compresses item catalogues by decomposing item IDs into sub-item IDs, reducing memory usage but not improving inference speed as much as expected.
+
+They analyze why RecJPQ isn&#39;t more efficient and find that the scoring algorithm&#39;s use of item score accumulators limits parallelization. They then look at LightRec, a non-sequential method using sub-IDs, which achieved better efficiency with an algorithm called PQTopK. The authors apply this PQTopK to improve RecJPQ-based models, achieving significant speedups on large datasets like Gowalla with over a million items and even up to tens of millions in simulations.
+
+So the key themes here are:
+
+1. Sequential recommendation: Since it&#39;s about improving sequential recommendation models.
+2. Transformer-based models: Specifically discussing BERT4Rec and SASRec.
+3. Sub-item ID techniques: Compressing item IDs into sub-IDs for efficiency.
+4. Scalability: Handling large numbers of items efficiently, up to millions or tens of millions.
+5. Inference efficiency: Improving the speed and performance of recommendation models in production.
+6. Memory consumption: Reducing memory usage through methods like RecJPQ.
+7. Optimization techniques: Applying algorithms like PQTopK to enhance performance.
+8. Production environments: The practical application of these models in real-world settings.
+9. Evaluation on large datasets: Using the Gowalla dataset and simulations with massive item catalogs.
+
+I also notice that this touches on aspects like algorithm optimization, scalability issues common in recommendation systems, and the importance of efficient inference for deployment. There&#39;s a focus on overcoming obstacles to using Transformer-based models at scale, which relates to both computational efficiency and practical implementation challenges.
+
+Another point is the comparison between different methods (RecJPQ vs LightRec) and how integrating techniques from one into another can lead to better performance. This suggests categories related to algorithm adaptation or hybrid approaches in recommendations.
+
+Considering the example categories provided earlier, this article fits well under specific recommendation topics like &#34;Sequential Recommendation,&#34; technical aspects like &#34;Transformer-based Models,&#34; scalability issues, and efficiency improvements. It also involves real-world applications since they&#39;re discussing production environments and practical obstacles.
+
+I should avoid creating too narrow categories that only apply to a few articles but ensure each category is meaningful and useful for navigation. So combining these thoughts, the relevant categories would include:
+
+- Sequential Recommendation
+- Transformer-based Models
+- Sub-item ID techniques
+- Scalability
+- Inference Efficiency
+- Memory Consumption Optimization
+- Algorithm Optimization
+- Production Environments
+- Large-scale Data Handling
+
+I think that covers the main points without being too granular. Each category here is broad enough to include multiple articles but specific enough to help users find relevant content easily.
+&lt;/think&gt;
+
+Sequential Recommendation, Transformer-based Models, Sub-item ID techniques, Scalability, Inference Efficiency, Memory Consumption Optimization, Algorithm Optimization, Production Environments, Large-scale Data Handling</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Efficient Inference of Sub-Item Id-based Sequential Recommendation Models with Millions of Items
+Abstract:
+Transformer-based recommender systems, such as BERT4Rec or SASRec, achieve state-of-the-art results in sequential recommendation. However, it is challenging to use these models in production environments with catalogues of millions of items: scaling Transformers beyond a few thousand items is problematic for several reasons, including high model memory consumption and slow inference. In this respect, RecJPQ is a state-of-the-art method of reducing the models’ memory consumption; RecJPQ compresses item catalogues by decomposing item IDs into a small number of shared sub-item IDs. Despite reporting the reduction of memory consumption by a factor of up to 50x, the original RecJPQ paper did not report inference efficiency improvements over the baseline Transformer-based models. On analysis of RecJPQ’s scoring algorithm, we find that its efficiency is limited by its use of item score accumulators, which prevent parallelisation. On the other hand, LightRec (a non-sequential method that uses a similar idea of sub-ids) reported large inference efficiency improvements using an algorithm we call PQTopK. We show that it is also possible to improve RecJPQ-based models’ inference efficiency using the PQTopK algorithm. In particular, we speed up RecJPQ-enhanced SASRec by a factor of 4.5x compared to the original SASRec’s inference method and by the factor of 1.56x compared to the method implemented in RecJPQ code on a large-scale Gowalla dataset with more than a million items. Further, using simulated data, we show that PQTopK remains efficient with catalogues of up to tens of millions of items, removing one of the last obstacles to using Transformer-based models in production environments with large catalogues.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to figure out how to categorize this research article. The title is &#34;Efficient Inference of Sub-Item Id-based Sequential Recommendation Models with Millions of Items.&#34; From the title, it seems like the focus is on recommendation systems, specifically dealing with a lot of items, maybe using some kind of efficient inference methods.
+
+Looking at the abstract: It talks about transformer-based recommender systems like BERT4Rec or SASRec. These are known for sequential recommendations but have issues scaling up when there are millions of items. The main problem is high memory consumption and slow inference. RecJPQ is mentioned as a method to reduce memory by decomposing item IDs into sub-item IDs. However, even with this reduction, the inference efficiency isn&#39;t improved much.
+
+The article then discusses how they analyzed RecJPQ&#39;s scoring algorithm and found it inefficient due to item score accumulators that limit parallelization. They compare it to LightRec, which uses a similar idea but implemented an algorithm called PQTopK for better inference speed. The study shows that using PQTopK improves the efficiency of RecJPQ-based models by factors, especially on a large dataset like Gowalla with over a million items.
+
+So, breaking this down, the key elements are:
+1. **Recommendation Systems**: It&#39;s about recommendation algorithms.
+2. **Transformer-Based Models**: They&#39;re discussing methods like SASRec which use transformer architectures.
+3. **Efficiency and Scalability**: The main focus is on making these models efficient enough to handle millions of items without high memory usage or slow performance.
+4. **Inference Efficiency**: They specifically talk about speeding up the inference process, which is crucial for real-time recommendations.
+5. **Sub-Item IDs and Decomposition**: RecJPQ decomposes item IDs into sub-items to manage large catalogs more efficiently.
+6. **Parallelization**: The issue with RecJPQ&#39;s scoring algorithm was its inability to be parallelized, but PQTopK addresses this.
+
+Now, mapping these elements to the categories:
+- **Recommendation Systems**: Definitely a primary category.
+- **Transformer-Based Models**: Since they&#39;re discussing SASRec and BERT4Rec, which are transformer-based.
+- **Scalability**: Handling millions of items is about scalability.
+- **Efficient Inference**: The focus is on making inference faster.
+- **Memory Efficiency**: RecJPQ reduces memory consumption significantly.
+- **Parallel Processing**: PQTopK allows for parallelization, improving efficiency.
+
+Other possible categories could be:
+- **Real-Time Recommendations**: Since efficiency is crucial for real-time use.
+- **Large-Scale Systems**: Handling large datasets of millions of items.
+- **Algorithm Optimization**: They&#39;re optimizing existing algorithms like RecJPQ and SASRec.
+
+I should make sure each category is clear and relevant. The user wants at least 8 categories, so I can include all the main ones from above plus a couple more if needed. Maybe something about performance benchmarks or evaluation metrics, but since they tested on Gowalla and simulated data, it&#39;s more about scalability and efficiency.
+
+So compiling these thoughts into the required format:
+&lt;/think&gt;
+
+Recommendation Systems, Transformer-Based Models, Scalability, Efficient Inference, Memory Efficiency, Parallel Processing, Real-Time Recommendations, Large-Scale Systems</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

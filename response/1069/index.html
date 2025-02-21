@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: The Role of Unknown Interactions in Implicit Matrix Factorization — A Probabilistic View
+Abstract:
+Matrix factorization is a well-known and effective methodology for top-k list recommendation. It became widely known during the Netflix challenge in 2006, and since then, many adapted and improved versions have been published. A particularly interesting matrix factorization algorithm called iALS (for implicit Alternating Least Squares) adapts the method for implicit feedback, i.e.\ a setting where only a very small amount of positive labels are available along with a majority of unknown labels. Compared to the classical task of rating prediction, learning from implicit feedback is applicable to many more domains, as the data is more abundant and requires less effort to elicit from users. However, the sparsity, imbalance, and implicit nature of the signal also pose unique challenges to retrieving the most relevant items to recommend. We revisit the role of unknown interactions in implicit matrix factorization. Traditionally, all unknowns are interpreted as negative samples and their importance in the training objective is then down-weighted to balance them out with the known, positive interactions. Interestingly, by adapting a probabilistic view of matrix factorization, we can retain the unknown nature of these interactions by modelling them as either positive or negative. With this new formulation that better fits the underlying data, we gain improved performance on the downstream recommendation task without any computational overhead compared to the popular iALS method. This paper outlines the key insights needed to adapt iALS to use logistic regression. Furthermore, the popular full-rank EASE model is identified as a special case of iALS. With this knowledge, EASE was trivially adapted to use logistic regression as well. An extensive experimental evaluation on several real-world datasets demonstrates the effectiveness of our approach. Additionally, a discrepancy between the need for weighting between factorization and regression models is discovered, leading towards a better understanding of these methods.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article about implicit matrix factorization from a probabilistic view. Let me go through the key points step by step.
+
+First, the title mentions &#34;Implicit Matrix Factorization&#34; and &#34;Probabilistic View.&#34; That tells me right away that the main algorithm family here is Matrix Factorization, specifically looking at the implicit version which deals with unknown interactions.
+
+Looking at the abstract, they talk about iALS (implicit Alternating Least Squares) and how it handles implicit feedback. So I should include both iALS as a specific algorithm and Implicit Feedback as a domain aspect since it&#39;s dealing with user data where most interactions are unknown.
+
+The problem domain here is recommendation systems because the article discusses top-k list recommendations, which is a common task in that field. The abstract also mentions real-world datasets and applications like A/B testing or user surveys, so Real-World Applications should be included as well.
+
+They mention adapting iALS to use logistic regression, so that brings in the aspect of Algorithm Adaptation. They also compare it with EASE, which is a full-rank model, indicating an analysis of different algorithm families and their relationships.
+
+Evaluation aspects are covered since they discuss performance improvements on recommendation tasks and conducted extensive experiments. So categories like Evaluation Methods or Performance Analysis would be relevant. Additionally, the abstract talks about understanding weighting between factorization and regression models, touching on Model Interpretation.
+
+The probabilistic approach is a unique methodological angle, so Probabilistic Models should be one of the categories. They also discuss handling unknown interactions differently by modeling them as positive or negative, which relates to Cold Start problems in recommendations because those unknowns can represent new users or items without prior data.
+
+Putting it all together, I need to assign this article to at least 8-12 categories that cover the algorithm family, specific methods, problem domains, evaluation aspects, real-world applications, and any unique methodological approaches. That should ensure good discoverability for users interested in matrix factorization, recommendation systems, implicit feedback, probabilistic models, and more.
+&lt;/think&gt;
+
+Matrix Factorization, Implicit Feedback, Recommendation Systems, Algorithm Adaptation, Probabilistic Models, iALS, Real-World Applications, Cold Start, Evaluation Methods, Model Interpretation</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: The Role of Unknown Interactions in Implicit Matrix Factorization — A Probabilistic View
+Abstract:
+Matrix factorization is a well-known and effective methodology for top-k list recommendation. It became widely known during the Netflix challenge in 2006, and since then, many adapted and improved versions have been published. A particularly interesting matrix factorization algorithm called iALS (for implicit Alternating Least Squares) adapts the method for implicit feedback, i.e.\ a setting where only a very small amount of positive labels are available along with a majority of unknown labels. Compared to the classical task of rating prediction, learning from implicit feedback is applicable to many more domains, as the data is more abundant and requires less effort to elicit from users. However, the sparsity, imbalance, and implicit nature of the signal also pose unique challenges to retrieving the most relevant items to recommend. We revisit the role of unknown interactions in implicit matrix factorization. Traditionally, all unknowns are interpreted as negative samples and their importance in the training objective is then down-weighted to balance them out with the known, positive interactions. Interestingly, by adapting a probabilistic view of matrix factorization, we can retain the unknown nature of these interactions by modelling them as either positive or negative. With this new formulation that better fits the underlying data, we gain improved performance on the downstream recommendation task without any computational overhead compared to the popular iALS method. This paper outlines the key insights needed to adapt iALS to use logistic regression. Furthermore, the popular full-rank EASE model is identified as a special case of iALS. With this knowledge, EASE was trivially adapted to use logistic regression as well. An extensive experimental evaluation on several real-world datasets demonstrates the effectiveness of our approach. Additionally, a discrepancy between the need for weighting between factorization and regression models is discovered, leading towards a better understanding of these methods.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article based on its title and abstract. The title mentions &#34;The Role of Unknown Interactions in Implicit Matrix Factorization&#34; and takes a probabilistic view. Let me break this down.
+
+First, the main topic is matrix factorization, which is a family of algorithms used in recommendation systems. So that&#39;s one category: Matrix Factorization.
+
+The article deals with implicit feedback, where only positive interactions are known and most are unknown. That falls under Implicit Feedback as a specific aspect.
+
+Looking at the problem domain, it seems focused on recommendation systems since it&#39;s about improving recommendations through better handling of unknowns. So Recommendation Systems is another category.
+
+They discuss iALS (implicit Alternating Least Squares) which is an adapted version for implicit feedback. That makes iALS a relevant family or variant to include.
+
+The abstract mentions modeling unknown interactions probabilistically, so Probabilistic Models might be a good category here.
+
+They also compare their approach to other methods like EASE and logistic regression, indicating they&#39;re looking at Evaluation Methods or aspects of model evaluation.
+
+Since the focus is on improving recommendation systems by handling unknowns better, this seems relevant to Cold Start problems where new users/items are involved. So Cold Start is another category.
+
+The article introduces a new formulation using logistic regression for iALS, which suggests it&#39;s introducing novel algorithms or approaches, so Novel Algorithms could be applicable.
+
+They conducted extensive experiments on real-world datasets, so Real-World Applications is a good fit because they applied their method to actual data.
+
+Putting this all together, the categories should cover the main algorithm family (Matrix Factorization), the specific feedback type (Implicit Feedback), the application area (Recommendation Systems and Cold Start problems), evaluation aspects (Evaluation Methods), novel approaches (Novel Algorithms), real-world usage (Real-World Applications), probabilistic modeling (Probabilistic Models), and the method used for training or evaluation (Logistic Regression).
+
+I need to ensure each category is relevant and not too narrow. Also, checking that we have enough categories without making it too broad. The example given had around 8-12, so I think this meets that.
+&lt;/think&gt;
+
+Matrix Factorization, Implicit Feedback, Recommendation Systems, iALS, Probabilistic Models, Cold Start, Evaluation Methods, Novel Algorithms, Real-World Applications, Logistic Regression</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Powerful A/B-Testing Metrics and Where to Find Them
+Abstract:
+Online controlled experiments, colloquially known as A/B-tests, are the bread and butter of real-world recommender system evaluation. Typically, end-users are randomly assigned some system variant, and a plethora of metrics are then tracked, collected, and aggregated throughout the experiment. A North Star metric (e.g. long-term growth or revenue) is used to assess which system variant should be deemed superior. As a result, most collected metrics are \emph{supporting} in nature, and serve to either (i) provide an understanding of how the experiment impacts user experience, or (ii) allow for confident decision-making when the North Star metric moves insignificantly (i.e. a false negative or type-II error). The latter is not straightforward: suppose a treatment variant leads to fewer but longer sessions, with more views but fewer engagements; should this be considered a positive or negative outcome? The question then becomes: how do we assess a supporting metric’s utility when it comes to decision-making using A/B-testing?Online platforms typically run dozens of experiments at any given time. This provides a wealth of information about interventions and treatment effects that can be used to evaluate metrics’ utility for online evaluation. We propose to collect this information and leverage it to quantify type-I, type-II, and type-III errors for the metrics of interest, alongside a distribution of measurements of their statistical power (e.g. $z$-scores and $p$-values). We present results and insights from building this pipeline at scale for two large-scale short-video platforms: ShareChat and Moj; leveraging hundreds of past experiments to find online metrics with high statistical power.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article about A/B-testing metrics. Let me read through the title and abstract carefully.
+
+The title is &#34;Powerful A/AB-Testing Metrics and Where to Find Them.&#34; Okay, so it&#39;s directly about A/B testing metrics. The abstract talks about how online controlled experiments, or A/B-tests, are crucial for evaluating recommender systems. They mention assigning end-users randomly to system variants and tracking various metrics. There&#39;s a North Star metric, like long-term growth or revenue, which determines the superior variant.
+
+They also discuss supporting metrics that help understand user experience impacts or aid in decision-making when the primary metric doesn&#39;t change much. The article then addresses how to assess these supporting metrics&#39; utility for decision-making, especially in cases where there might be false negatives or type-II errors.
+
+The authors propose collecting information from past experiments to quantify different types of errors and statistical power using metrics like z-scores and p-values. They applied this approach at two large short-video platforms, ShareChat and Moj, analyzing hundreds of past experiments to find effective online metrics.
+
+So, what categories should I assign here? The article is about A/B testing, so that&#39;s a primary category. It&#39;s focused on evaluation metrics, specifically supporting ones beyond just the main metric. They discuss statistical methods like z-scores and p-values, which relates to statistical analysis.
+
+Since it&#39;s about recommender systems and their evaluation, Recommender Systems should be another category. The applications are in real-world platforms like short-video services, so Real-World Applications makes sense.
+
+They mention leveraging past experiments for analysis, so Experimentation is relevant. They also discuss decision-making under uncertainty, especially regarding insignificant changes in metrics—this relates to Metrics Analysis and Evaluation.
+
+The statistical power and error types (type-I, type-II) tie into Statistical Power and Errors. The fact that they applied this at scale on two platforms means it&#39;s about Scalability. Their approach involves analyzing a lot of past experiments, so Historical Data Analysis is applicable.
+
+Putting it all together, I&#39;ll list the categories ensuring each fits well with the content: A/B Testing, Evaluation Metrics, Statistical Analysis, Recommender Systems, Real-World Applications, Experimentation, Decision-Making Under Uncertainty, Metrics Analysis and Evaluation, Statistical Power, Scalability, and Historical Data Analysis.
+&lt;/think&gt;
+
+A/B Testing, Evaluation Metrics, Statistical Analysis, Recommender Systems, Real-World Applications, Experimentation, Decision-Making Under Uncertainty, Metrics Analysis and Evaluation, Statistical Power, Scalability, Historical Data Analysis</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Powerful A/B-Testing Metrics and Where to Find Them
+Abstract:
+Online controlled experiments, colloquially known as A/B-tests, are the bread and butter of real-world recommender system evaluation. Typically, end-users are randomly assigned some system variant, and a plethora of metrics are then tracked, collected, and aggregated throughout the experiment. A North Star metric (e.g. long-term growth or revenue) is used to assess which system variant should be deemed superior. As a result, most collected metrics are \emph{supporting} in nature, and serve to either (i) provide an understanding of how the experiment impacts user experience, or (ii) allow for confident decision-making when the North Star metric moves insignificantly (i.e. a false negative or type-II error). The latter is not straightforward: suppose a treatment variant leads to fewer but longer sessions, with more views but fewer engagements; should this be considered a positive or negative outcome? The question then becomes: how do we assess a supporting metric’s utility when it comes to decision-making using A/B-testing?Online platforms typically run dozens of experiments at any given time. This provides a wealth of information about interventions and treatment effects that can be used to evaluate metrics’ utility for online evaluation. We propose to collect this information and leverage it to quantify type-I, type-II, and type-III errors for the metrics of interest, alongside a distribution of measurements of their statistical power (e.g. $z$-scores and $p$-values). We present results and insights from building this pipeline at scale for two large-scale short-video platforms: ShareChat and Moj; leveraging hundreds of past experiments to find online metrics with high statistical power.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize the given research article. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;Powerful A/B-Testing Metrics and Where to Find Them.&#34; So, it&#39;s about A/B testing metrics, specifically in the context of recommender systems evaluation.
+
+In the abstract, they mention that online controlled experiments (A/B-tests) are crucial for evaluating recommendation systems. They talk about North Star metrics, which are key metrics like long-term growth or revenue. There are supporting metrics as well, which help understand user experience and make decisions when the North Star doesn&#39;t show a significant effect.
+
+They also discuss challenges in assessing these supporting metrics&#39; utility for decision-making, using examples of treatment variants affecting session lengths, views, and engagements. This leads them to ask how to evaluate such metrics&#39; effectiveness.
+
+The authors propose collecting information from multiple experiments to assess type-I, type-II, and type-III errors for the metrics. They built a pipeline for two platforms (ShareChat and Moj) using hundreds of past experiments to find high statistical power metrics.
+
+Now, mapping this to categories:
+
+1. **A/B Testing**: The article is directly about A/B testing metrics, so that&#39;s a primary category.
+2. **Evaluation Metrics**: It discusses various metrics used in evaluation, both North Star and supporting ones.
+3. **Type I and Type II Errors**: They specifically talk about these errors in the context of metric utility.
+4. **Real-World Applications**: The study is applied to real platforms (ShareChat and Moj), indicating real-world applications.
+5. **Recommendation Systems**: Since it&#39;s about evaluating recommender systems, this category fits.
+6. **Statistical Power**: They mention statistical power, z-scores, p-values, so that’s relevant.
+7. **Experiment Design**: The article discusses designing experiments at scale, which relates to experiment design.
+8. **Data Analysis**: They analyze data from multiple experiments, so data analysis is applicable.
+
+I should ensure each category is clear and relevant. Making sure there are enough categories as per guidelines (at least 8-12). Let me see if I missed any key points.
+
+They also touch on scalability since they mention building a pipeline at scale for two platforms. So adding &#34;Scalability&#34; makes sense.
+
+So, the final list would be: A/B Testing, Evaluation Metrics, Type I and II Errors, Real-World Applications, Recommendation Systems, Statistical Power, Experiment Design, Data Analysis, Scalability.
+&lt;/think&gt;
+
+A/B Testing, Evaluation Metrics, Type I and Type II Errors, Real-World Applications, Recommendation Systems, Statistical Power, Experiment Design, Data Analysis, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

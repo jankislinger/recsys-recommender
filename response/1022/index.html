@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Pre-trained Zero-shot Sequential Recommendation Framework via Popularity Dynamics
+Abstract:
+This paper proposes a novel pre-trained framework for zero-shot cross-domain  sequential recommendation without auxiliary information. While using auxiliary information (e.g., item descriptions) seems promising for cross-domain transfer, a cross-domain adaptation of sequential recommenders can be challenging when the target domain differs from the source domain—item descriptions are in different languages; metadata modalities (e.g., audio, image, and text) differ across source and target domains. If we can learn universal item representations independent of the domain type (e.g., groceries, movies), we can achieve zero-shot cross-domain transfer without auxiliary information. Our critical insight is that user interaction sequences highlight shifting user preferences via the popularity dynamics of interacted items. We present a pre-trained sequential recommendation framework: PrepRec, which utilizes a novel popularity dynamics-aware transformer architecture. Through extensive experiments on five real-world datasets, we show that PrepRec, without any auxiliary information, can zero-shot adapt to new application domains and achieve competitive performance compared to state-of-the-art sequential recommender models. In addition, we show that PrepRec complements existing sequential recommenders. With a simple post-hoc interpolation, PrepRec improves the performance of existing sequential recommenders on average by 11.8% in Recall@10 and 22% in NDCG@10. We provide an anonymized implementation of PrepRec at \url{https://anonymous.4open.science/r/PrepRec–128E/}.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on the given guidelines. Let&#39;s start by carefully reading the title and abstract.
+
+The title is &#34;A Pre-trained Zero-shot Sequential Recommendation Framework via Popularity Dynamics.&#34; So it mentions zero-shot recommendation and a pre-trained framework using popularity dynamics. 
+
+Looking at the abstract, the paper proposes a novel pre-trained framework for zero-shot cross-domain sequential recommendation without auxiliary information. It talks about challenges in cross-domain adaptation when item descriptions are in different languages or metadata modalities differ between source and target domains. The key insight is that user interaction sequences show shifting preferences through popularity dynamics. They present PrepRec, which uses a transformer architecture aware of these dynamics. Experiments on real datasets show it can adapt to new domains without auxiliary info and improve existing recommenders.
+
+Now, I&#39;ll break this down into categories:
+
+1. **Zero-shot Recommendation**: The paper focuses on zero-shot methods, so that&#39;s a primary category.
+2. **Cross-domain Recommendation**: It deals with transferring across different domains, hence this category.
+3. **Sequential Recommendation**: Since it&#39;s about sequences of user interactions over time.
+4. **Transformer Architecture**: PrepRec uses a transformer model specifically designed for popularity dynamics.
+5. **Popularity Dynamics**: This is central to their approach, highlighting shifting preferences.
+6. **User Interaction Sequences**: The framework analyzes how users interact over time.
+7. **Pre-trained Models**: It&#39;s a pre-trained framework, so this is relevant.
+8. **Real-world Applications**: They tested it on five real datasets and provided an implementation, indicating practical use.
+9. **Cold Start**: Although not explicitly mentioned, zero-shot in recommendation often relates to cold start where new domains or items have no prior data.
+10. **Recommendation Frameworks**: The paper presents a new framework, so this is applicable.
+11. **User Preferences**: They model how preferences shift over time through popularity dynamics.
+12. **Evaluation Metrics**: They mention Recall@10 and NDCG@10 improvements, so evaluation metrics are relevant.
+
+I should make sure each category is clear and that the article fits well into them. I also need to ensure a balance across categories without overcrowding any. The user-centric aspect is covered by including both specific terms like zero-shot and broader terms like recommendation frameworks.
+&lt;/think&gt;
+
+Zero-shot Recommendation, Cross-domain Recommendation, Sequential Recommendation, Transformer Architecture, Popularity Dynamics, User Interaction Sequences, Pre-trained Models, Real-world Applications, Cold Start, Recommendation Frameworks, User Preferences, Evaluation Metrics</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Pre-trained Zero-shot Sequential Recommendation Framework via Popularity Dynamics
+Abstract:
+This paper proposes a novel pre-trained framework for zero-shot cross-domain  sequential recommendation without auxiliary information. While using auxiliary information (e.g., item descriptions) seems promising for cross-domain transfer, a cross-domain adaptation of sequential recommenders can be challenging when the target domain differs from the source domain—item descriptions are in different languages; metadata modalities (e.g., audio, image, and text) differ across source and target domains. If we can learn universal item representations independent of the domain type (e.g., groceries, movies), we can achieve zero-shot cross-domain transfer without auxiliary information. Our critical insight is that user interaction sequences highlight shifting user preferences via the popularity dynamics of interacted items. We present a pre-trained sequential recommendation framework: PrepRec, which utilizes a novel popularity dynamics-aware transformer architecture. Through extensive experiments on five real-world datasets, we show that PrepRec, without any auxiliary information, can zero-shot adapt to new application domains and achieve competitive performance compared to state-of-the-art sequential recommender models. In addition, we show that PrepRec complements existing sequential recommenders. With a simple post-hoc interpolation, PrepRec improves the performance of existing sequential recommenders on average by 11.8% in Recall@10 and 22% in NDCG@10. We provide an anonymized implementation of PrepRec at \url{https://anonymous.4open.science/r/PrepRec–128E/}.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article into multiple relevant categories based on the given guidelines. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;A Pre-trained Zero-shot Sequential Recommendation Framework via Popularity Dynamics.&#34; From this, I can tell that the paper focuses on recommendation systems, specifically zero-shot cross-domain sequential recommendations without auxiliary information. The key terms here are &#34;zero-shot,&#34; &#34;sequential recommendation,&#34; and &#34;popularity dynamics.&#34;
+
+Looking at the abstract, the authors propose a framework called PrepRec. It&#39;s designed for zero-shot transfer across domains without needing extra info like item descriptions or metadata. They use user interaction sequences to capture shifting preferences through popularity dynamics. The approach uses a transformer architecture tailored for this purpose. They tested it on five real-world datasets and showed that it performs well compared to existing models, also improving other recommenders when used post-hoc.
+
+Now, I need to map this to the categories provided in the guidelines:
+
+1. **Family of algorithm**: Since they mention a transformer architecture, which is part of deep learning, I&#39;ll include &#34;Transformer Architecture&#34; as a category. They also talk about sequential recommendation, so &#34;Sequential Recommendation&#34; fits here too.
+
+2. **Domain of the problem**: The paper deals with cross-domain recommendations, so that&#39;s definitely a key area. Thus, &#34;Cross-Domain Recommendations.&#34;
+
+3. **Specific aspects in recommendation space**: Zero-shot learning is a specific approach where models can generalize to unseen domains without additional data. So, &#34;Zero-Shot Learning&#34; should be included.
+
+4. **Aspects of evaluation**: They mention metrics like Recall@10 and NDCG@10, which are standard for recommendation systems. Therefore, &#34;Evaluation Metrics (Recall, NDCG)&#34; is relevant.
+
+5. **Real-world applications**: The article discusses real-world datasets and applications in recommendation systems across domains, so this ties into practical implementations. Hence, &#34;Real-World Applications&#34; is appropriate.
+
+6. **Other relevant categorizations**: Since the paper doesn&#39;t fit neatly into other categories like cold start or specific evaluation beyond accuracy, but I need to ensure coverage, I&#39;ll stick with the above.
+
+I should make sure each category is clear and descriptive, avoiding overly technical terms where possible for user-friendliness. Also, ensuring that each article is in at least 8-12 categories as per guidelines. Let me check if any other aspects were mentioned that might warrant additional categories. The paper also talks about pre-training, which is a part of transfer learning, but since the main focus isn&#39;t on transfer learning itself, maybe it&#39;s better to stick with existing categories.
+
+So compiling all this, the categories are:
+
+- Sequential Recommendation
+- Zero-Shot Learning
+- Transformer Architecture
+- Cross-Domain Recommendations
+- Evaluation Metrics (Recall, NDCG)
+- Real-World Applications
+
+I think these cover the main aspects without overcomplicating things. Each category is specific enough but broad enough to be useful for navigation.
+&lt;/think&gt;
+
+Sequential Recommendation, Zero-Shot Learning, Transformer Architecture, Cross-Domain Recommendations, Evaluation Metrics (Recall, NDCG), Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

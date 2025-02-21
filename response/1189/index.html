@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Balancing Habit Repetition and New Activity Exploration: A Longitudinal Micro-Randomized Trial in Physical Activity Recommendations
+Abstract:
+As repetition of activities can establish habits and exploration of new ones can provide a healthy variety, we investigate how a recommender system for physical activities can optimally balance these two approaches. We conducted an eight-week user study with 62 physically inactive participants who receive personalized repetition and exploration recommendations in a random order. We distinguish between location, workout, and general activities, and collect participants’ subjective perceptions. Our findings indicate that participants initially preferred exploring general activities, but rated repeating recommendations higher after two weeks. By exploring the optimal transition point from exploration to repetition in personalized recommendations, this study contributes to designing more effective recommender systems for health improvement and healthy habit formation.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on its content. Let me start by reading the title and abstract carefully.
+
+The title is about balancing habit repetition and new activity exploration in physical activity recommendations, using a longitudinal micro-randomized trial. The abstract mentions that they studied how a recommender system can optimally balance these two approaches over eight weeks with 62 inactive participants. They looked at different types of activities—location, workout, general—and collected subjective perceptions.
+
+So, the main themes I see here are:
+
+1. Recommender Systems: Obviously, since it&#39;s about recommendations.
+2. Personalized Recommendations: The study involved personalized suggestions for repetition and exploration.
+3. Exploration vs Exploitation: This is a common dilemma in recommendation systems, so that&#39;s definitely relevant.
+4. Health/Wellness: The domain here is physical activity aimed at health improvement.
+5. Longitudinal Study: They conducted an eight-week trial, so it&#39;s longitudinal.
+6. User Preferences: They looked into participants&#39; preferences and how they changed over time.
+7. Behavior Change: The goal was to form healthy habits, which relates to behavior change.
+8. Evaluation Methods: They used a user study with A/B testing elements because of the randomized trial aspect.
+
+I should also consider if there are other aspects like evaluation metrics beyond accuracy, but in this case, they focused more on user perception and behavior over time rather than traditional metrics. So maybe &#34;Beyond Accuracy&#34; isn&#39;t as applicable here.
+
+Looking at the guidelines, each article should be placed in 8-12 categories. The examples given include things like family of algorithms, domains, specific recommendation aspects, evaluation aspects, real-world applications, etc.
+
+So from the above analysis, I can map these points to the example categories:
+
+- Recommender Systems (general category)
+- Personalized Recommendations
+- Exploration vs Exploitation (specific aspect in recommendations)
+- Health/Wellness (domain)
+- Longitudinal Study (evaluation method or study type)
+- User Preferences (aspects of evaluation)
+- Behavior Change (application area, maybe under health)
+- A/B Test (real-world application, since they used a randomized trial which is akin to A/B testing)
+
+I think that covers the main points. Maybe also &#34;User Study&#34; as another category, but I&#39;m not sure if it&#39;s one of the examples. The example categories didn&#39;t include user studies explicitly, but they did mention aspects like real-world applications (A/ B Test, User Survey). Since this is a user study with A/B elements, perhaps that&#39;s sufficient.
+
+Let me count: Recommender Systems, Personalized Recommendations, Exploration vs Exploitation, Health, Longitudinal Study, User Preferences, Behavior Change, A/B Test. That&#39;s eight categories, which meets the lower end of the guideline (8-12). I could consider adding more if there are other relevant aspects.
+
+Wait, perhaps &#34;Habit Formation&#34; is another category since they&#39;re looking into forming healthy habits. Also, &#34;Activity Recommendations&#34; as a specific area within recommendations. So that would add two more categories: Habit Formation and Activity Recommendations.
+
+Now we have ten categories, which fits well within the 8-12 range.
+
+Let me make sure all these categories are relevant:
+
+- Recommender Systems: Yes
+- Personalized Recommendations: Definitely
+- Exploration vs Exploitation: Core concept in their study
+- Health (or Wellness): Domain is health
+- Longitudinal Study: Type of evaluation or study method
+- User Preferences: They collected subjective perceptions
+- Behavior Change: Aim was to change behavior towards healthier habits
+- A/B Test: They used a randomized trial approach
+- Habit Formation: Central to the study&#39;s goal
+- Activity Recommendations: Specific type of recommendation
+
+This seems comprehensive. I think these categories accurately reflect the article&#39;s content and will help users find it when exploring topics related to recommendations, health, user behavior, etc.
+&lt;/think&gt;
+
+Recommender Systems, Personalized Recommendations, Exploration vs Exploitation, Health, Longitudinal Study, User Preferences, Behavior Change, A/B Test, Habit Formation, Activity Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Balancing Habit Repetition and New Activity Exploration: A Longitudinal Micro-Randomized Trial in Physical Activity Recommendations
+Abstract:
+As repetition of activities can establish habits and exploration of new ones can provide a healthy variety, we investigate how a recommender system for physical activities can optimally balance these two approaches. We conducted an eight-week user study with 62 physically inactive participants who receive personalized repetition and exploration recommendations in a random order. We distinguish between location, workout, and general activities, and collect participants’ subjective perceptions. Our findings indicate that participants initially preferred exploring general activities, but rated repeating recommendations higher after two weeks. By exploring the optimal transition point from exploration to repetition in personalized recommendations, this study contributes to designing more effective recommender systems for health improvement and healthy habit formation.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me start by reading through them carefully.
+
+The title is &#34;Balancing Habit Repetition and New Activity Exploration: A Longitudinal Micro-Randomized Trial in Physical Activity Recommendations.&#34; The abstract mentions that the study investigates how a recommender system can balance between suggesting familiar activities to build habits and introducing new ones for variety. They conducted an eight-week trial with 62 participants, looking at their preferences over time. Key points include repetition vs exploration, physical activity recommendations, user perceptions, longitudinal study, micro-randomized trial.
+
+First, the article is clearly about recommendation systems in the context of physical activities. So &#34;Recommendation Systems&#34; is a primary category. Since it&#39;s focused on physical activity, I should categorize it under &#34;Physical Activity.&#34;
+
+The study looks at balancing habit formation and exploration, which are concepts related to personalized recommendations. So &#34;Personalized Recommendations&#34; fits here. Additionally, the research involves user behavior over time, so &#34;User Behavior&#34; is another relevant category.
+
+Habit Formation is a specific theme addressed in the article, so that&#39;s a direct category. The study uses a longitudinal approach with participants over weeks, which ties into &#34;Longitudinal Studies.&#34;
+
+They conducted an experiment with randomization within a trial period, making &#34;Experiments&#34; and &#34;Randomized Trial&#34; appropriate categories. The term &#34;Micro-Randomized Trial&#34; mentioned in the title specifically points to &#34;Micro-randomized Trials.&#34;
+
+Since the study is about health and habit formation, including it under &#34;Health&#34; makes sense. Lastly, the research deals with how users perceive recommendations over time, so &#34;User Perceptions&#34; is a fitting category.
+
+I should make sure each category is relevant but not too specific or too broad. Also, I need to cover aspects like methodology (Experiments, Randomized Trial), content focus (Physical Activity, Health), and user-related factors (User Behavior, User Perceptions). Including Habit Formation ties into the core of their investigation.
+&lt;/think&gt;
+
+Recommendation Systems, Physical Activity, Personalized Recommendations, Longitudinal Studies, Habit Formation, Experiments, Micro-randomized Trials, User Behavior, Health, User Perceptions</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

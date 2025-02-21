@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Multi-Objective Recommendation via Multivariate Policy Learning
+Abstract:
+Real-world recommender systems often need to balance multiple objectives when deciding which recommendations to present to users. These include behavioural signals (e.g. clicks, shares, dwell time), as well as broader objectives (e.g. diversity, fairness). Scalarisation methods are commonly used to handle this balancing task, where a weighted average of per-objective reward signals determines the final score used for ranking. Naturally, \emph{how} these weights are computed exactly, is key to success for any online platform. We frame this as a decision-making task, where the scalarisation weights are \emph{actions} taken to maximise an overall North Star reward (e.g. long-term user retention or growth). We extend existing policy learning methods to the continuous multivariate action domain, proposing to maximise a pessimistic lower bound on the North Star reward that the learnt policy will yield. Typical lower bounds based on normal approximations suffer from insufficient coverage, and we propose an efficient and effective policy-dependent correction for this. We provide guidance to design stochastic data collection policies, as well as highly sensitive reward signals. Empirical observations from simulations, offline and online experiments highlight the efficacy of our deployed approach.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I&#39;m trying to figure out how to categorize this research article titled &#34;Multi-Objective Recommendation via Multivariate Policy Learning.&#34; The abstract is a bit dense, but let me break it down.
+
+First, the title mentions &#34;multi-objective recommendation,&#34; which immediately tells me that the paper deals with systems that have multiple goals. In recommendation systems, handling more than one objective isn&#39;t uncommon—think balancing accuracy and diversity or fairness. So I&#39;ll note categories related to multi-objective optimization and perhaps fairness since that&#39;s a common secondary objective.
+
+The abstract talks about behavioural signals like clicks, shares, dwell time. These are all indicators of user interaction, so implicit feedback comes into play here. Implicit feedback is crucial because it&#39;s about what users do rather than what they explicitly state. That should be another category.
+
+They mention scalarisation methods, which are techniques used to combine multiple objectives into a single score for ranking. This relates to optimization in recommendation systems, specifically how different factors are weighted and combined. So maybe categories like &#34;Scalarization Methods&#34; or &#34;Multi-Objective Optimization.&#34;
+
+The paper frames the problem as a decision-making task using policy learning. Policy learning is part of reinforcement learning where an agent learns a policy to make decisions. So this ties into reinforcement learning in recommendation systems, which is another category.
+
+They&#39;re extending existing methods to handle continuous multivariate actions, which implies they&#39;re dealing with multiple variables that can take on a range of values. This seems like a scalability issue because handling more variables often requires more complex computations. So scalability might be another relevant category.
+
+The paper also talks about the North Star reward, which is a business metric like user retention or growth. This suggests real-world applications and perhaps A/B testing to measure the impact of their approach in live environments. So categories like &#34;Real-World Applications&#34; and &#34;A/B Testing&#34; would fit here.
+
+They mention simulations, offline experiments, and online experiments as part of their evaluation. Evaluation is a big part of recommendation systems, so aspects related to evaluation methods should be included. Maybe something like &#34;Evaluation Methods.&#34;
+
+The approach involves balancing competing objectives, which ties back to fairness and diversity in recommendations. Diversity ensures varied suggestions, while fairness addresses equitable outcomes for different groups or items.
+
+Lastly, the paper discusses designing stochastic data collection policies and sensitive reward signals, indicating they&#39;re focused on improving how data is collected and used, which relates to implicit feedback and perhaps cold start problems where there&#39;s limited initial data.
+
+Putting it all together, I need to make sure each category is relevant and that there are enough without overcrowding. Let me list them out:
+
+- Multi-Objective Optimization
+- Fairness in Recommendations
+- Diversity of Recommendations
+- Policy Learning
+- Reinforcement Learning in Recommender Systems
+- Implicit Feedback
+- Real-World Applications
+- A/B Testing
+- Scalarization Methods
+- Evaluation Methods
+- Scalability
+
+I think these cover the main points without being too niche. Each category is broad enough to be useful but specific enough to guide users effectively.
+&lt;/think&gt;
+
+Multi-Objective Optimization, Fairness in Recommendations, Diversity of Recommendations, Policy Learning, Reinforcement Learning in Recommender Systems, Implicit Feedback, Real-World Applications, A/B Testing, Scalarization Methods, Evaluation Methods, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Multi-Objective Recommendation via Multivariate Policy Learning
+Abstract:
+Real-world recommender systems often need to balance multiple objectives when deciding which recommendations to present to users. These include behavioural signals (e.g. clicks, shares, dwell time), as well as broader objectives (e.g. diversity, fairness). Scalarisation methods are commonly used to handle this balancing task, where a weighted average of per-objective reward signals determines the final score used for ranking. Naturally, \emph{how} these weights are computed exactly, is key to success for any online platform. We frame this as a decision-making task, where the scalarisation weights are \emph{actions} taken to maximise an overall North Star reward (e.g. long-term user retention or growth). We extend existing policy learning methods to the continuous multivariate action domain, proposing to maximise a pessimistic lower bound on the North Star reward that the learnt policy will yield. Typical lower bounds based on normal approximations suffer from insufficient coverage, and we propose an efficient and effective policy-dependent correction for this. We provide guidance to design stochastic data collection policies, as well as highly sensitive reward signals. Empirical observations from simulations, offline and online experiments highlight the efficacy of our deployed approach.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article titled &#34;Multi-Objective Recommendation via Multivariate Policy Learning.&#34; The goal is to assign it to multiple relevant categories based on its content.
+
+First, looking at the title, it mentions multi-objective recommendation and policy learning. That suggests the main focus is on handling multiple goals in recommendations, so I&#39;ll note Multi-Objective Optimization as a category. It also talks about policy learning, which relates to reinforcement learning methods, so Policy Learning should be included.
+
+The abstract explains that real-world recommenders need to balance various objectives like clicks, shares, diversity, and fairness. So Domain of the problem here is Recommender Systems. Also, since it&#39;s dealing with balancing different factors, Multi-Objective Optimization fits again.
+
+The article uses scalarization methods, which is a technique in multi-objective optimization, so that should be another category. It also mentions aspects like diversity and fairness, which are specific considerations in recommendation systems beyond just accuracy. So I&#39;ll add Beyond Accuracy as a category because it&#39;s looking at these broader metrics.
+
+They talk about policy learning in the context of continuous multivariate actions, which ties into reinforcement learning techniques. Therefore, Reinforcement Learning is another relevant category. The method involves maximizing a North Star reward, which indicates long-term goals like user retention or growth, so I&#39;ll include Long-Term Goals.
+
+The approach uses lower bounds on rewards and corrects policy-dependent issues, which relates to methods for handling uncertainty in recommendations. So Uncertainty Handling makes sense here. They also mention empirical observations from simulations and experiments, including online tests, so A/B Testing is applicable because it&#39;s a real-world application method.
+
+Additionally, the abstract discusses using these techniques across different domains where recommendation systems are applied, so Generalization Across Domains is another category to include.
+
+Putting it all together, I have categories like Multi-Objective Optimization, Policy Learning, Recommender Systems, Scalarization Methods, Beyond Accuracy, Reinforcement Learning, Long-Term Goals, Uncertainty Handling, A/B Testing, and Generalization Across Domains. These should cover the article&#39;s focus areas effectively.
+&lt;/think&gt;
+
+Multi-Objective Optimization, Policy Learning, Recommender Systems, Multi-Armed Bandits, Reinforcement Learning, Beyond Accuracy, Diversity of Recommendations, Fairness in Recommendations, Long-Term Goals, Uncertainty Handling, A/B Testing, Generalization Across Domains</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Fast Multi-Step Critiquing for VAE-based Recommender Systems
+Abstract:
+Recent studies have shown that providing personalized explanations alongside recommendations increases trust and perceived quality. Furthermore, it gives users an opportunity to refine the recommendations by critiquing parts of the explanations. On one hand, current recommender systems model the recommendation, explanation, and critiquing objectives jointly, but this creates an inherent trade-off between their respective performance. On the other hand, although recent latent linear critiquing approaches are built upon an existing recommender system, they suffer from computational inefficiency at inference due to the objective optimized at each conversation’s turn. We address these deficiencies with M&amp;Ms-VAE, a novel variational autoencoder for recommendation and explanation that is based on multimodal modeling assumptions. We train the model under a weak supervision scheme to simulate both fully and partially observed variables. Then, we leverage the generalization ability of a trained M&amp;Ms-VAE model to embed the user preference and the critique separately. Our work’s most important innovation is our critiquing module, which is built upon and trained in a self-supervised manner with a simple ranking objective. Experiments on four real-world datasets demonstrate that among state-of-the-art models, our system is the first to dominate or match the performance in terms of recommendation, explanation, and multi-step critiquing. Moreover, M&amp;Ms-VAE processes the critiques up to 25.6x faster than the best baselines. Finally, we show that our model infers coherent joint and cross generation, even under weak supervision, thanks to our multimodal-based modeling and training scheme.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about a VAE-based recommender system with multi-step critiquing. Let me go through the process step by step.
+
+First, looking at the title: &#34;Fast Multi-Step Critiquing for VAE- based Recommender Systems.&#34; So it&#39;s about recommendation systems, specifically using Variational Autoencoders (VAEs). That gives me a couple of categories right away—Recommendation Systems and Variational Autoencoder. 
+
+Now, moving to the abstract. It mentions that providing personalized explanations increases trust and allows users to refine recommendations by critiquing parts of the explanations. This points towards Explainability as a key aspect because it&#39;s about making recommendations understandable. Also, since users can critique the system, it involves User Interaction.
+
+The article talks about current systems having a trade-off between recommendation, explanation, and critiquing objectives when modeled jointly. It introduces M&amp;Ms-VAE, which is a novel model for recommendation and explanation. So this brings in Multi-Modal Modeling because they&#39;re handling multiple aspects like recommendations and explanations together.
+
+They mention training under weak supervision to simulate both fully and partially observed variables, which ties into Weak Supervision as a category. The critiquing module is built upon self-supervised learning with a ranking objective, so Self-Supervised Learning should be included too. 
+
+The experiments show that M&amp;Ms-VAE outperforms other models in recommendation, explanation, and multi-step critiquing, especially regarding speed—processing critiques 25.6x faster. That&#39;s about Scalability and Efficiency because it&#39;s not just about performance but also how fast the system can process information.
+
+They also mention that the model infers coherent joint and cross generations under weak supervision due to their training scheme. This relates to Inference Methods as they&#39;re talking about how the model makes predictions or understands data.
+
+Looking at the broader context, the problem domain is recommendation systems within AI/ML applications. So adding AI/ML Applications makes sense for categorization purposes.
+
+I should also consider whether there are real-world applications mentioned. The abstract refers to experiments on four real-world datasets and mentions A/B testing implications (though not explicitly stated), but since they focus on speed and efficiency, it&#39;s more about the system&#39;s performance in practical scenarios. However, I might include Real-World Applications if they have specific deployments or user tests.
+
+Another point is that the model handles multi-step critiquing, which means users can refine their preferences over multiple interactions, so User Feedback could be a relevant category. But since it&#39;s more about the system processing critiques rather than collecting feedback per se, maybe User Interaction covers that adequately.
+
+The categories should also include aspects like Cold Start if applicable, but this article doesn&#39;t seem to address new user or item scenarios specifically. It focuses on improving existing recommendations through explanations and critique handling, so perhaps not necessary here.
+
+I need to ensure the list is comprehensive yet not too broad. Each category should be specific enough for users looking into particular areas. Let me tally up what I have:
+
+1. Recommendation Systems
+2. Variational Autoencoder (VAE)
+3. Explainability
+4. User Interaction
+5. Multi-Modal Modeling
+6. Weak Supervision
+7. Self-Supervised Learning
+8. Scalability
+9. Efficiency
+10. Inference Methods
+11. AI/ML Applications
+
+I think that covers all the key aspects from the title and abstract without being too redundant. Each category is distinct and relevant to different facets of the research, which should help users find the article based on their interests.
+
+Wait, the example provided earlier included &#34;Real-World Applications&#34; as a separate category. Since the article mentions experiments on real-world datasets but doesn&#39;t specify actual deployments or user studies, maybe it&#39;s better not to include Real-World Applications here unless there&#39;s explicit mention of deployment or user testing beyond dataset usage.
+
+Also, considering &#34;Scalability&#34; and &#34;Efficiency,&#34; these are both important because the system processes critiques much faster than others. So they&#39;re distinct enough categories that should be included separately.
+
+I think I have a solid list now. Let me make sure it&#39;s between 8-12 categories as per guidelines.
+&lt;/think&gt;
+
+Recommendation Systems, Variational Autoencoder (VAE), Explainability, User Interaction, Multi-Modal Modeling, Weak Supervision, Self-Supervised Learning, Scalability, Efficiency, Inference Methods, AI/ML Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

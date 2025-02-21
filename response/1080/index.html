@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Do Not Wait: Learning Re-Ranking Model Without User Feedback At Serving Time in E-Commerce
+Abstract:
+Recommender systems have been widely used in e-commerce, and re-ranking models are playing an increasingly significant role in the domain, which leverages the inter-item influence and determines the final recommendation lists. Online learning methods keep updating a deployed model with the latest available samples to capture the shifting of the underlying data distribution in e-commerce. However, they depend on the availability of real user feedback, which may be delayed by hours or even days, such as item purchases, leading to a lag in model enhancement.  In this paper, we propose a novel extension of online learning methods for re-ranking modeling, which we term LAST, an acronym for Learning At Serving Time. It circumvents the requirement of user feedback by using a surrogate model to provide the instructional signal needed to steer model improvement. Upon receiving an online request, LAST finds and applies a model modification on the fly before generating a recommendation result for the request. The modification is request-specific and transient. It means the modification is tailored to and only to the current request to capture the specific context of the request. After a request, the modification is discarded, which helps to prevent error propagation and stabilizes the online learning procedure since the predictions of the surrogate model may be inaccurate. Most importantly, as a complement to feedback-based online learning methods, LAST can be seamlessly integrated into existing online learning systems to create a more adaptive and responsive recommendation experience. Comprehensive experiments, both offline and online, affirm that LAST outperforms state-of-the-art re-ranking models.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article about a novel approach in e-commerce recommendation systems. The title is &#34;Do Not Wait: Learning Re- Ranking Model Without User Feedback At Serving Time in E-Commerce.&#34; Let&#39;s break it down.
+
+The abstract mentions that the paper proposes a method called LAST (Learning At Serving Time), which doesn&#39;t require user feedback at serving time. It uses a surrogate model to provide instructional signals for model improvement on-the-fly. This is an online learning approach, specifically for re-ranking models in e-commerce. The authors conducted both offline and online experiments and found that their method outperforms existing models.
+
+First, I should identify the key themes and elements of the article. It&#39;s about recommendation systems, so categories related to that are essential. Since it&#39;s focused on e-commerce, that’s a domain category. Re-ranking is a specific aspect within recommendations, so that needs to be included.
+
+The paper talks about online learning methods but without relying on user feedback at serving time. So, Online Learning and Without User Feedback at Serving Time are relevant categories. The surrogate model they use for instructional signals points towards Surrogate Model as another category.
+
+They mention comprehensive experiments with both offline and online results, so Offline Evaluation and Online Evaluation should be included. Additionally, the approach is a novel method in re-ranking models, making Novel Method a fitting category.
+
+I also need to consider whether there are real-world applications. The article discusses integrating LAST into existing systems, which suggests real-world application aspects, but since it&#39;s more about the methodology, I might not include A/B Testing or User Survey unless specified.
+
+Looking at the guidelines, each article should be assigned 8-12 categories. Let me list out the possible ones:
+
+- Recommender Systems: Core area.
+- E-Commerce: Specific domain.
+- Re-ranking Models: Focus of the study.
+- Online Learning: The method used.
+- Without User Feedback at Serving Time: Unique aspect.
+- Surrogate Model: Technique employed.
+- Comprehensive Experiments: Both offline and online.
+- Offline Evaluation, Online Evaluation: Types of experiments.
+- Novel Method: It&#39;s a new approach.
+
+That gives me nine categories. I think these cover the main points without being too specific or overlapping too much. They should help users find related articles easily and align with user interests in recommendation techniques, e-commerce applications, and evaluation methods.
+
+I should make sure each category is clear and descriptive. For example, &#34;Without User Feedback at Serving Time&#34; clearly indicates a key innovation of the method. Also, including both evaluation types ensures that researchers looking for experimental validation can find this article easily.
+
+Another consideration is whether to include broader categories like Machine Learning or AI, but since the paper is more specific about recommendation systems and online learning, I think it&#39;s better to stick with the specific terms provided in the examples.
+
+I don&#39;t see any need to create new categories beyond these; all proposed ones are covered in the example categories. So the final list should be comprehensive yet concise.
+&lt;/think&gt;
+
+Recommender Systems, E-Commerce, Re-ranking Models, Online Learning, Without User Feedback at Serving Time, Surrogate Model, Comprehensive Experiments, Offline Evaluation, Online Evaluation, Novel Method</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Do Not Wait: Learning Re-Ranking Model Without User Feedback At Serving Time in E-Commerce
+Abstract:
+Recommender systems have been widely used in e-commerce, and re-ranking models are playing an increasingly significant role in the domain, which leverages the inter-item influence and determines the final recommendation lists. Online learning methods keep updating a deployed model with the latest available samples to capture the shifting of the underlying data distribution in e-commerce. However, they depend on the availability of real user feedback, which may be delayed by hours or even days, such as item purchases, leading to a lag in model enhancement.  In this paper, we propose a novel extension of online learning methods for re-ranking modeling, which we term LAST, an acronym for Learning At Serving Time. It circumvents the requirement of user feedback by using a surrogate model to provide the instructional signal needed to steer model improvement. Upon receiving an online request, LAST finds and applies a model modification on the fly before generating a recommendation result for the request. The modification is request-specific and transient. It means the modification is tailored to and only to the current request to capture the specific context of the request. After a request, the modification is discarded, which helps to prevent error propagation and stabilizes the online learning procedure since the predictions of the surrogate model may be inaccurate. Most importantly, as a complement to feedback-based online learning methods, LAST can be seamlessly integrated into existing online learning systems to create a more adaptive and responsive recommendation experience. Comprehensive experiments, both offline and online, affirm that LAST outperforms state-of-the-art re-ranking models.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article about a new method in recommender systems for e-commerce. Let me start by reading the title and abstract carefully.
+
+The title mentions &#34;Learning Re-Ranking Model Without User Feedback At Serving Time.&#34; So it&#39;s talking about a re-ranking model used in e-commerce recommendation systems that doesn&#39;t require user feedback during serving time. That makes me think of areas like Online Learning, Real-Time Systems, and maybe something related to User Feedback itself since they&#39;re not using it.
+
+Looking at the abstract, the authors introduce a method called LAST (Learning At Serving Time). They address the problem where online learning methods depend on delayed user feedback, such as purchases. Instead, they use a surrogate model to provide instructional signals for model improvement without waiting for user input. This means the model can adapt in real-time by making modifications per request.
+
+Key points from the abstract:
+- Re-Ranking Models: So definitely falls under that category.
+- Online Learning Methods: They&#39;re extending online learning techniques here.
+- Serving Time: Indicates this is happening in real-time, during interaction with users.
+- Surrogate Model: A technique used to guide model improvements without direct user feedback.
+- No User Feedback: Important because it changes how the system adapts.
+- E-commerce Context: The application domain is e-commerce.
+
+I also note that they mention experiments both offline and online, which might relate to Evaluation Metrics or Experimentation categories. But since the focus is on the method itself, maybe not necessary unless evaluation aspects are key here.
+
+So, I should map this to existing categories or propose new ones. Let&#39;s think about possible categories:
+
+1. Re-Ranking Models: Directly related as the paper focuses on re-ranking in recommendations.
+2. Online Learning: They extend online learning methods by avoiding user feedback delays.
+3. Real-Time Systems: The method operates at serving time, which is real-time.
+4. User Feedback: Although they don&#39;t use user feedback during serving, this might fall under alternative feedback mechanisms or lack thereof, but maybe more relevant to the absence of it.
+5. E-Commerce: Clearly stated as the domain.
+6. Surrogate Models: They propose using a surrogate model for instruction signals, so that&#39;s another category.
+7. Model Adaptation: The method adapts models in real-time without waiting for feedback.
+8. Scalability: While not explicitly mentioned, re-ranking and online learning can have scalability implications depending on implementation.
+
+Wait, but the guidelines suggest assigning at least 8-12 categories. Let me list more possibilities:
+
+- Real-Time Processing
+- Feedback Loops (but since they don&#39;t use user feedback, maybe &#39;No User Feedback&#39; is a category)
+- Recommendation Systems: General category
+- Scalability: If the method is scalable, this would apply.
+- Cold Start: Not directly mentioned, but sometimes real-time systems can help with cold start by adapting quickly.
+
+Alternatively, perhaps &#34;Dynamic Models&#34; or &#34;Incremental Learning.&#34; Also, considering aspects like &#34;Efficient Learning&#34; or &#34;Low Latency Recommendations.&#34;
+
+I think I should focus on the most relevant categories. The paper is about re-ranking models in e-commerce using online learning without user feedback at serving time. So primary categories would be:
+
+- Re-Ranking Models
+- Online Learning
+- Real-Time Systems
+- E-Commerce
+- User Feedback (since they don&#39;t use it, maybe &#39;No User Feedback&#39;)
+- Surrogate Models
+- Model Adaptation
+
+I might need to adjust the number of categories. Let&#39;s see if there are more:
+
+- Scalability: Maybe in terms of handling real-time modifications.
+- Efficiency: Since they&#39;re modifying models on-the-fly without waiting for feedback.
+- Performance Evaluation: They mention experiments, but it&#39;s not about evaluation metrics per se.
+
+Alternatively, could &#34;Incremental Learning&#34; or &#34;Adaptive Systems&#34; fit here. Also, perhaps &#34;No User Feedback&#34; is a specific category as in the example provided earlier.
+
+Let me try to structure these:
+
+1. Re-Ranking Models
+2. Online Learning
+3. Real-Time Processing
+4. E-Commerce
+5. Surrogate Models
+6. Model Adaptation
+7. No User Feedback
+8. Scalability
+
+That gives us eight categories, which meets the minimum requirement. Maybe I can add a couple more if applicable.
+
+Another angle: The method involves modifying models per request without feedback, so perhaps &#34;Request-Specific Models&#34; or &#34;Transient Modifications.&#34; But these might be too specific unless they&#39;re common terms.
+
+Alternatively, considering that this is about serving-time modifications, maybe &#34;Serving Time Methods.&#34;
+
+Wait, the example in the guidelines includes categories like &#34;Scalability,&#34; which I&#39;ve already included. So let&#39;s stick with the eight I have above.
+&lt;/think&gt;
+
+Re-Ranking Models, Online Learning, Real-Time Processing, E-Commerce, Surrogate Models, Model Adaptation, No User Feedback, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

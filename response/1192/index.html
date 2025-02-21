@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Exploratory Analysis of Recommending Urban Parks for Health-Promoting Activities
+Abstract:
+Parks are essential spaces for promoting urban health, and recommender systems could assist individuals in discovering parks for leisure and health-promoting activities. This is particularly important in large cities like London, which has over 1,500 named parks, making it challenging to understand what each park offers. Due to the lack of datasets and the diverse health-promoting activities parks can support (e.g., physical, social, nature-appreciation), it is unclear which recommendation algorithms are best suited for this task. To explore the dynamics of recommending parks for specific activities, we created two datasets: one from a survey of over 250 London residents, and another by inferring visits from over 1 million geotagged Flickr images taken in London parks. Analyzing the geographic patterns of these visits revealed that recommending nearby parks is ineffective, suggesting that this recommendation task is distinct from Point of Interest recommendation. We then tested various recommendation models, identifying a significant popularity bias in the results. Additionally, we found that personalized models have advantages in recommending parks beyond the most popular ones. The data and findings from this study provide a foundation for future research on park recommendations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about recommending urban parks for health-promoting activities. Let me start by reading the title and abstract carefully.
+
+The title mentions an exploratory analysis of recommending urban parks, which suggests it&#39;s about applying recommendation systems in a specific domain—urban parks. The abstract talks about promoting health through park recommendations, especially in big cities like London. They created two datasets: one from surveys and another from geotagged Flickr images. They analyzed visit patterns and tested various models.
+
+First, I should identify the core themes. The article is definitely about recommendation systems applied to a specific domain—urban parks. So &#34;Recommender Systems&#34; is a primary category. The problem domain here is urban parks, so that&#39;s another category.
+
+Looking at the datasets, they used both survey data and geotagged images. Survey data might fall under user surveys as a real-world application method. Geotagged data could relate to implicit feedback since it&#39;s based on user actions (taking photos in parks).
+
+They mentioned health-promoting activities, so &#34;Health-Promoting Activities&#34; is relevant. The study focused on urban areas, specifically London, which makes &#34;Urban Parks&#34; a specific category.
+
+In their analysis, they found that recommending nearby parks wasn&#39;t effective and identified popularity bias in their models. They tested various recommendation algorithms, so &#34;Popularity Bias&#34; and &#34;Algorithm Evaluation&#34; are important aspects here.
+
+They also looked at geographic patterns of visits, which ties into spatial or location-based recommendations. Personalized models showed advantages beyond just popular parks, so &#34;Personalization Techniques&#34; should be included.
+
+The datasets they created could be categorized under &#34;Dataset Creation,&#34; and since they&#39;re inferring visits from Flickr images, that&#39;s a form of implicit feedback. The overall impact is on public health, making &#34;Public Health Impact&#34; another category.
+
+Real-world applications here include user surveys and possibly A/B testing if they implied any practical deployment, so those categories fit too. Lastly, the study contributes to future research, which is about &#34;Recommendation Systems Research.&#34;
+
+Putting it all together, I have 11 categories that cover the domains, methods, evaluations, and impacts discussed in the article.
+&lt;/think&gt;
+
+Urban Parks, Recommender Systems, Health-Promoting Activities, User Surveys, Popularity Bias, Geographic Patterns, Personalization Techniques, Dataset Creation, Public Health Impact, A/B Test, Recommendation Systems Research</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Exploratory Analysis of Recommending Urban Parks for Health-Promoting Activities
+Abstract:
+Parks are essential spaces for promoting urban health, and recommender systems could assist individuals in discovering parks for leisure and health-promoting activities. This is particularly important in large cities like London, which has over 1,500 named parks, making it challenging to understand what each park offers. Due to the lack of datasets and the diverse health-promoting activities parks can support (e.g., physical, social, nature-appreciation), it is unclear which recommendation algorithms are best suited for this task. To explore the dynamics of recommending parks for specific activities, we created two datasets: one from a survey of over 250 London residents, and another by inferring visits from over 1 million geotagged Flickr images taken in London parks. Analyzing the geographic patterns of these visits revealed that recommending nearby parks is ineffective, suggesting that this recommendation task is distinct from Point of Interest recommendation. We then tested various recommendation models, identifying a significant popularity bias in the results. Additionally, we found that personalized models have advantages in recommending parks beyond the most popular ones. The data and findings from this study provide a foundation for future research on park recommendations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this article about recommending urban parks for health-promoting activities. Let&#39;s start by reading the title and abstract to understand the core themes.
+
+The title mentions &#34;Exploratory Analysis of Recommending Urban Parks,&#34; so it&#39;s about recommendation systems applied specifically to urban parks. The goal is to help people find parks that promote health, which ties into public health aspects.
+
+Looking at the abstract, they created two datasets: one from a survey and another using geotagged Flickr images. This involves data collection methods, so I should note &#34;Data Collection&#34; as a category. They analyzed geographic patterns, indicating spatial or location-based recommendations, so adding &#34;Spatial Recommendations&#34; makes sense.
+
+The study points out that recommending nearby parks isn&#39;t effective for this task, which is different from typical Point of Interest (POI) recommendations. So including &#34;Point of Interest Recommendation&#34; helps differentiate it.
+
+They tested various recommendation models and found a popularity bias, suggesting issues with standard recommendation metrics. This leads me to include &#34;Recommendation Metrics,&#34; as they&#39;re evaluating how well these metrics work in this context.
+
+The focus on parks being spaces for health activities falls under urban planning and public health, so adding categories like &#34;Urban Planning&#34; and &#34;Public Health&#34; is appropriate. The recommendation aspect specifically targets leisure activities related to health, hence &#34;Leisure Activities.&#34;
+
+They mention using geotagged images, which ties into location-based services, so including that category is relevant. Additionally, the study highlights the need for more research in this area, making it a foundational piece, so &#34;Foundational Research&#34; fits.
+
+The recommendations aim to promote activities like physical exercise and nature appreciation, which are health-promoting, hence &#34;Health Promotion.&#34;
+
+I also think about whether there&#39;s any aspect of personalization. They tested personalized models against popular ones, so maybe &#34;Personalization Techniques&#34; could be another category. However, the provided categories seem comprehensive enough without adding more.
+
+Considering all these points, I&#39;ll compile a list that includes algorithm family ( recommendation systems ), domain ( urban parks, public health ), specific recommendation aspects ( spatial recommendations, point of interest, personalization ), evaluation aspects ( recommendation metrics ), methods ( data collection, location-based services ), and broader themes like urban planning and health promotion. Also, since they used real-world applications with surveys and geotagged images, including &#34;Real World Applications&#34; makes sense.
+
+I need to ensure each article is in at least 8-12 categories for discoverability without overcrowding any category. The categories should be clear and user-friendly, so sticking to the examples provided seems appropriate.
+&lt;/think&gt;
+
+Recommendation Systems, Urban Parks, Public Health, Spatial Recommendations, Data Collection, Point of Interest Recommendation, Health Promotion, Urban Planning, Leisure Activities, Geolocation, Location-Based Services, Real World Applications, Foundational Research, Recommendation Metrics, Personalization Techniques</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

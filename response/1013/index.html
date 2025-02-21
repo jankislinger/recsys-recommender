@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Multi-modal Modeling Framework for Cold-start Short-video Recommendation
+Abstract:
+Short video has witnessed rapid growth in the past few years in multimedia platforms. To ensure the freshness of the videos, platforms receive a large number of user-uploaded videos every day, making collaborative filtering-based recommender methods suffer from the item cold-start problem (e.g., the new-coming videos are difficult to compete with existing videos). Consequently, increasing efforts tackle the cold-start issue from the content perspective, focusing on modeling the multi-modal preferences of users, a fair way to compete with new-coming and existing videos. However, recent studies ignore the existing gap between multi-modal embedding extraction and user interest modeling as well as the discrepant intensities of user preferences for different modalities. In this paper, we propose M3CSR, a multi-modal modeling framework for cold-start short video recommendation. Specifically, we preprocess content-oriented multi-modal features for items and obtain trainable category IDs by performing clustering. In each modality, we combine modality-specific cluster ID embedding and the mapped original modality feature as modality-specific representation of the item to address the gap. Meanwhile, M3CSR measures the user modality-specific intensity based on the correlation between modality-specific interest and behavioral interest and employs pairwise loss to further decouple user multi-modal interests. Extensive experiments on four real-world datasets demonstrate the superiority of our proposed model. The framework has been deployed on a billion-user scale short video application and has shown improvements in various commercial metrics within cold-start scenarios.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to figure out how to categorize this research article into multiple relevant categories based on its title and abstract. Let&#39;s start by reading through the title and abstract carefully.
+
+The title is &#34;A Multi-Modal Modeling Framework for Cold-Start Short-Video Recommendation.&#34; From that, I can already pick up some keywords: multi-modal modeling, cold-start problem, short-video recommendation. So right away, categories like &#34;Cold Start,&#34; &#34;Short Video,&#34; and &#34;Multi-Modal&#34; come to mind.
+
+Looking at the abstract, it talks about how platforms receive a lot of user-uploaded videos daily, leading to collaborative filtering-based methods suffering from item cold-start issues. This means new videos have trouble competing with existing ones. So this article is definitely tackling the cold-start problem in recommendation systems.
+
+The abstract also mentions that recent studies focus on multi-modal preferences but ignore gaps between multi-modal embedding extraction and user interest modeling, as well as discrepancies in user preference intensities across different modalities. The proposed solution is M3CSR, a framework that preprocesses content-oriented features, uses clustering for category IDs, combines cluster embeddings with original features, measures user modality-specific intensity, and employs pairwise loss to decouple multi-modal interests.
+
+The experiments show the model&#39;s superiority on real-world datasets, and it&#39;s been deployed in a billion-user application, improving commercial metrics in cold-start scenarios. So this has practical applications beyond just theory.
+
+Now, thinking about the categories:
+
+1. **Cold Start**: Definitely relevant because that&#39;s the main problem addressed.
+2. **Short Video**: The domain is short videos, so that fits here.
+3. **Multi-Modal Modeling**: They talk a lot about multi-modal features and user preferences across different modalities.
+4. **Recommender Systems**: It&#39;s about recommendation frameworks, so this category makes sense.
+5. **Content-Based Recommendation**: Since it&#39;s focusing on content features to handle the cold-start issue.
+6. **User Interest Modeling**: The framework models user interests in multi-modal contexts.
+7. **Clustering**: They use clustering for category IDs as part of their preprocessing.
+8. **Embedding Extraction**: Related to how they handle multi-modal embeddings.
+9. **Pairwise Loss**: A technique used in the model, so this is a specific aspect.
+10. **Real-World Applications**: Since it&#39;s deployed on a large scale and shows commercial improvements.
+
+I should also consider if there are other possible categories like &#34;Scalability&#34; because they mention deployment at a billion-user scale. But the output example didn&#39;t include that, so maybe sticking to the ones listed is better unless I think more are needed.
+
+Another thought: &#34;Beyond Accuracy&#34; since they talk about user interest and beyond just accuracy metrics in recommendations. Also, maybe &#34;Commercial Metrics&#34; but that&#39;s similar to real-world applications.
+
+Wait, the guidelines say each article should be assigned 8-12 categories, so let me see if I can find a few more without overcomplicating.
+
+Looking back, perhaps &#34;User Behavior Analysis&#34; since they model user interests and intensity across modalities. Also, &#34;Feature Engineering&#34; because they preprocess multi-modal features and combine them with embeddings.
+
+So adding those in:
+
+- User Behavior Analysis
+- Feature Engineering
+
+That brings the total to 12 categories, which fits within the guidelines.
+
+Let me double-check each category to ensure relevance:
+
+- Cold Start: Directly addressed.
+- Short Video: The domain is clear.
+- Multi-Modal Modeling: Core aspect of their approach.
+- Recommender Systems: Obvious as it&#39;s about recommendations.
+- Content-Based Recommendation: Focus on content features.
+- User Interest Modeling: Central to the framework.
+- Clustering: Used in preprocessing for category IDs.
+- Embedding Extraction: Part of handling multi-modal data.
+- Pairwise Loss: Specific technique used.
+- Real-World Applications: Deployed and tested in real settings.
+- User Behavior Analysis: Inferred from modeling user interests.
+- Feature Engineering: Preprocessing steps involved.
+
+Yes, these all make sense. They cover both specific techniques (like pairwise loss, clustering) and broader categories (recommender systems, multi-modal), as well as the domain and applications. This should help users find the article when searching for any of these aspects.
+&lt;/think&gt;
+
+Cold Start, Short Video, Multi-Modal Modeling, Recommender Systems, Content-Based Recommendation, User Interest Modeling, Clustering, Embedding Extraction, Pairwise Loss, Real-World Applications, User Behavior Analysis, Feature Engineering</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Multi-modal Modeling Framework for Cold-start Short-video Recommendation
+Abstract:
+Short video has witnessed rapid growth in the past few years in multimedia platforms. To ensure the freshness of the videos, platforms receive a large number of user-uploaded videos every day, making collaborative filtering-based recommender methods suffer from the item cold-start problem (e.g., the new-coming videos are difficult to compete with existing videos). Consequently, increasing efforts tackle the cold-start issue from the content perspective, focusing on modeling the multi-modal preferences of users, a fair way to compete with new-coming and existing videos. However, recent studies ignore the existing gap between multi-modal embedding extraction and user interest modeling as well as the discrepant intensities of user preferences for different modalities. In this paper, we propose M3CSR, a multi-modal modeling framework for cold-start short video recommendation. Specifically, we preprocess content-oriented multi-modal features for items and obtain trainable category IDs by performing clustering. In each modality, we combine modality-specific cluster ID embedding and the mapped original modality feature as modality-specific representation of the item to address the gap. Meanwhile, M3CSR measures the user modality-specific intensity based on the correlation between modality-specific interest and behavioral interest and employs pairwise loss to further decouple user multi-modal interests. Extensive experiments on four real-world datasets demonstrate the superiority of our proposed model. The framework has been deployed on a billion-user scale short video application and has shown improvements in various commercial metrics within cold-start scenarios.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about a multi-modal modeling framework for cold-start short-video recommendations. Let&#39;s start by reading the title and abstract carefully.
+
+The title mentions &#34;Multi-modal Modeling Framework&#34; which suggests that it deals with multiple types of data or features. It also specifies &#34;Cold-start Short-video Recommendation,&#34; so I know it&#39;s focused on tackling the cold-start problem in recommendation systems, particularly for short videos.
+
+In the abstract, they talk about addressing the item cold-start problem where new videos struggle to get recommended because collaborative filtering methods don&#39;t work well with them. They focus on modeling multi-modal user preferences, which helps new and existing videos compete. The authors point out that previous studies have a gap between extracting multi-modal embeddings and modeling user interests.
+
+The proposed framework is called M3CSR. It preprocesses content-oriented multi-modal features for items and clusters categories to create trainable IDs. Each modality&#39;s representation combines specific cluster ID embeddings with original features, aiming to bridge the gap in embedding extraction. They also measure user intensity across different modalities based on correlations and use pairwise loss to decouple interests.
+
+The experiments are done on four real-world datasets, showing that their model is effective. Additionally, it&#39;s deployed on a large-scale application and improved commercial metrics for cold-start scenarios.
+
+Now, categorizing this article:
+
+1. **Multi-Modal**: Definitely fits since the framework uses multiple modalities.
+2. **Cold Start**: The primary problem addressed is the cold-start issue in recommendations.
+3. **Video Recommendation**: Focuses specifically on short videos.
+4. **Collaborative Filtering**: They mention collaborative filtering methods which are a traditional approach, so this is relevant.
+5. **Content-Based Filtering**: Since they model user preferences based on content features, this category applies.
+6. **Scalability**: The deployment at scale and the billion-user application indicate scalability is addressed.
+7. **User-Centered Design**: They focus on user interests and multi-modal intensity, which aligns with a user-centric approach.
+8. **Evaluation Metrics**: Although not explicitly mentioned in the abstract, since they discuss improvements in commercial metrics, evaluation is part of their process.
+
+I think these categories cover the main aspects without overcomplicating things. Each category is relevant and descriptive, ensuring users can easily find related content.
+&lt;/think&gt;
+
+Multi-Modal, Cold Start, Video Recommendation, Collaborative Filtering, Content-Based Filtering, Scalability, User-Centered Design, Evaluation Metrics</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>
