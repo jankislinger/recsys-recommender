@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: RepSys: Framework for Interactive Evaluation of Recommender Systems
+Abstract:
+Making recommender systems more transparent and auditable is crucial for the future adoption of these systems. Available tools typically present mostly errors of models aggregated over all test users, which is often insufficient to uncover hidden biases and problems. Moreover, the emphasis is primarily on the accuracy of recommendations but less on other important metrics, such as the diversity of recommended items, the extent of catalog coverage, or the opportunity to discover novel items at bestsellers’ expense. In this work, we propose RepSys, a framework for evaluating recommender systems. Our work offers a set of highly interactive approaches for investigating various scenario recommendations, analyzing a dataset, and evaluating distributions of various metrics that combine visualization techniques with existing offline evaluation methods. RepSys framework is available under an open-source license to other researchers.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article into multiple relevant categories based on its content. The title is &#34;RepSys: Framework for Interactive Evaluation of Recommender Systems,&#34; and the abstract talks about making recommender systems more transparent and auditable. They mention that existing tools focus too much on model accuracy aggregated over all users, which isn&#39;t enough to find hidden biases or problems. 
+
+The authors propose RepSys, a framework that offers interactive approaches for investigating recommendations, analyzing datasets, and evaluating various metrics like diversity, catalog coverage, and opportunity costs related to bestsellers. They also mention that the framework is open-source.
+
+First, I&#39;ll look at the core themes. The main focus seems to be on evaluation frameworks specifically for recommender systems. So &#34;Recommender Systems&#34; is definitely a primary category. Since they&#39;re talking about evaluating these systems interactively and in a transparent way, &#34;Evaluation Frameworks&#34; makes sense too.
+
+The abstract emphasizes aspects beyond accuracy, so &#34;Beyond Accuracy&#34; should be included. They mention diversity of recommendations, which ties into &#34;Diversity of Recommendations.&#34; The opportunity to discover novel items at the expense of bestsellers touches on &#34;Catalog Coverage,&#34; so that&#39;s another category.
+
+They talk about visualizing metrics and combining visualization techniques with existing methods, which points towards &#34;Visualization Techniques&#34; as a relevant category. The framework being open-source suggests it might have applications in research collaboration or real-world testing, hence &#34;Open Source.&#34;
+
+Looking at the problem domain, this is more about improving how we assess recommendation systems rather than any specific application area like healthcare or education. So I don&#39;t think adding a domain-specific category here would be as relevant.
+
+They also discuss addressing issues with existing tools, so maybe something related to &#34;Bias in Recommendations&#34; could fit since they&#39;re aiming to uncover hidden biases. However, the example categories didn&#39;t include bias explicitly, but it&#39;s about improving transparency and auditability, which is more about evaluation aspects rather than bias itself.
+
+Another point is that RepSys allows for interactive analysis of datasets, so maybe &#34;Interactive Analysis&#34; as a category. But looking at the examples provided, I think sticking with existing ones might be better to maintain consistency unless a new category adds significant value.
+
+I should also consider how users would search for this. If someone is interested in improving recommendation evaluation beyond just accuracy metrics, they&#39;d look under &#34;Beyond Accuracy.&#34; Similarly, if they&#39;re into making systems more transparent and auditable, that&#39;s covered by &#34;Evaluation Frameworks&#34; and maybe &#34;Transparency.&#34;
+
+So compiling all these thoughts: the categories should include Recommender Systems, Evaluation Frameworks, Beyond Accuracy, Diversity of Recommendations, Catalog Coverage, Visualization Techniques, Interactive Analysis (if applicable), Open Source. Since the example output had about 7-8 categories, I need to make sure each is relevant and doesn&#39;t overlap too much.
+
+Wait, &#34;Interactive Analysis&#34; wasn&#39;t in the initial examples but fits here since RepSys offers interactive approaches. Alternatively, maybe it&#39;s covered under Evaluation Frameworks or Interactive Approaches. But considering the user guidelines, using clear labels that accurately reflect the content, perhaps &#34;Interactive Evaluation&#34; would be better than a generic term.
+
+I think I have enough categories now, ensuring each is relevant and covers different aspects of the article without redundancy.
+&lt;/think&gt;
+
+Recommender Systems, Evaluation Frameworks, Beyond Accuracy, Diversity of Recommendations, Catalog Coverage, Visualization Techniques, Interactive Evaluation, Open Source</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: RepSys: Framework for Interactive Evaluation of Recommender Systems
+Abstract:
+Making recommender systems more transparent and auditable is crucial for the future adoption of these systems. Available tools typically present mostly errors of models aggregated over all test users, which is often insufficient to uncover hidden biases and problems. Moreover, the emphasis is primarily on the accuracy of recommendations but less on other important metrics, such as the diversity of recommended items, the extent of catalog coverage, or the opportunity to discover novel items at bestsellers’ expense. In this work, we propose RepSys, a framework for evaluating recommender systems. Our work offers a set of highly interactive approaches for investigating various scenario recommendations, analyzing a dataset, and evaluating distributions of various metrics that combine visualization techniques with existing offline evaluation methods. RepSys framework is available under an open-source license to other researchers.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article titled &#34;Repsys: Framework for Interactive Evaluation of Recommender Systems.&#34; The goal is to assign it to multiple relevant categories so users can easily find and explore content.
+
+First, I&#39;ll read the title and abstract carefully. The main focus seems to be on evaluating recommender systems in an interactive way. They mention that existing tools often aggregate errors across all test users, which might miss hidden biases. Also, they emphasize metrics beyond accuracy, like diversity and discoverability of new items versus bestsellers.
+
+Looking at the key themes: evaluation methods, transparency in recommendation systems, and user interaction with these frameworks. The abstract mentions combining visualization techniques with offline evaluation methods, so visual tools are involved.
+
+Potential categories could include:
+
+1. Evaluation Metrics: Since they discuss metrics beyond accuracy, like diversity and catalog coverage.
+2. Transparency &amp; Explainability: They talk about making recommender systems more transparent.
+3. Interactive Systems: The framework is interactive, so this fits.
+4. Visualization Techniques: As they use visual methods for evaluation.
+5. Open Source: The framework is open-source, which is a key point.
+6. Recommender Systems: Obviously relevant as the topic is about recommenders.
+7. User Interaction: The framework involves user interaction in evaluations.
+
+I should make sure these categories are clear and useful. Maybe add more specific terms if applicable, but these seem to cover the main points without being too vague.
+&lt;/think&gt;
+
+Evaluation Metrics, Transparency &amp; Explainability, Interactive Systems, Visualization Techniques, Open Source, Recommender Systems, User Interaction</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

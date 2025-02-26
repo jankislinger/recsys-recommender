@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A GPU-specialized Inference Parameter Server for Large-Scale Deep Recommendation Models
+Abstract:
+Recommendation systems are of crucial importance for a variety of modern apps and web services, such as news feeds, social networks, e-commerce, search, etc. To achieve peak prediction accuracy, modern recommendation models combine deep learning with terabyte-scale embedding tables to obtain a fine-grained representation of the underlying data. Traditional inference serving architectures require deploying the whole model to standalone servers, which is infeasible at such massive scale.
+In this paper, we provide insights into the intriguing and challenging inference domain of online recommendation systems. We propose the HugeCTR Hierarchical Parameter Server (HPS), an industry-leading distributed recommendation inference framework, that combines a high-performance GPU embedding cache with an hierarchical storage architecture, to realize low-latency retrieval of embeddings for online model inference tasks. Among other things, HPS features (1) a redundant hierarchical storage system, (2) a novel high-bandwidth cache to accelerate parallel embedding lookup on NVIDIA GPUs, (3) online training support and (4) light-weight APIs for easy integration into existing large-scale recommendation workflows. To demonstrate its capabilities, we conduct extensive studies using both synthetically engineered and public datasets. We show that our HPS can dramatically reduce end-to-end inference latency, achieving 5~62x speedup (depending on the batch size) over CPU baseline implementations for popular recommendation models. Through multi-GPU concurrent deployment, the HPS can also greatly increase the inference QPS.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to make it easy for users to find and explore content. Let me read through the provided information carefully.
+
+The title of the article is &#34;A GPU-specialized Inference Parameter Server for Large-Scale Deep Recommendation Models.&#34; So, right away, I can tell that this is about recommendation systems, specifically using deep learning models on GPUs. The abstract goes into more detail: it talks about combining deep learning with terabyte-scale embedding tables to improve prediction accuracy in recommendation systems.
+
+The authors mention challenges with traditional inference serving architectures, which require deploying the whole model on standalone servers, but that&#39;s not feasible at such a large scale. They propose HugeCTR Hierarchical Parameter Server (HPS), which is a distributed framework using GPU embedding cache and hierarchical storage for low-latency retrieval.
+
+Looking at the features of HPS: redundant hierarchical storage system, high-bandwidth cache, online training support, and lightweight APIs for integration into recommendation workflows. The results show significant speedups over CPU implementations, especially with multi-GPU deployment, increasing inference QPS.
+
+Now, considering the categories:
+
+1. **Recommendation Systems**: This is central to the article, so it must be included.
+2. **Deep Learning**: Since they&#39;re using deep models for recommendations.
+3. **GPU Acceleration**: The focus on GPU-specialized servers makes this relevant.
+4. **Distributed Systems**: As HPS is a distributed framework.
+5. **Inference Optimization**: They discuss optimizing inference, especially in an online setting.
+6. **Scalability**: The system handles large-scale models and data, so scalability is key.
+7. **Real-Time Processing**: Low-latency retrieval suggests real-time applications.
+8. **Storage Systems**: HPS uses a hierarchical storage architecture.
+9. **Embedding Models**: They work with embedding tables for recommendations.
+10. **Performance Evaluation**: The article includes extensive studies and benchmarks.
+
+I should ensure each category is user-friendly and covers both the specific technologies (like GPU, embeddings) and broader concepts (scalability, recommendation). Also, considering how users might search—maybe they look under &#34;GPU&#34; or &#34;Recommendation Systems&#34;—so covering those bases will help discoverability.
+
+Are there any other categories? Maybe &#34;Distributed Storage,&#34; but that&#39;s similar to storage systems. Or &#34;High-Performance Computing,&#34; which is covered by GPU acceleration and performance evaluation. I think the 10 categories I have are comprehensive and meet the user-centric design.
+&lt;/think&gt;
+
+Recommendation Systems, Deep Learning, GPU Acceleration, Distributed Systems, Inference Optimization, Scalability, Real-Time Processing, Storage Systems, Embedding Models, Performance Evaluation</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: History-Augmented Collaborative Filtering for Financial Recommendations
+Abstract:
+In many businesses, and particularly in finance, the behavior of a client might drastically change over time. It is consequently crucial for recommender systems used in such environments to be able to adapt to these changes. In this study, we propose a novel collaborative filtering algorithm that captures the temporal context of a user-item interaction through the users’ and items’ recent interaction histories to provide dynamic recommendations. The algorithm, designed with issues specific to the financial world in mind, uses a custom neural network architecture that tackles the non-stationarity of users’ and items’ behaviors. The performance and properties of the algorithm are monitored in a series of experiments on a G10 bond request for quotation proprietary database from BNP Paribas Corporate and Institutional Banking.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its content. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;History-Augmented Collaborative Filtering for Financial Recommendations.&#34; Hmm, so it&#39;s about a recommendation system that uses collaborative filtering but with some added history component. The focus seems to be on financial recommendations, which suggests it&#39;s tailored for applications in banking or finance.
+
+Looking at the abstract, it mentions that client behavior can change drastically over time, especially in finance. Therefore, the recommender system needs to adapt. They propose a novel algorithm that captures temporal context using recent interaction histories of users and items. The algorithm uses a custom neural network architecture to handle non-stationarity, which I think refers to how user/item behaviors don&#39;t remain constant over time.
+
+They tested this on a G10 bond database from BNP Paribas, which is a real-world application. So the article has practical implications in the financial domain.
+
+Now, thinking about the categories. The first obvious one is the algorithm family. It&#39;s using collaborative filtering with some history augmentation, so maybe &#34;Collaborative Filtering&#34; as a primary category. Since it involves neural networks, perhaps &#34;Neural Networks&#34; should be another category.
+
+The problem domain here is finance, specifically banking or financial recommendations. So categories like &#34;Finance,&#34; &#34;Banking,&#34; and &#34;Financial Recommendations&#34; make sense.
+
+The abstract talks about handling changes over time, which relates to temporal aspects. So &#34;Temporal Context&#34; could be a relevant category. They&#39;re dealing with non-stationarity in behaviors, so maybe another category like that or something related to dynamic recommendations.
+
+They mention experiments on a real dataset from BNP Paribas, indicating real-world application. That suggests categories such as &#34;Real-World Applications,&#34; &#34;Industry Applications,&#34; and perhaps &#34;A/B Testing&#34; if they ran any tests, though I don&#39;t see explicit mention of A/B testing here.
+
+The system adapts to changing user behavior, so maybe a category like &#34;Adaptive Systems&#34; or &#34;Dynamic Adaptation.&#34; Also, since it&#39;s about financial products like bonds, including specific domains like &#34;Bonds&#34; could be useful for users interested in that area.
+
+Looking at the guidelines, each article should go into 8-12 categories. I have:
+
+1. Collaborative Filtering
+2. Neural Networks
+3. Finance
+4. Banking
+5. Financial Recommendations
+6. Temporal Context
+7. Non-stationarity
+8. Real-World Applications
+9. Industry Applications
+10. Adaptive Systems
+
+That&#39;s ten categories, which fits within the 8-12 range. I need to make sure these are clear and user-friendly. Maybe &#34;Non-stationarity&#34; could be phrased differently, but it accurately reflects the content.
+
+I should also consider if any other specific aspects apply. The abstract mentions experiments on a bond database, so perhaps adding &#34;Bonds&#34; as another category would help users interested in that financial instrument find this article easily.
+
+So, adding &#34;Bonds&#34; gives me an 11th category. That seems comprehensive without being too granular. Let me check if all these categories make sense and are user-centric. Users looking for finance-related recommendation systems or neural network applications in banking would likely search under these categories, making the interface more navigable.
+
+I think this covers the key aspects of the article: algorithm type, problem domain, specific financial instruments, temporal handling, real-world testing, and system adaptability.
+&lt;/think&gt;
+
+Collaborative Filtering, Neural Networks, Finance, Banking, Financial Recommendations, Temporal Context, Non-stationarity, Real-World Applications, Industry Applications, Adaptive Systems, Bonds</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: History-Augmented Collaborative Filtering for Financial Recommendations
+Abstract:
+In many businesses, and particularly in finance, the behavior of a client might drastically change over time. It is consequently crucial for recommender systems used in such environments to be able to adapt to these changes. In this study, we propose a novel collaborative filtering algorithm that captures the temporal context of a user-item interaction through the users’ and items’ recent interaction histories to provide dynamic recommendations. The algorithm, designed with issues specific to the financial world in mind, uses a custom neural network architecture that tackles the non-stationarity of users’ and items’ behaviors. The performance and properties of the algorithm are monitored in a series of experiments on a G10 bond request for quotation proprietary database from BNP Paribas Corporate and Institutional Banking.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;History-Augmented Collaborative Filtering for Financial Recommendations.&#34; Let me read through it carefully.
+
+The title mentions collaborative filtering and financial recommendations. The abstract talks about how user behavior changes over time in finance, which is important for recommender systems. They propose a new algorithm that uses recent interaction histories to adapt dynamically. It&#39;s tailored for the financial sector with a custom neural network to handle non-stationarity. They tested it on bond data from BNP Paribas.
+
+So, starting with categories. The main method here is collaborative filtering, and they&#39;ve augmented it with history, so that&#39;s definitely one. It&#39;s in the finance domain, so &#34;Financial Recommendations&#34; fits. Since they&#39;re dealing with time-based changes in user behavior, temporal dynamics should be another category. They mention a custom neural network architecture, which relates to model design or neural networks.
+
+Looking at aspects of recommendation space, cold start isn&#39;t directly mentioned, but it&#39;s about adapting to changing behaviors, so maybe not. Evaluation aspects like diversity aren&#39;t highlighted, but they did experiments on their own data, which is more about real-world application—so A/B Test or User Survey might fit if they tested with user feedback, but the abstract says they used a proprietary database without explicit mention of user surveys. Maybe stick to Real-World Applications as it was tested in a financial setting.
+
+They also address non-stationarity, so that&#39;s another category. The dataset is specific to bonds and a financial institution, which ties into domain-specific datasets.
+
+Putting it all together: Collaborative Filtering, Financial Recommendations, Temporal Dynamics, Neural Networks, Model Architecture, Non-Stationarity, Real-World Applications, Domain-Specific Datasets.
+&lt;/think&gt;
+
+Collaborative Filtering, Financial Recommendations, Temporal Dynamics, Neural Networks, Model Architecture, Non-Stationarity, Real-World Applications, Domain-Specific Datasets</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

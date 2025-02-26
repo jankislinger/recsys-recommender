@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-metrics/">Evaluation Metrics</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/explainability/">Explainability</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Bayesian Optimization with LLM-Based Acquisition Functions for Natural Language Preference Elicitation (2024)</h3>
+    <p><strong>Authors:</strong> Armin Toroghi, David Austin, Anton Korikov, Scott Sanner</p>
+    <p>Designing preference elicitation (PE) methodologies that can quickly ascertain a user’s top item preferences in a cold-start setting is a key challenge for building effective and personalized conversational recommendation (ConvRec) systems. While large language models (LLMs) constitute a novel technology that enables fully natural language (NL) PE dialogues, we hypothesize that monolithic LLM NL-PE approaches lack the multi-turn, decision-theoretic reasoning required to effectively balance the NL exploration and exploitation of user preferences towards an arbitrary item set. In contrast, traditional Bayesian optimization PE methods define theoretically optimal PE strategies, but fail to use NL item descriptions or generate NL queries, unrealistically assuming users can express preferences with direct item ratings and comparisons. To overcome the limitations of both approaches, we formulate NL-PE in a Bayesian Optimization (BO) framework that seeks to actively elicit natural language feedback to reduce uncertainty over item utilities to identify the best recommendation. Key challenges in generalizing BO to deal with natural language feedback include determining (a) how to leverage LLMs to model the likelihood of NL preference feedback as a function of item utilities and (b) how to design an acquisition function that works for language-based BO that can elicit in the infinite space of language. We demonstrate our framework in a novel NL-PE algorithm, PEBOL, which uses Natural Language Inference (NLI) between user preference utterances and NL item descriptions to maintain preference beliefs and BO strategies such as Thompson Sampling (TS) and Upper Confidence Bound (UCB) to guide LLM query generation. We numerically evaluate our methods in controlled experiments, finding that PEBOL achieves up to 131% improvement in MAP@10 after 10 turns of cold start NL-PE dialogue compared to monolithic GPT-3.5, despite relying on a much smaller 400M parameter NLI model for preference inference.</p>
+    <p><strong>Categories:</strong> Bayesian Optimization, Large Language Models (LLMs), Natural Language Processing (NLP), Conversational Recommendation Systems, Preference Elicitation, Cold Start Problem, Algorithm Selection, Multi-Armed Bandits, Thompson Sampling, Upper Confidence Bound, Natural Language Inference (NLI), Evaluation Metrics, Machine Learning (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1020/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Recommender Systems Algorithm Selection for Ranking Prediction on Implicit Feedback Datasets (2024)</h3>
+    <p><strong>Authors:</strong> Joeran Beel, Lukas Wegmeth, Tobias Vente</p>
+    <p>The recommender systems algorithm selection problem for ranking prediction on implicit feedback datasets is under-explored. Traditional approaches in recommender systems algorithm selection focus predominantly on rating prediction on explicit feedback datasets, leaving a research gap for ranking prediction on implicit feedback datasets. Algorithm selection is a critical challenge for nearly every practitioner in recommender systems. In this work, we take the first steps toward addressing this research gap.<br> We evaluate the NDCG@10 of 24 recommender systems algorithms, each with two hyperparameter configurations, on 72 recommender systems datasets. We train four optimized machine-learning meta-models and one automated machine-learning meta-model with three different settings on the resulting meta-dataset.<br> Our results show that the predictions of all tested meta-models exhibit a median Spearman correlation ranging from 0.857 to 0.918 with the ground truth. We show that the median Spearman correlation between meta-model predictions and the ground truth increases by an average of 0.124 when the meta-model is optimized to predict the ranking of algorithms instead of their performance. Furthermore, in terms of predicting the best algorithm for an unknown dataset, we demonstrate that the best optimized traditional meta-model, e.g., XGBoost, achieves a recall of 48.6%, outperforming the best tested automated machine learning meta-model, e.g., AutoGluon, which achieves a recall of 47.2%.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Algorithm Selection, Ranking Prediction, Implicit Feedback Datasets, Meta-Model Selection, Hyperparameter Optimization, Beyond Accuracy, Evaluation Metrics (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1199/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Introducing LensKit-Auto, an Experimental Automated Recommender System (AutoRecSys) Toolkit (2023)</h3>
+    <p><strong>Authors:</strong> Tobias Vente, Michael Ekstrand, Joeran Beel</p>
+    <p>LensKit is one of the first and most popular Recommender System Libraries. While LensKit offers a wide variety of features, it does not include any optimization strategies or guidelines on how to select and tune LensKit algorithms. LensKit developers have to manually include third-party libraries into their experimental setup or implement optimization strategies by hand to optimize hyperparameters. We found that 65.5% (19 out of 29) of papers using LensKit algorithms for their experiments did not select algorithms or tune hyperparameters. Non-optimized models represent poor baselines and produce less meaningful research results. This demo introduces LensKit-Auto. LensKit-Auto automates the entire Recommender System pipeline and enables LensKit developers to automatically select, optimize, and ensemble LensKit algorithms.</p>
+    <p><strong>Categories:</strong> Automated Recommendations, Recommender Systems, Algorithm Selection, Hyperparameter Optimization, Pipeline Automation, Research Tools, Algorithm Ensembles, Performance Evaluation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/973/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Advancing Automation of Design Decisions in Recommender System Pipelines (2023)</h3>
+    <p><strong>Authors:</strong> Tobias Vente</p>
+    <p>Recommender systems have become essential in domains like streaming services, social media platforms, and e-commerce websites.  However, the development of a recommender system involves a complex pipeline with preprocessing, data splitting, algorithm and model selection, and postprocessing stages, requiring critical design decisions.  Every stage of the recommender systems pipeline requires design decisions that influence the performance of the recommender system. To ease design decisions, automated machine learning (AutoML) techniques have been adapted to the field of recommender systems, resulting in various AutoRecSys libraries.  Nevertheless, these libraries lack library independence and limit flexibility in integrating automation techniques from different sources. In response, our research aims to enhance the usability of AutoML techniques for design decisions in recommender system pipelines.  We focus on developing flexible and library-independent automation techniques for algorithm selection, model selection, and postprocessing steps.  By enabling developers to make informed choices and ease the recommender system development process, we decrease the developer’s effort while improving the performance of the recommender systems.  Moreover, we want to analyze the cost-to-benefit ratio of automation techniques in recommender systems, evaluating the computational overhead and the resulting improvements in predictive performance.  Our objective is to leverage AutoML concepts to automate design decisions in recommender system pipelines, reduce manual effort, and enhance the overall performance and usability of recommender systems.</p>
+    <p><strong>Categories:</strong> Recommender Systems, AutoML, Automation Techniques, Library Independence, Recommender System Pipelines, Cost-Benefit Analysis, Algorithm Selection, Usability, Performance Improvement (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/978/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A Low-Code Tool Supporting the Development of Recommender Systems (2021)</h3>
+    <p><strong>Authors:</strong> Claudio Di Sipio, Davide Di Ruscio, Juri Di Rocco, Phuong Thanh Nguyen</p>
+    <p>The design of recommender systems (RSs) to support software development encompasses the fulfillment of different steps, including data preprocessing, choice of the most appropriate algorithms, item delivery. Though RSs can alleviate the curse of information overload, existing approaches resemble black-box systems, in which the end-user is not expected to fine-tune or personalize the overall process.<br>In this work, we propose LEV4REC, a low-code environment to assist developers in designing, configuring, and delivering recommender systems. The first step supported by the proposed tool includes defining an initial model that allows for the configuration of the crucial components of the wanted RS. Then, a subsequent phase is performed to finalize the RS design, e.g., to specify configuration parameters. LEV4REC is eventually capable of generating source code for the desired RS. To evaluate the capabilities of the approach, we used LEV4REC to specify two existing RSs built on top of two different recommendation algorithms, i.e., collaborative filtering and supervised machine learning.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Algorithm Selection, Collaborative Filtering, Supervised Machine Learning, Low-Code Development, Software Development Tools, Code Generation, System Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/696/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Evaluating Off-Policy Evaluation: Sensitivity and Robustness (2021)</h3>
+    <p><strong>Authors:</strong> Kazuki Mogi, Yuta Saito, Kei Tateno, Yusuke Narita, Haruka Kiyohara, Takuma Udagawa</p>
+    <p>Off-policy Evaluation (OPE), or offline evaluation in general, evaluates the performance of hypothetical policies leveraging only offline log data. It is particularly useful in applications where the online interaction involves high stakes and expensive setting such as precision medicine and recommender systems. Since many OPE estimators have been proposed and some of them have hyperparameters to be tuned, there is an emerging challenge for practitioners to select and tune OPE estimators for their specific application. Unfortunately, identifying a reliable estimator from results reported in research papers is often difficult because the current experimental procedure evaluates and compares the estimators’ performance on a narrow set of hyperparameters and evaluation policies. Therefore, it is difficult to know which estimator is safe and reliable to use. In this work, we develop Interpretable Evaluation for Offline Evaluation (IEOE), an experimental procedure to evaluate OPE estimators’ robustness to changes in hyperparameters and/or evaluation policies in an interpretable manner. Then, using the IEOE procedure, we perform extensive evaluation of a wide variety of existing estimators on Open Bandit Dataset, a large-scale public real-world dataset for OPE. We demonstrate that our procedure can evaluate the estimators’ robustness to the hyperparamter choice, helping us avoid using unsafe estimators. Finally, we apply IEOE to real-world e-commerce platform data and demonstrate how to use our protocol in practice.</p>
+    <p><strong>Categories:</strong> Off-Policy Evaluation, Reinforcement Learning, Recommender Systems, Precision Medicine, Algorithm Selection, Hyperparameter Tuning, Experimental Design, Real-World Applications, Sensitivity Analysis, Robustness, Evaluation Metrics, Practical Implementation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/639/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Contextual Meta-Bandit for Recommender Systems Selection (2020)</h3>
+    <p><strong>Authors:</strong> Sandor Caetano, Renan M. de Oliveira, Anderson Soares, Luckeciano C. Melo, Marlesson R. O. de Santana, Fernando H. F. Camargo, Bruno Brandão</p>
+    <p>Recommendation systems operate in a highly stochastic and non-stationary environment. As the amount of user-specific information varies, the users’ interests themselves also change. This combination creates a dynamic setting where a single solution will rarely be optimal unless it can keep up with these transformations. One system may perform better than others depending on the situation at hand, thus making the choice of which system to deploy, even more difficult. We address these problems by using the Hierarchical Reinforcement Learning framework. Our proposed meta-bandit acts as a policy over options, where each option maps to a pre-trained, independent recommender system. This meta-bandit learns online and selects a recommender accordingly to the context, adjusting to the situation. We conducted experiments on real data and found that our approach manages to address the dynamics within the user’s changing interests. We also show that it outperforms any of the recommenders separately, as well as an ensemble of them.</p>
+    <p><strong>Categories:</strong> Contextual Meta-Bandit, Multi-Armed Bandits, Hierarchical Reinforcement Learning, Recommendation Systems, Online Learning, Real-World Applications, Dynamic Environments, User Behavior, Algorithm Selection (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/574/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>CF4CF: Recommending Collaborative Filtering algorithms using Collaborative Filtering (2018)</h3>
+    <p><strong>Authors:</strong> Tiago Cunha, Carlos Soares, André de Carvalho</p>
+    <p>As Collaborative Filtering becomes increasingly important in both academia and industry recommendation solutions, it also becomes imperative to study the algorithm selection task in this domain. This problem aims at finding automatic solutions which enable the selection of the best algorithms for a new problem, without performing full-fledged training and validation procedures. Existing work in this area includes several approaches using Metalearning, which relate the characteristics of the problem domain with the performance of the algorithms. This study explores an alternative approach to deal with this problem. Since, in essence, the algorithm selection problem is a recommendation problem, we investigate the use of Collaborative Filtering algorithms to select Collaborative Filtering algorithms. The proposed approach integrates subsampling landmarkers, a data characterization approach commonly used in Metalearning, with a Collaborative Filtering methodology, named CF4CF. The predictive performance obtained by CF4CF using benchmark recommendation datasets was similar or superior to that obtained with Metalearning.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Collaborative Filtering, Algorithm Selection, Meta Approaches, Self-Recommending Systems, Subsampling Landmarkers, Data Characterization, Evaluation of Recommendation Systems, System Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/370/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Metalearning for Context-aware Filtering: Selection of Tensor Factorization Algorithms (2017)</h3>
+    <p><strong>Authors:</strong> Tiago Cunha, André C.P.L.F. de Carvalho, Carlos Soares</p>
+    <p>This work addresses the problem of selecting Tensor Factorization algorithms for the Context-aware Filtering recommendation task using a metalearning approach. The most important challenge of applying metalearning on new problems is the development of useful measures able to characterize the data, i.e. metafeatures. We propose an extensive and exhaustive set of metafeatures to characterize Context-aware Filtering recommendation task. These metafeatures take advantage of the tensor’s hierarchical structure via slice operations. The algorithm selection task is addressed as a Label Ranking problem, which ranks the Tensor Factorization algorithms according to their expected performance, rather than simply selecting the algorithm that is expected to obtain the best performance. A comprehensive experimental work is conducted on both levels, baselevel and metalevel (Tensor Factorization and Label Ranking, respectively). The results show that the proposed metafeatures lead to metamodels that tend to rank Tensor Factorization algorithms accurately and that the selected algorithms present high recommendation performance.</p>
+    <p><strong>Categories:</strong> Metalearning, Context-aware Filtering, Tensor Factorization, Algorithm Selection, Label Ranking, Recommendation Systems, Metafeatures, Evaluation Methods, Multi-dimensional Data, Performance Metrics, Metalearning Framework, Algorithm Ranking (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/266/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Contrasting Offline and Online Results when Evaluating Recommendation Algorithms (2016)</h3>
+    <p><strong>Authors:</strong> Marco Rossetti, Fabio Stella, Markus Zanker</p>
+    <p>Most evaluations of novel algorithmic contributions assess their accuracy in predicting what was withheld in an offline evaluation scenario. However, several doubts have been raised that standard offline evaluation practices are not appropriate to select the best algorithm for field deployment. The goal of this work is therefore to compare the offline and the online evaluation methodology with the same study participants, i.e. a within users experimental design. This paper presents empirical evidence that the ranking of algorithms based on offline accuracy measurements clearly contradicts the results from the online study with the same set of users. Thus the external validity of the most commonly applied evaluation methodology is not guaranteed.</p>
+    <p><strong>Categories:</strong> Offline Evaluation, Online Evaluation, Algorithmic Evaluation Methods, Recommendation Algorithms, External Validity, User-Centered Evaluation, Evaluation Methodology, Algorithm Selection, Empirical Evidence, Deployment Considerations, User Study, Recommendation Systems (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/199/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Letting Users Choose Recommender Algorithms: An Experimental Study (2015)</h3>
+    <p><strong>Authors:</strong> F. Maxwell Harper, Daniel Kluver, Joseph A. Konstan, Michael D. Ekstrand</p>
+    <p>Recommender systems are not one-size-fits-all; different algorithms and data sources have different strengths, making them a better or worse fit for different users and use cases. As one way of taking advantage of the relative merits of different algorithms, we gave users the ability to change the algorithm providing their movie recommendations and studied how they make use of this power. We conducted our study with the launch of a new version of the MovieLens movie recommender that supports multiple recommender algorithms and allows users to choose the algorithm they want to provide their recommendations. We examine log data from user interactions with this new feature to understand whether and how users switch among recommender algorithms, and select a final algorithm to use. We also look at the properties of the algorithms as they were experienced by users and examine their relationships to user behavior. We found that a substantial portion of our user base (25%) used the recommender-switching feature. The majority of users who used the control only switched algorithms a few times, trying a few out and settling down on an algorithm that they would leave alone. The largest number of users prefer a matrix factorization algorithm, followed closely by item-item collaborative filtering; users selected both of these algorithms much more often than they chose a non-personalized mean recommender. The algorithms did produce measurably different recommender lists for the users in the study, but these differences were not directly predictive of user choice.</p>
+    <p><strong>Categories:</strong> Recommender Systems, User Behavior, Algorithm Selection, Movie Recommendations, Collaborative Filtering, Matrix Factorization, User Interface/UX Design, A/B Testing, Preference Modeling, User-Centered Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/109/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Selection and Ordering of Linear Online Video Ads (2015)</h3>
+    <p><strong>Authors:</strong> Viswanathan Swaminathan, Wreetabrata Kar, Paulo Albuquerque</p>
+    <p>This paper studies the selection and ordering of in-stream ads in videos shown in online content publishers. We propose an allocation algorithm that uses a collective measure of price and quality for each ad and factors in slot-specific continuation probabilities to maximize publisher revenue. The algorithm is based on cascade models and uses a dynamic programming method to assign linear (video) ads to slots in an online video. The approach accounts for the negative externality created by lower quality ads placed in a video, leading to viewer exit and thereby preventing the publisher from showing the subsequent ads scheduled in that session. Our algorithm is scalable and suited for real-time applications. A large log of viewer activity from a video ad platform is used to empirically test the algorithm. A series of simulations show that our algorithm, when compared to other algorithms currently practiced in industry, generates more revenue for the publisher and increases viewer retention.</p>
+    <p><strong>Categories:</strong> Advertising, Video Ads, Recommendation Systems, Algorithm Selection, Dynamic Programming, Cascade Model, Resource Allocation, Economic Impact, Real-World Applications, Ad Ordering, Online Advertising, Revenue Maximization, Viewer Retention (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/114/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Adaptation and Evaluation of Recommendations for Short-term Shopping Goals (2015)</h3>
+    <p><strong>Authors:</strong> Michael Jugovac, Dietmar Jannach, Lukas Lerche</p>
+    <p>An essential characteristic in many of e-commerce settings is that website visitors can have very specific short-term shopping goals when they browse the site. Relying solely on long-term user models that are pre-trained on historical data can therefore be insufficient for recommendation. Simple “real-time” recommendation approaches based, e.g., on unpersonalized co-occurrence patterns, on the other hand do not fully exploit the available information about the user’s long-term preference profile. In this work, we aim to explore and quantify the effectiveness of using and combining long-term models and short-term adaptation strategies. We conducted an empirical evaluation based on a novel evaluation design and two real-world datasets. The results indicate that maintaining short-term and profiles of the visitors can lead to significant accuracy increases. At the same time, the experiments show that the choice of the algorithm for learning the long term preferences is particularly important at the beginning of new shopping sessions.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, E-Commerce, Short-Term Adaptation, Long-Term Models, Empirical Evaluation, Data Analysis, Accuracy Improvement, Hybrid Approaches, User Behavior, Applied Research, Algorithm Selection (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/85/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Recommendation-based Modeling Support for Data Mining Processes (2014)</h3>
+    <p><strong>Authors:</strong> Dietmar Jannach, Simon Fischer</p>
+    <p>RapidMiner is a software tool that allows users to define data mining processes based on a visual model and implements a variety of so-called operators for data extraction, manipulation, model learning and analysis. The large number of available operators can however make it challenging for the process designer to identify the appropriate operator for the problem at hand. At the same time, some operators are only meaningful when combined with certain others. In this work, we evaluate different strategies of recommending additional operators to the user during the design of the process. The recommendation models are learned using a pool of several thousand existing data mining processes and evaluated in an offline experimental design. The results indicate that good predictive accuracy can already be achieved with comparably simple co-occurrence based algorithms.</p>
+    <p><strong>Categories:</strong> Co-occurrence, Data Mining, Recommendation Systems, Software Tools, User Interaction, Evaluation Methods, Algorithm Selection, Operator Recommendation, Collaborative Filtering, Data Mining Processes, Process Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/52/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Switching Hybrid for Cold-Starting Context-Aware Recommender Systems (2014)</h3>
+    <p><strong>Authors:</strong> Victor Codina, Francesco Ricci, Matthias Braunhofer</p>
+    <p>Finding effective solutions for cold-starting context-aware recommender systems (CARSs) is important because usually low quality recommendations are produced for users, items or contextual situations that are new to the system. In this paper, we tackle this problem with a switching hybrid solution that exploits a custom selection of two CARS algorithms, each one suited for a particular cold start situation, and switches between these algorithms depending on the detected recommendation situation (new user, new item or new context). We evaluate the proposed algorithms in an offline experiment by using various contextually-tagged rating datasets. We illustrate some significant performance differences among the considered algorithms and show that they can be effectively combined into the proposed switching hybrid to cope with different types of cold-start problems.</p>
+    <p><strong>Categories:</strong> Cold Start, Context-Aware Recommendations, Hybrid Algorithms, Recommendation Systems, Offline Experiments, Real-World Applications, Evaluation Metrics, Algorithm Selection, Scalability, Performance Analysis (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/55/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

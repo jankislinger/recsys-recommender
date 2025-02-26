@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Translating the Public Service Media Remit into Metrics and Algorithms
+Abstract:
+After multiple years of providing automated video recommendations in the ZDFmediathek, ZDF has established a solid ground for the usage of recommender systems. Being a Public Service Media (PSM) provider, our most important driver on this journey is our Public Service Media Remit (PSMR). We are committed to cultivate PSM values such as diversity, fairness, and transparency while providing fresh and relevant content. Therefore, it is important for us to not only measure the success of our recommender systems in terms of basic business Key Performance Indicators (KPIs) such as clicks and viewing minutes but also to ensure and to measure the achievement of PSM values. While speaking about PSM values, however, it is important to keep in mind that there is no easy way to directly measure values as such. In order to be able to measure their extent in a recommender system, we need to translate these values into public value metrics. However, not only the final results are essential for the PSMR. Additionally, it is highly important to establish transparency while working towards these results, that is, while defining the data, the algorithms, and the pipelines used in recommender systems. In our talk we will provide a deeper insight into how we approach this task with Model Cards and give an overview of some models, their Model Cards, and metrics that we are currently using for ZDFmediathek.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on its title and abstract. The title is &#34;Translating the Public Service Media Remit into Metrics and Algorithms,&#34; and the abstract talks about ZDF&#39;s use of recommender systems in their media platform while adhering to PSM values like diversity, fairness, and transparency.
+
+First, I&#39;ll look at the core themes. The article discusses recommender systems specifically in a public service context, so &#34;Public Service Media&#34; should definitely be a category. It mentions translating values into metrics, which relates to evaluation aspects, so maybe something like &#34;Metrics for Public Value.&#34; They talk about using Model Cards for transparency, so &#34;Model Transparency&#34; is another relevant category.
+
+The abstract also discusses the importance of fairness and diversity in recommendations, so those are specific recommendation space topics. The article addresses how these values translate into algorithms and systems, which ties into &#34;Algorithm Design.&#34; Since they mention KPIs like clicks and viewing minutes beyond just accuracy, that&#39;s about evaluation aspects beyond traditional metrics, so &#34;Beyond Accuracy Evaluation&#34; makes sense.
+
+The focus is on public service values in recommendations, so &#34;Public Service Values&#34; is a clear category. They’re working on metrics for these values, hence &#34;Metrics Design.&#34; The article also talks about the design of recommendation systems with fairness and diversity in mind, so including &#34;Recommendation System Design&#34; fits well. Lastly, they mention using Model Cards to ensure transparency throughout the pipeline, which covers &#34;Transparency in Machine Learning.&#34;
+
+Putting it all together, I have eight categories that cover the main aspects of the article without being too niche or too broad. They should help users find this article when exploring topics related to public service media, recommendation systems, and ethical considerations like fairness and transparency.
+&lt;/think&gt;
+
+Public Service Media, Metrics for Public Value, Fairness in Recommendations, Model Transparency, Recommendation Algorithms, Algorithm Design, Diversity of Recommendations, Beyond Accuracy Evaluation, Public Service Values, Metrics Design, Recommendation System Design, Transparency in Machine Learning</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Translating the Public Service Media Remit into Metrics and Algorithms
+Abstract:
+After multiple years of providing automated video recommendations in the ZDFmediathek, ZDF has established a solid ground for the usage of recommender systems. Being a Public Service Media (PSM) provider, our most important driver on this journey is our Public Service Media Remit (PSMR). We are committed to cultivate PSM values such as diversity, fairness, and transparency while providing fresh and relevant content. Therefore, it is important for us to not only measure the success of our recommender systems in terms of basic business Key Performance Indicators (KPIs) such as clicks and viewing minutes but also to ensure and to measure the achievement of PSM values. While speaking about PSM values, however, it is important to keep in mind that there is no easy way to directly measure values as such. In order to be able to measure their extent in a recommender system, we need to translate these values into public value metrics. However, not only the final results are essential for the PSMR. Additionally, it is highly important to establish transparency while working towards these results, that is, while defining the data, the algorithms, and the pipelines used in recommender systems. In our talk we will provide a deeper insight into how we approach this task with Model Cards and give an overview of some models, their Model Cards, and metrics that we are currently using for ZDFmediathek.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let me try to figure out how to categorize this research article. The title is &#34;Translating the Public Service Media Remit into Metrics and Algorithms,&#34; and the abstract talks about ZDF&#39;s experience with recommender systems in their media platform, ZDFmediathek. They&#39;re emphasizing public service values like diversity, fairness, and transparency while using metrics beyond traditional KPIs.
+
+First, I&#39;ll look at the key themes here. The main focus is on Public Service Media (PSM) and how their remit influences recommendation systems. So, PSM should definitely be a category. Since they&#39;re discussing recommender systems in depth, that&#39;s another primary category.
+
+The article mentions using metrics to measure success beyond basic KPIs like clicks and viewing minutes. They also talk about translating values into public value metrics, so Public Value Metrics is another important category. Transparency is highlighted as crucial, which relates to Trustworthy Recommenders—so that should be included too.
+
+Diversity and Fairness are part of the PSM remit, so those need their own categories. The abstract also discusses Model Cards and specific models used, indicating that they&#39;re focusing on Model Transparency and possibly Algorithmic Transparency.
+
+They&#39;re measuring not just business metrics but also social impact, which ties into Social Impact Metrics. Also, since they&#39;re applying these concepts in a real-world setting with ZDFmediathek, Real-World Applications is relevant here.
+
+Putting it all together, I think the categories should cover PSM, recommender systems, public value, transparency aspects, diversity, fairness, model-related topics, and real applications.
+&lt;/think&gt;
+
+Public Service Media, Recommender Systems, Public Value Metrics, Transparency, Model Cards, Diversity, Fairness, Algorithmic Transparency, Social Impact Metrics, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

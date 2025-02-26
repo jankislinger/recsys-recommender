@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Merlin HugeCTR: GPU-accelerated Recommender System Training and Inference
+Abstract:
+In this talk, we introduce Merlin HugeCTR. Merlin HugeCTR is an open source, GPU-accelerated integration framework for click-through rate estimation. It optimizes both training and inference, whilst enabling model training at scale with model-parallel embeddings and data-parallel neural networks. In particular, Merlin HugeCTR combines a high-performance GPU embedding cache with an hierarchical storage architecture, to realize low-latency retrieval of embeddings for online model inference tasks. In the MLPerf v1.0 DLRM model training benchmark, Merlin HugeCTR achieves a speedup of up to 24.6x on a single DGX A100 (8x A100) over PyTorch on 4x4-socket CPU nodes (4x4x28 cores). Merlin HugeCTR can also take advantage of multi-node environments to accelerate training even further. Since late 2021, Merlin HugeCTR additionally features a hierarchical parameter server (HPS) and supports deployment via the NVIDIA Triton server framework, to leverage the computational capabilities of GPUs for high-speed recommendation model inference. Using this HPS, Merlin HugeCTR users can achieve a 5~62x speedup (batch size dependent) for popular recommendation models over CPU baseline implementations, and dramatically reduce their end-to-end inference latency.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article about Merlin HugeCTR. Let me read through the title and abstract again to understand what it&#39;s about.
+
+The title mentions it&#39;s a GPU-accelerated Recommender System for training and inference. So right away, I know it&#39;s related to recommendation systems and uses GPUs for performance optimization.
+
+Looking at the abstract, they talk about click-through rate estimation, which is a common metric in recommendation and advertising systems. They mention optimizing both training and inference, so that suggests it&#39;s relevant to both model building and real-time predictions.
+
+The article also discusses scaling with model-parallel embeddings and data-parallel neural networks. This makes me think of scalability and distributed computing because they&#39;re handling large models across multiple GPUs or nodes.
+
+They use a high-performance GPU embedding cache with hierarchical storage, which is about efficient memory management and retrieval for embeddings—so that&#39;s related to techniques in recommendation systems.
+
+The MLPerf benchmark part shows it&#39;s performance-oriented, comparing against PyTorch on CPU. So performance benchmarks should be a category here.
+
+They mention the NVIDIA Triton server framework, indicating deployment aspects using specific infrastructure or tools. So deployment is another relevant category.
+
+The speedups mentioned are significant (up to 24.6x), which ties into performance optimization and efficiency in both training and inference phases.
+
+Real-world applications are touched upon since they&#39;re talking about deploying models via Triton, so real-world applications should be included.
+
+Also, the mention of model-parallel embeddings suggests it&#39;s handling very large datasets or models, hence big data is a relevant category.
+
+Putting this all together, I&#39;ll assign categories that cover recommendation systems, GPUs, click-through rate estimation, scalability, distributed computing, embeddings, performance benchmarks, deployment tools, real-world applications, and big data. That should make the article easily discoverable under these topics.
+&lt;/think&gt;
+
+GPU Acceleration, Recommender Systems, Click-Through Rate Estimation, Training Optimization, Inference Optimization, Model-Parallel Embeddings, Data-Parallel Neural Networks, High-Performance Computing, MLPerf Benchmark, Distributed Computing, Hierarchical Storage Architecture, Hierarchical Parameter Server (HPS), NVIDIA Triton Server, Real-World Applications, Big Data, Performance Benchmarks</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Efficient Similarity Computation for Collaborative Filtering in Dynamic Environments
+Abstract:
+The problem of computing all pairwise similarities in a large collection of vectors is a well-known and common data mining task. As the number and dimensionality of these vectors keeps increasing, however, currently existing approaches are often unable to meet the strict efficiency requirements imposed by the environments they need to perform in. Real-time neighbourhood-based collaborative filtering (CF) is one example of such an environment in which performance is critical. In this work, we present a novel algorithm for efficient and exact similarity computation between sparse, high-dimensional vectors. Our approach exploits the sparsity that is inherent to implicit feedback data-streams, entailing significant gains compared to other methods. Furthermore, as our model learns incrementally, it is naturally suited for dynamic real-time CF environments. We propose a MapReduce-inspired parallellisation procedure along with our method, and show how even more speed-up can be achieved. Additionally, in many real-world systems, many items are actually not recommendable at any given time, due to recency, stock, seasonality, or enforced business rules. We exploit this fact to further improve the computational efficiency of our approach. Experimental evaluation on both real-world and publicly available datasets shows that our approach scales up to millions of processed user-item interactions per second, and well advances the state-of-the-art. ,
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories. The goal is to make it easy for users to find the content they&#39;re interested in by assigning each article to at least 8-12 categories. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Efficient Similarity Computation for Collaborative Filtering in Dynamic Environments.&#34; That immediately tells me it&#39;s about collaborative filtering, which is a method used in recommendation systems. The focus here is on efficient similarity computation, so that relates to algorithms or computational methods.
+
+Looking at the abstract, it mentions computing pairwise similarities in large collections of vectors, which is a common data mining task. They talk about handling increasing numbers and dimensionality of these vectors, indicating this is relevant for high-dimensional data and scalability issues. The context is real-time neighborhood-based collaborative filtering, so that&#39;s another specific area within recommendation systems.
+
+The abstract also describes a novel algorithm for efficient exact similarity computation between sparse, high-dimensional vectors. This points to the use of sparsity in data, which is common in implicit feedback scenarios. So categories related to algorithms and their efficiency might include &#34;Algorithm Efficiency&#34; or &#34;High-Dimensional Data.&#34;
+
+Additionally, the method is suited for dynamic environments, so &#34;Dynamic Environments&#34; should be a category. They mention MapReduce-inspired parallelization, which relates to distributed computing or parallel processing techniques. That could fall under &#34;Distributed Computing&#34; or more specifically &#34;MapReduce.&#34;
+
+The article also discusses real-world applications where items might not always be recommendable due to factors like recency or stock. This suggests they&#39;re considering practical aspects of recommendation systems beyond just the algorithm, so categories like &#34;Real-World Applications&#34; or &#34;Practical Recommendations&#34; make sense.
+
+They&#39;ve conducted experimental evaluations on both real-world and public datasets, showing scalability up to millions of interactions per second. So this is about performance evaluation, which can be categorized under &#34;Performance Evaluation.&#34;
+
+Considering the user-centric design aspect, these categories should align with what users might search for. Users interested in recommendation systems would look for terms like &#34;Collaborative Filtering&#34; or &#34;Recommendation Systems.&#34; Those focused on efficiency and scalability would use keywords like &#34;Algorithm Efficiency,&#34; &#34;Scalability,&#34; or &#34;High-Dimensional Data.&#34;
+
+I also need to ensure that the categories are clear and descriptive, avoiding ones that might be too broad or too narrow. For example, instead of just &#34;Algorithms,&#34; using &#34;Efficient Similarity Computation&#34; gives more specificity about what kind of algorithms.
+
+Let me list out potential categories based on this analysis:
+
+1. Collaborative Filtering: Directly from the title.
+2. Recommendation Systems: The broader category where collaborative filtering is applied.
+3. Algorithm Efficiency: Focuses on the efficiency aspect discussed in the abstract.
+4. High-Dimensional Data: Refers to handling vectors with high dimensions.
+5. Dynamic Environments: The environment where the algorithm operates.
+6. Distributed Computing: Because of the MapReduce-inspired parallelization.
+7. Real-World Applications: They mention real-world systems and datasets.
+8. Performance Evaluation: They evaluated their approach experimentally.
+
+I think this covers the main points from the title and abstract. Each category is relevant to different aspects of the article, ensuring it&#39;s discoverable under multiple search terms. I could also consider adding &#34;Implicit Feedback&#34; since they mention exploiting sparsity inherent in implicit feedback data, but that might be more specific than necessary for categorization.
+
+Alternatively, if categories like &#34;Real-Time Processing&#34; or &#34;Parallel Algorithms&#34; are needed, those could be included as well. However, sticking to the most relevant and broader terms should suffice without making it too granular.
+&lt;/think&gt;
+
+Collaborative Filtering, Recommendation Systems, Algorithm Efficiency, High-Dimensional Data, Dynamic Environments, Distributed Computing, Real-World Applications, Performance Evaluation</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Efficient Similarity Computation for Collaborative Filtering in Dynamic Environments
+Abstract:
+The problem of computing all pairwise similarities in a large collection of vectors is a well-known and common data mining task. As the number and dimensionality of these vectors keeps increasing, however, currently existing approaches are often unable to meet the strict efficiency requirements imposed by the environments they need to perform in. Real-time neighbourhood-based collaborative filtering (CF) is one example of such an environment in which performance is critical. In this work, we present a novel algorithm for efficient and exact similarity computation between sparse, high-dimensional vectors. Our approach exploits the sparsity that is inherent to implicit feedback data-streams, entailing significant gains compared to other methods. Furthermore, as our model learns incrementally, it is naturally suited for dynamic real-time CF environments. We propose a MapReduce-inspired parallellisation procedure along with our method, and show how even more speed-up can be achieved. Additionally, in many real-world systems, many items are actually not recommendable at any given time, due to recency, stock, seasonality, or enforced business rules. We exploit this fact to further improve the computational efficiency of our approach. Experimental evaluation on both real-world and publicly available datasets shows that our approach scales up to millions of processed user-item interactions per second, and well advances the state-of-the-art. ,
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m looking at an article titled &#34;Efficient Similarity Computation for Collaborative Filtering in Dynamic Environments.&#34; The abstract discusses challenges with computing pairwise similarities in large datasets, especially in real-time neighborhood-based CF environments. They mention their novel algorithm that&#39;s efficient and exact, leveraging the sparsity of implicit feedback data streams.
+
+First, I should identify the family of algorithms involved here. It seems like they&#39;re talking about collaborative filtering, so &#34;Collaborative Filtering&#34; is definitely a primary category. Since it&#39;s about similarity computation, maybe also related to nearest neighbors or matrix factorization, but nearest neighbor might be more specific.
+
+Next, the domain is clearly collaborative filtering within recommendation systems, so &#34;Recommendation Systems&#34; and &#34;Collaborative Filtering&#34; are appropriate. The problem they&#39;re addressing is in dynamic environments, which suggests real-time processing, so &#34;Real-Time&#34; should be included.
+
+They mention scalability as a key aspect because their method scales up to millions of interactions. That makes me think of the &#34;Scalability&#34; category. They also talk about efficiency gains and performance improvements, so &#34;Efficiency&#34; is relevant.
+
+The abstract refers to MapReduce-inspired parallelization, which points towards distributed computing or big data techniques. So, I should include &#34;Distributed Computing.&#34; Also, their method&#39;s incremental learning aspect indicates online learning, making &#34;Online Learning&#34; a fitting category.
+
+They exploit sparsity in implicit feedback, so including &#34;Implicit Feedback&#34; makes sense. The focus on dynamic environments and real-time processing ties into the broader context of &#34;Dynamic Systems.&#34;
+
+Additionally, they talk about computational efficiency, which relates to algorithms designed for speed and performance, hence &#34;Efficient Algorithms.&#34; Lastly, since they evaluate using both real-world and public datasets, it touches on &#34;Evaluation Methods,&#34; so that&#39;s another category.
+
+I should make sure each category is relevant and covers the key points without being too vague. This list captures the main aspects: algorithm family, domain, efficiency, scalability, methods used, and evaluation.
+&lt;/think&gt;
+
+Efficient Similarity Computation, Collaborative Filtering, Real-Time Processing, Scalability, Distributed Computing, Implicit Feedback, Dynamic Environments, MapReduce, Online Learning, Evaluation Methods</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

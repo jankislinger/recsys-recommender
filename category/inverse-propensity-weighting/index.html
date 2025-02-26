@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-metrics/">Evaluation Metrics</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Position Awareness Modeling with Knowledge Distillation for CTR Prediction (2022)</h3>
+    <p><strong>Authors:</strong> Yuejiang Li, Fei Teng, Zhangang Lin, Jingping Shao, Congcong Liu, Changping Peng, Jian Zhu, Xiwei Zhao</p>
+    <p>Click-through rate (CTR) Prediction is of great importance in real-world online ads systems. One challenge for the CTR prediction task is to capture the real interest of users from their clicked items, which is inherently influenced by presented positions of items, i.e., more front positions tend to obtain higher CTR values. Therefore, It is crucial to make CTR models aware of the exposed position of the items. A popular line of existing works focuses on explicitly model exposed position by result randomization which is expensive and inefficient, or by inverse propensity weighting (IPW) which relies heavily on the quality of the propensity estimation. Another common solution is modeling position as features during offline training and simply adopting fixed value or dropout tricks when serving. However, training-inference inconsistency can lead to sub-optimal performance. This work proposes a simple yet efficient knowledge distillation framework to model the impact of exposed position and leverage position information to improve CTR prediction. We demonstrate the performance of our proposed method on a real-world production dataset and online A/B tests, achieving significant improvements over competing baseline models. The proposed method has been deployed in the real world online ads systems of JD, serving main traffic of hundreds of millions of active users.</p>
+    <p><strong>Categories:</strong> Click-Through Rate (CTR) Prediction, Online Advertising, Knowledge Distillation, Position Awareness, Inverse Propensity Weighting, Training-Inference Consistency, Real-World Applications, A/B Test, Recommendation Systems, Practical Deployment, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/795/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Deconfounding User Satisfaction Estimation from Response Rate Bias (2020)</h3>
+    <p><strong>Authors:</strong> Madeleine Traverse, Ed Chi, Trevor Potter, Konstantina Christakopoulou, Daniel Li, Chris Haulk, Minmin Chen, Emma Marriott</p>
+    <p>Improving user satisfaction is at the forefront of industrial recommender systems. While significant progress has been made by utilizing logged implicit data of user-item interactions (i.e., clicks, dwell/watch time, and other user engagement signals), there has been a recent surge of interest in measuring and modeling user satisfaction, as provided by orthogonal data sources. Such data sources typically originate from responses to user satisfaction surveys, which explicitly ask users to rate their experience with the system and/or specific items they have consumed in the recent past. This data can be valuable for measuring and modeling the degree to which a user has had a satisfactory experience on the recommendation platform, since what users do (engagement) does not always align with what users say they want (satisfaction as measured by surveys).<br>We focus on a large-scale industrial system trained on user survey responses to predict user satisfaction. The predictions of the satisfaction model for each user-item pair, combined with the predictions of the other models (e.g., engagement-focused ones), are fed into the ranking component of a real-world recommender system in deciding items to present to the user. It is therefore imperative that the satisfaction model does an equally good job on imputing user satisfaction across slices of users and items, as it would directly impact which items a user is exposed to. However, the data used for training satisfaction models is biased in that users are more likely to respond to a survey when they will respond that they are more satisfied. When the satisfaction survey responses in slices of data with high response rate follow a different distribution than those with low response rate, response rate becomes a confounding factor for user satisfaction estimation.<br>We find positive correlation between response rate and ratings in a large-scale survey dataset collected in our case study. To address this inherent response rate bias in the satisfaction data, we propose an inverse propensity weighting approach within a multi-task learning framework. We extend a simple feed-forward neural network architecture predicting user satisfaction to a shared-bottom multi-task learning architecture with two tasks: the user satisfaction estimation task, and the response rate estimation task. We concurrently train these two tasks, and use the inverse of the predictions of the response rate task as loss weights for the satisfaction task to address the response rate bias. We showcase that by doing this, (i) we can accurately model whether a user will respond to a survey, (ii) we improve the user satisfaction estimation error for the data slices with lower response rate while not hurting slices with higher response rate, and (iii) we demonstrate in live A/B experiments that applying the resulting satisfaction predictions to rank recommendations translates to higher user satisfaction.</p>
+    <p><strong>Categories:</strong> User Satisfaction, Bias Correction, Multi-Task Learning, Inverse Propensity Weighting, Recommendation Systems, Survey Data, A/B Testing, Neural Networks, Response Rate Analysis, Industrial Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/570/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

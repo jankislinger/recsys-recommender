@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Large-scale Recommendation for Portfolio Optimization
+Abstract:
+Individual investors are now massively using online brokers to trade stocks with convenient interfaces and low fees, albeit losing the advice and personalization traditionally provided by full-service brokers. We frame the problem faced by online brokers of replicating this level of service in a low-cost and automated manner for a very large number of users. Because of the care required in recommending financial products, we focus on a risk-management approach tailored to each user’s portfolio and risk profile. We show that our hybrid approach, based on Modern Portfolio Theory and Collaborative Filtering, provides a sound and effective solution. The method is applicable to stocks as well as other financial assets, and can be easily combined with various financial forecasting models. We validate our proposal by comparing it with several baselines in a domain expert-based study.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article into multiple relevant categories based on its title and abstract. Let&#39;s start by reading through the provided information carefully.
+
+The title is &#34;Large-scale Recommendation for Portfolio Optimization.&#34; So, immediately, I note that it&#39;s about recommendation systems, specifically in a financial context related to portfolio optimization. The abstract mentions online brokers, individual investors, risk management, Modern Portfolio Theory, Collaborative Filtering, and validation through domain expert studies.
+
+First, I&#39;ll think about the family of algorithms involved. The article uses Collaborative Filtering, which is a common recommendation technique. It also references Modern Portfolio Theory, so that&#39;s another algorithm family point. Since it combines these approaches, Hybrid Approaches might be an appropriate category here.
+
+Next, considering the domain of the problem, the focus is clearly on Finance and Investment. The target users are individual investors using online brokers, which falls under Personalized Recommendations because each user&#39;s portfolio and risk profile are considered individually.
+
+The abstract mentions that this approach can be applied to various financial assets beyond just stocks, so Financial Assets as a category makes sense. Risk Management is another key aspect since the recommendations are tailored based on risk profiles.
+
+In terms of evaluation, the article validates its proposal through comparisons with baselines in a domain expert-based study. This points towards Domain Expert Validation as a relevant category.
+
+Looking at other aspects, the recommendation system&#39;s application is automated and low-cost for online brokers, which could be categorized under Automated Services. The approach is scalable given it&#39;s meant for a very large number of users, so Scalability is another important category.
+
+The problem addressed here is about replicating personalized advice traditionally provided by full-service brokers but in an automated way. This relates to Personalized Advice and might also tie into aspects like User-Centered Design because the recommendations are tailored to individual user profiles.
+
+Additionally, since it&#39;s a recommendation system applied specifically to portfolio optimization, categories like Portfolio Optimization or Investment Recommendations would be relevant. The abstract mentions that the method can be combined with various financial forecasting models, indicating integration potential, but I&#39;m not sure if there&#39;s a specific category for that yet.
+
+I also need to consider whether there are any real-world applications mentioned. The article does discuss validation through studies and mentions applicability in online brokers, suggesting Real-World Applications as another category.
+
+So, compiling all these thoughts, the relevant categories would include:
+
+1. **Collaborative Filtering** - Directly mentioned as part of their approach.
+2. **Modern Portfolio Theory** - Another key algorithm used.
+3. **Hybrid Approaches** - Combining different methods for recommendations.
+4. **Finance** - The domain where this recommendation system operates.
+5. **Investment** - Specific to investment decisions and portfolio management.
+6. **Risk Management** - Tailoring recommendations based on risk profiles.
+7. **Personalized Recommendations** - Each user gets a tailored portfolio suggestion.
+8. **Financial Assets** - Applicable beyond just stocks.
+9. **Portfolio Optimization** - The goal of the recommendation system.
+10. **Domain Expert Validation** - How they validated their approach.
+11. **Scalability** - Designed for large numbers of users.
+12. **Automated Services** - Providing automated advice akin to full-service brokers.
+
+I think these categories cover both the technical aspects, the domain focus, and the validation methods used in the article. They should help users navigate and discover this research effectively based on different interests or search queries they might have.
+&lt;/think&gt;
+
+Collaborative Filtering, Modern Portfolio Theory, Hybrid Approaches, Finance, Investment, Risk Management, Personalized Recommendations, Financial Assets, Portfolio Optimization, Domain Expert Validation, Scalability, Automated Services</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

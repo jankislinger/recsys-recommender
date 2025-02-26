@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: SPARE: Shortest Path Global Item Relations for Efficient Session-based Recommendation
+Abstract:
+Session-based recommendation aims to predict the next item based on a set of anonymous sessions. Capturing user intent from a short interaction sequence imposes a variety of challenges since no user profiles are available and interaction data is naturally sparse. Recent approaches relying on graph neural networks (GNNs) for session-based recommendation use global item relations to explore collaborative information from different sessions. These methods capture the topological structure of the graph and rely on multi-hop information aggregation in GNNs to exchange information along edges. Consequently, graph-based models suffer from noisy item relations in the training data and introduce high complexity for large item catalogs. We propose to explicitly model the multi-hop information aggregation mechanism over multiple layers via shortest-path edges based on knowledge from the sequential recommendation domain. Our approach does not require multiple layers to exchange information and ignores unreliable item-item relations. Furthermore, to address inherent data sparsity, we are the first to apply supervised contrastive learning by mining data-driven positive and hard negative item samples from the training data. Extensive experiments on three different datasets show that the proposed approach outperforms almost all of the state-of-the-art methods.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;SPARE: Shortest Path Global Item Relations for Efficient Session-based Recommendation.&#34; Let me read through the abstract carefully.
+
+The abstract starts by explaining that session-based recommendation aims to predict the next item using anonymous sessions. They mention challenges like sparse interaction data and no user profiles. That makes me think the main domain here isRecommendation Systems, specifically Session-Based Recommendations since that&#39;s what they&#39;re focusing on.
+
+They talk about recent approaches using graph neural networks (GNNs) for session-based recommendation. So Graph Neural Networks should be a category. They discuss global item relations and how GNNs use multi-hop information aggregation. However, the problem is noisy item relations leading to high complexity. Therefore, another aspect could beHandling Sparse Data because they&#39;re dealing with sparse interaction data.
+
+The proposed method, SPARE, models multi-hop information via shortest-path edges from sequential recommendation knowledge. This suggests that Sequential Recommendation is a relevant category since it&#39;s building on that domain. They also mention using supervised contrastive learning to mine positive and hard negative samples for data sparsity, which falls underContrastive Learning.
+
+Additionally, the approach doesn&#39;t require multiple layers and ignores unreliable item-item relations, which might fall underEfficient Algorithms or maybe evenMulti-Layer Perceptron (if it&#39;s about layer structures), but since they&#39;re focusing on shortest paths and efficiency, Efficient Algorithms seems more fitting.
+
+They mention extensive experiments showing their method outperforms state-of-the-art methods. So Performance Evaluation is a category here. The use of shortest path edges might relate toGraph Theory as well.
+
+Putting this all together, I should list the categories. Let me see: the article discusses session-based recommendations, which falls underRecommendation Systems and specificallySession-Based Recommendations. They use graph neural networks, so that&#39;s one category. Handling sparse data is another because they address sparsity in interaction sequences. Sequential recommendation is a key part of their approach. They apply contrastive learning for training, so that should be included. The method is efficient, soEfficient Algorithms makes sense. Their experiments show performance gains, hencePerformance Evaluation. And since they use shortest paths and graph structures,Graph Theory is relevant.
+
+I need to ensure I cover all the aspects mentioned in the abstract without overcomplicating. Let me double-check if there are other points: They don&#39;t require multiple layers, which ties intoEfficient Algorithms. The focus on shortest paths and global item relations also relates toGraph Neural Networks andGraph Theory. Applying contrastive learning is a unique approach here for data sparsity.
+
+I think that&#39;s all the main categories covered.
+&lt;/think&gt;
+
+Recommendation Systems, Session-Based Recommendations, Graph Neural Networks, Handling Sparse Data, Sequential Recommendation, Contrastive Learning, Efficient Algorithms, Performance Evaluation, Graph Theory</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: SPARE: Shortest Path Global Item Relations for Efficient Session-based Recommendation
+Abstract:
+Session-based recommendation aims to predict the next item based on a set of anonymous sessions. Capturing user intent from a short interaction sequence imposes a variety of challenges since no user profiles are available and interaction data is naturally sparse. Recent approaches relying on graph neural networks (GNNs) for session-based recommendation use global item relations to explore collaborative information from different sessions. These methods capture the topological structure of the graph and rely on multi-hop information aggregation in GNNs to exchange information along edges. Consequently, graph-based models suffer from noisy item relations in the training data and introduce high complexity for large item catalogs. We propose to explicitly model the multi-hop information aggregation mechanism over multiple layers via shortest-path edges based on knowledge from the sequential recommendation domain. Our approach does not require multiple layers to exchange information and ignores unreliable item-item relations. Furthermore, to address inherent data sparsity, we are the first to apply supervised contrastive learning by mining data-driven positive and hard negative item samples from the training data. Extensive experiments on three different datasets show that the proposed approach outperforms almost all of the state-of-the-art methods.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about session-based recommendation systems. The title mentions SPARE using shortest path global item relations for efficient recommendations. Let me look at the abstract.
+
+The article talks about session-based recommendation where the next item is predicted based on anonymous sessions. It&#39;s challenging because there are no user profiles and data is sparse. They mention that recent methods use graph neural networks (GNNs) to capture global item relations, but these face issues with noisy data and high complexity for large item catalogs.
+
+The proposed method, SPARE, uses shortest-path edges based on knowledge from sequential recommendation. It avoids multiple layers in GNNs by explicitly modeling multi-hop information through these paths. They also ignore unreliable item-item relations. To tackle sparsity, they use supervised contrastive learning with positive and negative samples.
+
+Testing on three datasets shows better performance than most state-of-the-art methods.
+
+So for categories:
+
+1. The article is about session-based recommendation, so that&#39;s a key category.
+2. It uses graph neural networks (GNNs), which is another main point.
+3. They talk about item relations and collaborative filtering, so those should be included.
+4. Shortest path algorithms are used here to model interactions, so that&#39;s relevant.
+5. The method deals with data sparsity, so that&#39;s a category.
+6. Supervised contrastive learning is part of their approach, so that&#39;s another one.
+7. Multi-hop information aggregation is discussed in the context of GNNs and SPARE, so this fits.
+8. Scalability might be an issue given large item catalogs, so scalability is relevant.
+
+I think these cover both the specific techniques used (like GNNs, contrastive learning) and the broader themes (session-based recommendation, data sparsity). Each category should help users find related articles easily.
+&lt;/think&gt;
+
+Session-Based Recommendation, Graph Neural Networks, Item Relations, Shortest Path Algorithm, Data Sparsity, Supervised Contrastive Learning, Multi-Hop Information Aggregation, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

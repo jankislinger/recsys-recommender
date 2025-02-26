@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Top-N Recommendation for Shared Accounts
+Abstract:
+Standard collaborative filtering recommender systems assume that every account in the training data represents a single user. However, multiple users often share a single account. A typical example is a single shopping account for the whole family. Traditional recommender systems fail in this situation. If contextual information is available, context aware recommender systems are the state-of-the-art solution. Yet, often no contextual information is available. Therefore, we introduce the challenge of recommending to shared accounts in the absence of contextual information. We propose a solution to this challenge for all cases in which the reference recommender system is an item-based top-N collaborative filtering recommender system, generating recommendations based on binary, positive-only feedback. We experimentally show the advantages of our proposed solution for tackling the problems that arise from the existence of shared accounts on multiple datasets.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into relevant categories as per the given guidelines. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Top-N Recommendation for Shared Accounts.&#34; From this, I gather it&#39;s about recommendation systems, specifically dealing with situations where a single account is shared among multiple users.
+
+Looking at the abstract: It mentions collaborative filtering recommender systems that typically assume each account represents one user. However, in reality, accounts can be shared (like a family shopping account). Traditional systems don&#39;t handle this well. When contextual info isn&#39;t available, they propose a solution for item-based top-N collaborative filtering with binary, positive-only feedback.
+
+They conducted experiments on multiple datasets to show their solution&#39;s advantages.
+
+Now, I&#39;ll break down the elements to assign categories:
+
+1. **Family of algorithm**: The article talks about collaborative filtering, specifically an item-based approach. So that&#39;s one category.
+2. **Domain of problem**: Since it&#39;s about accounts shared among users, maybe a domain like &#34;Household&#34; or more broadly &#34;User Accounts.&#34; But &#34;Households&#34; seems specific enough as the abstract mentions families.
+3. **Recommendation space specifics**: It&#39;s dealing with &#34;Shared Accounts,&#34; which is a specific scenario in recommendation systems.
+4. **Evaluation aspects**: They mention experimental results on multiple datasets, so &#34;Empirical Evaluation.&#34;
+5. **Real-world applications**: The problem arises in real scenarios like family accounts, and they tested their solution, but it doesn&#39;t specify if they did A/B tests or user surveys. So maybe not here.
+6. **Algorithm type**: It&#39;s a collaborative filtering approach, specifically item-based.
+7. **Data considerations**: They use binary, positive-only feedback, so &#34;Binary Feedback&#34; is relevant.
+8. **Challenges addressed**: The main challenge is the &#34;Cold Start&#34; problem because when accounts are shared, there might be less clear user data to start with recommendations.
+
+Wait, does it address cold start? Let me check again. The abstract mentions traditional systems fail in this situation but doesn&#39;t explicitly say it&#39;s about new users or items (cold start). Maybe that&#39;s a stretch. Alternatively, &#34;Multi-user&#34; could be another category since the account is shared among multiple users.
+
+So categories so far: Collaborative Filtering, Item-Based, Shared Accounts, Household, Binary Feedback, Empirical Evaluation, Top-N Recommendations, Multi-User.
+
+Wait, let me think again:
+
+1. **Collaborative Filtering**: Definitely.
+2. **Item-Based**: Since it&#39;s item-based collaborative filtering.
+3. **Shared Accounts**: Specific scenario addressed.
+4. **Household**: As an example of shared accounts usage.
+5. **Binary Feedback**: They use binary data (positive-only feedback).
+6. **Empirical Evaluation**: They ran experiments on datasets.
+7. **Top-N Recommendations**: The focus is on Top-N recs.
+8. **Multi-User**: Since the account serves multiple users.
+
+Alternatively, maybe &#34;Account Sharing&#34; as another category but that&#39;s similar to Shared Accounts. I think 8 categories are sufficient as per guidelines (they can be between 8-12). But let me check if any other aspects fit:
+
+Is there anything about diversity or beyond accuracy? The abstract doesn&#39;t mention those. Also, no real-world application specifics like A/B tests or surveys.
+
+So final categories: Collaborative Filtering, Item-Based, Shared Accounts, Household, Binary Feedback, Empirical Evaluation, Top-N Recommendations, Multi-User.
+&lt;/think&gt;
+
+Collaborative Filtering, Item-Based, Shared Accounts, Household, Binary Feedback, Empirical Evaluation, Top-N Recommendations, Multi-User</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Top-N Recommendation for Shared Accounts
+Abstract:
+Standard collaborative filtering recommender systems assume that every account in the training data represents a single user. However, multiple users often share a single account. A typical example is a single shopping account for the whole family. Traditional recommender systems fail in this situation. If contextual information is available, context aware recommender systems are the state-of-the-art solution. Yet, often no contextual information is available. Therefore, we introduce the challenge of recommending to shared accounts in the absence of contextual information. We propose a solution to this challenge for all cases in which the reference recommender system is an item-based top-N collaborative filtering recommender system, generating recommendations based on binary, positive-only feedback. We experimentally show the advantages of our proposed solution for tackling the problems that arise from the existence of shared accounts on multiple datasets.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article titled &#34;Top-N Recommendation for Shared Accounts&#34;. The abstract talks about collaborative filtering systems failing when multiple users share an account, like a family using one shopping account. They mention traditional recommender systems struggling in such cases and propose a solution without contextual information.
+
+First, the main topic is recommendation systems, so that&#39;s definitely relevant. The problem involves shared accounts, which implies it&#39;s related to multi-user environments or group recommendations. Collaborative filtering is mentioned as the method they&#39;re focusing on, specifically top-N recommendations with binary feedback. They also talk about improving recommendations in scenarios without contextual info, so context-awareness might be a category.
+
+Looking at the example categories provided: Family of algorithm (like collaborative filtering), Domain (maybe E-commerce?), Specific recommendation aspects (like shared accounts or cold start?), Evaluation metrics (they mention experimental results but not specific metrics), and real-world applications like A/B testing.
+
+So I&#39;ll break it down:
+
+1. **Recommendation Systems**: Core category.
+2. **Collaborative Filtering**: As the algorithm used.
+3. **Multi-User Environment**: Because of shared accounts.
+4. **Shared Accounts**: Directly related to the problem.
+5. **Context-Aware Recommendations**: Though they say context isn&#39;t available, it&#39;s still relevant because their solution addresses this scenario.
+6. **Top-N Recommendations**: Since that&#39;s what they&#39;re focusing on.
+7. **Binary Feedback**: As the type of data used.
+8. **E-commerce**: The example given is a family shopping account, so likely applicable here.
+
+I think these cover both the specific issues (shared accounts) and broader categories like collaborative filtering and e-commerce applications. It ensures discoverability without overstuffing any single category.
+&lt;/think&gt;
+
+Recommendation Systems, Collaborative Filtering, Multi-User Environment, Shared Accounts, Context-Aware Recommendations, Top-N Recommendations, Binary Feedback, E-commerce</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

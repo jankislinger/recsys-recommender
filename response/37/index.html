@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Clinical Online Recommendation with Subgroup Rank Feedback
+Abstract:
+Many real applications in experimental design need to make decisions online. Each decision leads to a stochastic reward with initially unknown distribution. New decisions are made based on the observations of previous rewards. To maximize the total reward, one needs to solve the tradeoff between exploring different strategies and exploiting currently optimal strategies. This kind of tradeoff problems can be formalized as Multi-armed bandit problem. We recommend strategies in series and generate new recommendations based on noisy rewards of previous strategies. When the reward for a strategy is difficult to quantify, classical bandit algorithms are no longer optimal. This paper, studies the Multi-armed bandit problem with feedback given as a stochastic rank list instead of quantified reward value. We propose an algorithm for this new problem and show its optimality. A real application of this algorithm on clinical treatment is helping paralyzed patient to regain the ability to stand on their own feet.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on the given guidelines. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Clinical Online Recommendation with Subgroup Rank Feedback.&#34; So it&#39;s about clinical recommendations done online, using some form of feedback that involves subgroup rankings.
+
+Looking at the abstract, it discusses Multi-armed bandit problems, which are a classic area in machine learning for decision-making under uncertainty. The paper talks about making decisions online where each decision leads to a stochastic reward with an unknown distribution. They mention the trade-off between exploration and exploitation, which is central to bandit algorithms.
+
+The feedback here isn&#39;t just a simple reward value but a stochastic rank list. So instead of getting explicit numerical rewards, they get rankings or ordered feedback. This is different from traditional bandit setups where each action gives a clear numeric reward. The paper proposes an algorithm for this new problem and proves its optimality.
+
+There&#39;s also a real-world application mentioned: using the algorithm in clinical treatments to help paralyzed patients regain their ability to stand. That&#39;s a specific domain, so healthcare or medicine is definitely relevant here.
+
+Now, I need to map this into categories based on the guidelines provided. The example categories include things like family of algorithms (e.g., Multi-armed Bandits), domains (like Healthcare), specifics in recommendation space (like subgroup feedback), evaluation aspects, real-world applications, etc.
+
+Starting with the algorithm family: it&#39;s clearly a Multi-Armed Bandit problem because that&#39;s central to the abstract. So &#34;Multi-Armed Bandits&#34; is one category.
+
+Next, looking at the domain of the problem, since the application is in clinical treatment, &#34;Healthcare&#34; is appropriate. Also, because they&#39;re doing recommendations online, maybe &#34;Clinical Recommendations&#34; could be another category if it fits.
+
+The feedback mechanism here isn&#39;t numerical but a rank list, so &#34;Subgroup Rank Feedback&#34; seems fitting. This is something specific within the recommendation space as mentioned in the examples.
+
+Evaluation aspects: since they propose an algorithm and show its optimality, this touches on &#34;Algorithm Design.&#34; It&#39;s about creating a new approach rather than just applying existing ones.
+
+The application aspect is real-world, so categories like &#34;Real-World Application&#34; or &#34;Clinical Treatment&#34; might be useful. The abstract mentions helping paralyzed patients, which is a specific area within healthcare, so perhaps &#34;Medical Rehabilitation&#34; as another category.
+
+Looking at the problem structure, it&#39;s about making decisions online based on previous feedback, so &#34;Online Decision-Making&#34; would capture that aspect.
+
+The trade-off between exploration and exploitation is a core concept in bandit problems, so that could be its own category: &#34;Exploration vs Exploitation.&#34;
+
+They mention using noisy rewards to generate new recommendations, which relates to the recommendation system&#39;s adaptability. So &#34;Recommendation Adaptation&#34; might be another category here.
+
+Since the feedback isn&#39;t quantitative but rather rankings, it falls under a different type of reward structure. So &#34;Rank-Based Feedback&#34; is appropriate.
+
+Putting this all together, I should list these categories in a way that each captures an important aspect of the paper without overlapping too much. Let me make sure each one is distinct and covers different facets: algorithm family, domain, feedback mechanism, application area, design aspects, etc.
+
+I think &#34;Multi-Armed Bandits&#34; is essential. Then, since it&#39;s applied in a clinical setting, both &#34;Healthcare&#34; and &#34;Clinical Treatment&#34; are relevant. The feedback type is &#34;Subgroup Rank Feedback,&#34; which is specific. They&#39;re doing online recommendations, so perhaps &#34;Online Recommendations.&#34; The algorithm they designed is optimal, so &#34;Algorithm Design.&#34; The real-world application is in healthcare, so &#34;Real-World Application&#34; is good. It&#39;s about helping patients regain ability, so &#34;Medical Rehabilitation.&#34; The problem involves decision-making under uncertainty, hence &#34;Uncertainty Management.&#34; They focus on subgroup feedback, which could also be called &#34;Subgroup Analysis.&#34;
+
+Wait, I might have some overlaps here. For example, both &#34;Clinical Treatment&#34; and &#34;Healthcare&#34; are related but slightly different. Also, should &#34;Recommendation Systems&#34; be a broader category? Since the title mentions recommendation, that&#39;s important.
+
+Let me revise: Start with the algorithm, then the domain, specific feedback type, application, design, etc.
+
+So categories like:
+
+- Multi-Armed Bandits (algorithm family)
+- Healthcare (domain)
+- Clinical Treatment (specific application within healthcare)
+- Subgroup Rank Feedback (feedback mechanism)
+- Online Recommendations (type of recommendation system)
+- Real-World Application (as they have a real use case)
+- Algorithm Design (since they propose an algorithm)
+- Medical Rehabilitation (the specific treatment area)
+- Exploration vs Exploitation (core concept addressed)
+- Rank-Based Feedback (another way to describe the feedback mechanism)
+
+I need to ensure each category is clear and distinct. Maybe &#34;Clinical Recommendations&#34; instead of separate healthcare and clinical treatment? Or perhaps keep them as they are for specificity.
+
+Alternatively, considering the examples provided, categories like &#34;Recommendation Systems,&#34; &#34;Multi-Armed Bandits,&#34; &#34;Healthcare,&#34; &#34;Clinical Treatment,&#34; &#34;Subgroup Rank Feedback,&#34; &#34;Real-World Application,&#34; &#34;Algorithm Design,&#34; &#34;Medical Rehabilitation,&#34; &#34;Exploration vs Exploitation,&#34; and &#34;Rank-Based Feedback&#34; could be a comprehensive list.
+
+But the user mentioned assigning 8-12 categories, so I can pick the most relevant ones without redundancy. Let me choose:
+
+1. Multi-Armed Bandits
+2. Healthcare
+3. Clinical Treatment
+4. Subgroup Rank Feedback
+5. Recommendation Systems
+6. Real-World Application
+7. Algorithm Design
+8. Medical Rehabilitation
+9. Exploration vs Exploitation
+10. Online Decision-Making
+
+That&#39;s 10 categories, which fits the 8-12 guideline. Each captures a distinct aspect of the paper without too much overlap.
+&lt;/think&gt;
+
+Multi-Armed Bandits, Healthcare, Clinical Treatment, Subgroup Rank Feedback, Recommendation Systems, Real-World Application, Algorithm Design, Medical Rehabilitation, Exploration vs Exploitation, Online Decision-Making</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Clinical Online Recommendation with Subgroup Rank Feedback
+Abstract:
+Many real applications in experimental design need to make decisions online. Each decision leads to a stochastic reward with initially unknown distribution. New decisions are made based on the observations of previous rewards. To maximize the total reward, one needs to solve the tradeoff between exploring different strategies and exploiting currently optimal strategies. This kind of tradeoff problems can be formalized as Multi-armed bandit problem. We recommend strategies in series and generate new recommendations based on noisy rewards of previous strategies. When the reward for a strategy is difficult to quantify, classical bandit algorithms are no longer optimal. This paper, studies the Multi-armed bandit problem with feedback given as a stochastic rank list instead of quantified reward value. We propose an algorithm for this new problem and show its optimality. A real application of this algorithm on clinical treatment is helping paralyzed patient to regain the ability to stand on their own feet.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m looking at this research article titled &#34;Clinical Online Recommendation with Subgroup Rank Feedback.&#34; The abstract discusses online decision-making in experimental designs where each decision leads to a stochastic reward. It mentions the tradeoff between exploration and exploitation, which is classic in reinforcement learning.
+
+The paper specifically talks about the Multi-Armed Bandit problem but introduces a twist: instead of quantitative rewards, it uses subgroup rank feedback. This means that rather than getting a specific numerical value for each action (like a click or conversion), the system receives a ranking of how well different options performed relative to each other.
+
+The proposed algorithm is designed to handle this type of feedback and is shown to be optimal. The real-world application mentioned is in clinical treatment, where it&#39;s helping paralyzed patients regain the ability to stand on their own feet. That&#39;s an impressive use case in the healthcare domain.
+
+So, categorizing this article: It definitely falls under Multi-Armed Bandits since that&#39;s the specific algorithm being studied. The feedback mechanism here isn&#39;t traditional; instead of numerical rewards, it&#39;s based on rankings, so subgroup rank feedback is a key category. 
+
+The application in clinical settings means the healthcare domain is another relevant category. Additionally, the paper deals with online recommendations, which ties into Online Recommendations as a broader category.
+
+Since the study focuses on optimizing decisions and balancing exploration vs exploitation, that should be included under Exploration-Exploitation Tradeoff. Lastly, the real-world implementation falls under Real World Applications to highlight its practical use.
+
+I think these categories cover the main aspects of the article without overcomplicating things.
+&lt;/think&gt;
+
+Multi-Armed Bandits, Subgroup Rank Feedback, Healthcare, Online Recommendations, Exploration-Exploitation Tradeoff, Real World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

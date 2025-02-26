@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Masked and Swapped Sequence Modeling for Next Novel Basket Recommendation in Grocery Shopping
+Abstract:
+Next basket recommendation (NBR) is the task of predicting the next set of items based on a sequence of already purchased baskets. It is a recommendation task that has been widely studied, especially in the context of grocery shopping. In NBR, it is useful to distinguish between repeat items, i.e., items that a user has consumed before, and explore items, i.e., items that a user has not consumed before. Most NBR work either ignores this distinction or focuses on repeat items. We formulate the next novel basket recommendation (NNBR) task, i.e., the task of recommending a basket that only consists of novel items, which is valuable for both real-world application and NBR evaluation. We evaluate how existing NBR methods perform on the NNBR task and find that, so far, limited progress has been made w.r.t. the NNBR task. To address the NNBR task, we propose a simple bi-directional transformer basket recommendation model (BTBR), which is focused on directly modeling item-to-item correlations within and across baskets instead of learning complex basket representations. To properly train BTBR, we propose and investigate several masking strategies and training objectives: (i) item-level random masking, (ii) item-level select masking, (iii) basket-level all masking, (iv) item basket-level explore masking, and (v) joint masking. In addition, an item-basket swapping strategy is proposed to enrich the item interactions within the same baskets. We conduct extensive experiments on three open datasets with various characteristics. The results demonstrate the effectiveness of BTBR and our masking and swapping strategies for the NNBR task. BTBR with a properly selected masking and swapping strategy can substantially improve the NNBR performance.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I&#39;m trying to categorize this research article about next novel basket recommendation in grocery shopping. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;Masked and Swapped Sequence Modeling for Next Novel Basket Recommendation in Grocery Shopping.&#34; Okay, so it&#39;s about recommending the next set of items a user might buy, specifically focusing on new or novel items they haven&#39;t purchased before. That already tells me this falls under recommendation systems, specifically within grocery shopping.
+
+Looking at the abstract: The task here is called Next Novel Basket Recommendation (NNBR), which means predicting a basket that only has items the user hasn&#39;t bought yet. This is different from regular NBR where repeat items are also considered. The authors propose a model called BTBR, using transformers and various masking strategies to train it effectively.
+
+So, I need to assign multiple categories based on this. Let me list out what comes to mind:
+
+1. **Recommendation Systems**: Obviously, since the paper is about recommendations.
+2. **Grocery Shopping**: It&#39;s specifically applied in this domain.
+3. **Basket Recommendation**: Focusing on sets of items rather than single items.
+4. **Novelty**: Since it&#39;s about recommending new items.
+5. **Transformer Models**: They used a bi-directional transformer model.
+6. **Masking Strategies**: A key part of their approach for training.
+7. **Item-Item Correlations**: The model focuses on how items relate within and across baskets.
+8. **Real-World Applications**: They mention it&#39;s valuable for real-world use, so this category applies.
+9. **Evaluation Methods**: They evaluated existing methods and introduced a new task, NNBR.
+10. **Sequence Modeling**: Because they&#39;re dealing with sequences of purchased baskets.
+11. **Implicit Feedback**: Since the data is based on past purchases without explicit ratings.
+
+Wait, let me make sure I&#39;m not missing anything. The paper also talks about item-basket swapping to enrich interactions, which relates to how they train the model but maybe that&#39;s already covered under masking strategies or transformer models.
+
+Also, considering user-centric design, categories like Grocery Shopping and Recommendation Systems are broad enough but specific enough for users interested in those areas. They&#39;ve mentioned A/B testing isn&#39;t directly discussed here, so maybe not including Real-World Applications is fine since they do talk about real-world value but perhaps didn&#39;t conduct an actual test.
+
+Is there a category for the evaluation aspect? Yes, Evaluation Methods fits because they evaluated existing methods and introduced a new task. 
+
+I think that covers all the main points. Let me list them again to ensure I have at least 8-12 categories as per guidelines.
+&lt;/think&gt;
+
+Recommendation Systems, Grocery Shopping, Basket Recommendation, Novelty, Transformer Models, Masking Strategies, Item-Item Correlations, Real-World Applications, Evaluation Methods, Sequence Modeling, Implicit Feedback</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

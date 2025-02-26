@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: SemRevRec: A Recommender System based on User Reviews and Linked Data
+Abstract:
+Traditionally, recommender systems exploit user ratings to infer preferences. However, the growing popularity of social platforms has encouraged users to write textual reviews about liked items. These reviews represent a valuable source of non-trivial information that could improve users’ decision processes. In this paper we propose a novel recommendation approach based on the semantic annotation of entities mentioned in user reviews and on the knowledge available in the Web of Data. We compared our recommender system with two baseline algorithms and a state-of-the-art Linked Data based approach. Our system provided more diverse recommendations with respect to the other techniques considered, while obtaining a better accuracy than the Linked Data based method.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;SemRevRec: A Recommender System based on User Reviews and Linked Data.&#34; So it&#39;s about recommendation systems that use user reviews and linked data. 
+
+Looking at the abstract, they mention that traditional recommenders use user ratings but now users write textual reviews. They propose a system that uses semantic annotation of entities in these reviews along with Web of Data knowledge. They compared their system to baselines and another Linked Data approach, finding theirs provides more diverse recommendations with better accuracy.
+
+Now, based on the guidelines, I should assign 8-12 categories. Let&#39;s think about possible categories from the examples provided.
+
+First, the family of algorithms. The system uses semantic annotations and linked data, so maybe &#34;Semantic Analysis,&#34; &#34;Linked Data,&#34; and perhaps some form of &#34;Natural Language Processing&#34; since they&#39;re analyzing user reviews.
+
+Next, domain-wise, it could fit under &#34;User Preferences&#34; since it&#39;s about inferring preferences from reviews. Also, it&#39;s a recommendation system, so that&#39;s the main domain: &#34;Recommendation Systems.&#34;
+
+As for specific aspects in recommendation space, they mention improving decision processes with diverse recommendations. So categories like &#34;Diverse Recommendations,&#34; &#34;Textual Reviews,&#34; and &#34;Cold Start&#34; might be relevant if their approach helps with new users or items.
+
+Evaluation aspects include accuracy and diversity. The abstract mentions better accuracy and more diversity, so those are important: &#34;Accuracy of Recommendations&#34; and &#34;Diversity of Recommendations.&#34;
+
+They used real-world applications by comparing against baselines and another method, but I don&#39;t see a mention of A/B testing or user surveys in the abstract. So maybe not that category.
+
+Other categories could include &#34;User Feedback&#34; since they use reviews as feedback, and &#34;Web of Data&#34; which ties into Linked Data.
+
+Putting it all together, considering each point:
+
+- Algorithm family: Semantic Analysis, Linked Data
+- Domain: Recommendation Systems, User Preferences
+- Specific recommendation aspects: Textual Reviews, Diverse Recommendations
+- Evaluation aspects: Accuracy of Recommendations, Diversity of Recommendations
+- Additional categories: Entity Extraction (since they annotate entities), User Feedback
+
+That gives me 8 categories. I think that&#39;s a solid coverage based on the article&#39;s content.
+&lt;/think&gt;
+
+Recommendation Systems, Semantic Analysis, Linked Data, Textual Reviews, Diverse Recommendations, Entity Extraction, User Preferences, Accuracy of Recommendations, Diversity of Recommendations, User Feedback</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

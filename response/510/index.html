@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: BERT, ELMo, USE and InferSent Sentence Encoders: The Panacea for Research-Paper Recommendation?
+Abstract:
+Content-based approaches to research paper recommendation are important when user feedback is sparse or not available. The task of content-based matching is challenging, mainly due to the problem of determining the semantic similarity of texts. Nowadays, there exist many sentence embedding models that learn deep semantic representations by being trained on huge corpora, aiming to provide transfer learning to a wide variety of natural language processing tasks. In this work, we present a comparative evaluation among five well-known pre-trained sentence encoders deployed in the pipeline of title-based research paper recommendation. The experimented encoders are USE, BERT, InferSent, ELMo, and SciBERT. For our study, we propose a methodology for evaluating such models in reranking BM25-based recommendations. The experimental results show that the sole consideration of semantic information from these encoders does not lead to improved recommendation performance over the traditional BM25 technique, while their integration enables the retrieval of a set of relevant papers that may not be retrieved by the BM25 ranking function.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article about sentence encoders and their use in research paper recommendations. The title mentions BERT, ELMo, USE, and InferSent, so those are specific algorithms or models. That makes me think of including categories like these model names as they&#39;re part of the family of algorithms used.
+
+The domain here is definitely research papers, since the recommendation system is tailored for that context. So &#34;Research Papers&#34; should be a category. The problem at hand is recommendation systems, specifically content-based because it&#39;s when user feedback isn&#39;t available or sparse. That leads me to include &#34;Content-Based Recommendations.&#34;
+
+Looking deeper into the methods, they&#39;re using sentence encoders which are part of natural language processing (NLP), so that&#39;s another key area. The study evaluates different models, so categories like &#34;Evaluation,&#34; &#34;Model Comparison,&#34; and &#34;Recommendation Evaluation&#34; make sense here.
+
+They also talk about integrating these models with BM25, a traditional information retrieval method. So &#34;BM25 Integration&#34; would be relevant. The focus on semantic similarity is crucial, hence &#34;Semantic Similarity.&#34; They&#39;re working in the NLP domain, so including that as another category is important.
+
+The recommendation aspect touches on improving relevance and accuracy, so categories like &#34;Relevance,&#34; &#34;Recommendation Accuracy,&#34; and maybe &#34;Research Paper Recommendations&#34; could be included. The conclusion suggests that while individual models don&#39;t surpass BM25, combining them does, which implies a focus on integration over standalone performance, hence &#34;Integration Over Performance.&#34;
+
+I should ensure each category is clear and user-friendly. Checking against the guidelines, I need at least 8-12 categories. Let me list out what I have so far: BERT, ELMo, USE, InferSent (these are four), then Research Papers as a domain, Content-Based Recommendations, Natural Language Processing, Evaluation, Model Comparison, Recommendation Evaluation, BM25 Integration, Semantic Similarity, and maybe Relevance and Research Paper Recommendations again. Wait, I might be repeating some categories.
+
+Alternatively, perhaps instead of listing each model separately if that&#39;s too granular, but the example given in the problem included specific algorithms like Matrix Factorization, so it&#39;s acceptable to list each one here since they&#39;re distinct models.
+
+So compiling all these points: BERT, ELMo, USE, InferSent, Research Papers, Content-Based Recommendations, Natural Language Processing, Evaluation, Model Comparison, Recommendation Evaluation, BM25 Integration, Semantic Similarity. That&#39;s 12 categories, which fits the requirement. I think this covers the key aspects without being too redundant.
+&lt;/think&gt;
+
+BERT, ELMo, USE, InferSent, Research Papers, Content-Based Recommendations, Natural Language Processing, Evaluation, Model Comparison, Recommendation Evaluation, BM25 Integration, Semantic Similarity</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

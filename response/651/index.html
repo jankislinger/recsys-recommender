@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Next-item Recommendations in Short Sessions
+Abstract:
+The changing preferences of users towards items trigger the emergence of session-based recommender systems (SBRSs), which aim to model the dynamic preferences of users for next-item recommendations. However, most of the existing studies on SBRSs are based on long sessions only for recommendations, ignoring short sessions, though short sessions, in fact, account for a large proportion in most of the real-world datasets. As a result, the applicability of existing SBRSs solutions is greatly reduced. In a short session, quite limited contextual information is available, making the next-item recommendation very challenging. To this end, in this paper, inspired by the success of few-shot learning (FSL) in effectively learning a model with limited instances, we formulate the next-item recommendation as an FSL problem. Accordingly, following the basic idea of a representative approach for FSL, i.e., meta-learning, we devise an effective SBRS called INter-SEssion collaborativeRecommender neTwork (INSERT) for next-item recommendations in short sessions. With the carefully devised local module and global module, INSERT is able to learn an optimal preference representation of the current user in a given short session. In particular, in the global module, a similar session retrieval network (SSRN) is designed to find out the sessions similar to the current short session from the historical sessions of both the current user and other users, respectively. The obtained similar sessions are then utilized to complement and optimize the preference representation learned from the current short session by the local module for more accurate next-item recommendations in this short session. Extensive experiments conducted on two real-world datasets demonstrate the superiority of our proposed INSERT over the state-of-the-art SBRSs when making next-item recommendations in short sessions.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s tackle this categorization task step by step. The goal is to assign the given research article into multiple relevant categories based on its content, themes, and relevance, while adhering to the specified guidelines.
+
+First, I&#39;ll read through the title and abstract of the article to understand its main focus. The title is &#34;Next-Item Recommendations in Short Sessions,&#34; which immediately tells me this is about recommendation systems, specifically focusing on short user sessions. The abstract elaborates that session-based recommender systems (SBRSs) are being explored for next-item recommendations, but existing solutions primarily handle long sessions and overlook the challenges of short ones.
+
+The article mentions that short sessions have limited contextual information, making recommendations challenging. To address this, they draw inspiration from few-shot learning (FSL), formulating the recommendation problem as an FSL task. They propose a system called INSERT, which uses meta-learning with a local module for current session data and a global module to retrieve similar past sessions to enhance recommendation accuracy.
+
+Now, considering the categorization guidelines:
+
+1. **Core Themes**: The main focus is on session-based recommendations in short sessions. So categories like &#34;Session-Based Recommender Systems&#34; and &#34;Short Sessions&#34; are essential.
+2. **Algorithm Family**: The method draws from few-shot learning and meta-learning. Thus, &#34;Few-Shot Learning,&#34; &#34;Meta-Learning,&#34; and perhaps &#34;Neural Networks&#34; if applicable should be included.
+3. **Evaluation Aspects**: The article evaluates the proposed system against existing methods, highlighting aspects like accuracy and effectiveness. So categories related to evaluation such as &#34;Recommendation Accuracy,&#34; &#34;Performance Evaluation,&#34; or specific metrics used could be relevant.
+4. **User-Centric Needs**: Users are likely interested in systems that handle dynamic preferences efficiently, especially in scenarios with limited data, so including something about &#34;Dynamic Preferences&#34; makes sense.
+5. **Real-World Applications**: The paper uses real-world datasets for experiments, indicating practical applicability. Categories like &#34;Real-World Datasets&#34; or &#34;Applied Machine Learning&#34; could be appropriate.
+6. **Problem Domains**: Since the focus is on recommendation systems, it&#39;s a specific domain within machine learning and AI.
+
+Looking at the example categories provided, I should also consider any specific aspects of recommendation systems, such as cold start or diversity, but this article doesn&#39;t directly address those, so perhaps not necessary here.
+
+I need to ensure each category is clear and descriptive. Let me list out potential categories:
+
+- Session-Based Recommender Systems
+- Short Sessions
+- Few-Shot Learning
+- Meta-Learning
+- Recommendation Accuracy
+- Real-World Datasets
+- Dynamic Preferences
+- Neural Networks (if the method uses neural approaches)
+- Collaborative Filtering (as it retrieves similar sessions, which is a form of collaborative filtering)
+
+Wait, does INSERT use neural networks? The abstract mentions &#34;neural network&#34; in the name of SSRN but perhaps more about meta-learning. So maybe include that.
+
+I need at least 8-12 categories. Let me think if I have enough:
+
+1. Session-Based Recommender Systems
+2. Short Sessions
+3. Few-Shot Learning
+4. Meta-Learning
+5. Recommendation Accuracy
+6. Real-World Datasets
+7. Dynamic Preferences
+8. Collaborative Filtering
+9. Neural Networks
+
+That&#39;s nine categories. Maybe I can add a couple more related to the approach, like &#34;Similarity Retrieval&#34; since they use similar sessions.
+
+So finalizing:
+
+1. Session-Based Recommender Systems
+2. Short Sessions
+3. Few-Shot Learning
+4. Meta-Learning
+5. Recommendation Accuracy
+6. Real-World Datasets
+7. Dynamic Preferences
+8. Collaborative Filtering
+9. Similarity Retrieval
+
+I think that covers the necessary aspects without being too broad or overlapping excessively.
+&lt;/think&gt;
+
+Session-Based Recommender Systems, Short Sessions, Few-Shot Learning, Meta-Learning, Recommendation Accuracy, Real-World Datasets, Dynamic Preferences, Collaborative Filtering, Similarity Retrieval</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

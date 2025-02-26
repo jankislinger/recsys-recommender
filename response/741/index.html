@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Personalizing Peloton: Combining Rankers and Filters To Balance Engagement and Business Goals
+Abstract:
+Peloton is at the forefront of the at-home fitness market, with two business pillars: (a) a line of connected fitness equipment, and (b) a subscription-based service that offers access to a rich catalog of high quality fitness classes. As of May 2021, the total member base for Peloton stood at over 5.4 million, who took more than 170 million workouts. Peloton classes cover a diversity of instructors, languages, fitness disciplines, durations, intensity and muscle groups. On the other side, each user has their own specific fitness goals, time available to work out, fitness equipment and level of skill or strength. This diversity of content and individuality of user needs creates the need for a recommender system capable of personalizing the Peloton experience.
+Most recommendation engines optimize for user lifetime value or time of engagement. However, Peloton users have very different usage habits when compared to other industry recommendation problems. Users arrive on the platform with a clear intent to workout, which allows our recommendation algorithms to not just focus on the short-term classic metrics such as click-through-rates and optimizing session lengths for exploration. Instead, fitness content recommendations at Peloton also help solve longer term problems such as: 
+It helps balance engagement and business goals. A classic example of this is the introduction of a new instructor. For existing users, who already have developed affinities to certain instructors, how can we ensure that enough of them see and try some classes from the new instructor so that they can build their own following?
+It helps guide users to explore the vast library of content. Peloton users quickly develop set routines with our fitness content, with high repeat plays of the same instructor/duration/class type. Recommendations serve as a mechanism to encourage them to try something outside this comfort zone, which both increases the breadth of a user&#39;s engagement with the platform and leads to a more holistic workout routine.
+We achieve these two goals by utilizing a combination of rankers and filters. Ranking models help order the universe of content for each user according to their preferences. Filters take a slice of this ordered content to generate a shelf of content with a reason for suggesting it. Explainability is heavily linked to business goals, while ranking is linked to engagement goals. For instance, ranking and filtering can work in tandem to populate a shelf that helps promote a new music partnership, e.g. Workouts Featuring The Beatles, where we highlight classes that contain music by The Beatles (filter), ordered by the user&#39;s class preferences (ranker). With rankers and filters, we empower other teams to curate personalized experiences. The creation process is simplified to picking a ranker and a filter to create a shelf, and then giving it a title to then have it displayed to users.
+Further, we have context-based models that order the shelves for each user depending on both their preferences and context, such as platform and time. For ranking our various filters, we take a multi-armed bandit approach, due to the need to handle cold starts on users and balance exploration (keep putting new shelves in front of the user) with exploitation (keep showing them shelves they already interact with). To start with, we implemented a simple Thompson Sampling based bandits algorithm, which accumulates rewards (for shelves interacted with) and penalties (for shelves ignored), which in turn constantly adapts the shelf ordering for a user, making the experience more personalized over time. We are able to perform all calculations offline in batch, using Spark, and cache the Thompson Sampling parameters in DynamoDB. When a user requests their shelves, a random sampling is performed using these parameters to serve up a contextually ordered list of shelves.
+A unique feature of Peloton classes is that they are usually aired “live” first, which seeds the class with a set of users. This ameliorates the cold start problem for recommending classes, opening us up to using collaborative filtering approaches. Also, users typically take one session in a given day, and most even just take one class in a given day. This means we are able to compute class recommendations for each user offline, cache it and serve it up when requested. In the offline world, we use Spark to pre-process our user-class interaction data, and then train a deep learning model using PyTorch. Our ranking model is a sequential recommender using long-short-term memory (LSTMs). From our ranked list of classes, we apply our various filters and generate the shelves of recommendations. These are cached in AWS DynamoDB, and served up via Kubernetes-driven APIs.
+Recommending fitness content at Peloton has the potential to go beyond simply guiding users to their next class. With a holistic overview of both what classes a user is taking and a user&#39;s feedback on their performance (explicit or implicit), there is an opportunity to tailor workout routines that optimize for long-term metrics such as health, strength or flexibility.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about Peloton&#39;s recommendation system. Let me go through the title and abstract step by step.
+
+The title mentions &#34;Personalizing Peloton&#34; which suggests it&#39;s about personalization techniques in recommendations. The keywords here are personalization and recommendation systems.
+
+Looking at the abstract, they talk about combining rankers and filters to balance engagement and business goals. So, this indicates a focus on both user engagement metrics (like click-through rates) and business objectives such as introducing new instructors or partnerships.
+
+The article also discusses handling cold starts by using live classes, which means collaborative filtering is applicable here. They mention multi-armed bandits for shelf ordering, specifically using Thompson Sampling. That&#39;s another key point.
+
+They use a sequential recommender model with LSTM, so that&#39;s an algorithm aspect. The infrastructure involves Spark for offline processing and PyTorch for deep learning models, along with AWS services like DynamoDB and Kubernetes APIs. So, technical details about their stack are important.
+
+The business domain is clearly fitness, specifically at-home workouts. They also mention aspects like diversity of recommendations (encouraging users to explore beyond their comfort zones) and the importance of explainability linked to business goals.
+
+Cold start is addressed by live classes seeding interactions, which is a unique approach in this context. The evaluation seems to go beyond accuracy to include longer-term user health metrics, showing they care about more than just immediate engagement.
+
+So, putting it all together, I need to assign categories that cover the algorithms used (LSTM, Multi-Armed Bandits), the domain (Fitness), technical aspects (Spark, AWS), recommendation strategies (Hybrid Recommender Systems), and business aspects like Cold Start and User Engagement. Also, considering evaluation beyond accuracy and the use of filters and rankers is crucial.
+&lt;/think&gt;
+
+Personalization, Recommendation Systems, Fitness, Multi-Armed Bandits, Hybrid Recommender Systems, User Engagement, Business Goals, Cold Start, Thompson Sampling, Sequential Recommendations, Deep Learning, Spark, PyTorch, AWS, DynamoDB, Kubernetes</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Human Perspective on Algorithmic Similarity
+Abstract:
+In the Netflix user interface (UI), when a row or UI element is named “Because you Watched...”, “More Like This”, or “Because you added to your list”, the overarching goal is to recommend a movie or TV show that a member might like based on the fact that they took a meaningful action on a source item. We have employed similar recommendations in many UI elements: on the homepage as a row of recommendations, after you click into a title, or as a piece of information about why a member should watch a title. 
+From an algorithmic perspective, there are many ways to define a “successful” similar recommendation. We sought to broaden the definition of success. To this end, the Consumer Insights team recently completed a suite of research projects to explore the intricacies of member perceptions of similar recommendations. The Netflix Consumer Insights team employs qualitative (e.g., in-depth interviews) and quantitative (e.g., surveys) research methods, interfacing directly with Netflix members to uncover pain points that can inspire new product innovation. The research concluded that, while the typical member believes movies are broadly similar when they share a common genre or theme, similarity is more complex, nuanced, and personal than we might have imagined. The vernacular we use in the UI implies that there should be at least some kind of relationship between the source item and the recommendations that follow. Many of our similar recommendations felt “out of place”, mostly because the relationship between the source item and the recommendation was unclear or absent. When similar recommendations tell a completely misleading, incorrect, or confusing story, member trust can be broken.
+We will structure the presentation around three new insights that our research found to have an influence on the perception of similarity in the context of Netflix as well as the research methods used to uncover those insights. First, the reason a member loves a given movie will vary. For example, do you want to watch other baseball movies like Field of Dreams, or would you prefer other romances like Field of Dreams? Second, members are more or less flexible about how similar a recommendation actually needs to be depending on the properties of and their interactions with the canvas containing the recommendation. For example, a Because You Watched row on the homepage implies vaguer similarity while a More Like This gallery behind a click into the source item implies stricter similarity. Finally, even when we held the UI element constant, we found that similar recommendations are only valuable in some contexts. After finishing a movie, a member might prefer a similar recommendation one day and a change of pace the next. Research methods discussed will include single-arrangement Inverse Multi-Dimensional Scaling [1], survey experimentation, and ways to apply qualitative research to improve algorithmic recommendations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article about Netflix&#39;s similar recommendations based on the guidelines provided. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;A Human Perspective on Algorithmic Similarity.&#34; The abstract discusses how Netflix uses phrases like “Because you Watched...” or “More Like This” in their UI to recommend content. They mention that while movies might seem similar based on genre, members have more nuanced perceptions of similarity. The research involved both qualitative and quantitative methods, such as interviews and surveys, to understand member feedback. The key insights include how reasons for loving a movie vary, flexibility in recommendation strictness depending on the context, and varying preferences over time.
+
+So, first step: identify core themes. It&#39;s about recommendation systems, specifically algorithmic similarity used in UI elements like &#34;Because you Watched&#34; rows. They&#39;re looking at user perceptions and feedback, which ties into user experience and interface design.
+
+Next, think about categories based on the guidelines. The example given includes family of algorithms, domains, specific recommendation aspects, evaluation aspects, real-world applications, etc.
+
+Let me map each part:
+
+1. **Recommendation Systems**: Definitely relevant since it&#39;s all about recommendations.
+2. **User Interface (UI) Design**: They discuss how UI elements like rows are structured and perceived.
+3. **Algorithmic Similarity**: A key term in the title, so this is important.
+4. **User Experience (UX)**: Since they&#39;re researching member perceptions and feedback to improve UX.
+5. **Qualitative Research Methods**: Mentioned as part of their approach with interviews.
+6. **Quantitative Research Methods**: Surveys are a quantitative method used here.
+7. **Human-Centered Design**: Focuses on understanding user needs and preferences, which is central to the research.
+8. **Content Recommendations**: Directly related to recommending movies/TV shows.
+9. **Consumer Insights**: The team&#39;s focus was on gathering member insights.
+10. **User Feedback Mechanisms**: They discuss using feedback to inspire product innovation.
+
+Are there more categories I can include? Let me think:
+
+- **Evaluation Methods**: They talked about assessing the effectiveness of recommendations, which is part of evaluation.
+- **Personalization in Recommendations**: The article emphasizes that similarity is nuanced and personal.
+- **User Trust**: When recommendations are misleading, trust can be broken. So maybe &#34;Trust in Algorithms&#34;?
+- **Context-Aware Recommendations**: They mentioned flexibility depending on context like homepage vs. behind a click.
+
+Wait, but I should stick to the examples given. The user provided categories include family of algorithms, domains, specific recommendation aspects, evaluation aspects, real-world applications, etc.
+
+So perhaps:
+
+- &#34;Recommendation Systems&#34; is already there.
+- For the domain, it&#39;s &#34;Streaming Services&#34; since Netflix is a streaming platform.
+- Specific recommendation aspect: They discuss the importance of context in recommendations. Maybe &#34;Context-Aware Recommendations.&#34;
+- Evaluation aspects: They looked at member perceptions, which ties into evaluation criteria like user satisfaction and trust.
+
+I need to ensure I have 8-12 categories as per guidelines. Let me list what I have so far:
+
+1. Recommendation Systems
+2. User Interface (UI) Design
+3. Algorithmic Similarity
+4. User Experience (UX)
+5. Qualitative Research Methods
+6. Quantitative Research Methods
+7. Human-Centered Design
+8. Content Recommendations
+9. Consumer Insights
+10. Streaming Services
+11. Evaluation Methods
+12. Personalization in Recommendations
+
+Wait, that&#39;s 12 categories. I think that covers the main points. Let me check if any of these are redundant or could be combined.
+
+- &#34;Recommendation Systems&#34; and &#34;Content Recommendations&#34; might overlap, but they can coexist as one is broader.
+- Similarly, &#34;Consumer Insights&#34; is specific to their research approach, which is important.
+
+I should also consider real-world applications. They mentioned A/B testing or user surveys in the examples, but in this article, they used interviews and surveys as part of their methods. However, they didn&#39;t deploy an algorithm via A/B tests here; it&#39;s more about understanding user perceptions for future improvements. So maybe &#34;User Surveys&#34; isn&#39;t directly applicable unless specified.
+
+Alternatively, &#34;Real-World Applications&#34; could be included since the research was applied to Netflix&#39;s UI.
+
+But I think 12 categories are sufficient and cover all necessary aspects without overcrowding any category.
+&lt;/think&gt;
+
+Recommendation Systems, User Interface (UI) Design, Algorithmic Similarity, User Experience (UX), Qualitative Research Methods, Quantitative Research Methods, Human-Centered Design, Content Recommendations, Consumer Insights, Streaming Services, Evaluation Methods, Personalization in Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Human Perspective on Algorithmic Similarity
+Abstract:
+In the Netflix user interface (UI), when a row or UI element is named “Because you Watched...”, “More Like This”, or “Because you added to your list”, the overarching goal is to recommend a movie or TV show that a member might like based on the fact that they took a meaningful action on a source item. We have employed similar recommendations in many UI elements: on the homepage as a row of recommendations, after you click into a title, or as a piece of information about why a member should watch a title. 
+From an algorithmic perspective, there are many ways to define a “successful” similar recommendation. We sought to broaden the definition of success. To this end, the Consumer Insights team recently completed a suite of research projects to explore the intricacies of member perceptions of similar recommendations. The Netflix Consumer Insights team employs qualitative (e.g., in-depth interviews) and quantitative (e.g., surveys) research methods, interfacing directly with Netflix members to uncover pain points that can inspire new product innovation. The research concluded that, while the typical member believes movies are broadly similar when they share a common genre or theme, similarity is more complex, nuanced, and personal than we might have imagined. The vernacular we use in the UI implies that there should be at least some kind of relationship between the source item and the recommendations that follow. Many of our similar recommendations felt “out of place”, mostly because the relationship between the source item and the recommendation was unclear or absent. When similar recommendations tell a completely misleading, incorrect, or confusing story, member trust can be broken.
+We will structure the presentation around three new insights that our research found to have an influence on the perception of similarity in the context of Netflix as well as the research methods used to uncover those insights. First, the reason a member loves a given movie will vary. For example, do you want to watch other baseball movies like Field of Dreams, or would you prefer other romances like Field of Dreams? Second, members are more or less flexible about how similar a recommendation actually needs to be depending on the properties of and their interactions with the canvas containing the recommendation. For example, a Because You Watched row on the homepage implies vaguer similarity while a More Like This gallery behind a click into the source item implies stricter similarity. Finally, even when we held the UI element constant, we found that similar recommendations are only valuable in some contexts. After finishing a movie, a member might prefer a similar recommendation one day and a change of pace the next. Research methods discussed will include single-arrangement Inverse Multi-Dimensional Scaling [1], survey experimentation, and ways to apply qualitative research to improve algorithmic recommendations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this article based on its title and abstract. The title is &#34;A Human Perspective on Algorithmic Similarity,&#34; which suggests it&#39;s about how algorithms present similarity in recommendations from a user experience standpoint.
+
+Looking at the abstract, the study was done by Netflix&#39;s Consumer Insights team using both qualitative and quantitative methods. They explored how users perceive similar recommendations. So, they looked into what makes recommendations feel right or wrong to users.
+
+The key themes I see here are:
+
+1. **Algorithmic Similarity**: The focus is on how algorithms determine similarity, which directly relates to the family of recommendation algorithms like collaborative filtering, matrix factorization, etc., but here it&#39;s more about user perception.
+
+2. **User-Centered Design**: They used methods like interviews and surveys, so this ties into understanding user needs and behaviors.
+
+3. **Domain Specificity**: The study is within the domain of Movies/TV Shows since Netflix is a streaming service.
+
+4. **Evaluation Metrics**: They discuss how success is defined in terms of member trust and perceptions, which relates to evaluation aspects beyond traditional accuracy metrics.
+
+5. **UI Elements**: The article talks about UI elements like &#34;Because you watched&#34; rows, so this touches on the design and interface aspects.
+
+6. **Trust in Recommendations**: Trust is a key factor here because misleading recommendations can break user trust.
+
+7. **Contextual Relevance**: Similarity perceptions vary based on where the recommendation appears (homepage vs. after clicking into a title), which is about contextual relevance.
+
+8. **Real-World Applications**: They mention applying research to improve algorithmic recommendations, so real-world applications like A/B testing or surveys are involved.
+
+9. **Diversity of Recommendations**: The study touches on how sometimes users want similar content and other times they don&#39;t, indicating a need for diversity in recommendations.
+
+10. **Personalization**: Since similarity is nuanced and personal, this relates to personalized recommendation strategies.
+
+Putting it all together, I&#39;ll list the categories that best fit: Algorithmic Similarity, User-Centered Design, Movies/TV Shows, Evaluation Metrics, UI Elements, Trust, Contextual Relevance, Real-World Applications, Diversity of Recommendations, Personalization.
+&lt;/think&gt;
+
+Algorithmic Similarity, User-Centered Design, Movies/TV Shows, Evaluation Metrics, UI Elements, Trust, Contextual Relevance, Real-World Applications, Diversity of Recommendations, Personalization</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/cold-start/">Cold Start</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/multi-task-learning/">Multi-Task Learning</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Optimal Baseline Corrections for Off-Policy Contextual Bandits (2024)</h3>
+    <p><strong>Authors:</strong> Shashank Gupta, Olivier Jeunen, Maarten de Rijke, Harrie Oosterhuis</p>
+    <p>The off-policy learning paradigm allows for recommender systems and general ranking applications to be framed as decision-making problems, where we aim to learn decision policies that optimize an unbiased offline estimate of an online reward metric. With unbiasedness comes potentially high variance, and prevalent methods exist to reduce estimation variance. These methods typically make use of control variates, either additive (i.e., baseline corrections or doubly robust methods) or multiplicative (i.e., self-normalisation). Our work unifies these approaches by proposing a single framework built on their equivalence in learning scenarios. The foundation of our framework is the derivation of an equivalent baseline correction for all of the existing control variates. Consequently, our framework enables us to characterize the variance-optimal unbiased estimator and provide a closed-form solution for it. This optimal estimator brings significantly improved performance in both evaluation and learning, and minimizes data requirements. Empirical observations corroborate our theoretical findings.</p>
+    <p><strong>Categories:</strong> Contextual Bandits, Off-Policy Learning, Control Variates, Baseline Corrections, Doubly Robust Methods, Variance Reduction, Optimal Estimation, Recommender Systems, Ranking, Reinforcement Learning (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1052/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Adversarial Sleeping Bandit Problems with Multiple Plays: Algorithm and Ranking Application (2023)</h3>
+    <p><strong>Authors:</strong> Wei Lee Woon, Ludovik Coba, Jianjun Yuan</p>
+    <p>This paper presents an efficient algorithm to solve the sleeping bandit with multiple plays problem in the context of an online recommendation system. The problem involves bounded, adversarial loss and unknown i.i.d. distributions for arm availability. The proposed algorithm extends the sleeping bandit algorithm for single arm selection and is guaranteed to achieve theoretical performance with regret upper bounded by $\bigO(kN^2\sqrt{T\log T})$, where $k$ is the number of arms selected per time step, $N$ is the total number of arms, and $T$ is the time horizon.</p>
+    <p><strong>Categories:</strong> Adversarial Machine Learning, Bandit Algorithms, Multi-Armed Bandits, Online Recommendation Systems, Ranking, Regret Analysis, Theoretical Analysis, Multiple Plays, Real-World Applications, Scalability, Multi-Item Selection (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/900/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Contextual and Sequential User Embeddings for Large-Scale Music Recommendation (2020)</h3>
+    <p><strong>Authors:</strong> Rishabh Mehrotra, Christian Hansen, Casper Hansen, Brian Brost, Federico Tomasi, Lucas Maystre, Mounia Lalmas</p>
+    <p>Recommender systems play an important role in providing an engaging experience on online music streaming services. However, the musical domain presents distinctive challenges to recommender systems: tracks are short, listened to multiple times, typically consumed in sessions with other tracks, and relevance is highly context-dependent. In this paper, we argue that modeling users’ preferences at the beginning of a session is a practical and effective way to address these challenges. Using a dataset from Spotify, a popular music streaming service, we observe that a) consumption from the recent past and b) session-level contextual variables (such as the time of the day or the type of device used) are indeed predictive of the tracks a user will stream—much more so than static, average preferences. Driven by these findings, we propose CoSeRNN, a neural network architecture that models users’ preferences as a sequence of embeddings, one for each session. CoSeRNN predicts, at the beginning of a session, a preference vector, based on past consumption history and current context. This preference vector can then be used in downstream tasks to generate contextually relevant just-in-time recommendations efficiently, by using approximate nearest-neighbour search algorithms. We evaluate CoSeRNN on session and track ranking tasks, and find that it outperforms the current state of the art by upwards of 10% on different ranking metrics. Dissecting the performance of our approach, we find that sequential and contextual information are both crucial.</p>
+    <p><strong>Categories:</strong> Music, Neural Networks, Context-aware, Sequential Data, Recommendation Systems, Session-Based Recommendations, Embedding Models, Ranking, Beyond Accuracy, User Behavior, Scalability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/527/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Greedy Optimized Multileaving for Personalization (2019)</h3>
+    <p><strong>Authors:</strong> Kojiro Iizuka, Yoshifumi Seki, Takeshi Yoneda</p>
+    <p>Personalization plays an important role in many services. To evaluate personalized rankings, online evaluation, such as A/B testing, is widely used today. Recently, multileaving has been found to be an efficient method for evaluating rankings in information retrieval fields. This paper describes the first attempt to optimize the multileaving method for personalization settings. We clarify the challenges of applying this method to personalized rankings. Then, to solve these challenges, we propose greedy optimized multileaving (GOM) with a new credit feedback function. The empirical results showed that GOM was stable for increasing ranking lengths and the number of rankers. We implemented GOM on our actual news recommender systems, and compared its online performance. The results showed that GOM evaluated the personalized rankings precisely, with significantly smaller sample sizes (< 1/10) than A/B testing. i>Presentation: Tuesday Poster Lunch</i</p>
+    <p><strong>Categories:</strong> Greedy Algorithm, Multileaving, News Recommender Systems, Personalization, Evaluation Metrics, Efficiency, Precision, A/B Testing, Credit Feedback Function, Stability, Scalability, Ranking, New Algorithm, Real-World Application, Evaluation Challenges, Recommender Systems (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/476/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Personalized Re-ranking for Recommendation (2019)</h3>
+    <p><strong>Authors:</strong> Dan Pei, Yi Zhang, Fei Sun, Yongfeng Zhang, Hanxiao Sun, Changhua Pei, Wenwu Ou, Jian Wu, Peng Jiang, Junfeng Ge, Xiao Lin</p>
+    <p>Ranking is a core task in recommender systems, which aims at providing an ordered list of items to users. Typically, a ranking function is learned from the labeled dataset to optimize the global performance, which produces a ranking score for each individual item. However, it may be sub-optimal because the scoring function applies to each item individually and does not explicitly consider the mutual influence between items, as well as the differences of users’ preferences or intents. Therefore, we propose a personalized re-ranking model for recommender systems. The proposed re-ranking model can be easily deployed as a follow-up modular after any ranking algorithm, by directly using the existing ranking feature vectors. It directly optimizes the whole recommendation list by employing a transformer structure to efficiently encode the information of all items in the list. Specifically, the Transformer applies a self-attention mechanism that directly models the global relationships between any pair of items in the whole list. We confirm that the performance can be further improved by introducing pre-trained embedding to learn personalized encoding functions for different users. Experimental results on both offline benchmarks and real-world online e-commerce systems demonstrate the significant improvements of the proposed re-ranking model.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Personalization, Ranking, Transformer Architecture, Re-ranking, Neural Networks, Machine Learning, Self-Attention, Pre-trained Embeddings, Evaluation Metrics, Deep Learning, E-commerce, Real-World Applications, Online Systems (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/452/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Explore-Exploit in Top-N Recommender Systems via Gaussian Processes (2014)</h3>
+    <p><strong>Authors:</strong> Andreas Krause, Isidor Nikolic, Hastagiri Prakash Vanchinathan, Fabio De Bona</p>
+    <p>We address the challenge of ranking recommendation lists based on click feedback by efficiently encoding similarities among users and among items. The key challenges are threefold: (1) combinatorial number of lists; (2) sparse feedback and (3) context dependent recommendations. We propose the CGPRANK algorithm, which exploits prior information specified in terms of a Gaussian process kernel function, which allows to share feedback in three ways: Between positions in a list, between items, and between contexts. Under our model, we provide strong performance guarantees and empirically evaluate our algorithm on data from two large scale recommendation tasks: Yahoo! news article recommendation, and Google books. In our experiments, our CGPRANK approach significantly outperforms state-of-the-art multi-armed bandit and learning-to-rank methods, with an 18% increase in clicks.</p>
+    <p><strong>Categories:</strong> Multi-Armed Bandits, Recommendation Systems, Gaussian Processes, Ranking, Click Feedback, Sparse Feedback, Collaborative Filtering, Domain-Specific Models, Evaluation Metrics, User Engagement, Scalability, Context-Aware Recommendations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/20/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

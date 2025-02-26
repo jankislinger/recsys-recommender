@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Personalized Diffusions for Top-N Recommendation
+Abstract:
+This paper introduces PERDIF; a novel framework for learning personalized diffusions over item-to-item graphs for top-n recommendation. PERDIF learns the teleportation probabilities of a time-inhomogeneous random walk with restarts capturing a user-specific underlying item exploration process. Such an approach can lead to significant improvements in recommendation accuracy, while also providing useful information about the users in the system. Per-user fitting can be performed in parallel and very efficiently even in large-scale settings. A comprehensive set of experiments on real-world datasets demonstrate the scalability as well as the qualitative merits of the proposed framework. PERDIF achieves high recommendation accuracy, outperforming state-of-the-art competing approaches—including several recently proposed methods relying on deep neural networks.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Personalized Diffusions for Top-N Recommendation.&#34; Let me start by reading the title and abstract carefully.
+
+The title mentions personalized diffusions, which sounds like a method related to how information or recommendations spread among items. It&#39;s specifically for top-N recommendation, so it&#39;s about suggesting the top N items to users.
+
+Looking at the abstract: The paper introduces PERDIF, a framework that uses personalized diffusions over item-to-item graphs. They talk about teleportation probabilities in a time-inhomogeneous random walk with restarts. This is capturing user-specific exploration processes. So, it&#39;s a recommendation method that&#39;s tailored to each user and models how they explore items.
+
+The framework allows per-user fitting, which can be done in parallel efficiently, even at scale. They did experiments on real-world datasets showing scalability and good results compared to existing methods, including deep neural networks.
+
+Now, I need to map this into categories based on the guidelines provided. Let&#39;s break down the key elements:
+
+1. **Family of Algorithm**: The paper uses a diffusion-based approach with random walks. So, Diffusion-Based Methods is one category. Also, since it involves personalization for each user, Personalized Algorithms makes sense.
+
+2. **Domain of Problem**: It&#39;s about recommendation systems, specifically Top-N recommendations.
+
+3. **Recommendation Space Specifics**: They mention using item-to-item graphs and per-user exploration, so Item-to-Item Graphs is a category here. Also, the focus on scalability in large-scale settings fits into Scalability.
+
+4. **Evaluation Aspects**: The paper compares with state-of-the-art methods and deep neural networks, which relates to Evaluation Metrics. They also discuss recommendation accuracy beyond just metrics, so Beyond Accuracy could be another category.
+
+5. **Real-World Applications**: They performed experiments on real-world datasets, showing practical scalability and merit. So, Real-World Applications is applicable here.
+
+Other possible categories: Since they talk about user-specific processes, maybe User Modeling? But the abstract doesn&#39;t go into much detail about modeling users beyond their exploration process. The method is scalable, so Scalable Methods could be another angle.
+
+Let me also consider if there are any aspects like Cold Start or Diversity of Recommendations, but the abstract doesn&#39;t mention those specifically. It&#39;s more about improving accuracy and scalability through personalized diffusion.
+
+So compiling all this, the categories would include things like Diffusion-Based Methods, Personalized Algorithms, Recommendation Systems, Top-N Recommendation, Item-to-Item Graphs, Random Walks, Scalability, Evaluation Metrics, Beyond Accuracy, Real-World Applications, and perhaps also Large-Scale Settings since they mention efficiency in large-scale scenarios.
+
+Wait, the user&#39;s example included categories like Family of algorithm, Domain of problem, specific recommendation aspects, evaluation aspects, real-world applications. So I need to make sure each category is distinct but relevant.
+
+Let me structure them:
+
+- Diffusion-Based Methods (algorithm family)
+- Personalized Algorithms (algorithm family)
+- Random Walks (algorithm technique used)
+- Recommendation Systems (domain)
+- Top-N Recommendation (specific recommendation task)
+- Item-to-Item Graphs (specific method aspect)
+- Scalability (evaluation or system aspect)
+- Evaluation Metrics (as they compared against others)
+- Beyond Accuracy (qualitative merits beyond just metrics)
+- Real-World Applications (applied in experiments)
+
+I think that&#39;s a solid list. I should make sure each category is clear and relevant without being too redundant.
+&lt;/think&gt;
+
+Diffusion-Based Methods, Personalized Algorithms, Random Walks, Recommendation Systems, Top-N Recommendation, Item-to-Item Graphs, Scalability, Evaluation Metrics, Beyond Accuracy, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Personalized Diffusions for Top-N Recommendation
+Abstract:
+This paper introduces PERDIF; a novel framework for learning personalized diffusions over item-to-item graphs for top-n recommendation. PERDIF learns the teleportation probabilities of a time-inhomogeneous random walk with restarts capturing a user-specific underlying item exploration process. Such an approach can lead to significant improvements in recommendation accuracy, while also providing useful information about the users in the system. Per-user fitting can be performed in parallel and very efficiently even in large-scale settings. A comprehensive set of experiments on real-world datasets demonstrate the scalability as well as the qualitative merits of the proposed framework. PERDIF achieves high recommendation accuracy, outperforming state-of-the-art competing approaches—including several recently proposed methods relying on deep neural networks.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I&#39;m trying to categorize this research article titled &#34;Personalized Diffusions for Top-N Recommendation&#34;. The abstract mentions that they introduced a novel framework called PERDIF. It uses personalized diffusions over item-to-item graphs and is aimed at top-N recommendations. 
+
+First, I need to identify the core themes here. The paper talks about a new approach in recommendation systems, specifically using something called &#34;diffusion&#34; which I think relates to how information spreads or flows, maybe through a graph of items. They mention it&#39;s personalized, so that definitely ties into personalization techniques.
+
+They use item-to-item graphs, which suggests that the framework operates within a specific domain—probably e-commerce or digital content recommendation since those often involve items like products, movies, books, etc. So I can categorize this under &#34;Item-to-Item Recommendation&#34;.
+
+The paper also discusses scalability because it mentions experiments on real-world datasets and efficient parallel processing in large-scale settings. Scalability is a key aspect here.
+
+Looking deeper, PERDIF uses a time-inhomogeneous random walk with restarts. This sounds like a specific algorithm family related to graph-based methods or perhaps something like Markov chains or random walks, which might fall under &#34;Graph-Based Algorithms&#34;.
+
+They mention high recommendation accuracy and compare it against state-of-the-art methods, including deep neural networks. So this touches on both traditional (non-neural) approaches versus neural methods.
+
+The evaluation aspect is important too since they talk about experiments and metrics like diversity and beyond accuracy. So maybe an evaluation category like &#34;Recommendation Accuracy&#34; or something similar would fit.
+
+Real-world applications are another point; the paper discusses scalability and real datasets, indicating that it&#39;s applicable in practical settings—so I should include a category related to real-world applications.
+
+Putting this all together, the categories might be: Personalization Techniques, Item-to-Item Recommendation, Scalability, Graph-Based Algorithms, Algorithmic Frameworks (since PERDIF is a framework), Real-World Applications, and Recommendation Accuracy. Wait, but in the example given earlier, they had &#34;Scalability&#34; as one category. Let me see if I can get more precise.
+
+The abstract mentions &#34;top-N recommendation&#34;, so that&#39;s another point—maybe under &#34;Top-N Recommendations&#34;. Also, it&#39;s a diffusion-based approach, which might be specific to certain algorithms or techniques within recommendation systems.
+
+I should ensure each article is in 8-12 categories. Let me list them:
+
+1. Personalization Techniques
+2. Item-to-Item Recommendation
+3. Scalability
+4. Graph-Based Algorithms
+5. Random Walks (since they use a random walk approach)
+6. Algorithmic Frameworks
+7. Top-N Recommendations
+8. Real-World Applications
+9. recommendation Accuracy
+10. Evaluation Metrics (they mention experiments and metrics)
+11. Diffusion Models (as it&#39;s about diffusions over graphs)
+12. Efficiency (since they talk about parallel processing and efficiency)
+
+Wait, maybe &#34;Efficiency&#34; is better than &#34;Scalability&#34;? Or perhaps both can coexist since scalability often relates to handling large datasets efficiently.
+
+I think I have a good set here. Let me make sure each category is clear and relevant.
+&lt;/think&gt;
+
+Personalization Techniques, Item-to-Item Recommendation, Scalability, Graph-Based Algorithms, Random Walks, Algorithmic Frameworks, Top-N Recommendations, Real-World Applications, Recommendation Accuracy, Evaluation Metrics, Diffusion Models, Efficiency</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

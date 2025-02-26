@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/user-centric-design/">User-Centric Design</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Improving the Shortest Plank: Vulnerability-Aware Adversarial Training for Robust Recommender System (2024)</h3>
+    <p><strong>Authors:</strong> Fei Sun, Qi Cao, Yunfan Wu, Huawei Shen, Xueqi Cheng, Kaike Zhang</p>
+    <p>Recommender systems play a pivotal role in mitigating information overload in diverse fields. Nonetheless, the inherent openness of these systems introduces vulnerabilities, allowing attackers to insert fake users to skew the exposure of certain items, known as poisoning attacks. Adversarial training emerges as a notable defense mechanism against such poisoning attacks within recommender systems. Traditional adversarial training methods apply perturbations with the same scale across all users to their embeddings to maintain system robustness against the worst-case attacks. Yet, in reality, attacks often affect only a subset of users who are actually vulnerable to the specific attacks. These indiscriminate perturbations make it difficult to balance effective protection for vulnerable users and avoidance of recommendation quality degradation for those who are not. To address this issue, our research delves into understanding user vulnerability. Considering that poisoning attacks pollutes the training data, we observe that the extent of a recommender system’s fit to users’ training data, particularly when high, correlates with an increased likelihood of users incorporating attack information, thus indicating their vulnerability. Leveraging these insights, we introduce the Vulnerability-aware Adversarial Training (VAT) method, designed to counteract poisoning attacks in recommender systems. VAT employs a novel vulnerability-aware function to estimate users’ vulnerability based on the degree to which they are fitted by the system. Guided by this evaluation, VAT applies user-specific perturbations to embeddings. thereby not only reducing the success rate of attacks but also preserving—and potentially enhancing—the quality of recommendations. Comprehensive experiments confirm VAT’s superior defensive capabilities against various attacks and recommendation models.</p>
+    <p><strong>Categories:</strong> Adversarial Training, Poisoning Attacks, Robustness, Security, User Vulnerability Analysis, Defense Mechanisms, Recommender Systems, Machine Learning, Adversarial Machine Learning, Security in Recommender Systems (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1045/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Adversarial Collaborative Filtering for Free (2023)</h3>
+    <p><strong>Authors:</strong> Chin-Chia Michael Yeh, Vivian Lai, Yan Zheng, Hao Yang, Mahashweta Das, Yujie Fan, Xiaoting Li, Huiyuan Chen</p>
+    <p>Collaborative Filtering (CF) has been successfully applied to help users discover the items of interest. Nevertheless, existing CF methods suffer from noisy data issue, which negatively impacts the quality of personalized recommendation. To tackle this problem, many  prior studies leverage the adversarial learning principle to regularize the representations of users and items, which  has shown great ability in improving both generalizability and robustness. Generally, those methods  learn adversarial perturbations and model parameters using min-max optimization framework. However, there still have two major limitations: 1) Existing methods lack theoretical guarantees of why adding perturbations improve the model generalizability and robustness since noisy data is naturally different from adversarial attacks; 2)  Solving min-max optimization is time-consuming.  In addition to updating the model parameters, each iteration requires additional computations to update the perturbations, making them not scalable for industry-scale datasets. In this paper, we present Sharpness-aware Matrix Factorization (SharpMF), a simple yet effective method that conducts adversarial training without extra computational cost over the base optimizer. To achieve this goal, we first revisit the existing adversarial collaborative filtering and discuss its connection with recent Sharpness-aware Minimization. This analysis shows that adversarial training actually seeks model parameters that lie in neighborhoods having uniformly low loss values, resulting in better generalizability. To reduce the computational overhead, SharpMF introduces a novel trajectory loss to measure sharpness between current weights and past weights. Experimental results on real-world datasets demonstrate that our SharpMF achieves superior performance with almost zero additional computational cost comparing to adversarial training.</p>
+    <p><strong>Categories:</strong> Adversarial Training, Collaborative Filtering, Matrix Factorization, Recommendation Systems, Noise Handling, Generalizability, Robustness, Computational Efficiency, Optimization Techniques, Real-World Applications, User-Centric Design, Scalability, Robustness in Machine Learning (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/848/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Adversary or Friend? An adversarial Approach to Improving Recommender Systems (2022)</h3>
+    <p><strong>Authors:</strong> Pannaga Shivaswamy, Dario Garcia Garcia</p>
+    <p>Typical recommender systems models are trained to have good average performance across all users or items. In practice, this results in model performance that is good for some users but sub-optimal for many users. In this work, we consider adversarially trained machine learning models and extend them to recommender systems problems. The adversarial models are trained with no additional demographic or other information than already available to the learning algorithm. We show that adversarially reweighted learning models give more emphasis to dense areas of the feature-space that incur high loss during training. We show that a straightforward adversarial model adapted to recommender systems can fail to perform well and that a carefully designed adversarial model can perform much better. The proposed models are trained using a standard gradient descent/ascent approach that can be easily adapted to many recommender problems. We compare our results with an inverse propensity weighting based baseline that also works well in practice. We delve deep into the underlying experimental results and show that, for the users who are under-served by the baseline model, the adversarial models can achieve significantly better results.</p>
+    <p><strong>Categories:</strong> Adversarial Training, Recommender Systems, Machine Learning, Recommendation Algorithms, User-Specific Recommendations, Improving Recommendation Accuracy, Fairness in AI, Bias Mitigation, Beyond Accuracy, Algorithmic Fairness, Optimization Techniques, Fairness in Recommendations, Bias in AI, Algorithmic Bias (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/748/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>The Idiosyncratic Effects of Adversarial Training on Bias in Personalized Recommendation Learning (2021)</h3>
+    <p><strong>Authors:</strong> Felice Antonio Merra, Tommaso Di Noia, Vito Walter Anelli</p>
+    <p>Recently, recommendation systems have been proven to be susceptible to malicious perturbations of the model weights. To overcome this vulnerability, Adversarial Regularization emerged as one of the most effective solutions. Interestingly, the technique not only robustifies the model, but also significantly increases its accuracy. To date, unfortunately, the effect of Adversarial Regularization beyond-accuracy evaluation dimensions is unknown. This paper sheds light on these aspects and investigates how Adversarial Regularization impacts the amplification of popularity bias, and the deterioration of novelty and coverage of the recommendation list. The results highlight that, with imbalanced data distribution, Adversarial Regularization amplifies the popularity bias. Moreover, the empirical validation on five datasets confirms that it degrades the diversity and novelty of the generated recommendation. Code and data are available at https://github.com/sisinflab/The-Idiosyncratic-Effects-of-Adversarial-Training.</p>
+    <p><strong>Categories:</strong> Adversarial Training, Adversarial Regularization, Recommendation Systems, Personalized Recommendations, Bias in AI, Algorithmic Bias, Popularity Bias, Diversity of Recommendations, Novelty of Recommendations, Coverage of Recommendations, Beyond Accuracy, Imbalanced Data Distribution, Adversarial Attacks, Quality of Recommendations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/698/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

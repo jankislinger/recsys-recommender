@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Multi-task Item-attribute Graph Pre-training for Strict Cold-start Item Recommendation
+Abstract:
+Recommendation systems suffer in the strict cold-start (SCS) scenario, where the user-item interactions are entirely unavailable. The well-established, dominating identity (ID)-based approaches completely fail to work. Cold-start recommenders, on the other hand, leverage item contents (brand, title, descriptions, etc.) to map the new items to the existing ones. However, the existing SCS recommenders explore item contents in coarse-grained manners that introduce noise or information loss. Moreover, informative data sources other than item contents, such as users’ purchase sequences and review texts, are largely ignored. In this work, we explore the role of the fine-grained item attributes in bridging the gaps between the existing and the SCS items and pre-train a knowledgeable item-attribute graph for SCS item recommendation. Our proposed framework, ColdGPT, models item-attribute correlations into an item-attribute graph by extracting fine-grained attributes from item contents. ColdGPT then transfers knowledge into the item-attribute graph from various available data sources, i.e., item contents, historical purchase sequences, and review texts of the existing items, via multi-task learning. To facilitate the positive transfer, ColdGPT designs specific submodules according to the natural forms of the data sources and proposes to coordinate the multiple pre-training tasks via unified alignment-and-uniformity losses. Our pre-trained item-attribute graph acts as an implicit, extendable item embedding matrix, which enables the SCS item embeddings to be easily acquired by inserting these items into the item-attribute graph and propagating their attributes’ embeddings. We carefully process three public datasets, i.e., Yelp, Amazon-home, and Amazon-sports, to guarantee the SCS setting for evaluation. Extensive experiments show that ColdGPT consistently outperforms the existing SCS recommenders by large margins and even surpasses models that are pre-trained on 75 – 224 times more, cross-domain data on two out of four datasets. Our code and pre-processed datasets for SCS evaluations are publicly available to help future SCS studies.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article about recommendation systems focusing on the cold-start problem. Let me break it down step by step.
+
+First, looking at the title: &#34;Multi-Task Item-attribute Graph Pre-Training for Strict Cold-Start Item Recommendation.&#34; So it&#39;s about handling new items in a recommendation system when there&#39;s no historical data. That&#39;s definitely related to Cold Start.
+
+The abstract mentions they&#39;re using item attributes and pre-training. They talk about leveraging item contents, purchase sequences, and review texts. This makes me think of multi-modal approaches because they&#39;re combining different types of data (text, user interactions). So Multi-Modal Learning should be a category here.
+
+They also mention fine-grained item attributes which is more specific than just general content-based methods. So Fine-Grained Item Attributes would fit as another category. Since it&#39;s about graph structures and how items are connected through their attributes, Graph Neural Networks seems appropriate too.
+
+The problem domain here is recommendation systems, so I&#39;ll include that. The approach uses pre-training, which means Self-Supervised Learning might be relevant since they&#39;re using existing data to train without labeled examples for the cold-start items.
+
+They also mention multi-task learning, which is a method where multiple tasks are learned simultaneously to improve performance. So Multi-Task Learning should definitely be in there.
+
+Looking at their experiments and evaluation, they use datasets like Yelp and Amazon, so Real-World Applications would make sense as another category. 
+
+Considering the specific recommendation aspects, it&#39;s about item recommendations rather than user or hybrid, so Item Recommendation is a good fit. Also, since they&#39;re pre-training for better embeddings, Pre-trained Models should be included.
+
+Putting this all together, I think the categories are: Cold Start, Multi-Modal Learning, Fine-Grained Item Attributes, Graph Neural Networks, Recommendation Systems, Self-Supervised Learning, Multi-Task Learning, Real-World Applications, and Pre-trained Models.
+&lt;/think&gt;
+
+Cold Start, Multi-Modal Learning, Fine-Grained Item Attributes, Graph Neural Networks, Recommendation Systems, Self-Supervised Learning, Multi-Task Learning, Real-World Applications, Pre-trained Models</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Multi-task Item-attribute Graph Pre-training for Strict Cold-start Item Recommendation
+Abstract:
+Recommendation systems suffer in the strict cold-start (SCS) scenario, where the user-item interactions are entirely unavailable. The well-established, dominating identity (ID)-based approaches completely fail to work. Cold-start recommenders, on the other hand, leverage item contents (brand, title, descriptions, etc.) to map the new items to the existing ones. However, the existing SCS recommenders explore item contents in coarse-grained manners that introduce noise or information loss. Moreover, informative data sources other than item contents, such as users’ purchase sequences and review texts, are largely ignored. In this work, we explore the role of the fine-grained item attributes in bridging the gaps between the existing and the SCS items and pre-train a knowledgeable item-attribute graph for SCS item recommendation. Our proposed framework, ColdGPT, models item-attribute correlations into an item-attribute graph by extracting fine-grained attributes from item contents. ColdGPT then transfers knowledge into the item-attribute graph from various available data sources, i.e., item contents, historical purchase sequences, and review texts of the existing items, via multi-task learning. To facilitate the positive transfer, ColdGPT designs specific submodules according to the natural forms of the data sources and proposes to coordinate the multiple pre-training tasks via unified alignment-and-uniformity losses. Our pre-trained item-attribute graph acts as an implicit, extendable item embedding matrix, which enables the SCS item embeddings to be easily acquired by inserting these items into the item-attribute graph and propagating their attributes’ embeddings. We carefully process three public datasets, i.e., Yelp, Amazon-home, and Amazon-sports, to guarantee the SCS setting for evaluation. Extensive experiments show that ColdGPT consistently outperforms the existing SCS recommenders by large margins and even surpasses models that are pre-trained on 75 – 224 times more, cross-domain data on two out of four datasets. Our code and pre-processed datasets for SCS evaluations are publicly available to help future SCS studies.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article based on its title and abstract. The main focus seems to be on recommendation systems, specifically addressing the strict cold-start (SCS) problem where there&#39;s no user interaction data.
+
+First, I should identify the core themes. The article talks about item-attribute graphs and multi-task pre-training for recommendation in SCS scenarios. So &#34;Cold Start&#34; is definitely a primary category.
+
+Looking at the abstract, they mention using fine-grained item attributes to bridge the gap between existing and new items. This makes me think of &#34;Item Attributes&#34; as another category since it&#39;s central to their approach.
+
+The framework is called ColdGPT, which suggests it&#39;s part of broader GPT models applied in recommendation systems. So &#34;Recommendation Systems&#34; and &#34;GPT Models&#34; should be included.
+
+They use multi-task learning with various data sources like purchase sequences and reviews. That points towards &#34;Multi-task Learning&#34; as a relevant category.
+
+The pre-training aspect is significant, so I&#39;ll add &#34;Pre-training.&#34; They also discuss knowledge transfer using an item-attribute graph, which relates to &#34;Knowledge Transfer.&#34;
+
+They evaluate on datasets like Yelp, Amazon-home, and Amazon-sports, indicating real-world applications. Including &#34;Real World Applications&#34; makes sense for broader relevance.
+
+The paper addresses scalability in recommendation systems since it handles cold-start issues efficiently. Therefore, &#34;Scalability&#34; is another important category.
+
+Lastly, their approach deals with user behavior indirectly through purchase sequences and reviews, so categorizing under &#34;User Behavior&#34; seems appropriate.
+&lt;/think&gt;
+
+Cold Start, Item Attributes, Recommendation Systems, Multi-task Learning, Pre-training, Knowledge Transfer, Scalability, Real World Applications, User Behavior</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: RePlay: a Recommendation Framework for Experimentation and Production Use
+Abstract:
+Using a single tool to build and compare recommender systems significantly reduces the time to market for new models. In addition, the comparison results when using such tools look more consistent. This is why many different tools and libraries for researchers in the field of recommendations have recently appeared. Unfortunately, most of these frameworks are aimed primarily at researchers and require modification for use in production due to the inability to work on large datasets or an inappropriate architecture. In this demo, we present our open-source toolkit RePlay – a framework containing an end-to-end pipeline for building recommender systems, which is ready for production use. RePlay also allows you to use a suitable stack for the pipeline on each stage: Pandas, Polars, or Spark. This allows the library to scale computations and deploy to a cluster. Thus, RePlay allows data scientists to easily move from research mode to production mode using the same interfaces.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its content. Let me start by reading the title and abstract carefully.
+
+The title is &#34;RePlay: a Recommendation Framework for Experimentation and Production Use.&#34; The abstract mentions that RePlay is an open-source toolkit designed as an end-to-end pipeline for building recommender systems, suitable for both research and production. It allows scaling computations using different stacks like Pandas, Polars, or Spark, which helps in deploying to clusters. The main points are about reducing time to market, consistency in comparison results, scalability, and the ability to move from research to production without modifications.
+
+Now, looking at the guidelines, I should assign each article to 8-12 categories. Let me go through possible categories based on the provided examples and what&#39;s relevant here.
+
+First, considering the family of algorithms isn&#39;t directly mentioned in the abstract, but since it&#39;s a recommendation framework, maybe some general algorithm aspects could be included, though it might not fit as neatly as other categories.
+
+Next, the domain. Since it&#39;s about recommender systems, that&#39;s definitely one category.
+
+Something specific in the recommendation space: The article talks about moving from research to production, so &#34;Research to Production&#34; seems relevant.
+
+Aspects of evaluation: They mention comparing models and consistent results, so &#34;Model Comparison&#34; is a good fit. Also, since it&#39;s an end-to-end pipeline, maybe &#34;Evaluation Pipelines.&#34;
+
+Real-world applications: It&#39;s ready for production use and mentions A/B testing indirectly through time to market, but the abstract doesn&#39;t explicitly state real-world applications or user surveys. However, since it&#39;s designed for production, &#34;Production Use&#34; is a category.
+
+Other relevant categories could include scalability because they talk about scaling computations using different stacks. So &#34;Scalability&#34; is definitely in there.
+
+They mention being an end-to-end pipeline, so that&#39;s another category: &#34;End-to-End Pipeline.&#34;
+
+The use of different data processing tools like Pandas, Polars, and Spark indicates a focus on flexible or multi-stack solutions, so maybe &#34;Multi-Stack Solutions&#34; or more specifically, since they&#39;re about the stack used at each stage, perhaps &#34;Data Processing Tools.&#34; But given that it&#39;s an end-to-end framework, the former might be better.
+
+Additionally, the fact that it&#39;s open-source could make &#34;Open Source Tools&#34; a category. Also, since it helps data scientists move models to production easily, &#34;Data Science Workflow&#34; seems applicable.
+
+Putting this all together, I&#39;ll list out the categories:
+
+1. Recommender Systems (domain)
+2. Research to Production
+3. Model Comparison
+4. Scalability
+5. End-to-End Pipeline
+6. Evaluation Pipelines
+7. Open Source Tools
+8. Multi-Stack Solutions
+9. Data Science Workflow
+
+Wait, that&#39;s nine categories. Let me see if I can add a couple more or adjust.
+
+The abstract also mentions building and comparing recommender systems, which ties into experimentation, so &#34;Experimentation&#34; could be another category.
+
+Also, the ability to deploy to clusters suggests cloud or distributed computing aspects, but since the examples didn&#39;t specify that, maybe it&#39;s better to stick with what&#39;s given. Alternatively, &#34;Production Use&#34; as a separate category is already covered.
+
+Alternatively, considering evaluation beyond accuracy—though I don&#39;t think that&#39;s directly mentioned here. Similarly, diversity isn&#39;t discussed either. So perhaps not necessary.
+
+So my final list would be:
+
+Recommender Systems, Research to Production, Model Comparison, Scalability, End-to-End Pipeline, Evaluation Pipelines, Open Source Tools, Multi-Stack Solutions, Data Science Workflow, Experimentation
+&lt;/think&gt;
+
+Recommender Systems, Research to Production, Model Comparison, Scalability, End-to-End Pipeline, Evaluation Pipelines, Open Source Tools, Multi-Stack Solutions, Data Science Workflow, Experimentation</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

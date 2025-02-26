@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Guided Walk: A Scalable Recommendation Algorithm for Complex Heterogeneous Social Networks
+Abstract:
+Online social networks have become predominant in recent years and have grown to encompass massive scales of data. In addition to data scale, these networks can be heterogeneous and contain complex structures between different users, between social entities and various interactions between users and social entities. This is especially true in enterprise social networks where hierarchies explicitly exist between employees as well. In such networks, producing the best recommendations for each user is a very challenging problem for two main reasons. First, the complex structures in the social network need to be properly mined and exploited by the algorithm. Second, these networks contain millions or even billions of edges making the problem very difficult computationally. In this paper we present Guided Walk, a supervised graph based algorithm that learns the significance of different network links for each user and then produces entity recommendations based on this learning phase. We compare the algorithm with a set of baseline algorithms using offline evaluation techniques as well as a user survey. The offline results show that the algorithm outperforms the next best algorithm by a factor of 3.6. The user survey further confirms that the recommendation are not only relevant but also rank high in terms of personal relevance for each user. To deal with large scale social networks, the Guided Walk algorithm is formulated as a Pregel program which allows us to utilize the power of distributed parallel computing. This would allow horizontally scaling the algorithm for larger social networks by simply adding more compute nodes to the cluster.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about the Guided Walk recommendation algorithm. Let&#39;s break it down step by step.
+
+First, looking at the title: &#34;Guided Walk: A Scalable Recommendation Algorithm for Complex Heterogeneous Social Networks.&#34; Okay, so it&#39;s about a recommendation algorithm specifically designed for social networks that are complex and heterogeneous. That tells me right away some key categories might include Social Networks, Recommendation Systems, and Scalability.
+
+Now, reading the abstract, they mention online social networks have become predominant, dealing with massive scales of data. They talk about heterogeneity in these networks—complex structures between users, social entities, interactions. Especially relevant in enterprise social networks where hierarchies exist. So another category could be Enterprise Social Networks or maybe Hierarchical Structures.
+
+The main challenge is producing the best recommendations due to two reasons: mining complex structures and computational difficulty because of the large scale (millions or billions of edges). The algorithm they developed, Guided Walk, is a supervised graph-based method that learns the significance of network links for each user. So Graph-Based Algorithms is another category here.
+
+They compared it with baseline algorithms using offline evaluation techniques and a user survey. Offline Evaluation Techniques is a clear category. Additionally, User Surveys fall under Real-World Applications since they tested their algorithm in real scenarios beyond just metrics.
+
+The results showed that Guided Walk outperformed others by a factor of 3.6 in offline tests and ranked high in personal relevance according to the user survey. So Personalization is definitely a relevant category because recommendations were highly personalized.
+
+They also mention formulating Guided Walk as a Pregel program for distributed parallel computing, allowing horizontal scaling by adding compute nodes. This points to Distributed Computing and Parallel Processing categories.
+
+So putting this all together, I need to list the most relevant categories ensuring each article is in at least 8-12. Let me see:
+
+1. Social Networks - Directly mentioned.
+2. Recommendation Systems - The paper&#39;s main focus.
+3. Scalability - Algorithm designed for large-scale networks.
+4. Graph-Based Algorithms - Methodology used.
+5. Enterprise Social Networks - Specific context discussed.
+6. Offline Evaluation Techniques - Used to test the algorithm.
+7. User Surveys - Another evaluation method used.
+8. Personalization - High relevance in recommendations.
+9. Distributed Computing - Pregel program and scaling aspects.
+
+I think these cover the main points without being too specific or overlapping too much. Maybe I should consider if there&#39;s any aspect of evaluation beyond accuracy, but the abstract doesn&#39;t specify that explicitly. So sticking to what&#39;s provided, these nine categories seem appropriate.
+&lt;/think&gt;
+
+Social Networks, Recommendation Systems, Scalability, Graph-Based Algorithms, Enterprise Social Networks, Offline Evaluation Techniques, User Surveys, Personalization, Distributed Computing</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

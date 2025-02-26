@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: M2TRec: Metadata-aware Multi-task Transformer for Large-scale and Cold-start free Session-based Recommendations
+Abstract:
+Session-based recommender systems (SBRSs) have shown superior performance over conventional methods. However, they show limited scalability on large-scale industrial datasets since most models learn one embedding per item. This leads to a large memory requirement (of storing one vector per item) and poor performance on sparse sessions with cold-start or unpopular items. Using one public and one large industrial dataset, we experimentally show that state-of-the-art SBRSs have low performance on sparse sessions with sparse items. We propose M2TRec, a Metadata-aware Multi-task Transformer model for session-based recommendations. Our proposed method learns a transformation function from item metadata to embeddings, and is thus, item-ID free (i.e., does not need to learn one embedding per item). It integrates item metadata to learn shared representations of diverse item attributes. During inference, new or unpopular items will be assigned identical representations for the attributes they share with items previously observed during training, and thus will have similar representations with those items, enabling recommendations of even cold-start and sparse items. Additionally, M2TRec is trained in a multi-task setting to predict the next item in the session along with its primary category and subcategories. Our multi-task strategy makes the model converge faster and significantly improves the overall performance. Experimental results show significant performance gains using our proposed approach on sparse items on the two datasets.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on the given guidelines. Let&#39;s start by reading through the title and abstract carefully.
+
+The title is &#34;M2TRec: Metadata-aware Multi-Task Transformer for Large-Scale and Cold-Start Free Session-Based Recommendations.&#34; From this, I can gather that it&#39;s about recommendation systems, specifically session-based ones. It mentions metadata-aware and multi-task learning, which are key aspects of the approach used.
+
+Looking at the abstract, it talks about session-based recommender systems (SBRSs) having issues with scalability on large datasets because they require one embedding per item. This leads to memory problems and poor performance on sparse or cold-start sessions. The proposed solution is M2TRec, which uses metadata instead of embeddings for each item. It&#39;s a transformer model that integrates metadata, making it item-ID free, thus addressing the cold-start issue.
+
+The abstract also mentions multi-task learning where the model predicts not just the next item but its primary category and subcategories. This helps with faster convergence and better performance. They tested this on both public and industrial datasets, showing improvements in handling sparse items.
+
+Now, I need to map these elements into categories. Let&#39;s go through each part:
+
+1. **Session-Based Recommendations**: Clearly a main category as the article focuses on SBRS.
+2. **Cold Start**: The problem of recommending new or unpopular items is addressed.
+3. **Metadata-Aware Models**: Uses item metadata instead of embeddings, so this fits.
+4. **Multi-Task Learning**: The model predicts multiple things at once.
+5. **Scalability**: It&#39;s about handling large-scale data efficiently.
+6. **Transformer-Based Models**: Uses transformer architecture.
+7. **Large-Scale Recommendations**: Focuses on scalability for big datasets.
+8. **Implicit Feedback**: Since it&#39;s session-based, it likely deals with implicit user behavior (clicks, views).
+9. **Industrial Applications**: Tested on large industrial datasets, indicating real-world applicability.
+10. **Embedding-Free Methods**: Doesn&#39;t require one embedding per item, which is a novel approach.
+
+I should ensure that each category accurately reflects the content and aligns with what users might search for. Also, making sure there are enough categories without being too specific or overlapping. Let me review to avoid missing any key points: metadata integration, cold start solution, multi-task aspects, scalability, transformer use, industrial context—all covered.
+
+I think these 10 categories should adequately cover the article&#39;s content and help in discoverability for users interested in recommendation systems, especially those dealing with large-scale data and cold-start problems.
+&lt;/think&gt;
+
+Session-Based Recommendations, Cold Start, Metadata-Aware Models, Multi-Task Learning, Scalability, Transformer-Based Models, Large-Scale Recommendations, Implicit Feedback, Industrial Applications, Embedding-Free Methods</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

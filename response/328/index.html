@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Kernalized Collaborative Contextual Bandits
+Abstract:
+We tackle the problem of recommending products in the online recommendation scenario, which occurs many times in real applications. The most famous and explored instances are news recommendations and advertisements. In this work we propose an extension to the state of the art Bandit models to not only take care of different users’ interactions, but also to go beyond the linearity assumption of the expected reward. As applicative case we may consider situations in which the number of actions (products) is too big to sample all of them even once, and at the same time we have several changing users to serve content to.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article titled &#34;Kernelized Collaborative Contextual Bandits.&#34; Let&#39;s break it down step by step.
+
+First, looking at the title: &#34;Kernelized Collaborative Contextual Bandits.&#34; That tells me it&#39;s about bandit algorithms, specifically contextual ones. The use of &#34;kernelized&#34; suggests they&#39;re applying kernel methods to these bandits. Also, &#34;collaborative&#34; makes me think this is related to collaborative filtering or recommendation systems.
+
+Now the abstract mentions recommending products online, with examples like news recommendations and advertisements. So the domain here is definitely recommendation systems. They extend state-of-the-art bandit models beyond linearity, which implies they&#39;re addressing limitations of existing methods. The problem involves a large number of actions (products) where it&#39;s not feasible to sample all, so scalability must be a key aspect.
+
+They also mention changing users and serving content to them, which relates to user modeling or user adaptation. Since the expected reward isn&#39;t linear, this might tie into non-linear models or more advanced machine learning techniques like kernel methods.
+
+The fact that they&#39;re working on recommendation systems makes me think of applications in real-world scenarios, so perhaps there&#39;s an A/B testing component or evaluation metrics specific to recommendations. The problem&#39;s complexity suggests it deals with scalability and handling a large number of items, which are common challenges in recommendation systems.
+
+Putting this all together, the categories should cover the algorithm family (Collaborative Filtering, Contextual Bandits), the domain (Recommendation Systems), aspects like Scalability, Non-Linear Models, and Kernel Methods. Since it&#39;s applied to real-world issues, Real World Applications is relevant. The collaborative aspect ties into Collaborative Filtering. They might be using implicit feedback since they&#39;re handling user interactions without explicit ratings.
+
+I should also consider evaluation aspects like Beyond Accuracy, as recommendation systems often look at metrics beyond just accuracy, such as diversity or novelty of recommendations. User Adaptation and Scalability are important given the dynamic nature of users and large action spaces.
+
+So the categories I come up with are: Collaborative Filtering (since it&#39;s collaborative), Contextual Bandits (the algorithm used), Recommendation Systems (the domain), Scalability (due to handling many products), Kernel Methods (as per the title), Non-Linear Models (because they go beyond linearity), Real World Applications (applied in news and ads), User Adaptation (changing users), Implicit Feedback (handling interactions without explicit data), Beyond Accuracy (evaluation metrics), Online Learning (since it&#39;s an online recommendation scenario), and Large Action Space (managing many products).
+&lt;/think&gt;
+
+Collaborative Filtering, Contextual Bandits, Recommendation Systems, Scalability, Kernel Methods, Non-Linear Models, Real World Applications, User Adaptation, Implicit Feedback, Beyond Accuracy, Online Learning, Large Action Space</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Kernalized Collaborative Contextual Bandits
+Abstract:
+We tackle the problem of recommending products in the online recommendation scenario, which occurs many times in real applications. The most famous and explored instances are news recommendations and advertisements. In this work we propose an extension to the state of the art Bandit models to not only take care of different users’ interactions, but also to go beyond the linearity assumption of the expected reward. As applicative case we may consider situations in which the number of actions (products) is too big to sample all of them even once, and at the same time we have several changing users to serve content to.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Kernelized Collaborative Contextual Bandits&#34;. Let me start by reading through the title and abstract carefully to understand what it&#39;s about.
+
+The title mentions &#34;Kernelized Collaborative Contextual Bandits&#34;, which tells me that the article is related to collaborative filtering using bandit algorithms, possibly with some kernel method involved. Kernel methods are often used in machine learning for handling non-linear data, so that might be part of their approach here.
+
+Looking at the abstract: they&#39;re tackling online recommendation scenarios, like news recommendations and ads. They propose extending state-of-the-art Bandit models to handle different users&#39; interactions beyond linearity assumptions about expected rewards. Also, they mention cases with a large number of products where not all can be sampled, and dealing with changing user audiences.
+
+So breaking this down:
+
+1. **Family of Algorithm**: The article clearly uses Contextual Bandits since it&#39;s part of the title. They&#39;re extending Collaborative Filtering with bandit models.
+
+2. **Domain**: The problem is about product recommendations in an online setting. Examples include news and ads, but more generally, it applies to scenarios where a large number of products exist.
+
+3. **Specific Aspect in Recommendation Space**: Cold Start is mentioned as an example category, which fits here because if you have too many products, some might not be interacted with enough, leading to cold start issues.
+
+4. **Evaluation Aspects**: The abstract doesn&#39;t specify evaluation metrics, but it&#39;s about improving recommendation accuracy beyond linearity and handling changing users, so maybe &#34;Beyond Accuracy&#34; as an evaluation aspect is relevant here.
+
+5. **Real-world Applications**: They mention real-world applications like A/B testing or user surveys, indicating that their model is applicable in such settings.
+
+6. **Other Relevant Categories**: Kernel methods are a big part of their approach, which adds a non-linear element to the bandit models. Also, scalability is important because dealing with a large number of actions (products) suggests the solution must scale efficiently.
+
+Putting it all together, I think the categories should include Contextual Bandits as the primary algorithm family. The domain is recommendation systems, specifically collaborative filtering within that space. They address cold start issues due to the high number of products. Their approach likely evaluates beyond accuracy since they&#39;re moving away from linearity assumptions. Real-world application aspects like A/B testing are involved. Additionally, kernel methods and scalability are key points in their methodology.
+
+I should ensure these categories are clear and cover all relevant aspects without being too specific or too broad. Each category needs to be useful for users navigating the content. So I&#39;ll list them as follows: Contextual Bandits, Collaborative Filtering, Recommendations, Cold Start, Beyond Accuracy, Scalability, Kernel Methods, A/B Test.
+&lt;/think&gt;
+
+Contextual Bandits, Collaborative Filtering, Recommendations, Cold Start, Beyond Accuracy, Scalability, Kernel Methods, A/B Test</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

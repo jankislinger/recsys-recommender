@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: FLIP: Fine-grained Alignment between ID-based Models and Pretrained Language Models for CTR Prediction
+Abstract:
+Click-through rate (CTR) prediction plays as a core function module in various personalized online services. The traditional ID-based models for CTR prediction take as inputs the one-hot encoded ID features of tabular modality, which capture the collaborative signals via feature interaction modeling. But the one-hot encoding discards the semantic information included in the textual features. Recently, the emergence of Pretrained Language Models (PLMs) has given rise to another paradigm, which takes as inputs the sentences of textual modality obtained by hard prompt templates and adopts PLMs to extract the semantic knowledge. However, PLMs often face challenges in capturing field-wise collaborative signals and distinguishing features with subtle textual differences. In this paper, to leverage the benefits of both paradigms and meanwhile overcome their limitations, we propose to conduct Fine-grained feature-level ALignment between ID-based Models and Pretrained Language Models (FLIP) for CTR prediction. Unlike most methods that solely rely on global views through instance-level contrastive learning, we design a novel jointly masked tabular/language modeling task to learn fine-grained alignment between tabular IDs and word tokens. Specifically, the masked data of one modality (\ie, IDs and tokens) has to be recovered with the help of the other modality, which establishes the feature-level interaction and alignment via sufficient mutual information extraction between dual modalities. Moreover, we propose to jointly finetune the ID-based model and PLM by adaptively combining the output of both models, thus achieving superior performance in downstream CTR prediction tasks. Extensive experiments on three real-world datasets demonstrate that FLIP outperforms SOTA baselines, and is highly compatible with various ID-based models and PLMs. The code is available for reviewers\footnote{\url{https://anonymous.4open.science/r/FLIP-2534}}.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s tackle this categorization task step by step. I&#39;m looking at the article titled &#34;FLIP: Fine-grained Alignment between ID-based Models and Pretrained Language Models for CTR Prediction.&#34; The abstract discusses how traditional ID-based models use one-hot encoded features but lack semantic information, while PLMs capture semantics but struggle with field-wise collaborative signals. The solution proposed is FLIP, which aligns these two approaches at a fine-grained feature level to improve CTR prediction.
+
+First, I&#39;ll start by identifying the main themes and components of the article. It mentions CTR prediction, which is crucial for personalized services, so that&#39;s definitely one category. ID-based models are central, so they should be included. Pretrained language models (PLMs) are another key element, so adding that makes sense.
+
+The article talks about combining tabular data with textual features, highlighting the integration of different modalities. That points to Multi-Modality as a relevant category. Fine-grained alignment is a novel approach here, which isn&#39;t too common, so it&#39;s worth noting as a specific technique.
+
+They use contrastive learning but at a feature level rather than instance-level, so Feature-level Contrastive Learning should be a category. The combination of ID-based models with PLMs suggests Cross-Model Collaboration or something similar, which I can capture with Model Combination or Integration.
+
+The method involves mutual information extraction between the two modalities to establish alignment. Mutual Information is an important concept in machine learning, so that&#39;s another category. Since they&#39;re fine-tuning both types of models together, Joint Finetuning would be appropriate.
+
+Looking at the broader areas, this falls under Recommender Systems since CTR prediction is a key part of recommendation engines. The techniques used are quite specific but also fall under General Machine Learning as it applies to a common problem in ML.
+
+I should ensure each category is clear and relevant. I&#39;ll avoid making categories too narrow that they might not be useful, but still specific enough to capture the essence of the article. Let me make sure there are 8-12 categories as per guidelines, covering both broad areas and specific techniques used.
+&lt;/think&gt;
+
+Click-through Rate (CTR) Prediction, ID-based Models, Pretrained Language Models (PLMs), Multi-Modality, Fine-grained Alignment, Feature-level Contrastive Learning, Model Combination, Mutual Information, Joint Finetuning, Recommender Systems, General Machine Learning.</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

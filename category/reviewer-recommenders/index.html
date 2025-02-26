@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Elsevier, Fairness in Recommendations (2021)</h3>
+    <p><strong>Authors:</strong> Daniel Kershaw</p>
+    <p>At Elsevier we aim to help scientists further their research. On the one hand, by offering a platform for publishing ground-breaking research, and on the other by helping researchers discover relevant content to assist their work. In our team, Editorial Data Science, we support the former goal by providing tools to help editors in the decisions that they make, from finding reviewers to recommending transfers for manuscripts to more appropriate journals. To improve the workflows for publishing research and help editors in finding relevant reviewers we developed a reviewer recommender. The reviewer recommender will, based on a submitted manuscript, recommend reviewers that optimise the fit between the manuscript, the journal, and the reviewer themselves. To achieve this, the reviewer recommender is built on top of the three principles of quality data, expert knowledge, and experimentation. We leverage data from across Elsevier, ranging from Scopus profiles which includes publication histories and academic impact data, to data from our publishing platform which includes historic invites and subsequent actions around submitted manuscripts. All this data is used to develop and evaluate appropriate models for recommending reviewers. There are many factors to consider when deciding if someone is relevant to review a submitted manuscript. To name a few, the topic of interest of the reviewer, level of expertise of the reviewer, fit of the reviewer to the journal. But we are ultimately looking for the fit between the three stake holders: the manuscript, the journal, and the reviewer. However, it is not as simple as looking for a fit purely on topic or relevance. We can find evidence for that in the growth of research into recommender systems for multi-sided market [ 7] places where all sides within the systems must be considered. In our case, in addition to topical fit, we must consider fairness in recommendations, where minority groups get equal and fair treatment. For this reason, we consider two ’additional’ constraints when developing recommender systems at Elsevier, fairness in the recommendations and respecting the reviewers time and privacy. Fairness in Recommendations is important in recommending people particular within academic fields where there are known biases against minority groups. This bias is present in data which we use. [REF] showed that women and minorities over their academic and research careers are disadvantaged compared to members of the majority groups, either through less research output due to more teaching [ 6] or taking time out to raise families which resulted in lower number of research output [8]. Though bias is not only limited to quantities of research output [ 4 ] showed that women receive fewer citations even when controlling to quantity of research output and gender. This effect of receiving proportionally fewer citation is also amplified [ 5] identified that women are disproportionally ranked lower on the author list of a paper. These observations are not limited to gender but also race and age. Using these features derived from bibliometric analysis without due care within a model could lead to adverse impact against minority groups, resulting in the reviewers from these groups being recommended less and thus less invites to review manuscripts, whilst making sure any interventions does not create additional harms. Respecting user privacy and time. We know through user research that there is also the need to respect the researcher whom we are asking to review these manuscripts. Either because they are too busy to accept another review, or that they feel the manuscript is out of their scope and they are invited to review irrelevant papers. In this talk we show how at Elsevier we build fairness and understanding of stake holders into our recommenders, particularly the reviewer recommender. We experimented with a variety of technologies, ranging from simple search to sophisticated ML models. They all follow the common IR approach of candidate selection followed by re-ranking. All approaches use roughly the same features representing the reviewer (topics they have published in), the journal (topics the journal publishes and metrics about the reviewers they have selected before), the manuscript (key concepts within the manuscript). Through iterating over different models and techniques, we understand the importance of different features, along with their impact on model performance. But more specifically which features have inherent bias built into them, which feature are most predictive , and which fairness aware methods have been used to mitigate these biases [1, 2]. We will then discuss the methods and challenges of including bias metrics in the evaluation and development of the reviewer recommender. In this we focus on how we evaluate fairness from historical data along with group-wise fairness metrics such as demographic parity and equal opportunity. We then discuss the challenges and successes of monitoring these metrics in production [3]. This combination of feature understanding and fairness evaluation at every stage in the model development means we have a deep understanding of how the model works, who it impacts, and how. Resulting in a fair model which keeps the reviewers at the heart of the review process. However, we must not forget, this work sits within the wider academic review system, where bias is introduced on many levels through hiring, promotions and research engagement. Even though a reviewer recommender can not correct the underlying bias, it can contribute to a fairer and more equal outcome.</p>
+    <p><strong>Categories:</strong> Fairness in Recommendations, Academic Publishing, Reviewer Recommenders, Machine Learning Models, Information Retrieval, Bias Mitigation, Gender Bias, Minority Groups, Group-wise Fairness Metrics, Demographic Parity, Equal Opportunity, Systemic Bias, Feature Analysis, Model Transparency, Reviewer Privacy, Time Management (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/720/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

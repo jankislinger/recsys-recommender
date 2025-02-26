@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommending Personalised Targeted Training Adjustments for Marathon Runners
+Abstract:
+Preparing for the marathon involves many weeks of dedicated training. Achieving the right balance between building strength and endurance and the need for rest and recovery is a must, if a runner is to arrive at the start-line injury-free and ready to achieve their desired finish-time. However, because most recreational runners rely on generic training plans, they can struggle to find this balance, which can impact their motivation, health, and performance. In this paper, we describe a novel case-based reasoning approach to fine-tuning a runner’s training by recommending training adjustments based on the patterns of similar runners at corresponding points in their marathon training. The approach is designed to target training adjustments that are based on similar runners but with varying race goals,  to allow runners to adjust their training for slower or faster finish-times, as their training progresses and motivations change. We evaluate the recommendations produced using a large-scale real-world dataset according to several factors including, (i) the plausibility of the recommended training adjustment, (ii) the effectiveness of the adjustment when it comes to achieving a particular performance goal, and (iii) the safety of the adjustment in terms of the degree of risk that it will lead to an injury or otherwise disrupt training. Our findings suggest that plausible, effective, and safe recommendations can be generated for runners when evaluated against a range of race goals.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article about recommending personalized training adjustments for marathon runners. Let me go through the process step by step.
+
+First, the title mentions &#34;Recommending Personalised Targeted Training Adjustments,&#34; which immediately tells me it&#39;s about recommendation systems tailored to individuals. The focus is on marathon runners, so that points towards a specific application in sports or fitness.
+
+Looking at the abstract, it talks about case-based reasoning as the approach used. I remember that case-based reasoning (CBR) is a method where solutions are derived from past cases, so that&#39;s an important algorithm family to note. The problem domain here is clearly marathon training, which falls under the broader category of Sports or maybe even more specifically, Athletics.
+
+The article also discusses evaluating recommendations based on plausibility, effectiveness, and safety. These evaluation aspects are crucial because they go beyond just accuracy—they consider whether the recommendations make sense in real-world scenarios, if they work as intended, and if they&#39;re safe for the user. This makes me think of categories like &#34;Evaluation of Recommendations&#34; or more specifically, &#34;Safety of Adjustments.&#34;
+
+The system targets runners with varying race goals, which means it&#39;s adaptable to different performance levels. This adaptability is a key feature in personalized recommendations, so terms like &#34;Personalized Recommendations&#34; and maybe even &#34;Performance Optimization&#34; come into play.
+
+Another point is the use of real-world data from a large-scale dataset, indicating that there are practical applications and possibly A/B testing or user surveys involved to validate the effectiveness of these training adjustments. That ties into categories such as &#34;Real-World Applications&#34; and perhaps &#34;User Feedback.&#34;
+
+The need for balancing strength, endurance, rest, and recovery shows that the recommendations have multiple objectives beyond just performance. This could be categorized under something like &#34;Multi-objective Recommendations&#34; or focusing on aspects like &#34;Injury Prevention,&#34; which is a safety concern.
+
+Putting it all together, I should consider both broad categories like Recommendation Systems, Sports/Fitness, Machine Learning Applications, and more specific ones like Case-Based Reasoning, Evaluation Metrics (Plausibility, Effectiveness, Safety), Real-World Applications, etc. It&#39;s also important to think about user-centric aspects such as Personalization and Adaptability.
+
+I need to make sure each category is relevant and that there are enough of them without being too redundant. For example, both &#34;Sports&#34; and &#34;Athletics&#34; might be useful if they&#39;re distinct categories, but I should check how they’re defined elsewhere. Similarly, terms like &#34;Recommendation Systems&#34; and &#34;Personalized Recommendations&#34; can coexist as they represent different levels of specificity.
+
+I also need to ensure that the categories align with what users are likely searching for. Someone interested in recommendation algorithms might look under &#34;Case-Based Reasoning,&#34; while another looking into sports applications would find it under &#34;Sports.&#34; Additionally, aspects like evaluation (Diversity, Beyond Accuracy) and practical testing methods (A/B Test) should be included to reflect the study&#39;s thoroughness.
+
+I think I&#39;ve covered most of the bases here. Now, I&#39;ll list out the categories making sure each is distinct and relevant.
+&lt;/think&gt;
+
+Recommendation Systems, Sports, Case-Based Reasoning, Personalized Recommendations, Training Optimization, Performance Goals, Real-World Applications, Evaluation Metrics (Plausibility), Evaluation Metrics (Effectiveness), Evaluation Metrics (Safety), Injury Prevention, Machine Learning Applications, Adaptability, User Feedback, Multi-objective Recommendations, Athletics.</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

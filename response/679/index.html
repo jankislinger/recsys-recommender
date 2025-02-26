@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: An Analysis Of Entire Space Multi-Task Models For Post-Click Conversion Prediction
+Abstract:
+Industrial recommender systems are frequently tasked with approximating probabilities for multiple, often closely related, user actions. For example, predicting if a user will click on an advertisement and if they will then purchase the advertised product. The conceptual similarity between these tasks has promoted the use of multi-task learning: a class of algorithms that aim to bring positive inductive transfer from related tasks. Here, we empirically evaluate multi-task learning approaches with neural networks for an online advertising task. Specifically, we consider approximating the probability of post-click conversion events (installs) (CVR) for mobile app advertising on a large-scale advertising platform, using the related click events (CTR) as an auxiliary task. We use an ablation approach to systematically study recent approaches that incorporate both multitask learning and “entire space modeling” which train the CVR on all logged examples rather than learning a conditional likelihood of conversion given clicked. Based on these results we show that several different approaches result in similar levels of positive transfer from the data-abundant CTR task to the CVR task and offer some insight into how the multi-task design choices address the two primary problems affecting the CVR task: data sparsity and data bias. Our findings add to the growing body of evidence suggesting that standard multi-task learning is a sensible approach to modelling related events in real-world large-scale applications and suggest the specific multitask approach can be guided by ease of implementation in an existing system.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about post-click conversion prediction using multi-task models. Let me start by reading through the title and abstract carefully.
+
+The title mentions &#34;Entire Space Multi-Task Models&#34; for predicting post-click conversions. The abstract explains that they&#39;re looking at industrial recommender systems dealing with multiple related user actions, like clicks and purchases. They use multi-task learning with neural networks to predict conversion rates (CVR) using click-through rates (CTR) as an auxiliary task.
+
+First, I&#39;ll identify the core themes. The main focus is on recommendation systems, specifically in the context of online advertising for mobile apps. They&#39;re dealing with predicting conversions after clicks, which relates to both CTR and CVR metrics. So categories like Recommender Systems and Online Advertising make sense here.
+
+The article uses multi-task learning approaches, so that&#39;s another key category. It also mentions neural networks, specifically using them in the context of these recommendation tasks. The study involves entire space modeling, which is a specific approach they&#39;re evaluating, so I should include that as a category.
+
+Looking at the methodology, they used an ablation study to systematically evaluate different approaches. That&#39;s a type of evaluation method, so Evaluation Methodology would be appropriate.
+
+The problem they&#39;re addressing includes data sparsity and bias in the CVR task. These are specific issues in recommendation systems, especially when dealing with conversion predictions. So including Data Sparsity and Data Bias as categories will help users interested in those challenges find this article.
+
+The domain here is mobile app advertising since they&#39;re applying their model to a large-scale platform. Therefore, Mobile App Advertising should be one of the categories.
+
+They also discuss real-world applications because they tested their approach on an actual advertising platform, possibly using A/B testing or user surveys. However, the abstract doesn&#39;t explicitly mention A/B tests or user surveys, so I might skip those unless specified.
+
+The study&#39;s findings suggest that standard multi-task learning is effective for related events in large-scale systems, and the approach can be guided by implementation ease in existing systems. This ties into system design considerations, so System Design could be another category.
+
+Putting it all together, the categories should cover the main focus areas like Recommender Systems, Online Advertising, Multi-Task Learning, Neural Networks, Entire Space Modeling, Evaluation Methodology, Data Sparsity, Data Bias, Mobile App Advertising, and System Design. This ensures that users looking for information in any of these areas can easily find this article.
+
+I need to make sure each category is clear and directly related to the content. Also, I should avoid too many overlapping categories or ones that are too vague. Each one should add value for someone navigating through the interface.
+&lt;/think&gt;
+
+Recommender Systems, Online Advertising, Multi-Task Learning, Neural Networks, Entire Space Modeling, Evaluation Methodology, Data Sparsity, Data Bias, Mobile App Advertising, System Design</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: An Analysis Of Entire Space Multi-Task Models For Post-Click Conversion Prediction
+Abstract:
+Industrial recommender systems are frequently tasked with approximating probabilities for multiple, often closely related, user actions. For example, predicting if a user will click on an advertisement and if they will then purchase the advertised product. The conceptual similarity between these tasks has promoted the use of multi-task learning: a class of algorithms that aim to bring positive inductive transfer from related tasks. Here, we empirically evaluate multi-task learning approaches with neural networks for an online advertising task. Specifically, we consider approximating the probability of post-click conversion events (installs) (CVR) for mobile app advertising on a large-scale advertising platform, using the related click events (CTR) as an auxiliary task. We use an ablation approach to systematically study recent approaches that incorporate both multitask learning and “entire space modeling” which train the CVR on all logged examples rather than learning a conditional likelihood of conversion given clicked. Based on these results we show that several different approaches result in similar levels of positive transfer from the data-abundant CTR task to the CVR task and offer some insight into how the multi-task design choices address the two primary problems affecting the CVR task: data sparsity and data bias. Our findings add to the growing body of evidence suggesting that standard multi-task learning is a sensible approach to modelling related events in real-world large-scale applications and suggest the specific multitask approach can be guided by ease of implementation in an existing system.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s tackle this categorization task for the given research article. The title mentions &#34;Entire Space Multi-Task Models&#34; and focuses on post-click conversion prediction. From the abstract, I gather that it discusses multi-task learning (MTL) in recommender systems, specifically using neural networks for online advertising.
+
+First, I need to identify key themes. The main focus is on multi-task models, so &#34;Multi-Armed Bandits&#34; seems relevant as they&#39;re a family of algorithms related to MTL. It&#39;s about predicting user actions, which falls under &#34;User Response Prediction.&#34;
+
+The problem domain here is clearly online advertising, especially for mobile apps, so I&#39;ll add &#34;Online Advertising.&#34; The article also deals with click-through rates (CTR) and conversion rates (CVR), so including both makes sense.
+
+Looking deeper, the study uses an ablation approach to evaluate different MTL approaches. This methodological aspect suggests adding &#34;A/B Test&#34; since it&#39;s a common practice in evaluating models in real-world applications.
+
+The article addresses challenges like data sparsity and bias, which are important issues in recommendation systems. Hence, I&#39;ll include &#34;Data Sparsity&#34; and &#34;Data Bias.&#34; Additionally, the use of neural networks points to &#34;Neural Networks&#34; as a relevant category.
+
+Since the study is applied in a large-scale advertising platform, it&#39;s practical and touches on real-world applications, so &#34;Real World Applications&#34; fits well. Lastly, the evaluation aspects mentioned imply that factors like diversity and beyond accuracy are considered, leading me to include both &#34;Diversity of Recommendations&#34; and &#34;Beyond Accuracy.&#34;
+
+Putting it all together, I have 12 categories that capture the essence of the article from various angles—methodologies, domains, challenges, and applications.
+&lt;/think&gt;
+
+Multi-Armed Bandits, User Response Prediction, Online Advertising, Click-Through Rate (CTR), Conversion Rate (CVR), Multi-Task Learning, Entire Space Modeling, A/B Test, Data Sparsity, Data Bias, Neural Networks, Real World Applications, Diversity of Recommendations, Beyond Accuracy</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

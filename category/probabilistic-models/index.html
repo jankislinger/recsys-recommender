@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/cold-start/">Cold Start</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/offline-evaluation/">Offline Evaluation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>The Role of Unknown Interactions in Implicit Matrix Factorization — A Probabilistic View (2024)</h3>
+    <p><strong>Authors:</strong> Bart Goethals, Joey De Pauw</p>
+    <p>Matrix factorization is a well-known and effective methodology for top-k list recommendation. It became widely known during the Netflix challenge in 2006, and since then, many adapted and improved versions have been published. A particularly interesting matrix factorization algorithm called iALS (for implicit Alternating Least Squares) adapts the method for implicit feedback, i.e.\ a setting where only a very small amount of positive labels are available along with a majority of unknown labels. Compared to the classical task of rating prediction, learning from implicit feedback is applicable to many more domains, as the data is more abundant and requires less effort to elicit from users. However, the sparsity, imbalance, and implicit nature of the signal also pose unique challenges to retrieving the most relevant items to recommend. We revisit the role of unknown interactions in implicit matrix factorization. Traditionally, all unknowns are interpreted as negative samples and their importance in the training objective is then down-weighted to balance them out with the known, positive interactions. Interestingly, by adapting a probabilistic view of matrix factorization, we can retain the unknown nature of these interactions by modelling them as either positive or negative. With this new formulation that better fits the underlying data, we gain improved performance on the downstream recommendation task without any computational overhead compared to the popular iALS method. This paper outlines the key insights needed to adapt iALS to use logistic regression. Furthermore, the popular full-rank EASE model is identified as a special case of iALS. With this knowledge, EASE was trivially adapted to use logistic regression as well. An extensive experimental evaluation on several real-world datasets demonstrates the effectiveness of our approach. Additionally, a discrepancy between the need for weighting between factorization and regression models is discovered, leading towards a better understanding of these methods.</p>
+    <p><strong>Categories:</strong> Matrix Factorization, Implicit Feedback, Recommendation Systems, Algorithm Adaptation, Probabilistic Models, iALS, Real-World Applications, Cold Start, Evaluation Methods, Model Interpretation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1069/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A Probabilistic Position Bias Model for Short-Video Recommendation Feeds (2023)</h3>
+    <p><strong>Authors:</strong> Olivier Jeunen</p>
+    <p>Modern web-based platforms often show ranked lists of recommendations to users, in an attempt to maximise user satisfaction or business metrics. Typically, the goal of such systems boils down to maximising the exposure probability — conversely, minimising the rank— for items that are deemed “reward-maximising” according to some metric of interest. This general framing comprises music or movie streaming applications, as well as e-commerce, restaurant or job recommendations, and even web search. Position bias or user models can be used to estimate exposure probabilities for each use-case, specifically tailored to how users interact with the presented rankings. A unifying factor in these diverse problem settings is that typically only one or several items will be engaged with (clicked, streamed, purchased, et cetera) before a user leaves the ranked list.  Short-video feeds on social media platforms diverge from this general framing in several ways, most notably that users do not tend to leave the feed after, for example, liking a post. Indeed, seemingly infinite feeds invite users to scroll further down the ranked list. For this reason, existing position bias or user models tend to fall short in such settings, as they do not accurately capture users’ interaction modalities. In this work, we propose a novel and probabilistically sound personalised position bias model for feed recommendations. We focus on a 1st-level feed in a hierarchical structure, where users may enter a 2nd-level feed via any given 1st-level item. We posit that users come to the platform with a given scrolling budget that is drawn according to a discrete power-law distribution, and show how the survival function of said distribution can be used to obtain closed-form estimates for personalised exposure probabilities. Empirical insights gained through data from a large-scale social media platform show how our probabilistic position bias model more accurately captures empirical exposure than existing models, and paves the way for improved unbiased evaluation and learning-to-rank.</p>
+    <p><strong>Categories:</strong> Probabilistic Models, Short-Video Recommendations, Social Media Platforms, Position Bias, Recommendation Systems, Learning to Rank, Exposure Probability, Personalized Recommendations, User Engagement, Real-World Applications, Hierarchical Feed Structures, Empirical Analysis, User Interaction Patterns (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/894/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Distribution-based Learnable Filters with Side Information for Sequential Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Liang Wang, Haibo Liu, Zhixiang Deng, Jinjia Peng, Shi Feng</p>
+    <p>Sequential Recommendation aims to predict the next item by mining out the dynamic preference from user previous interactions. However, most methods represent each item as a single fixed vector, which is incapable of capturing the uncertainty of item-item transitions that result from time-dependent and multifarious interests of users. Besides, they fail to effectively exploit side information that helps to better express user preferences. At last, the noise in user’s access sequence, which is due to accidental clicks, can interfere with the next item prediction and lead to lower recommendation performance. To deal with these issues, we propose DLFS-Rec, a novel model that combines Distribution-based Learnable Filters with Side information for sequential Recommendation. Specifically, items and their side information are represented by stochastic Gaussian distribution, which is described by mean and covariance embeddings, and then the corresponding embeddings are fused to generate a final representation for each item. To attenuate noise, stacked learnable filter layers are applied to smooth the fused embeddings. The similarities between the distributions inferred from the last filter layer and candidates are measured by 2-Wasserstein distance for generating recommendation list. Extensive experiments on four public real-world datasets demonstrate the superiority of the proposed model over state-of-the-art baselines, especially on cold start users and items.</p>
+    <p><strong>Categories:</strong> Distribution-Based Methods, Learnable Filters, Sequential Recommendation, Recommendation Systems, Side Information, Noise Reduction, Cold Start, Probabilistic Models, Model-Based Methods, Real-World Applications, Recommendation Quality (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/860/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A Lightweight Method for Modeling Confidence in Recommendations with Learned Beta Distributions (2023)</h3>
+    <p><strong>Authors:</strong> Harrie Oosterhuis, Norman Knyazev</p>
+    <p>Most recommender systems (RecSys) do not provide an indication of confidence in their decisions. Therefore, they do not distinguish between recommendations of which they are certain, and those where they are not. Existing confidence methods for RecSys are either inaccurate heuristics, conceptually complex or very computationally expensive. Consequently, real-world RecSys applications rarely adopt these methods, and thus, provide no confidence insights in their behavior. In this work, we propose learned beta distributions (LBD) as a simple and practical recommendation method with an explicit measure of confidence. Our main insight is that beta distributions predict user preferences as probability distributions that naturally model confidence on a closed interval, yet can be implemented with the minimal model-complexity. Our results show that LBD maintains competitive accuracy to existing methods while also having a significantly stronger correlation between its accuracy and confidence. Furthermore, LBD has higher performance when applied to a high-precision targeted recommendation task. Our work thus shows that confidence in RecSys is possible without sacrificing simplicity or accuracy, and without introducing heavy computational complexity. Thereby, we hope it enables better insight into real-world RecSys and opens the door for novel future applications.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Confidence Modeling, Beta Distributions, Lightweight Methods, Computational Efficiency, Accuracy Evaluation, Real-World Applications, Practical Methods, Probabilistic Models (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/843/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Towards Source-Aligned Variational Models for Cross-Domain Recommendation (2021)</h3>
+    <p><strong>Authors:</strong> Aghiles Salah, Hady Lauw, Thanh Binh Tran</p>
+    <p>Data sparsity is a long-standing challenge in recommender systems. Among existing approaches to alleviate this problem, cross-domain recommendation consists in leveraging knowledge from a source domain or category (e.g., Movies) to improve item recommendation in a target domain (e.g., Books). In this work, we advocate a probabilistic approach to cross-domain recommendation and rely on variational autoencoders (VAEs) as our latent variable models. More precisely, we assume that we have access to a VAE trained on the source domain that we seek to leverage to improve preference modeling in the target domain. To this end, we propose a model which learns to fit the target observations and align its hidden space with the source latent space jointly. Since we model the latent spaces by the variational posteriors, we operate at this level, and in particular, we investigate two approaches, namely rigid and soft alignments. In the former scenario, the variational model in the target domain is set equal to the source variational model. That is, we only learn a generative model in the target domain. In the soft-alignment scenario, the target VAE has its variational model, but which is encouraged to look like its source counterpart. We analyze the proposed objectives theoretically and conduct extensive experiments to illustrate the benefit of our contribution. Empirical results on six real-world datasets show that the proposed models outperform several comparable cross-domain recommendation models.</p>
+    <p><strong>Categories:</strong> Cross-Domain Recommendation, Variational Autoencoder, Probabilistic Models, Data Sparsity, Model Adaptation, Latent Space Alignment, Recommendation Systems, Movies, Books, Model Development, Theoretical Analysis (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/674/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Information Interactions in Outcome Prediction: Quantification and Interpretation using Stochastic Block Models (2021)</h3>
+    <p><strong>Authors:</strong> Gaël Poux-Médard, Sabine Loudcher, Julien Velcin</p>
+    <p>In most real-world applications, it is seldom the case that a result appears independently from an environment. In social networks, users’ behavior results from the people they interact with, news in their feed, or trending topics. In natural language, the meaning of phrases emerges from the combination of words. In general medicine, a diagnosis is established on the basis of the interaction of symptoms. Here, we propose the Interacting Mixed Membership Stochastic Block Model (IMMSBM), which investigates the role of interactions between entities (hashtags, words, memes, etc.) and quantifies their importance within the aforementioned corpora. We find that in inference tasks, taking them into account leads to average relative changes with respect to non-interacting models of up to 150% in the probability of an outcome and greatly improves the predictions performances. Furthermore, their role greatly improves the predictive power of the model. Our findings suggest that neglecting interactions when modeling real-world phenomena might lead to incorrect conclusions being drawn.</p>
+    <p><strong>Categories:</strong> Network Analysis, Graph Theory, Outcome Prediction, Interaction Effects, Probabilistic Models, Social Networks, Natural Language Processing, General Medicine, Model Improvement, Real-World Applications, Stochastic Block Models, Machine Learning, Algorithm Families, Mixed Membership Models, Model Development, Evaluation Metrics (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/644/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Recommending the Video to Watch Next: An Offline and Online Evaluation at YOUTV.de (2020)</h3>
+    <p><strong>Authors:</strong> Markus Zanker, Daniel Morandini, Ludovik Coba, Panagiotis Symeonidis, Andrea Janes, Dmitry Chaltsev, Andreas Unterhuber, Philip Giuliani</p>
+    <p>The task “recommend a video to watch next?” has been in the focus of recommender systems’ research for a long time. However, adequately exploiting the clues hidden in the sequences of actions of user sessions in order to reveal users’ short-term intentions moved only recently into the focus of research. Based on a real-world application scenario, in this paper, we propose a Markov Chain-based transition probability matrix to efficiently reveal the short-term preferences of individuals. We experimentally evaluated our proposed method by comparing it against state-of-the-art algorithms in an offline as well as a live evaluation setting. In both cases our method not only demonstrated its superiority over its competitors, but exposed a clearly stronger engagement of users on the platform. In the online setting, our method improved the click-through rate by up to 93.61%. This paper therefore contributes real-world evidence for improving the recommendation effectiveness, by considering sequence-awareness, since capturing the short-term preferences of users is crucial in the light of items with a short life span such as tv programs (news, tv shows, etc.).</p>
+    <p><strong>Categories:</strong> Markov Chain, Media/TV, Sequence-Aware Recommendations, Recommendation Systems, Offline Evaluation, Online Evaluation, Real-World Application, Click-Through Rate (CTR), User Engagement, State-of-the-Art Comparison, Probabilistic Models, Cold Start Problem (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/552/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Quick and Accurate Attack Detection in Recommender Systems through User Attributes (2019)</h3>
+    <p><strong>Authors:</strong> Ismail Uysal, Yasin Yilmaz, Mehmet Aktukmak</p>
+    <p>Malicious profiles have been a credible threat to collaborative recommender systems. Attackers provide fake item ratings to systematically manipulate the platform. Attack detection algorithms can identify and remove such users by observing rating distributions. In this study, we aim to use the user attributes as an additional information source to improve the accuracy and speed of attack detection. We propose a probabilistic factorization model which can embed mixed data type user attributes and observed ratings into a latent space to generate anomaly statistics for new users. To identify the persistent outliers in the system, we also propose a sequential attack detection algorithm to enable quick and accurate detection based on the probabilistic model learned from genuine users. The proposed model demonstrates significant improvements in both accuracy and speed when compared to baseline algorithms on a popular benchmark dataset.</p>
+    <p><strong>Categories:</strong> Attack Detection, Recommender Systems, Algorithmic Improvements, Probabilistic Models, User Attributes, Cybersecurity, Sequential Processing, Anomaly Detection, Latent Space Models, Detection Speed, Performance Metrics, Probabilistic Factorization, User Rating Analysis, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/495/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Neural Gaussian Mixture Model for Review-based Rating Prediction (2018)</h3>
+    <p><strong>Authors:</strong> Haofei Zhou, Jian Yu, Dong Deng, Liping Jing, Sun Shaolong</p>
+    <p>Reviews has been proven to be an important information in recommendation. Different from the overall user-item rating matrix, it can provide textual information that exhibits why a user likes an item or not. Recently, more and more researchers have paid attention on review-based rating prediction. There are two challenging issues: how to extract representative features to characterize users / items from reviews and how to leverage them for recommendation system. In this paper, we propose a Neural Gaussian Mixture Model for review-based rating prediction task (NGMM). Among it, the textual review information is used to construct two parallel neural networks for users and items respectively, so that the users’ preferences and items’ properties can be sufficiently extracted and written as two latent vectors. A shared layer is introduced on the top to couple these two networks together and model user-item rating based on the features learned from reviews. Specifically, each rating is modeled via a Gaussian mixture model, where each Gaussian component has zero variance, the mean described by the corresponding component in user’s latent vector and the weight indicated by the corresponding component in item’s latent vector. Extensive experiments are conducted on five real-world Amazon review datasets. The experimental results have demonstrated that our proposed NGMM model achieves the state-of-the-art performance in review-based rating prediction task.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Review-based Recommendations, Rating Prediction, Deep Learning, Neural Networks, Natural Language Processing, Feature Extraction, Collaborative Filtering, Gaussian Mixture Model, Probabilistic Models, Real-World Applications, Evaluation and Benchmarking (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/353/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Sustainability at Scale: Bridging the Intention-Behavior Gap with Sustainable Recommendations (2018)</h3>
+    <p><strong>Authors:</strong> Lise Getoor, Ben London, Steven Isley, Sabina Tomkins</p>
+    <p>We present an approach for jointly discovering sustainable products and sustainability-minded customers while making recommendations informed by these discoveries. Identifying sustainable products, and the customers who are interested in purchasing them, can improve customer satisfaction while also having a potentially large positive environmental impact. Finding sustainable products and evaluating their claims is a significant barrier facing sustainability-minded customers. Tools that reduce both these burdens are likely to boost the sale of sustainable products. However, it is difficult to determine the sustainability characteristics of these products — there are a variety of certifications and definitions of sustainability, and quality labeling requires input from domain experts. In this paper, we propose a flexible probabilistic framework that uses domain knowledge to identify sustainable products and customers, and uses these labels to predict customer purchases. We evaluate our approach on grocery items from the Amazon catalog. Our proposed approach outperforms established recommender system models in predicting future purchases while jointly inferring sustainability scores for customers and products.</p>
+    <p><strong>Categories:</strong> Sustainability, Recommendation Systems, User Behavior Analysis, Environmental Impact, Customer Satisfaction, Product Discovery, Domain-Specific Recommendations, Probabilistic Models, Machine Learning in Recommendations, Evaluation Metrics, Domain Knowledge Integration, E-commerce Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/390/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A Probabilistic Model for Intrusive Recommendation Assessment (2018)</h3>
+    <p><strong>Authors:</strong> Rim Faiz, Mohand Boughanem, Imen Akermi</p>
+    <p>The overwhelming advances in mobile technologies allow recommender systems to be highly contextualized and able to deliver recommendation without an explicit request. However, it is no longer enough for a recommender system to determine what to recommend according to the users’ needs, but it also has to deal with the risk of disturbing the user during recommendation. We believe that mobile technologies along with contextual information may help alleviate this issue. In this paper, we address intrusiveness as a probabilistic approach that makes use of the several embedded applications within the user’s device and the user’s contextual information in order to figure out intrusive recommendations that are subject to rejection. The experiments that we conducted have shown that the proposed approach yields promising results.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Probabilistic Models, Mobile Technologies, Contextual Information, User Experience (UX), Rejection of Recommendations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/369/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Fewer Flops at the Top: Accuracy, Diversity, and Regularization in Two-Class Collaborative Filtering (2017)</h3>
+    <p><strong>Authors:</strong> Bibek Paudel, Thilo Haas, Abraham Bernstein</p>
+    <p>In most existing recommender systems, implicit or explicit interactions are treated as positive links and all unknown interactions are treated as negative links. The goal is to suggest new links that will be perceived as positive links. However, as signed social networks and newer content services become common, it is important to distinguish between positive and negative preferences. Even in existing applications, the cost of a negative recommendation could be high when people are looking for new jobs, friends, or places to live. In this work, we develop novel probabilistic latent factor models to recommend positive links and compare with existing methods on five different openly available datasets. Our models are able to produce better ranking lists and are effective in the task of ranking positive links at the top and negative links at the bottom. Moreover, we find that modeling signed social networks and user preferences this way has the advantage of increasing diversity of recommendations. We also investigate the effect of regularization on the quality of recommendations, a matter that has not received enough attention in the literature. We find that regularization parameter heavily affects the quality of recommendations in terms of both accuracy and diversity.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Collaborative Filtering, User Preferences, Matrix Factorization, Social Networks, Accuracy of Recommendations, Diversity of Recommendations, Evaluation Methods, Regularization Techniques, Probabilistic Models, Latent Factor Models. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/259/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>The Magic Barrier Revisited: Accessing Natural Limitations of Recommender Assessment (2017)</h3>
+    <p><strong>Authors:</strong> Sergej Sizov, Kevin Jasberg</p>
+    <p>Recommender systems nowadays have many applications and are of great economic benefit. Hence, it is imperative for a success-oriented company to compare different of such systems and select the better one from them. For this purpose, various metrics of predictive accuracy are commonly used, such as the Root Mean Square Error (RMSE), or precision and recall, just to name a few of them. All these metrics more or less measure how well a recommender system can predict human behaviour. Unfortunately, human behaviour is always associated with some degree of uncertainty, making the evaluation of recommender systems difficult, since it is not clear whether a deviation is system-induced or just originates from the natural variability of human decision making. At this point, some Authors speculated that we may be reaching some magic barrier where this variability may prevent us from getting much more accurate. In this article, we will extend the existing theory of the Magic Barrier into a new probabilistic but yet pragmatic model. In particular, we will use methods from metrology and physics to develop easy-to-handle quantities for computation to describe the Magic Barrier for different accuracy metrics and provide suggestions for common application. This discussion is substantiated by comprehensive experiments with real users and large-scale simulations on a high performance cluster.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Evaluation Metrics, Accuracy, Human Behavior Variability, Probabilistic Models, Metrology Methods, Experiments with Real Users, Large-scale Simulations, Magic Barrier Concept, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/278/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Recommendation from Intransitive Pairwise Comparisons (2016)</h3>
+    <p><strong>Authors:</strong> Elja Arjas, Marta Crispino, Arnoldo Frigessi, Valeria Vitelli</p>
+    <p>In this poster we propose a full Bayesian probabilistic method to learn preferences from non-transitive pairwise comparison data. Such lack of transitivity easily arises when the number of pairwise comparisons is large, and they are given sequentially without allowing for consistency check. We develop a Bayesian Mallows model able to handle such data through a latent layer of uncertainty which captures the generation of preference misreporting. We then construct an MCMC algorithm, and test the procedure on simulated data.</p>
+    <p><strong>Categories:</strong> Bayesian Methods, Mallows Model, Probabilistic Models, Markov Chain Monte Carlo (MCMC), Recommendation Systems, Preference Modeling, Intransitive Preferences, Machine Learning, Non-Transitive Data, Model Evaluation. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/244/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A Probabilistic Model for Using Social Networks in Personalized Item Recommendation (2015)</h3>
+    <p><strong>Authors:</strong> Tinpa Eliassi-Rad, David M. Blei, Allison J.B. Chaney</p>
+    <p>Preference-based recommendation systems have transformed how we consume media. By analyzing usage data, these methods uncover our latent preferences for items (such as articles or movies) and form recommendations based on the behavior of others with similar tastes. But traditional preference-based recommendations do not account for the social aspect of consumption, where a trusted friend might point us to an interesting item that does not match our typical preferences. In this work, we aim to bridge the gap between preference- and social-based recommendations. We develop (SPF), a probabilistic model that incorporates social network information into a traditional factorization method; SPF introduces the social aspect to algorithmic recommendation. We develop a scalable algorithm for analyzing data with SPF, and demonstrate that it outperforms competing methods on six real-world datasets; data sources include a social reader and Etsy.</p>
+    <p><strong>Categories:</strong> Matrix Factorization Methods, Social Recommendations, Probabilistic Models, Preference-based Recommendations, Social-based Recommendations, Real-world Applications, Evaluation Metrics, Scalability, Algorithmic Recommendation, Recommendation Diversity (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/87/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Improving Sales Diversity by Recommending Users to Items (2014)</h3>
+    <p><strong>Authors:</strong> Saul Vargas, Pablo Castells</p>
+    <p>Sales diversity is considered a key feature of Recommender Systems from a business perspective. Sales diversity is also linked with the long-tail novelty of recommendations, a quality dimension from the user perspective. We explore the inversion of the recommendation task as a means to enhance sales diversity -and indirectly novelty -by selecting which users an item should be recommended to instead of the other way around. We address the inverted task by two approaches: a) inverting the rating matrix, and b) defining a probabilistic reformulation which isolates the popularity component of arbitrary recommendation algorithms. We find that the first approach gives rise to interesting reformulations of nearest-neighbor algorithms, which essentially introduce a new neighbor selection policy. The second approach, as well as the first, ultimately result in substantial sales diversity enhancements, and improved trade-offs with recommendation precision and novelty. Two experiments on movie and music recommendation datasets show the effectiveness of the resulting approach, even when compared to direct optimization approaches of the target metrics proposed in prior work.</p>
+    <p><strong>Categories:</strong> Inverted Recommendation, Sales Diversity, Probabilistic Models, Nearest Neighbor Algorithms, Entertainment (Movies), Entertainment (Music), Collaborative Filtering, Long-Tail Novelty, Recommendation Precision, Personalization, Cold Start, User-Centric (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/14/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Judging Similarity: A User-Centric Study of Related Item Recommendations
+Abstract:
+Related item recommenders operate in the context of a particular item. For instance, a music system’s page about the artist Radiohead might recommend other similar artists such as The Flaming Lips. Often central to these recommendations is the computation of similarity between pairs of items. Prior work has explored many algorithms and features that allow for the computation of similarity scores, but little work has evaluated these approaches from a user-centric perspective. In this work, we build and evaluate six similarity scoring algorithms that span a range of activity- and content-based approaches. We evaluate the performance of these algorithms using both offline metrics and a new set of more than 22,000 user-contributed evaluations. We integrate these results with a survey of more than 700 participants concerning their expectations about item similarity and related item recommendations. We find that content-based algorithms outperform ratings- and clickstream-based algorithms in terms of how well they match user expectations for similarity and recommendation quality. Our results yield a number of implications to guide the construction of related item recommendation algorithms.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me start by reading through both carefully.
+
+The title is &#34;Judging Similarity: A User-Centric Study of Related Item Recommendations.&#34; That suggests it&#39;s about how users perceive the similarity between items in recommendation systems. 
+
+Looking at the abstract, the authors discuss related item recommenders that operate within a specific context, like a music system suggesting similar artists. They mention six similarity scoring algorithms using activity- and content-based approaches. They evaluated these with both offline metrics and user evaluations—over 22,000 contributions—and also conducted a survey of 700 participants about their expectations.
+
+So the key themes here are: recommendation systems, especially related item recommendations; user-centric evaluation methods; similarity computation algorithms; activity-based vs. content-based approaches; large-scale user studies; and implications for algorithm design.
+
+Now, I&#39;ll map these themes to categories. The example categories include things like family of algorithms (e.g., Matrix Factorization), domains (Books, Movies, Healthcare), recommendation aspects (Cold Start), evaluation aspects (Diversity), real-world applications (A/B Test, User Survey). 
+
+From the article:
+- Family of algorithms: They used similarity scoring which can be content-based and activity-based. So categories like Content-Based Filtering and Activity-Based Approaches make sense.
+- Domain: Although not specific to a domain like music is mentioned as an example, but it&#39;s more general so maybe no domain-specific category here.
+- Recommendation aspects: It&#39;s about related item recommendations and user expectations, so categories like Related Item Recommendations, User Expectations.
+- Evaluation aspects: They used both offline metrics and user evaluations, so Offline Metrics, User-Centric Evaluation. Also, they conducted a large survey, which is Real-World Application (User Survey).
+- The study size was significant with 22k+ contributions and 700 participants, so Large-Scale Study fits.
+- The implications for algorithm design suggest this is about improving recommendation algorithms, hence Algorithm Design.
+
+Putting it all together: Content-Based Filtering, Activity-Based Approaches, Similarity Computation, Related Item Recommendations, User-Centric Evaluation, Offline Metrics, Real-World Application (User Survey), Large-Scale Study, Recommendation Algorithms, User Expectations, Algorithm Design.
+&lt;/think&gt;
+
+Content-Based Filtering, Activity-Based Approaches, Similarity Computation, Related Item Recommendations, User-Centric Evaluation, Offline Metrics, Real-World Application (User Survey), Large-Scale Study, Recommendation Algorithms, User Expectations, Algorithm Design</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

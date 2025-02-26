@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Efficient Privacy-Preserving Recommendations based on Social Graphs
+Abstract:
+Many recommender systems use association rules mining, a technique that captures relations between user interests and recommends new probable ones accordingly. Applying association rule mining causes privacy concerns as user interests may contain sensitive personal information (e.g., political views). This potentially even inhibits the user from providing information in the first place. Current distributed privacy-preserving association rules mining (PPARM) approaches use cryptographic primitives that come with high computational and communication costs, rendering PPARM unsuitable for large-scale applications such as social networks. We propose improvements on the efficiency and the privacy of PPARM approaches by minimizing the required data. We propose and compare sampling strategies to sample the data based on social graphs in a privacy-preserving manner. The results on real-world datasets show that our sampling-based approach can achieve a high average precision score with as low as 50% sampling rate and, therefore, with a 50% reduction of communication cost.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Efficient Privacy-Privacy-Preserving Recommendations based on Social Graphs.&#34; That immediately tells me it&#39;s about recommendation systems with a focus on privacy. The use of social graphs suggests that social network structures are involved in how recommendations are made.
+
+Looking at the abstract, the article talks about recommender systems using association rule mining, which captures user interests and recommends new items. However, this method raises privacy concerns because user interests can include sensitive information like political views. This makes users hesitant to provide such data. 
+
+The current approaches for distributed privacy-preserving association rules mining (PPARM) use cryptographic methods that are computationally expensive and have high communication costs. These issues make PPARM unsuitable for large-scale applications, especially social networks which are massive in scale.
+
+The authors propose improvements by enhancing efficiency and privacy through minimizing data requirements. They introduce sampling strategies based on social graphs to collect data in a privacy-preserving manner. The results show that their approach achieves high precision with only 50% of the data sampled, leading to a significant reduction in communication costs.
+
+Now, I need to map this into relevant categories as per the guidelines. Let&#39;s break down the key elements:
+
+1. **Privacy-Preserving Recommendations**: This is directly mentioned and central to the article.
+2. **Social Graphs**: The use of social networks&#39; structures for recommendations is a major theme.
+3. **Association Rule Mining**: A technique used in recommendation systems, though they point out its privacy issues.
+4. **Scalability**: They address the inefficiency of current methods for large-scale applications like social networks.
+5. **Sampling Strategies**: They propose new methods to sample data efficiently while preserving privacy.
+6. **Communication Costs**: They reduce these costs, which is a practical concern in distributed systems.
+7. **Privacy Concerns**: The main issue they tackle is the privacy risks associated with user data in recommendations.
+8. **Evaluation Metrics**: They mention average precision score, so evaluation aspects are covered.
+
+I should ensure each category is relevant and aligns with user interests. Categories like Privacy-Preserving Recommendations and Social Graphs seem broad but essential. Specific techniques like Sampling Strategies and Association Rule Mining add depth. Including Evaluation Metrics makes it useful for researchers looking at performance measures. Scalability ties into practical applications, which users might be interested in.
+
+I also need to check if any other categories are relevant. For example, is there a focus on user behavior or real-world applications? The article mentions real-world datasets but doesn&#39;t specify if they used A/B testing or user surveys, so maybe not. It&#39;s more about the methodology and evaluation rather than direct application in deployment.
+
+Are there aspects of recommendation space specifics like cold start? Not directly mentioned here; the focus is on privacy and efficiency in large-scale social networks. So perhaps not relevant for cold start.
+
+I think I&#39;ve covered all necessary categories without overcomplicating or adding irrelevant ones. Each category should help users find the article when searching based on these aspects.
+&lt;/think&gt;
+
+Privacy-Preserving Recommendations, Social Graphs, Association Rule Mining, Scalability, Sampling Strategies, Communication Costs, Privacy Concerns, Evaluation Metrics</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Efficient Privacy-Preserving Recommendations based on Social Graphs
+Abstract:
+Many recommender systems use association rules mining, a technique that captures relations between user interests and recommends new probable ones accordingly. Applying association rule mining causes privacy concerns as user interests may contain sensitive personal information (e.g., political views). This potentially even inhibits the user from providing information in the first place. Current distributed privacy-preserving association rules mining (PPARM) approaches use cryptographic primitives that come with high computational and communication costs, rendering PPARM unsuitable for large-scale applications such as social networks. We propose improvements on the efficiency and the privacy of PPARM approaches by minimizing the required data. We propose and compare sampling strategies to sample the data based on social graphs in a privacy-preserving manner. The results on real-world datasets show that our sampling-based approach can achieve a high average precision score with as low as 50% sampling rate and, therefore, with a 50% reduction of communication cost.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;Efficient Privacy-Preserving Recommendations based on Social Graphs.&#34; So the main topics here are privacy-preserving recommendations and social graphs.
+
+Looking at the abstract: The article discusses recommender systems using association rule mining, which raises privacy concerns because user interests might include sensitive information like political views. Current methods for privacy-preserving association rule mining (PPARM) have high computational and communication costs, making them unsuitable for large-scale applications such as social networks.
+
+The proposed approach improves efficiency and privacy by minimizing data through sampling strategies based on social graphs in a privacy-preserving manner. They tested this with real-world datasets and found that using 50% sampling rate still yields good precision, reducing communication costs.
+
+Now, let&#39;s identify the key themes and aspects:
+
+1. **Privacy-Preserving Recommendations**: This is central to the article. It deals with how recommendations can be made without compromising user privacy.
+
+2. **Social Graphs**: The method uses social graphs to sample data efficiently.
+
+3. **Association Rule Mining**: They&#39;re using this technique for recommendations but trying to make it more efficient and private.
+
+4. **Efficiency Improvements**: The focus is on making PPARM methods more efficient, particularly in terms of computational and communication costs.
+
+5. **Sampling Strategies**: They propose sampling techniques based on social graphs to reduce data volume while maintaining recommendation quality.
+
+6. **Large-Scale Applications**: The goal is to make these recommendations suitable for big platforms like social networks.
+
+7. **Recommendation Systems**: General category since the article is about improving recommender systems.
+
+8. **Communication Cost Reduction**: This is a specific benefit of their approach, important for scalability.
+
+9. **Data Minimization**: They aim to use less data while still providing good recommendations, which ties into privacy and efficiency.
+
+10. **Evaluation Metrics**: Mentioned the average precision score as part of evaluation, so metrics like this are relevant.
+
+Now mapping these points to categories:
+
+- Privacy-Preserving Recommendations (core theme)
+- Social Graphs (specific technique used)
+- Association Rule Mining (methodology)
+- Efficiency Improvements (aspects of optimization)
+- Sampling Strategies (specific approach)
+- Large-Scale Applications (target application)
+- Recommendation Systems (general category)
+- Communication Cost Reduction (aspect of efficiency)
+- Data Minimization (privacy aspect)
+- Evaluation Metrics (diversity in evaluation methods)
+
+Wait, do I need 8-12 categories? Let me see. The user provided examples like &#34;Scalability, Web Systems, Implicit Feedback.&#34; So perhaps some terms are a bit different.
+
+&#34;Large-Scale Applications&#34; could be considered under &#34;Scalability,&#34; but the example they gave was &#34;Web Systems.&#34; Maybe that&#39;s too broad. Alternatively, &#34;Large-Scale Systems.&#34;
+
+But given the categories I&#39;ve identified:
+
+1. Privacy-Preserving Recommendations
+2. Social Graphs
+3. Association Rule Mining
+4. Efficiency Improvements
+5. Sampling Strategies
+6. Large-Scale Applications
+7. Recommendation Systems
+8. Communication Cost Reduction
+9. Data Minimization
+10. Evaluation Metrics
+
+Wait, that&#39;s 10 categories. Maybe I can think of another relevant category. The abstract mentions &#34;diverse datasets&#34; and real-world testing, so maybe something like &#34;Real-World Applications.&#34;
+
+Alternatively, since they mention reducing communication costs, perhaps &#34;Scalability&#34; is a better fit.
+
+So adjusting:
+
+12 categories would be ideal. Let me try to list them again:
+
+1. Privacy-Preserving Recommendations
+2. Social Graphs
+3. Association Rule Mining
+4. Efficiency Improvements
+5. Sampling Strategies
+6. Large-Scale Systems
+7. Recommendation Systems
+8. Communication Cost Reduction
+9. Data Minimization
+10. Evaluation Metrics (like Diversity)
+11. Scalability
+12. Real-World Applications
+
+Yes, that makes 12 categories, each relevant to the article&#39;s content.
+&lt;/think&gt;
+
+Privacy-Preserving Recommendations, Social Graphs, Association Rule Mining, Efficiency Improvements, Sampling Strategies, Large-Scale Systems, Recommendation Systems, Communication Cost Reduction, Data Minimization, Evaluation Metrics, Scalability, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

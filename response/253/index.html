@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Modelling Session Activity with Neural Embedding
+Abstract:
+Neural embedding techniques are being applied in a growing number of machine learning applications. In this work, we demonstrate a neural embedding technique to model users’ session activity. Specifically, we consider a dataset collected from Microsoft’s App Store consisting of user sessions that include sequential click actions and item purchases. Our goal is to learn a latent manifold that captures users’ session activity and can be utilized for contextual recommendations in an online app store.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article into multiple relevant categories based on the given objectives and guidelines. Let me start by analyzing the title and abstract.
+
+The title mentions &#34;Modelling Session Activity with Neural Embedding.&#34; This tells me that the focus is on using neural embeddings for understanding user sessions. The abstract provides more details: it&#39;s about applying neural embedding techniques to model users&#39; session activity in Microsoft’s App Store, which involves sequential clicks and purchases. The goal is to create a latent manifold for contextual recommendations.
+
+First, I&#39;ll identify the family of algorithms used here. Neural embeddings are a key part of deep learning models, so &#34;Neural Embedding&#34; should be one category. Since neural networks are involved, &#34;Deep Learning&#34; makes sense too.
+
+Next, looking at the domain: the application is in an app store, which falls under E-commerce. So I&#39;ll include &#34;E-commerce.&#34; The specific problem here is about recommendations, particularly contextual ones based on user activity, so &#34;Contextual Recommendations&#34; and a broader category like &#34;Recommendation Systems&#34; are appropriate.
+
+The study deals with user sessions and their activities over time, which involves temporal dynamics. Therefore, &#34;Session-Based Recommendations&#34; fits well. Since the data includes sequential click actions, &#34;Sequence Modelling&#34; is another relevant category.
+
+In terms of evaluation aspects, while the abstract doesn&#39;t explicitly mention metrics like accuracy or diversity, it&#39;s about improving recommendations, so &#34;Beyond Accuracy&#34; could be a stretch but might apply if considering other factors beyond just recommendation accuracy.
+
+Real-world application: The work uses real data from Microsoft’s App Store and aims to implement contextual recommendations there. So categories like &#34;A/B Test,&#34; &#34;User Survey,&#34; or more accurately, since it&#39;s applied in an online setting, perhaps &#34;Online Experimentation&#34; would be better. However, given the options provided, maybe sticking with something like &#34;Real-World Application&#34; is safer, but looking at the example output, they used specific terms. Alternatively, if the method is intended for real-world use, categories like &#34;Deployment&#34; or similar might apply, but perhaps &#34;A/B Test&#34; isn&#39;t directly mentioned here.
+
+Looking back at the example provided earlier, the assistant included categories like &#34;Deep Learning,&#34; &#34;Neural Embedding,&#34; &#34;Recommendation Systems,&#34; etc. I should ensure consistency by using clear and descriptive names that reflect the content accurately.
+
+I also need to consider if there are any other aspects like scalability or cold start, but the abstract doesn&#39;t mention those specifically. It&#39;s more about modeling user activity over sessions for better recommendations.
+
+So compiling all these thoughts: the categories would include neural embeddings, deep learning, recommendation systems, contextual and session-based recommendations, e-commerce as the domain, sequence modeling, and maybe real-world application since it&#39;s applied in an app store context.
+
+I think that covers most aspects. Let me list them out clearly:
+
+- Neural Embedding (algorithm family)
+- Deep Learning (broader algorithm category)
+- Session-Based Recommendations (specific recommendation type)
+- Contextual Recommendations (another specific type)
+- Recommendation Systems (general category)
+- E-commerce (domain)
+- Sequence Modelling (aspects of the data used)
+- Real-World Application (since it&#39;s applied in a real app store)
+
+Wait, looking back at the example output, they didn&#39;t include &#34;Real-World Application&#34; but included more specific terms like &#34;Cold Start.&#34; Since the abstract doesn&#39;t mention any experiments or A/B tests, maybe &#34;Deployment&#34; isn&#39;t applicable. Alternatively, since it&#39;s about applying the model in an online app store, perhaps &#34;Online Systems&#34; could be another category.
+
+Also, considering aspects of evaluation: while not explicitly mentioned, improving recommendations often involves looking beyond accuracy, so including &#34;Beyond Accuracy&#34; might be appropriate.
+
+So finalizing the list with these considerations, ensuring each article is assigned 8-12 categories as per guidelines. Let me make sure I&#39;m covering all bases without overcomplicating.
+&lt;/think&gt;
+
+Neural Embedding, Deep Learning, Session-Based Recommendations, Contextual Recommendations, Recommendation Systems, E-commerce, Sequence Modelling, Real-World Application</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Modelling Session Activity with Neural Embedding
+Abstract:
+Neural embedding techniques are being applied in a growing number of machine learning applications. In this work, we demonstrate a neural embedding technique to model users’ session activity. Specifically, we consider a dataset collected from Microsoft’s App Store consisting of user sessions that include sequential click actions and item purchases. Our goal is to learn a latent manifold that captures users’ session activity and can be utilized for contextual recommendations in an online app store.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article based on its title and abstract. Let me read through them carefully.
+
+The title is &#34;Modelling Session Activity with Neural Embedding.&#34; So, the main focus here is neural embedding techniques applied to model user sessions. That immediately makes me think of recommendation systems because neural embeddings are often used there for capturing user behaviors.
+
+Looking at the abstract, it says they&#39;re using neural embedding to model users&#39; session activity. They have a dataset from Microsoft&#39;s App Store with sequential clicks and purchases. The goal is to learn a latent manifold for contextual recommendations in an online app store. So, this is definitely about recommendation systems.
+
+Breaking down the content:
+
+1. **Neural Embedding**: This falls under neural networks or deep learning methods. Since it&#39;s a technique used here, &#34;Neural Networks&#34; should be a category.
+
+2. **Session Activity Modelling**: This is about user behavior within sessions, so that relates to session-based recommendation systems. Therefore, &#34;Session-Based Recommendations&#34; would be appropriate.
+
+3. **Recommendation Systems**: The entire study is aimed at improving recommendations in an app store context. So, this is a primary category.
+
+4. **Contextual Recommendations**: They mention contextual recommendations specifically, which means the model considers context when making suggestions. Hence, &#34;Contextual Recommendations&#34; is another key category.
+
+5. **App Store Context**: The dataset comes from Microsoft&#39;s App Store, so the domain here is e-commerce or digital platforms. Thus, &#34;E-Commerce&#34; fits as a category.
+
+6. **Latent Manifold**: This refers to capturing latent features of user activity. So, &#34;Latent Factors/Manifolds&#34; would be another relevant category.
+
+7. **Online Store**: Since it&#39;s an online app store environment, that context is important, so &#34;Online Recommendations&#34; is applicable.
+
+8. **Sequential Click Actions and Purchases**: The data includes sequences, indicating a focus on temporal or sequential patterns in user behavior. Therefore, &#34;Temporal/Sequential Data&#34; should be included.
+
+9. **Real-World Applications**: They mention it&#39;s applied to an online app store, which is a real-world application scenario. So, &#34;Real-World Applications&#34; is another category.
+
+10. **Microsoft Case Study**: Although not explicitly necessary, the dataset being from Microsoft could be noted under &#34;Case Studies,&#34; but since the guidelines don&#39;t specify company-specific categories unless it&#39;s a common one like Netflix or Amazon, I might skip this to keep it general.
+
+Considering all these points, I should list the most relevant and broad categories without making them too specific. Each article should go into at least 8-12 categories, so let me count:
+
+Neural Networks, Session-Based Recommendations, Recommendation Systems, Contextual Recommendations, E-Commerce, Latent Factors/Manifolds, Online Recommendations, Temporal/Sequential Data, Real-World Applications.
+
+That&#39;s nine categories. Maybe I can add another if applicable. Perhaps &#34;Deep Learning&#34; since neural networks are a subset of deep learning? Or &#34;User Behavior Analysis.&#34; But maybe the existing ones cover it adequately.
+
+Alternatively, considering they&#39;re using embeddings for sessions, &#34;Embedding Methods&#34; could be another category. Let me check that.
+
+Yes, the abstract mentions neural embedding techniques specifically, so adding &#34;Embedding Methods&#34; would make sense as a more specific subcategory under neural networks.
+
+So now I have ten categories:
+
+Neural Networks, Session-Based Recommendations, Recommendation Systems, Contextual Recommendations, E-Commerce, Latent Factors/Manifolds, Online Recommendations, Temporal/Sequential Data, Real-World Applications, Embedding Methods.
+
+I think that&#39;s a balanced and relevant list. Each category is distinct enough to be useful but also covers the key aspects of the article.
+&lt;/think&gt;
+
+Neural Networks, Session-Based Recommendations, Recommendation Systems, Contextual Recommendations, E-Commerce, Latent Factors/Manifolds, Online Recommendations, Temporal/Sequential Data, Real-World Applications, Embedding Methods</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

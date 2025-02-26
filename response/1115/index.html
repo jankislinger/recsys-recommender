@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommending Healthy and Sustainable Meals exploiting Food Retrieval and Large Language Models
+Abstract:
+Many people are constantly seeking to make healthy food choices, but increasingly, we are also considering the impact our dietary habits have on the environment. This creates a complex challenge: how can we ensure that we are eating nutritious foods that nourish our bodies while also minimizing the environmental footprint of our meals?To address this issue, this paper proposes a novel framework called Healthy And Sustainable eating (HeASe). Given the rising global concerns about nutrition and environmental sustainability, individuals need effective tools to help them navigate these issues. HeASe leverages the latest advancements in artificial intelligence to empower users with knowledge and self-awareness.The framework works in two steps. First, it uses a food retrieval strategy that takes into account macro-nutrient information to identify alternative meals for a chosen recipe. This ensures that the substitutions maintain a similar nutritional profile. Next, HeASe employs large language models to re-rank these potential replacements while considering factors beyond just nutrition, such as the recipe’s environmental impact and other user-defined preferences. The experimental phase of this research demonstrates the capabilities of LLM in identifying the more sustainable and healthy recipe within a set of candidate options. This highlights the potential of these models to guide users towards food choices that are both nutritious and environmentally responsible.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories. Let&#39;s start by reading through the title and abstract carefully.
+
+The title is &#34;Recommending Healthy and Sustainable Meals exploiting Food Retrieval and Large Language Models.&#34; That immediately tells me the main focus is on recommendation systems, specifically for food that&#39;s both healthy and sustainable. The methods mentioned are food retrieval strategies and large language models (LLMs).
+
+Looking at the abstract, the paper addresses two main concerns: nutrition and environmental sustainability. It proposes a framework called HeASe which has two steps. First, it uses food retrieval considering macro-nutrient information to suggest alternative meals. Then, it uses LLMs to re-rank these options based on factors like environmental impact and user preferences.
+
+So the key elements here are recommendation systems, healthy eating, sustainability, food retrieval, LLMs, and evaluation aspects like diversity and beyond accuracy (since they&#39;re considering more than just nutrition). There&#39;s also a real-world application aspect because it&#39;s about helping individuals make better dietary choices.
+
+Now, mapping these to categories. From the examples given, I should consider:
+
+1. Family of algorithm: Food Retrieval is one. Large Language Models could be another.
+2. Domain of problem: Healthcare (since it&#39;s about nutrition) and Sustainability (environmental impact).
+3. Specific recommendation aspects: Healthy Eating and Sustainability-focused recommendations.
+4. Evaluation aspects: Diversity because they&#39;re looking at multiple factors beyond just nutrition. Beyond Accuracy as well, since they consider more than the main metric.
+5. Real-world applications: They mention empowering users, so maybe User Empowerment or something similar.
+
+I also need to ensure each article is in 8-12 categories without overcrowding any. Let me list out possible categories:
+
+- Recommendation Systems (broad category)
+- Healthy Eating
+- Sustainability
+- Food Retrieval
+- Large Language Models
+- Healthcare (as a domain)
+- Environmental Impact
+- User Preferences
+- Alternatives and Substitutions (since they&#39;re finding alternatives to recipes)
+- Beyond Accuracy Evaluation
+- Diversity of Recommendations
+
+Wait, maybe some of these are too specific or could be grouped. For example, &#34;Environmental Impact&#34; might fall under Sustainability. Similarly, &#34;Alternatives and Substitutions&#34; could be a subset of Recommendation Systems.
+
+Let me check if I have 8 categories: 
+
+1. Recommendation Systems
+2. Healthy Eating
+3. Sustainability
+4. Food Retrieval
+5. Large Language Models
+6. Healthcare
+7. Environmental Impact
+8. User Preferences
+
+That&#39;s eight, but maybe adding more like Beyond Accuracy and Alternatives would make it ten. Alternatively, considering if some can be combined.
+
+Alternatively, using broader categories where possible:
+
+- Recommendation Systems
+- Healthy Eating
+- Sustainability
+- Food Retrieval
+- Large Language Models
+- Beyond Accuracy
+- Diversity of Recommendations
+- Real-world Applications (since they&#39;re applying the model to help users)
+
+That gives eight. I think that covers all aspects without being too granular.
+&lt;/think&gt;
+
+Recommendation Systems, Healthy Eating, Sustainability, Food Retrieval, Large Language Models, Beyond Accuracy, Diversity of Recommendations, Real-world Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

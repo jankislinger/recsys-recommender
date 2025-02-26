@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Ratings Meet Reviews, a Combined Approach to Recommend
+Abstract:
+Most existing recommender systems focus on modeling the ratings while ignoring the abundant information embedded in the review text. In this paper, we propose a unified model that combines content-based filtering with collaborative filtering, harnessing the information of both ratings and reviews. We apply topic modeling techniques on the review text and align the topics with rating dimensions to improve prediction accuracy. With the information embedded in the review text, we can alleviate the cold-start problem. Furthermore, our model is able to learn latent topics that are interpretable. With these interpretable topics, we can explore the prior knowledge on items or users and recommend completely “cold” items. Empirical study on 27 classes of real-life datasets show that our proposed model lead to significant improvement compared with strong baseline methods, especially for datasets which are extremely sparse where rating-only methods cannot make accurate predictions.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article about a recommendation system that combines ratings and reviews. Let me go through the process step by step.
+
+First, I&#39;ll look at the title: &#34;Ratings Meet Reviews, a Combined Approach to Recommend.&#34; That immediately tells me it&#39;s about recommendation systems that use both numerical ratings and textual reviews. So, that suggests categories like Recommender Systems and Review-Based Recommendations.
+
+Next, the abstract mentions they&#39;re combining content-based filtering with collaborative filtering. Content-based is using item features, while collaborative filtering uses user-item interactions. So I should include those as separate categories: Content-Based Filtering and Collaborative Filtering.
+
+They use topic modeling on reviews to align topics with rating dimensions. Topic Modeling is definitely a key here, so that&#39;s another category. Also, they mention improving prediction accuracy by combining these methods, which relates to Prediction Accuracy in recommendation systems.
+
+The paper addresses the cold-start problem, which is when new users or items don&#39;t have enough data. They use interpretable latent topics to help with this, so Cold Start is a relevant category. Additionally, the model&#39;s ability to handle sparse datasets (where there aren&#39;t many ratings) ties into Sparse Data Handling.
+
+They mention empirical studies on real-life datasets across 27 classes, which indicates that their approach has Real-World Applications and Practical Evaluation. The fact that it works well in sparse scenarios also touches on Scalability since it can handle large or varied datasets efficiently.
+
+The abstract doesn&#39;t specifically mention A/B testing or user surveys, so I won&#39;t include those unless they&#39;re part of the evaluation methods mentioned elsewhere. But looking back, it does say &#34;empirical study&#34; and improvement over baselines, which fits under Practical Evaluation but not necessarily A/B Test or User Survey directly.
+
+So putting it all together, the categories should cover the main themes: Recommender Systems, Review-Based Recommendations, Content-Based Filtering, Collaborative Filtering, Topic Modeling, Prediction Accuracy, Cold Start, Sparse Data Handling, Real-World Applications, and Practical Evaluation. I think that&#39;s a comprehensive set without overlapping too much.
+&lt;/think&gt;
+
+Recommender Systems, Review-Based Recommendations, Content-Based Filtering, Collaborative Filtering, Topic Modeling, Prediction Accuracy, Cold Start, Sparse Data Handling, Real-World Applications, Practical Evaluation</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

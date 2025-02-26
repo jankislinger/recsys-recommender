@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/explainability/">Explainability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Toward 100TB Recommendation Models with Embedding Offloading (2024)</h3>
+    <p><strong>Authors:</strong> Sarunya Pumma, Levy Zhao, Joshua Deng, Dennis Van Der Staay, Jian He, Intaik Park, Ehsan Ardestani, Damian Reeves, Yu Guo, Paul Zhang, Henry Tsang</p>
+    <p>Training recommendation models become memory-bound with large embedding tables, and fast GPU memory is scarce. In this paper, we explore embedding caches and prefetch pipelines to effectively leverage large but slow host memory for embedding tables. We introduce Locality-Aware Sharding and iterative planning that automatically size caches optimally and produce effective sharding plans. Embedding Offloading, a system that combines all of these components and techniques, is implemented on top of Meta’s open-source libraries, FBGEMM GPU and TorchRec, and it is used to improve scalability and efficiency of industry-scale production models. Embedding Offloading achieved 37x model scale to 100TB model size with only 26% training speed regression.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Embedding, Scalability, Memory Optimization, System Design, Cache Management, Sharding, Production Systems, Industry Applications, System Performance, GPU Memory, Resource Management (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1178/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>AutoOpt: Automatic Hyperparameter Scheduling and Optimization for Deep Click-through Rate Prediction (2023)</h3>
+    <p><strong>Authors:</strong> Yimin Huang, Bo Chen, Yujun Li, Zhenguo Li, Xing Tang, Ruiming Tang</p>
+    <p>Click-through Rate (CTR) prediction is essential for commercial recommender systems. Recently, to improve the prediction accuracy, plenty of deep learning-based CTR models have been proposed, which are sensitive to hyperparameters and difficult to optimize well. General hyperparameter optimization methods fix these hyperparameters across the entire model training and repeat them multiple times. This trial-and-error process not only leads to suboptimal performance but also requires non-trivial computation efforts. In this paper, we propose an automatic hyperparameters scheduling and optimization method for deep CTR models, <i>AutoOpt</i>, making the optimization process more stable and efficient. Specifically, the whole training regime is firstly divided into several consecutive stages, where a data-efficient model is learned to model the relation between model states and prediction performance. To optimize the stage-wise hyperparameters, AutoOpt uses the <i>global</i> and <i>local</i> scheduling modules to propose proper hyperparameters for the next stage based on the training in the current stage. Extensive experiments on three public benchmarks are conducted to validate the effectiveness of AutoOpt. Moreover, AutoOpt has been deployed onto an advertising platform and a music platform, where online A/B tests also demonstrate superior improvement.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Deep Learning, Hyperparameter Optimization, AutoML, Real-World Applications, Industry Applications, Beyond Accuracy, Web Systems, Deep Learning Challenges, User Behavior (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/856/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Hessian-aware Quantized Node Embeddings for Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Hao Yang, Xia Hu, Kaixiong Zhou, Yan Zheng, Chin-Chia Michael Yeh, Huiyuan Chen, Kwei-Herng Lai</p>
+    <p>Graph Neural Networks (GNNs) have achieved  state-of-the-art  performance in recommender systems. Nevertheless, the process of  searching and ranking  from a large item corpus    usually requires high latency, which limits the widespread deployment of GNNs in industry-scale applications. To address this issue, many  methods quantize user/item representations into the binary embedding space  to reduce space requirements and accelerate inference.  Also, they use the Straight-through Estimator (STE) to prevent zero gradients during back-propagation.  However, the STE often causes  gradient mismatch problem, leading to sub-optimal results. In this work, we present the Hessian-aware Quantized GNN (HQ-GNN) as an effective solution for discrete representations of users/items that enable fast retrieval. HQ-GNN is composed of two components: a GNN encoder for learning continuous node embeddings and a quantized module for compressing full-precision embeddings into low-bit ones. Consequently, HQ-GNN benefits from both lower memory requirements and faster inference speeds compared to vanilla GNNs.  To address the gradient mismatch problem in STE,  we  further consider the quantized errors and its second-order derivatives for better stability. The experimental results on several large-scale datasets show that HQ-GNN achieves a good balance between latency and performance.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Graph Neural Networks (GNN), Quantization, Low-bit Embeddings, Hessian-aware Optimization, Industry Applications, Gradient Mismatch, Latency Reduction, Recommendation Efficiency, Hybrid Models, Large-scale Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/901/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Offline Evaluation Standards for Recommender Systems (2021)</h3>
+    <p><strong>Authors:</strong> Fernando Mourão</p>
+    <p>Offline evaluation has nowadays become a major step in developing Recommendation Systems in both academia and industry [4, 5]. While academia anchors on offline evaluation due to the lack of proper environments for conducting online tests with real users, the industry uses offline evaluation to filter the most promising solutions for further online testing, aiming at reducing costs and potential damage to customers. Despite the blunt advances observed on this topic recently, consolidating a reliable, replicable, flexible and efficient offline evaluation process capable of satisfactorily predicting online test results remains an open challenge [2]. The community still lacks an integrated and updated view on this topic, useful for practitioners to inspect and refine their current offline evaluation stack.<br>The main Recommendation Systems venues have plenty of studies with relevant findings, presenting new challenges, pitfalls and divergent guidelines for better offline evaluation procedures [3, 5]. However, inspecting all those studies and keeping an updated perspective about where they agree is impractical, especially for the industry, given the need for fast iterations and deliveries. Thus, it is not rare to observe professionals struggle to obtain solid answers to practical and high-impact questions, such as: What are the main existing pitfalls we should be aware of when setting up an offline evaluation in a given domain? What is the desired evaluation framework for a given recommendation task? How reliable is a given offline evaluation stack, and how far is it from an ideal setting?<br>In this work, we bring an updated snapshot of offline evaluation standards for Recommendation Systems. For this, we reviewed dozens of studies published in the main Recommendation Systems venues in the last five years, dealing with recurring questions related to offline evaluation design and compiling the main findings in the literature. Then, we contrasted this curated body of knowledge against practical issues we face internally at SEEK, aiming to identify the most valuable guidelines. As a result of this process, we propose an integrated evaluation framework for offline stacks, a reliability score to monitor signs of progress on our stack over time, and a list of best practices to bear in mind when starting a new evaluation. Hence, we have organised the work into three parts:<br>Part I - Integrated Evaluation Framework. We present an offline evaluation framework that compiles the primary directives, pitfalls, and knowledge raised in the last five years by representative studies in the Recommendation Systems literature. This framework aims to compile the main steps, flaws and decisions to be aware of when designing offline tests. Also, it aims to present the leading solutions suggested in the literature for each known issue. The proposed framework can be seen as an extension of Cañamares’ work [1], in which we expand the factors, steps and decisions related to the design of offline experiments for recommenders. Figure 1 depicts the main steps of the framework along with some of the main pitfalls recurrently related to each step. It is noteworthy that this framework should not be deemed as a rigid and thorough set of steps and rules that all professionals must consider in every scenario. It is rather an organized collection of concerns raised in different situations, in which the strength and potential impact of each of them should be carefully inspected through the lens of each evaluation scenario.<br>Part II - Reliability Score. We also propose a Reliability Score to quantify how close a given offline evaluation setting is from the idealised framework instantiated to a given domain and task. This score is derived from a question-driven process that estimates the current state, effort, and impact that each known issue has for each team or company. These questions represent a non-closed set of concerns related to distinct steps of the evaluation process that should be addressed by a reliable evaluation framework. The final score ranges from 0 to 1 and the higher its value, the more reliable a given offline evaluation setting is, considering the specific needs and perspectives of a team or company. Further, this score allows teams of professionals to monitor progress in their offline evaluation settings over time. The proposed score empowers companies to compare the maturity of different teams w.r.t. offline assessments using a unified view. In order to illustrate the practical utility of the Reliability Score, we also present a few internal use cases that demonstrate how the proposed score helped us at SEEK to identify the main flaws in our offline settings and outline strategies for refining our current evaluation stack.<br>Part III - Best Practices & Limitations. Finally, we compiled a list of best practices derived from academic works, experience reports from other companies, and our own experience at SEEK. We expect the proposed list to serve as a starting point for practitioners to qualitatively review their decisions when designing offline assessments, as well as that these professionals would contribute to refining and growing it over time.</p>
+    <p><strong>Categories:</strong> Evaluation Methods, Recommender Systems, Offline Evaluation, Best Practices, Research Methodology, Industry Applications, Algorithm Design, Data Analysis, Practical Guidelines, Reproducibility (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/729/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>History-Augmented Collaborative Filtering for Financial Recommendations (2020)</h3>
+    <p><strong>Authors:</strong> Baptiste Barreau, Laurent Carlier</p>
+    <p>In many businesses, and particularly in finance, the behavior of a client might drastically change over time. It is consequently crucial for recommender systems used in such environments to be able to adapt to these changes. In this study, we propose a novel collaborative filtering algorithm that captures the temporal context of a user-item interaction through the users’ and items’ recent interaction histories to provide dynamic recommendations. The algorithm, designed with issues specific to the financial world in mind, uses a custom neural network architecture that tackles the non-stationarity of users’ and items’ behaviors. The performance and properties of the algorithm are monitored in a series of experiments on a G10 bond request for quotation proprietary database from BNP Paribas Corporate and Institutional Banking.</p>
+    <p><strong>Categories:</strong> Collaborative Filtering, Neural Networks, Finance, Banking, Financial Recommendations, Temporal Context, Non-stationarity, Real-World Applications, Industry Applications, Adaptive Systems, Bonds (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/572/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Model Size Reduction Using Frequency Based Double Hashing for Recommender Systems (2020)</h3>
+    <p><strong>Authors:</strong> Pranay Kumar Myana, Caojin Zhang, Alykhan Tejani, Akshay Gupta, Deepak Dilipkumar, Ferenc Huszar, Sofia Ira Ira Ktena, Ikuhiro Ihara, Prasang Upadhyaya, Wenzhe Shi, Yuanpu Xie, Suvadip Paul, Yicun Liu</p>
+    <p>Deep Neural Networks (DNNs) with sparse input features have been widely used in recommender systems in industry. These models have large memory requirements and need a huge amount of training data. The large model size usually entails a cost, in the range of millions of dollars, for storage and communication with the inference services. In this paper, we propose a hybrid hashing method to combine frequency hashing and double hashing techniques for model size reduction, without compromising performance. We evaluate the proposed models on two product surfaces. In both cases, experiment results demonstrated that we can reduce the model size by around 90 while keeping the performance on par with the original baselines.</p>
+    <p><strong>Categories:</strong> Model Size Reduction, Recommender Systems, Deep Learning, Hashing Techniques, Frequency Hashing, Double Hashing, Model Optimization, Sparse Features, Industry Applications, Memory Efficiency, Model Compression, Evaluation Metrics (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/583/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Past, Present, and Future of Recommender Systems: An Industry Perspective (2016)</h3>
+    <p><strong>Authors:</strong> Justin Basilico, Xavier Amatriain</p>
+    <p>When the Netflix Prize launched in 2006, it put a spotlight on the importance and use of recommender systems in real-world applications. The competition provided many lessons, and many more have been learned since the Grand Prize was awarded in 2009. The use of recommender systems in industry has continued to grow driven by the availability of many kinds of user data and the continued interest for the area within the research community. In this paper, we will describe what we see as the past, present, and future of recommender systems from an industry perspective.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Industry Applications, Real-World Applications, History of Recommender Systems, Future Trends, Netflix Prize, User Data, Machine Learning, Artificial Intelligence, Industry Insights, Implementation, Evolution of Technology (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/218/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

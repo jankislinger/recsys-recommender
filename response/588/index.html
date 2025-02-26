@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Reducing Energy Waste in Households Through Real-Time Recommendations
+Abstract:
+The energy consumption of households has steadily increased over the last couple of decades. Research suggests that user behavior is the most influential factor in the energy waste of a household. Thus, there’s a need for helping consumers change their behavior to make it more energy efficient and environment friendly. In this work we propose a real-time recommender system that assists consumers in improving their household’s energy usage. By monitoring the power demand of each appliance in the household, the system detects the device status (on/off) at any moment, and using pattern mining creates a household profile comprising energy consumption patterns for different periods of the day. An intuitive UI allows users to set energy consumption goals and preferences on the appliances they’d like to save energy from. Based on the household profile, the user’s preferences and the actual power demand the system generates personalized real-time recommendations on which appliances should be turned off at a moment. We employ the UK-DALE (UK Domestic Appliance-Level Electricity) dataset to model and evaluate the entire process, from data preprocessing and transformation of the appliance power demand input to various pattern mining algorithms used to generate appliance usage profiles and recommendations, showing that even small changes in appliance usage behavior can lead to energy savings between 2-17%.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s tackle this categorization task. The article is about a real-time recommender system aimed at reducing household energy waste. So first, I need to identify the main themes and elements discussed.
+
+The title mentions &#34;Reducing Energy Waste in Households Through Real-Time Recommendations.&#34; That tells me it&#39;s focused on energy conservation and uses recommendation systems. The abstract goes into more detail: they monitor appliance power demand, detect device status, use pattern mining for household profiles, allow users to set goals and preferences, generate personalized recommendations, and evaluate using the UK-DALE dataset.
+
+So starting with the algorithm family, they use pattern mining, which is a type of data mining technique. They also mention preprocessing and transformation of data, so maybe some form of feature extraction or data handling algorithms fit here too. But I think Pattern Mining as a specific family is accurate.
+
+Next, the domain is clearly Energy Efficiency and Smart Homes since it&#39;s about household energy consumption. These are both relevant categories because they specify the application area.
+
+In terms of recommendation aspects, Real-Time Recommendations is key here. The system operates in real-time to suggest turning off appliances. Also, User Preferences are a big part as users can set goals and preferences for which appliances to focus on.
+
+Looking at evaluation aspects, the article talks about showing that small changes lead to energy savings between 2-17%. This suggests they&#39;re measuring effectiveness of recommendations. They also use the UK-DALE dataset, so Data Preprocessing is involved in their methodology.
+
+Energy Management is a broad category that fits because it&#39;s all about managing household energy usage efficiently. Sustainability and Green Computing are important here too since the goal is to reduce waste and promote environmentally friendly behavior.
+
+They mention an intuitive UI where users set goals and preferences, which ties into Human-Computer Interaction as it involves how users interact with the recommendation system.
+
+Considering real-world applications, they used a dataset for evaluation but didn&#39;t explicitly mention A/B testing or user surveys. However, since they&#39;re focusing on user behavior change in a real household context, maybe Real World Applications is still relevant because the system is intended to be deployed in actual homes.
+
+So putting it all together, I need 8-12 categories. Let me list them out:
+
+1. Pattern Mining (algorithm family)
+2. Energy Efficiency (domain)
+3. Smart Homes (domain)
+4. Real-Time Recommendations (recommendation aspect)
+5. User Preferences (recommendation aspect)
+6. Effectiveness of Recommendations (evaluation aspect)
+7. Data Preprocessing (evaluation or algorithm step)
+8. Energy Management (broader domain)
+9. Sustainability (theme)
+10. Green Computing (theme)
+11. Human-Computer Interaction (due to the UI)
+
+I think that covers the necessary aspects without being too narrow or overlapping too much. I should ensure each category is clear and user-friendly, avoiding overly technical jargon where possible.
+&lt;/think&gt;
+
+Pattern Mining, Energy Efficiency, Smart Homes, Real-Time Recommendations, User Preferences, Effectiveness of Recommendations, Data Preprocessing, Energy Management, Sustainability, Green Computing, Human-Computer Interaction</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

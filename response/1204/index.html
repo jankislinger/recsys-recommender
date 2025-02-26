@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: What to compare? Towards understanding user sessions on price comparison platforms
+Abstract:
+E-commerce and online shopping have become integral to the lives of many, with various user behavior types historically identified. Beyond deciding what to buy, determining where to make a purchase has led to the importance of price comparison platforms. However, user behavior on these platforms remains underexplored. Furthermore, web analytics often struggle with tracking users over time and deriving meaningful user types from data. This paper addresses these gaps by defining session types through the analysis and clustering of user logs from a major price comparison platform. The study identifies six distinct session clusters: quick peek, major purchase, constraint-based browsing, knowledge seeking, search and browse and heavy browsing. These findings are intended to inform the design and development of a conversational recommender system (CRS). Often, CRS development occurs without adequate consideration of the existing system into which it will be integrated. The study’s findings, derived from both quantitative analysis and expert interviews, provide valuable contributions, including identified session clusters, their interpretation and indicators on which users might benefit from a CRS on these platforms.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about user sessions on price comparison platforms. Let me start by reading the title and abstract carefully.
+
+The title is &#34;What to compare? Towards understanding user sessions on price comparison platforms.&#34; The abstract talks about e-commerce, online shopping, user behavior, and price comparison platforms. It mentions that user behavior on these platforms hasn&#39;t been explored much, especially in terms of tracking users over time and deriving meaningful user types. 
+
+The paper defines session types by analyzing and clustering user logs from a major platform. They identified six distinct session clusters: quick peek, major purchase, constraint-based browsing, knowledge seeking, search and browse, and heavy browsing. The goal is to inform the design of a conversational recommender system (CRS). It&#39;s noted that CRS development often doesn&#39;t consider the existing system well, so their findings could help integrate CRS better.
+
+Now, I need to assign categories based on this information. Let me think about what each part covers.
+
+First, the domain is clearly E-commerce and Online Shopping since it&#39;s about price comparison platforms in e-commerce. Then, the focus is on User Behavior, which makes sense because they&#39;re analyzing user sessions and behavior types.
+
+The method used involves Clustering Algorithms since they clustered user logs to identify session types. Also, it relates to Recommender Systems, specifically Conversational Recommender Systems (CRS), as that&#39;s the application they&#39;re targeting.
+
+In terms of evaluation aspects, they mention understanding user types over time, which ties into Long-term User Behavior Analysis. They used both quantitative analysis and expert interviews, so that falls under Data Analysis Methods.
+
+The problem domain is specific to Price Comparison Platforms, so that should be a category. The paper&#39;s findings can inform the design of Recommender System Design.
+
+They talk about how CRS development often overlooks integration with existing systems, so System Integration is relevant here. Also, their work helps in identifying user segments or types, which relates to User Segmentation.
+
+Looking at other aspects, they used real-world data from a major platform, so Real-World Applications apply. The study includes interviews, but I&#39;m not sure if that&#39;s part of any specific category listed; maybe it falls under Data Collection Methods, but that wasn&#39;t in the examples given. 
+
+They also discuss how their findings can benefit users by informing CRS implementations, which relates to User-Centered Design. However, that might be stretching a bit, so perhaps I should focus on more direct categories.
+
+Putting this all together, the main categories would include E-commerce and Online Shopping (domain), User Behavior (theme), Clustering Algorithms (method), Recommender Systems (application), Conversational Recommender Systems (specific application), Long-term User Behavior Analysis (evaluation aspect), Data Analysis Methods (methodology), Price Comparison Platforms (specific domain), Recommender System Design (application design), System Integration (as they discuss integrating CRS into existing systems), and Real-World Applications (since they used data from a real platform).
+
+I should make sure each category is clear and relevant. Let me see if there are any overlaps or redundancies. For example, Recommender Systems and Conversational Recommender Systems are both specific but related categories, so including both makes sense for discoverability.
+
+Also, considering the user-centric design aspect, maybe User-Centered Design could be another category since they&#39;re focusing on how CRS can benefit users based on their identified session types. But I&#39;m not sure if that was covered in the examples given or if it&#39;s necessary here.
+
+I think sticking with the categories mentioned above should cover all aspects adequately without redundancy. Now, listing them out:
+
+E-commerce and Online Shopping (domain),
+User Behavior,
+Clustering Algorithms,
+Recommender Systems,
+Conversational Recommender Systems,
+Long-term User Behavior Analysis,
+Data Analysis Methods,
+Price Comparison Platforms,
+Recommender System Design,
+System Integration,
+Real-World Applications.
+
+That&#39;s 11 categories, which fits within the 8-12 range. I think this covers all necessary aspects of the article.
+&lt;/think&gt;
+
+E-commerce and Online Shopping, User Behavior, Clustering Algorithms, Recommender Systems, Conversational Recommender Systems, Long-term User Behavior Analysis, Data Analysis Methods, Price Comparison Platforms, Recommender System Design, System Integration, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: What to compare? Towards understanding user sessions on price comparison platforms
+Abstract:
+E-commerce and online shopping have become integral to the lives of many, with various user behavior types historically identified. Beyond deciding what to buy, determining where to make a purchase has led to the importance of price comparison platforms. However, user behavior on these platforms remains underexplored. Furthermore, web analytics often struggle with tracking users over time and deriving meaningful user types from data. This paper addresses these gaps by defining session types through the analysis and clustering of user logs from a major price comparison platform. The study identifies six distinct session clusters: quick peek, major purchase, constraint-based browsing, knowledge seeking, search and browse and heavy browsing. These findings are intended to inform the design and development of a conversational recommender system (CRS). Often, CRS development occurs without adequate consideration of the existing system into which it will be integrated. The study’s findings, derived from both quantitative analysis and expert interviews, provide valuable contributions, including identified session clusters, their interpretation and indicators on which users might benefit from a CRS on these platforms.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article based on its title and abstract. Let me start by reading through the provided information carefully.
+
+The title is &#34;What to compare? Towards understanding user sessions on price comparison platforms.&#34; Right away, I can tell that the focus is on user behavior in the context of online shopping, specifically using price comparison sites. The keywords here are user sessions, price comparison platforms, and e-commerce.
+
+Looking at the abstract: it discusses how users interact with these platforms beyond just deciding what to buy—they&#39;re also figuring out where to purchase. It mentions that this area is underexplored. The paper uses user logs from a major platform to cluster user behaviors into six types: quick peek, major purchase, constraint-based browsing, knowledge seeking, search and browse, heavy browsing.
+
+So the study aims to inform the design of conversational recommender systems (CRS) by understanding these user session clusters. They used both quantitative analysis and expert interviews, which adds depth to their findings.
+
+Now, I need to assign categories to this article. The guidelines suggest assigning at least 8-12 categories, so I&#39;ll aim for that number but ensure each is relevant without being too specific or too broad.
+
+Starting with the obvious: User Behavior. That&#39;s central here as they&#39;re analyzing how users interact on these platforms.
+
+Next, E-commerce is directly related since price comparison platforms are a part of online shopping.
+
+Conversational Recommender Systems (CRS) is another key area because the study aims to inform their design and development.
+
+Recommendation Systems in general would be a broader category that includes CRS.
+
+Clustering Analysis is used in their methodology, so that&#39;s another category.
+
+User Sessions refers to the specific user interactions they analyzed.
+
+Web Analytics is mentioned as struggling with tracking, which ties into their approach.
+
+Price Comparison Platforms are the specific context of the study.
+
+Data Clustering falls under the methods they used for analysis.
+
+Online Shopping is related since it&#39;s part of e-commerce and their focus area.
+
+User-Centered Design is relevant because they&#39;re designing systems based on user behavior insights.
+
+Quantitative Analysis is a method they employed, so that&#39;s another category.
+
+Expert Interviews are part of their research approach, adding to the categories.
+
+Session Clustering relates specifically to how they grouped user behaviors.
+
+Now, I&#39;ll list these out:
+
+User Behavior, E-commerce, Conversational Recommender Systems, Recommendation Systems, Clustering Analysis, User Sessions, Web Analytics, Price Comparison Platforms, Data Clustering, Online Shopping, User-Centered Design, Quantitative Analysis, Expert Interviews, Session Clustering.
+
+That&#39;s 14 categories, which meets the guideline of at least 8. I tried to cover both the specific context (price comparison platforms) and broader areas like recommendation systems and user behavior. I also included methodological aspects like clustering analysis and quantitative methods, as well as the design implications for conversational recommenders.
+&lt;/think&gt;
+
+User Behavior, E-commerce, Conversational Recommender Systems, Recommendation Systems, Clustering Analysis, User Sessions, Web Analytics, Price Comparison Platforms, Data Clustering, Online Shopping, User-Centered Design, Quantitative Analysis, Expert Interviews, Session Clustering</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

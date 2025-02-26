@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation
+Abstract:
+The impressive performance of Large Language Models (LLMs) across various fields has encouraged researchers to investigate their potential in recommendation tasks. To harness the LLMs’ extensive knowledge and powerful generalization abilities, initial efforts have tried to design instructions for recommendation tasks through In-context Learning. However, the recommendation performance of LLMs remains limited due to (i) significant differences between LLMs’ language-related pre-training tasks and recommendation tasks, and (ii) inadequate recommendation data during the LLMs’ pre-training. To fill the gap, we consider further tuning LLMs for recommendation tasks. To this end, we propose a lightweight tuning framework for LLMs-based recommendation, namely LLM4Rec, which constructs the recommendation data as tuning samples and utilizes LoRA for lightweight tuning. We conduct experiments on two datasets, validating that LLM4Rec is highly efficient w.r.t. computing costs (e.g., a single RTX 3090 is sufficient for tuning LLaMA-7B), and meanwhile, it can significantly enhance the recommendation capabilities of LLMs in the movie and book domains, even with limited tuning samples (&lt; 100 samples). Furthermore, LLM4Rec exhibits strong generalization ability in cross-domain recommendation. Our code and data are available at https://anonymous.4open.science/r/LLM4rec.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I have this research article to categorize. The title is &#34;TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation.&#34; Hmm, that&#39;s a mouthful. Let me try to break it down.
+
+First, the abstract says that they&#39;re looking into using Large Language Models (LLMs) for recommendation tasks. They mention that while LLMs have done well in other areas, their performance in recommendations isn&#39;t great yet because of differences between pre-training tasks and recommendation tasks, plus limited data during pre-training.
+
+So the authors propose a tuning framework called LLM4Rec. It uses LoRA (which I think is a technique for efficient fine-tuning) to make it lightweight. They tested this on two datasets in movie and book domains and found that even with few samples, it worked well and generalized across domains. They also mention making their code and data publicly available.
+
+Alright, so I need to assign categories to this article. The user wants 8-12 categories. Let me think step by step.
+
+1. **Family of Algorithm**: They&#39;re using LLMs, specifically with LoRA for tuning. So categories could be &#34;Large Language Models&#34; and &#34;LoRA (Low-Rank Adaptation)&#34; since those are specific methods.
+
+2. **Domain of Problem**: The experiments were done on movies and books, so &#34;Movies&#34; and &#34;Books&#34; are relevant domains.
+
+3. **Recommendation Space**: They&#39;re addressing the challenge of aligning LLMs with recommendation tasks, which is a specific area in recommendations. So categories like &#34;In-Context Learning&#34; and &#34;Cross-Domain Recommendation&#34; make sense since they talk about generalization across domains.
+
+4. **Evaluation Aspects**: The article mentions efficiency, especially computational costs, so &#34;Computational Efficiency&#34; should be included. They also tested on datasets, so maybe &#34;Dataset Evaluation.&#34;
+
+5. **Real-world Applications**: They don&#39;t mention specific applications beyond the recommendation tasks, but since it&#39;s about enhancing recommendation systems, perhaps &#34;Recommendation Systems&#34; is a broader category here.
+
+6. **Other Relevant Categories**: Terms like &#34;Tuning Frameworks,&#34; &#34;Lightweight Fine-Tuning,&#34; and &#34;Generalization Ability&#34; capture the essence of their method. Also, they made code and data public, so &#34;Open-Source Implementation.&#34;
+
+Wait, let me check if I have enough categories. So far: LLMs, LoRA, Movies, Books, In-Context Learning, Cross-Domain Recommendation, Computational Efficiency, Dataset Evaluation, Recommendation Systems, Tuning Frameworks, Lightweight Fine-Tuning, Generalization Ability, Open-Source Implementation.
+
+That&#39;s 12 categories, which fits the user&#39;s request. I think each is specific enough but also broad where needed. They cover algorithms, domains, methods, evaluation, and practical aspects like open-source. This should help users navigate based on their interests, whether they&#39;re looking for LLM applications, recommendation techniques in specific domains, or efficient tuning methods.
+
+I don&#39;t see any overlap that would cause confusion, and each category is distinct yet relevant to the article&#39;s content.
+&lt;/think&gt;
+
+Large Language Models, LoRA (Low-Rank Adaptation), Movies, Books, In-Context Learning, Cross-Domain Recommendation, Computational Efficiency, Dataset Evaluation, Recommendation Systems, Tuning Frameworks, Lightweight Fine-Tuning, Generalization Ability, Open-Source Implementation</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation
+Abstract:
+The impressive performance of Large Language Models (LLMs) across various fields has encouraged researchers to investigate their potential in recommendation tasks. To harness the LLMs’ extensive knowledge and powerful generalization abilities, initial efforts have tried to design instructions for recommendation tasks through In-context Learning. However, the recommendation performance of LLMs remains limited due to (i) significant differences between LLMs’ language-related pre-training tasks and recommendation tasks, and (ii) inadequate recommendation data during the LLMs’ pre-training. To fill the gap, we consider further tuning LLMs for recommendation tasks. To this end, we propose a lightweight tuning framework for LLMs-based recommendation, namely LLM4Rec, which constructs the recommendation data as tuning samples and utilizes LoRA for lightweight tuning. We conduct experiments on two datasets, validating that LLM4Rec is highly efficient w.r.t. computing costs (e.g., a single RTX 3090 is sufficient for tuning LLaMA-7B), and meanwhile, it can significantly enhance the recommendation capabilities of LLMs in the movie and book domains, even with limited tuning samples (&lt; 100 samples). Furthermore, LLM4Rec exhibits strong generalization ability in cross-domain recommendation. Our code and data are available at https://anonymous.4open.science/r/LLM4rec.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on the given guidelines. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation.&#34; So it&#39;s about using a tuning framework for LLMs in recommendation tasks.
+
+Looking at the abstract, the article discusses how large language models (LLMs) can be used in recommendation systems. They mention that initial efforts used In-Context Learning but faced limitations because of differences between LLM pre-training tasks and recommendation tasks, as well as insufficient recommendation data during pre-training. To address this, they developed a framework called LLM4Rec which uses LoRA for lightweight tuning.
+
+Key points from the abstract:
+1. Focus on Large Language Models (LLMs) in recommendations.
+2. Uses In-Context Learning initially but finds limitations.
+3. Proposes a tuning framework (LLM4Rec) using LoRA.
+4. Tested on movie and book domains.
+5. Efficient, requiring minimal computational resources.
+6. Generalizes across different recommendation domains.
+
+Now, applying the guidelines:
+- Assign 8-12 categories that are relevant.
+- Categories should be clear, user-friendly, and cover both broad and specific aspects.
+
+Possible categories based on content:
+
+Algorithm family: LoRA is a key component here, so &#34;LoRA&#34; (Low-Rank Adaptation) would fit. Also, the framework could fall under &#34;Tuning Frameworks.&#34;
+
+Domain of problem: The article mentions movies and books, so &#34;Movies,&#34; &#34;Books,&#34; and more broadly &#34;Recommendation Systems.&#34;
+
+Specific recommendation aspects: It&#39;s about aligning LLMs with recommendations, so maybe &#34;LLM in Recommendations.&#34; They also talk about tuning for better performance, so perhaps &#34;Model Tuning&#34; or &#34;Fine-tuning.&#34;
+
+Aspects of evaluation: The study shows efficiency and effectiveness. So categories like &#34;Computational Efficiency,&#34; &#34;Generalization Ability&#34; (since it works across domains), and &#34;Recommendation Performance.&#34;
+
+Other relevant aspects: It mentions using In-Context Learning, which is a method for LLMs to perform tasks without fine-tuning, so that&#39;s another category.
+
+Real-world applications: They tested on datasets, but the article doesn&#39;t mention real-world deployment or A/B tests, so maybe not applicable here. But since they discuss efficient use of resources, &#34;Efficient Training&#34; could be a fit.
+
+Putting it all together, I should list these categories making sure each is clear and relevant.
+&lt;/think&gt;
+
+Large Language Models, Recommendation Systems, LoRA, Movie Recommendations, Book Recommendations, In-Context Learning, Fine-Tuning, Model Tuning, Computational Efficiency, Generalization Ability, Efficient Training</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

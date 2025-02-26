@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommendation of High Quality Representative Reviews in e-commerce
+Abstract:
+Users of ecommerce portals commonly use customer reviews for making purchase decisions. Many products contain tens or hundreds of reviews which makes it impossible for the customer to read all of them in order to get a good idea about the product. A review recommendation system that can recommend a subset of the reviews is thus useful for e-commerce websites. However customer reviews are of varied quality and different reviews cover different aspects or issues about the product. We follow previous work that maintain the statistical distribution of product aspects along with their associated sentiments of the entire review set for that particular product. However we address the challenge which arises due to the fact that similar aspects are mentioned in different reviews using different natural language expressions (e.g. camera, photo and picture refers to the same product aspect of camera). We use vector representations to identify mentions of similar aspects and group them together under single product aspect. Review helpfulness score may act as a proxy for quality of reviews, but this approach suffers from cold start problem as new reviews do not have any helpfulness score. We measure the quality of the review based on its content by doing supervised training using a convolutional neural network. Though  our neural network model is trained with reviews from Amazon dataset which have helpfulness score, our model can be used to predict the quality score of new reviews which do not have any helpfulness score. The recommended subset of reviews have high content score and the coverage of the product aspects, issues and sentiments are representative of the entire review set. The system is evaluated on datasets from Amazon and is found to be more useful than the competing methods.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about recommending high-quality representative reviews in e-commerce. Let me start by reading through the title and abstract carefully.
+
+The title mentions &#34;Recommendation of High Quality Representative Reviews,&#34; which immediately tells me it&#39;s related to recommendation systems, specifically within e-commerce. The focus is on customer reviews that help users make purchase decisions. So, categories like &#34;Recommendation Systems&#34; and &#34;E-Commerce&#34; definitely fit here.
+
+Looking at the abstract, they talk about how products have many reviews, making it hard for customers to read all of them. This brings up the issue of information overload, so another category could be &#34;Information Overload.&#34; They mention that reviews vary in quality and cover different aspects or issues. So maybe &#34;Review Quality&#34; is a relevant category.
+
+The article refers to maintaining statistical distributions of product aspects with associated sentiments. They use vector representations to group similar aspects together, like &#34;camera,&#34; &#34;photo,&#34; and &#34;picture.&#34; This suggests they&#39;re dealing with natural language processing techniques. So categories like &#34;Natural Language Processing (NLP)&#34; and &#34;Product Aspects&#34; make sense.
+
+They address the cold start problem related to review helpfulness scores. Cold start is a common issue in recommendation systems where new items or users lack enough data. Therefore, adding &#34;Cold Start&#34; as a category is appropriate.
+
+The authors use a convolutional neural network (CNN) for supervised training on an Amazon dataset to predict review quality. This points towards machine learning techniques and sentiment analysis. So categories like &#34;Machine Learning,&#34; &#34;Sentiment Analysis,&#34; and &#34;Neural Networks&#34; should be included.
+
+They evaluate their system using datasets from Amazon, showing real-world application through user surveys or A/B testing, perhaps. But the abstract mentions evaluation but doesn&#39;t specify methods. However, since it&#39;s applied in a real context, I&#39;ll include &#34;Real-World Applications.&#34;
+
+Considering aspects of evaluation beyond just accuracy, they look at diversity and coverage of product issues and sentiments. So categories like &#34;Diversity of Recommendations&#34; and &#34;Evaluation Metrics&#34; fit well.
+
+Putting this all together, the categories should reflect both the technical methods used (like NLP, CNNs) and the problem areas addressed (such as cold start in e-commerce reviews). I need to ensure that each category is relevant and adds value for users exploring content. The list should be comprehensive but not overly fragmented.
+&lt;/think&gt;
+
+Recommendation Systems, E-Commerce, Review Quality, Natural Language Processing (NLP), Product Aspects, Cold Start, Machine Learning, Sentiment Analysis, Neural Networks, Information Overload, Real-World Applications, Diversity of Recommendations, Evaluation Metrics</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommendation of High Quality Representative Reviews in e-commerce
+Abstract:
+Users of ecommerce portals commonly use customer reviews for making purchase decisions. Many products contain tens or hundreds of reviews which makes it impossible for the customer to read all of them in order to get a good idea about the product. A review recommendation system that can recommend a subset of the reviews is thus useful for e-commerce websites. However customer reviews are of varied quality and different reviews cover different aspects or issues about the product. We follow previous work that maintain the statistical distribution of product aspects along with their associated sentiments of the entire review set for that particular product. However we address the challenge which arises due to the fact that similar aspects are mentioned in different reviews using different natural language expressions (e.g. camera, photo and picture refers to the same product aspect of camera). We use vector representations to identify mentions of similar aspects and group them together under single product aspect. Review helpfulness score may act as a proxy for quality of reviews, but this approach suffers from cold start problem as new reviews do not have any helpfulness score. We measure the quality of the review based on its content by doing supervised training using a convolutional neural network. Though  our neural network model is trained with reviews from Amazon dataset which have helpfulness score, our model can be used to predict the quality score of new reviews which do not have any helpfulness score. The recommended subset of reviews have high content score and the coverage of the product aspects, issues and sentiments are representative of the entire review set. The system is evaluated on datasets from Amazon and is found to be more useful than the competing methods.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s tackle this categorization task step by step. I&#39;ve got an article titled &#34;Recommendation of High Quality Representative Reviews in e-commerce&#34; with a detailed abstract. My goal is to assign it to 8-12 relevant categories based on the guidelines provided.
+
+First, I&#39;ll read through the abstract carefully to understand the main themes and focus areas of the article. It&#39;s about improving how e-commerce platforms recommend reviews to users. The key issues addressed include the overwhelming number of reviews, varying review quality, different aspects covered in reviews, and the cold start problem for new reviews.
+
+The authors mention using vector representations to group similar product aspects despite different natural language expressions. They also employ a convolutional neural network (CNN) to predict review quality, addressing the cold start issue by training on Amazon&#39;s dataset with helpfulness scores. The evaluation shows their method outperforms competitors.
+
+Now, I&#39;ll identify potential categories based on this information:
+
+1. **E-commerce**: The article clearly focuses on e-commerce platforms and their challenges.
+2. **Review Recommendation**: It&#39;s about recommending reviews, so this is a direct fit.
+3. **Aspect-Based Sentiment Analysis**: They discuss grouping similar aspects using vector representations, which relates to aspect-based sentiment analysis.
+4. **Cold Start Problem**: This is explicitly mentioned as a challenge addressed in the article.
+5. **Neural Networks/CNNs**: The use of convolutional neural networks for review quality prediction is a key methodological point.
+6. **User Experience**: Improving how users interact with and receive reviews enhances their shopping experience, so this category is relevant.
+7. **Product Feedback**: Reviews provide feedback on products, which the article deals with extensively.
+8. **Evaluation Metrics**: The system&#39;s effectiveness is evaluated using datasets like Amazon&#39;s, which ties into evaluation metrics.
+9. **Implicit Feedback**: Although not directly mentioned, review helpfulness scores can be considered a form of implicit feedback.
+10. **Content-Based Filtering**: Their approach likely involves content-based methods to select high-quality reviews.
+11. **Scalability**: The system needs to handle large volumes of reviews efficiently, suggesting scalability is a consideration.
+12. **Representation Learning**: Using vector representations to group similar aspects falls under representation learning.
+
+I need to ensure each category is clear and relevant, avoiding overcrowding any single category while covering all aspects of the article. These categories should help users navigate and discover related content effectively.
+&lt;/think&gt;
+
+E-commerce, Review Recommendation, Aspect-Based Sentiment Analysis, Cold Start Problem, Neural Networks, User Experience, Product Feedback, Evaluation Metrics, Implicit Feedback, Content-Based Filtering, Scalability, Representation Learning</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Reverse Maximum Inner Product Search: How to efficiently find users who would like to buy my item?
+Abstract:
+The MIPS (maximum inner product search), which finds the item with the highest inner product with a given query user, is an essential problem in the recommendation field. It is usual that e-commerce companies face situations where they want to promote and sell new or discounted items. In these situations, we have to consider a question: who are interested in the items and how to find them? This paper answers this question by addressing a new problem called reverse maximum inner product search (reverse MIPS). Given a query vector and two sets of vectors (user vectors and item vectors), the problem of reverse MIPS finds a set of user vectors whose inner product with the query vector is the maximum among the query and item vectors. Although the importance of this problem is clear, its straightforward implementation incurs a computationally expensive cost.
+We therefore propose Simpfer, a simple, fast, and exact algorithm for reverse MIPS. In an offline phase, Simpfer builds a simple index that maintains a lower-bound of the maximum inner product. By exploiting this index, Simpfer judges whether the query vector can have the maximum inner product or not, for a given user vector, in a constant time. Besides, our index enables filtering user vectors, which cannot have the maximum inner product with the query vector, in a batch. We theoretically demonstrate that Simpfer outperforms baselines employing state-of-the-art MIPS techniques. Furthermore, our extensive experiments on real datasets show that Simpfer is about 500–8000 times faster than the baselines.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to make sure users can easily find the article through a well-organized interface. Let&#39;s start by reading through the title and abstract carefully.
+
+The title is &#34;Reverse Maximum Inner Product Search: How to efficiently find users who would like to buy my item?&#34; That already gives me some keywords: Reverse Maximum Inner Product Search (reverse MIPS), recommendation systems, efficient user targeting for items.
+
+Looking at the abstract, it talks about MIPS being essential in recommendations. So that&#39;s a key term here. They mention e-commerce companies promoting new or discounted items and wanting to find interested users. The paper introduces reverse MIPS as a new problem where you have a query vector and two sets of vectors (user and item). Reverse MIPS finds user vectors with the maximum inner product relative to the query and item vectors.
+
+The solution they propose is Simpfer, an exact algorithm that&#39;s fast. They use an offline index maintaining lower bounds for the inner products. The experiments show it&#39;s much faster than existing methods.
+
+So breaking this down, the main themes are recommendation systems, reverse MIPS, similarity search, efficient algorithms, e-commerce applications, user targeting, and optimization of computational costs.
+
+I need to assign at least 8-12 categories that cover these aspects. Let me list possible categories:
+
+1. **Recommendation Systems**: The article is clearly within this domain.
+2. **Reverse Maximum Inner Product Search (reverse MIPS)**: A specific problem addressed here.
+3. **Similarity Search**: Related to finding users similar to a query item.
+4. **Efficient Algorithms**: Discusses optimizing for speed and computational efficiency.
+5. **E-commerce Applications**: Focuses on promoting items in e-commerce contexts.
+6. **User Targeting**: Identifying which users are interested in specific items.
+7. **Inner Product Calculation**: A core mathematical aspect of the problem.
+8. **Scalability**: Though not explicitly mentioned, efficient solutions imply scalability.
+9. **Indexing Techniques**: They built an index for reverse MIPS.
+10. **Computational Optimization**: Focused on reducing costs through their method.
+
+Wait, maybe I should include &#34;Recommendation Algorithms&#34; as a separate category since it&#39;s more specific than just recommendation systems. Also, &#34;Matrix Factorization&#34; is mentioned in the example categories but isn&#39;t directly relevant here. Instead, focusing on the problem of reverse MIPS and its application in e-commerce makes sense.
+
+I think that covers the main points: it&#39;s about recommendations, a specific algorithm (reverse MIPS), efficient methods, e-commerce use cases, and computational aspects.
+&lt;/think&gt;
+
+Recommendation Systems, Reverse Maximum Inner Product Search, Similarity Search, Efficient Algorithms, E-commerce Applications, User Targeting, Computational Optimization, Indexing Techniques, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

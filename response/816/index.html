@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: An Incremental Learning framework for large-scale CTR prediction
+Abstract:
+In this work we introduce an incremental learning framework for Click-Through-Rate (CTR) prediction and demonstrate its effectiveness for Taboola’s massive-scale recommendation service. Our approach enables rapid capture of emerging trends through warm-starting from previously deployed models and fine tuning on “fresh” data only. Past knowledge is maintained via a teacher-student paradigm, where the teacher acts as a distillation technique, mitigating the catastrophic forgetting phenomenon. Our incremental learning framework enables significantly faster training and deployment cycles (x12 speedup). We demonstrate a consistent Revenue Per Mille (RPM) lift over multiple traffic segments and a significant CTR increase on newly introduced items.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to figure out how to categorize this research article based on the provided guidelines. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;An Incremental Learning framework for large-scale CTR prediction.&#34; So, it&#39;s about a method in machine learning aimed at predicting Click-Through Rates (CTR) on a large scale. The key terms here are &#34;Incremental Learning,&#34; &#34;CTR prediction,&#34; and &#34;large-scale.&#34;
+
+Looking at the abstract, they introduce an incremental learning framework designed for CTR prediction used by Taboola. Their approach allows quick adaptation to new trends by using warm-starting from previous models and fine-tuning with fresh data. They mention a teacher-student paradigm where the teacher helps retain past knowledge, preventing catastrophic forgetting. This method results in faster training cycles (12x speedup) and shows improvements in RPM and CTR, especially for new items.
+
+Now, to break this down into categories:
+
+1. **Incremental Learning**: The core of their framework is incremental learning, so that&#39;s a clear category.
+2. **CTR Prediction**: Since it&#39;s focused on predicting click-through rates, this is another primary category.
+3. **Large-Scale Systems**: They mention it&#39;s for large-scale recommendation services, so scalability is important here.
+4. **Teacher-Student Paradigm**: The method uses a teacher model to distill knowledge, which fits into this category.
+5. **Catastrophic Forgetting Mitigation**: They address the issue of forgetting previous knowledge, so this should be included.
+6. **Rapid Deployment**: The framework allows for faster training and deployment cycles, which is a key aspect.
+7. **Revenue Per Mille (RPM) Lift**: They demonstrate an increase in RPM, indicating real-world performance metrics.
+8. **Real-Time Application**: Since it&#39;s applied to a live recommendation service with traffic segments, this is relevant.
+
+Considering the example categories provided, I also notice that some of these could fit into broader or more specific areas. For instance, &#34;Incremental Learning&#34; might fall under a family of algorithms, and &#34;CTR Prediction&#34; relates directly to the domain of Web Systems or Advertising. However, sticking strictly to the guidelines and the examples given, I&#39;ll map them as above.
+
+I should ensure that each category is both specific enough to be useful but also broad enough to include multiple articles. For example, while &#34;Teacher-Student Paradigm&#34; is quite specific, it&#39;s a recognized technique in machine learning, so it makes sense as a category.
+
+Additionally, since the article discusses real-world applications like RPM lift and A/B testing (though not explicitly mentioned), I can infer that it has practical applications which users might be interested in. This helps align with user-centric design by making categories that reflect real-world impact.
+
+I think I&#39;ve covered all the necessary aspects from the abstract without adding unnecessary categories. Each category directly relates to the content and should help users navigate effectively.
+&lt;/think&gt;
+
+Incremental Learning, CTR Prediction, Large-Scale Systems, Teacher-Student Paradigm, Catastrophic Forgetting Mitigation, Rapid Deployment, Revenue Per Mille (RPM) Lift, Real-Time Application</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: An Incremental Learning framework for large-scale CTR prediction
+Abstract:
+In this work we introduce an incremental learning framework for Click-Through-Rate (CTR) prediction and demonstrate its effectiveness for Taboola’s massive-scale recommendation service. Our approach enables rapid capture of emerging trends through warm-starting from previously deployed models and fine tuning on “fresh” data only. Past knowledge is maintained via a teacher-student paradigm, where the teacher acts as a distillation technique, mitigating the catastrophic forgetting phenomenon. Our incremental learning framework enables significantly faster training and deployment cycles (x12 speedup). We demonstrate a consistent Revenue Per Mille (RPM) lift over multiple traffic segments and a significant CTR increase on newly introduced items.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article based on its title and abstract. The title is &#34;An Incremental Learning framework for large-scale CTR prediction.&#34; So right away, I can note that it&#39;s about Click-Through Rate (CTR) prediction, which falls under recommendation systems. 
+
+The abstract mentions that the framework is used for Taboola’s massive-scale recommendation service. That tells me to include categories related to recommendations and perhaps specific applications or domains like news, since Taboola is known for that.
+
+It talks about incremental learning, so that&#39;s a clear category. Also, it uses a teacher-student paradigm with knowledge distillation to prevent catastrophic forgetting. So I should add those as subcategories under machine learning techniques or neural networks.
+
+They mention warm-starting from previous models and fine-tuning on fresh data, which relates to model updates. The framework is efficient, providing faster training and deployment cycles—so scalability and efficiency are important here.
+
+The results show a RPM lift and increased CTR for new items, indicating improvements in performance metrics. They also tested this with real-world applications, using A/B tests or similar methods.
+
+Putting it all together: the main areas would be CTR prediction, recommendation systems, incremental learning, machine learning techniques like knowledge distillation, efficiency in large-scale systems, and their application to news or media domains.
+&lt;/think&gt;
+
+Incremental Learning, Click-Through Rate (CTR) Prediction, Recommendation Systems, Large-Scale Applications, Knowledge Distillation, Teacher-Student Paradigm, Model Updates, Scalability, Efficiency, Real-World Applications, News/Content Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A College Major Recommendation System
+Abstract:
+College students are required to select a major but are often provided with only a modest amount of support in making this important decision. A poor decision is detrimental to the student, since it may result in the student later switching to a different major with a delay in graduation—or even result in the student leaving the university. This also impacts the university since time to graduation and retention rate are used to evaluate the quality of a university. There is a general lack of research on recommender systems for college majors, with the most relevant systems focusing on course-level recommendations. This study describes and evaluates a recommender system for selecting an undergraduate major, utilizing nine years of historical student data from a large university. The system bases its recommendations on the courses that the student takes in the first few years of college, and how well they performed in these courses. The system is designed to recommend majors that the student is likely to be interested in and will perform well in. Recommendations are evaluated based on the likelihood that the student&#39;s actual major was in the top five recommended majors, and whether the student performed above average in that major. The recommendation system dramatically outperforms the baseline strategy of randomly selecting a major, and when the recommendation is followed the student is 12% more likely to perform above average in the major.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article about a college major recommendation system. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;A College Major Recommendation System,&#34; which immediately tells me it&#39;s about recommendation systems but specifically tailored for academic majors. The abstract elaborates that the study focuses on helping college students choose their majors using historical data, evaluating how well the recommendations perform.
+
+First, I should identify the main themes here. It&#39;s a recommendation system, so that&#39;s one category. But more specifically, it&#39;s in the educational domain since it&#39;s about college majors. So &#34;Education&#34; is definitely another category.
+
+The problem here is related to student support and decision-making. The abstract mentions that students often don&#39;t get enough help choosing their major, which affects both them and the university. This ties into education technology, so maybe &#34;Educational Technology&#34; as a category makes sense.
+
+Looking at the approach, they used historical data from students over nine years. That suggests they&#39;re using data analysis to inform their recommendations. So categories like &#34;Data Analysis&#34; or &#34;Historical Data&#34; could be relevant here. Also, since it&#39;s about predicting student performance based on courses taken and grades, aspects of evaluation would include things like performance prediction.
+
+The system evaluates how likely a student is to perform well in the recommended major. They used metrics like whether the actual major was in the top five recommendations and if the student performed above average. This points towards specific recommendation space topics such as &#34;Major Recommendation&#34; and broader evaluation criteria like &#34;Performance Prediction.&#34;
+
+They mention that their system outperforms a baseline of random selection, showing a 12% improvement. That indicates they&#39;ve done some form of testing or comparison, so maybe &#34;Evaluation Metrics&#34; is another category.
+
+Considering the impact on universities, the study touches on aspects like graduation time and retention rates, which are important for university rankings. So categories related to higher education performance might include &#34;University Impact,&#34; &#34;Graduation Rate,&#34; or &#34;Retention.&#34;
+
+The system bases recommendations on courses taken and performance in those courses. This means it&#39;s using academic records, so &#34;Academic Records&#34; is a category. Additionally, since the recommendations consider both interest and performance, that ties into user preferences—so maybe &#34;User Preferences.&#34;
+
+I should also think about other possible categories. Since they&#39;re looking at a specific use case within higher education, &#34;Higher Education&#34; itself could be another category. The study might also relate to student success metrics, so &#34;Student Success&#34; is relevant.
+
+Looking back at the example categories provided earlier, I can map these themes accordingly. They used historical data for recommendations, which fits under &#34;Historical Data.&#34; The focus on course performance and outcomes ties into &#34;Performance Prediction.&#34;
+
+I need to ensure each category is as specific as possible without being too narrow, so that users can find related articles easily. Also, considering user-centric design, someone looking for recommendation systems in education or student success would likely search under these broader terms.
+
+Let me list out the categories I&#39;ve identified so far:
+
+1. Recommendation Systems
+2. Education
+3. Educational Technology
+4. Data Analysis
+5. Academic Records
+6. Student Performance
+7. Major Recommendation
+8. Higher Education
+9. University Impact
+10. Graduation Rate
+11. Retention
+12. Student Success
+
+I think these cover the main aspects of the article. Each category is relevant and should help in making the interface user-friendly, especially for those interested in educational technologies or recommendation systems within that context.
+
+I might have missed some categories, so let me double-check. The system evaluates based on whether the major was in the top five and performance above average—so perhaps &#34;Evaluation Metrics&#34; as well. Also, since it&#39;s about course recommendations leading to better outcomes, maybe &#34;Course Recommendations.&#34;
+
+Wait, but in the abstract, they mention that most relevant systems are for course-level recommendations, so their focus is specifically on majors. So &#34;Major Recommendation&#34; seems more specific than just &#34;Recommendation Systems.&#34; Maybe I should include both.
+
+Additionally, considering the system uses student data to predict outcomes, aspects like &#34;Predictive Analytics&#34; could be applicable, but it&#39;s not in my initial list. However, given the categories provided earlier, maybe it&#39;s better to stick with what&#39;s relevant from the examples.
+
+I think 12 categories are sufficient as per the guidelines. Let me finalize them.
+&lt;/think&gt;
+
+Recommendation Systems, Education, Educational Technology, Data Analysis, Academic Records, Student Performance, Major Recommendation, Higher Education, University Impact, Graduation Rate, Retention, Student Success</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

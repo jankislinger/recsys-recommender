@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommender Systems in the Internet of Talking Things (IoTT)
+Abstract:
+In the Internet of Things, smart devices are connected to collect and to exchange data. In our vision, in the Internet of Talking Things, objects such as intelligent fridges will be able to communicate with humans to set up preferences and profiling options which allow a personalized usage of the object. In this paper, we present a recommender system implemented as a Telegram Bot, that can fit with the previous scenario. The system is a movie recommender which exploits the information available in the Linked Open Data (LOD) cloud for generating the recommendations and leading the conversation with the user. It can be easily seen as an intelligent component of a connected TV.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. Let&#39;s break it down step by step.
+
+First, looking at the title: &#34;Recommender Systems in the Internet of Talking Things (IoTT)&#34;. The main keywords here are Recommender Systems, Internet of Talking Things, which is a specific area within IoT. So I should include &#34;Recommender Systems&#34; as one category and maybe &#34;Internet of Things (IoT)&#34; or even more specifically, &#34;Internet of Talking Things&#34;.
+
+Now the abstract says it&#39;s about smart devices connected in IoT collecting and exchanging data. The vision is that objects like intelligent fridges can communicate with humans to set preferences and profiles for personalized usage. So this touches on Human-Computer Interaction because the fridge is interacting with users.
+
+The paper presents a recommender system as a Telegram Bot, which suggests it&#39;s using Natural Language Processing since it&#39;s generating recommendations through conversation. It&#39;s specifically a movie recommender, so &#34;Movie Recommendations&#34; should be a category.
+
+They mention exploiting Linked Open Data (LOD) cloud for recommendations. LOD is part of Semantic Web technologies, so categories like &#34;Linked Open Data&#34;, &#34;Semantic Web&#34;, and maybe &#34;Knowledge Graphs&#34; would fit here because LOD uses structured data which can form knowledge graphs.
+
+The system leads the conversation with users, which relates to Interactive Systems or Human-Computer Interaction again. Since it&#39;s implemented as a Telegram Bot, there&#39;s an aspect of chatbots, so &#34;Chatbot Integration&#34; could be another category.
+
+Looking at aspects of evaluation in recommendation systems, they might not have mentioned specific metrics like diversity or beyond accuracy, but since the system interacts conversationally, it likely focuses on user experience and engagement. So categories like &#34;User Interaction&#34;, &#34;Personalization&#34;, &#34;Natural Language Processing&#34; make sense.
+
+Real-world applications are also important here because they&#39;ve implemented a Telegram Bot that can be part of a connected TV, indicating real-world deployment possibilities. Therefore, &#34;Real-World Applications&#34; should be included.
+
+Other potential categories could include &#34;Conversational Agents&#34; since the system engages in conversation with users. Also, considering it&#39;s for movies, maybe &#34;Content-Based Filtering&#34; if the recommendations are based on content features from LOD.
+
+Wait, does it specify the recommendation approach? The abstract says it uses information from LOD cloud to generate recommendations and lead conversations. LOD is structured data, so perhaps they use content-based methods by leveraging semantic information. So &#34;Content-Based Filtering&#34; could be a category here.
+
+Also, since it&#39;s a specific application within IoT for personalized device usage, maybe categories like &#34;Personalized Systems&#34; or &#34;Smart Devices&#34;.
+
+I should ensure that each article goes into at least 8-12 categories as per guidelines, so let me list what I have:
+
+1. Recommender Systems
+2. Internet of Things (IoT)
+3. Human-Computer Interaction
+4. Natural Language Processing
+5. Movie Recommendations
+6. Linked Open Data
+7. Semantic Web
+8. Knowledge Graphs
+9. Interactive Systems
+10. Chatbot Integration
+11. Conversational Agents
+12. User Interaction
+13. Personalization
+14. Content-Based Filtering
+15. Real-World Applications
+
+Wait, that&#39;s 15 categories. I need to make sure they are relevant and not too granular. Maybe some can be combined or adjusted.
+
+Looking back, &#34;Knowledge Graphs&#34; might overlap with LOD and Semantic Web, so perhaps include only one of those unless necessary. Similarly, &#34;Interactive Systems&#34; could be broader than needed. Let me see:
+
+- Core categories: Recommender Systems, IoT/IoTT.
+- Application-specific: Movie Recommendations, Chatbot Integration.
+- Technologies used: NLP, LOD, Semantic Web, Knowledge Graphs.
+- Aspects: Human-Computer Interaction, User Interaction, Personalization.
+- Evaluation aspects: Maybe &#34;User Experience&#34; if not covered yet.
+- Real-world application: A/ B Test? No, but it&#39;s a real deployment as a Telegram Bot.
+
+So perhaps streamline to ensure clarity. Maybe remove some overlaps:
+
+1. Recommender Systems
+2. Internet of Things (IoT)
+3. Human-Computer Interaction
+4. Natural Language Processing
+5. Movie Recommendations
+6. Linked Open Data
+7. Semantic Web
+8. Knowledge Graphs
+9. Chatbot Integration
+10. Conversational Agents
+11. Personalization
+12. Real-World Applications
+
+That&#39;s 12 categories, which fits the requirement. I think this covers the main areas without being too redundant.
+&lt;/think&gt;
+
+Recommender Systems, Internet of Things (IoT), Human-Computer Interaction, Natural Language Processing, Movie Recommendations, Linked Open Data, Semantic Web, Knowledge Graphs, Chatbot Integration, Conversational Agents, Personalization, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

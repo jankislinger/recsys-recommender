@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Kernelized Probabilistic Matrix Factorization for Collaborative Filtering: Exploiting Projected User and Item Graph
+Abstract:
+Matrix Factorization (MF) techniques have already shown its strong foundation in collaborative filtering (CF), particularly for rating prediction problem. MF models mainly work as low-rank matrix completion problem by mapping the users and items into same low dimensional latent space. In this direction, now-a-days, a majority of the studies have focused on using additional information such as social network, item tags along with rating to mitigate different issues in the basic recommendation. This results in making the model more complex with a very specific target. However, there are very few studies in recent years which use only users rating information for the recommendation. In this paper, we present a new finding on exploiting Projected User and Item Graph in the setting of Kernelized Probabilistic Matrix Factorization (KPMF), which uses different graph kernel from the projected graphs. KPMF, here, works with its latent vector spanning over all users (and items) with Gaussian process priors and tries to capture the covariance structure across users and items from the projected graphs. We also explore the ways of building these projected graphs maintaining some properties to maximize the prediction accuracy. We implement the model in four real-world datasets and compare the results with state-of-the-art MF techniques. Using projected graph in KPMF, we achieve significant improvement in RMSE using only rating information of users.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article into multiple relevant categories based on its title and abstract. Let me go through the guidelines step by step.
+
+First, looking at the title: &#34;Kernelized Probabilistic Matrix Factorization for Collaborative Filtering: Exploiting Projected User and Item Graph.&#34; The main focus seems to be on matrix factorization techniques within collaborative filtering, using kernel methods and graph structures.
+
+The abstract mentions that Matrix Factorization (MF) is used in recommendation systems, particularly for rating prediction. It talks about incorporating additional information like social networks or item tags but notes that few recent studies use only rating data. The paper introduces Kernelized Probabilistic Matrix Factorization (KPMF) using projected user and item graphs with Gaussian process priors to capture covariance structures.
+
+Now, applying the guidelines:
+
+1. **Categorization Accuracy**: I need to identify core themes. Key terms are Matrix Factorization, Collaborative Filtering, Kernel Methods, Graph Structures, Recommendation Systems, Rating Prediction, Gaussian Processes.
+
+2. **Category Utility**: Ensure categories are specific enough but not too niche. For example, using &#34;Kernelized Probabilistic Matrix Factorization&#34; as a specific category and broader ones like &#34;Collaborative Filtering.&#34;
+
+3. **User-Centric Design**: Think about what users might search for—topics like recommendation systems, collaborative filtering, matrix factorization, etc.
+
+4. **Consistency**: Use consistent naming across categories, avoiding duplication or overlap where possible.
+
+Possible categories:
+- Matrix Factorization (core technique)
+- Collaborative Filtering (application area)
+- Kernel Methods (methodology used)
+- Graph Structures (as they&#39;re central to the approach)
+- Recommendation Systems (general domain)
+- Rating Prediction (specific task addressed)
+- Gaussian Processes (statistical method employed)
+- Real-World Applications (since they tested on four datasets)
+- Scalability might be relevant if they discuss efficiency, but abstract doesn&#39;t mention it explicitly.
+- Evaluation Metrics like RMSE is mentioned as a result.
+
+Wait, the example categories include things like family of algorithms, domains, aspects of evaluation. So:
+
+Family: Matrix Factorization
+Domain: Recommendation Systems
+Specific recommendation aspect: Collaborative Filtering
+Algorithm specifics: Kernelized Probabilistic Matrix Factorization, Gaussian Processes
+Graph-based methods, Projection Graphs (from title and abstract)
+Evaluation: RMSE improvement
+
+Also, since they used real datasets, &#34;Real-World Applications&#34; is applicable.
+
+Putting it all together:
+Kernelized Probabilistic Matrix Factorization, Collaborative Filtering, Matrix Factorization, Recommendation Systems, Graph Structures, Projected Graphs, Gaussian Processes, Rating Prediction, Real-World Applications, RMSE.
+&lt;/think&gt;
+
+Kernelized Probabilistic Matrix Factorization, Collaborative Filtering, Matrix Factorization, Recommendation Systems, Graph Structures, Projected Graphs, Gaussian Processes, Rating Prediction, Real-World Applications, RMSE</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

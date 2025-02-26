@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: On the Heterogeneous Information Needs in the Job Domain: A Unified Platform for Student Career
+Abstract:
+Finding the right job is a difficult task for anyone as it usually depends on many factors like salary, job description, or geographical location. Students with almost no prior experience, especially, have a hard time on the job market, which is very competitive in nature. Additionally, students often suffer a lack of orientation, as they do not know what kind of job is suitable for their education. At Talto1, we realized this and have built a platform to help Austrian university students with finding their career paths as well as providing them with content that is relevant to their career possibilities. This is mainly achieved by guiding the students toward different types of entities that are related to their career, i.e., job postings, company profiles, and career-related articles.
+In this talk, we share our experiences with solving the recommendation problem for university students. One trait of the student-focused job domain is that behaviour of the students differs depending on their study progression. At the beginning of their studies, they need study-specific career information and part-time jobs to earn additional money. Whereas, when they are nearing graduation, they require information about their potential future employers and entry-level full-time jobs. Moreover, we can observe seasonal patterns in user activity in addition to the need of handling both logged-in and anonymous session users at the same time.
+To cope with the requirements of the job domain, we built hybrid models based on a microservice architecture that utilizes popular algorithms from the literature such as Collaborative Filtering, Content-based Filtering as well as various neural embedding approaches (e.g., Doc2Vec, Autoencoders, etc.). We further adapted our architecture to calculate relevant recommendations in real-time (i.e., after a recommendation is requested) as individual user sessions in Talto are usually short-lived and context-dependent. Here we found that the online performance of the utilized approach also depends on the location context [1]. Hence, the current location of a user on the mobile or web application impacts the expected recommendations.
+One optimization criterion on the Talto career platform is to provide relevant cross-entity recommendations as well as explain why those were shown. Recently, we started to tackle this by learning embeddings of entities that lie in the same embedding space [2]. Specifically, we pre-train word embeddings and link different entities by shared concepts, which we use for training the network embeddings. This embeds both the concepts and the entities into a common vector space, where the common vector space is a result of considering the textual content, as well as the network information (i.e., links to concepts). This way, different entity types (e.g., job postings, company profiles, and articles) are directly comparable and are suited for a real-time recommendation setting. Interestingly enough, with such an approach we also end up with individual words sharing the same embedding space. This, in turn, can be leveraged to enhance the textual search functionality of a platform, which is most commonly based just on a TF-IDF model.
+Furthermore, we found that such embeddings allow us to tackle the problem of explainability in an algorithm-agnostic way. Since the Talto platform utilizes various recommendation algorithms as well as continuously conducts AB tests, an algorithm-agnostic explainability model would be best suited to provide the students with meaningful explanations. As such, we will also go into the details on how we can adapt our explanation model to not rely on the utilized recommendation algorithm.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s see. I need to categorize this research article about a job recommendation platform for university students. The title mentions &#34;heterogeneous information needs&#34; and it&#39;s focused on helping students with their career paths. The abstract talks about building a unified platform that uses various recommendation algorithms like Collaborative Filtering, Content-based Filtering, Doc2Vec, Autoencoders. They also mention real-time recommendations, handling different user sessions (logged-in and anonymous), seasonal patterns in user activity, and the importance of location context.
+
+So, starting with the family of algorithms: Collaborative Filtering is a big one here since it&#39;s mentioned specifically. Content-based Filtering is another category because they use that too. Doc2Vec falls under Word Embeddings, so that should be included. They also use Autoencoders, which are Neural Networks, and overall, they have Hybrid Models combining different approaches.
+
+Next, the domain of the problem is clearly Job Domain and Students since it&#39;s about helping students find jobs. The platform aspect means Platform Design is relevant. Since they&#39;re handling recommendations across different entities like job postings, company profiles, and articles, Cross-Entity Recommendations makes sense. They talk a lot about explainability, so Explainability is another key category.
+
+Real-Time Recommendations are important because their architecture calculates recommendations on the fly. User Session Handling comes into play with managing both logged-in and anonymous users. Seasonal Patterns in user activity is an aspect they observed, so that&#39;s another category. Location Context impacts the recommendations, which is specific to their setup.
+
+They also mention A/B Testing as part of their continuous process, so Real-World Applications like A/B Tests should be included. The platform has a microservice architecture, which relates to System Architecture considerations. Lastly, since they&#39;re dealing with textual content and improving search beyond TF-IDF, Textual Search is relevant.
+
+Putting it all together, I need to make sure each category accurately reflects the article&#39;s content without being too narrow or too broad. Ensuring that each category is useful for navigation and covers different aspects of the research should help users find related articles easily.
+&lt;/think&gt;
+
+Collaborative Filtering, Content-Based Filtering, Doc2Vec, Autoencoders, Hybrid Models, Job Domain, Students, Platform Design, Cross-Entity Recommendations, Explainability, Real-Time Recommendations, User Session Handling, Seasonal Patterns, Location Context, A/B Tests, System Architecture, Textual Search</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

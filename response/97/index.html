@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Fast Differentially Private Matrix Factorization
+Abstract:
+Differentially private collaborative filtering is a challenging task, both in terms of accuracy and speed. We present a simple algorithm that is provably differentially private, while offering good performance, using a novel connection of differential privacy to Bayesian posterior sampling via Stochastic Gradient Langevin Dynamics. Due to its simplicity the algorithm lends itself to efficient implementation. By careful systems design and by exploiting the power law behavior of the data to maximize CPU cache bandwidth we are able to generate 1024 dimensional models at a rate of 8.5 million recommendations per second on a single PC.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Fast Differentially Private Matrix Factorization&#34; based on its abstract. Let me go through the process step by step.
+
+First, I&#39;ll read the title and abstract carefully. The title mentions &#34;Differentially Private Matrix Factorization,&#34; which tells me it&#39;s about matrix factorization techniques with a focus on differential privacy. Matrix factorization is a common method in recommendation systems, so that might be a relevant category.
+
+Looking at the abstract: It talks about differentially private collaborative filtering, which combines two areas—differential privacy and collaborative filtering. The algorithm presented is simple yet provably differentially private and offers good performance. They mention using Bayesian posterior sampling via Stochastic Gradient Langevin Dynamics (SGLD), so that&#39;s another point to note.
+
+They also discuss efficient implementation, systems design, CPU cache optimization for handling power law data, and achieving a high rate of recommendations per second on a single PC. This indicates a focus on scalability and performance, specifically in the context of recommendation systems or web applications.
+
+Now, considering the categories from the examples provided:
+
+1. Family of algorithm: Matrix Factorization is definitely one since that&#39;s central to the paper.
+2. Differential Privacy is another key aspect here, as the method focuses on privacy.
+3. Collaborative Filtering ties into how recommendations are made in this context.
+4. Scalability is mentioned due to the high rate of recommendations achieved.
+5. Performance optimization is important because they talk about efficient implementation and systems design.
+6. Real-world applications could include recommendation systems since matrix factorization is often used there.
+7. The mention of Bayesian methods and SGLD falls under Probabilistic Methods or Bayesian Inference.
+8. High-dimensional models are used as they generate 1024-dimensional models, so that&#39;s another category.
+
+I should also consider if any other categories apply. The abstract doesn&#39;t explicitly mention A/B testing or user surveys, so I might skip those unless there&#39;s an implication of real-world application beyond just generating recommendations. It does talk about a PC implementation, which suggests it&#39;s for web systems but not necessarily mobile or another specific system.
+
+So compiling all these points, the categories would include Matrix Factorization, Differential Privacy, Collaborative Filtering, Scalability, Performance Optimization, Recommendation Systems (as a domain), Probabilistic Methods, and High-dimensional Models. 
+
+Wait, I think I have more than 8-12 categories here. Let me count: Matrix Factorization, Differential Privacy, Collaborative Filtering, Scalability, Performance Optimization, Recommendation Systems, Probabilistic Methods, High-dimensional Models, Bayesian Inference, Stochastic Gradient Langevin Dynamics (SGLD), Real-world Applications, Web Systems.
+
+Hmm, that&#39;s 12 categories, which fits the guideline of assigning at least 8-12. I should ensure each is relevant and clear. Maybe &#34;Stochastic Gradient Langevin Dynamics&#34; can be a more specific category under Probabilistic Methods or Bayesian Inference. Alternatively, if it&#39;s too niche, perhaps just include the broader category. But since SGLD is specifically mentioned, including it as a separate category could help users interested in that method find the article.
+
+I also need to make sure categories are user-friendly and accurately reflect the content. Terms like &#34;Scalability&#34; and &#34;Performance Optimization&#34; are clear, while others like &#34;Probabilistic Methods&#34; and &#34;Bayesian Inference&#34; are more technical but relevant here.
+
+Overall, I think these categories cover the key aspects of the article, from the algorithm family and privacy concerns to optimization techniques and applications.
+&lt;/think&gt;
+
+Matrix Factorization, Differential Privacy, Collaborative Filtering, Scalability, Performance Optimization, Recommendation Systems, Probabilistic Methods, High-dimensional Models, Bayesian Inference, Stochastic Gradient Langevin Dynamics (SGLD), Real-world Applications, Web Systems</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Fast Differentially Private Matrix Factorization
+Abstract:
+Differentially private collaborative filtering is a challenging task, both in terms of accuracy and speed. We present a simple algorithm that is provably differentially private, while offering good performance, using a novel connection of differential privacy to Bayesian posterior sampling via Stochastic Gradient Langevin Dynamics. Due to its simplicity the algorithm lends itself to efficient implementation. By careful systems design and by exploiting the power law behavior of the data to maximize CPU cache bandwidth we are able to generate 1024 dimensional models at a rate of 8.5 million recommendations per second on a single PC.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article titled &#34;Fast Differentially Private Matrix Factorization.&#34; Let me start by reading the title and abstract carefully.
+
+The title mentions &#34;Differentially private collaborative filtering,&#34; which suggests it&#39;s related to recommendation systems. The abstract talks about an algorithm that&#39;s both provably differentially private and efficient, using Bayesian posterior sampling via Stochastic Gradient Langevin Dynamics. It also discusses system design optimizations for speed, handling 1024-dimensional models quickly.
+
+First, the core theme is differential privacy in matrix factorization, so &#34;Differential Privacy&#34; should definitely be one category. Since it&#39;s about collaborative filtering, that&#39;s another key area—so I&#39;ll add &#34;Collaborative Filtering.&#34;
+
+The algorithm uses Bayesian methods and Langevin Dynamics, which falls under machine learning techniques, so &#34;Machine Learning Techniques&#34; is appropriate. The focus on scalability due to efficient implementation points towards &#34;Scalability.&#34; 
+
+They mention handling high-dimensional models efficiently, which relates to system performance—so &#34;High-Dimensional Models&#34; fits here. The article discusses real-world applications with a single PC achieving high recommendation rates, indicating practical implementation aspects, hence &#34;Real-World Applications.&#34;
+
+Efficiency in terms of computational speed is highlighted, so including &#34;Efficiency&#34; makes sense. Additionally, the method addresses scalability through careful system design and data exploitation, which ties back to &#34;Scalability.&#34;
+
+Looking at the categories provided earlier, I notice they have examples like &#34;Family of algorithm,&#34; &#34;Domain of the problem,&#34; etc. In this case, the domain is recommendation systems, so &#34;Recommendation Systems&#34; is a must.
+
+I should ensure each category is clear and relevant without overlap. Since it&#39;s about matrix factorization for recommendations with differential privacy, all these categories should help users navigate effectively.
+&lt;/think&gt;
+
+Differential Privacy, Collaborative Filtering, Machine Learning Techniques, Scalability, High-Dimensional Models, Real-World Applications, Efficiency, Recommendation Systems</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

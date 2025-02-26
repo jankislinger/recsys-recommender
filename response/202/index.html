@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Addressing Cold Start for Next-song Recommendation
+Abstract:
+The cold start problem arises in various recommendation applications. In this paper, we propose a tensor factorization-based algorithm that exploits content features extracted from music audio to deal with the cold start problem for the emerging application next-song recommendation. Specifically, the new algorithm learns sequential behavior to predict the next song that a user would be interested in based on the last song the user just listened to. A unique characteristic of the algorithm is that it learns and updates the mapping between the audio feature space and the item latent space each time during the iterations of the factorization process. This way, the content features can be better exploited in forming the latent features for both users and items, leading to more effective solutions for cold-start recommendation. Evaluation on a large-scale music recommendation dataset shows that the recommendation result of the proposed algorithm exhibits not only higher accuracy but also better novelty and diversity, suggesting its applicability in helping a user explore new items in next-item recommendation. Our implementation is available at https://github.com/fearofchou/ALMM.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article about addressing the cold start problem in next-song recommendations. Let me go through it step by step.
+
+First, looking at the title: &#34;Addressing Cold Start for Next-song Recommendation.&#34; The key terms here are &#34;Cold Start&#34; and &#34;Next-song Recommendation.&#34; So, right away, I know these should be two categories.
+
+The abstract mentions they&#39;re using a tensor factorization-based algorithm. That indicates the family of algorithms involved is Tensor Factorization. Also, since it&#39;s about recommendations, the domain is clearly Music or more specifically, Next-Item Recommendation.
+
+They talk about extracting content features from music audio, so Content-Based Recommendations is another relevant category. The evaluation shows higher accuracy and better diversity, which ties into Evaluation Metrics, especially regarding Accuracy, Novelty, and Diversity of Recommendations.
+
+The paper also discusses handling the cold start problem specifically for next-song recommendations in a large dataset, which points to Large-Scale Applications. Additionally, they mention real-world applications with an implementation on GitHub, so Real-World Application is appropriate.
+
+Putting it all together, I should ensure each category is relevant and covers different aspects of the article without redundancy. This gives me eight categories that accurately represent the paper&#39;s content.
+&lt;/think&gt;
+
+Cold Start, Next-Item Recommendation, Tensor Factorization, Music, Content-Based Recommendations, Evaluation Metrics, Accuracy, Novelty, Diversity of Recommendations, Large-Scale Applications, Real-World Application</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

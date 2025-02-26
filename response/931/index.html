@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Interpretable User Retention Modeling in Recommendation
+Abstract:
+Recommendation usually focuses on immediate accuracy metrics like CTR as training objectives. User retention rate, which reflects the percentage of today’s users that will return to the recommender system in the next few days, should be paid more attention to in real-world systems. User retention is the most intuitive and accurate reflection of user long-term satisfaction. However, most existing recommender systems are not focused on user retention-related objectives, since their complexity and uncertainty make it extremely hard to discover why a user will or will not return to a system and which behaviors affect user retention. In this work, we conduct a series of preliminary explorations on discovering and making full use of the reasons for user retention in recommendation. Specifically, we make a first attempt to design a rationale contrastive multi-instance learning framework to explore the rationale and improve the interpretability of user retention. Extensive offline and online evaluations with detailed analyses of a real-world recommender system verify the effectiveness of our user retention modeling. We further reveal the real-world interpretable factors of user retention from both user surveys and explicit negative feedback quantitative analyses to facilitate future model designs.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me start by reading through the provided information carefully.
+
+The title is &#34;Interpretable User Retention Modeling in Recommendation.&#34; The abstract talks about recommendation systems focusing on immediate metrics like CTR but not considering user retention rates enough. It mentions that user retention reflects long-term satisfaction, which isn&#39;t a focus in most systems because it&#39;s complex and uncertain. The authors propose a rationale contrastive multi-instance learning framework to explore these reasons and improve interpretability. They also conducted evaluations using both offline and online methods on a real-world system and gathered insights from user surveys and explicit negative feedback.
+
+Now, I need to map this article into the appropriate categories. Let&#39;s consider each guideline:
+
+1. **Categorization Accuracy**: The core themes here are user retention in recommendation systems, interpretability of models, and the use of specific learning frameworks like contrastive multi-instance learning. There&#39;s also a focus on real-world applications with A/B testing and user surveys.
+
+2. **Category Utility**: I need to ensure that each category is broad enough but still relevant. For example, &#34;User Retention&#34; is specific but necessary here because it&#39;s the main focus. Similarly, &#34;Recommendation Systems&#34; is a broader category that this article definitely falls into.
+
+3. **User-Centric Design**: Users of this interface might be interested in understanding how recommendation systems affect user behavior over time, so categories like &#34;Long-term User Satisfaction&#34; and &#34;User Behavior Analysis&#34; seem relevant.
+
+4. **Consistency**: I should use consistent terms across all articles to avoid confusion. For instance, using &#34;Recommendation Systems&#34; instead of just &#34;Recommendations&#34; keeps it uniform.
+
+Looking at the example categories provided earlier, some that might fit here include:
+
+- **Family of Algorithm**: The article uses a contrastive multi-instance learning framework, so maybe &#34;Multi-Instance Learning&#34; or more specifically, &#34;Rationale Contrastive Multi-Instance Learning.&#34;
+
+- **Domain of the Problem**: This is about recommendation systems in general, so &#34;Recommendation Systems&#34; and perhaps a specific application like &#34;User Retention.&#34;
+
+- **Specific Recommendation Space Aspects**: Cold Start isn&#39;t mentioned here, but maybe something else? The focus on retention could be its own category.
+
+- **Aspects of Evaluation**: They mention offline and online evaluations, A/B tests, user surveys, so categories like &#34;A/B Testing,&#34; &#34;Offline Evaluation,&#34; &#34;Online Evaluation,&#34; and &#34;User Surveys&#34; are relevant.
+
+- **Real-world Applications**: There&#39;s a real-world recommender system involved, and they discuss factors affecting retention from both user surveys and negative feedback. So &#34;Real-World Applications&#34; is appropriate.
+
+Additionally, the article discusses improving model interpretability, so categories like &#34;Interpretable Models,&#34; &#34;Model Interpretability,&#34; or similar might be useful. It also touches on understanding why users return, which ties into user behavior analysis.
+
+I should aim for at least 8-12 categories. Let me list out possible categories:
+
+1. User Retention
+2. Recommendation Systems
+3. Interpretable Models
+4. Model Interpretability
+5. Rationale Contrastive Multi-Instance Learning (or just &#34;Multi-Instance Learning&#34;)
+6. A/B Testing
+7. Offline Evaluation
+8. Online Evaluation
+9. Real-World Applications
+10. User Surveys
+11. Explicit Negative Feedback
+12. Long-term User Satisfaction
+13. User Behavior Analysis
+
+I should ensure that these categories are clear and align with the user&#39;s needs. For example, &#34;User Retention&#34; is specific but necessary, while &#34;Recommendation Systems&#34; is broader.
+
+Let me see if I can narrow it down to 8-12 without redundancy:
+
+- User Retention
+- Recommendation Systems
+- Interpretable Models
+- Model Interpretability
+- Multi-Instance Learning (since the framework might be a variation)
+- A/B Testing
+- Offline Evaluation
+- Online Evaluation
+- Real-World Applications
+- User Surveys
+- Explicit Negative Feedback
+- Long-term User Satisfaction
+
+That&#39;s 12 categories, which fits within the recommended range. I think these cover all aspects of the article: the focus on user retention, the recommendation system domain, the algorithm used (multi-instance learning), evaluation methods both online and offline, real-world applications with A/B tests and surveys, as well as factors like explicit feedback and long-term satisfaction.
+
+I should avoid creating too many niche categories that might not be useful for navigation. For example, &#34;Rationale Contrastive Multi-Instance Learning&#34; is quite specific, so maybe just &#34;Multi-Instance Learning&#34; suffices unless there are other articles using the same specific framework.
+
+Finalizing the list:
+&lt;/think&gt;
+
+User Retention, Recommendation Systems, Interpretable Models, Model Interpretability, Multi-Instance Learning, A/B Testing, Offline Evaluation, Online Evaluation, Real-World Applications, User Surveys, Explicit Negative Feedback, Long-term User Satisfaction</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Interpretable User Retention Modeling in Recommendation
+Abstract:
+Recommendation usually focuses on immediate accuracy metrics like CTR as training objectives. User retention rate, which reflects the percentage of today’s users that will return to the recommender system in the next few days, should be paid more attention to in real-world systems. User retention is the most intuitive and accurate reflection of user long-term satisfaction. However, most existing recommender systems are not focused on user retention-related objectives, since their complexity and uncertainty make it extremely hard to discover why a user will or will not return to a system and which behaviors affect user retention. In this work, we conduct a series of preliminary explorations on discovering and making full use of the reasons for user retention in recommendation. Specifically, we make a first attempt to design a rationale contrastive multi-instance learning framework to explore the rationale and improve the interpretability of user retention. Extensive offline and online evaluations with detailed analyses of a real-world recommender system verify the effectiveness of our user retention modeling. We further reveal the real-world interpretable factors of user retention from both user surveys and explicit negative feedback quantitative analyses to facilitate future model designs.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on its title and abstract. The article is about &#34;Interpretable User Retention Modeling in Recommendation.&#34; Let me read through the abstract carefully.
+
+The main focus seems to be on user retention rates as a metric for evaluating recommender systems. They mention that while most systems focus on immediate accuracy metrics like CTR, user retention provides a better long-term measure of satisfaction. The authors propose a new framework using rationale contrastive multi-instance learning to improve interpretability. They also conducted both offline and online evaluations and analyzed real-world data from surveys and negative feedback.
+
+Looking at the categories I need to assign: 
+
+1. **User Retention**: This is clearly the primary theme since the article focuses on modeling user retention.
+2. **Interpretability**: The framework aims to make the model&#39;s decisions more understandable, so this is relevant.
+3. **Evaluation Metrics**: They discuss using user retention rate as a metric, which falls under evaluation methods.
+4. **Recommender Systems**: This is fundamental since it&#39;s about recommendation systems.
+5. **Long-term User Behavior**: The study looks at how users interact over time beyond immediate feedback.
+6. **User Feedback**: Both surveys and explicit negative feedback are used in their analysis.
+
+I should make sure each category is clear and relevant, and that the article fits well into them. Also, I need to ensure there&#39;s a balance across categories without overcrowding any single one. Since this is just an initial categorization, I&#39;ll stick with these six for now.
+&lt;/think&gt;
+
+User Retention, Interpretability, Evaluation Metrics, Recommender Systems, Long-term User Behavior, User Feedback</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

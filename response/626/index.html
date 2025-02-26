@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: The Embeddings That Came in From the Cold: Improving Vectors for New and Rare Products with Content-Based Inference
+Abstract:
+Training product embeddings in a multi-tenant scenario involves solving the challenges of ever changing catalogs across dozens of deployments, without supervision. In this work, we detail how we deal with new and rare products when building neural representations at scale: we show how to inject product knowledge into behavior-based embeddings to provide the best accuracy with minimal engineering changes in existing infrastructure and without additional manual effort.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article based on its title and abstract. The goal is to assign it to multiple relevant categories for a user-friendly interface. Let me start by reading through the provided information carefully.
+
+The title is &#34;The Embeddings That Came in From the Cold: Improving Vectors for New and Rare Products with Content-Based Inference.&#34; Hmm, this sounds like it&#39;s about recommendation systems, particularly dealing with new or rare items, which I think is called the cold-start problem. The term &#39;embeddings&#39; makes me think of machine learning techniques used to represent products in a vector space.
+
+Looking at the abstract: It talks about training product embeddings in a multi-tenant scenario, dealing with changing catalogs across many deployments without supervision. They mention improving vectors for new and rare products using content-based inference. So they&#39;re combining behavior-based embeddings (which might be collaborative filtering) with content-based methods to enhance accuracy without much manual intervention or infrastructure changes.
+
+Alright, so the key themes here are:
+
+1. Cold Start Problem: Definitely a big one because it&#39;s about handling new/rare products.
+2. Content-Based Recommendations: They use product knowledge in their approach.
+3. Embeddings/Vectors: This is central to how they represent products.
+4. Multi-Tenant Systems: The system serves multiple tenants with varying catalogs.
+5. Scalability: Building neural representations at scale suggests it&#39;s scalable.
+6. Recommendation Algorithms: It&#39;s all about improving recommendation accuracy, so this category fits.
+7. Collaborative Filtering: Since they&#39;re using behavior-based embeddings, which is a form of collaborative filtering.
+8. Machine Learning: Underlying the whole process are machine learning techniques.
+
+I should make sure each article goes into 8-12 categories to enhance discoverability. Let me check if I missed any other relevant aspects. The abstract mentions minimal engineering changes and existing infrastructure, but that&#39;s more about implementation rather than a category. They also talk about neural representations, which is part of embeddings, so that&#39;s covered.
+
+I think the categories I&#39;ve identified are comprehensive. Each addresses a specific aspect of the article, from the problem being tackled (cold start) to the methods used (content-based, collaborative filtering) and broader areas like recommendation algorithms and machine learning.
+&lt;/think&gt;
+
+Cold Start Problem, Content-Based Recommendations, Embeddings/Vectors, Multi-Tenant Systems, Scalability, Recommendation Algorithms, Collaborative Filtering, Machine Learning</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: The Embeddings That Came in From the Cold: Improving Vectors for New and Rare Products with Content-Based Inference
+Abstract:
+Training product embeddings in a multi-tenant scenario involves solving the challenges of ever changing catalogs across dozens of deployments, without supervision. In this work, we detail how we deal with new and rare products when building neural representations at scale: we show how to inject product knowledge into behavior-based embeddings to provide the best accuracy with minimal engineering changes in existing infrastructure and without additional manual effort.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article based on its title and abstract. The title is &#34;The Embeddings That Came in From the Cold: Improving Vectors for New and Rare Products with Content-Based Inference.&#34; Hmm, embeddings usually refer to some form of vector representation, probably in a recommendation system context.
+
+Looking at the abstract, it talks about training product embeddings in a multi-tenant scenario. Multi-tenant implies that the system serves multiple businesses or clients, each with their own catalog. The challenge here is dealing with ever-changing catalogs across many deployments without supervision, which suggests an unsupervised learning approach or maybe some form of automated model updates.
+
+The main focus seems to be on new and rare products. These are items that don&#39;t have a lot of interaction data, making it hard for traditional methods (which rely on user behavior) to create accurate embeddings. The authors propose using content-based inference to inject product knowledge into the embeddings. So instead of just relying on user interactions, they&#39;re incorporating item attributes or descriptions.
+
+I should map this to existing categories. Let&#39;s start with the family of algorithms. Since they&#39;re talking about embeddings, that&#39;s a neural network approach. Maybe also related to representation learning. But looking at the examples provided earlier, the category is likely &#34;Embedding&#34; since it was used in similar contexts.
+
+Next, the domain. The problem is about products, so e-commerce or retail seems relevant. However, more specifically, recommendation systems are a common application area for embeddings, especially when dealing with product recommendations.
+
+The article addresses cold start problems because new and rare products have limited data. Cold Start is definitely one of the example categories provided, so that should be included.
+
+Looking at evaluation aspects, the abstract mentions improving accuracy. Beyond Accuracy could be relevant if they discuss metrics beyond just RMSE or MAE, such as diversity or novelty, but since it&#39;s about accuracy, maybe not necessary unless specified.
+
+Real-world applications: The article talks about a multi-tenant scenario with many deployments, which suggests scalability and practical implementation. So &#34;Scalability&#34; is important here because they mention building neural representations at scale without adding much engineering effort. Also, real-world application implies that this isn&#39;t just theoretical but something applied in practice.
+
+Other aspects: They&#39;re dealing with embeddings for recommendation systems, so &#34;Recommendation Systems&#34; is a primary category. Also, the method uses content-based inference, which could tie into &#34;Content-Based Filtering,&#34; though that might be more of a traditional collaborative filtering aspect. However, given the focus on neural methods, perhaps sticking to the broader categories makes more sense.
+
+So compiling all this, I think the categories should include:
+
+1. **Embedding** - Because it&#39;s about improving product embeddings.
+2. **Recommendation Systems** - The application area is clear here.
+3. **Cold Start** - Directly addresses new and rare products, a cold start problem.
+4. **Scalability** - Discusses handling multiple deployments at scale.
+5. **Real-World Applications** - Indicates practical implementation in multi-tenant environments.
+
+I might also consider if &#34;Multi-Tenant Systems&#34; is a category, but the examples given earlier didn&#39;t include that. Alternatively, since it&#39;s about recommendation systems and scalability, those cover the necessary aspects without introducing too specific a term.
+&lt;/think&gt;
+
+Embedding, Recommendation Systems, Cold Start, Scalability, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

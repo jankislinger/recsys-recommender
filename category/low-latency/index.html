@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/performance-evaluation/">Performance Evaluation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Low Rank Field-Weighted Factorization Machines for Low Latency Item Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Ariel Raviv, Tularam Ban, Alex Shtoff, Oren Somekh, Michael Viderman, Naama Haramaty-Krasne</p>
+    <p>Factorization machine (FM) variants are widely used in recommendation systems that operate under strict throughput and latency requirements, such as online advertising systems. FMs have two prominent strengths. First, is their ability to model pairwise feature interactions while being resilient to data sparsity by learning factorized representations. Second, their computational graphs facilitate fast inference and training. Moreover, when items are ranked as a part of a query for each incoming user, these graphs facilitate computing the portion stemming from the user and context fields only once per query.  Thus, the computational cost for each ranked item is proportional only to the number of fields that vary among the ranked items. Consequently, in terms of inference cost, the number of user or context fields is practically unlimited. More advanced variants of FMs, such as field-aware and field-weighted FMs, provide better accuracy by learning a representation of field-wise interactions, but require computing all pairwise interaction terms explicitly. In particular, the computational cost during inference is proportional to the square of the number of fields, including user, context, and item. When the number of fields is large, this is prohibitive in systems with strict latency constraints, and imposes a limit on the number of user and context fields for a given computational budget. To mitigate this caveat, heuristic pruning of low intensity field interactions is commonly used to accelerate inference. In this work we propose an alternative to the pruning heuristic in field-weighted FMs using a diagonal plus symmetric low-rank decomposition. Our technique reduces the computational cost of inference, by allowing it to be proportional to the number of item fields only. Using a set of experiments on real-world datasets, we show that aggressive rank reduction outperforms similarly aggressive pruning, both in terms of accuracy and item recommendation speed. Beyond computational complexity analysis, we corroborate our claim of faster inference experimentally, both via a synthetic test, and by having deployed our solution to a major online advertising system, where we observed significant ranking latency improvements. We made the code to reproduce the results on public datasets and synthetic tests available at https://anonymous.4open.science/r/pytorch-fm-0EC0.</p>
+    <p><strong>Categories:</strong> Factorization Machines (FM), Matrix Factorization, Online Advertising, Low Latency, Computational Efficiency, Field-Weighted Factorization Machines, Inference Optimization, Real-World Applications, Performance Evaluation, Low Rank Decomposition (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1048/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Exploration with Model Uncertainty at Extreme Scale in Real-Time Bidding (2022)</h3>
+    <p><strong>Authors:</strong> Davorin Kopič, Jan Hartman</p>
+    <p>In this work, we present a scalable and efficient system for exploring the supply landscape in real-time bidding. The system directs exploration based on the predictive uncertainty of models used for click-through rate prediction and works in a high-throughput, low-latency environment. Through online A/B testing, we demonstrate that exploration with model uncertainty has a positive impact on model performance and business KPIs.</p>
+    <p><strong>Categories:</strong> Real-Time Bidding, Model Uncertainty, Exploration Strategy, High Throughput, Low Latency, Click-Through Rate Prediction, Auction Optimization, Extreme Scale, Scalable System, A/B Test, Practical Implementation, Real-World Application (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/838/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

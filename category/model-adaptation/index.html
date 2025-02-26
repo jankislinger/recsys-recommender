@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/cold-start/">Cold Start</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/multi-task-learning/">Multi-Task Learning</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Better Generalization with Semantic IDs: A Case Study in Ranking for Recommendations (2024)</h3>
+    <p><strong>Authors:</strong> Raghunandan Keshavan, Lichan Hong, Devansh Tandon, Ed Chi, Xinyang Yi, Yilin Zheng, Trung Vu, Maheswaran Sathiamoorthy, Lukasz Heldt, Li Wei, Nikhil Mehta, Anima Singh</p>
+    <p>Randomly-hashed item ids are used ubiquitously in recommendation models. However, the learned representations of random ids lack generalization across similar items, causing problems of learning unseen and long-tail items, especially when item corpus is large, power-law distributed, and evolving dynamically. In this paper, we first show that simply replacing ID features with content-based embeddings can cause a drop in quality due to reduced memorization capability. To strike a good balance of memorization and generalization, we further propose to use Semantic IDs — a compact discrete item representation learned from frozen content embeddings using RQ-VAE that captures the hierarchy of concepts in items — as a replacement for random item ids. Similar to content embeddings, the compactness of Semantic IDs poses a problem of easy adaption in recommendation models. We propose a few methods of adapting Semantic IDs in industry-scale ranking models, through hashing sub-pieces of of the Semantic-ID sequences. In particular, we find that the SentencePiece model that is commonly used in LLM tokenization outperforms manually crafted pieces such as bigrams. To the end, we evaluate our approaches in a real-world ranking model for YouTube recommendations. Our experiments demonstrate that Semantic IDs can replace the direct use of video IDs by improving the generalization ability on new and long-tail item slices without sacrificing overall model quality, while significantly reducing the model size.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Semantic IDs, Content-Based Embeddings, Generalization, Item Representation, Industry-Scale Models, Model Adaptation, YouTube Recommendations, SentencePiece Model, Long-Tail Items (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1077/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>The Elephant in the Room: Rethinking the Usage of Pre-trained Language Model in Sequential Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Zekai Qu, Chaojun Xiao, Zhanhui Kang, Ruobing Xie, Xingwu Sun</p>
+    <p>Sequential recommendation (SR) has seen significant advancements with the help of Pre-trained Language Models (PLMs). Some PLM-based SR models directly use PLM to encode user historical behavior’s text sequences to learn user representations, while there is seldom an in-depth exploration of the capability and suitability of PLM in behavior sequence modeling. In this work, we first conduct extensive model analyses between PLMs and PLM-based SR models, discovering great underutilization and parameter redundancy of PLMs in behavior sequence modeling. Inspired by this, we explore different lightweight usages of PLMs in SR, aiming to maximally stimulate the ability of PLMs for SR while satisfying the efficiency and usability demands of practical systems. We discover that adopting behavior-tuned PLMs for item initializations of conventional ID-based SR models is the most economical framework of PLM-based SR, which would not bring in any additional inference cost but could achieve a dramatic performance boost compared with the original version. Extensive experiments on five datasets show that our simple and universal framework leads to significant improvement compared to classical SR and SOTA PLM-based SR models without additional inference costs.</p>
+    <p><strong>Categories:</strong> Pre-trained Language Models, Sequential Recommendation, Model Analysis, Behavior Sequence Modeling, Efficiency in Recommendations, Lightweight Usage of PLMs, Parameter Redundancy, Model Adaptation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1064/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>STAN: Stage-Adaptive Network for Multi-Task Recommendation by Learning User Lifecycle-Based Representation (2023)</h3>
+    <p><strong>Authors:</strong> Wenhao Zheng, Suhang Wang, Xuanji Xiao, Wanda Li</p>
+    <p>Recommendation systems play a vital role in many online platforms, with their primary objective being to satisfy and retain users. As directly optimizing user retention is challenging, multiple evaluation metrics are often employed. Existing methods generally formulate the optimization of these evaluation metrics as a multi-task learning problem, but often overlook the fact that user preferences for different tasks are personalized and change over time. Identifying and tracking the evolution of user preferences can lead to better user retention. To address this issue, we introduce the concept of “user lifecycle,” consisting of multiple stages characterized by users’ varying preferences for different tasks. We propose a novel <b>St</b>age-<b>A</b>daptive <b>N</b>etwork (<b>STAN</b>) framework for modeling user lifecycle stages. STAN first identifies latent user lifecycle stages based on learned user preferences, and then employs the stage representation to enhance multi-task learning performance. Our experimental results using both public and industrial datasets demonstrate that the proposed model significantly improves multi-task prediction performance compared to state-of-the-art methods, highlighting the importance of considering user lifecycle stages in recommendation systems. Furthermore, online A/B testing reveals that our model outperforms the existing model, achieving a significant improvement of 3.05\% in staytime per user and 0.88\% in CVR. These results indicate that our approach effectively improves the overall efficiency of the multi-task recommendation system.</p>
+    <p><strong>Categories:</strong> Multi-Task Learning, User Lifecycle, Recommendation Systems, Personalization, Online Experiments (A/B Test), User Retention, Model Adaptation, Staytime, Click-Through Rate (CTR), User Preference Evolution, Scalability, Industrial Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/882/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Learning An Adaptive Meta Model-Generator for Incrementally Updating Recommender Systems (2021)</h3>
+    <p><strong>Authors:</strong> Jie Zhang, Sinno Jialin Pan, Danni Peng, Anxiang Zeng</p>
+    <p>Recommender Systems (RSs) in real-world applications often deal with billions of user interactions daily. To capture the most recent trends effectively, it is common to update the model incrementally using only the newly arrived data. However, this may impede the model’s ability to retain long-term information due to the potential overfitting and forgetting issues. To address this problem, we propose a novel Adaptive Sequential Model Generation (ASMG) framework, which generates a better serving model from a sequence of historical models via a meta generator. For the design of the meta generator, we propose to employ Gated Recurrent Units (GRUs) to leverage its ability to capture the long-term dependencies. We further introduce some novel strategies to apply together with the GRU meta generator, which not only improve its computational efficiency but also enable more accurate sequential modeling. By instantiating the model-agnostic framework on a general deep learning-based RS model, we demonstrate that our method achieves state-of-the-art performance on three public datasets and one industrial dataset.</p>
+    <p><strong>Categories:</strong> Sequence Models, Recommender Systems, Incremental Learning, Meta-Learning, Neural Networks, Model Adaptation, Long-term Learning, Computational Efficiency, Empirical Evaluation, Real-World Applications, Temporal Dynamics, Model Agnostic (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/641/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Towards Source-Aligned Variational Models for Cross-Domain Recommendation (2021)</h3>
+    <p><strong>Authors:</strong> Aghiles Salah, Hady Lauw, Thanh Binh Tran</p>
+    <p>Data sparsity is a long-standing challenge in recommender systems. Among existing approaches to alleviate this problem, cross-domain recommendation consists in leveraging knowledge from a source domain or category (e.g., Movies) to improve item recommendation in a target domain (e.g., Books). In this work, we advocate a probabilistic approach to cross-domain recommendation and rely on variational autoencoders (VAEs) as our latent variable models. More precisely, we assume that we have access to a VAE trained on the source domain that we seek to leverage to improve preference modeling in the target domain. To this end, we propose a model which learns to fit the target observations and align its hidden space with the source latent space jointly. Since we model the latent spaces by the variational posteriors, we operate at this level, and in particular, we investigate two approaches, namely rigid and soft alignments. In the former scenario, the variational model in the target domain is set equal to the source variational model. That is, we only learn a generative model in the target domain. In the soft-alignment scenario, the target VAE has its variational model, but which is encouraged to look like its source counterpart. We analyze the proposed objectives theoretically and conduct extensive experiments to illustrate the benefit of our contribution. Empirical results on six real-world datasets show that the proposed models outperform several comparable cross-domain recommendation models.</p>
+    <p><strong>Categories:</strong> Cross-Domain Recommendation, Variational Autoencoder, Probabilistic Models, Data Sparsity, Model Adaptation, Latent Space Alignment, Recommendation Systems, Movies, Books, Model Development, Theoretical Analysis (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/674/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Boosting Local Recommendations With Partially Trained Global Model (2021)</h3>
+    <p><strong>Authors:</strong> Kexin Xie</p>
+    <p>Building recommendation systems for enterprise software has many unique challenges that are different from consumer-facing systems. When applied to different organizations, the data used to power those recommendation systems vary substantially in both quality and quantity due to differences in their operational practices, marketing strategies, and targeted audiences. At Salesforce, as a cloud provider of such a system with data across many different organizations, naturally, it makes sense to pool data from different organizations to build a model that combines all values from different brands. However, multiple issues like how do we make sure a model trained with pooled data can still capture customer specific characteristics, how do we design the system to handle those data responsibly and ethically, i.e., respecting contractual agreements with our clients, legal and compliance requirements, and the privacy of all the consumers. In this proposal, We present a framework that not only utilizes enriched user-level data across organizations, but also boosts business-specific characteristics in generating personal recommendations. We will also walk through key privacy considerations when designing such a system.</p>
+    <p><strong>Categories:</strong> Enterprise Recommendations, Cross-Organizational Data Pooling, Privacy Considerations, Model Adaptation, Data Quality and Quantity Variability, Ethical Data Handling, Scalability, Hybrid Recommendation Systems, Multi-Tenant Systems, Personalization at Scale (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/722/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

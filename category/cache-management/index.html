@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/scalability/">Scalability</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>RPAF: A Reinforcement Prediction-Allocation Framework for Cache Allocation in Large-Scale Recommender Systems (2024)</h3>
+    <p><strong>Authors:</strong> Kaiqiao Zhan, Kun Gai, Xiaoshuang Chen, Yao Wang, Ziqiang Zhang, Ben Wang, Yulin Wu, Shuo Su</p>
+    <p>Modern recommender systems are built upon computation-intensive infrastructure, and it is challenging to perform real-time computation for each request, especially in peak periods, due to the limited computational resources. Recommending by user-wise result caches is widely used when the system cannot afford a real-time recommendation. However, it is challenging to allocate real-time and cached recommendations to maximize the users’ overall engagement. This paper shows two key challenges to cache allocation, i.e., the temporal dependency and the streaming allocation. Then, we propose a reinforcement prediction-allocation framework (RPAF) to address these issues. RPAF is a reinforcement-learning-based two-stage framework containing prediction and allocation stages. The prediction stage estimates the values of the cache choices considering the strategy and value dependencies, while the allocation stage determines the cache choices for each request. We show that the challenge of training RPAF includes globality and the strictness of budget constraints, and a relaxed local allocator (RLA) is proposed to address this issue. Moreover, a PoolRank algorithm is used in the allocation stage to deal with the streaming allocation problem. Experiments show that RPAF significantly improves users’ engagement under computational budget constraints.</p>
+    <p><strong>Categories:</strong> Reinforcement Learning, Cache Management, Recommender Systems, Real-time Recommendations, Scalability, Streaming Allocation, Optimization, Computational Constraints, Algorithm Design, Evaluation Metrics, Temporal Dependency, Recommendation Strategies (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1058/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Toward 100TB Recommendation Models with Embedding Offloading (2024)</h3>
+    <p><strong>Authors:</strong> Sarunya Pumma, Levy Zhao, Joshua Deng, Dennis Van Der Staay, Jian He, Intaik Park, Ehsan Ardestani, Damian Reeves, Yu Guo, Paul Zhang, Henry Tsang</p>
+    <p>Training recommendation models become memory-bound with large embedding tables, and fast GPU memory is scarce. In this paper, we explore embedding caches and prefetch pipelines to effectively leverage large but slow host memory for embedding tables. We introduce Locality-Aware Sharding and iterative planning that automatically size caches optimally and produce effective sharding plans. Embedding Offloading, a system that combines all of these components and techniques, is implemented on top of Meta’s open-source libraries, FBGEMM GPU and TorchRec, and it is used to improve scalability and efficiency of industry-scale production models. Embedding Offloading achieved 37x model scale to 100TB model size with only 26% training speed regression.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Embedding, Scalability, Memory Optimization, System Design, Cache Management, Sharding, Production Systems, Industry Applications, System Performance, GPU Memory, Resource Management (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1178/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A Scalable Approach for Periodical Personalized Recommendations (2016)</h3>
+    <p><strong>Authors:</strong> Ish Rishabh, John Carnahan, Zhen Qin</p>
+    <p>We develop a highly scalable and effective contextual bandit approach towards periodical personalized recommendations. The online bootstrapping-based technique provides a principled way for UCB-type exploitation-exploration algorithms, while being able to handle arbitrary sized datasets, well suited to learn the ever evolving user preference drift from streaming data, and essentially parameter-free. We further introduce techniques to handle arbitrary sized feature spaces using feature hashing, leverage existing state-of-art machine learning via learning reduction, and increase cache hits by managing bootstrapped models in memory effectively. The resulted model trains on millions of examples and billions of features within minutes on a single personal computer. It shows persistent performance in both offline and online evaluation. We observe around 10% click through rate (CTR) and conversion lift over a collaborative filtering approach in real-world A/B testing across more than 40 million users on the major Ticketmaster email recommendation product.</p>
+    <p><strong>Categories:</strong> Scalability, Contextual Bandits, Periodical Recommendations, Exploitation-Exploration, Feature Hashing, Cache Management, Learning Reduction, Collaborative Filtering, Evaluation Metrics, Real-World Applications, A/B Testing, Email Recommendations, Big Data Processing, High-Dimensional Features (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/195/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

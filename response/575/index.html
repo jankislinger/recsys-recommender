@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Combining Rating and Review Data by Initializing Latent Factor Models with Topic Models for Top-N Recommendation
+Abstract:
+Nowadays we commonly have multiple sources of data associated with items. Users may provide numerical ratings, or implicit interactions, but may also provide textual reviews. Although many algorithms have been proposed to jointly learn a model over both interactions and textual data, there is room to improve the many factorization models that are proven to work well on interactions data, but are not designed to exploit textual information. Our focus in this work is to propose a simple, yet easily applicable and effective, method to incorporate review data into such factorization models. In particular, we propose to build the user and item embeddings within the topic space of a topic model learned from the review data. This has several advantages: we observe that initializing the user and item embeddings in topic space leads to faster convergence of the factorization algorithm to a model that out-performs models initialized randomly, or with other state-of-the-art initialization strategies. Moreover, constraining user and item factors to topic space allows for the learning of an interpretable model that users can visualise.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s see. I need to categorize this research article based on its title and abstract. The title is &#34;Combining Rating and Review Data by Initializing Latent Factor Models with Topic Models for Top-N Recommendation.&#34; Hmm, so it&#39;s about recommendation systems, specifically combining different types of data—ratings and reviews.
+
+The abstract mentions that users provide numerical ratings or implicit interactions, as well as textual reviews. So the article deals with both explicit (ratings) and implicit feedback. It&#39;s looking at how to incorporate review data into factorization models, which are a type of latent factor model used in recommendations.
+
+They&#39;re using topic models on the review data to build user and item embeddings. Topic models like LDA could be involved here, so that might be another category. The goal is to initialize these embeddings within the topic space, which helps with faster convergence and better performance than random initialization or other strategies. Also, it makes the model interpretable, which is a plus for visualization.
+
+So breaking this down: first, the domain is recommendation systems, obviously. They&#39;re combining explicit and implicit feedback since they use ratings (explicit) and reviews (which can be considered implicit if not rated). The core method is latent factor models, specifically using topic models for initialization. So categories like Latent Factor Models and Topic Models make sense.
+
+The focus on user and item embeddings points towards User/Item Embeddings as a category. They&#39;re dealing with textual data from reviews, so Textual Data is relevant. Since they mention initializing embeddings in the topic space, that&#39;s another specific aspect to categorize under Initialization Strategies.
+
+They talk about improving model convergence speed, so Model Convergence could be a category. The article also focuses on enhancing recommendation quality by incorporating more data sources, so Recommendation Quality is applicable. They mention A/B testing and user surveys as real-world applications, but in this case, they&#39;re talking about the method itself, not an application, so maybe that&#39;s less relevant here.
+
+Also, the model is interpretable, which falls under Model Interpretability. The study uses a hybrid approach combining different data types, hence Hybrid Models. They aim to create top-N recommendations, so Top-N Recommendations is another category.
+
+Putting it all together: the categories should include things like Recommendation Systems, Explicit Feedback (ratings), Implicit Feedback (interactions or reviews), Latent Factor Models, Topic Models, User/Item Embeddings, Textual Data, Initialization Strategies, Model Convergence, and Model Interpretability. Hybrid Models because they combine different data sources, and Top-N Recommendations as the application.
+
+I should also consider if any other aspects fit. They&#39;re talking about real-world applications but more in terms of method improvement rather than deployment, so maybe not A/B Testing here. The focus is on methodological improvements in recommendation algorithms.
+&lt;/think&gt;
+
+Recommendation Systems, Explicit Feedback, Implicit Feedback, Latent Factor Models, Topic Models, User/Item Embeddings, Textual Data, Initialization Strategies, Model Convergence, Model Interpretability, Hybrid Models, Top-N Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

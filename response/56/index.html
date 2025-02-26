@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Scalable Audience Targeted Models for Brand Advertising on Social Networks
+Abstract:
+People are using social media to generate, share, and communicate information with each other. Finding actionable insights from such big data has attracted a lot of research attentions on, for example, finding targeted user groups based on their historical on-line activities. However, existing machine learning algorithms fail to keep up with the increasing large data volume. In this paper, we develop a scalable regression-based algorithm called distributed iterative shrinkage-thresholding algorithm (DISTA) that can identify potential users. Our experiments conducted on Facebook data containing billions of users and associated activities show that DISTA with feature selection not only enables on-line audience-targeted approach for precise marketing but also performs efficiently on parallel computers.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;Scalable Audience Targeted Models for Brand Advertising on Social Networks.&#34; The abstract mentions that social media generates a lot of data, and existing machine learning algorithms can&#39;t handle the increasing volume. They developed a scalable algorithm called DISTA, which uses feature selection and works efficiently in parallel on Facebook&#39;s large dataset.
+
+First, I&#39;ll break down the key elements:
+
+1. **Scalability**: The main focus is on creating a scalable model to handle big data.
+2. **Machine Learning Algorithm**: Specifically, a regression-based algorithm named DISTA.
+3. **Audience Targeting**: This relates to brand advertising and identifying potential users for targeted marketing.
+4. **Social Networks**: The application is on social media platforms like Facebook.
+5. **Distributed Computing**: Since the model works efficiently in parallel, it&#39;s related to distributed systems.
+6. **Feature Selection**: A part of machine learning techniques used here.
+7. **Parallel Computing**: Important for handling large datasets and scalability.
+8. **Big Data**: The context is dealing with massive amounts of user data.
+
+Now, considering the examples provided, I should map these elements into categories:
+
+- From &#34;Family of algorithm&#34;: Since DISTA is a regression-based method, maybe not exactly Matrix Factorization or Multi-Armed Bandits, but it&#39;s a specific algorithm type. So, maybe include &#34;Algorithm Design&#34; as a broader category.
+- &#34;Domain of the problem&#34;: Brand advertising and social networks are clear here, so &#34;Social Media,&#34; &#34;Advertising.&#34;
+- Specific recommendation aspects: It&#39;s more about audience targeting for marketing, so perhaps &#34;Audience Targeting.&#34;
+- Evaluation aspects: The paper talks about experiments on real data, so maybe not directly evaluation metrics but rather performance in a real-world setting.
+- Real-world applications: They used Facebook data, which is a real application. So categories like &#34;Real World Application,&#34; &#34;A/B Test&#34; might apply if they tested it, but the abstract doesn&#39;t mention A/B testing explicitly. Maybe just &#34;Real World Application.&#34;
+  
+Other possible categories could include &#34;Distributed Computing,&#34; &#34;Big Data Analysis,&#34; and &#34;Scalability.&#34;
+
+Putting this together, I should aim for 8-12 categories. Let me list them:
+
+1. Scalability - Directly mentioned as the focus.
+2. Social Media - The domain where it&#39;s applied.
+3. Advertising - The problem domain is brand advertising.
+4. Machine Learning Algorithms - Since they developed a new ML algorithm.
+5. Distributed Computing - Because it works in parallel on large data.
+6. Feature Selection - Mentioned as part of their approach.
+7. Parallel Computing - Related to scalability and distributed systems.
+8. Big Data Analysis - The context is handling large volumes of user data.
+9. Audience Targeting - Specific application within advertising.
+10. Real World Application - They tested on real Facebook data.
+
+I think these cover the main points. I&#39;ll double-check if there&#39;s any overlap or if some categories are redundant, but they all seem distinct and relevant based on the article&#39;s content.
+&lt;/think&gt;
+
+Scalability, Social Media, Advertising, Machine Learning Algorithms, Distributed Computing, Feature Selection, Parallel Computing, Big Data Analysis, Audience Targeting, Real World Application</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Scalable Audience Targeted Models for Brand Advertising on Social Networks
+Abstract:
+People are using social media to generate, share, and communicate information with each other. Finding actionable insights from such big data has attracted a lot of research attentions on, for example, finding targeted user groups based on their historical on-line activities. However, existing machine learning algorithms fail to keep up with the increasing large data volume. In this paper, we develop a scalable regression-based algorithm called distributed iterative shrinkage-thresholding algorithm (DISTA) that can identify potential users. Our experiments conducted on Facebook data containing billions of users and associated activities show that DISTA with feature selection not only enables on-line audience-targeted approach for precise marketing but also performs efficiently on parallel computers.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on the title and abstract provided. Let&#39;s start by reading through them carefully.
+
+The title is &#34;Scalable Audience Targeted Models for Brand Advertising on Social Networks.&#34; This immediately tells me that it&#39;s related to advertising on social media platforms like Facebook. The key terms here are &#34;scalable,&#34; &#34;audience targeted models,&#34; &#34;brand advertising,&#34; and &#34;social networks.&#34;
+
+Looking at the abstract, the paper discusses how people use social media and how big data can be used to find target user groups based on their online activities. It mentions that existing machine learning algorithms aren&#39;t keeping up with the large volume of data. The authors developed a scalable regression-based algorithm called DISTA, which is designed for identifying potential users efficiently. They tested it on Facebook data with billions of users and found that it works well for precise marketing and runs efficiently on parallel computers.
+
+So, breaking this down, the main themes are scalability in algorithms, targeted advertising specifically for brands on social networks, and efficient handling of big data. The algorithm&#39;s efficiency is a key point, which ties into scalability and performance.
+
+Now, considering the categories I should assign:
+
+1. **Scalability**: This is directly mentioned in both the title and abstract, so it&#39;s definitely a primary category.
+2. **Social Networks**: Since the focus is on social media platforms like Facebook, this is another key category.
+3. **Targeted Advertising**: The paper specifically talks about audience targeting for brand advertising, making this relevant.
+4. **Machine Learning Algorithms**: Although not explicitly mentioned in the abstract beyond scalability, the development of a new algorithm falls under this category.
+5. **Efficiency**: The efficiency of the DISTA algorithm is highlighted, so &#34;efficiency&#34; is another important aspect.
+
+I should also consider if there are other categories that might fit. For instance, does it touch on anything related to performance in distributed systems? Well, it mentions parallel computers and efficient handling, which could relate to scalability but I think &#34;Scalability&#34; covers that. There&#39;s no mention of aspects like diversity or beyond accuracy in recommendations, so those aren&#39;t applicable here.
+
+Looking at the examples provided, categories include things like &#34;Family of algorithm,&#34; &#34;Domain of the problem,&#34; etc. In this case, the family of algorithms would be regression-based, but since the specific name (DISTA) isn&#39;t a standard category, I might stick to broader terms unless there&#39;s a need for it.
+
+Another point: the domain is clearly brand advertising on social networks, which aligns with &#34;Targeted Advertising&#34; and &#34;Social Networks.&#34;
+
+I think I have five solid categories here. Let me just make sure they are clear and cover all necessary aspects without overlapping too much. Scalability and Efficiency both relate to performance but are distinct enough. Social Networks and Targeted Advertising are domain-specific. Machine Learning Algorithms is a bit broad but appropriate given the focus on developing a new algorithm.
+
+I don&#39;t think I need more than these five, as adding others might either be redundant or not directly relevant based on the content.
+&lt;/think&gt;
+
+Scalability, Social Networks, Targeted Advertising, Machine Learning Algorithms, Efficiency</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/beyond-accuracy/">Beyond Accuracy</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Pessimistic Reward Models for Off-Policy Learning in Recommendation (2021)</h3>
+    <p><strong>Authors:</strong> Olivier Jeunen, Bart Goethals</p>
+    <p>Methods for bandit learning from user interactions often require a model of the reward a certain context-action pair will yield – for example, the probability of a click on a recommendation. This common machine learning task is highly non-trivial, as the data-generating process for contexts and actions is often skewed by the recommender system itself. Indeed, when the deployed recommendation policy at data collection time does not pick its actions uniformly-at-random, this leads to a selection bias that can impede effective reward modelling. This in turn makes off-policy learning – the typical setup in industry – particularly challenging.<br>In this work, we propose and validate a general pessimistic reward modelling approach for off-policy learning in recommendation. Bayesian uncertainty estimates allow us to express scepticism about our own reward model, which can in turn be used to generate a conservative decision rule. We show how it alleviates a well-known decision making phenomenon known as the Optimiser’s Curse, and draw parallels with existing work on pessimistic policy learning. Leveraging the available closed-form expressions for both the posterior mean and variance when a ridge regressor models the reward, we show how to apply pessimism effectively and efficiently to an off-policy recommendation use-case. Empirical observations in a wide range of environments show that being conservative in decision-making leads to a significant and robust increase in recommendation performance. The merits of our approach are most outspoken in realistic settings with limited logging randomisation, limited training samples, and larger action spaces.</p>
+    <p><strong>Categories:</strong> Off-Policy Learning, Bandit Algorithms, Reward Modeling, Recommendation Systems, Selection Bias, Uncertainty Estimation, Optimizers&#39; Curse, Decision Making Under Uncertainty, Reinforcement Learning, Bayesian Methods (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/654/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Counterfactual learning for recommender system (2020)</h3>
+    <p><strong>Authors:</strong> Zhenhua Dong</p>
+    <p>Most commercial industrial recommender systems have built their closed feedback loops. Though it is helpful in item recommendation and model training, the closed feedback loop may lead to the so-called bias problems, including the position bias, selection bias and popularity bias. The recommendation models trained with biased may hurt the user experiences by recommending homogenous items. How to control the biases in the closed feedback loop has become one of major challenges in modern recommender systems. This talk discusses the counterfactual learning technologies for tackling the bias problem in recommendation.<br>The talk consists of four parts.<br>The first part, briefly introduces the counterfactual learning with two cases from the academic perspective [4, 5].<br>The second part illustrates the position bias and selection bias based on two real examples. These examples inspire us to study “How to use counterfactual technology for recommender system?” from the industry perspective.<br>In the third part, we firstly encourage the audiences to think an important question: “What kind of data can learn an unbiased model?” After that, we propose four counterfactual learning approaches and related studies, as shown in Figure1.<br>Approach 1: Learn from counterfactual data. We need to learn full-information model with partial observed information data. The full-information model is an unbiased model, which is trained by both observed data and unobserved data (including counterfactual data), but how to model unobserved data? One common approach is direct method [2]. In this talk, we introduce a novel counterfactual learning framework [8], first, an imputation model can by learned by a small amount of unbiased uniform data, then the imputation model can be used to predict labels of all counterfactual samples, finally, we train a counterfactual recommendation model with both observed and counterfactual samples.<br>Approach 2: Correct biased observed data. Inverse propensity score (IPS) is a widely studied method and relatively easy to be deployed for real products. IPS is defined as the conditional probability of receiving the treatment given pre-treatment covariates by Rosenbaum and Rubin [7]. But IPS method should satisfy two assumptions: (1) overlap, and (2) unconfoundedness. Inspired by the sample reweighting work for robust deep learning [6], we proposed a novel influence function based method to reweight training samples directly.<br>Approach 3: Doubly robust method. The doubly robust methods [7] have two parts: IPS method part and direct method part. John Langford etc. prove that either one part of them can debias, the doubly robust method can debias. But both of the propensity and imputation model are not easy to learn, so we present a novel propensity free doubly robust method [8] for click-through-rate (CTR) prediction task. In order to solve the efficiency of full samples (including both unobserved and observed sample) learning problem, we proposed block coordinate descend and conjugate gradient method, which can reduce the time complexity of optimization from O(m*n) to O(m+n).<br>Approach 4: Joint learning unbiased data and biased data. In recommender system, unbiased data is collected through randomly recommendation approach. The unbiased data is less, and its collection process is expensive. Through online A/B testing, the performance of the model trained with biased data and unbiased data together is superior to the performance of the model trained with only biased data. Causal embedding [1] method is another method to learn both biased data and unbiased data for improving the accuracy of prediction model. We also propose a general knowledge distillation framework for counterfactual recommendation via uniform data [3], which propose a general framework about how to use unbiased data with four distillation methods: label distillation, sample distillation, feature distillation and model structure distillation.<br>We also summarize the advantages and challenges of the above approaches.<br>The last part emphasizes that counterfactual learning is a rich research area, and discuss several important research topics, such as optimization for counterfactual learning, counterfactual meta learning, stable learning, fairness, unbiased learning to rank, offline policy evaluation.</p>
+    <p><strong>Categories:</strong> Counterfactual Learning, Recommender Systems, Bias Mitigation, Position Bias, Selection Bias, Popularity Bias, Model Training, User Experience, Counterfactual Data, Inverse Propensity Score (IPS), Doubly Robust Methods, Joint Learning, A/B Test, Diversity of Recommendations, Beyond Accuracy, Academic Perspective, Industry Perspective, Causal Embedding, Knowledge Distillation, Algorithm Scalability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/617/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Unbiased Ad Click Prediction for Position-aware Advertising Systems (2020)</h3>
+    <p><strong>Authors:</strong> Chih-Jen Lin, Jui-Yang Hsia, Bowen Yuan, Yaxu Liu, Zhenhua Dong</p>
+    <p>Click-through rate (CTR) prediction is a core problem of building advertising systems. In many real-world applications, because an ad placed in various positions has different click probabilities, the position information should be considered in both training and prediction. For such position-aware systems, existing approaches learn CTR models from clicks/not-clicks on historically displayed events by leveraging the position information in different ways. In this work, we explain that these approaches may give a heavily biased model. We first point out that in position-aware systems, two different types of selection biases coexist in displayed events. Secondly, we explain that some approaches attempting to eliminate the position effect from clicks/not-clicks may possess an additional bias. Finally, to obtain an unbiased CTR model for position-aware systems, we propose a novel counterfactual learning framework. Experiments confirm both our analysis on selection biases and the effectiveness of our proposed counterfactual learning framework.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Click-Through Rate Prediction, Selection Bias, Position-Aware Advertising, Counterfactual Learning, Machine Learning, System Design, Online Advertising, Implicit Feedback, Real World Applications, Evaluation Metrics (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/558/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Doubly Robust Estimator for Ranking Metrics with Post-Click Conversions (2020)</h3>
+    <p><strong>Authors:</strong> Yuta Saito</p>
+    <p>Post-click conversion, a pre-defined action on a web service after a click, is an essential form of feedback, as it directly contributes to the final revenue and accurately captures user preferences for items, compared with the ambiguous click. However, naively using post-click conversions can lead to severe bias when learning or evaluating recommenders because of the selection bias between clicked and unclicked data. In this study, we address the offline evaluation problem of algorithmic recommendations with biased post-click conversions. A possible solution to address this bias is to use the inverse propensity score estimator, as it can provide an unbiased evaluation even with the selection bias. However, this estimator is known to be subject to variance and instability problems, which can be severe in the recommendation setting, as feedback is often highly sparse. To address these limitations with the previous unbiased estimator, we propose a doubly robust estimator for the ground-truth ranking performance of a given recommender. The proposed estimator is unbiased against the ground-truth ranking metric and improves the variance and estimation error tail bound of the existing unbiased estimator. Finally, to evaluate the empirical efficacy of the proposed estimator, we conduct empirical evaluations using semi-synthetic and two public real-world datasets. The results show that the proposed metric reveals a better model evaluation performance compared with existing baseline metrics, particularly in a situation with severe selection bias.</p>
+    <p><strong>Categories:</strong> Bias Correction, Conversion Rate, Recommendation Systems, Evaluation Metrics, Click Behavior, Selection Bias, Propensity Score Methods, Metric Robustness, Algorithmic Recommendations, Empirical Evaluation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/532/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

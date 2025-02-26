@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: TAPER: A Contextual Tensor-Based Approach for Personalized Expert Recommendation
+Abstract:
+We address the challenge of personalized recommendation of high quality content producers in social media. While some candidates are easily identifiable (say, by being “favorited” many times), there is a long-tail of potential candidates for whom we have little evidence. Through careful modeling of contextual factors like the geo-spatial, topical, and social preferences of users, we propose a tensor-based personalized expert recommendation framework that integrates these factors for revealing latent connections between homogeneous entities (e.g., users and users) and between heterogeneous entities (e.g., users and experts). Through extensive experiments over geo-tagged Twitter data, we find that the proposed framework can improve the quality of recommendation by over 30% in both precision and recall compared to the state-of-the-art.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I have this task where I need to categorize a research article into multiple relevant categories. The goal is to make sure users can easily navigate and discover content. Let me try to break down how I would approach this.
+
+First, I&#39;ll read through the title and abstract of the article to understand its main themes. The title here is &#34;TAPER: A Contextual Tensor-Based Approach for Personalized Expert Recommendation.&#34; Okay, so it&#39;s about a recommendation system that uses tensors and context to personalize expert recommendations on social media.
+
+The abstract mentions addressing the challenge of recommending high-quality content producers in social media, especially those in the long-tail where there&#39;s little evidence. They model contextual factors like geo-spatial, topical, and social preferences using a tensor-based framework. The experiments show improvement over state-of-the-art methods by 30% in precision and recall.
+
+So, starting with the key elements: it&#39;s a recommendation system, uses tensors, focuses on personalization, and integrates context like location, topics, and social aspects. It&#39;s tested on Twitter data, which is a social media platform.
+
+Now, thinking about the categories mentioned in the example:
+
+1. **Family of algorithm**: The article mentions tensor-based approach, so that would be under Tensor-Based Methods.
+2. **Domain of the problem**: Social Media, since it&#39;s applied to platforms like Twitter.
+3. **Specific aspects in recommendation space**: It addresses the cold start problem by dealing with the long-tail of candidates where there&#39;s little data. So Cold Start is a category here.
+4. **Evaluation aspects**: They mention improvements in precision and recall, so Evaluation Metrics (Precision and Recall) would be relevant.
+5. **Real-world applications**: The experiments are on real-world Twitter data, which involves Geo-spatial Analysis as they consider location factors.
+
+Additional categories that come to mind:
+
+- Context-Aware Recommendation because it models various contexts like geo-spatial, topical, and social preferences.
+- Personalized Recommendations since the system is personalized for users.
+- Tensor Factorization as a specific technique used in the approach.
+- Social Networks as the application domain, specifically Twitter.
+- Expert Recommendation Systems since they&#39;re recommending experts or content producers.
+
+I should ensure that each category is both specific enough to be useful but also broad enough to include other similar articles. Also, checking if these categories are already present or need to be created. Since the system can dynamically update, it&#39;s okay if some categories are new as long as they make sense for user navigation.
+
+Wait, let me double-check: The article uses tensors, so Tensor-Based Methods is correct. It&#39;s about recommending experts, which is a type of expert recommendation. Contextual factors imply context-aware methods. They mention social media and Twitter data, so Social Media and Geo-spatial Analysis fit. Cold Start because they handle candidates with little evidence. Precision and Recall are key metrics here.
+
+I think that covers the main points without overcrowding any single category. Each category has a clear purpose and aligns with user interests in recommendation systems, personalization, and social media applications.
+&lt;/think&gt;
+
+Tensor-Based Methods, Social Media, Cold Start, Context-Aware Recommendation, Evaluation Metrics (Precision and Recall), Personalized Recommendations, Geo-spatial Analysis, Tensor Factorization, Expert Recommendation Systems</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: TAPER: A Contextual Tensor-Based Approach for Personalized Expert Recommendation
+Abstract:
+We address the challenge of personalized recommendation of high quality content producers in social media. While some candidates are easily identifiable (say, by being “favorited” many times), there is a long-tail of potential candidates for whom we have little evidence. Through careful modeling of contextual factors like the geo-spatial, topical, and social preferences of users, we propose a tensor-based personalized expert recommendation framework that integrates these factors for revealing latent connections between homogeneous entities (e.g., users and users) and between heterogeneous entities (e.g., users and experts). Through extensive experiments over geo-tagged Twitter data, we find that the proposed framework can improve the quality of recommendation by over 30% in both precision and recall compared to the state-of-the-art.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;TAPER: A Contextual Tensor-Base Approach for Personalized Expert Recommendation.&#34; The abstract mentions that it&#39;s about personalized recommendations of high-quality content producers in social media, dealing with a long-tail of candidates. They use contextual factors like geo-spatial, topical, and social preferences. The method involves a tensor-based framework that integrates these factors to reveal latent connections between users and experts. Experiments were done on Twitter data, showing improvements over existing methods.
+
+Now, thinking about the categories:
+
+1. **Algorithm Family**: The article uses a tensor-based approach, so &#34;Tensor Factorization&#34; is relevant.
+2. **Domain of Problem**: It&#39;s related to social media and personalized recommendations, so &#34;Social Media,&#34; &#34;Personalized Recommendation,&#34; and &#34;Content Producers.&#34;
+3. **Recommendation Specifics**: It deals with experts, hence &#34;Expert Recommendation.&#34; The long-tail problem is addressed, so &#34;Long-Tail Recommendations.&#34;
+4. **Contextual Factors**: They model geo-spatial, topical, and social preferences, so categories like &#34;Geo-Spatial Context,&#34; &#34;Topical Context,&#34; &#34;Social Preferences.&#34;
+5. **Evaluation Aspects**: The experiments show improvements in precision and recall, so aspects like &#34;Precision,&#34; &#34;Recall,&#34; and &#34;Latent Connections&#34; (though this might be a bit specific).
+6. **Application**: They used real-world data from Twitter and showed practical improvements, so &#34;Real-World Applications&#34; and &#34;A/B Test&#34; (but the abstract mentions extensive experiments rather than A/B testing specifically; maybe better to stick with applications).
+7. **Other Relevant Categories**: Since it&#39;s about integrating multiple factors, perhaps &#34;Multi-Modality,&#34; but not sure if that fits. Also, &#34;Latent Connections&#34; could be another category as per their framework.
+
+Wait, the user examples included categories like Family of algorithm (e.g., Matrix Factorization), Domain of problem (e.g., Books, Movies, Healthcare). So I should ensure each is clearly a category type.
+
+Let me compile the list:
+
+- Tensor Factorization (algorithm family)
+- Personalized Recommendation (recommendation space)
+- Expert Recommendation (specific recommendation area)
+- Social Media (domain)
+- Content Producers (another domain aspect)
+- Contextual Modeling (as they model various contexts)
+- Geo-Spatial Context
+- Topical Context
+- Social Preferences
+- Long-Tail Recommendations
+- Latent Connections (this might be a bit specific, maybe better to use aspects like &#34;Latent Factors&#34; or similar)
+- Real-World Applications (they applied it on Twitter data)
+- Precision and Recall (evaluation metrics)
+
+Wait, the output should be just keywords. So I can include:
+
+Tensor Factorization,
+Personalized Recommendation,
+Expert Recommendation,
+Social Media,
+Contextual Modeling,
+Geo-Spatial Context,
+Topical Context,
+Long-Tail Recommendations,
+Latent Connections,
+Real-World Applications,
+Precision,
+Recall.
+
+But need to make sure each is a category, not specific metrics. Maybe &#34;Evaluation Metrics&#34; but the example included &#34;Diversity of Recommendations&#34; and others, so including Precision and Recall as separate categories might be okay if they are treated as aspects.
+
+Wait, in the examples given, there&#39;s &#34;Cold Start,&#34; which is a problem type, and &#34;A/B Test,&#34; which is an application method. So perhaps I should include these more as evaluation methods or application types.
+
+But looking back, the article mentions extensive experiments showing improvement in precision and recall compared to state-of-the-art. So they evaluated using precision and recall metrics, so those are aspects of their evaluation.
+
+Therefore, adding &#34;Precision,&#34; &#34;Recall&#34; as categories makes sense under evaluation aspects.
+
+Also, since they integrate multiple factors, perhaps &#34;Multi-Aspect Recommendations&#34; could be another category, but I&#39;m not sure if it&#39;s necessary.
+
+Considering all that, the list should have at least 8-12 categories. Let me ensure each is relevant and doesn&#39;t overlap too much.
+
+Finalizing:
+
+Tensor Factorization,
+Personalized Recommendation,
+Expert Recommendation,
+Social Media,
+Contextual Modeling,
+Geo-Spatial Context,
+Topical Context,
+Long-Tail Recommendations,
+Latent Connections,
+Real-World Applications,
+Precision,
+Recall.
+&lt;/think&gt;
+
+Tensor Factorization, Personalized Recommendation, Expert Recommendation, Social Media, Contextual Modeling, Geo-Spatial Context, Topical Context, Long-Tail Recommendations, Latent Connections, Real-World Applications, Precision, Recall</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

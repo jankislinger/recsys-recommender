@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Robust Model for Paper-Reviewer Assignment
+Abstract:
+Automatic expert assignment is a common problem encountered in both industry and academia. For example, for conference program chairs and journal editors, in order to collect “good” judgments for a paper, it is necessary for them to assign the paper to the most appropriate reviewers. Choosing appropriate reviewers of course includes a number of considerations such as expertise and authority, but also diversity and avoiding conflicts. In this paper, we explore the expert retrieval problem and implement an automatic paper-reviewer recommendation system that considers aspects of expertise, authority, and diversity. In particular, a graph is first constructed on the possible reviewers and the query paper, incorporating expertise and authority information. Then a Random Walk with Restart (RWR) model is employed on the graph with a sparsity constraint, incorporating diversity information. Extensive experiments on two reviewer recommendation benchmark datasets show that the proposed method obtains performance gains over the state-of-the-art reviewer recommendation systems in terms of expertise, authority, diversity, and, most importantly, relevance as judged by human experts.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article into multiple relevant categories based on its title and abstract. The title is &#34;A Robust Model for Paper-Reviewer Assignment,&#34; which immediately tells me it&#39;s about recommendation systems, specifically in the context of academic paper reviews.
+
+Looking at the abstract, the main focus is on developing an automatic system that assigns papers to reviewers. It mentions factors like expertise, authority, diversity, and avoiding conflicts. The methodology involves constructing a graph with expertise and authority information and using a Random Walk with Restart (RWR) model with a sparsity constraint for diversity.
+
+So, starting with the core themes: it&#39;s about recommendation systems in academia. Therefore, I&#39;ll include &#34;Recommendation Systems&#34; as one category. It&#39;s specifically dealing with reviewers, so &#34;Reviewer Recommendation&#34; is another relevant category.
+
+The method used includes graph-based techniques and RWR, which falls under machine learning algorithms. So, categories like &#34;Graph-Based Methods,&#34; &#34;Machine Learning,&#34; and perhaps more specific ones like &#34;Random Walk with Restart (RWR)&#34; would be appropriate.
+
+The paper addresses issues in academia, so adding an academic context category like &#34;Academia&#34; makes sense. It&#39;s also about assignment problems, which is a broader category but still relevant.
+
+The system evaluates performance based on expertise, authority, diversity, and relevance. These aspects can each be their own categories: &#34;Expertise,&#34; &#34;Authority,&#34; &#34;Diversity,&#34; and &#34;Relevance.&#34; 
+
+Additionally, the paper mentions avoiding conflicts, which ties into fairness considerations, so &#34;Fairness&#34; is another category to include.
+
+Putting it all together, I need at least 8-12 categories. Let me list them out:
+
+1. Recommendation Systems - The main focus of the paper.
+2. Reviewer Recommendation - Specific application within recommendation systems.
+3. Graph-Based Methods - The methodology used.
+4. Machine Learning - The broader field encompassing the techniques used.
+5. Random Walk with Restart (RWR) - A specific algorithm used.
+6. Expertise - One of the key factors considered.
+7. Authority - Another factor in the system.
+8. Diversity - Ensuring a diverse set of reviewers.
+9. Relevance - Judged by human experts, so this is important.
+10. Academic Context - The setting where the recommendation system is applied.
+11. Assignment Problem - The problem being addressed.
+12. Fairness - To avoid conflicts and ensure impartiality.
+
+I think these categories cover the main aspects of the article without overlapping too much. They should help users easily find this paper when exploring related topics in recommendation systems, academic assignments, or specific algorithmic methods like RWR. I&#39;ve also included both broad and specific categories to enhance discoverability as per the guidelines.
+&lt;/think&gt;
+
+Recommendation Systems, Reviewer Recommendation, Graph-Based Methods, Machine Learning, Random Walk with Restart (RWR), Expertise, Authority, Diversity, Relevance, Academic Context, Assignment Problem, Fairness</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Robust Model for Paper-Reviewer Assignment
+Abstract:
+Automatic expert assignment is a common problem encountered in both industry and academia. For example, for conference program chairs and journal editors, in order to collect “good” judgments for a paper, it is necessary for them to assign the paper to the most appropriate reviewers. Choosing appropriate reviewers of course includes a number of considerations such as expertise and authority, but also diversity and avoiding conflicts. In this paper, we explore the expert retrieval problem and implement an automatic paper-reviewer recommendation system that considers aspects of expertise, authority, and diversity. In particular, a graph is first constructed on the possible reviewers and the query paper, incorporating expertise and authority information. Then a Random Walk with Restart (RWR) model is employed on the graph with a sparsity constraint, incorporating diversity information. Extensive experiments on two reviewer recommendation benchmark datasets show that the proposed method obtains performance gains over the state-of-the-art reviewer recommendation systems in terms of expertise, authority, diversity, and, most importantly, relevance as judged by human experts.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;A Robust Model for Paper-Reviewer Assignment.&#34; Let me start by reading through the title and abstract carefully.
+
+The article is about automatically assigning reviewers to papers, which is a common issue in both industry and academia. The problem involves conference program chairs or journal editors trying to assign the right reviewers to ensure good judgments on papers. The key considerations mentioned are expertise, authority, diversity, and avoiding conflicts. 
+
+They implemented an automatic paper-reviewer recommendation system using a graph that includes expertise and authority info. Then they used a Random Walk with Restart (RWR) model on this graph, adding a sparsity constraint for diversity. They tested their method on benchmark datasets and found it outperforms existing systems in terms of expertise, authority, diversity, and relevance as judged by human experts.
+
+Now, based on the guidelines provided, I need to assign at least 8-12 categories to each article. Let&#39;s break down the content:
+
+First, the paper talks about expert assignment, which falls under Expert Retrieval or maybe Expert Assignment. It uses a graph-based approach, so Graph-Based Models is another category.
+
+The method involves Random Walk with Restart (RWR), so that should be a category. The system they developed is an automatic recommendation one for reviewers, hence Reviewer Recommendation System.
+
+They addressed several factors: expertise and authority, which are specific aspects of the problem. So Expertise, Authority as categories make sense. Diversity was also considered, so Diversity in Reviewers is another category.
+
+Conflict avoidance is mentioned, but maybe that&#39;s a bit more specific; perhaps it can fall under Avoidance of Conflicts or just Conflict Management. But since &#34;conflict&#34; isn&#39;t a main theme here, I might skip this unless there&#39;s a relevant category.
+
+The evaluation aspect includes metrics on relevance judged by human experts, which ties into Evaluation Metrics and Human Judgement. 
+
+They tested their model extensively, so Model Testing is another point. The method is novel in that it incorporates multiple factors (expertise, authority, diversity), making it a Multi-Faceted Approach.
+
+Looking at the output examples given earlier, categories included things like Family of Algorithm, Domain of Problem, etc. Here, the algorithm family is RWR, the domain is Expert Assignment in academic publishing.
+
+They mention benchmark datasets, so maybe Benchmark Datasets or Evaluation on Benchmarks could be another category, but perhaps that&#39;s too specific.
+
+Let me list potential categories based on the content:
+
+1. Expert Retrieval
+2. Graph-Based Models
+3. Random Walk with Restart (RWR)
+4. Reviewer Recommendation System
+5. Expertise
+6. Authority
+7. Diversity in Reviewers
+8. Avoidance of Conflicts (maybe not, but perhaps it&#39;s under a broader category)
+9. Evaluation Metrics
+10. Human Judgement
+11. Model Testing
+12. Multi-Faceted Approach
+
+Wait, maybe &#34;Avoidance of Conflicts&#34; is too specific, so perhaps instead use something like Conflict Management or just include it in the Reviewer Recommendation context.
+
+Alternatively, perhaps I should focus on the aspects they directly address: expertise, authority, diversity. So those are three categories.
+
+The algorithm used is RWR, which is a family of algorithms, so that&#39;s another category. The domain is academic publishing and conference reviewing, so Domain of Problem could be Academic Publishing or Paper Reviewing.
+
+They also mention scalability implicitly because assigning reviewers automatically might involve handling large datasets, but the abstract doesn&#39;t explicitly talk about scalability, so maybe I should skip that unless it&#39;s clear.
+
+The paper addresses multiple criteria (expertise, authority, diversity), which is a multi-objective approach, so Multi-Criteria Evaluation or something similar. Or perhaps just the fact that they considered multiple aspects in their model.
+
+So, putting this together:
+
+1. Expert Retrieval
+2. Graph-Based Models
+3. Random Walk with Restart (RWR)
+4. Reviewer Recommendation System
+5. Expertise
+6. Authority
+7. Diversity in Reviewers
+8. Model Testing
+9. Human Judgement
+10. Multi-Faceted Approach
+11. Academic Publishing
+12. Scalability (if applicable; but not sure if mentioned)
+
+Wait, the abstract doesn&#39;t explicitly mention scalability, so maybe it&#39;s better to focus on what is clearly there.
+
+Alternatively, I can think about the problem domain: Conference Management and Journal Editing, which are both part of academic publishing.
+
+So perhaps:
+
+- Academic Publishing
+- Conference Management
+- Journal Editing
+
+But the user provided an example where categories like &#34;Scalability&#34; were included if relevant. Here, scalability isn&#39;t directly discussed, but maybe it&#39;s implied that their model is robust enough for large datasets. Alternatively, it might be better to avoid including it unless certain.
+
+Another angle: they mention benchmark datasets, so perhaps Evaluation on Benchmarks or Dataset-Based Evaluation could be a category, but again, the example given included &#34;Web Systems&#34; and &#34;Implicit Feedback,&#34; which are more specific.
+
+Alternatively, focusing on the methodology:
+
+- Graph Construction
+- Algorithm Implementation (RWR)
+- Sparsity Constraint
+
+But these might be too detailed.
+
+So perhaps the best approach is to select 8 categories based on clear themes from the abstract. Let me try again:
+
+1. Expert Retrieval
+2. Graph-Based Models
+3. Random Walk with Restart (RWR)
+4. Reviewer Recommendation System
+5. Expertise
+6. Authority
+7. Diversity in Reviewers
+8. Model Testing
+
+That&#39;s 8 categories. Alternatively, adding more if possible.
+
+Wait, the problem is about assigning reviewers, which falls under Resource Allocation or Assignment Problems. So maybe add Resource Allocation.
+
+Also, since they are evaluating based on human judgment, perhaps Human-Centered Evaluation or something similar. But I&#39;m not sure if that&#39;s a standard category.
+
+Alternatively, looking at the aspects of evaluation mentioned: expertise, authority, diversity, and relevance as judged by human experts. So maybe Evaluation Metrics is a better fit.
+
+So, considering all, my categories would be:
+
+- Expert Retrieval
+- Graph-Based Models
+- Random Walk with Restart (RWR)
+- Reviewer Recommendation System
+- Expertise
+- Authority
+- Diversity in Reviewers
+- Model Testing
+
+That&#39;s 8. Alternatively, I can add a few more if needed.
+
+Another thought: the problem is about improving the assignment process for reviewers, which might fall under Optimization Problems or Matching Algorithms. So perhaps:
+
+- Optimization Problems
+- Matching Algorithms
+
+But again, not sure if that&#39;s necessary.
+
+Alternatively, given that it&#39;s a recommendation system (for reviewers), maybe Collaborative Filtering or Recommendation Systems, but that seems more applicable to user-item recommendations rather than expert assignment.
+
+Given the original example output had 12 categories in one case and 8 in another, I think 8 is acceptable here. So the final list would be:
+
+Expert Retrieval, Graph-Based Models, Random Walk with Restart (RWR), Reviewer Recommendation System, Expertise, Authority, Diversity in Reviewers, Model Testing.
+
+Alternatively, if more are needed, perhaps add &#34;Multi-Criteria Evaluation&#34; or &#34;Evaluation Metrics.&#34;
+
+But I think 8 is sufficient based on the content.
+&lt;/think&gt;
+
+The categories for the given paper are determined by analyzing its themes and methodologies. The focus is on expert retrieval, graph-based models, a specific algorithm (RWR), reviewer recommendation systems, expertise, authority, diversity in reviewers, and model testing.
+
+**Final Categories:**
+1. Expert Retrieval
+2. Graph-Based Models
+3. Random Walk with Restart (RWR)
+4. Reviewer Recommendation System
+5. Expertise
+6. Authority
+7. Diversity in Reviewers
+8. Model Testing</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

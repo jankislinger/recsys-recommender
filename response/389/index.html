@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommendations for Chemists: A Case Study
+Abstract:
+Large pharmaceutical companies have a wealth of reaction and chemical structure data, but face a new problem: analyzing that corpus to yield project insights and future directions. One straightforward approach would be to have a recommendation system to match drug structures with similar research endeavors across geographically- or organizationally-separated groups. We developed and deployed Chem Recommender, a system that suggests similar, related work to experiments that chemists have recently started. The goal of the system is to accelerate the drug discovery process by ensuring that chemists are aware of each other’s work. To date, we have sent more than 8500 recommendations to over 800 medicinal chemists in our organization. The results have been positive, with several chemists reporting that the recommendations have aided their molecular syntheses.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article about a recommendation system for chemists. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Recommendations for Chemists: A Case Study,&#34; which immediately tells me it&#39;s about recommendation systems applied in a chemical context. The abstract mentions that large pharmaceutical companies have lots of data but need help analyzing it to find project insights. They developed something called Chem Recommender, which suggests similar work to chemists based on their recent experiments.
+
+So, the main points here are:
+
+1. It&#39;s a case study, so &#34;Case Study&#34; should definitely be one category.
+2. The domain is pharmaceuticals and chemistry, so I&#39;ll include &#34;Pharmaceuticals&#34; and &#34;Chemistry.&#34;
+3. It uses a recommendation system, specifically tailored for chemists, so that falls under &#34;Recommendation Systems.&#34;
+4. Since it&#39;s helping with research by suggesting similar work, the application area here is &#34;Research.&#34; Also, it mentions accelerating drug discovery, which ties into &#34;Drug Discovery.&#34;
+5. The article talks about deploying a specific system they developed, so &#34;System Deployment&#34; makes sense.
+6. They&#39;ve done an A/B test or user survey? Wait, the abstract says they sent recommendations to chemists and got positive feedback, but I don&#39;t see mention of A/B testing specifically. Maybe &#34;User Feedback&#34; is more accurate here.
+7. The system suggests similar work, which relates to &#34;Collaboration,&#34; as it helps chemists be aware of others&#39; work.
+8. It&#39;s a specific application within the chemical domain, so adding &#34;Chemical Domain&#34; would cover that.
+9. Since they&#39;ve implemented this in their organization, &#34;Organizational Applications&#34; fits well.
+
+I should also consider if there are any other aspects. The system is about matching drug structures with similar research, which could tie into data analysis, but I think the categories chosen cover it sufficiently. 
+
+Let me list these out:
+
+- Case Study
+- Pharmaceuticals
+- Chemistry
+- Recommendation Systems
+- Research
+- Drug Discovery
+- System Deployment
+- Collaboration
+- User Feedback
+- Chemical Domain
+- Organizational Applications
+
+I need to make sure each category is relevant and that there are enough of them without being too redundant. I think these cover the main points of the article effectively.
+&lt;/think&gt;
+
+Case Study, Pharmaceuticals, Chemistry, Recommendation Systems, Research, Drug Discovery, System Deployment, Collaboration, User Feedback, Chemical Domain, Organizational Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

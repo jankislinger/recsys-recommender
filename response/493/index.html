@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Product Collection Recommendation in Online Retail
+Abstract:
+Recommender systems are an integral part of eCommerce services, helping to optimize revenue and user satisfaction. Bundle recommendation has recently gained attention by the research community since behavioral data supports that users often buy more than one product in a single transaction. In most cases, bundle recommendations are of the form “users who bought product A also bought products B, C, and D”. Although such recommendations can be useful, there is no guarantee that  products A, B, C, and D may actually be related to each other.  In this paper, we address the problem of collection recommendation, i.e., recommending a collection of products that share a common theme and can potentially be purchased together in a single transaction.  We extend on traditional approaches that use mostly transactional data by incorporating both domain knowledge from product suppliers in the form of hierarchies, as well as textual  attributes from the products.  Our approach starts by combining product hierarchies together with transactional data or domain knowledge to identify candidate sets of product collections. Then, it generates the product collection recommendations from these candidate sets by learning a deep similarity model that leverages textual attributes. Experimental evaluation on real data from the Home Depot online retailer shows that the proposed solution can recommend collections of products with  increased accuracy when compared to expert-crafted collections. i&gt;Presentation: Wednesday Poster Lunch&lt;/i
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about product collection recommendations in online retail. Let me break it down step by step.
+
+First, the title mentions &#34;Product Collection Recommendation,&#34; so that&#39;s a key category right there. It&#39;s specific and directly related to the paper&#39;s focus on grouping products for recommendation.
+
+The abstract talks about recommender systems, which is a broader area but definitely relevant. They&#39;re looking at eCommerce services, so I&#39;ll add &#34;eCommerce&#34; as another category because it sets the context of where these recommendations are applied.
+
+Bundle recommendation is mentioned specifically as an approach they&#39;ve addressed. This makes me think of &#34;Bundle Recommendation&#34; as a subcategory within recommender systems. It&#39;s more specific than just general recommendations and ties directly into how products are grouped together for purchase.
+
+The paper extends traditional methods by using both transactional data and domain knowledge from product suppliers. So, including &#34;Transactional Data&#34; and &#34;Domain Knowledge&#34; makes sense because these are key components of their approach.
+
+They also incorporate textual attributes from the products, which suggests they&#39;re using natural language processing or text analysis techniques. Hence, &#34;Textual Attributes&#34; is another relevant category.
+
+The approach involves generating candidate product sets and then refining them with a deep similarity model. This indicates a machine learning component, so adding &#34;Machine Learning&#34; will help users interested in that aspect find the article.
+
+They tested their solution on real data from Home Depot, showing practical application. Therefore, categories like &#34;Real-World Application,&#34; &#34;A/B Test&#34; (even though they don&#39;t explicitly mention it, the evaluation suggests some form of testing), and &#34;User Satisfaction&#34; (since the goal is to optimize user satisfaction) should be included.
+
+The paper also mentions that their recommendations have higher accuracy compared to expert- crafted collections. This ties into &#34;Recommendation Accuracy,&#34; making it a key category for evaluating performance.
+
+Additionally, since they&#39;re working on grouping products, categories like &#34;Product Grouping&#34; and &#34;Purchase Together&#34; (as in items bought together) seem appropriate. These help users find articles focused on similar themes of product combinations.
+
+Lastly, considering the problem is about optimizing revenue and user satisfaction, including &#34;Revenue Optimization&#34; makes sense for those interested in business impact aspects.
+
+Putting it all together, I&#39;ve mapped out these categories to ensure they cover both the specific techniques used and the broader implications of the research. This should help users navigate and discover this article based on various interests related to recommendation systems.
+&lt;/think&gt;
+
+Product Collection Recommendation, Recommender Systems, eCommerce, Bundle Recommendation, Transactional Data, Domain Knowledge, Textual Attributes, Machine Learning, Real-World Application, A/B Test, User Satisfaction, Recommendation Accuracy, Product Grouping, Purchase Together, Revenue Optimization</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Product Collection Recommendation in Online Retail
+Abstract:
+Recommender systems are an integral part of eCommerce services, helping to optimize revenue and user satisfaction. Bundle recommendation has recently gained attention by the research community since behavioral data supports that users often buy more than one product in a single transaction. In most cases, bundle recommendations are of the form “users who bought product A also bought products B, C, and D”. Although such recommendations can be useful, there is no guarantee that  products A, B, C, and D may actually be related to each other.  In this paper, we address the problem of collection recommendation, i.e., recommending a collection of products that share a common theme and can potentially be purchased together in a single transaction.  We extend on traditional approaches that use mostly transactional data by incorporating both domain knowledge from product suppliers in the form of hierarchies, as well as textual  attributes from the products.  Our approach starts by combining product hierarchies together with transactional data or domain knowledge to identify candidate sets of product collections. Then, it generates the product collection recommendations from these candidate sets by learning a deep similarity model that leverages textual attributes. Experimental evaluation on real data from the Home Depot online retailer shows that the proposed solution can recommend collections of products with  increased accuracy when compared to expert-crafted collections. i&gt;Presentation: Wednesday Poster Lunch&lt;/i
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about product collection recommendations in online retail. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;Product Collection Recommendation in Online Retail.&#34; That immediately tells me it&#39;s related to recommender systems, specifically within an eCommerce context. The abstract mentions that bundle recommendations are being looked at because users often buy multiple products together. It points out a problem with existing methods where recommended products might not be related, so the paper focuses on collection recommendation—groups of products that share a theme and can be bought together.
+
+They extend traditional approaches using transactional data by adding domain knowledge from product hierarchies and textual attributes. Their method combines these to find candidate collections and then uses a deep similarity model with text to make recommendations. The evaluation shows it&#39;s more accurate than expert-crafted collections, tested at Home Depot.
+
+Now, thinking about the categories:
+
+1. **Recommender Systems**: Definitely relevant since it&#39;s about recommendation in eCommerce.
+2. **Bundle Recommendations**: They specifically talk about bundles and collection recommendations, so this is a primary category.
+3. **Product Recommendations**: General term that fits here.
+4. **E-Commerce**: The context is online retail, so this is key.
+5. **Deep Learning**: They use a deep similarity model, indicating the application of deep learning techniques.
+6. **User Behavior Analysis**: Since they look at transactional data and user buying patterns.
+7. **Textual Attributes**: The method incorporates textual information from products, so this category fits.
+8. **Evaluation Metrics**: They mention experimental evaluation, which involves metrics to assess accuracy.
+9. **Domain Knowledge Integration**: They use product hierarchies (domain knowledge) in their approach.
+10. **Home Depot Case Study**: The evaluation is done on Home Depot&#39;s data, so including the company as a category makes sense for specific applications.
+
+I should check if I have at least 8 categories. Yes, that&#39;s ten. Each seems relevant and covers different aspects of the paper from methodology to application areas. This distribution across various subfields ensures good discoverability without overstuffing any one category.
+&lt;/think&gt;
+
+Recommender Systems, Bundle Recommendations, Product Recommendations, E-Commerce, Deep Learning, User Behavior Analysis, Textual Attributes, Evaluation Metrics, Domain Knowledge Integration, Home Depot Case Study</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

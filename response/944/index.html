@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Time-Aware Item Weighting for the Next Basket Recommendations
+Abstract:
+In this paper we study the next basket recommendation problem. Recent methods use different approaches to achieve better performance. However, many of them do not use information about the time of prediction and time intervals between baskets. To fill this gap, we propose a novel method, Time-Aware Item-based Weighting (TAIW), which takes timestamps and intervals into account. We provide experiments on three real-world datasets, and TAIW outperforms well-tuned state-of-the-art baselines for next-basket recommendations. In addition, we show the results of an ablation study and a case study of a few items.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about &#34;Time-Aware Item Weighting for the Next Basket Recommendations.&#34; Let&#39;s break it down step by step.
+
+First, looking at the title, it mentions next basket recommendations. So that&#39;s definitely related to recommendation systems and specifically the next item a user might purchase. The title also includes &#34;time-aware&#34; which suggests the method considers temporal aspects or timing in its approach.
+
+Moving on to the abstract: they&#39;re studying the next basket problem, which is about predicting what items a user will buy next based on their past purchases. Current methods don&#39;t use time information well, so they propose TAIW, which incorporates timestamps and intervals between baskets. They tested it on real-world data and found it outperforms existing methods.
+
+So key themes here are time-aware or temporal aspects in recommendations, the specific problem of next basket recommendations, item-based methods since it&#39;s weighting items, and the use of implicit feedback because it&#39;s about purchase history.
+
+They also mention experiments with real datasets and an ablation study. Ablation studies often relate to model analysis, testing how different components affect performance. They conducted a case study on specific items, which ties into real-world applications or case studies.
+
+The fact that they outperformed state-of-the-art baselines suggests it&#39;s about improving recommendation quality beyond accuracy, maybe looking at aspects like diversity or novelty in recommendations, although that&#39;s not explicitly stated here. However, focusing on temporal factors can lead to more diverse recommendations over time.
+
+They also did an A/B test or user survey? Wait, no, the abstract doesn&#39;t mention A/B testing but they did experiments on real-world datasets which are practical applications. So it&#39;s a real-world application but maybe not specifically an A/B test.
+
+So putting this all together, categories would include Next Basket Recommendations as the main domain. Since it&#39;s about items and weighting them, Item-based Recommendation makes sense. Time-Aware is crucial here because of the temporal aspect.
+
+Implicit Feedback since they&#39;re using purchase history without explicit ratings. Real-world Applications because they tested on actual datasets. Model Analysis for the ablation study. Temporal Recommendations as a specific category. Grocery might be a stretch unless &#39;basket&#39; implies grocery shopping, but not necessarily. Let me think: baskets are commonly used in grocery contexts, so maybe that&#39;s a safe assumption.
+
+They mention improving performance beyond current methods, which ties into Beyond Accuracy. Evaluation Metrics since they&#39;re measuring how well the method works over time and against baselines. So I&#39;ll include those as well.
+
+I don&#39;t see a specific algorithm family mentioned like Matrix Factorization or Neural Networks, so probably not needed here. It&#39;s more about the approach than the algorithm type.
+
+So final categories: Next Basket Recommendations, Time-Aware, Item-based Recommendation, Implicit Feedback, Real-world Applications, Model Analysis, Temporal Recommendations, Grocery, Beyond Accuracy, Evaluation Metrics.
+&lt;/think&gt;
+
+Next Basket Recommendations, Time-Aware, Item-based Recommendation, Implicit Feedback, Real-World Applications, Model Analysis, Temporal Recommendations, Grocery, Beyond Accuracy, Evaluation Metrics</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Time-Aware Item Weighting for the Next Basket Recommendations
+Abstract:
+In this paper we study the next basket recommendation problem. Recent methods use different approaches to achieve better performance. However, many of them do not use information about the time of prediction and time intervals between baskets. To fill this gap, we propose a novel method, Time-Aware Item-based Weighting (TAIW), which takes timestamps and intervals into account. We provide experiments on three real-world datasets, and TAIW outperforms well-tuned state-of-the-art baselines for next-basket recommendations. In addition, we show the results of an ablation study and a case study of a few items.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about Time-Aware Item Weighting for Next Basket Recommendations. Let me go through it step by step.
+
+First, looking at the title: &#34;Time-Aware Item Weighting for the Next Basket Recommendations.&#34; That tells me it&#39;s about recommendation systems, specifically next basket recommendations which are a type of sequential or temporal recommendation problem. The method they&#39;re using involves time-aware item weighting, so that&#39;s another key point.
+
+The abstract mentions that recent methods don&#39;t use information about the time of prediction and intervals between baskets. They propose TAIW to fill this gap. So, their focus is on incorporating temporal aspects into recommendations. They tested it on real-world datasets and did an ablation study as well as a case study.
+
+So, thinking about categories:
+
+1. **Recommendation Systems**: Obviously, the main category.
+2. **Next Basket Recommendations**: Specific type of recommendation problem they&#39;re addressing.
+3. **Temporal Data**: Since they use time intervals and timestamps, this is relevant.
+4. **Sequential推荐**: It&#39;s related to sequences of baskets over time.
+5. **Algorithm Family**: They propose a novel method called TAIW, which uses item weighting. So, maybe under algorithms, it&#39;s about item-based methods or temporal algorithms?
+6. **Evaluation Methods**: They did experiments on real datasets and an ablation study, so evaluation is a category.
+7. **Real-World Applications**: They used real-world datasets, indicating practical application.
+8. **Ablation Study**: A specific type of evaluation they performed.
+
+I also need to ensure that each article goes into 8-12 categories. Let me think if I missed any:
+
+- The domain isn&#39;t specified beyond recommendation systems, so maybe not a specific industry like retail or e-commerce, unless the datasets are from a particular domain.
+- They mention timestamps and intervals, which is about time-aware methods, so that&#39;s another category.
+
+Putting it all together, categories would be: Recommendation Systems, Next Basket Recommendations, Temporal Data, Sequential推荐, Item-Based Methods, Time-Aware Algorithms, Evaluation Methods, Real-World Applications, Ablation Study. Maybe also include something about the method like weighting techniques or temporal modeling.
+
+Wait, let me check if I have at least 8 categories:
+
+1. Recommendation Systems
+2. Next Basket Recommendations
+3. Temporal Data
+4. Sequential推荐
+5. Item-Based Methods
+6. Time-Aware Algorithms
+7. Evaluation Methods
+8. Real-World Applications
+9. Ablation Study
+
+That&#39;s nine, which is within the 8-12 range. I think that covers it. I don&#39;t see a need for more categories unless there&#39;s something specific about the datasets or evaluation metrics they used beyond standard ones.
+
+So, I&#39;ll list these as the relevant categories.
+&lt;/think&gt;
+
+Recommendation Systems, Next Basket Recommendations, Temporal Data, Sequential推荐, Item-Based Methods, Time-Aware Algorithms, Evaluation Methods, Real-World Applications, Ablation Study</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Time-Aware Item Weighting for the Next Basket Recommendations
+Abstract:
+In this paper we study the next basket recommendation problem. Recent methods use different approaches to achieve better performance. However, many of them do not use information about the time of prediction and time intervals between baskets. To fill this gap, we propose a novel method, Time-Aware Item-based Weighting (TAIW), which takes timestamps and intervals into account. We provide experiments on three real-world datasets, and TAIW outperforms well-tuned state-of-the-art baselines for next-basket recommendations. In addition, we show the results of an ablation study and a case study of a few items.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Time-Aware Item Weighting for the Next Basket Recommendations.&#34; Let me read through the title and abstract carefully.
+
+The paper discusses next basket recommendations, which is about suggesting products or items that a user might want to buy in their subsequent shopping session. They mention that recent methods have improved performance but often neglect the timing aspects—like when the prediction is made and the intervals between baskets. 
+
+Their proposed method is called TAIW (Time-Aware Item-based Weighting), which considers timestamps and intervals. The experiments were done on three real-world datasets, showing better results than existing state-of-the-art methods. They also did an ablation study and a case study to validate their approach.
+
+Alright, now I need to assign this article to multiple categories based on the guidelines provided. Let me go through each category type mentioned earlier:
+
+1. **Family of algorithm**: The paper talks about item-based weighting but doesn&#39;t specify the exact family. Since it&#39;s time-aware, maybe it uses matrix factorization or collaborative filtering? Not explicitly stated, so perhaps I can&#39;t assign a specific family here.
+
+2. **Domain of the problem**: This is clearly e-commerce or retail since it&#39;s about next basket recommendations. So categories like E-commerce and Retail make sense.
+
+3. **Specific aspects in recommendation space**: They mention &#34;next basket,&#34; which is a specific use case, so Next Basket Recommendations should be included. Also, since time is a key factor here, Temporal Aspects is relevant.
+
+4. **Evaluation aspects**: The paper discusses performance improvements and uses metrics like accuracy, diversity, etc., but they don&#39;t focus on specific evaluation aspects beyond general performance. However, they did an ablation study which shows they evaluated different components—maybe Evaluation Metrics or Ablation Study categories could be considered, but the examples given didn&#39;t mention these explicitly. Alternatively, since they compare against state-of-the-art, maybe Performance Comparison?
+
+Wait, in the output example, it&#39;s &#34;Scalability, Web Systems...&#34; so perhaps I should think of broader terms.
+
+5. **Real-world applications**: They used real-world datasets and performed experiments, but did they apply it to actual user testing? It mentions an ablation study and a case study, not necessarily A/B tests or user surveys. So maybe not sure about this category.
+
+Other relevant categories could include:
+
+- **Temporal Dynamics**: Since time intervals are crucial here.
+- **Item-based Collaborative Filtering**: As the method is item-based.
+- **Recommendation Systems**: General category.
+- **Basket Analysis**: Although basket analysis might be a more specific term, but next basket implies sequence analysis.
+
+But looking back at the guidelines, the example included categories like &#34;Scalability&#34; or &#34;Web Systems,&#34; which are broader. So perhaps I should focus on high-level categories that best fit.
+
+So considering all this, the main categories would likely include:
+
+- **E-commerce**: As it&#39;s about next basket recommendations.
+- **Recommendation Systems**: General category for recommendation research.
+- **Temporal Dynamics**: Since time is a key aspect here.
+- **Item-based Collaborative Filtering**: Because their method uses item weighting.
+
+Wait, maybe &#34;Next Basket Recommendations&#34; as a specific category is more precise. Also, since they talk about the problem of next basket, that&#39;s a primary focus.
+
+Let me compile these thoughts:
+
+1. E-commerce: Directly related to retail and shopping baskets.
+2. Recommendation Systems: Core area of study.
+3. Temporal Dynamics: Focus on time intervals and prediction timing.
+4. Item-based Collaborative Filtering: The method they used is item-based.
+5. Next Basket Recommendations: Specific use case.
+
+Are there more categories? Maybe &#34;Performance Evaluation&#34; since they compared against state-of-the-art, but the guidelines suggest not to overdo it beyond 8-12 categories. Let me stick with these five for now.
+
+Wait, perhaps also:
+
+6. Scalability: If their method is scalable across datasets, but the abstract doesn&#39;t mention scalability explicitly.
+7. Web Systems: Since e-commerce happens online, but this might be too broad.
+8. Ablation Study: They did an ablation study, so that&#39;s a category.
+
+But considering category utility and not creating too narrow categories, maybe it&#39;s better to focus on broader ones.
+
+So finalizing the categories:
+
+- E-commerce
+- Recommendation Systems
+- Temporal Dynamics
+- Item-based Collaborative Filtering
+- Next Basket Recommendations
+
+I think that&#39;s five. Maybe add one more if possible. Since they performed experiments on real-world datasets, &#34;Real-World Applications&#34; could be another category.
+&lt;/think&gt;
+
+E-commerce, Recommendation Systems, Temporal Dynamics, Item-based Collaborative Filtering, Next Basket Recommendations, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

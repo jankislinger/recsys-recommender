@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Dish Discovery via Word Embeddings on Restaurant Reviews
+Abstract:
+This paper proposes a novel framework for automatic dish discovery via word embeddings on restaurant reviews. We collect a dataset of user reviews from Yelp and parse the reviews to extract dish words. Then, we utilize the processed reviews as training texts to learn the embedding vectors of words via the skip-gram model. In the paper, a nearest- neighbor like score function is proposed to rank the dishes based on their learned representations. We brief some analyses on the preliminary experiments and present a web-based visualization at http://clip.csie.org/yelp/.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into relevant categories based on the guidelines provided. Let me start by reading through the title and abstract to understand the main focus of the paper.
+
+The title is &#34;Dish Discovery via Word Embeddings on Restaurant Reviews,&#34; which immediately tells me that it&#39;s related to food or restaurant recommendations using natural language processing techniques, specifically word embeddings.
+
+Looking at the abstract, the authors propose a novel framework for automatic dish discovery. They use Yelp reviews as their dataset and extract dish words from these reviews. Then, they apply a skip-gram model to learn embedding vectors for these words. A scoring function is introduced to rank dishes based on their learned representations, and they provide some preliminary results with a web-based visualization.
+
+Now, I&#39;ll go through the guidelines step by step. The first objective is categorization accuracy. So, I need to ensure that each category accurately reflects aspects of the paper. Next, utility means categories should have enough articles for navigation. User-centric design implies that categories should align with what users might look for, and consistency ensures that the logic applies across all articles.
+
+The guidelines suggest assigning 8-12 categories per article. Let me brainstorm possible categories:
+
+1. **Natural Language Processing (NLP):** Since the paper uses word embeddings and text processing from reviews.
+2. **Word Embeddings:** Directly related to the method used.
+3. **Recommendation Systems:** The goal is to discover dishes, which can be seen as recommendations.
+4. **Food/Cuisine Domain:** The application is in the food industry.
+5. **Yelp Dataset:** They use Yelp data specifically.
+6. **User Reviews:** The input is user-generated reviews.
+7. **Skip-Gram Model:** A specific technique used in NLP for embeddings.
+8. **Dish Discovery:** The primary task of the research.
+9. **Text Mining:** Extracting information from text.
+10. **Web-Based Visualization:** They provided a visualization tool, which is an application aspect.
+11. **Preliminary Experiments:** Mentioned in the abstract as part of their analysis.
+
+I should ensure that these categories are broad enough but still specific to capture the essence without overcrowding any single category. For example, &#34;Recommendation Systems&#34; is broad, while &#34;Dish Discovery&#34; is more specific. 
+
+I might also consider if there&#39;s a need for additional categories like &#34;Scalability,&#34; but since it&#39;s not mentioned in the abstract, I&#39;ll skip that. Similarly, aspects like &#34;Cold Start&#34; don&#39;t seem relevant here.
+
+Let me review the list to ensure they are user-friendly and cover all necessary angles without overlap. Each category should be distinct yet complementary.
+
+Finalizing, I think these categories cover the main themes: NLP techniques, recommendation focus, domain application, specific methods used, dataset specifics, results presentation, etc.
+&lt;/think&gt;
+
+Natural Language Processing (NLP), Word Embeddings, Recommendation Systems, Food/Cuisine Domain, Yelp Dataset, User Reviews, Skip-Gram Model, Dish Discovery, Text Mining, Web-Based Visualization, Preliminary Experiments</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Dish Discovery via Word Embeddings on Restaurant Reviews
+Abstract:
+This paper proposes a novel framework for automatic dish discovery via word embeddings on restaurant reviews. We collect a dataset of user reviews from Yelp and parse the reviews to extract dish words. Then, we utilize the processed reviews as training texts to learn the embedding vectors of words via the skip-gram model. In the paper, a nearest- neighbor like score function is proposed to rank the dishes based on their learned representations. We brief some analyses on the preliminary experiments and present a web-based visualization at http://clip.csie.org/yelp/.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories. The title is &#34;Dish Discovery via Word Embeddings on Restaurant Reviews.&#34; Let me start by analyzing the title and abstract.
+
+The paper uses word embeddings (specifically skip-gram model) on restaurant reviews to discover dishes. So, the method involves machine learning techniques, particularly embeddings.
+
+From the abstract, they processed user reviews from Yelp to extract dish words. They used these to train their model and then created a scoring function for ranking dishes based on the embeddings. The paper also mentions web-based visualization.
+
+So, key points:
+- Word Embeddings: This is a specific technique in machine learning.
+- Restaurant Reviews: So the domain here is related to food or restaurants.
+- Dish Discovery: It&#39;s about finding new dishes or recommendations.
+- Web-Based Visualization: They have an interface for presenting results.
+
+Now, mapping this to categories. The user provided examples like Family of algorithms (e.g., Matrix Factorization), Domain of problem (Books, Movies, Healthcare), specific aspects in recommendation space (like Cold Start), evaluation aspects, real-world applications (A/B Test, User Survey), etc.
+
+Let me consider each point:
+
+1. **Word Embeddings**: This falls under the family of algorithms or techniques. So &#34;Word Embeddings&#34; is a category.
+2. **Restaurant Reviews**: The domain is restaurants, so &#34;Restaurants.&#34;
+3. **Dish Discovery**: It&#39;s about discovering new dishes, which relates to recommendation systems. So maybe &#34;Recommendation Systems&#34; but more specific? Or perhaps &#34;Dish Discovery&#34; as a category if that&#39;s a defined term.
+4. **Web-Based Visualization**: This indicates they have an application or tool, so &#34;Real-World Applications&#34; might fit since it&#39;s about deployment or visualization tools. Alternatively, &#34;Web Systems&#34; could be another category.
+
+Looking at the guidelines, each article should go into 8-12 categories. The user provided examples include aspects like scalability, domain of problem, specific recommendation aspects, real-world applications, etc.
+
+So possible categories:
+
+- **Word Embeddings**: Directly from the method used.
+- **Recommendation Systems**: Since they&#39;re trying to find dishes users might like.
+- **Restaurants**: Domain-specific category.
+- **Dish Discovery**: Specific application in the restaurant domain.
+- **Web-Based Visualization**: They created a web tool for visualization, so that&#39;s another category.
+- **User Feedback/Reviews**: The data comes from user reviews, so this is relevant.
+- **Natural Language Processing (NLP)**: Since word embeddings and processing text are NLP techniques.
+- **Scalability**: If the framework can handle large datasets, but it&#39;s not explicitly stated. Maybe not necessary unless inferred.
+- **Real-World Applications**: They have a deployed system with a visualization, so this is applicable.
+
+Wait, maybe &#34;Implicit Feedback&#34; isn&#39;t directly mentioned here since they&#39;re using explicit reviews (text), but perhaps that&#39;s too specific. Alternatively, &#34;Sentiment Analysis&#34; could be another category if the paper touches on sentiment, but it&#39;s more about dish discovery than sentiment.
+
+Alternatively, considering the evaluation aspects: They might have looked at metrics like diversity or beyond accuracy, but again, not explicitly stated in the abstract.
+
+So sticking to what is clear:
+
+- Word Embeddings
+- Recommendation Systems
+- Restaurants
+- Dish Discovery
+- Web-Based Visualization
+- User Feedback/Reviews
+- NLP
+
+But I need 8-12 categories. Let me see if there are more aspects.
+
+The paper uses a nearest neighbor approach for scoring, which relates to similarity measures in recommendation systems. So &#34;Nearest Neighbor&#34; could be another category under the algorithm family.
+
+Also, since they&#39;re using the skip-gram model, maybe &#34;Skip-Gram Model&#34; is too specific, but perhaps it&#39;s better to stick with broader categories unless there&#39;s a specific one for that.
+
+Alternatively, considering the problem domain as &#34;Food&#34; instead of restaurants, which might be more general.
+
+Wait, let me make sure I&#39;m hitting the right balance. The categories should be useful and not too granular. So maybe:
+
+- Word Embeddings
+- Recommendation Systems
+- Restaurants
+- Dish Discovery
+- Web-Based Visualization
+- User Feedback/Reviews
+- NLP
+
+That&#39;s seven. To reach 8, perhaps &#34;Data Mining&#34; since they&#39;re processing a dataset to extract information.
+
+Alternatively, considering the method as a type of machine learning: maybe &#34;Machine Learning,&#34; but that&#39;s too broad. Alternatively, under evaluation aspects, if they discuss metrics like diversity or beyond accuracy, but it&#39;s not clear here.
+
+Another angle: They have an A/B test mentioned? No, the abstract says &#34;present a web-based visualization&#34; at a URL, so maybe real-world application is more about deployment than testing. So perhaps I should include that as &#34;Real-World Applications.&#34;
+
+So revising:
+
+1. Word Embeddings
+2. Recommendation Systems
+3. Restaurants
+4. Dish Discovery
+5. Web-Based Visualization
+6. User Feedback/Reviews
+7. NLP
+8. Real-World Applications
+
+That&#39;s eight categories. I think this covers the main aspects without being too granular.
+&lt;/think&gt;
+
+Word Embeddings, Recommendation Systems, Restaurants, Dish Discovery, Web-Based Visualization, User Feedback/Reviews, Natural Language Processing, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

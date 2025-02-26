@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Exploring False Hard Negative Sample in Cross-Domain Recommendation
+Abstract:
+Negative Sampling in recommendation aims to capture informative negative instances for the sparse user-item interactions to improve the performance. Conventional negative sampling methods tend to select informative hard negative samples (HNS) besides the default random samples. However, these hard negative sampling methods usually struggle with false hard negative samples (FHNS), which happens when a user-item interaction has not been observed yet and is picked as a negative sample, while the user will actually interact with this item once exposed to it. Such FHNS issues may seriously confuse the model training, while most conventional hard negative sampling methods do not systematically explore and distinguish FHNS from HNS. To address this issue, we propose a novel model-agnostic Real Hard Negative Sampling (RealHNS) framework specially for cross-domain recommendation (CDR), which aims to discover the false and refine the real from all HNS via both general and cross-domain real hard negative sample selectors. For the general part, we conduct the coarse-grained and fine-grained real HNS selectors sequentially, armed with a dynamic item-based FHNS filter to find high-quality HNS. For the cross-domain part, we further design a new cross-domain HNS for alleviating negative transfer in CDR and discover its corresponding FHNS via a dynamic user-based FHNS filter to keep its power. We conduct experiments on four datasets based on three representative model-agnostic hard negative sampling methods, along with extensive model analyses, ablation studies, and universality analyses. The consistent improvements indicate the effectiveness, robustness, and universality of RealHNS, which is also easy-to-deploy in real-world systems as a plug-and-play strategy. The source code will be released in the future.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about &#34;Exploring False Hard Negative Sample in Cross-Domain Recommendation.&#34; Let me start by reading through the title and abstract carefully.
+
+The title mentions false hard negative samples (FHNS) in cross-domain recommendation (CDR). From what I understand, FHNS refers to instances where a system incorrectly identifies an item as a negative sample when it&#39;s actually something the user might interact with. The article talks about how conventional methods struggle with this issue and proposes a new framework called RealHNS.
+
+Looking at the abstract, they discuss negative sampling in recommendation systems, focusing on improving performance by handling FHNS better. They propose their model-agnostic framework for CDR, which aims to distinguish between real and false hard negatives. The approach uses dynamic filters and selectors across both general and cross-domain contexts to refine these samples.
+
+Now, thinking about the categories from the guidelines: the family of algorithm would be Negative Sampling, specifically focusing on Hard Negative Samples (HNS) and FHNS. They mention it&#39;s model-agnostic, so that&#39;s another category.
+
+The domain is Cross-Domain Recommendation, as the framework is designed for CDR scenarios. The problem they&#39;re addressing is related to improving recommendation systems by handling negative samples more effectively, which ties into the broader theme of Recommendation Systems.
+
+In terms of aspects of evaluation, the article discusses the impact of FHNS on model training and performance. They also talk about experimental validation with extensive analyses, so Evaluation Methods would be relevant.
+
+They mention real-world applications since they discuss deploying RealHNS as a plug-and-play strategy in real systems, which touches on Applications.
+
+Other categories could include Data Filtering because they use dynamic filters to handle FHNS. Since their approach is model-agnostic, it&#39;s applicable across different models, so that&#39;s another point.
+
+The article also covers model analyses and ablation studies, indicating a focus on Model Analysis. The problem of negative transfer in cross-domain settings is addressed, which is an aspect specific to Cross-Domain Scenarios.
+
+Additionally, the work discusses improving recommendation quality by handling false negatives, which relates to Recommender Systems.
+
+Putting it all together, I need to assign at least 8-12 categories. Let me list them:
+
+1. Negative Sampling - Core topic.
+2. Hard Negative Samples (HNS) - Specific focus within negative sampling.
+3. Cross-Domain Recommendation (CDR) - The domain they&#39;re addressing.
+4. Model-Agnostic Methods - Approach is not tied to a specific model.
+5. False Hard Negative Samples (FHNS) - Main issue addressed.
+6. Evaluation Methods - They discuss experiments and analyses.
+7. Applications - Real-world deployment discussed.
+8. Data Filtering - Use of dynamic filters.
+9. Recommendation Systems - Broader field.
+10. Model Analysis - Includes various studies on the model&#39;s effectiveness.
+
+I think these cover the main points accurately without being too specific or too broad, ensuring discoverability and alignment with user interests.
+&lt;/think&gt;
+
+Negative Sampling, Hard Negative Samples (HNS), Cross-Domain Recommendation (CDR), Model-Agnostic Methods, False Hard Negative Samples (FHNS), Evaluation Methods, Applications, Data Filtering, Recommender Systems, Model Analysis</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

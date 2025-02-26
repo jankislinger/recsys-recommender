@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Understanding and Modeling Passive-Negative Feedback for Short-video Sequential Recommendation
+Abstract:
+Sequential recommendation is one of the most important tasks in recommender systems, which aims to recommend the next interacted item with historical behaviors as input. Traditional sequential recommendation always mainly considers the collected positive feedback such as click, purchase, etc. However, in short-video platforms such as TikTok, video viewing behavior may not always represent positive feedback. Specifically, the videos are played automatically, and users passively receive the recommended videos. In this new scenario, users passively express negative feedback by skipping over videos they do not like, which provides valuable information about their preferences. Different from the negative feedback studied in traditional recommender systems, this passive-negative feedback can reflect users’ interests and serve as an important supervision signal in extracting users’ preferences. Therefore, it is essential to carefully design and utilize it in this novel recommendation scenario. In this work, we first conduct analyses based on a large-scale real-world short-video behavior dataset and illustrate the significance of leveraging passive feedback. We then propose a novel method that deploys the sub-interest encoder, which incorporates positive feedback and passive-negative feedback as supervision signals to learn the user’s current active sub-interest. Moreover, we introduce an adaptive fusion layer to integrate various sub-interests effectively. To enhance the robustness of our model, we then introduce a multi-task learning module to simultaneously optimize two kinds of feedback – passive-negative feedback and traditional randomly-sampled negative feedback. The experiments on two large-scale datasets verify that the proposed method can significantly outperform state-of-the-art approaches. The codes and collected datasets are anonymously released at https:// anonymous.4open.science/ r/ SINE-2047/ to benefit the community.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article into multiple relevant categories based on its content, themes, and relevance. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;Understanding and Modeling Passive-Negative Feedback for Short-Video Sequential Recommendation.&#34; That already gives me some keywords: passive-negative feedback, short-video recommendation, sequential recommendation.
+
+Looking at the abstract, it talks about how traditional sequential recommendations mainly consider positive feedback but in platforms like TikTok, videos play automatically. So users might passively show negative feedback by skipping videos they don&#39;t like. The authors propose a method that uses both positive and this new passive-negative feedback to model user preferences better. They also mention using techniques like sub-interest encoder, adaptive fusion layer, multi-task learning, and their experiments on large datasets showing improved performance.
+
+Now, I need to map these themes into categories. Let&#39;s go step by step.
+
+1. **Passive-Negative Feedback**: The article focuses heavily on this concept, so it&#39;s a primary category.
+2. **Short-Video Recommendation**: The application is specific to short videos, like TikTok.
+3. **Sequential Recommendation**: This is the core task addressed in the paper.
+4. **User Preferences Modeling**: They discuss how user preferences are modeled using feedback.
+5. **Recommendation Systems**: Broad category that covers all recommendation-related topics.
+6. **Passive Feedback**: Similar to negative feedback but more specific about passivity.
+7. **Negative Feedback Handling**: Techniques for dealing with negative data in recommendations.
+8. **Behavior Analysis**: They analyze user behavior in their dataset.
+9. **Content Consumption Patterns**: How users consume content, especially through short videos.
+10. **Modeling User Interests**: The focus on understanding what users like or dislike.
+11. **Multi-Task Learning**: A technique used in their approach to optimize feedback.
+12. **Large-Scale Datasets**: They use real-world, large datasets for analysis and experiments.
+
+I should also consider if there are other aspects I might have missed. The abstract mentions methods like sub-interest encoder and adaptive fusion layer, which could fall under more specific categories, but those might be too niche. Similarly, the mention of A/B testing or user surveys isn&#39;t present here, so I shouldn&#39;t include them unless relevant.
+
+I think these 12 categories cover the main points without being too narrow. They balance between broad and specific to ensure discoverability while avoiding overcrowding.
+&lt;/think&gt;
+
+Passive-Negative Feedback, Short-Video Recommendation, Sequential Recommendation, User Preferences Modeling, Recommendation Systems, Passive Feedback, Negative Feedback Handling, Behavior Analysis, Content Consumption Patterns, Modeling User Interests, Multi-Task Learning, Large-Scale Datasets</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Understanding and Modeling Passive-Negative Feedback for Short-video Sequential Recommendation
+Abstract:
+Sequential recommendation is one of the most important tasks in recommender systems, which aims to recommend the next interacted item with historical behaviors as input. Traditional sequential recommendation always mainly considers the collected positive feedback such as click, purchase, etc. However, in short-video platforms such as TikTok, video viewing behavior may not always represent positive feedback. Specifically, the videos are played automatically, and users passively receive the recommended videos. In this new scenario, users passively express negative feedback by skipping over videos they do not like, which provides valuable information about their preferences. Different from the negative feedback studied in traditional recommender systems, this passive-negative feedback can reflect users’ interests and serve as an important supervision signal in extracting users’ preferences. Therefore, it is essential to carefully design and utilize it in this novel recommendation scenario. In this work, we first conduct analyses based on a large-scale real-world short-video behavior dataset and illustrate the significance of leveraging passive feedback. We then propose a novel method that deploys the sub-interest encoder, which incorporates positive feedback and passive-negative feedback as supervision signals to learn the user’s current active sub-interest. Moreover, we introduce an adaptive fusion layer to integrate various sub-interests effectively. To enhance the robustness of our model, we then introduce a multi-task learning module to simultaneously optimize two kinds of feedback – passive-negative feedback and traditional randomly-sampled negative feedback. The experiments on two large-scale datasets verify that the proposed method can significantly outperform state-of-the-art approaches. The codes and collected datasets are anonymously released at https:// anonymous.4open.science/ r/ SINE-2047/ to benefit the community.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article about recommendation systems, specifically looking at passive-negative feedback in short-video platforms like TikTok. The title is &#34;Understanding and Modeling Passive-Negative Feedback for Short-video Sequential Recommendation.&#34; Let me read through the abstract carefully.
+
+The abstract explains that sequential recommendation is a key area in recommender systems, where the system suggests items based on a user&#39;s history. Traditional methods focus mainly on positive feedback like clicks or purchases. However, in short-video platforms, users passively consume content because videos play automatically. This means that when users skip a video, it&#39;s a form of negative feedback, which can be valuable.
+
+The study differentiates this passive-negative feedback from traditional negative feedback. It suggests that this type of feedback is important for understanding user preferences and should be incorporated into recommendation models. The authors analyze a large dataset to show the significance of using passive feedback.
+
+They propose a method called SINE, which uses a sub-interest encoder to incorporate both positive and passive-negative feedback to capture users&#39; active sub-interests. They also have an adaptive fusion layer to combine these sub-interests effectively. Additionally, they introduce a multi-task learning module to optimize for both passive-negative and traditional negative feedback.
+
+Experiments on two large datasets show that their method outperforms existing approaches. The code and data are available for the community.
+
+Now, I need to assign relevant categories based on this information. Let&#39;s go through the key points:
+
+1. **Family of algorithm**: The article doesn&#39;t explicitly mention the type of algorithm used beyond encoders and multi-task learning. But since it&#39;s about sequential recommendation, maybe &#34;Sequential Recommendation&#34; is a category. Also, they use an encoder model, so &#34;Encoder&#34; could be another.
+
+2. **Domain of the problem**: The focus is on short-video platforms like TikTok, so &#34;Short Video Platforms&#34; is definitely a domain category. They also talk about user interactions in sequential recommendation, which ties into general &#34;User Interaction&#34; and &#34;Behavior Analysis.&#34;
+
+3. **Recommendation space specifics**: They address feedback types, specifically passive-negative feedback. So &#34;Passive-Negative Feedback&#34; should be a category. Also, the broader context of feedback mechanisms is important, so maybe &#34;Feedback Mechanisms.&#34;
+
+4. **Evaluation aspects**: The paper discusses model evaluation in terms of performance on large datasets and comparisons with state-of-the-art methods. So &#34;Model Evaluation&#34; could be another category.
+
+5. **Real-world applications**: They mention real-world data from short-video platforms and releasing code for the community, indicating practical applications. So categories like &#34;Real-World Applications&#34; and maybe &#34;Practical Implementation&#34; would fit.
+
+6. **Other relevant aspects**: The study involves analyzing large datasets, so &#34;Large-Scale Datasets&#34; is a good category. They also touch upon multi-task learning, which is a technique in machine learning, so that&#39;s another point.
+
+Putting it all together, I&#39;ll list the categories based on each of these points.
+&lt;/think&gt;
+
+- Sequential Recommendation
+- Encoder
+- Short Video Platforms
+- User Interaction
+- Behavior Analysis
+- Passive-Negative Feedback
+- Feedback Mechanisms
+- Model Evaluation
+- Real-World Applications
+- Practical Implementation
+- Large-Scale Datasets
+- Multi-Task Learning</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

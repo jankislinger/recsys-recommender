@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Addressing Delayed Feedback for Continuous Training with Neural Networks in CTR prediction
+Abstract:
+One of the challenges in display advertising is that the distribution of features and click through rate (CTR) can exhibit large shifts over time due to seasonality, changes to ad campaigns and other factors. The predominant strategy to keep up with these shifts is to train predictive models continuously, on fresh data, in order to prevent them from becoming stale. However, in many ad systems positive labels are only observed after a possibly long and random delay. These delayed labels pose a challenge to data freshness in continuous training: fresh data may not have complete label information at the time they are ingested by the training algorithm. Naive strategies which consider any data point a negative example until a positive label becomes available tend to underestimate CTR, resulting in inferior user experience and suboptimal performance for advertisers. The focus of this paper is to identify the best combination of loss functions and models that enable large-scale learning from a continuous stream of data in the presence of delayed labels. In this work, we compare 5 different loss functions, 3 of them applied to this problem for the first time. We benchmark their performance in offline settings on both public and proprietary datasets in conjunction with shallow and deep model architectures. We also discuss the engineering cost associated with implementing each loss function in a production environment. Finally, we carried out online experiments with the top performing methods, in order to validate their performance in a continuous training scheme. While training on 668 million in-house data points offline, our proposed methods outperform previous state-of-the-art by 3% relative cross entropy (RCE). During online experiments, we observed 55% gain in revenue per thousand requests (RPMq) against naive log loss. ,
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to help categorize this research article. Let&#39;s read through the title and abstract carefully.
+
+The title is &#34;Addressing Delayed Feedback for Continuous Training with Neural Networks in CTR prediction.&#34; So it&#39;s about Click Through Rate prediction, which is a key area in recommendation systems and advertising. They&#39;re using neural networks, so that points to machine learning and deep learning categories.
+
+Looking at the abstract, they talk about display advertising challenges due to feature distribution shifts over time because of seasonality or ad campaign changes. The main issue here is continuous training of models to keep them fresh, but positive labels are delayed. This causes problems with data freshness because the model can&#39;t learn effectively without complete labels.
+
+They mention testing different loss functions and models, comparing their performance on public and proprietary datasets. They also did online experiments showing improved revenue gains. So this is not just theoretical; it&#39;s applied in real-world scenarios.
+
+Now, thinking about categories:
+
+1. **Family of algorithm**: The paper uses neural networks, so &#34;Neural Networks&#34; is a clear category. They&#39;re also comparing loss functions, which relates to optimization methods, so maybe &#34;Loss Functions.&#34;
+
+2. **Domain of the problem**: It&#39;s specifically about display advertising and CTR prediction. So categories like &#34;Display Advertising,&#34; &#34;CTR Prediction,&#34; and more generally, &#34;Advertising Systems.&#34;
+
+3. **Specific aspects in recommendation space**: They address delayed feedback and continuous training, which are challenges in real-time systems. So &#34;Delayed Feedback&#34; and &#34;Continuous Training&#34; seem relevant.
+
+4. **Evaluation aspects**: They mention offline benchmarks and online experiments with metrics like RPMq (Revenue per thousand requests). So categories could be &#34;Offline Evaluation,&#34; &#34;Online Experiments.&#34;
+
+5. **Real-world applications**: The paper discusses A/B testing, which is a common real-world application method in industry settings. Also, since it&#39;s deployed in production, &#34;Production Systems&#34; and maybe &#34;Engineering Costs&#34; because they talk about implementation costs.
+
+6. **Other relevant categories**: Since this deals with handling changing data over time, &#34;Time-Aware Models&#34; could be another category. The use of streaming data would fit under &#34;Stream Learning.&#34;
+
+Putting it all together, the categories should cover the algorithm used, the specific domain, the challenges addressed, evaluation methods, and real-world applications. I also need to make sure each category is clear and useful for users exploring related content.
+&lt;/think&gt;
+
+Neural Networks, Loss Functions, Display Advertising, CTR Prediction, Advertising Systems, Delayed Feedback, Continuous Training, Offline Evaluation, Online Experiments, A/B Testing, Production Systems, Engineering Costs, Time-Aware Models, Stream Learning</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Addressing Delayed Feedback for Continuous Training with Neural Networks in CTR prediction
+Abstract:
+One of the challenges in display advertising is that the distribution of features and click through rate (CTR) can exhibit large shifts over time due to seasonality, changes to ad campaigns and other factors. The predominant strategy to keep up with these shifts is to train predictive models continuously, on fresh data, in order to prevent them from becoming stale. However, in many ad systems positive labels are only observed after a possibly long and random delay. These delayed labels pose a challenge to data freshness in continuous training: fresh data may not have complete label information at the time they are ingested by the training algorithm. Naive strategies which consider any data point a negative example until a positive label becomes available tend to underestimate CTR, resulting in inferior user experience and suboptimal performance for advertisers. The focus of this paper is to identify the best combination of loss functions and models that enable large-scale learning from a continuous stream of data in the presence of delayed labels. In this work, we compare 5 different loss functions, 3 of them applied to this problem for the first time. We benchmark their performance in offline settings on both public and proprietary datasets in conjunction with shallow and deep model architectures. We also discuss the engineering cost associated with implementing each loss function in a production environment. Finally, we carried out online experiments with the top performing methods, in order to validate their performance in a continuous training scheme. While training on 668 million in-house data points offline, our proposed methods outperform previous state-of-the-art by 3% relative cross entropy (RCE). During online experiments, we observed 55% gain in revenue per thousand requests (RPMq) against naive log loss. ,
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about addressing delayed feedback for continuous training with neural networks in CTR prediction. Let me break down the thought process step by step.
+
+First, looking at the title: it mentions &#34;Neural Networks,&#34; which is a family of algorithms, so that&#39;s one category. It&#39;s also about CTR prediction, so that&#39;s another domain-specific category.
+
+The abstract talks about challenges in display advertising, specifically issues with delayed labels and data freshness. That falls under Advertising as a domain. They mention using neural networks for continuous training, so &#34;Neural Networks&#34; is relevant again.
+
+They discuss loss functions and model architectures, comparing different ones, which ties into Model Architecture and Loss Functions categories. Since they&#39;re dealing with large-scale data—668 million points—that&#39;s about Scalability.
+
+The problem of delayed feedback in CTR prediction relates to Real-Time Processing because the system needs to handle data continuously as it comes in, even when labels are delayed.
+
+They performed both offline benchmarking on public and proprietary datasets and online experiments. This indicates they used Experimental Methods for evaluation. The fact that they tested in a production environment means there&#39;s an Engineering Cost aspect involved.
+
+The improvements observed, like 3% relative cross entropy improvement and a 55% RPMq gain, are about Performance Evaluation. Also, the focus on maintaining fresh data relates to Data Freshness.
+
+Since the paper compares various loss functions and models, Method Comparison is another category. They&#39;re using continuous training, which is a specific approach in machine learning workflows, so that&#39;s Continuous Training.
+
+Additionally, they mention A/B testing during online experiments, which ties into Real World Applications as it shows practical implementation beyond just theoretical results.
+
+Putting it all together, the categories should cover the algorithm family (Neural Networks), the domain (Advertising, CTR Prediction), technical aspects like Model Architecture and Loss Functions, scalability and real-time processing, evaluation methods (Experimental Methods, Performance Evaluation), engineering considerations (Engineering Cost), specific challenges addressed (Delayed Feedback, Data Freshness), methodological approaches (Method Comparison, Continuous Training), and practical applications (Real World Applications). Each category needs to be relevant and useful for users exploring the content.
+&lt;/think&gt;
+
+Neural Networks, Advertising, CTR Prediction, Delayed Feedback, Model Architecture, Loss Functions, Scalability, Real-Time Processing, Experimental Methods, Performance Evaluation, Engineering Cost, Data Freshness, Method Comparison, Continuous Training, Real World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

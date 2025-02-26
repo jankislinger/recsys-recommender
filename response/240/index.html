@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: An Entity Graph Based Recommender System
+Abstract:
+We propose a recommender system which exploits relations present between entities appearing in content from user’s history and entities appearing in candidate content. In order to identify such relations, we use the knowledge graph of NELL, which encodes entities and their relations. We present a novel normalized version of Personalized PageRank, to rank candidate content. We test our approach on the movie recommendation domain and show that the proposed method outperforms other baseline methods, including the standard Personalized PageRank.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article titled &#34;An Entity Graph Based Recommender System.&#34; Let me break it down step by step.
+
+First, looking at the title, it mentions a recommender system based on entity graphs. So that immediately tells me this is related to recommendation systems and graph-based approaches.
+
+The abstract talks about exploiting relations between entities from user history and candidate content using NELL&#39;s knowledge graph. That makes me think of knowledge graphs as a specific category here. They&#39;re using Personalized PageRank, but with a normalized version, which suggests it&#39;s an algorithm-related topic, specifically in the family of algorithms used for recommendations.
+
+They test this approach on movie recommendation, so that&#39;s a clear domain application—movies. The fact that they&#39;re comparing against baselines indicates evaluation aspects, so maybe something like &#34;Evaluation&#34; or more specifically, since they’re looking beyond accuracy, perhaps &#34;Beyond Accuracy.&#34; 
+
+The system uses entity relations, which could fall under content-based recommendations because it’s leveraging the content&#39;s entities rather than just user-item interactions. They mention real-world applications with A/B testing and user surveys, so those should be included.
+
+Also, since they&#39;re building a recommendation system that factors in entity relations, &#34;Recommendation System&#34; is a primary category. The approach might involve some level of scalability or handling large datasets, so &#34;Scalability&#34; could be relevant too.
+
+Putting it all together, the categories I come up with are: Recommendation System, Knowledge Graph, Personalized PageRank (as an algorithm), Entity Relations, Movie Recommendations (domain), Evaluation (specifically beyond accuracy metrics), Content-Based, Algorithm Family, A/B Test, User Survey, and Scalability.
+&lt;/think&gt;
+
+Recommendation System, Knowledge Graph, Personalized PageRank, Entity Relations, Movies, Evaluation, Beyond Accuracy, Content-Based, Algorithm Family, A/B Test, User Survey, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Exploiting Temporal Influence in Online Recommendation
+Abstract:
+In this paper we give methods for time aware music recommendation in a social media service with the potential of exploiting immediate temporal influences between users. We consider events when a user listens to an artist the first time and this event follows some friend listening to the same artist short time before. We train a blend of matrix factorization methods that model the relation of the influencer, the influenced and the artist, both the individual factor decompositions and their weight learned by variants of stochastic gradient descent (SGD). Special care is taken since events of influence form a subset of the positive implicit feedback data and hence we have to cope with two different definitions of the positive and negative implicit training data. In addition, in the time aware setting we have to use online learning and evaluation methods. While SGD can easily be trained online, evaluation is cumbersome by traditional measures since we will have potentially different top recommendations at different times. Our experiments are carried over the two-year scrobble history of 70,000 Last.fm users and show a 4% increase in recommendation quality by predicting temporal influences.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Exploiting Temporal Influence in Online Recommendation.&#34; Let me start by reading the title and abstract carefully.
+
+The title suggests that it&#39;s about recommendations online, specifically looking at how time plays a role. The abstract mentions using matrix factorization methods and considering social media influence between users. They talk about training models with SGD, dealing with implicit feedback, online learning, evaluation challenges, and experiments on Last.fm data showing improved recommendation quality.
+
+So, first, the core theme isRecommendation Systems since it&#39;s all about improving recommendations. The temporal aspect means it&#39;s Time-Aware Recommendations, which I should include as a separate category. They used matrix factorization, so that&#39;s another clear category. Since they&#39;re looking at how users influence each other through their listening habits, Social Media Influence makes sense.
+
+The study involves user behavior over time, so User Behavior is relevant. Evaluation methods are tricky here because of the temporal aspect, so Evaluation Metrics should be a category. They mention using online learning techniques for real-time adjustments, hence Online Learning.
+
+Looking at the application, it&#39;s specifically in music recommendations within a social media context, so Music Recommendations fits. The experiments were conducted on Last.fm data, which is a real-world application, so Real-World Applications applies here.
+
+The research deals with how influence spreads between users and friends, so Social Influence is another category. They talk about the dynamics of when one user influences another after listening to an artist, so Temporal Dynamics should be included as well.
+
+I think that covers all the key aspects without being too granular or overlapping. Each category adds a unique angle based on the content, making it easier for users to find related articles through various lenses.
+&lt;/think&gt;
+
+Recommendation Systems, Time-Aware Recommendations, Matrix Factorization, Social Media Influence, User Behavior, Evaluation Metrics, Online Learning, Music Recommendations, Real-World Applications, Social Influence, Temporal Dynamics</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

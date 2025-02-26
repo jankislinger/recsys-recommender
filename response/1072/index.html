@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Unified Denoising Training for Recommendation
+Abstract:
+Most existing denoising recommendation methods mainly alleviate noisy implicit feedback (user behaviors) through empirical studies. However, such studies may lack theoretical explainability and fail to model comprehensive noise patterns, which hinders understanding and capturing different noise patterns that show distinct effects on users’ behaviors. Thus, we propose to capture comprehensive noise patterns through a holistic theoretical analysis for more effective denoising, whereby users’ behaviors are divided into the willingness (to interact with) and action (to interact with) phases to disentangle the independent noise patterns. Our analysis unveils that (1) in the willingness phase, the high uncertainty of the user’s willingness to interact with the item can lead to high expectation loss, unifying explainability for existing denoising methods; and (2) in the action phase, higher user-specific inconsistency between willingness and action can not only lead to more noise in the user’s overall behaviors but also make it harder to distinguish between her true and noisy behaviors. All these findings are also aligned with our empirical observations. Inspired by these findings, we propose a Unified Denoising Training (UDT) method for recommendation. To alleviate uncertainty in the willingness phase, we lower the importance of the user-item interaction with high willingness uncertainty recognized by high loss. To ease the inconsistency in the action phase, we lower the overall importance for users with high user-specific inconsistency as it may lead to more noisy behaviors, and then increase the importance gap between recognized true and noisy behaviors for users with low user-specific inconsistency as their behaviors are more distinguishable. Extensive experiments on three real-world datasets show that our proposed UDT outperforms state-of-the-art denoising recommendation methods.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article titled &#34;Unified Denoising Training for Recommendation.&#34; The abstract talks about addressing noisy implicit feedback in recommendation systems by proposing a method called Unified Denoising Training (UDT). Let me break down the key points to determine the appropriate categories.
+
+First, the title mentions denoising training, which suggests it&#39;s related to recommendation algorithms. So, I&#39;ll start with &#34;Recommendation Algorithms.&#34;
+
+The abstract discusses implicit feedback, which is a common term in recommendation systems where user interactions are used as signals. That adds &#34;Implicit Feedback&#34; as another category.
+
+They talk about modeling comprehensive noise patterns and propose dividing user behaviors into willingness and action phases. This indicates an emphasis on understanding the underlying user behavior dynamics, so &#34;User Behavior Modeling&#34; fits here.
+
+The method addresses different noise patterns affecting users&#39; actions, which is about improving recommendation quality by handling noise. So, I&#39;ll include &#34;Noise Handling.&#34;
+
+They mention extensive experiments with real-world datasets, showing their approach outperforms existing methods. This means the article has practical applications, so &#34;Real-World Applications&#34; is appropriate.
+
+The abstract also discusses theoretical analysis to explain denoising methods, which adds a layer of understanding beyond just empirical studies. Therefore, &#34;Theoretical Analysis&#34; should be included.
+
+Their method unifies various aspects of denoising, so &#34;Unified Approach&#34; makes sense as it&#39;s not just another method but a comprehensive one.
+
+The willingness and action phases are specific concepts they&#39;ve introduced to model noise, making &#34;Willingness-Action Phases&#34; a relevant category.
+
+They focus on improving recommendation quality by addressing noise, which ties into the broader goal of enhancing recommendation systems. Hence, &#34;Recommendation Quality&#34; is another category.
+
+Looking at the problem domain, it&#39;s about recommendations in general, so &#34;Recommendation Systems&#34; as a broad category fits here.
+
+Considering all these points, I&#39;ll compile the categories to ensure each article is discoverable through various angles relevant to users interested in recommendation techniques, algorithm design, user behavior, and system improvements.
+&lt;/think&gt;
+
+Recommendation Algorithms, Implicit Feedback, User Behavior Modeling, Noise Handling, Real-World Applications, Theoretical Analysis, Unified Approach, Willingness-Action Phases, Recommendation Quality, Denoising Methods</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

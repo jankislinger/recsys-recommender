@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: CB2CF: A Neural Multiview Content-to-Collaborative Filtering Model for Completely Cold Item Recommendations
+Abstract:
+In Recommender Systems research, algorithms are often characterized as either Collaborative Filtering (CF) or Content Based (CB). CF algorithms are trained using a dataset of user preferences while CB algorithms are typically based on item profiles. These approaches harness different data sources and therefore the resulting recommended items are generally very different. This paper presents the CB2CF, a deep neural multiview model that serves as a bridge from items content into their CF representations. CB2CF is a ‘real-world’ algorithm designed for Microsoft Store services that handle around a billion users worldwide. CB2CF is demonstrated on movies and apps recommendations, where it is shown to outperform an alternative CB model on completely cold items.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;CB2CF: A Neural Multiview Content-To-Collaborative Filtering Model for Completely Cold Item Recommendations.&#34; From that, I can tell it&#39;s about recommendation systems, specifically a model called CB2CF which combines content-based (CB) and collaborative filtering (CF) approaches. It mentions handling cold items, so cold start is definitely a relevant category.
+
+Looking at the abstract: The article discusses how CF uses user preferences while CB uses item profiles, and this model bridges both. It&#39;s described as a deep neural multiview model, which points to specific algorithm types like neural networks and multiview approaches. Since it&#39;s designed for Microsoft Store services handling a billion users, real-world application is important here.
+
+The paper demonstrates the model on movies and apps recommendations, so those are specific domains. They mention that CB2CF outperforms an alternative CB model on completely cold items, reinforcing the cold start aspect. Also, since it&#39;s used in a large-scale service, scalability is likely a factor, though the abstract doesn&#39;t explicitly say so.
+
+Now, thinking about categories:
+
+1. **Content-Based Filtering (CB)** - The paper combines CB with CF.
+2. **Collaborative Filtering (CF)** - It&#39;s also using CF techniques.
+3. **Cold Start** - Focuses on completely cold items.
+4. **Neural Networks** - Uses deep neural models.
+5. **Multiview Approaches** - Multiview content-to-collaborative filtering model.
+6. **Recommender Systems** - The main area of study.
+7. **Real-World Applications** - Applied in Microsoft Store services.
+8. **Scalability** - Handles a billion users, implying scalability considerations.
+9. **Movies Recommendations** - Demonstrated on movies.
+10. **Apps Recommendations** - Also demonstrated on apps.
+
+Wait, the guidelines suggest assigning 8-12 categories, so I should make sure to pick enough. Let me see if there are more aspects. The model is a hybrid approach combining CB and CF, so maybe &#34;Hybrid Models&#34; could be another category. Additionally, since it&#39;s a neural model that bridges content into CF, perhaps &#34;Neural Collaborative Filtering&#34; is relevant.
+
+Also, considering the aspect of evaluation beyond accuracy—does the paper discuss anything beyond just performance metrics? The abstract says it outperforms on cold items but doesn&#39;t mention other aspects like diversity or personalization. So maybe not necessary to include that unless specified.
+
+I should also think about whether there are any specific algorithms mentioned. Matrix Factorization isn&#39;t explicitly mentioned, so perhaps not applicable here.
+
+So compiling the categories:
+
+- Content-Based Filtering
+- Collaborative Filtering
+- Cold Start
+- Neural Networks
+- Multiview Approaches
+- Recommender Systems
+- Real-World Applications
+- Scalability
+- Movies Recommendations
+- Apps Recommendations
+
+Wait, that&#39;s 10. Maybe adding Hybrid Models as another category since it combines CB and CF. So:
+
+- Content-Based Filtering
+- Collaborative Filtering
+- Cold Start
+- Neural Networks
+- Multiview Approaches
+- Recommender Systems
+- Real-World Applications
+- Scalability
+- Movies Recommendations
+- Apps Recommendations
+- Hybrid Models
+
+That makes 11 categories, which fits within the 8-12 range. I think that covers all the relevant aspects from the title and abstract.
+&lt;/think&gt;
+
+Content-Based Filtering, Collaborative Filtering, Cold Start, Neural Networks, Multiview Approaches, Recommender Systems, Real-World Applications, Scalability, Movies Recommendations, Apps Recommendations, Hybrid Models</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: CB2CF: A Neural Multiview Content-to-Collaborative Filtering Model for Completely Cold Item Recommendations
+Abstract:
+In Recommender Systems research, algorithms are often characterized as either Collaborative Filtering (CF) or Content Based (CB). CF algorithms are trained using a dataset of user preferences while CB algorithms are typically based on item profiles. These approaches harness different data sources and therefore the resulting recommended items are generally very different. This paper presents the CB2CF, a deep neural multiview model that serves as a bridge from items content into their CF representations. CB2CF is a ‘real-world’ algorithm designed for Microsoft Store services that handle around a billion users worldwide. CB2CF is demonstrated on movies and apps recommendations, where it is shown to outperform an alternative CB model on completely cold items.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article titled &#34;CB2CF: A Neural Multiview Content-to-Collaborative Filtering Model for Completely Cold Item Recommendations.&#34; Let&#39;s start by reading the abstract carefully.
+
+The article talks about Recommender Systems and introduces a new model called CB2CF. It bridges Content-Based (CB) and Collaborative Filtering (CF) methods. The model is a deep neural multiview approach, which means it probably uses multiple data sources or perspectives.
+
+Looking at the problem domain, they mention Microsoft Store services handling around a billion users. So the domain here is likely e-commerce or retail, specifically related to apps and movies recommendations since those are examples given.
+
+The key themes involve combining content-based and collaborative filtering techniques. The model seems focused on cold start problems, especially for items that have no prior user interactions, which is called completely cold items in the abstract.
+
+In terms of algorithms, it&#39;s a neural network approach, so deep learning is involved. It&#39;s also mentioned to be applied in a real-world setting, which implies it has practical applications beyond just research.
+
+I should consider the example categories provided: family of algorithm (like Matrix Factorization or Encoder), domain of the problem (Books, Movies, Healthcare), specific aspects like Cold Start, evaluation metrics, and real-world applications.
+
+So breaking this down:
+
+1. **Family of Algorithm**: It&#39;s a Collaborative Filtering model but with Content-Based elements. So maybe &#34;Collaborative Filtering&#34; and &#34;Content Based Filtering.&#34;
+
+2. **Domain**: They used Microsoft Store, which is an e-commerce platform, specifically apps and movies. So categories like &#34;E-Commerce,&#34; &#34;Movies,&#34; and &#34;Apps.&#34;
+
+3. **Specific Aspect**: The paper focuses on completely cold items, so &#34;Cold Start&#34; is definitely a category.
+
+4. **Algorithm Type**: Since it&#39;s a neural multiview model, terms like &#34;Neural Networks&#34; or &#34;Deep Learning&#34; would fit here.
+
+5. **Real-World Application**: They mention Microsoft Store and real-world use, so &#34;Real World Applications.&#34;
+
+6. **Evaluation Aspect**: The abstract says it outperforms another CB model, but specific evaluation aspects aren&#39;t detailed, but maybe &#34;Scalability&#34; since handling a billion users is mentioned.
+
+7. **Other Relevant Categories**: Since the model bridges CB and CF, &#34;Hybrid Models&#34; would be appropriate.
+
+I need to ensure each article goes into 8-12 categories. Let me list out the possible ones:
+
+- Collaborative Filtering
+- Content-Based Filtering
+- Cold Start
+- Neural Networks
+- Deep Learning
+- E-Commerce
+- Movies
+- Apps
+- Real World Applications
+- Scalability
+- Hybrid Models
+
+That&#39;s 11 categories, which fits within the target range. I should make sure these are clear and relevant.
+&lt;/think&gt;
+
+Collaborative Filtering, Content-Based Filtering, Cold Start, Neural Networks, Deep Learning, E-Commerce, Movies, Apps, Real World Applications, Scalability, Hybrid Models</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

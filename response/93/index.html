@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Dynamic Poisson Factorization
+Abstract:
+Models for recommender systems use latent factors to explain the preferences and behaviors of users with respect to a set of items (e.g., movies, books, academic papers). Typically, the latent factors are assumed to be static and, given these factors, the observed preferences and behaviors of users are assumed to be generated without order. These assumptions limit the explorative and predictive capabilities of such models, since users’ interests and item popularity may evolve over time. To address this, we propose dPF, a dynamic matrix factorization model based on the recent Poisson factorization model for recommendations. dPF models the time evolving latent factors with a Kalman filter and the actions with Poisson distributions. We derive a scalable variational inference algorithm to infer the latent factors. Finally, we demonstrate dPF on 10 years of user click data from arXiv.org, one of the largest repository of scientific papers and a formidable source of information about the behavior of scientists. Empirically we show performance improvement over both static and, more recently proposed, dynamic recommendation models. We also provide a thorough exploration of the inferred posteriors over the latent variables.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Dynamic Poisson Factorization&#34; into multiple relevant categories based on its content. Let&#39;s start by reading through the abstract carefully.
+
+The article discusses models for recommender systems that use latent factors to explain user preferences and behaviors regarding items like movies, books, or academic papers. It mentions that these models typically assume static latent factors and that the observed data is generated without order, which limits their capabilities because users&#39; interests and item popularity can change over time.
+
+To address this limitation, the authors propose dPF, a dynamic matrix factorization model based on Poisson factorization. They use a Kalman filter to model evolving latent factors and Poisson distributions for user actions. They also developed a scalable variational inference algorithm for this model and tested it on 10 years of arXiv click data, showing improvements over static and other dynamic models.
+
+Now, I&#39;ll break down the key elements:
+
+1. **Recommender Systems**: The main focus is on improving recommendation algorithms.
+2. **Dynamic Models**: Unlike static approaches, dPF accounts for changes over time.
+3. **Matrix Factorization**: A core technique used in many recommendation systems.
+4. **Poisson Factorization**: A specific type of factorization model mentioned.
+5. **Latent Factors**: The underlying variables that explain user preferences.
+6. **Time Evolution**: The model considers how these factors change over time.
+7. **Kalman Filter**: Used to model the dynamic aspects of latent factors.
+8. **Variational Inference**: The method used for scalable algorithm development.
+9. **Real-World Application**: Tested on arXiv data, which is a real-world dataset.
+10. **Evaluation and Comparison**: Showcases performance improvements over existing models.
+
+Based on these elements, I can map them to the provided category examples:
+
+- **Family of Algorithm**: Matrix Factorization (from Poisson Factorization) and Dynamic Models are both algorithm families.
+- **Domain of Problem**: Academic Papers since it&#39;s applied to arXiv data.
+- **Recommendation Space Specifics**: Time Evolution is a specific aspect here, as well as Real World Applications because they used real data.
+- **Evaluation Aspects**: They compared against existing models and showed improvements, so Evaluation could be another category.
+
+I also think about scalability since the algorithm was designed to handle 10 years of data, which suggests it&#39;s scalable. Additionally, aspects like User Behavior are involved as they&#39;re modeling user clicks over time. The model is dynamic, so that ties into Dynamic Models, and they used a Kalman Filter, which is a specific technique.
+
+Putting this all together, the categories should cover both the algorithmic approach (Matrix Factorization, Poisson Factorization, Dynamic Models), the problem domain (Academic Papers, User Behavior), aspects of recommendation like time evolution and real applications, evaluation methods, and any techniques used like Kalman Filter or Variational Inference.
+
+I need to ensure each category is relevant and that there are enough categories without overlapping too much. Let me list them out:
+
+1. Matrix Factorization
+2. Dynamic Models
+3. Poisson Factorization
+4. Academic Papers (domain)
+5. Time Evolution
+6. User Behavior
+7. Real World Applications (as they used arXiv data)
+8. Scalability (since it&#39;s scalable over 10 years of data)
+9. Evaluation (they compared against other models)
+10. Kalman Filter (used in the model)
+11. Variational Inference (algorithm used)
+
+I think these capture all the key aspects without redundancy and ensure the article is discoverable under multiple relevant categories.
+&lt;/think&gt;
+
+Matrix Factorization, Dynamic Models, Poisson Factorization, Academic Papers, Time Evolution, User Behavior, Real World Applications, Scalability, Evaluation, Kalman Filter, Variational Inference</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

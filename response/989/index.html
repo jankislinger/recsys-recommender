@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: AdaptEx: a self-service contextual bandit platform
+Abstract:
+This paper presents AdaptEx, a self-service contextual bandit platform widely used at Expedia Group, that leverages multi-armed bandit algorithms to personalize user experiences at scale. AdaptEx considers the unique context of each visitor to select the optimal variants and learns quickly from every interaction they make. It offers a powerful solution to improve user experiences while minimizing the costs and time associated with traditional testing methods. The platform unlocks the ability to iterate towards optimal product solutions quickly, even in ever-changing content and continuous “cold start” situations gracefully.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article about AdaptEx, which is a self-service contextual bandit platform used at Expedia Group. Let me break down the title and abstract to figure out the best categories.
+
+First, the title mentions &#34;contextual bandit platform&#34; and it&#39;s called AdaptEx. So that tells me one of the main categories should be Multi-Armed Bandits because that&#39;s a core algorithm family involved here.
+
+Looking at the abstract, they talk about personalizing user experiences using multi-armed bandit algorithms. Personalization is a key aspect in recommendation systems, so I&#39;ll include Personalization there.
+
+They also mention it&#39;s used for real-world applications since it&#39;s deployed at Expedia Group. So Real-World Applications makes sense as another category.
+
+The platform helps improve user experiences by iterating towards optimal solutions quickly, which relates to User Experience Optimization. That should be a category too.
+
+They talk about minimizing costs and time associated with traditional testing methods, so Experimentation is definitely relevant here because it&#39;s about testing different approaches efficiently.
+
+AdaptEx handles ever-changing content and cold start situations gracefully. Cold Start is a specific challenge in recommendation systems where there isn&#39;t enough data on new users or items, so that&#39;s another category to include.
+
+The platform offers solutions for optimizing product experiences quickly, which ties into Product Optimization as a broad area.
+
+Scalability is mentioned because the system works at scale, handling many users and interactions efficiently. So Scalability should be part of the categories.
+
+They mention leveraging multi-armed bandit algorithms, so again reinforcing Multi-Armed Bandits as a key category.
+
+The paper discusses the platform&#39;s ability to learn quickly from every interaction, which is about Rapid Learning in dynamic environments.
+
+Personalization is repeated because it&#39;s central to their solution. So I&#39;ll include that as well.
+
+Looking at other possible categories, since they mention continuous cold start situations, Cold Start is already covered. The domain here isn&#39;t explicitly stated beyond Expedia Group, but maybe Travel Industry? But the example didn&#39;t specify a domain unless it&#39;s about recommendations in travel, which isn&#39;t clear enough from the abstract. So perhaps better to stick with general categories.
+
+The platform improves user experiences while minimizing costs and time, so User-Centric Design is another angle. It aligns with making the interface intuitive for users, though that might be more about the design aspect of the platform rather than the research content itself. But since the goal is to create a navigable interface for users exploring articles, maybe User-Centric Design is a good fit here.
+
+Also, it&#39;s a self-service platform, which implies ease of use and accessibility for non-technical users, so Self-Service Platforms could be another category, but that wasn&#39;t in the examples. Alternatively, since they mention A/B testing as a traditional method, perhaps there&#39;s an aspect related to that, but the abstract doesn&#39;t explicitly talk about A/B tests or user surveys beyond testing methods.
+
+Given all these points, I should pick at least 8-12 categories from the possible ones listed. Let me list them out:
+
+1. Multi-Armed Bandits - definitely relevant as it&#39;s a core part of the platform.
+2. Personalization - central to their application.
+3. Real-World Applications - since it&#39;s deployed in an actual company.
+4. User Experience Optimization - improving user experience is a key outcome.
+5. Experimentation - related to testing and iterating solutions.
+6. Cold Start - handling new situations where data is scarce.
+7. Product Optimization - the goal of finding optimal product solutions.
+8. Scalability - working efficiently at scale.
+9. Rapid Learning - quickly learning from interactions.
+10. User-Centric Design - ensuring the platform is user-friendly.
+
+Wait, I have 10 categories here, which fits the 8-12 guideline. Let me check if there are any others that might fit but aren&#39;t mentioned yet. The platform is self-service, so maybe Self-Service Platforms or Automation, but those weren&#39;t in the examples provided, and the user wants to stick with relevant categories as per their guidelines.
+
+Also, the aspect of evaluation could be considered. They mention improving user experiences and minimizing costs, which relates to Evaluation Metrics. So perhaps adding Evaluation Metrics as another category because it&#39;s about how they measure success.
+
+Wait, but I already have 10 categories; maybe that&#39;s sufficient. Alternatively, if I can find more relevant ones:
+
+- Contextual Bandits: Since the platform is contextual, this should be a separate category from Multi-Armed Bandits. So adding Contextual Bandits makes sense because it&#39;s a specific type of bandit algorithm.
+
+Now I have 11 categories:
+1. Multi-Armed Bandits
+2. Personalization
+3. Real-World Applications
+4. User Experience Optimization
+5. Experimentation
+6. Cold Start
+7. Product Optimization
+8. Scalability
+9. Rapid Learning
+10. User-Centric Design
+11. Contextual Bandits
+
+That&#39;s 11, which is within the required range. I think that covers all aspects of the article: the algorithms used (Multi-Armed and Contextual), its application in real-world settings for personalization and product optimization, handling challenges like cold start, scalability, rapid learning, and user experience design.
+
+I should make sure each category accurately reflects the content. For example, User Experience Optimization is specific to improving how users interact with the platform or its recommendations. Experimentation ties into their approach of testing different variants efficiently.
+
+So finalizing these categories, I believe they cover all necessary aspects without overcomplicating it.
+&lt;/think&gt;
+
+Multi-Armed Bandits, Personalization, Real-World Applications, User Experience Optimization, Experimentation, Cold Start, Product Optimization, Scalability, Rapid Learning, Contextual Bandits</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: AdaptEx: a self-service contextual bandit platform
+Abstract:
+This paper presents AdaptEx, a self-service contextual bandit platform widely used at Expedia Group, that leverages multi-armed bandit algorithms to personalize user experiences at scale. AdaptEx considers the unique context of each visitor to select the optimal variants and learns quickly from every interaction they make. It offers a powerful solution to improve user experiences while minimizing the costs and time associated with traditional testing methods. The platform unlocks the ability to iterate towards optimal product solutions quickly, even in ever-changing content and continuous “cold start” situations gracefully.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this article titled &#34;AdaptEx: a self-service contextual bandit platform.&#34; Let&#39;s look at the abstract.
+
+The paper talks about AdaptEx, which is a platform using multi-armed bandit algorithms. So that&#39;s definitely related to Multi-Armed Bandits as one category.
+
+It&#39;s used for personalizing user experiences at scale, so Scalability seems relevant too.
+
+The platform operates in ever-changing environments and handles &#34;cold start&#34; situations, so Cold Start should be another category.
+
+Expedia Group uses it, which falls under Industry (Travel/Hospitality), so that&#39;s a good one to include.
+
+It&#39;s mentioned as being widely used, indicating practical application, so Real-World Applications is appropriate.
+
+The focus on user experience optimization ties into User Experience, making that another category.
+
+The platform minimizes costs and time associated with traditional testing, which relates to Efficiency.
+
+Lastly, the use of machine learning for dynamic decisions points towards Machine Learning.
+
+I think these cover both specific algorithm types, application areas, challenges addressed, and real-world deployment.
+&lt;/think&gt;
+
+Multi-Armed Bandits, Scalability, Cold Start, Industry (Travel/Hospitality), Real-World Applications, User Experience, Efficiency, Machine Learning</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

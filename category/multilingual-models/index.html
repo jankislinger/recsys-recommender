@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Learning to Match Job Candidates Using Multilingual Bi-Encoder BERT (2021)</h3>
+    <p><strong>Authors:</strong> Dor Lavi</p>
+    <p>Randstad is the global leader in the HR services industry. We support people and organizations in realizing their true potential by combining the power of today’s technology with our passion for people. In 2020, we helped more than two million candidates find a meaningful job with our 236,100 clients. Randstad is active in 38 markets around the world and has top-three positions in almost half of these. In 2020, Randstad had on average 34,680 corporate employees and generated revenue of € 20.7 billion. Each day, at Randstad, we employ industry-scale recommender systems to recommend thousands of candidates to our clients, and the other way around; vacancies to job seekers. Our “Talent Recommender” recommender system is based on a heterogeneous collection of input data: CVs, vacancy texts (job descriptions) and structured data (e.g., the location of a candidate or vacancy). The goal of the system is to recommend the best candidates (talents) to each open vacancy. CVs are user-generated PDF files. It goes without saying that parsing those files to plain text can be a challenge in itself and therefore out of scope for this talk. On the other hand, vacancies are usually structured formatted text. We should be aware that due to the difference in structure and preprocessing steps, that the input to the subsequent steps is inevitably noisy. Most NLP research in text similarity is based on the assumption that 2 pieces of information are the same but written differently [1]. Like two artists that paint the same landscape, but each with its own style. However, in our case the 2 documents complement one another like pieces in a puzzle, together they create the bigger picture, rather than 2 similar paintings. Some of our biggest challenges with the “Talent Recommender” stem from dealing with the diverse nature of our textual sources of data: vacancies and CVs. While both capture similar information, they are inherently different in many ways. First, the information in CVs and vacancies are similar, but there exists a vocabulary gap, where grammar and context differ. For example, where “I have 10 years of experience as an instructor” in a CV shares no word overlap with “We are looking for a talented tutor” in a vacancy, both cases express similar information regarding “experience in the field of education,” we need to overcome the synonyms gap “instructor” and “tutor.” In addition, the sentence structure is completely different, CVs are typically written in “storytelling mode” “I have. . . ,” while the vacancy is in “exploration mode” “we are looking. . . ” The second challenge is multilinguality. Since we are a multinational company that operates all across the globe, developing a model per language is not scalable in our case. We ultimately would like one maintainable model that supports as many languages as possible. Our last challenge is cross language similarity [ 4]. In some of the countries we operate, there is a high percentage of job seekers that are not native to that country. For example, many of the job descriptions in the Netherlands are in Dutch, however around 10% of the CVs are in English. Classic text models, like TF-IDF and Word2vec, capture information within one language, but hardly connect between languages. Simply put, even if trained on multiple languages each language will have its own cluster in space. So “logistics” in English and “logistiek” in Dutch are embedded in a completely different point in space, even though the meaning is the same. Furthermore, we know that the language of CV correlates with nationality and therefore can be a proxy discriminator. Due to the impact of these systems and the risks of unintended algorithmic bias and discrimination, HR is marked as a high risk domain in the recently published EC Artificial Intelligence Act [2]. To avoid discriminating against nationality we would like to recommend a candidate to the vacancy no matter which language the CV is written in. That is of course only if language is not a requirement for that vacancy. In this talk, we will show how we used our internal history of candidate placements to generate labeled CV-vacancy pairs dataset. Afterwards we fine-tune a multilingual BERT with bi encoder structure [3] over this dataset, by adding a cosine similarity log loss layer. We will explain how using the mentioned structure helps us overcome most of the challenges described above, and how it enables us to build a maintainable and scalable pipeline to match CVs and vacancies. In addition, we show how we gain a better semantic understanding, and learn to bridge the vocabulary gap. Finally, we highlight how multilingual transformers help us handle cross language barrier and might reduce discrimination.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Natural Language Processing (NLP), Machine Learning, Multilingual Models, Text Similarity, HR/Recruitment, Algorithmic Fairness, Bias Mitigation, Transformers/BERT, Information Retrieval, Cross-Language Learning, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/733/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

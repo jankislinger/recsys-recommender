@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: It Takes Two to Tango: an Exploration of Domain Pairs for Cross-Domain Collaborative Filtering
+Abstract:
+As the heterogeneity of data sources are increasing on the web, and due to the sparsity of data in each of these data sources, cross-domain recommendation is becoming an emerging research topic in the recent years. Cross-domain collaborative filtering aims to transfer the user rating pattern from source (auxiliary) domains to a target domain for the purpose of alleviating the sparsity problem and providing better target recommendations. However, the studies so far have either focused on a limited number of domains that are assumed to be related to each other (such as books and movies), or a division of the same dataset (such as movies) into different domains based on an item characteristic (such as genre). In this paper, we study a broad set of domains and their characteristics to understand the factors that affect the success or failure of cross-domain collaborative filtering, the amount of improvement in cross-domain approaches, and the selection of best source domains for a specific target domain. We propose to use Canonical Correlation Analysis (CCA) as a significant major factor in finding the most promising source domains for a target domain, and suggest a cross-domain collaborative filtering based on CCA (CD-CCA) that proves to be successful in using the shared information between domains in the target recommendations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to figure out how to categorize this research article. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;It Takes Two to Tango: an Exploration of Domain Pairs for Cross-Domain Collaborative Filtering.&#34; Okay, so it&#39;s about cross-domain collaborative filtering, which I know is a technique used in recommendation systems where data from different domains is combined to improve recommendations. The phrase &#34;domain pairs&#34; suggests they&#39;re looking at how different domains interact or are paired together.
+
+Now the abstract: It mentions that cross-domain recommendation is becoming important because of increasing data source heterogeneity and sparsity. They aim to transfer user rating patterns from a source domain to a target domain to help with sparse data issues. Previous studies have focused on either limited related domains like books and movies or split datasets by characteristics like genres.
+
+This paper, however, looks at a broad set of domains and their characteristics to understand what makes cross-domain CF successful or not. They propose using Canonical Correlation Analysis (CCA) as a key factor in selecting the best source domains for a target domain and introduce CD-CCA which uses shared info between domains effectively.
+
+Alright, so I need to assign categories based on this information. Let&#39;s go through each point.
+
+First, the family of algorithms mentioned is Collaborative Filtering since that&#39;s central here. They also use Canonical Correlation Analysis (CCA), so that should be another category. The paper introduces a new method called CD-CCA, which could fall under Novel Methods or maybe as a specific technique in itself.
+
+Looking at domains, it&#39;s about cross-domain applications, so Cross-Domain Recommendations is definitely a category. Since they explore multiple domain pairs beyond just books and movies, Domains (as a general category) makes sense too.
+
+The paper addresses the sparsity problem in data sources, which is a common challenge, so Sparsity Handling should be included. They also discuss the transfer of user rating patterns, which relates to Transfer Learning in recommendations.
+
+Evaluating different domains and their characteristics brings in Evaluation Metrics as they assess what factors affect success or failure. The practical aspect of selecting source domains makes Real-World Applications relevant since it&#39;s about applying this method in actual scenarios.
+
+Improvement over existing methods is discussed, so Performance Improvement could be a category. They also look into understanding the relationships between domains, which might relate to Interdisciplinary Studies if they&#39;re combining different fields or data types.
+
+Lastly, their approach seems to enhance scalability by handling multiple domains effectively, hence Scalability.
+
+Wait, let me make sure I&#39;m not missing anything. The key themes are cross-domain CF, CCA usage, domain pairing, sparsity issues, transfer learning, evaluation metrics, real-world applications, performance improvement, and scalability. I think that covers the main points without being too narrow or too broad.
+&lt;/think&gt;
+
+Collaborative Filtering, Canonical Correlation Analysis (CCA), Cross-Domain Recommendations, Domains, Sparsity Handling, Transfer Learning, Evaluation Metrics, Real-World Applications, Performance Improvement, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: It Takes Two to Tango: an Exploration of Domain Pairs for Cross-Domain Collaborative Filtering
+Abstract:
+As the heterogeneity of data sources are increasing on the web, and due to the sparsity of data in each of these data sources, cross-domain recommendation is becoming an emerging research topic in the recent years. Cross-domain collaborative filtering aims to transfer the user rating pattern from source (auxiliary) domains to a target domain for the purpose of alleviating the sparsity problem and providing better target recommendations. However, the studies so far have either focused on a limited number of domains that are assumed to be related to each other (such as books and movies), or a division of the same dataset (such as movies) into different domains based on an item characteristic (such as genre). In this paper, we study a broad set of domains and their characteristics to understand the factors that affect the success or failure of cross-domain collaborative filtering, the amount of improvement in cross-domain approaches, and the selection of best source domains for a specific target domain. We propose to use Canonical Correlation Analysis (CCA) as a significant major factor in finding the most promising source domains for a target domain, and suggest a cross-domain collaborative filtering based on CCA (CD-CCA) that proves to be successful in using the shared information between domains in the target recommendations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about cross-domain collaborative filtering. The title mentions &#34;Domain Pairs&#34; and &#34;Cross-Domain Collaborative Filtering,&#34; so that&#39;s a key point. The abstract talks about increasing data sources on the web and using multiple domains to overcome sparsity issues.
+
+First, I need to identify the main themes. It seems focused on recommendation systems, specifically cross-domain approaches. They mention using Canonical Correlation Analysis (CCA) as a method, which is part of machine learning. So categories like &#34;Recommendation Systems&#34; and &#34;Cross-Domain Collaborative Filtering&#34; are definitely relevant.
+
+The article also discusses data sparsity, so that&#39;s another category to include. It involves multiple domains, so &#34;Domain Pairs&#34; makes sense. They use CCA as a family of algorithms, so &#34;Canonical Correlation Analysis (CCA)&#34; should be included. The research is about improving recommendation quality by transferring user patterns from one domain to another, which ties into &#34;Collaborative Filtering.&#34;
+
+Additionally, the study evaluates how different domains affect cross-domain recommendations, so aspects like &#34;Cross-Domain Recommendation&#34; and &#34;Data Heterogeneity&#34; are important. They might also touch on data analysis techniques, hence &#34;Data Analysis.&#34; 
+
+Putting it all together, I&#39;ll list these categories to ensure each article is discoverable through multiple angles relevant to users interested in recommendation systems, collaborative filtering, and cross-domain methods.
+&lt;/think&gt;
+
+Recommendation Systems, Cross-Domain Collaborative Filtering, Data Sparsity, Domain Pairs, Canonical Correlation Analysis (CCA), Collaborative Filtering, Cross-Domain Recommendation, Data Heterogeneity, Algorithm Family, Data Analysis</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Debiasing Item-to-Item Recommendations With Small Annotated Datasets
+Abstract:
+Item-to-item recommendation (e.g., “People who like this also like...”) is a ubiquitous and important type of recommendation in real-world systems. Observational data from historical interaction logs abound in these settings. However, since virtually all observational data exhibit biases, such as time-in-inventory or interface biases, it is crucial that recommender algorithms account for these biases. In this paper, we develop a principled approach for item-to-item recommendation based on causal inference and present a practical and highly effective method for estimating the causal parameters from a small annotated dataset. Empirically, we find that our approach substantially improves upon existing methods while requiring only small amounts of annotated data.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to make sure users can easily navigate and discover the content through a user-friendly interface. Let me go through the thought process step by step.
+
+First, I&#39;ll look at the title: &#34;Debiasing Item-Item Recommendations With Small Annotated Datasets.&#34; Hmm, that immediately tells me it&#39;s about recommendation systems, specifically item-to-item recommendations. So &#34;Recommendation Systems&#34; is definitely a primary category.
+
+The abstract mentions using causal inference to address biases in recommendation data. That makes me think of categories related to bias and fairness. So I&#39;ll add &#34;Bias Mitigation&#34; and &#34;Fairness.&#34; 
+
+They talk about estimating causal parameters with small annotated datasets, which sounds like they&#39;re focusing on efficient methods that don&#39;t require massive amounts of data. Maybe something like &#34;Data Efficiency&#34; or &#34;Small Datasets.&#34;
+
+The problem is in the domain of recommendation systems, so I should include more specific categories within that space. &#34;Item-to-Item Recommendations&#34; is a direct fit from the title.
+
+They mention using observational data and dealing with biases such as time-in-inventory or interface biases. This makes me think about evaluation aspects beyond just accuracy. So I&#39;ll add &#34;Beyond Accuracy&#34; as an evaluation aspect.
+
+Since they&#39;re talking about causal inference, that&#39;s another key area here. &#34;Causal Inference&#34; should definitely be included.
+
+They developed a method and tested it empirically, so &#34;Empirical Evaluation&#34; is appropriate. Also, their approach requires only small amounts of annotated data, which speaks to practicality in real-world applications, so &#34;Practical Applications&#34; makes sense.
+
+Looking at the broader context, they&#39;re dealing with biases in recommendation systems, which relates to ethical considerations and robustness. So adding categories like &#34;Ethics,&#34; &#34;Robustness,&#34; &#34;Small Datasets,&#34; and &#34;Evaluation Methods&#34; would cover these aspects.
+
+I should also consider if there are any specific algorithms or families mentioned. The title doesn&#39;t specify a particular algorithm family, so maybe sticking with broader categories is better here.
+
+Putting it all together, the categories I&#39;ve identified are: Recommendation Systems, Bias Mitigation, Fairness, Item-to-Item Recommendations, Causal Inference, Beyond Accuracy, Empirical Evaluation, Practical Applications, Ethics, Robustness, Small Datasets, and Evaluation Methods. That&#39;s 12 categories, which fits the guideline of assigning at least 8-12.
+
+I think this covers both the specific areas addressed in the paper as well as broader themes that users might be interested in. It should help users find the article when exploring topics related to recommendation fairness, bias mitigation, and efficient data usage.
+&lt;/think&gt;
+
+Recommendation Systems, Bias Mitigation, Fairness, Item-to-Item Recommendations, Causal Inference, Beyond Accuracy, Empirical Evaluation, Practical Applications, Ethics, Robustness, Small Datasets, Evaluation Methods</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Debiasing Item-to-Item Recommendations With Small Annotated Datasets
+Abstract:
+Item-to-item recommendation (e.g., “People who like this also like...”) is a ubiquitous and important type of recommendation in real-world systems. Observational data from historical interaction logs abound in these settings. However, since virtually all observational data exhibit biases, such as time-in-inventory or interface biases, it is crucial that recommender algorithms account for these biases. In this paper, we develop a principled approach for item-to-item recommendation based on causal inference and present a practical and highly effective method for estimating the causal parameters from a small annotated dataset. Empirically, we find that our approach substantially improves upon existing methods while requiring only small amounts of annotated data.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m looking at this article titled &#34;Debiasing Item-to-Item Recommendations With Small Annotated Datasets.&#34; The abstract mentions that item-to-item recommendations are common in real-world systems and that there&#39;s a need to address biases present in observational data. They talk about using causal inference and developing a method to estimate causal parameters from small annotated datasets, which seems effective.
+
+First, the core theme is about debiasing recommendation systems, specifically item-to-item. So categories related to bias, fairness, or debiasing in recommendations come to mind. That&#39;s one category: &#34;Debiasing.&#34;
+
+Next, the paper uses causal inference as part of their approach. So that&#39;s another key area: &#34;Causal Inference.&#34;
+
+The focus is on item-to-item recommendations, which is a specific family of recommendation algorithms, so that&#39;s &#34;Item-to-Item Recommendations.&#34;
+
+They mention using small annotated datasets, which relates to data challenges in recommendation systems, especially when data is limited. This points to &#34;Small Datasets&#34; as a category.
+
+Real-world applications are discussed since the method is tested empirically, showing improvements. So &#34;Real-World Applications&#34; would be relevant here.
+
+Additionally, evaluation aspects might come into play, but the abstract doesn&#39;t specify metrics beyond effectiveness. However, given the focus on causal parameters and real-world testing, perhaps &#34;Evaluation Methods&#34; could be a stretch, but maybe not necessary unless explicitly mentioned.
+
+Looking at other examples like scalability, it&#39;s not directly addressed here, so probably not applicable. Domain-wise, they don&#39;t specify a particular domain like books or movies, just general recommendations, so no need for that category.
+
+Considering aspects of recommendation beyond accuracy isn&#39;t explicitly highlighted, though debiasing does touch on fairness which is an aspect beyond pure accuracy.
+
+So the main categories would be &#34;Debiasing,&#34; &#34;Causal Inference,&#34; &#34;Item-to-Item Recommendations,&#34; and &#34;Small Datasets.&#34; Maybe adding &#34;Real-World Applications&#34; as well if we consider empirical results as part of real-world use.
+&lt;/think&gt;
+
+Debiasing, Causal Inference, Item-to-Item Recommendations, Small Datasets, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

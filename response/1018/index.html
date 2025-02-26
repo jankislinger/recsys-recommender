@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Multimodal Single-Branch Embedding Network for Recommendation in Cold-Start and Missing Modality Scenarios
+Abstract:
+Most recommender systems adopt collaborative filtering (CF) and provide recommendations based on past collective interactions. Therefore, the performance of CF algorithms degrades when few or no interactions are available, a scenario referred to as cold-start. To address this issue, previous work relies on models leveraging both collaborative data and side information on the users or items. Similar to multimodal learning, these models aim at combining collaborative and content representations in a shared embedding space. In this work we propose a novel technique for multimodal recommendation, relying on a multimodal Single-Branch embedding network for Recommendation (SiBraR). Leveraging weight-sharing, SiBraR encodes interaction data as well as multimodal side information using the same single-branch embedding network on different modalities. This makes SiBraR effective in scenarios of missing modality, including cold start. Our extensive experiments on large-scale recommendation datasets from three different recommendation domains (music, movie, and e-commerce) and providing multimodal content information (audio, text, image, labels, and interactions) show that SiBraR significantly outperforms CF as well as state-of-the-art content-based RSs in cold-start scenarios, and is competitive in warm scenarios. We show that SiBraR’s recommendations are accurate in missing modality scenarios, and that the model is able to map different modalities to the same region of the shared embedding space, hence reducing the modality gap.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article based on its title and abstract. Let me start by reading through them carefully.
+
+The title mentions a &#34;Multimodal Single-Branch Embedding Network for Recommendation in Cold-Start and Missing Modality Scenarios.&#34; So, key terms here are multimodal, recommendation, cold-start, missing modality. 
+
+Looking at the abstract, it discusses collaborative filtering (CF) and how its performance degrades in cold-start scenarios when there&#39;s little interaction data. The article proposes a new technique called SiBraR that uses a single-branch embedding network to handle both interactions and multimodal side information. It mentions experiments across music, movies, and e-commerce domains with various modalities like audio, text, images, labels, and interactions.
+
+So the main themes are:
+1. Recommender systems
+2. Multimodal learning
+3. Cold start problem
+4. Missing modality scenarios
+5. Single-branch embedding network (which could fall under specific algorithms or techniques)
+6. Evaluation in different domains like music, movies, e-commerce
+7. Combining collaborative data and content representations
+8. Performance improvements over existing methods
+
+I should assign categories that reflect these aspects. Let me think about the appropriate categories from the examples provided.
+
+- **Recommender Systems**: The core topic.
+- **Multimodal Learning**: Since it&#39;s a key aspect of their approach.
+- **Cold Start**: Directly addressed in the title and abstract.
+- **Missing Modality**: Another specific problem they tackle.
+- **Algorithm Family (Single-Branch Embedding Network)**: Though not explicitly named, this is a novel technique introduced.
+- **Collaborative Filtering**: Mentioned as the basis for many recommenders.
+- **Content-Based Recommendations**: They combine collaborative data with content info.
+- **Evaluation Across Domains**: They tested in music, movies, e-commerce. So maybe &#34;Music,&#34; &#34;Movies,&#34; &#34;E-commerce&#34; as separate categories?
+- **Scalability and Performance**: They mention large-scale datasets and competitive performance.
+
+Wait, but I should check the guidelines: each article should be assigned 8-12 categories. Let me list out potential ones:
+
+1. Recommender Systems
+2. Multimodal Learning
+3. Cold Start
+4. Missing Modality
+5. Single-Branch Embedding Network (or maybe under Family of Algorithm)
+6. Collaborative Filtering
+7. Content-Based Recommendations
+8. Evaluation Across Domains (but perhaps more specific like &#34;Music,&#34; &#34;Movies,&#34; &#34;E-commerce&#34;)
+9. Large-Scale Datasets
+10. Performance Improvement
+11. Modality Gap Reduction
+
+Hmm, but maybe some categories can be grouped or named differently for clarity and utility.
+
+Alternatively, considering the examples provided earlier:
+
+- Family of algorithm: Matrix Factorization isn&#39;t mentioned, but they have a specific network. Maybe &#34;Embedding Networks&#34; could be a category?
+- Domains: Music, Movies, E-commerce
+- Specific recommendation aspects: Cold Start, Missing Modality
+- Evaluation Aspects: Performance in different scenarios (cold start vs warm)
+- Techniques used: Multimodal Learning, Collaborative Filtering
+
+Also, the aspect of &#34;Real World Applications&#34; isn&#39;t explicitly mentioned since they tested on datasets but didn&#39;t deploy it. So maybe not that category.
+
+Putting this together, I should aim for 8-12 clear categories. Let me list them:
+
+Recommender Systems (core), Multimodal Learning (their approach), Cold Start (problem addressed), Missing Modality (another problem), Embedding Networks (algorithm family), Collaborative Filtering (used as a basis), Content-Based Recommendations (since they use side info), Music, Movies, E-commerce (domains tested), Large-Scale Datasets (they mention experiments on large-scale data), Performance Improvement (their results show better performance). 
+
+Wait, that&#39;s 12 categories. Maybe that&#39;s sufficient. Alternatively, I could combine some like &#34;Music, Movies, and E-commerce&#34; under a single category if needed, but the guidelines say to use specific names. So better to list each domain separately as they are distinct.
+
+Alternatively, maybe &#34;Evaluation Across Domains&#34; as one category? But since they specifically mention three domains, listing them individually makes sense for discoverability.
+&lt;/think&gt;
+
+Recommender Systems, Multimodal Learning, Cold Start, Missing Modality, Embedding Networks, Collaborative Filtering, Content-Based Recommendations, Music, Movies, E-commerce, Large-Scale Datasets, Performance Improvement</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

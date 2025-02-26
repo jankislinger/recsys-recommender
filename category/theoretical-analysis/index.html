@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/explainability/">Explainability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/recommendation-quality/">Recommendation Quality</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/healthcare/">Healthcare</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Unified Denoising Training for Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Yingpeng Du, Ziyan Wang, Haoyan Chua, Zhu Sun, Jie Zhang, Yew-Soon Ong</p>
+    <p>Most existing denoising recommendation methods mainly alleviate noisy implicit feedback (user behaviors) through empirical studies. However, such studies may lack theoretical explainability and fail to model comprehensive noise patterns, which hinders understanding and capturing different noise patterns that show distinct effects on users’ behaviors. Thus, we propose to capture comprehensive noise patterns through a holistic theoretical analysis for more effective denoising, whereby users’ behaviors are divided into the willingness (to interact with) and action (to interact with) phases to disentangle the independent noise patterns. Our analysis unveils that (1) in the willingness phase, the high uncertainty of the user’s willingness to interact with the item can lead to high expectation loss, unifying explainability for existing denoising methods; and (2) in the action phase, higher user-specific inconsistency between willingness and action can not only lead to more noise in the user’s overall behaviors but also make it harder to distinguish between her true and noisy behaviors. All these findings are also aligned with our empirical observations. Inspired by these findings, we propose a Unified Denoising Training (UDT) method for recommendation. To alleviate uncertainty in the willingness phase, we lower the importance of the user-item interaction with high willingness uncertainty recognized by high loss. To ease the inconsistency in the action phase, we lower the overall importance for users with high user-specific inconsistency as it may lead to more noisy behaviors, and then increase the importance gap between recognized true and noisy behaviors for users with low user-specific inconsistency as their behaviors are more distinguishable. Extensive experiments on three real-world datasets show that our proposed UDT outperforms state-of-the-art denoising recommendation methods.</p>
+    <p><strong>Categories:</strong> Recommendation Algorithms, Implicit Feedback, User Behavior Modeling, Noise Handling, Real-World Applications, Theoretical Analysis, Unified Approach, Willingness-Action Phases, Recommendation Quality, Denoising Methods (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1072/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Effective Off-Policy Evaluation and Learning in Contextual Combinatorial Bandits (2024)</h3>
+    <p><strong>Authors:</strong> Yuta Saito, Tatsuhiro Shimizu, Ren Kishimoto, Masahiro Nomura, Koichi Tanaka, Haruka Kiyohara</p>
+    <p>We explore off-policy evaluation and learning in contextual combinatorial bandits (CCB), where a policy selects a subset in the action space. For example, it might choose a set of furniture pieces (a bed and a drawer) from available items (bed, drawer, chair, etc.) for interior design sales. This setting is widespread in fields such as recommender systems and healthcare, yet OPE/L of CCB remains unexplored in the relevant literature. Standard OPE methods typically employ regression and importance sampling in the action subset space. However, they often face significant challenges due to high bias or variance, exacerbated by the exponential growth in the number of available subsets. To address these challenges, we introduce a concept of factored action space, which allows us to decompose each subset into binary indicators. These indicators signify whether each action is included in the selected subset. This formulation allows us to distinguish between the “main effect” derived from the main actions, and the “residual effect”, originating from the supplemental actions, facilitating more effective OPE. Specifically, our estimator, called OPCB, leverages an importance sampling-based approach to unbiasedly estimate the main effect, while employing regression-based approach to deal with the residual effect with low variance. OPCB achieves substantial variance reduction compared to conventional importance sampling methods and bias reduction relative to regression methods under certain conditions, as illustrated in our theoretical analysis. Experiments on both synthetic and real-world datasets demonstrate OPCB’s superior performance over the typical methods, particularly when navigating the complexities of a large action subset space.</p>
+    <p><strong>Categories:</strong> Combinatorial Bandits, Contextual Bandits, Off-Policy Evaluation, Importance Sampling, Regression Methods, Recommender Systems, Healthcare, Scalability, Evaluation Metrics, Multi-Armed Bandits, Real-World Applications, Theoretical Analysis. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1040/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Task Aware Feature Extraction Framework for Sequential Dependence Multi-Task Learning (2023)</h3>
+    <p><strong>Authors:</strong> Hongwei Cheng, Wenfang Lin, Xuewen Tao, Mingming Ha, Qiongxu Ma, Xiaobo Guo</p>
+    <p>In online recommendation, financial service, etc., the most common application of multi-task learning (MTL) is the multi-step conversion estimations. A core property of the multi-step conversion is the sequential dependence among tasks. Most existing works focus far more on the specific post-view click-through rate (CTR) and post-click conversion rate (CVR) estimations, which neglect the generalization of sequential dependence multi-task learning (SDMTL). Besides, the performance of the SDMTL framework is also deteriorated by the interference derived from implicitly conflict information passing between adjacent tasks. In this paper, a systematic learning paradigm of the SDMTL problem is established for the first time, which can transform the SDMTL problem into a general MTL problem and be applicable to more general multi-step conversion scenarios with longer conversion path or stronger task dependence. Also, the distribution dependence between adjacent task spaces is illustrated from a theoretical point of view. On the other hand, an SDMTL architecture, named Task Aware Feature Extraction (TAFE), is developed to enable dynamic task representation learning from a sample-wise view. TAFE selectively reconstructs the implicit shared information corresponding to each sample case and performs explicit task-specific extraction under dependence constraints. Extensive experiments on offline public and real-world industrial datasets, and online A/B implementations demonstrate the effectiveness and applicability of proposed theoretical and implementation frameworks.</p>
+    <p><strong>Categories:</strong> Multi-Task Learning, Sequential Dependence, Click-Through Rate Prediction, Conversion Rate Estimation, Online Recommendation, Financial Services, Feature Extraction, Multi-Step Conversion, Task Representation, A/B Testing, Real-World Applications, Theoretical Analysis, Generalization, Dynamic Task Representation, Frameworks and Architectures. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/887/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>On the Consistency of Average Embeddings for Item Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Romain Hennequin, Thomas Bouabça, Guillaume Salha-Galvan, Walid Bendada, Tristan Cazenave</p>
+    <p>A prevalent practice in recommender systems consists of averaging item embeddings to represent users or higher-level concepts in the same embedding space. This paper investigates the relevance of such a practice. For this purpose, we propose an expected precision score, designed to measure the consistency of an average embedding relative to the items used for its construction. We subsequently analyze the mathematical expression of this score in a theoretical setting with specific assumptions, as well as its empirical behavior on real-world data from music streaming services. Our results emphasize that real-world averages are less consistent for recommendation, which paves the way for future research to better align real-world embeddings with assumptions from our theoretical setting.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Embeddings, Evaluation Metrics, Theoretical Analysis, Algorithm Theory, Real-World Applications, Streaming Services, Music Recommendations, Beyond Accuracy, User Representation, Future Research Directions (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/920/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Incentivizing Exploration in Linear Contextual Bandits under Information Gap (2023)</h3>
+    <p><strong>Authors:</strong> Zhiyuan Liu, Hongning Wang, Huazheng Wang, Chuanhao Li, Haifeng Xu</p>
+    <p>Contextual bandit algorithms have been popularly used to address interactive recommendation, where the users are assumed to be cooperative to explore all recommendations from a system. In this paper, we relax this strong assumption and study the problem of incentivized exploration with myopic users, where the users are only interested in recommendations with their currently highest estimated reward. As a result, in order to obtain long-term optimality, the system needs to offer compensation to incentivize the users to take the exploratory recommendations. We consider a new and practically motivated setting where the context features employed by the user are more <i>informative</i> than those used by the system: for example, features based on users’ private information are not accessible by the system. We develop an effective solution for incentivized exploration under such an information gap, and prove that the method achieves a sublinear rate in both regret and compensation. We theoretically and empirically analyze the added compensation due to the information gap, compared with the case where the system has access to the same context features as the user does, i.e., without information gap. Moreover, we also provide a compensation lower bound of this problem.</p>
+    <p><strong>Categories:</strong> Contextual Bandits, Reinforcement Learning, Exploration vs Exploitation, Incentivizing Exploration, User Behavior Modeling, Interactive Recommendations, Information Gap, Regret Analysis, Compensation Mechanisms, Theoretical Analysis, Empirical Evaluation, Multi-Armed Bandits (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/874/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Adversarial Sleeping Bandit Problems with Multiple Plays: Algorithm and Ranking Application (2023)</h3>
+    <p><strong>Authors:</strong> Wei Lee Woon, Ludovik Coba, Jianjun Yuan</p>
+    <p>This paper presents an efficient algorithm to solve the sleeping bandit with multiple plays problem in the context of an online recommendation system. The problem involves bounded, adversarial loss and unknown i.i.d. distributions for arm availability. The proposed algorithm extends the sleeping bandit algorithm for single arm selection and is guaranteed to achieve theoretical performance with regret upper bounded by $\bigO(kN^2\sqrt{T\log T})$, where $k$ is the number of arms selected per time step, $N$ is the total number of arms, and $T$ is the time horizon.</p>
+    <p><strong>Categories:</strong> Adversarial Machine Learning, Bandit Algorithms, Multi-Armed Bandits, Online Recommendation Systems, Ranking, Regret Analysis, Theoretical Analysis, Multiple Plays, Real-World Applications, Scalability, Multi-Item Selection (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/900/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Dynamic Global Sensitivity for Differentially Private Contextual Bandits (2022)</h3>
+    <p><strong>Authors:</strong> Hongning Wang, David B. Zhao, Huazheng Wang</p>
+    <p>Bandit algorithms have become a reference solution for interactive recommendation. However, as such algorithms directly interact with users for improved recommendations, serious privacy concerns have been raised regarding its practical use. In this work, we propose a differentially private linear contextual bandit algorithm, via a tree-based mechanism to add Laplace or Gaussian noise to model parameters. Our key insight is that as the model converges during online update, the global sensitivity of its parameters shrinks over time (thus named dynamic global sensitivity). Compared with existing solutions, our dynamic global sensitivity analysis allows us to inject less noise to obtain (ϵ, δ)-differential privacy with added regret caused by noise injection in . We provide a rigorous theoretical analysis over the amount of noise added via dynamic global sensitivity and the corresponding upper regret bound of our proposed algorithm. Experimental results on both synthetic and real-world datasets confirmed the algorithm’s advantage against existing solutions.</p>
+    <p><strong>Categories:</strong> Differentially Private Contextual Bandits, Privacy, Recommendation Systems, Algorithm Mechanisms, Differential Privacy Techniques, Online Learning, Theoretical Analysis, Regret Analysis, Experimental Validation, Empirical Evaluation, Evaluation Metrics, Dynamic Adaptation, Context-Aware Recommendations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/755/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Towards Source-Aligned Variational Models for Cross-Domain Recommendation (2021)</h3>
+    <p><strong>Authors:</strong> Aghiles Salah, Hady Lauw, Thanh Binh Tran</p>
+    <p>Data sparsity is a long-standing challenge in recommender systems. Among existing approaches to alleviate this problem, cross-domain recommendation consists in leveraging knowledge from a source domain or category (e.g., Movies) to improve item recommendation in a target domain (e.g., Books). In this work, we advocate a probabilistic approach to cross-domain recommendation and rely on variational autoencoders (VAEs) as our latent variable models. More precisely, we assume that we have access to a VAE trained on the source domain that we seek to leverage to improve preference modeling in the target domain. To this end, we propose a model which learns to fit the target observations and align its hidden space with the source latent space jointly. Since we model the latent spaces by the variational posteriors, we operate at this level, and in particular, we investigate two approaches, namely rigid and soft alignments. In the former scenario, the variational model in the target domain is set equal to the source variational model. That is, we only learn a generative model in the target domain. In the soft-alignment scenario, the target VAE has its variational model, but which is encouraged to look like its source counterpart. We analyze the proposed objectives theoretically and conduct extensive experiments to illustrate the benefit of our contribution. Empirical results on six real-world datasets show that the proposed models outperform several comparable cross-domain recommendation models.</p>
+    <p><strong>Categories:</strong> Cross-Domain Recommendation, Variational Autoencoder, Probabilistic Models, Data Sparsity, Model Adaptation, Latent Space Alignment, Recommendation Systems, Movies, Books, Model Development, Theoretical Analysis (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/674/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Global and Local Differential Privacy for Collaborative Bandits (2020)</h3>
+    <p><strong>Authors:</strong> Huazheng Wang, Qian Zhao, Hongning Wang, Abhinav Khaitan, Shubham Chopra, Qingyun Wu</p>
+    <p>Collaborative bandit learning has become an emerging focus for personalized recommendation. It leverages user dependence for joint model estimation and recommendation. As such online learning solutions directly learn from users, e.g., result clicks, they bring in new challenges in privacy protection. Despite the existence of recent studies about privacy in contextual bandit algorithms, how to efficiently protect user privacy in a collaborative bandit learning environment remains unknown.<br>In this paper, we develop a general solution framework to achieve differential privacy in collaborative bandit algorithms, under the notion of global differential privacy and local differential privacy. The key idea is to inject noise in a bandit model’s sufficient statistics (either on server side to achieve global differential privacy or client side to achieve local differential privacy) and calibrate the noise scale with respect to the structure of collaboration among users. We study two popularly used collaborative bandit algorithms to illustrate the application of our solution framework. Theoretical analysis proves our derived private algorithms reduce the added regret caused by privacy-preserving mechanism compared to its linear bandits counterparts, i.e., collaboration actually helps to achieve stronger privacy with the same amount of injected noise. We also empirically evaluate the algorithms on both synthetic and real-world datasets to demonstrate the trade-off between privacy and utility.</p>
+    <p><strong>Categories:</strong> Privacy Mechanisms, Global Differential Privacy, Local Differential Privacy, Personalized Recommendations, Collaborative Bandits, Empirical Evaluation, Theoretical Analysis, Privacy vs. Utility Trade-off (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/538/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Unbiased Learning for the Causal Effect of Recommendation (2020)</h3>
+    <p><strong>Authors:</strong> Janmajay Singh, Masahiro Sato, Tomoko Ohkuma, Sho Takemori</p>
+    <p>Increasing users’ positive interactions, such as purchases or clicks, is an important objective of recommender systems. Recommenders typically aim to select items that users will interact with. If the recommended items are purchased, an increase in sales is expected. However, the items could have been purchased even without recommendation. Thus, we want to recommend items that results in purchases caused by recommendation. This can be formulated as a ranking problem in terms of the causal effect. Despite its importance, this problem has not been well explored in the related research. It is challenging because the ground truth of causal effect is unobservable, and estimating the causal effect is prone to the bias arising from currently deployed recommenders. This paper proposes an unbiased learning framework for the causal effect of recommendation. Based on the inverse propensity scoring technique, the proposed framework first constructs unbiased estimators for ranking metrics. Then, it conducts empirical risk minimization on the estimators with propensity capping, which reduces variance under finite training samples. Based on the framework, we develop an unbiased learning method for the causal effect extension of a ranking metric. We theoretically analyze the unbiasedness of the proposed method and empirically demonstrate that the proposed method outperforms other biased learning methods in various settings.</p>
+    <p><strong>Categories:</strong> Causal Inference, Recommender Systems, E-commerce, Unbiased Learning, Ranking Metrics, Causal Effect, Empirical Risk Minimization, Propensity Score, Bias in Recommendations, Theoretical Analysis, Unbiased Evaluation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/562/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Deep Generative Ranking for Personalized Recommendation (2019)</h3>
+    <p><strong>Authors:</strong> Huafeng Liu, Jingxuan Wen, Jian Yu, Liping Jing</p>
+    <p>Recommender systems offer critical services in the age of mass information. Personalized ranking have been attractive both for content providers and customers due to its ability of creating a user-specific ranking on the item set. Although the powerful factor-analysis methods including latent factor model and deep neural network models have achieved promising results, they still suffer from the challenging issues, such as sparsity of recommendation data, uncertainty of optimization, and etc. To enhance the accuracy and generalization of recommender system, in this paper, we propose a deep generative ranking (DGR) model under the Wasserstein auto-encoder framework. Specifically, DGR simultaneously generates the pointwise implicit feedback data (via a Beta-Bernoulli distribution) and creates the pairwise ranking list by sufficient exploiting both interacted and non-interacted items for each user. DGR can be efficiently inferred by minimizing its penalized evidence lower bound. Meanwhile, we theoretically analyze the generalization error bounds of DGR model to guarantee its performance in extremely sparse feedback data. A series of experiments on four large-scale datasets (Movielens (20M), Netflix, Epinions and Yelp in movie, product and business domains) have been conducted. By comparing with the state-of-the-art methods, the experimental results demonstrate that DGR consistently benefit the recommendation system in ranking estimation task, especially for the near-cold-start-users (with less than five interacted items).</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Deep Learning, Generative Models, Personalization, Implicit Feedback, Cold Start Problem, Matrix Factorization, Large-Scale Datasets, Theoretical Analysis, Cross-Domain Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/434/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Eigenvalue Analogy for Confidence Estimation in Item-based Recommender Systems (2018)</h3>
+    <p><strong>Authors:</strong> Paolo Cremonesi, Maurizio Ferrari Dacrema</p>
+    <p>Item-item collaborative filtering (CF) models are a well known and studied family of recommender systems, however current literature does not provide any theoretical explanation of the conditions under which item-based recommendations will succeed or fail. We investigate the existence of an ideal item-based CF method able to make perfect recommendations. This CF model is formalized as an eigenvalue problem, where estimated ratings are equivalent to the true (unknown) ratings multiplied by a user-specific eigenvalue of the similarity matrix. Preliminary experiments show that the magnitude of the eigenvalue is proportional to the accuracy of recommendations for that user and therefore it can provide reliable measure of confidence.</p>
+    <p><strong>Categories:</strong> Eigenvalue Methods, Item-based Recommendation, Collaborative Filtering, Matrix Factorization, Confidence Estimation, Theoretical Analysis, Evaluation Metrics, Recommendation Quality, Methodology (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/418/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

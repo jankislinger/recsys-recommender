@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-metrics/">Evaluation Metrics</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Unleashing the Retrieval Potential of Large Language Models in Conversational Recommender Systems (2024)</h3>
+    <p><strong>Authors:</strong> Ting Yang, Li Chen</p>
+    <p>Conversational recommender systems (CRSs) aim to capture user preferences and provide personalized recommendations through interactive natural language interactions. The recent advent of large language models (LLMs) has revolutionized human engagement in natural conversations, driven by their extensive world knowledge and remarkable natural language understanding and generation capabilities. However, introducing LLMs into CRSs presents new technical challenges. Specifically, directly prompting LLMs for recommendation generation requires understanding a large and evolving item corpus, as well as grounding the generated recommendations in the real item space. Moreover, generating recommendations based on external recommendation engines or directly integrating their suggestions into responses may constrain the overall performance of LLMs, since these engines generally have inferior representation abilities compared to LLMs. To address these challenges, we propose an end-to-end large-scale CRS model, ReFICR, a novel LLM-enhanced conversational recommender that empowers a retrievable large language model to perform CRS subtasks by following retrieval and generation instructions through lightweight tuning. By decomposing the complex CRS task into multiple subtasks, we formulate these subtasks into two types of instruction formats: retrieval and generation. The hidden states of ReFICR are utilized as text embeddings to represent user preferences and items for retrieval. Simultaneously, ReFICR is trained to handle generative tasks. We optimize the contrastive objective to enhance text embeddings for retrieval and jointly fine-tune the large language model objective for generation. Our experimental results on public datasets demonstrate that ReFICR significantly outperforms baselines in terms of recommendation accuracy. Our code is publicly available at the link: https://anonymous.4open.science/r/ReFICR-0C3A.</p>
+    <p><strong>Categories:</strong> Conversational Recommender Systems (CRSs), Large Language Models (LLMs), Recommendation Generation, Natural Language Processing (NLP), Retrieval-Based Systems, Instruction-Following Models, Contrastive Learning, End-to-End Models, Personalized Recommendations, Implicit Feedback, Hybrid Recommender Systems, Language Model Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1076/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Personalizing Peloton: Combining Rankers and Filters To Balance Engagement and Business Goals (2021)</h3>
+    <p><strong>Authors:</strong> Shayak Banerjee</p>
+    <p>Peloton is at the forefront of the at-home fitness market, with two business pillars: (a) a line of connected fitness equipment, and (b) a subscription-based service that offers access to a rich catalog of high quality fitness classes. As of May 2021, the total member base for Peloton stood at over 5.4 million, who took more than 170 million workouts. Peloton classes cover a diversity of instructors, languages, fitness disciplines, durations, intensity and muscle groups. On the other side, each user has their own specific fitness goals, time available to work out, fitness equipment and level of skill or strength. This diversity of content and individuality of user needs creates the need for a recommender system capable of personalizing the Peloton experience.<br>Most recommendation engines optimize for user lifetime value or time of engagement. However, Peloton users have very different usage habits when compared to other industry recommendation problems. Users arrive on the platform with a clear intent to workout, which allows our recommendation algorithms to not just focus on the short-term classic metrics such as click-through-rates and optimizing session lengths for exploration. Instead, fitness content recommendations at Peloton also help solve longer term problems such as: <br>It helps balance engagement and business goals. A classic example of this is the introduction of a new instructor. For existing users, who already have developed affinities to certain instructors, how can we ensure that enough of them see and try some classes from the new instructor so that they can build their own following?<br>It helps guide users to explore the vast library of content. Peloton users quickly develop set routines with our fitness content, with high repeat plays of the same instructor/duration/class type. Recommendations serve as a mechanism to encourage them to try something outside this comfort zone, which both increases the breadth of a user's engagement with the platform and leads to a more holistic workout routine.<br>We achieve these two goals by utilizing a combination of rankers and filters. Ranking models help order the universe of content for each user according to their preferences. Filters take a slice of this ordered content to generate a shelf of content with a reason for suggesting it. Explainability is heavily linked to business goals, while ranking is linked to engagement goals. For instance, ranking and filtering can work in tandem to populate a shelf that helps promote a new music partnership, e.g. Workouts Featuring The Beatles, where we highlight classes that contain music by The Beatles (filter), ordered by the user's class preferences (ranker). With rankers and filters, we empower other teams to curate personalized experiences. The creation process is simplified to picking a ranker and a filter to create a shelf, and then giving it a title to then have it displayed to users.<br>Further, we have context-based models that order the shelves for each user depending on both their preferences and context, such as platform and time. For ranking our various filters, we take a multi-armed bandit approach, due to the need to handle cold starts on users and balance exploration (keep putting new shelves in front of the user) with exploitation (keep showing them shelves they already interact with). To start with, we implemented a simple Thompson Sampling based bandits algorithm, which accumulates rewards (for shelves interacted with) and penalties (for shelves ignored), which in turn constantly adapts the shelf ordering for a user, making the experience more personalized over time. We are able to perform all calculations offline in batch, using Spark, and cache the Thompson Sampling parameters in DynamoDB. When a user requests their shelves, a random sampling is performed using these parameters to serve up a contextually ordered list of shelves.<br>A unique feature of Peloton classes is that they are usually aired “live” first, which seeds the class with a set of users. This ameliorates the cold start problem for recommending classes, opening us up to using collaborative filtering approaches. Also, users typically take one session in a given day, and most even just take one class in a given day. This means we are able to compute class recommendations for each user offline, cache it and serve it up when requested. In the offline world, we use Spark to pre-process our user-class interaction data, and then train a deep learning model using PyTorch. Our ranking model is a sequential recommender using long-short-term memory (LSTMs). From our ranked list of classes, we apply our various filters and generate the shelves of recommendations. These are cached in AWS DynamoDB, and served up via Kubernetes-driven APIs.<br>Recommending fitness content at Peloton has the potential to go beyond simply guiding users to their next class. With a holistic overview of both what classes a user is taking and a user's feedback on their performance (explicit or implicit), there is an opportunity to tailor workout routines that optimize for long-term metrics such as health, strength or flexibility.</p>
+    <p><strong>Categories:</strong> Personalization, Recommendation Systems, Fitness, Multi-Armed Bandits, Hybrid Recommender Systems, User Engagement, Business Goals, Cold Start, Thompson Sampling, Sequential Recommendations, Deep Learning, Spark, PyTorch, AWS, DynamoDB, Kubernetes (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/741/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Module Advisor: A Hybrid Recommender System for Elective Module Exploration (2018)</h3>
+    <p><strong>Authors:</strong> Michael P. O’Mahony, Nina Hagemann, Barry Smyth</p>
+    <p>Recommender systems are omni-present in our every day lives, guiding us through the vast amount of information available. However, in the academic world, personalised recommendations are less prominent, leaving students to navigate through the typically large space of available courses and modules manually. Since it is crucial for students to make informed choices about their learning pathways, we aim to improve the way students discover elective modules by developing a hybrid recommender system prototype that is specifically designed to help students find elective modules from a diverse set of subjects. We can improve the discoverability of long-tail options and help students broaden their horizons by combining notions of similarity and diversity.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Hybrid Recommender Systems, Personalized Recommendations, Education, Academic Recommendations, Elective Module Selection, Diversity of Recommendations, Long-Tail Recommendations, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/409/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Adaptive Collaborative Topic Modeling for Online Recommendation (2018)</h3>
+    <p><strong>Authors:</strong> Pierre-Alexandre Murena, Marie Al-Ghossein, Talel Abdessalem, Anthony Barré, Antoine Cornuéjols</p>
+    <p>Collaborative filtering (CF) mainly suffers from rating sparsity and from the cold-start problem. Auxiliary information like texts and images has been leveraged to alleviate these problems, resulting in hybrid recommender systems (RS). Due to the abundance of data continuously generated in real-world applications, it has become essential to design online RS that are able to handle user feedback and the availability of new items in real-time. These systems are also required to adapt to drifts when a change in the data distribution is detected. In this paper, we propose an adaptive collaborative topic modeling approach, CoAWILDA, as a hybrid system relying on adaptive online Latent Dirichlet Allocation (AWILDA) to model new available items arriving as a document stream and incremental matrix factorization for CF. The topic model is maintained up-to-date in an online fashion and is retrained in batch when a drift is detected, using documents automatically selected by an adaptive windowing technique. Our experiments on real-world datasets prove the effectiveness of our approach for online recommendation.</p>
+    <p><strong>Categories:</strong> Collaborative Filtering, Hybrid Recommender Systems, Online Recommendation, Topic Modeling, Adaptive Methods, Cold Start Problem, Matrix Factorization, Real-World Applications, Recommender Systems, Latent Dirichlet Allocation (LDA) (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/329/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Improving The Discriminative Power Of Inferred Content Information Using Segmented Virtual Profile (2014)</h3>
+    <p><strong>Authors:</strong> Trevor Walker, Anmol Bhasin, Anuj Goyal, Haishan Liu</p>
+    <p>We present a novel component of a hybrid recommender system at LinkedIn, where item features are augmented by a virtual profile based on observed user-item interactions. The concept of virtual profiles is generating a representation of an item in the user feature space by leveraging the over-represented user features from users that interacted with the item. It is a way to think about Collaborative Filtering with content features. The core principle is that if the feature occurs with high probability for the users who interacted with an item (henceforth termed as relevant users) versus those who did not (henceforth termed non-relevant users), then that feature is a good candidate to be included in the virtual profile of the item in question. However this scheme suffers from the data imbalance problem, given that observed relevant users are usually an extremely small minority group compared to the whole user base. Feature selection in this skewed setting is prone to noise from the overwhelming non-relevant examples that belong to the majority class. To alleviate the problem, we propose a method to select the most relevant non-relevant examples from the majority class by segmenting users on certain intelligently selected feature dimensions. The resulting virtual profile from the method is called the segmented virtual profile. Empirical evaluation on real-world large scale recommender system at LinkedIn shows that simple strategies for the segmentation yield significantly better performance.</p>
+    <p><strong>Categories:</strong> Virtual Profiles, Collaborative Filtering, Content-Based Filtering, Feature Selection, Hybrid Recommender Systems, Segmentation, Imbalanced Data, Real-World Applications, Industry-Specific, Recommendation Systems, Performance Evaluation, Discriminative Power, User Interaction Analysis (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/18/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

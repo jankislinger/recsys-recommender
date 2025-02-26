@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Deep Auto-Encoding for Context-Aware Inference of Preferred Items’ Categories
+Abstract:
+Context-aware systems enable the sensing and analysis of user context in order to provide personalized services to users. We observed that it is possible to automatically learn contextual factors and behavioral patterns when users interact with the system. We later utilize the learned patterns to infer contextual user interests within a recommender system. We present a novel context-aware model for detecting users’ preferred items’ categories using an unsupervised deep learning technique applied to mobile sensor data. We train an auto-encoder for each item genre, using contextual data that was obtained when users interacted with the system. Given new contextual sensor data from a user, the discovered patterns from each auto-encoder are used to predict the category of items that should be recommended to the user in the given context. In order to collect rich contextual data, we conducted an extensive field study over a period of four weeks with a group of ninety users. The analysis reveals significant insights regarding the inference of different granularity levels of categories that are available within the data.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article based on its title and abstract. Let me read through them again.
+
+The title is &#34;Deep Auto-Encoding for Context-Aware Inference of Preferred Items’ Categories.&#34; Hmm, so it&#39;s about using deep auto-encoding, which is a type of neural network, specifically in an unsupervised learning setting. The goal seems to be understanding user preferences based on context.
+
+Looking at the abstract: It mentions context-aware systems that analyze user interactions to provide personalized services. They&#39;re using mobile sensor data to learn contextual factors and behavioral patterns. They trained auto-encoders for each item genre, which suggests they’re using unsupervised deep learning techniques. The model predicts categories of items to recommend based on new sensor data.
+
+They also conducted a field study with 90 users over four weeks to collect data, which indicates real-world application and evaluation through user studies. The analysis shows insights into different levels of category granularity, so they’re looking at how detailed or broad the recommendations can be.
+
+Now, thinking about the categories provided in the guidelines: 
+
+- Family of algorithm: They used auto-encoders, which are a type of neural network, specifically deep learning and unsupervised.
+- Domain: It&#39;s related to mobile systems since they&#39;re using sensor data from mobile devices. Also, it&#39;s a recommender system because the goal is to recommend items based on context.
+- Specific recommendation aspects: Context-aware recommendations, inference of user preferences, cold start (though I don&#39;t see explicit mention of that; maybe not?), real-world applications like A/B testing or user surveys? Wait, they did a field study with users, so that&#39;s a real-world application. They also talk about evaluating different granularities, which touches on aspects like diversity and beyond accuracy in recommendations.
+
+So putting it all together:
+
+- Algorithm: Autoencoder, Deep Learning, Unsupervised Learning
+- Domains: Mobile Systems, Recommender Systems
+- Specifics: Context-Aware Recommendations, User Preference Inference, Real-World Applications (because of the field study)
+- Evaluation aspects: Beyond Accuracy (since they looked at granularities, which is more than just accuracy metrics), Diversity of Recommendations? Maybe not directly diversity but granularity.
+  
+Wait, the user mentioned that each article should be assigned to 8-12 categories. Let me see how many I have so far:
+
+1. Autoencoder
+2. Deep Learning
+3. Unsupervised Learning
+4. Mobile Systems
+5. Recommender Systems
+6. Context-Aware Recommendations
+7. User Preference Inference
+8. Real-World Applications
+9. Beyond Accuracy (since they&#39;re looking beyond just accuracy metrics to granularity)
+10. Field Study
+
+That&#39;s 10 categories. Maybe I can add more? Let me think if there are other aspects.
+
+They used contextual data from user interactions, which is about User Behavior Analysis or Interaction Data. Also, the system infers categories based on context, so perhaps Categorization or Classification?
+
+Alternatively, since they&#39;re using sensor data, maybe that falls under Sensor-Based Recommendations or something similar. But I don&#39;t know if that&#39;s a standard category.
+
+Another angle: The model is trained per item genre, which relates to Content-Based Filtering, but it&#39;s more about context than content. Maybe not the best fit.
+
+They did an extensive field study, so that&#39;s part of Evaluation Methodology as well.
+
+Wait, looking back at the example categories provided in the guidelines:
+
+- Family of algorithm: e.g., Matrix Factorization, Encoder, Multi-Armed Bandits
+  - So I have Autoencoder (which is an encoder), Deep Learning, Unsupervised
+
+- Domain of problem: Books, Movies, Healthcare, etc. Here it&#39;s Mobile Systems and Recommender Systems.
+
+- Specific recommendation aspects: Cold Start, etc. They didn&#39;t mention cold start but did talk about context-aware, so that category applies.
+
+- Aspects of evaluation: Diversity, Beyond Accuracy
+  - They looked at granularities, which is beyond accuracy.
+
+- Real-world applications: A/B Test, User Survey
+  - They did a field study with users, so real-world application.
+
+Other possible categories could be:
+
+- User Behavior Analysis (since they&#39;re analyzing interactions)
+- Contextual Data (but maybe that&#39;s too specific)
+- Sensor Data Processing
+
+But I&#39;m limited by the guidelines. The example categories include things like family of algorithm, domain, recommendation specifics, evaluation aspects, and real-world applications.
+
+I think 10 is sufficient, but let me see if any other relevant categories apply:
+
+- User-Centered Design: Since they&#39;re providing personalized services based on context.
+- Personalization
+- Mobile Recommendations
+
+Hmm. So maybe adding those as well:
+
+11. User-Centered Design
+12. Personalization
+
+But does the abstract explicitly mention user-centered design? It says &#34;personalized services,&#34; which aligns with personalization and user-centered.
+
+Alternatively, another category could be Field Study, which is already covered under real-world applications.
+
+I think 10 categories are enough. Let me check:
+
+Autoencoder
+Deep Learning
+Unsupervised Learning
+Context-Aware Recommendations
+User Preference Inference
+Mobile Systems
+Recommender Systems
+Real-World Applications
+Beyond Accuracy
+Field Study
+
+Yes, that&#39;s 10 categories, covering algorithm families, domains, recommendation specifics, evaluation aspects, and real-world applications. I think this covers all the necessary areas without overcomplicating.
+&lt;/think&gt;
+
+Autoencoder, Deep Learning, Unsupervised Learning, Context-Aware Recommendations, User Preference Inference, Mobile Systems, Recommender Systems, Real-World Applications, Beyond Accuracy, Field Study</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Deep Auto-Encoding for Context-Aware Inference of Preferred Items’ Categories
+Abstract:
+Context-aware systems enable the sensing and analysis of user context in order to provide personalized services to users. We observed that it is possible to automatically learn contextual factors and behavioral patterns when users interact with the system. We later utilize the learned patterns to infer contextual user interests within a recommender system. We present a novel context-aware model for detecting users’ preferred items’ categories using an unsupervised deep learning technique applied to mobile sensor data. We train an auto-encoder for each item genre, using contextual data that was obtained when users interacted with the system. Given new contextual sensor data from a user, the discovered patterns from each auto-encoder are used to predict the category of items that should be recommended to the user in the given context. In order to collect rich contextual data, we conducted an extensive field study over a period of four weeks with a group of ninety users. The analysis reveals significant insights regarding the inference of different granularity levels of categories that are available within the data.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on its title and abstract. Let&#39;s start by reading through them carefully.
+
+The title is &#34;Deep Auto-Encoding for Context-Aware Inference of Preferred Items’ Categories.&#34; So it mentions deep learning (auto-encoders) and context-aware systems, which are used in recommendation systems to personalize services.
+
+Looking at the abstract: The article talks about using unsupervised deep learning techniques on mobile sensor data to infer users&#39; preferred item categories. They developed a model that uses contextual data from user interactions to predict which items to recommend based on the current context.
+
+Key points:
+- **Deep Learning**: They used auto-encoders, which falls under deep learning.
+- **Context-Aware Systems**: The system senses and analyzes user context for personalization.
+- **Recommender System**: It&#39;s about recommendation systems, specifically inferring preferred item categories.
+- **Unsupervised Learning**: The technique applied is unsupervised.
+- **Mobile Sensor Data**: They used data from mobile sensors in their study.
+- **User Interaction Analysis**: They analyzed how users interact with the system to learn patterns.
+- **Field Study**: Conducted a study over four weeks with 90 users, which relates to real-world applications.
+
+Now, mapping these points to categories:
+
+1. **Deep Learning** – since they used auto-encoders.
+2. **Context-Aware Systems** – core theme of the paper.
+3. **Recommender System** – it&#39;s about recommendations.
+4. **Unsupervised Learning** – they applied this technique.
+5. **Mobile Sensors** – data source for context.
+6. **User Interaction Analysis** – part of their method.
+7. **Field Study** – real-world application aspect.
+
+I should make sure these categories are clear and cover all aspects without being too specific or too broad. Also, checking if each category is meaningful and has enough articles when more come in. I think these categories fit well with the content and align with user interests in recommendation systems and deep learning techniques.
+&lt;/think&gt;
+
+Deep Learning, Context-Aware Systems, Recommender System, Unsupervised Learning, Mobile Sensors, User Interaction Analysis, Field Study</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

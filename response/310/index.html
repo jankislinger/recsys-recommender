@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: When Recurrent Neural Networks meet the Neighborhood for Session-Based Recommendation
+Abstract:
+Deep learning methods have led to substantial progress in various application fields of AI, and in recent years a number of proposals were made to improve recommender systems with artificial neural networks. For the problem of making session-based recommendations, i.e., for recommending the next item in an anonymous session, Hidasi et al. recently investigated the application of recurrent neural networks with Gated Recurrent Units (GRU4REC). Assessing the true value of such novel approaches based only on what is reported in the literature is however difficult when no standard evaluation protocols are applied and when the strength of the baselines used in the performance comparison is not clear. In this work we show based on a comprehensive empirical evaluation that a heuristics-based nearest neighbor (kNN) scheme for sessions outperforms GRU4REC in the large majority of the tested configurations and datasets. Neighborhood sampling and efficient in-memory data structures ensure the scalability of the kNN method. The best results in the end were often achieved when we combine the kNN approach with GRU4REC, which shows that RNNs can leverage sequential signals in the data that cannot be detected by the co-occurrence-based kNN method.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s tackle this categorization task. The goal is to assign the given research article to multiple relevant categories based on its content. I need to ensure accuracy, utility, and user-centric design.
+
+First, I&#39;ll read through the title and abstract to identify key themes and elements. The title mentions &#34;Recurrent Neural Networks&#34; meeting &#34;Neighborhood&#34; for session-based recommendations. So, right away, I can note down &#34;Recurrent Neural Networks (RNNs)&#34; and &#34;Session-Based Recommendations.&#34;
+
+Looking at the abstract, it discusses deep learning methods in AI and their application to recommender systems. That adds &#34;Deep Learning&#34; as another category.
+
+The article compares GRU4REC with a k-Nearest Neighbor approach. This comparison is crucial, so I should include both &#34;GRU4REC&#34; and &#34;k-Nearest Neighbors (kNN).&#34; Also, the fact that they tested various configurations and datasets points towards an empirical evaluation, hence adding &#34;Empirical Evaluation.&#34;
+
+The article emphasizes scalability through neighborhood sampling and efficient data structures. That&#39;s a key point for any recommendation system, so &#34;Scalability&#34; is another category.
+
+The combination of kNN and GRU4REC leading to better results suggests collaborative methods, which can be categorized as &#34;Collaborative Filtering.&#34; 
+
+Since the focus is on session-based recommendations without user history, &#34;Anonymous Sessions&#34; makes sense. The mention of sequential signals detected by RNNs that aren&#39;t captured by co-occurrence in kNN relates to &#34;Sequential Data.&#34;
+
+The fact that both methods are used together points towards a hybrid approach, so &#34;Hybrid Methods&#34; should be included. 
+
+Lastly, the application is within recommendation systems, which adds another layer of categorization under &#34;Recommendation Systems.&#34;
+
+Now, I&#39;ll make sure each category aligns with the guidelines: multiple categories (we have 12), they cover both specific and broad aspects, are user-friendly, and consistent. No category seems too niche or too broad without relevance.
+&lt;/think&gt;
+
+Recurrent Neural Networks (RNNs), Session-Based Recommendations, Deep Learning, GRU4REC, k-Nearest Neighbors (kNN), Empirical Evaluation, Scalability, Collaborative Filtering, Anonymous Sessions, Sequential Data, Hybrid Methods, Recommendation Systems</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: When Recurrent Neural Networks meet the Neighborhood for Session-Based Recommendation
+Abstract:
+Deep learning methods have led to substantial progress in various application fields of AI, and in recent years a number of proposals were made to improve recommender systems with artificial neural networks. For the problem of making session-based recommendations, i.e., for recommending the next item in an anonymous session, Hidasi et al. recently investigated the application of recurrent neural networks with Gated Recurrent Units (GRU4REC). Assessing the true value of such novel approaches based only on what is reported in the literature is however difficult when no standard evaluation protocols are applied and when the strength of the baselines used in the performance comparison is not clear. In this work we show based on a comprehensive empirical evaluation that a heuristics-based nearest neighbor (kNN) scheme for sessions outperforms GRU4REC in the large majority of the tested configurations and datasets. Neighborhood sampling and efficient in-memory data structures ensure the scalability of the kNN method. The best results in the end were often achieved when we combine the kNN approach with GRU4REC, which shows that RNNs can leverage sequential signals in the data that cannot be detected by the co-occurrence-based kNN method.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories. Let me read through the title and abstract carefully.
+
+The title is &#34;When Recurrent Neural Networks meet the Neighborhood for Session-Based Recommendation&#34;. It mentions RNNs (specifically GRU4REC) and a nearest neighbor approach. The focus seems to be on session-based recommendations, comparing different methods.
+
+Looking at the abstract: They discuss using deep learning in recommendation systems, particularly for session-based recommendations. They compared GRU4REC with a kNN method and found that the latter often performs better. They also talked about combining both approaches for better results.
+
+So, key points from the abstract:
+- Recurrent Neural Networks (RNNs)
+- Session-Based Recommendations
+- Nearest Neighbor (kNN) approach
+- Evaluation of recommendation systems
+- Scalability of the kNN method
+- Hybrid approaches combining RNN and kNN
+
+Now, considering the categories I should assign. The user provided examples like Family of algorithm, Domain, Specific aspects in recommendation space, etc.
+
+1. **Family of Algorithm**: Definitely GRU4REC (a type of RNN) and kNN. So both should be included.
+2. **Domain**: It&#39;s about session-based recommendations, so that&#39;s the domain here.
+3. **Specific Aspect**: They talk about combining RNN with kNN, which is a hybrid approach. Also, scalability since they mention efficient in-memory data structures.
+4. **Evaluation**: The abstract mentions comprehensive empirical evaluation comparing methods, so Evaluation is relevant.
+5. **Other**: Since they discuss real-world applications and practical implementations (scalability), that&#39;s another category.
+
+Wait, do I need to cover more aspects? Let me think about the guidelines: assign 8-12 categories if possible. But perhaps the user wants a concise list. Maybe some overlap is okay but should make sure each category is distinct enough.
+
+So compiling all relevant points:
+
+- Recurrent Neural Networks (GRU4REC)
+- Session-Based Recommendations
+- Nearest Neighbor (kNN)
+- Scalability
+- Hybrid Models/Approaches
+- Evaluation Methods
+- Recommendation Systems
+
+That&#39;s 7 categories. I think that covers the main aspects without overcomplicating.
+&lt;/think&gt;
+
+Recurrent Neural Networks, Session-Based Recommendations, Nearest Neighbor, Scalability, Hybrid Models, Evaluation Methods, Recommendation Systems</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

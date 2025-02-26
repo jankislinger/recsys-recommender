@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/user-behavior/">User Behavior</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/performance-evaluation/">Performance Evaluation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Counterfactual learning for recommender system (2020)</h3>
+    <p><strong>Authors:</strong> Zhenhua Dong</p>
+    <p>Most commercial industrial recommender systems have built their closed feedback loops. Though it is helpful in item recommendation and model training, the closed feedback loop may lead to the so-called bias problems, including the position bias, selection bias and popularity bias. The recommendation models trained with biased may hurt the user experiences by recommending homogenous items. How to control the biases in the closed feedback loop has become one of major challenges in modern recommender systems. This talk discusses the counterfactual learning technologies for tackling the bias problem in recommendation.<br>The talk consists of four parts.<br>The first part, briefly introduces the counterfactual learning with two cases from the academic perspective [4, 5].<br>The second part illustrates the position bias and selection bias based on two real examples. These examples inspire us to study “How to use counterfactual technology for recommender system?” from the industry perspective.<br>In the third part, we firstly encourage the audiences to think an important question: “What kind of data can learn an unbiased model?” After that, we propose four counterfactual learning approaches and related studies, as shown in Figure1.<br>Approach 1: Learn from counterfactual data. We need to learn full-information model with partial observed information data. The full-information model is an unbiased model, which is trained by both observed data and unobserved data (including counterfactual data), but how to model unobserved data? One common approach is direct method [2]. In this talk, we introduce a novel counterfactual learning framework [8], first, an imputation model can by learned by a small amount of unbiased uniform data, then the imputation model can be used to predict labels of all counterfactual samples, finally, we train a counterfactual recommendation model with both observed and counterfactual samples.<br>Approach 2: Correct biased observed data. Inverse propensity score (IPS) is a widely studied method and relatively easy to be deployed for real products. IPS is defined as the conditional probability of receiving the treatment given pre-treatment covariates by Rosenbaum and Rubin [7]. But IPS method should satisfy two assumptions: (1) overlap, and (2) unconfoundedness. Inspired by the sample reweighting work for robust deep learning [6], we proposed a novel influence function based method to reweight training samples directly.<br>Approach 3: Doubly robust method. The doubly robust methods [7] have two parts: IPS method part and direct method part. John Langford etc. prove that either one part of them can debias, the doubly robust method can debias. But both of the propensity and imputation model are not easy to learn, so we present a novel propensity free doubly robust method [8] for click-through-rate (CTR) prediction task. In order to solve the efficiency of full samples (including both unobserved and observed sample) learning problem, we proposed block coordinate descend and conjugate gradient method, which can reduce the time complexity of optimization from O(m*n) to O(m+n).<br>Approach 4: Joint learning unbiased data and biased data. In recommender system, unbiased data is collected through randomly recommendation approach. The unbiased data is less, and its collection process is expensive. Through online A/B testing, the performance of the model trained with biased data and unbiased data together is superior to the performance of the model trained with only biased data. Causal embedding [1] method is another method to learn both biased data and unbiased data for improving the accuracy of prediction model. We also propose a general knowledge distillation framework for counterfactual recommendation via uniform data [3], which propose a general framework about how to use unbiased data with four distillation methods: label distillation, sample distillation, feature distillation and model structure distillation.<br>We also summarize the advantages and challenges of the above approaches.<br>The last part emphasizes that counterfactual learning is a rich research area, and discuss several important research topics, such as optimization for counterfactual learning, counterfactual meta learning, stable learning, fairness, unbiased learning to rank, offline policy evaluation.</p>
+    <p><strong>Categories:</strong> Counterfactual Learning, Recommender Systems, Bias Mitigation, Position Bias, Selection Bias, Popularity Bias, Model Training, User Experience, Counterfactual Data, Inverse Propensity Score (IPS), Doubly Robust Methods, Joint Learning, A/B Test, Diversity of Recommendations, Beyond Accuracy, Academic Perspective, Industry Perspective, Causal Embedding, Knowledge Distillation, Algorithm Scalability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/617/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

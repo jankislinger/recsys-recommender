@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Climbing crags repetitive choices and recommendations
+Abstract:
+Outdoor sport climbing in Northern Italy attracts climbers from around the world. While this country has many rock formations, it offers enormous possibilities for adventurous people to explore the mountains. Unfortunately, this great potential causes a problem in finding suitable destinations (crags) to visit for climbing activity. Existing recommender systems in this domain address this issue and suggest potentially interesting items to climbers utilizing a content-based approach. These systems understand users’ preferences from their past logs recorded in an electronic training diary. At the same time, some sports people have a behavioral tendency to revisit the same place for subjective reasons. It might be related to weather and seasonality (for instance, some crags are suitable for climbing in winter/summer only), the users’ preferences (when climbers like specific destinations more than others), or personal goals to be achieved in sport (when climbers plan to try some routes again). Unfortunately, current climbing crags recommendations do not adapt when users demonstrate these repetitive behavior patterns. Sequential recommender systems can capture such users’ habits since their architectures were designed to model users’ next item choice by learning from their previous decision manners. To understand to which extent these sequential recommendations can predict the following crags choices in sport climbing, we analyzed a scenario when climbers show repetitious decisions. Further, we present a data set from collected climbers’ e-logs in the Arco region (Italy) and applied several sequential recommender systems architectures for predicting climbers’ following crags’ visits from their past logs. We evaluated these recommender systems offline and compared ranking metrics with the other reported results on the different data sets. The work concludes that sequential models obtain comparably accurate results as in the other studies and have the prospect for climbers’ subsequent visit prediction and crags recommendations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article about climbing crag recommendations. Let me go through it step by step.
+
+First, the title is &#34;Climbing crags repetitive choices and recommendations.&#34; The abstract talks about recommending suitable destinations for climbers in Northern Italy, specifically using a content-based approach with user logs from electronic training diaries. It mentions that existing systems don&#39;t adapt to users&#39; repetitive behavior patterns, so they used sequential recommender systems to model this.
+
+Alright, so the key elements here are:
+
+1. Recommender Systems: The article is about building and evaluating recommendation algorithms.
+2. Sequential Recommendations: They specifically use sequential models to predict next choices based on past behavior.
+3. Sport Climbing: The domain is outdoor sport climbing, focusing on crags in Italy.
+4. Behavioral Patterns: It deals with repetitive user choices influenced by factors like weather, preferences, or personal goals.
+5. Dataset: They used a dataset from climbers&#39; e-logs in the Arco region.
+6. Evaluation Metrics: They evaluated using ranking metrics and compared with other studies.
+
+Now, thinking about categories based on the guidelines:
+
+- Algorithm Family: Sequential Recommender Systems is definitely one because they use models that capture sequences of user behavior.
+  
+- Domain: The main domain here is Climbing or Outdoor Sports, but also could be more specific like Mountain Climbing. But I think Climbing and Outdoor Sports are good.
+
+- Recommendation Space Aspects: It mentions repetitive choices, so Repetitive Choices is relevant. Also, since they&#39;re predicting next items based on past behavior, Next-item Prediction fits.
+
+- Evaluation Aspects: They evaluated using metrics, specifically Ranking Metrics. So that&#39;s another category.
+
+- Data Sources: The data comes from Electronic Training Diaries and Climbers&#39; Logs. Those should be included as categories.
+
+- Applications: There&#39;s a real-world application with A/B Testing or User Surveys? Wait, the abstract doesn&#39;t mention A/B tests or surveys; it mentions evaluating offline. So maybe not A/B Test but Real World Application because they used real data from e-logs and applied models to make recommendations.
+
+Putting this together, I need at least 8 categories. Let me list them:
+
+1. Recommender Systems - core topic.
+2. Sequential Recommender Systems - specific algorithm family.
+3. Climbing - domain specificity.
+4. Outdoor Sports - broader domain category.
+5. Repetitive Choices - user behavior aspect.
+6. Next-item Prediction - recommendation aspect.
+7. Ranking Metrics - evaluation metric used.
+8. Electronic Training Diaries - data source.
+9. Climbers&#39; Logs - another name for the data source.
+
+Wait, maybe I can combine some categories to avoid redundancy. For example, &#34;Climbing&#34; and &#34;Outdoor Sports&#34; are both domains but could be separate if we want broader and narrower categories. Similarly, &#34;Electronic Training Diaries&#34; and &#34;Climbers&#39; Logs&#34; might overlap, but they&#39;re slightly different, so both can be included.
+
+I should also consider if any other aspects fit into the categories like whether it&#39;s a real-world application or theoretical. Since they used real data and evaluated in an offline setting with actual climbers&#39; logs, Real World Application makes sense.
+
+So my final list would include:
+
+- Recommender Systems
+- Sequential Recommender Systems
+- Climbing
+- Outdoor Sports
+- Repetitive Choices
+- Next-item Prediction
+- Ranking Metrics
+- Electronic Training Diaries
+- Climbers&#39; Logs
+- Real World Application
+
+That&#39;s 10 categories, which fits within the 8-12 range. I think each category is relevant and covers different aspects of the article without being too narrow or broad.
+&lt;/think&gt;
+
+Recommender Systems, Sequential Recommender Systems, Climbing, Outdoor Sports, Repetitive Choices, Next-item Prediction, Ranking Metrics, Electronic Training Diaries, Climbers&#39; Logs, Real World Application</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Climbing crags repetitive choices and recommendations
+Abstract:
+Outdoor sport climbing in Northern Italy attracts climbers from around the world. While this country has many rock formations, it offers enormous possibilities for adventurous people to explore the mountains. Unfortunately, this great potential causes a problem in finding suitable destinations (crags) to visit for climbing activity. Existing recommender systems in this domain address this issue and suggest potentially interesting items to climbers utilizing a content-based approach. These systems understand users’ preferences from their past logs recorded in an electronic training diary. At the same time, some sports people have a behavioral tendency to revisit the same place for subjective reasons. It might be related to weather and seasonality (for instance, some crags are suitable for climbing in winter/summer only), the users’ preferences (when climbers like specific destinations more than others), or personal goals to be achieved in sport (when climbers plan to try some routes again). Unfortunately, current climbing crags recommendations do not adapt when users demonstrate these repetitive behavior patterns. Sequential recommender systems can capture such users’ habits since their architectures were designed to model users’ next item choice by learning from their previous decision manners. To understand to which extent these sequential recommendations can predict the following crags choices in sport climbing, we analyzed a scenario when climbers show repetitious decisions. Further, we present a data set from collected climbers’ e-logs in the Arco region (Italy) and applied several sequential recommender systems architectures for predicting climbers’ following crags’ visits from their past logs. We evaluated these recommender systems offline and compared ranking metrics with the other reported results on the different data sets. The work concludes that sequential models obtain comparably accurate results as in the other studies and have the prospect for climbers’ subsequent visit prediction and crags recommendations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on its title and abstract. Let me read through them carefully.
+
+The title is &#34;Climbing crags repetitive choices and recommendations.&#34; So it&#39;s about recommendation systems in the context of climbing. The abstract mentions that existing recommender systems use a content-based approach but don&#39;t adapt when climbers show repetitive behavior, like revisiting the same spots due to weather, personal preferences, or goals.
+
+The authors suggest using sequential recommender systems to predict future choices based on past logs from an electronic training diary. They tested this with data from climbers in Arco, Italy, and compared it against other studies.
+
+So, what are the main themes here? The core is recommendation systems applied to climbing crags. The focus is on repetitive behavior and how sequential models can improve recommendations.
+
+Looking at the categories provided: they need to be specific and broad enough for users to find relevant content easily. The guidelines say each article should go into 8-12 categories, so I&#39;ll aim for that number.
+
+First, &#34;Recommendation Systems&#34; is obvious since it&#39;s about recommending crags. Then, &#34;Recommender Systems&#34; is a bit redundant but useful as another keyword.
+
+Since the study focuses on repetitive user behavior, &#34;User Behavior Analysis&#34; and &#34;Repetitive Behavior&#34; are relevant categories. 
+
+The article uses data from electronic training diaries, so &#34;Data Logging&#34; and &#34;User Data Analysis&#34; fit here. They collected logs to build their models.
+
+They specifically look at climbers&#39; choices influenced by weather and seasonality, so including &#34;Weather Impact&#34; and &#34;Seasonality&#34; makes sense.
+
+Sequential recommender systems are the method used, so that&#39;s another category: &#34;Sequential Recommender Systems.&#34; 
+
+Climbing crags as a specific application area is important, so I&#39;ll add &#34;Climbing&#34; and &#34;Outdoor Sports.&#34;
+
+They evaluated their model against other datasets, which ties into evaluation metrics, so &#34;Evaluation Metrics&#34; is relevant.
+
+The study focuses on predicting future choices based on past actions, so &#34;Prediction Models&#34; is another good category.
+
+Lastly, they&#39;re looking at real-world applications in climbing, so adding &#34;Real-World Applications&#34; would be useful for users interested in practical implementations.
+
+Let me list these categories: Recommendation Systems, Recommender Systems, Climbing, Repetitive Behavior, User Behavior Analysis, Data Logging, Sequential recommender systems, Prediction Models, Weather Impact, Seasonality, Outdoor Sports, Evaluation Metrics, Real-World Applications. That&#39;s 13 categories, which meets the guideline of at least 8.
+
+I should check if any other relevant categories might fit. They mention climbers&#39; preferences and goals, but those are covered under &#34;User Behavior Analysis&#34; and &#34;Repetitive Behavior.&#34; I think this list covers all the necessary aspects without being too broad or too narrow.
+&lt;/think&gt;
+
+Recommendation Systems, Recommender Systems, Climbing, Repetitive Behavior, User Behavior Analysis, Data Logging, Sequential recommender systems, Prediction Models, Weather Impact, Seasonality, Outdoor Sports, Evaluation Metrics, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

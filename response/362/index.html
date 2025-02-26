@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Unbiased Offline Recommender Evaluation for Missing-Not-At-Random Implicit Feedback
+Abstract:
+Implicit-feedback recommenders (ImplicitRec) leverage positive-only user-item interactions, such as clicks, to learn personalized user preferences. Recommenders are often evaluated and compared offline using datasets collected from online platforms. These platforms are subject to popularity bias (i.e., popular items are more likely to be presented and interacted with), and therefore logged ground truth data is Missing-Not-At-Random (MNAR). As a result, the existing Average-Over-All (AOA) evaluation is biased towards accurately recommending trendy items. Prior research on debiasing MNAR data for explicit-rating recommenders (ExplicitRec) are not directly applicable due to the fact that negative user opinion is not available in implicit feedback. In this paper, we (a) show that existing offline evaluations for ImplicitRec are biased and (b) develop an unbiased and practical offline evaluator for implicit MNAR datasets using the inverse-propensity-weighting technique. Through extensive experiments using three real world datasets and four classical and state-of-the-art algorithms, we show that (a) popularity bias is widely manifested in item presentation and interaction; (b) evaluation bias due to MNAR data pervasively exists in most ImplicitRec; and (c) the unbiased estimator can correct the potential inaccurate judgements of algorithms’ relative utilities.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s tackle this categorization task. I need to assign multiple relevant categories to the given research article based on its title and abstract. The goal is to ensure that users can easily find and explore related content by having a well-organized interface.
+
+First, I&#39;ll read through the title and abstract carefully. The title mentions &#34;Unbiased Offline Recommender Evaluation for Missing-Not-At-Random Implicit Feedback.&#34; This tells me the article is about recommendation systems, specifically dealing with implicit feedback data that&#39;s missing not at random (MNAR). 
+
+Looking at the abstract, it discusses how implicit-feedback recommenders use positive interactions like clicks but are biased due to popularity. The paper addresses this bias by developing an unbiased evaluator using inverse-propensity-weighting technique. They tested this with real-world datasets and various algorithms.
+
+Now, I need to identify relevant categories. Starting with the algorithm family: Matrix Factorization is a common method in recommendation systems, so that&#39;s one. Collaborative Filtering is another since it deals with user-item interactions.
+
+The domain here is implicit feedback because the article focuses on click data without explicit ratings. The problem domain is recommendation systems, obviously. Evaluation metrics are crucial as they discuss unbiased evaluation methods.
+
+Cold start might be relevant since popularity bias can affect new or less popular items, making them harder to recommend—this ties into cold start issues where there&#39;s insufficient data for certain items or users.
+
+Bias and fairness in recommendations are important themes here because the paper addresses how existing evaluations are biased towards popular items. Popularity bias is explicitly mentioned, so that should be a category.
+
+User behavior analysis comes into play as they discuss user interactions and how these affect recommendation accuracy. Real-world applications are covered since they tested their approach with real datasets and discussed practical implications.
+
+Propensity scoring is used in the evaluation method (inverse-propensity-weighting), which relates to adjusting for bias. The unbiased evaluation technique itself is a key contribution, so that&#39;s another category.
+
+Scalability could be relevant because recommendation systems need to handle large datasets efficiently, though this isn&#39;t explicitly mentioned but can be inferred as part of practical applications.
+
+Putting it all together, these categories should cover the article&#39;s content and help users find related research easily. I&#39;ve made sure each category is both specific enough to be useful and broad enough to include similar studies.
+&lt;/think&gt;
+
+Implicit Feedback, Matrix Factorization, Collaborative Filtering, Recommendation Systems, Evaluation Metrics, Cold Start, Bias and Fairness in Recommendations, Popularity Bias, User Behavior Analysis, Real-World Applications, Propensity Scoring, Unbiased Evaluation Technique, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Unbiased Offline Recommender Evaluation for Missing-Not-At-Random Implicit Feedback
+Abstract:
+Implicit-feedback recommenders (ImplicitRec) leverage positive-only user-item interactions, such as clicks, to learn personalized user preferences. Recommenders are often evaluated and compared offline using datasets collected from online platforms. These platforms are subject to popularity bias (i.e., popular items are more likely to be presented and interacted with), and therefore logged ground truth data is Missing-Not-At-Random (MNAR). As a result, the existing Average-Over-All (AOA) evaluation is biased towards accurately recommending trendy items. Prior research on debiasing MNAR data for explicit-rating recommenders (ExplicitRec) are not directly applicable due to the fact that negative user opinion is not available in implicit feedback. In this paper, we (a) show that existing offline evaluations for ImplicitRec are biased and (b) develop an unbiased and practical offline evaluator for implicit MNAR datasets using the inverse-propensity-weighting technique. Through extensive experiments using three real world datasets and four classical and state-of-the-art algorithms, we show that (a) popularity bias is widely manifested in item presentation and interaction; (b) evaluation bias due to MNAR data pervasively exists in most ImplicitRec; and (c) the unbiased estimator can correct the potential inaccurate judgements of algorithms’ relative utilities.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article based on its title and abstract. Let me start by reading through them carefully.
+
+The title is &#34;Unbiased Offline Recommender Evaluation for Missing-Not-At-Random Implicit Feedback.&#34; That tells me the focus is on recommendation systems, specifically dealing with implicit feedback where data might be missing not at random (MNAR). 
+
+Looking at the abstract: It talks about implicit-feedback recommenders that use clicks or other positive interactions. The issue here is that when evaluating these recommenders offline, the data can have popularity bias because popular items are more likely to be interacted with. This leads to MNAR (Missing-Not-At-Random) issues in the logged data.
+
+The paper addresses this by introducing an unbiased evaluation method using inverse-propensity-weighting. They test it across datasets and various recommendation algorithms, showing that their approach corrects for biases in evaluating these systems.
+
+Now, thinking about the categories:
+
+1. **Implicit Feedback**: The article clearly deals with implicit feedback, so this is a primary category.
+2. **Missing-Not-At-Random (MNAR)**: This is central to the problem they&#39;re addressing, so it should be included.
+3. **Unbiased Evaluation**: They develop an unbiased evaluator, which is a key contribution.
+4. **Offline Recommender Systems**: The evaluation is done offline, so this category fits.
+5. **Bias Correction**: They correct for bias in evaluations, making this relevant.
+6. **Weighting Techniques**: They use inverse-propensity-weighting, so this is another category.
+
+I should ensure that these categories are clear and cover the main aspects of the paper without being too specific or broad. Also, since each article needs at least 8-12 categories, I might need to think if there are more relevant ones. 
+
+Looking again: The paper is about recommendation systems, so &#34;Recommendation Systems&#34; should be included. It&#39;s also dealing with evaluation metrics and real-world applications (as they tested on datasets), so those could be additional categories.
+
+So compiling all these, the categories would include Implicit Feedback, MNAR, Unbiased Evaluation, Offline Recommender Systems, Bias Correction, Weighting Techniques, Recommendation Systems, Evaluation Metrics, Real-World Applications. That&#39;s nine categories, which is within the required range.
+&lt;/think&gt;
+
+Implicit Feedback, Missing-Not-At-Random (MNAR), Unbiased Evaluation, Offline Recommender Systems, Bias Correction, Weighting Techniques, Recommendation Systems, Evaluation Metrics, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

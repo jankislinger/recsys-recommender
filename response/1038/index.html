@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: End-to-End Cost-Effective Incentive Recommendation under Budget Constraint with Uplift Modeling
+Abstract:
+In modern online platforms, incentive (\textit{e.g}., discounts, bonus) are essential factors that enhance user engagement and increase platform revenue. Over recent years, uplift modeling has been introduced as a strategic approach to assign incentive to individual customers. Especially, in many real-world applications, online platforms can only incentivize customers with specific budget constraints. This problem can be reformulated as the multi-choice knapsack problem (MCKP). The objective of this optimization is to select the optimal incentive for each customer in order to maximize the return-on-investment (ROI). Recent works in this field frequently tackle the problem of budget allocation using a two-stage approach. %: the first stage utilizes causal inference algorithms to estimate the individual treatment effect or uplift, while the second stage employs integer programming techniques to determine the optimal solution for budget allocation. However, this solution is confronted with the following challenges: (1) The commonly used causal inference methods often ignore the domain knowledge in online marketing, where the expected response curve of a customer should be monotonic and smooth as the incentive increases. (2) There is an optimality gap between the two stages, resulting in inferior sub-optimal allocation performance, which is due to the loss of the incentive recommendation information for the uplift prediction under the limited budget constraint. To address these challenges, we propose a novel \underline{E}nd-to-\underline{E}nd Cost-\underline{E}ffective \underline{I}ncentive \underline{R}ecommendation (E$^3$IR) model under the budget constraint. Specifically, our methods consist of two modules: the uplift prediction module and the differentiable allocation module. In the uplift prediction module, we construct prediction heads to capture the incremental improvement between adjacent treatments with the marketing domain constraints (\textit{i.e.}, monotonic and smooth). %To obtain a monotonic user response curve, we constrain the output of each prediction head to be non-negative. In the differentiable allocation module, we incorporate integer linear programming (ILP) as a differentiable layer input. Furthermore, we conduct extensive experiments on both public and real product datasets, which demonstrate that our E$^3$IR improves allocation performance compared to existing two-stage approaches.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about incentive recommendation under budget constraints using uplift modeling. Let me go through the key points step by step.
+
+First, the title mentions &#34;End-to-End Cost-Effective Incentive Recommendation.&#34; So, it&#39;s about recommendations but specifically for incentives like discounts or bonuses. That makes me think of categories related to recommendation systems and maybe marketing strategies.
+
+The abstract talks about online platforms enhancing user engagement with incentives. This points towards applications in e-commerce, since those are common platforms where such strategies are used. It also mentions budget constraints, which is a resource management issue. So, I should consider Resource Management as a category.
+
+Uplift modeling is mentioned as a strategic approach to assign incentives. Uplift modeling isn&#39;t one of the standard categories I know, but it&#39;s a specific technique in recommendation systems, so maybe I can include that as a subcategory or a specific aspect under recommendation strategies.
+
+The problem is reformulated as a multi-choice knapsack problem (MCKP), which is an optimization problem. This indicates that the article deals with optimization techniques. So, categories like Optimization and Multi-Choice Knapsack Problem make sense here.
+
+They propose a model called E³IR, which combines uplift prediction and differentiable allocation modules. The first module uses causal inference but incorporates domain knowledge about customer response curves being monotonic and smooth. This suggests that they&#39;re applying Causal Inference techniques with specific constraints from the marketing domain, so Marketing Domain Constraints could be another category.
+
+The second module is a differentiable allocation layer that integrates integer linear programming (ILP) as a differentiable component. That ties into optimization methods within recommendation systems, so Optimization Methods and Integer Linear Programming should be included.
+
+They also mention conducting experiments on both public and real product datasets, indicating they have applications in real-world settings with A/B testing or user surveys. So, Real-World Applications is appropriate here.
+
+Putting it all together, the categories that fit this article are:
+
+1. Recommendation Systems: Since it&#39;s about recommending incentives.
+2. Marketing Strategies: Deals with customer engagement and incentives.
+3. E-commerce: Online platforms where these strategies apply.
+4. Uplift Modeling: The specific technique used for assigning incentives.
+5. Resource Management: Managing budget constraints effectively.
+6. Optimization: Solving the problem through optimization techniques.
+7. Causal Inference: Used in the uplift prediction module.
+8. Integer Linear Programming: Part of their allocation method.
+9. Real-World Applications: Testing on real datasets.
+
+I think these categories cover both the technical aspects and the application areas, making it user-friendly for someone looking into recommendation strategies, marketing techniques, or optimization methods.
+&lt;/think&gt;
+
+Recommendation Systems, Marketing Strategies, E-commerce, Uplift Modeling, Resource Management, Optimization, Causal Inference, Integer Linear Programming, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

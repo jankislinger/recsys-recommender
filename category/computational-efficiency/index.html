@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/performance-evaluation/">Performance Evaluation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Low Rank Field-Weighted Factorization Machines for Low Latency Item Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Ariel Raviv, Tularam Ban, Alex Shtoff, Oren Somekh, Michael Viderman, Naama Haramaty-Krasne</p>
+    <p>Factorization machine (FM) variants are widely used in recommendation systems that operate under strict throughput and latency requirements, such as online advertising systems. FMs have two prominent strengths. First, is their ability to model pairwise feature interactions while being resilient to data sparsity by learning factorized representations. Second, their computational graphs facilitate fast inference and training. Moreover, when items are ranked as a part of a query for each incoming user, these graphs facilitate computing the portion stemming from the user and context fields only once per query.  Thus, the computational cost for each ranked item is proportional only to the number of fields that vary among the ranked items. Consequently, in terms of inference cost, the number of user or context fields is practically unlimited. More advanced variants of FMs, such as field-aware and field-weighted FMs, provide better accuracy by learning a representation of field-wise interactions, but require computing all pairwise interaction terms explicitly. In particular, the computational cost during inference is proportional to the square of the number of fields, including user, context, and item. When the number of fields is large, this is prohibitive in systems with strict latency constraints, and imposes a limit on the number of user and context fields for a given computational budget. To mitigate this caveat, heuristic pruning of low intensity field interactions is commonly used to accelerate inference. In this work we propose an alternative to the pruning heuristic in field-weighted FMs using a diagonal plus symmetric low-rank decomposition. Our technique reduces the computational cost of inference, by allowing it to be proportional to the number of item fields only. Using a set of experiments on real-world datasets, we show that aggressive rank reduction outperforms similarly aggressive pruning, both in terms of accuracy and item recommendation speed. Beyond computational complexity analysis, we corroborate our claim of faster inference experimentally, both via a synthetic test, and by having deployed our solution to a major online advertising system, where we observed significant ranking latency improvements. We made the code to reproduce the results on public datasets and synthetic tests available at https://anonymous.4open.science/r/pytorch-fm-0EC0.</p>
+    <p><strong>Categories:</strong> Factorization Machines (FM), Matrix Factorization, Online Advertising, Low Latency, Computational Efficiency, Field-Weighted Factorization Machines, Inference Optimization, Real-World Applications, Performance Evaluation, Low Rank Decomposition (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1048/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>DNS-Rec: Data-aware Neural Architecture Search for Recommender Systems (2024)</h3>
+    <p><strong>Authors:</strong> Zijian Zhang, Xiangyu Zhao, Ruocheng Guo, Sheng Zhang, Chenyi Zhuang, Jinjie Gu, Yao Zhao, Hongzhi Yin, Maolin Wang</p>
+    <p>In the era of data proliferation, efficiently sifting through vast information to extract meaningful insights has become increasingly crucial. This paper addresses the computational and resource inefficiencies prevalent in existing Sequential Recommender Systems (SRSs). However, existing SRSs are often plagued by significant computational overhead and resource inefficiency during the inference stage. To address these challenges, we introduce an innovative approach combining pruning methods with advanced model designs. Furthermore, we delve into resource-constrained Neural Architecture Search (NAS), an emerging technique in recommender systems, to optimize models in terms of FLOPs, latency, and energy consumption while maintaining or enhancing accuracy. Our principal contribution is the development of a Data-aware Neural Architecture Search for Recommender System (DNS-Rec). DNS-Rec is specifically designed to tailor compact network architectures for attention-based SRS models, thereby ensuring accuracy retention. It incorporates data-aware gates to enhance the performance of the recommendation network by learning information from historical user-item interactions. Moreover, DNS-Rec employs a dynamic resource constraint strategy, stabilizing the search process and yielding more suitable architectural solutions. We demonstrate the effectiveness of our approach through rigorous experiments conducted on three benchmark datasets, which highlight the superiority of DNS-Rec in SRSs. Our findings set a new standard for future research in efficient and accurate recommendation systems, marking a significant step forward in this rapidly evolving field.</p>
+    <p><strong>Categories:</strong> Neural Architecture Search, Recommender Systems, Sequential Recommender Systems (SRSs), Computational Efficiency, Resource Optimization, Attention-Based Models, Data-Aware Methods, Pruning Techniques, Scalability, Energy Efficiency, Dynamic Resource Allocation, Model Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1027/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Adversarial Collaborative Filtering for Free (2023)</h3>
+    <p><strong>Authors:</strong> Chin-Chia Michael Yeh, Vivian Lai, Yan Zheng, Hao Yang, Mahashweta Das, Yujie Fan, Xiaoting Li, Huiyuan Chen</p>
+    <p>Collaborative Filtering (CF) has been successfully applied to help users discover the items of interest. Nevertheless, existing CF methods suffer from noisy data issue, which negatively impacts the quality of personalized recommendation. To tackle this problem, many  prior studies leverage the adversarial learning principle to regularize the representations of users and items, which  has shown great ability in improving both generalizability and robustness. Generally, those methods  learn adversarial perturbations and model parameters using min-max optimization framework. However, there still have two major limitations: 1) Existing methods lack theoretical guarantees of why adding perturbations improve the model generalizability and robustness since noisy data is naturally different from adversarial attacks; 2)  Solving min-max optimization is time-consuming.  In addition to updating the model parameters, each iteration requires additional computations to update the perturbations, making them not scalable for industry-scale datasets. In this paper, we present Sharpness-aware Matrix Factorization (SharpMF), a simple yet effective method that conducts adversarial training without extra computational cost over the base optimizer. To achieve this goal, we first revisit the existing adversarial collaborative filtering and discuss its connection with recent Sharpness-aware Minimization. This analysis shows that adversarial training actually seeks model parameters that lie in neighborhoods having uniformly low loss values, resulting in better generalizability. To reduce the computational overhead, SharpMF introduces a novel trajectory loss to measure sharpness between current weights and past weights. Experimental results on real-world datasets demonstrate that our SharpMF achieves superior performance with almost zero additional computational cost comparing to adversarial training.</p>
+    <p><strong>Categories:</strong> Adversarial Training, Collaborative Filtering, Matrix Factorization, Recommendation Systems, Noise Handling, Generalizability, Robustness, Computational Efficiency, Optimization Techniques, Real-World Applications, User-Centric Design, Scalability, Robustness in Machine Learning (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/848/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>OutRank: Speeding up AutoML-based Model Search for Large Sparse Data sets with Cardinality-aware Feature Ranking (2023)</h3>
+    <p><strong>Authors:</strong> Blaž Škrlj, Blaž Mramor</p>
+    <p>The design of modern recommender systems relies on understanding which parts of the feature space are relevant for solving a given recommendation task. However, real-world data sets in this domain are often characterized by their large size, sparsity, and noise, making it challenging to identify meaningful signals. Feature ranking represents an efficient branch of algorithms that can help address these challenges by identifying the most informative features and facilitating the automated search for more compact and better-performing models (AutoML). We introduce OutRank, a system for versatile feature ranking and data quality-related anomaly detection. OutRank was built with categorical data in mind, utilizing a variant of mutual information that is normalized with regard to the noise produced by features of the same cardinality. We further extend the similarity measure by incorporating information on feature similarity and combined relevance. The proposed approach’s feasibility is demonstrated by speeding up the state-of-the-art AutoML system on a synthetic data set with no performance loss. Furthermore, we considered a real-life click-through-rate prediction data set where it outperformed strong baselines such as random forest-based approaches. The proposed approach enables exploration of up to 300% larger feature spaces compared to AutoML-only approaches, enabling faster search for better models on off-the-shelf hardware.</p>
+    <p><strong>Categories:</strong> Recommendation Algorithms, Feature Ranking, AutoML, Large Data Sets, Sparse Data, Categorical Data, Cardinality-aware Methods, Anomaly Detection, Information Theory, Synthetic Data, Real-world Applications, Computational Efficiency, Model Search (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/965/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Keqin Bao, Jizhi Zhang, Xiangnan He, Fuli Feng, Wenjie Wang, Yang Zhang</p>
+    <p>The impressive performance of Large Language Models (LLMs) across various fields has encouraged researchers to investigate their potential in recommendation tasks. To harness the LLMs’ extensive knowledge and powerful generalization abilities, initial efforts have tried to design instructions for recommendation tasks through In-context Learning. However, the recommendation performance of LLMs remains limited due to (i) significant differences between LLMs’ language-related pre-training tasks and recommendation tasks, and (ii) inadequate recommendation data during the LLMs’ pre-training. To fill the gap, we consider further tuning LLMs for recommendation tasks. To this end, we propose a lightweight tuning framework for LLMs-based recommendation, namely LLM4Rec, which constructs the recommendation data as tuning samples and utilizes LoRA for lightweight tuning. We conduct experiments on two datasets, validating that LLM4Rec is highly efficient w.r.t. computing costs (e.g., a single RTX 3090 is sufficient for tuning LLaMA-7B), and meanwhile, it can significantly enhance the recommendation capabilities of LLMs in the movie and book domains, even with limited tuning samples (< 100 samples). Furthermore, LLM4Rec exhibits strong generalization ability in cross-domain recommendation. Our code and data are available at https://anonymous.4open.science/r/LLM4rec.</p>
+    <p><strong>Categories:</strong> Large Language Models, LoRA (Low-Rank Adaptation), Movies, Books, In-Context Learning, Cross-Domain Recommendation, Computational Efficiency, Dataset Evaluation, Recommendation Systems, Tuning Frameworks, Lightweight Fine-Tuning, Generalization Ability, Open-Source Implementation (<i>deepseek-r1:70b</i>)</p>
+    <p><a href="/recsys-recommender/response/936/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A Lightweight Method for Modeling Confidence in Recommendations with Learned Beta Distributions (2023)</h3>
+    <p><strong>Authors:</strong> Harrie Oosterhuis, Norman Knyazev</p>
+    <p>Most recommender systems (RecSys) do not provide an indication of confidence in their decisions. Therefore, they do not distinguish between recommendations of which they are certain, and those where they are not. Existing confidence methods for RecSys are either inaccurate heuristics, conceptually complex or very computationally expensive. Consequently, real-world RecSys applications rarely adopt these methods, and thus, provide no confidence insights in their behavior. In this work, we propose learned beta distributions (LBD) as a simple and practical recommendation method with an explicit measure of confidence. Our main insight is that beta distributions predict user preferences as probability distributions that naturally model confidence on a closed interval, yet can be implemented with the minimal model-complexity. Our results show that LBD maintains competitive accuracy to existing methods while also having a significantly stronger correlation between its accuracy and confidence. Furthermore, LBD has higher performance when applied to a high-precision targeted recommendation task. Our work thus shows that confidence in RecSys is possible without sacrificing simplicity or accuracy, and without introducing heavy computational complexity. Thereby, we hope it enables better insight into real-world RecSys and opens the door for novel future applications.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Confidence Modeling, Beta Distributions, Lightweight Methods, Computational Efficiency, Accuracy Evaluation, Real-World Applications, Practical Methods, Probabilistic Models (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/843/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Revisiting the Performance of iALS on Item Recommendation Benchmarks (2022)</h3>
+    <p><strong>Authors:</strong> Yehuda Koren, Walid Krichene, Steffen Rendle, Li Zhang</p>
+    <p>Matrix factorization learned by implicit alternating least squares (iALS) is a popular baseline in recommender system research publications. iALS is known to be one of the most computationally efficient and scalable collaborative filtering methods. However, recent studies suggest that its prediction quality is not competitive with the current state of the art, in particular autoencoders and other item-based collaborative filtering methods. In this work, we revisit four well-studied benchmarks where iALS was reported to perform poorly and show that with proper tuning, iALS is highly competitive and outperforms any method on at least half of the comparisons. We hope that these high quality results together with iALS’s known scalability spark new interest in applying and further improving this decade old technique.</p>
+    <p><strong>Categories:</strong> Matrix Factorization, Collaborative Filtering, Item Recommendation, Recommender Systems, Performance Evaluation, Computational Efficiency, Benchmark Testing, Scalability, Algorithm Comparison, Research Methodology (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/780/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Learning An Adaptive Meta Model-Generator for Incrementally Updating Recommender Systems (2021)</h3>
+    <p><strong>Authors:</strong> Jie Zhang, Sinno Jialin Pan, Danni Peng, Anxiang Zeng</p>
+    <p>Recommender Systems (RSs) in real-world applications often deal with billions of user interactions daily. To capture the most recent trends effectively, it is common to update the model incrementally using only the newly arrived data. However, this may impede the model’s ability to retain long-term information due to the potential overfitting and forgetting issues. To address this problem, we propose a novel Adaptive Sequential Model Generation (ASMG) framework, which generates a better serving model from a sequence of historical models via a meta generator. For the design of the meta generator, we propose to employ Gated Recurrent Units (GRUs) to leverage its ability to capture the long-term dependencies. We further introduce some novel strategies to apply together with the GRU meta generator, which not only improve its computational efficiency but also enable more accurate sequential modeling. By instantiating the model-agnostic framework on a general deep learning-based RS model, we demonstrate that our method achieves state-of-the-art performance on three public datasets and one industrial dataset.</p>
+    <p><strong>Categories:</strong> Sequence Models, Recommender Systems, Incremental Learning, Meta-Learning, Neural Networks, Model Adaptation, Long-term Learning, Computational Efficiency, Empirical Evaluation, Real-World Applications, Temporal Dynamics, Model Agnostic (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/641/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Auto-Surprise: An Automated Recommender-System (AutoRecSys) Library with Tree of Parzens Estimator (TPE) Optimization (2020)</h3>
+    <p><strong>Authors:</strong> Rohan Anand, Joeran Beel</p>
+    <p>We introduce Auto-Surprise1, an automated recommender system library. Auto-Surprise is an extension of the Surprise recommender system library and eases the algorithm selection and configuration process. Compared to an out-of-the-box Surprise library, without hyper parameter optimization, AutoSurprise performs better, when evaluated with MovieLens, Book Crossing and Jester datasets. It may also result in the selection of an algorithm with significantly lower runtime. Compared to Surprise’s grid search, Auto-Surprise performs equally well or slightly better in terms of RMSE, and is notably faster in finding the optimum hyperparameters.</p>
+    <p><strong>Categories:</strong> Automated Algorithm Selection, Hyperparameter Tuning, System Design, RMSE, Computational Efficiency, Performance Comparison, TPE Optimization, Movies, Books, Recommendation Quality, Scalability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/597/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Evaluating Tag Recommender Algorithms in Real-World Folksonomies: A Comparative Study (2015)</h3>
+    <p><strong>Authors:</strong> Elisabeth Lex, Dominik Kowald</p>
+    <p>To date, the evaluation of tag recommender algorithms has mostly been conducted in limited ways, including -core pruned datasets, a small set of compared algorithms and solely based on recommender accuracy. In this study, we use an open-source evaluation framework to compare a rich set of state-of-the-art algorithms in six unfiltered, open datasets via various metrics, measuring not only accuracy but also the diversity, novelty and computational costs of the approaches. We therefore provide a transparent and reproducible tag recommender evaluation in real-world folksonomies. Our results suggest that the efficacy of an algorithm highly depends on the given needs and thus, they should be of interest to both researchers and developers in the field of tag-based recommender systems.</p>
+    <p><strong>Categories:</strong> Tag Recommender Algorithms, Folksonomy, Evaluation Metrics, Algorithm Comparison, Open Source Tools, Real-World Applications, Diversity of Recommendations, Beyond Accuracy, Computational Efficiency, Personalization, Reproducibility (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/116/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

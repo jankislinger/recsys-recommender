@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommendations: They’re in fashion
+Abstract:
+Farfetch, the leading online platform for luxury fashion, has spent several years developing a recommender system. In fact, recommendations have been quite successful in improving both the user experience and the company’s own business metrics [3 – 9]. In this talk we will shed some light on how we built our recommender system at Farfetch, the main obstacles we faced, and some plans for the future. Recommendations started their journey at Farfetch somewhere around 2015. At the time, we had a single model that trained once per day that updated the users’ recommendations with the same frequency. Currently, we have around 20 models in production and the majority of them are designed to handle streaming data from the users and adapt in realtime to user actions. How can we balance training and improving existing models, creating new models, serving them in real time and still keep our code in check, our tests up to date and our pipelines moving? We will discuss the three main components that we created in order to tackle our real world issue of providing ever-improving recommendations to our customers: The Gym, The Recommenders and The API. The Gym (Fig. 1) is the place where model training takes place. Inspired by the gyms from Open-AI and Criteo [ 1, 2], it mixes Spark and Python according to what we need to process. It has three main goals. Process the data that is going to feed the models, train the models, and evaluate the models. The Gym is equipped to handle every model from deep neural networks to simple collaborative models. It provides a fluid platform for multi model creation. The Recommenders (Fig. 2) define the common structure and interface for each recommender model. From applying the literature and our own experience, we found a predetermined behaviour that every recommendation follows, even though the models can be quite different from one another. It’s the individual components of a specific recommender that change. The components determine which products or brands are the candidates for a recommendation, what the right context for the recommendation is and how to score the candidates in light of the context. We can then mix and match these components to achieve the right recommender model. The Recommenders define these components and the common path that uses them. It’s Strategy Pattern all the way down. The API (Fig. 3), which we call Precog, loads and serves the models previously trained in The Gym and defined in The Recommenders. Every request made to this application triggers an execution for the particular context of the request, which means we can deliver highly personalized and context-aware recommendations. Since every recommender model is defined as implementing a recommend method, the API is simultaneously flexible in the variety of models it handles, but also quite unconcerned with the specific implementation of a recommender model and the libraries/packages needed to train it. Finally, with this presentation, we aim to give an overview and understanding of our recommendations cycle, going in detail about how these three components communicate among them. The final goal is to give a personalised experience to our customers, which given the luxury ecosystem in which Farfetch is involved, has high demands and expectations associated with it.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about Farfetch&#39;s recommender system. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Recommendations: They’re in fashion,&#34; which immediately tells me that the focus is on recommendation systems, specifically within the luxury fashion industry. The abstract talks about how Farfetch developed their recommender system over several years, improving user experience and business metrics. It mentions they started with a single model training daily and now have 20 models handling streaming data in real-time.
+
+Okay, so the core themes here are recommendation systems applied to the luxury fashion domain. I should note that under &#34;Domain of the problem&#34; as Luxury Fashion or maybe just Fashion.
+
+The abstract also discusses the evolution from a single daily model to multiple real-time models. This indicates scalability and real-time processing aspects. So categories like Real-Time Processing, Scalability would be relevant.
+
+They mention challenges in balancing model training, creation, serving, and maintaining code quality. That points towards Software Engineering practices and perhaps DevOps, since they&#39;re talking about pipelines and tests.
+
+The three main components they developed are The Gym, The Recommenders, and The API (Precog). 
+
+- The Gym handles data processing, model training, and evaluation, using a mix of Spark and Python. So this is about Model Training Infrastructure and could fall under Frameworks or Platforms.
+  
+- The Recommenders define the structure with components like candidate selection, context determination, and scoring. This relates to Architecture Patterns, Strategy Pattern specifically. It also involves Algorithm Design because they&#39;re talking about different models.
+
+- The API serves the trained models in real-time, which ties into Real-Time Recommendations and Microservices or Service-Oriented Architectures.
+
+They talk about personalized experiences tailored for a high-demand luxury market, so Personalization is key here.
+
+The evolution from static to dynamic models suggests improvements over time, maybe under System Evolution. 
+
+They also discuss serving multiple models efficiently, so Model Serving is another category.
+
+Looking at the aspects of evaluation, they might be focusing on personalization and user experience metrics, but the abstract doesn&#39;t go into specific metrics beyond business success.
+
+Real-world applications are definitely a factor since it&#39;s about implementing these systems in production. They mention A/B testing and user surveys indirectly through improvements in user experience.
+
+Putting this all together, I need to list at least 8-12 categories that capture these elements accurately without overcrowding any single category. I should avoid too specific terms unless they are clearly relevant.
+&lt;/think&gt;
+
+Luxury Fashion, Recommendation Systems, Real-Time Processing, Scalability, Software Engineering, Model Training Infrastructure, Real-Time Recommendations, Microservices, Architecture Patterns, Strategy Pattern, Algorithm Design, Personalization, DevOps, System Evolution, Model Serving</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

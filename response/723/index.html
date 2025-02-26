@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Building public service recommenders: Logbook of a journey
+Abstract:
+Almost a hundred years old, the BBC is the world’s largest public service broadcasters, providing a broad range of digital, radio, and television services. At the core of what it does, sits the BBC’s mission to “act in the public interest, serving all audiences through the provision of impartial, high-quality and distinctive output and services which inform, educate, and entertain” [ 3]. The BBC’s remit is to be a provider of high quality, accurate, and unbiased content that should aim to engage its audiences, reflecting their diversity, e.g. with respect to their age, culture, and socio-economic background, and following the values of trust and the commitment to being independent, impartial, and honest. Editorial staff follows a large collection of editorial guidelines [ 5] to ensure that all BBC’s output is consistent with these principles. Every week, the BBC reaches more than 80% of UK’s adult population [4 ] and 279 million people worldwide [ 2], giving access to a vast and diverse amount of content, including video, audio, and text, spanning topics such as news, sport, education, and entertainment. BBC content is prized the world over for its quality. However, the media landscape has changed substantially since the BBC was founded, introducing users to unlimited content. Personalised experiences are the norm in online media platforms, e.g. Spotify or Netflix, and are valued positively; for example, personalisation in news has been found found to increase depth and diversity of content [1]. How can the BBC stay relevant for all its audiences this environment? Delivering a personalised experience which is relevant, timely, and contextually useful to every user is key to fulfil the public service remit of the BBC. We need to reach out and appeal to the under-served groups, such as young audiences or ethnic minorities, to be a BBC for each and everyone and not just for the majority. Although this is an excellent way to surface quality content and produce engaging content discovery paths, it is inherently unable to be tailored to the user and is hard to scale—the more the amount of content, the harder it is for curators to find relevant items. Automated recommendations are able to attain these goals. Nevertheless, the shift from manual curation to data-driven personalisation is a change of perspective that entails a number of challenges: Cultural challenges: Editorial have so far decided which pieces of content to surface and how these are connected. How do we switch to a data-driven approach which connects every single audience member to the most relevant and engaging content, while retaining the quality ensured by the domain experts’ experience? Operational challenges: Editorial have the last say on all BBC output and guarantee its compliance with the editorial guidelines. Data-driven personalised content makes no exception to that. How does editorial oversight apply to large-scale recommendations? How do we translate editorial guidelines into data science approaches, tools, and metrics? Infrastructural challenges: The BBC has a large number of products and services. How do we enable data scientists and data engineers to create and deploy highly performant recommenders with the minimal possible effort? This document outlines the technical solutions and work processes our team, Datalab, have devised and the lessons we learnt along this journey.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into relevant categories based on the given guidelines. The title is &#34;Building public service recommenders: Logbook of a journey,&#34; and the abstract talks about the BBC&#39;s efforts in personalizing content while maintaining their public service mission.
+
+First, looking at the family of algorithms mentioned—since it&#39;s about recommendations, perhaps Matrix Factorization or Collaborative Filtering could be relevant, but the abstract doesn&#39;t specify which algorithm. Maybe I&#39;ll include a broader category like &#34;Recommendation Systems&#34; instead.
+
+Next, considering the domain, the article clearly falls under Broadcasting and Media because it&#39;s about the BBC. It also touches on Personalization in media platforms like Spotify and Netflix, so that&#39;s another category.
+
+The focus is on public service broadcasters, emphasizing serving diverse audiences and ensuring content is accessible to all groups, including underserved ones like young people or ethnic minorities. So categories like Diversity of Recommendations and User-Centric Design make sense here because the goal is to appeal to a broad audience with varied backgrounds.
+
+Editorial guidelines are crucial since the BBC has strict rules about impartiality and quality. This suggests that Editorial Oversight is an important aspect, so that&#39;s another category.
+
+The challenges mentioned include cultural, operational, and infrastructural issues when shifting from manual curation to automated recommendations. These can be categorized under Cultural Challenges, Operational Challenges, and Infrastructural Challenges respectively.
+
+The article also discusses the need for scalable solutions as content increases, which points towards Scalability being a key category. Additionally, they mention using data science approaches and metrics to ensure compliance with guidelines, so Data Science Approaches is relevant.
+
+Lastly, real-world applications are evident since it&#39;s about implementing these recommendation systems in a large organization like the BBC, possibly involving A/B testing or user surveys for evaluation.
+
+Putting this all together, I&#39;ll list these categories ensuring they cover both specific and broader aspects of the article. It&#39;s important to have enough categories (8-12) without overcrowding any single one.
+&lt;/think&gt;
+
+Recommendation Systems, Broadcasting/Media, Personalization, Public Service Broadcasting, Diversity of Recommendations, User-Centric Design, Editorial Oversight, Cultural Challenges, Operational Challenges, Infrastructural Challenges, Scalability, Data Science Approaches</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

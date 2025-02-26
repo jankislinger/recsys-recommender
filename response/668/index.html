@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Transformers4Rec: Bridging the Gap between NLP and Sequential / Session-Based Recommendation
+Abstract:
+Much of the recent progress in sequential and session-based recommendation has been driven by improvements in model architecture and pretraining techniques originating in the field of Natural Language Processing. Transformer architectures in particular have facilitated building higher-capacity models and provided data augmentation and training techniques which demonstrably improve the effectiveness of sequential recommendation. But with a thousandfold more research going on in NLP, the application of transformers for recommendation understandably lags behind. To remedy this we introduce Transformers4Rec, an open-source library built upon HuggingFace’s Transformers library with a similar goal of opening up the advances of NLP based Transformers to the recommender system community and making these advancements immediately accessible for the tasks of sequential and session-based recommendation. Like its core dependency, Transformers4Rec is designed to be extensible by researchers, simple for practitioners, and fast and robust in industrial deployments.
+In order to demonstrate the usefulness of the library and the applicability of Transformer architectures in next-click prediction for user sessions, where sequence lengths are much shorter than those commonly found in NLP, we have leveraged Transformers4Rec to win two recent session-based recommendation competitions. In addition, we present in this paper the first comprehensive empirical analysis comparing many Transformer architectures and training approaches for the task of session-based recommendation. We demonstrate that the best Transformer architectures have superior performance across two e-commerce datasets while performing similarly to the baselines on two news datasets. We further evaluate in isolation the effectiveness of the different training techniques used in causal language modeling, masked language modeling, permutation language modeling and replacement token detection for a single Transformer architecture, XLNet. We establish that training XLNet with replacement token detection performs well across all datasets. Finally, we explore techniques to include side information such as item and user context features in order to establish best practices and show that the inclusion of side information uniformly improves recommendation performance. Transformers4Rec library is available at https://github.com/NVIDIA-Merlin/Transformers4Rec/
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to ensure that users can easily find the article through a well-organized interface. 
+
+First, looking at the title: &#34;Transformers4Rec: Bridging the Gap between NLP and Sequential / Session-Based Recommendation.&#34; This tells me it&#39;s about applying transformer models from NLP to recommendation systems, specifically sequential and session-based ones.
+
+The abstract mentions that transformers have improved model capacity and data augmentation techniques for recommendations. It introduces an open-source library called Transformers4Rec, built on HuggingFace&#39;s Transformers library. The paper also discusses winning competitions using this library, comparing different transformer architectures, training approaches, and including side information like user and item features.
+
+So, the main themes are: transformers in recommendation systems, NLP techniques applied to recommendations, session-based and sequential recommendations, evaluation of models, open-source libraries, real-world applications (competitions), performance analysis across datasets, and inclusion of side information.
+
+I should map these themes into categories. The user provided examples like algorithm families, domains, specific recommendation aspects, evaluation aspects, real-world applications, etc. 
+
+Starting with the algorithm family: Transformers are a key part here, so &#34;Transformers&#34; is one category. Also, since it&#39;s about sequential and session-based recommendations, those should be included.
+
+Domain-wise, it applies to e-commerce (from the datasets mentioned) and news recommendation, but maybe as specific categories like &#34;E-commerce,&#34; &#34;News.&#34; But the user&#39;s example didn&#39;t include these domains. Alternatively, they might fall under general application areas.
+
+Specific recommendation aspects: Session-based Recommendation, Sequential Recommendation are definitely relevant. Also, since it deals with including side information, that could be another category, perhaps &#34;Side Information.&#34;
+
+Evaluation aspects: The paper compares different architectures and training approaches, so categories like &#34;Empirical Analysis,&#34; &#34;Model Comparison,&#34; or &#34;Evaluation Metrics&#34; might fit. It also evaluates techniques from causal language modeling, masked LM, etc., so maybe &#34;Language Modeling Techniques.&#34;
+
+Real-world applications: Winning competitions suggests they applied it in real-world scenarios, so &#34;A/B Test&#34; isn&#39;t exactly applicable here, but perhaps &#34;Competitions&#34; or &#34;Industrial Applications.&#34; The user&#39;s example included categories like &#34;Cold Start,&#34; which is a specific recommendation problem. Since the paper talks about industrial deployments, maybe &#34;Industrial Applications.&#34;
+
+Other categories: Open-source libraries are important for reproducibility and adoption, so that should be a category too. Maybe also mention &#34;Pretraining Techniques&#34; since they discuss how NLP techniques influence recommendations.
+
+Putting it all together, I need to list these as clear, descriptive keywords separated by commas.
+&lt;/think&gt;
+
+Transformers, Session-based Recommendation, Sequential Recommendation, Open Source Libraries, Empirical Analysis, Model Comparison, Language Modeling Techniques, E-commerce, News, Side Information, Industrial Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Transformers4Rec: Bridging the Gap between NLP and Sequential / Session-Based Recommendation
+Abstract:
+Much of the recent progress in sequential and session-based recommendation has been driven by improvements in model architecture and pretraining techniques originating in the field of Natural Language Processing. Transformer architectures in particular have facilitated building higher-capacity models and provided data augmentation and training techniques which demonstrably improve the effectiveness of sequential recommendation. But with a thousandfold more research going on in NLP, the application of transformers for recommendation understandably lags behind. To remedy this we introduce Transformers4Rec, an open-source library built upon HuggingFace’s Transformers library with a similar goal of opening up the advances of NLP based Transformers to the recommender system community and making these advancements immediately accessible for the tasks of sequential and session-based recommendation. Like its core dependency, Transformers4Rec is designed to be extensible by researchers, simple for practitioners, and fast and robust in industrial deployments.
+In order to demonstrate the usefulness of the library and the applicability of Transformer architectures in next-click prediction for user sessions, where sequence lengths are much shorter than those commonly found in NLP, we have leveraged Transformers4Rec to win two recent session-based recommendation competitions. In addition, we present in this paper the first comprehensive empirical analysis comparing many Transformer architectures and training approaches for the task of session-based recommendation. We demonstrate that the best Transformer architectures have superior performance across two e-commerce datasets while performing similarly to the baselines on two news datasets. We further evaluate in isolation the effectiveness of the different training techniques used in causal language modeling, masked language modeling, permutation language modeling and replacement token detection for a single Transformer architecture, XLNet. We establish that training XLNet with replacement token detection performs well across all datasets. Finally, we explore techniques to include side information such as item and user context features in order to establish best practices and show that the inclusion of side information uniformly improves recommendation performance. Transformers4Rec library is available at https://github.com/NVIDIA-Merlin/Transformers4Rec/
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I&#39;ve got this research article about Transformers4Rec, which bridges NLP and recommendation systems. Let me break down how to categorize it.
+
+First, the title mentions &#34;Transformers&#34; and &#34;Recommendation,&#34; so that&#39;s a direct hit for Transformer Architecture. It&#39;s all about applying NLP techniques to recommendations.
+
+Looking at the abstract, they talk about sequential and session-based recommendations. So Session-Based Recommendations is definitely a category here. Also, Sequential Recommendations since it&#39;s about sequences of user interactions.
+
+They used Transformers from HuggingFace, so Open Source Tools is relevant because it&#39;s an open-source library. Plus, they mention NVIDIA-Merlin, which ties into Industrial Applications—showing real-world use in industry.
+
+NLP Influence is another key category because the paper discusses how NLP advancements like Transformers are applied to recommendation systems.
+
+Performance Evaluation is present since they compare different architectures and training methods, evaluating their effectiveness across datasets.
+
+They also touch on techniques like causal language modeling and masked language modeling, so these should be separate categories under Training Techniques. Similarly, Replacement Token Detection is another specific technique used.
+
+Including side information like user context is covered in Contextual Features, making that a category too.
+
+Real-World Applications are highlighted through their wins in competitions and use cases in e-commerce and news datasets, so that&#39;s another important category.
+
+Lastly, the paper contributes to the field by providing empirical analysis of various architectures, which falls under Empirical Analysis.
+&lt;/think&gt;
+
+Transformer Architecture, Session-Based Recommendations, Sequential Recommendations, Open Source Tools, NLP Influence, Industrial Applications, Performance Evaluation, Training Techniques, Replacement Token Detection, Contextual Features, Real-World Applications, Empirical Analysis</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

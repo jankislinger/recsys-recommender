@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Data Pruning in Recommender Systems Research: Best-Practice or Malpractice?
+Abstract:
+Many recommender-system datasets are pruned, ie some data is removed that wouldn’t be removed in a production recommender-system. For instance, the MovieLens dataset contains only data from users who rated 20 or more movies. 1 Similarly, some researchers prune data themselves and conduct their experiments only on subsets of the original data, sometimes as little as 0.58% of the original data. We conduct a study to find out how often pruned data is used for recommender system research, and what the effect of data pruning is. We find that 40% of researchers used pruned recommender system datasets for their research, and 15% pruned data themselves. MovieLens is the most used dataset (40%) and can be considered as a defacto standard dataset. Based on MovieLens, we found that removing users with less than 20 ratings is equivalent to removing 5% of ratings and 42% of users. Performance differs widely for different user groups. Users with less than 20 ratings have an RMSE of 1.03 on average, ie 23% worse than users with 20+ ratings (0.84). Ignoring these users may not be always ideal. We discuss the results and conclude that pruning should be avoided, if possible, though more discussion in the community is needed.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about data pruning in recommender systems. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;Data Pruning in Recommender Systems Research: Best-Practice or Malpractice?&#34; The abstract discusses how many recommender system datasets are pruned, meaning some data is removed that wouldn&#39;t be in a production setting. They mention examples like MovieLens dataset only including users who rated 20+ movies and other cases where researchers prune data themselves, sometimes drastically reducing the dataset size.
+
+The study&#39;s findings include that 40% of researchers use pruned datasets, with MovieLens being the most popular. They found pruning can remove a significant number of users and affect performance metrics like RMSE differently for various user groups. The conclusion suggests avoiding pruning if possible but acknowledges the need for more community discussion.
+
+Now, applying the categorization guidelines:
+
+1. **Family of Algorithm**: Not directly about specific algorithms, but about data preprocessing.
+2. **Domain of Problem**: Recommender Systems is the main domain here.
+3. **Recommendation Space Specifics**: Data Pruning seems relevant as it&#39;s a method applied in recommendation research.
+4. **Evaluation Aspects**: They discuss performance metrics (RMSE) and how pruning affects evaluation results.
+5. **Real-World Applications**: The abstract mentions production recommender systems, so A/B Testing or Real-World Applications might fit.
+6. **Data Handling/Preprocessing**: This is central to the article as it&#39;s about data pruning practices.
+7. **User-Centric Considerations**: They analyze the impact on different user groups, especially those with fewer ratings.
+
+Other possible categories could include Dataset Issues, Evaluation Metrics, and Methodology since they discuss how researchers handle data and its effects on results.
+
+Putting this together, the categories should cover areas like recommender systems, data preprocessing, evaluation metrics, dataset issues, real-world applications, user-centric design, cold start (since pruning might relate to handling new users/items), research methodology, and best practices.
+&lt;/think&gt;
+
+Recommender Systems, Data Pruning, Dataset Issues, Evaluation Metrics, User-Centric Design, Cold Start, Research Methodology, Best Practices, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Sustainability at Scale: Bridging the Intention-Behavior Gap with Sustainable Recommendations
+Abstract:
+We present an approach for jointly discovering sustainable products and sustainability-minded customers while making recommendations informed by these discoveries. Identifying sustainable products, and the customers who are interested in purchasing them, can improve customer satisfaction while also having a potentially large positive environmental impact. Finding sustainable products and evaluating their claims is a significant barrier facing sustainability-minded customers. Tools that reduce both these burdens are likely to boost the sale of sustainable products. However, it is difficult to determine the sustainability characteristics of these products — there are a variety of certifications and definitions of sustainability, and quality labeling requires input from domain experts. In this paper, we propose a flexible probabilistic framework that uses domain knowledge to identify sustainable products and customers, and uses these labels to predict customer purchases. We evaluate our approach on grocery items from the Amazon catalog. Our proposed approach outperforms established recommender system models in predicting future purchases while jointly inferring sustainability scores for customers and products.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its content. Let&#39;s start by reading through the title and abstract carefully.
+
+The title is &#34;Sustainability at Scale: Bridging the Intention-Behavior Gap with Sustainable Recommendations.&#34; This immediately tells me that the focus is on sustainability in recommendation systems, aiming to bridge a gap between customer intentions and actual behavior regarding sustainable products.
+
+Looking at the abstract, the authors present an approach for discovering sustainable products and customers who are interested in them. They mention improving customer satisfaction and environmental impact, which suggests both user-centric and environmentally focused goals. The problem they address is the difficulty customers face in finding sustainable products due to various certifications and definitions, as well as the challenge of evaluating these claims.
+
+The proposed solution is a flexible probabilistic framework that uses domain knowledge to identify sustainable products and customers. They evaluate this approach on grocery items from Amazon&#39;s catalog and find that it outperforms existing recommendation models while inferring sustainability scores for both customers and products.
+
+Now, I need to map this into relevant categories based on the guidelines provided. Let me think of possible categories:
+
+1. **Sustainability**: Clearly central to the article.
+2. **Recommendation Systems**: The main area they&#39;re working in.
+3. **User Behavior Analysis**: Since it&#39;s about understanding and influencing customer behavior towards sustainability.
+4. **Environmental Impact**: As they discuss the positive environmental effects.
+5. **Customer Satisfaction**: They aim to improve this through better recommendations.
+6. **Product Discovery**: Helps users find sustainable products, which is a form of discovery.
+7. **Domain-Specific Recommendations**: The grocery sector is specific here.
+8. **Probabilistic Models**: Their approach uses these.
+9. **Machine Learning in Recommendations**: As it&#39;s a recommendation system using machine learning techniques.
+10. **Evaluation Metrics**: They evaluate their model against existing ones, so metrics are important.
+
+Wait, the abstract also mentions domain experts and input from them into labeling, which could relate to **Domain Knowledge Integration**. Also, the fact that they&#39;re inferring sustainability scores suggests aspects of **User Profiling** or **Behavioral Modeling**.
+
+Another angle is the intention-behavior gap, so maybe **Behavioral Psychology** or **Consumer Behavior** as a category.
+
+Since they use Amazon&#39;s catalog data, perhaps including **E-commerce Applications** would be relevant. Also, their approach aims to scale sustainability efforts, which ties into **Scalability** in recommendation systems.
+
+They mention using domain knowledge and labels, so maybe categories like **Labeling Methods** or **Knowledge Integration** could fit.
+
+Putting this together, I should ensure each article is assigned 8-12 categories. Let me list them out:
+
+Sustainability, Recommendation Systems, User Behavior Analysis, Environmental Impact, Customer Satisfaction, Product Discovery, Domain-Specific Recommendations, Probabilistic Models, Machine Learning in Recommendations, Evaluation Metrics, Domain Knowledge Integration, E-commerce Applications.
+
+Wait, that&#39;s 12 categories. I should check if any are redundant or can be combined. For example, &#34;Domain-Knowledge Integration&#34; and &#34;Knowledge Integration&#34; might overlap, so maybe just one is sufficient. Similarly, &#34;Product Discovery&#34; could relate to &#34;Recommendation Systems,&#34; but it&#39;s specific enough.
+
+I think these cover the main aspects: sustainability focus, recommendation techniques used, the domain (ecommerce), methods like probabilistic models and machine learning, evaluation, impact on customer satisfaction and environment, and integration of domain knowledge. This should make the article discoverable through various user interests, such as those focused on environmental issues, recommendation algorithms, or specific applications in e-commerce.
+
+I don&#39;t see any categories that are too niche without enough articles yet, so this should balance well for navigation.
+&lt;/think&gt;
+
+Sustainability, Recommendation Systems, User Behavior Analysis, Environmental Impact, Customer Satisfaction, Product Discovery, Domain-Specific Recommendations, Probabilistic Models, Machine Learning in Recommendations, Evaluation Metrics, Domain Knowledge Integration, E-commerce Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

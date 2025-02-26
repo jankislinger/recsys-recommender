@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Free Lunch! Retrospective Uplift Modeling for Dynamic Promotions Recommendation within ROI Constraints
+Abstract:
+Promotions and discounts have become key components of modern e-commerce platforms. For online travel platforms (OTPs), popular promotions include room upgrades, free meals and transportation services. By offering these promotions, customers can get more value for their money, while both the OTP and its travel partners may grow their loyal customer base. However, the promotions usually incur a cost that, if uncontrolled, can become unsustainable. Consequently, for a promotion to be viable, its associated costs must be balanced by incremental revenue within set financial constraints. Personalized treatment assignment can be used to satisfy such constraints. This paper introduces a novel uplift modeling technique, relying on the Knapsack Problem formulation, that dynamically optimizes the incremental treatment’s outcome subject to the required Return on Investment (ROI) constraints. The technique leverages Retrospective Estimation, a modeling approach that relies solely on data from positive outcome examples. The method also addresses training data bias, long term effects, and seasonality challenges via online-dynamic calibration. This approach was tested via offline experiments and online randomized controlled trials at Booking.com - a leading OTP with millions of customers worldwide, resulting in a significant increase in the target outcome while staying within the required financial constraints and outperforming other approaches.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article about dynamic promotions recommendation using uplift modeling. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Free Lunch! Retrospective Uplift Modeling for Dynamic Promotions Recommendation within ROI Constraints.&#34; The abstract talks about how promotions and discounts are crucial in e-commerce, especially for online travel platforms (OTPs). They mention specific examples like room upgrades, free meals, and transportation. The goal is to offer these promotions sustainably without incurring too much cost.
+
+The paper introduces a novel uplift modeling technique based on the Knapsack Problem, which helps optimize outcomes under ROI constraints. It uses Retrospective Estimation, relying only on positive outcome data, and addresses issues like training bias, long-term effects, and seasonality with online calibration. They tested it at Booking.com, showing improved results compared to other methods.
+
+Now, I need to assign categories based on the guidelines. The article is about recommendation systems, so &#34;Recommendation Systems&#34; should definitely be a category. It&#39;s focused on promotions, so &#34;Promotions&#34; makes sense. Uplift modeling is a specific technique mentioned, so that&#39;s another one. ROI constraints are central, so that&#39;s relevant too.
+
+The domain here is e-commerce, specifically online travel platforms, which I can categorize under both &#34;E-Commerce&#34; and &#34;Travel.&#34; They mention using data from positive outcomes with Retrospective Estimation, so maybe &#34;Data Utilization&#34; or something similar, but perhaps more specific like &#34;Retrospective Estimation.&#34;
+
+They address challenges like training bias, long-term effects, and seasonality. These are technical aspects of the model&#39;s application, so categories like &#34;Bias Mitigation,&#34; &#34;Long-term Effects,&#34; and &#34;Seasonality&#34; would fit.
+
+The evaluation method involves offline experiments and online randomized controlled trials (A/B tests), so &#34;Evaluation Methods,&#34; &#34;Offline Experiments,&#34; and &#34;Online A/B Testing&#34; should be included. They also mention the Knapsack Problem, which is an optimization technique, so that&#39;s another category.
+
+Considering user-centric design, categories like &#34;ROI Optimization&#34; are important for businesses looking to implement such systems. The application at Booking.com shows real-world usage, so &#34;Real-World Applications&#34; fits here too.
+
+Putting it all together, I think the categories should cover the main themes: recommendation systems, promotions, uplift modeling, ROI constraints, e-commerce, travel, data utilization (retrospective estimation), optimization techniques like Knapsack, evaluation methods, handling bias and long-term effects, seasonality, real-world applications, and application-specific areas like online travel. I need to ensure each category is relevant and covers the article&#39;s content without being too broad or narrow.
+
+I should also make sure there are enough categories (8-12) as per guidelines, so maybe 12 would be appropriate here. Let me list them out:
+
+1. Recommendation Systems
+2. Promotions
+3. Uplift Modeling
+4. ROI Constraints
+5. E-Commerce
+6. Travel
+7. Retrospective Estimation
+8. Knapsack Problem (Optimization)
+9. Evaluation Methods
+10. Offline Experiments
+11. Online A/B Testing
+12. Real-World Applications
+
+This covers the key aspects of the article, ensuring it&#39;s discoverable under various relevant topics and is placed in categories that are useful for navigation.
+&lt;/think&gt;
+
+Recommendation Systems, Promotions, Uplift Modeling, ROI Constraints, E-Commerce, Travel, Retrospective Estimation, Knapsack Problem (Optimization), Evaluation Methods, Offline Experiments, Online A/B Testing, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Free Lunch! Retrospective Uplift Modeling for Dynamic Promotions Recommendation within ROI Constraints
+Abstract:
+Promotions and discounts have become key components of modern e-commerce platforms. For online travel platforms (OTPs), popular promotions include room upgrades, free meals and transportation services. By offering these promotions, customers can get more value for their money, while both the OTP and its travel partners may grow their loyal customer base. However, the promotions usually incur a cost that, if uncontrolled, can become unsustainable. Consequently, for a promotion to be viable, its associated costs must be balanced by incremental revenue within set financial constraints. Personalized treatment assignment can be used to satisfy such constraints. This paper introduces a novel uplift modeling technique, relying on the Knapsack Problem formulation, that dynamically optimizes the incremental treatment’s outcome subject to the required Return on Investment (ROI) constraints. The technique leverages Retrospective Estimation, a modeling approach that relies solely on data from positive outcome examples. The method also addresses training data bias, long term effects, and seasonality challenges via online-dynamic calibration. This approach was tested via offline experiments and online randomized controlled trials at Booking.com - a leading OTP with millions of customers worldwide, resulting in a significant increase in the target outcome while staying within the required financial constraints and outperforming other approaches.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m looking at this research article titled &#34;Free Lunch! Retrospective Uplift Modeling for Dynamic Promotions Recommendation within ROI Constraints.&#34; The abstract discusses how promotions in e-commerce, particularly in online travel platforms (OTPs), are crucial but come with costs that need to be balanced. The paper introduces a new uplift modeling technique based on the Knapsack Problem, aiming to optimize treatments under ROI constraints.
+
+First, I&#39;ll break down the key themes and content of the article. It focuses on promotions and their impact on customer value and business growth. The core challenge is balancing costs with incremental revenue, which ties into financial constraints and Return on Investment (ROI). The solution proposed is a novel uplift modeling technique that uses Retrospective Estimation, addressing issues like data bias, long-term effects, and seasonality through dynamic calibration.
+
+Now, considering the categorization guidelines, I need to assign this article to multiple relevant categories. Starting with the family of algorithms mentioned, the Knapsack Problem is clearly an algorithm used here. Uplift modeling is another specific technique in recommendation systems.
+
+Looking at the domain, it&#39;s within e-commerce and specifically online travel platforms (OTPs). So those should be included as categories. The article also deals with ROI constraints, which falls under aspects of evaluation related to financial metrics.
+
+Promotions are a key aspect here, so that&#39;s another category. Retrospective Estimation is a specific method used, so adding that makes sense. Dynamic calibration and long-term effects are challenges addressed, so those should be included as well.
+
+Additionally, real-world applications are mentioned through experiments at Booking.com, involving A/B testing. Therefore, A/B Testing falls under real-world applications. Scalability is implied due to the dynamic nature of the approach, even though it&#39;s not explicitly stated.
+
+Finally, since the article deals with recommendation systems in a specific domain (travel), including &#34;Recommendation Systems&#34; as a broader category makes sense.
+&lt;/think&gt;
+
+Knapsack Problem, Uplift Modeling, E-commerce, Online Travel Platforms, ROI Constraints, Retrospective Estimation, Financial Metrics, Promotions, Dynamic Calibration, Long-Term Effects, Scalability, A/B Testing</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

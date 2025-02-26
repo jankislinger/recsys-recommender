@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Knowledge Graphs</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-metrics/">Evaluation Metrics</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Towards Open-World Recommendation with Knowledge Augmentation from Large Language Models (2024)</h3>
+    <p><strong>Authors:</strong> Weiwen Liu, Bo Chen, Yong Yu, Hong Zhu, Yunjia Xi, Weinan Zhang, Jianghao Lin, Xiaoling Cai, Jieming Zhu, Ruiming Tang</p>
+    <p>Recommender system plays a vital role in various online services. However, its insulated nature of training and deploying separately within a specific closed domain limits its access to open-world knowledge. Recently, the emergence of large language models (LLMs) has shown promise in bridging this gap by encoding extensive world knowledge and demonstrating reasoning capabilities. Nevertheless, previous attempts to directly use LLMs as recommenders cannot meet the inference latency demand of industrial recommender systems. In this work, we propose an Open-World Knowledge Augmented Recommendation Framework with Large Language Models, dubbed KAR, to acquire two types of external knowledge from LLMs — the reasoning knowledge on user preferences and the factual knowledge on items. We introduce factorization prompting to elicit accurate reasoning on user preferences. The generated reasoning and factual knowledge are effectively transformed and condensed into augmented vectors by a hybrid-expert adaptor in order to be compatible with the recommendation task. The obtained vectors can then be directly used to enhance the performance of any recommendation model. We also ensure efficient inference by preprocessing and prestoring the knowledge from the LLM. Extensive experiments show that KAR significantly outperforms the state-of-the-art baselines and is compatible with a wide range of recommendation algorithms. We deploy KAR to Huawei’s news and music recommendation platforms and gain a 7% and 1.7% improvement in the online A/B test, respectively.</p>
+    <p><strong>Categories:</strong> Large Language Models (LLMs), Knowledge Augmentation, Recommender Systems, Open-World Recommendation, Knowledge Graphs, User Preference Modeling, Factorization Prompting, Feature Extraction, Representation Learning, Hybrid Models, Efficiency Optimization, Scalability, State-of-the-Art Methods, Real-World Applications, A/B Testing, News, Music, Beyond Accuracy, Compatibility (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1071/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Knowledge-Enhanced Multi-Behaviour Contrastive Learning for Effective Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Iadh Ounis, Zeyuan Meng, Zixuan Yi</p>
+    <p>Real-world recommendation scenarios usually need to handle diverse user-item interaction behaviours, including page views, adding items into carts, and purchasing activities. The interactions that precede the actual target behaviour (e.g. purchasing an item) allow to better capture the user’s preferences from different angles, and are used  as auxiliary information (e.g. page views) to enrich the system’s knowledge about the users’ preferences, thereby helping to enhance recommendation for the target behaviour. Despite efforts in modelling the users’ multi-behaviour interaction information, the existing multi-behaviour recommenders  still face two challenges: (1) Data sparsity across multiple user behaviours is a common issue that limits the recommendation performance, particularly for the target behaviour, which typically exhibits fewer interactions compared to other auxiliary behaviours. (2) Noisy auxiliary interactive behaviour where the information in the auxiliary information  might be non-relevant to recommendation.  In this case, a direct  adoption of  contrastive learning between the target behaviour and the auxiliary behaviours will amplify the noise in the auxiliary behaviours, thereby negatively impacting the real semantics that can be derived from the target behaviour. To address these two challenges, we propose a new model called Knowledge-Enhanced Multi-behaviour Contrastive Learning for Recommendation (KEMCL). In particular, to address the problem of sparse user multi-behaviour interaction information, we leverage a tailored knowledge graph (KG) to enrich the semantic representations of items, and generate supervision signals through self-supervised learning so as to enhance  recommendation. In addition, we develop two contrastive learning (CL) methods, inter CL and intra CL, to alleviate the problem of noisy auxiliary interactions. Extensive experiments on three public recommendation datasets show that our proposed KEMCL model significantly outperforms the existing state-of-the-art (SOTA) methods. In particular, our KEMCL model outperforms the best baseline performance, namely KMCLR,  by 5.42% on the large Tmall dataset.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, User Interaction, Auxiliary Information, Data Sparsity, Noisy Data, Contrastive Learning, Knowledge Graphs, Self-Supervised Learning, Real-World Applications, Performance Improvement, E-Commerce (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1095/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>GLAMOR: Graph-based LAnguage MOdel embedding for citation Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Guilin Qi, Adam A. Q. Mohammed, Irfan Ullah, Khan Muhammad, Pavlos Kefalas, Zafar Ali</p>
+    <p>Digital publishing’s exponential growth has created vast scholarly collections. Guiding researchers to relevant resources is crucial, and knowledge graphs (KGs) are key tools for unlocking hidden knowledge. However, current methods focus on external links between concepts, ignoring the rich information within individual papers. Challenges like insufficient multi-relational data, name ambiguity, and cold-start issues further limit existing KG-based methods, failing to capture the intricate attributes of diverse entities. To solve these issues, we propose GLAMOR, a robust KG framework encompassing entities e.g., authors, papers, fields of study, and concepts, along with their semantic interconnections. GLAMOR uses a novel random walk-based KG text generation method and then fine-tunes the language model using the generated text. Subsequently, the acquired context-preserving embeddings facilitate superior top@k predictions. Evaluation results on two public benchmark datasets demonstrate our GLAMOR’s superiority against state-of-the-art methods especially in solving the cold-start problem.</p>
+    <p><strong>Categories:</strong> Knowledge Graphs, Citation Recommendation, Graph-based Methods, Language Models, Random Walk, Cold Start Problem, Embeddings, Research Tools/Methods, Scholarly Publishing (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1096/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>KGGLM: A Generative Language Model for Generalizable Knowledge Graph Representation Learning in Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Alessandro Soccol, Giacomo Balloccu, Gianni Fenu, Mirko Marras, Ludovico Boratto</p>
+    <p>Current recommendation methods based on knowledge graphs rely on entity and relation representations for several steps along the pipeline, with knowledge completion and path reasoning being the most influential. Despite their similarities, the most effective representation methods for these steps differ, leading to inefficiencies, limited representativeness, and reduced interpretability. In this paper, we introduce KGGLM, a decoder-only Transformer model designed for generalizable knowledge representation learning to support recommendation. The model is trained on generic paths sampled from the knowledge graph to capture foundational patterns, and then fine-tuned on paths specific of the downstream step (knowledge completion and path reasoning in our case). Experiments on ML1M and LFM1M show that KGGLM beats twenty-two baselines in effectiveness under both knowledge completion and recommendation. Source code and pre-processed data sets are available at https://github.com/mirkomarras/kgglm.</p>
+    <p><strong>Categories:</strong> Recommendation Algorithms, Knowledge Graphs, Generative Models, Transformer Models, Representation Learning, Knowledge Completion, Path Reasoning, Evaluation Methods, Effectiveness in Recommendations, Scalability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1195/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Explainable and Faithful Educational Recommendations through Causal Language Modelling via Knowledge Graphs (2024)</h3>
+    <p><strong>Authors:</strong> Neda Afreen</p>
+    <p>The rapid expansion of digital education has significantly increased the need for recommender systems to help learners navigate the extensive variety of available learning resources. Recent advancements in these systems have notably improved the personalization of course recommendations. However, many existing systems fail to provide clear explanations for their recommendations, making it difficult for learners to understand why a particular suggestion was made. This lack of transparency can negatively impact trust and acceptance of the system. Researchers have emphasized the importance of explanations in various other domains such as ecommerce, media, and entertainment, demonstrating how explanations can enhance system transparency, foster user trust, and improve decision-making processes. Despite these insights, such approaches have been rarely applied to the educational domain, and their effectiveness in practical use remains largely unexamined. My research focuses on developing explainable recommender systems for digital education. First, I aim to design knowledge graphs that can support high-quality recommendations in the context of education. Second, I will create models backed by these knowledge graphs that not only deliver accurate recommendations but also provide faithful explanations for each suggestion, helping learners make informed decisions. Third, I will evaluate the effectiveness of these explainable recommender systems in real-world scenarios.</p>
+    <p><strong>Categories:</strong> Causal Language Modeling, Knowledge Graphs, Explainable Recommendations, Faithful Explanations, Transparency in Recommendations, Trust in Systems, Real-World Evaluation, Education Domain, User-Centric Design, Personalization (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1138/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>User knowledge prompt for sequential recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Yuuki Tachioka</p>
+    <p>The large language model (LLM) based recommendation system is effective for sequential recommendation, because general knowledge of popular items is included in the LLM. To add domain knowledge of items, the conventional method uses a knowledge prompt obtained from the item knowledge graphs and has achieved SOTA performance. However, for personalized recommendation, it is necessary to consider user knowledge, which the conventional method does not fully consider because user knowledge is not included in the item knowledge graphs; thus, we propose a user knowledge prompt, which converts a user knowledge graph into a prompt using the relationship template. The existing prompt denoising framework is extended to prevent hallucination caused by undesirable interactions between knowledge graph prompts. We propose user knowledge prompts of user traits and user preferences and associate relevant items. Experiments on three types of dataset (movie, music, and book) show the significant and consistent improvement of our proposed user knowledge prompt.</p>
+    <p><strong>Categories:</strong> Large Language Models (LLMs), Knowledge Graphs, Sequential Recommendations, Personalized Recommendation, Prompt Engineering, Movies, Music, Books, User Modeling, Empirical Evaluation, Prompt Denoising (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1198/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>KGTORe: Tailored Recommendations through Knowledge-aware GNN Models (2023)</h3>
+    <p><strong>Authors:</strong> Salvatore Bufi, Eugenio Di Sciascio, Tommaso Di Noia, Daniele Malitesta, Antonio Ferrara, Alberto Carlo Maria Mancino</p>
+    <p>Knowledge graphs (KG) have been proven to be a powerful source of side information to enhance the performance of recommendation algorithms. Their graph-based structure paves the way for the adoption of graph-aware learning models such as Graph Neural Networks (GNNs). In this respect, state-of-the-art models achieve good performance and interpretability via user-level combinations of intents leading users to their choices. Unfortunately, such results often come from and end-to-end learnings that considers a combination of the whole set of features contained in the KG without any analysis of the user decisions. In this paper, we introduce KGTORe, a GNN-based model that exploits KG to learn latent representations for the semantic features, and consequently, interpret the user decisions as a personal distillation of the item feature representations. Differently from previous models, KGTORe does not need to process the whole KG at training time but relies on a selection of the most discriminative features for the users, thus resulting in improved performance and personalization. Experimental results on three well-known datasets show that KGTORe achieves remarkable accuracy performance and several ablation studies demonstrate the effectiveness of its components.</p>
+    <p><strong>Categories:</strong> Graph Neural Networks, Knowledge Graphs, Recommendation Systems, Personalization, Latent Representations, User Behavior Analysis, Empirical Results, Tailored Recommendations, Machine Learning (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/871/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Knowledge-based Multiple Adaptive Spaces Fusion for Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Deqing Wang, Zhao Zhang, Fuzhen Zhuang, Jin Dong, Meng Yuan</p>
+    <p>Since Knowledge Graphs (KGs) contain rich semantic information, recently there has been an influx of KG-enhanced recommendation methods. Most of existing methods are entirely designed based on euclidean space without considering curvature. However, recent studies have revealed that a tremendous graph-structured data exhibits highly non-euclidean properties. Motivated by these observations, in this work, we propose a knowledge-based multiple adaptive spaces fusion method for recommendation, namely MCKG. Unlike existing methods that solely adopt a specific manifold, we introduce the unified space that is compatible with hyperbolic, euclidean and spherical spaces. Furthermore, we fuse the multiple unified spaces in an attention manner to obtain the high-quality embeddings for better knowledge propagation. In addition, we propose a geometry-aware optimization strategy which enables the pull and push processes benefited from both hyperbolic and spherical spaces. Specifically, in hyperbolic space, we set smaller margins in the area near to the origin, which is conducive to distinguishing between highly similar positive items and negative ones. At the same time, we set larger margins in the area far from the origin to ensure the model has sufficient error tolerance. The similar manner also applies to spherical spaces. Extensive experiments on three real-world datasets demonstrate that the MCKG has a significant improvement over state-of-the-art recommendation methods. Further ablation experiments verify the importance of multi-space fusion and geometry-aware optimization strategy, justifying the rationality and effectiveness of MCKG.</p>
+    <p><strong>Categories:</strong> Knowledge Graphs, Recommendation Systems, Hyperbolic Space, Spherical Space, Multi-Space Fusion, Geometry-Aware Optimization, Embedding Techniques, Attention Mechanism, Non-Euclidean Geometry (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/877/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Knowledge-Aware Recommender Systems based on Multi-Modal Information Sources (2023)</h3>
+    <p><strong>Authors:</strong> Giuseppe Spillo</p>
+    <p>The last few years saw a growing interest in Knowledge-Aware Recommender Systems (KARSs), given their capability in encoding and exploiting several data sources, both structured (such as <i>knowledge graphs</i>) and unstructured (such as plain text); indeed, several pieces of research show the competitiveness of these models. Nowadays, a lot of models at the state-of-the-art in KARSs use deep learning, enabling them to exploit large amounts of information, including knowledge graphs (KGs), user reviews, plain text, and multimedia content (pictures, audio, videos). In my Ph.D. I will explore and study techniques for designing KARSs leveraging embeddings deriving from multi-modal information sources; the models I will design will aim at providing fair, accurate, and explainable recommendations.</p>
+    <p><strong>Categories:</strong> Knowledge Graphs, Deep Learning, Recommender Systems, Structured Data, Unstructured Data, Multi-Modal Information Sources, Embeddings, Fairness, Explainability, Academic Research, Real-World Applications, Multi-Source Information (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/985/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Knowledge-aware Recommendations Based on Neuro-Symbolic Graph Embeddings and First-Order Logical Rules (2022)</h3>
+    <p><strong>Authors:</strong> Cataldo Musto, Marco de Gemmis, Giuseppe Spillo, Pasquale Lops, Giovanni Semeraro</p>
+    <p>In this paper, we present a knowledge-aware recommendation framework based on neuro-symbolic graph embeddings that encode first-order logical (FOL) rules. In particular, our workflow starts from a knowledge graph (KG) encoding user preferences (based on explicit ratings [13]) and item properties. Next, knowledge-aware recommendation are obtained through the combination of three modules: (i) a rule learner, that extracts FOL rules from the KG; (ii) a graph embedding module, that learns the embeddings of users and items based on the triples of the KG and the FOL rules previously extracted; (iii) a recommendation module that uses the embeddings to feed a deep learning architecture. In the experimental session, we evaluate the effectiveness of our strategy on two datasets and the results show that the combination of KG embeddings and FOL rules led to an improvement in the accuracy and in the novelty of the recommendations.</p>
+    <p><strong>Categories:</strong> Neuro-Symbolic Methods, Graph Embeddings, Knowledge Graphs, Recommendation Systems, First-Order Logic, User Preferences, Item Properties, Rule Learning, Deep Learning Architecture (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/791/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Sparse Feature Factorization for Recommender Systems with Knowledge Graphs (2021)</h3>
+    <p><strong>Authors:</strong> Antonio Ferrara, Alberto Carlo Maria Mancino, Vito Walter Anelli, Tommaso Di Noia</p>
+    <p>Deep Learning and factorization-based collaborative filtering recommendation models have undoubtedly dominated the scene of recommender systems in recent years. However, despite their outstanding performance, these methods require a training time proportional to the size of the embeddings and it further increases when also side information is considered for the computation of the recommendation list. In fact, in these cases we have that with a large number of high-quality features, the resulting models are more complex and difficult to train. This paper addresses this problem by presenting KGFlex: a sparse factorization approach that grants an even greater degree of expressiveness. To achieve this result, KGFlex analyzes the historical data to understand the dimensions the user decisions depend on (e.g., movie direction, musical genre, nationality of book writer). KGFlex represents each item feature as an embedding and it models user-item interactions as a factorized entropy-driven combination of the item attributes relevant to the user. KGFlex facilitates the training process by letting users update only those relevant features on which they base their decisions. In other words, the user-item prediction is mediated by the user’s personal view that considers only relevant features. An extensive experimental evaluation shows the approach’s effectiveness, considering the recommendation results’ accuracy, diversity, and induced bias. The public implementation of KGFlex is available at https://split.to/kgflex.</p>
+    <p><strong>Categories:</strong> Sparse Feature Factorization, Recommender Systems, Knowledge Graphs, Machine Learning, Movies, Music, Embeddings, Relevant Features, Model Complexity, Accuracy, Diversity, Bias (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/661/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Context-aware Graph Embedding for Session-based News Recommendation (2020)</h3>
+    <p><strong>Authors:</strong> Heng-Shiou Sheu, Sheng Li</p>
+    <p>Online news recommender systems aim to make personalized recommendations according to user preferences, which require modeling users’ short-term reading interest. However, due to the limited logged user interactions in practice, news recommendation at session-level becomes very challenging. Existing methods on session-based news recommendation mainly focus on extracting features from news articles and sequential user-item interactions, but they usually ignore the semantic-level structural information among news articles and do not explore external knowledge sources. In this paper, we propose a novel Context-Aware Graph Embedding (CAGE) framework for session-based news recommendation, which builds an auxiliary knowledge graph to enrich the semantic meaning of entities involved in articles, and further refines the article embeddings by graph convolutional networks. Experimental results on a real-world news dataset demonstrate the effectiveness of our method compared with the state-of-the-art methods on session-based news recommendation.</p>
+    <p><strong>Categories:</strong> Graph Embedding, Knowledge Graphs, Session-based Recommendations, Context Awareness, News Recommendation, Recommender Systems, Personalized Recommendations, User Interest Modeling, Graph Convolutional Networks (GCN), Real-world Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/606/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>KRED: Knowledge-Aware Document Representation for News Recommendations (2020)</h3>
+    <p><strong>Authors:</strong> Xing Xie, Ying Qiao, Shiyin Wang, Guangzhong Sun, Jianxun Lian, Danyang Liu, Jiun-Hung Chen</p>
+    <p>News articles usually contain knowledge entities such as celebrities or organizations. Important entities in articles carry key messages and help to understand the content in a more direct way. An industrial news recommender system contains various key applications, such as personalized recommendation, item-to-item recommendation, news category classification, news popularity prediction and local news detection. We find that incorporating knowledge entities for better document understanding benefits these applications consistently. However, existing document understanding models either represent news articles without considering knowledge entities (e.g., BERT) or rely on a specific type of text encoding model (e.g., DKN) so that the generalization ability and efficiency is compromised. In this paper, we propose KRED, which is a fast and effective model to enhance arbitrary document representation with a knowledge graph. KRED first enriches entities’ embeddings by attentively aggregating information from their neighborhood in the knowledge graph. Then a context embedding layer is applied to annotate the dynamic context of different entities such as frequency, category and position. Finally, an information distillation layer aggregates the entity embeddings under the guidance of the original document representation and transforms the document vector into a new one. We advocate to optimize the model with a multi-task framework, so that different news recommendation applications can be united and useful information can be shared across different tasks. Experiments on a real-world Microsoft News dataset demonstrate that KRED greatly benefits a variety of news recommendation applications.</p>
+    <p><strong>Categories:</strong> Knowledge-Aware Recommendation, Document Representation, News Recommendation, Knowledge Graphs, Multi-Task Learning, Personalization, Entity Representation, Multi-Task Framework, Applied Machine Learning, End-to-End Learning, Component-Based Systems (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/546/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Developing Recommendation System to provide a Personalized Learning experience at Chegg (2020)</h3>
+    <p><strong>Authors:</strong> Deb Sanghamitra</p>
+    <p>Online learning has become the primary source of education in 2020 with the impact of COVID-19 forcing millions of students to stay at home. In order to personalize the learning experience we have built a recommendation system that takes advantage of the  (1) Rich content developed at Chegg (2) An excellent knowledge graph that organizes content in a hierarchical fashion (3) Interaction of students across multiple products to enhance user signal in individual products.<br>Chegg is a centralized learning platform. Students visit Chegg to get help with homework using Chegg Study, learn from flashcards for their tests, practice examinations, learn relevant concepts, work with a tutor online to get one on one learning experience. This represents a large amount of content available to students. In order to organize the content we have developed a Knowledge Graph with nodes representing a hierarchical scheme of concepts  taught at different educational institutions and the content at Chegg. In order to create edges between concept nodes and content we build text classifiers to tag content with concept nodes.<br>Often students will interact with one or two products such as Chegg Study or Text Book rentals and browse other products such as flashcards, exam practice, etc. In order to suggest relevant content to them, we deduce the concepts they have been studying in products where they are more active and suggest content in products where they are less active.<br>In this presentation I will talk about the general framework for developing personalized recommendations at Chegg and do a deep dive into (1) Text classifiers required for content tagging and (2) Building cross product recommendations. In text classification,  I will go into details about working with noisy training data and model improvements using multi-task learning [1]. For cross product recommendations I will talk about combining user signals from multiple products [2] to deduce general pattern of student interest and use that information to retrieve relevant content — for example flashcards or practice exams for users.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Personalized Learning, Education Domain, Knowledge Graphs, Text Classification, Cross-Product Recommendations, User Signal Analysis, Multi-Task Learning, Handling Noisy Data, Real-World Applications, Content Organization (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/622/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Recurrent Knowledge Graph Embedding for Effective Recommendation (2018)</h3>
+    <p><strong>Authors:</strong> Long-Kai Huang, Jie Yang, Chi Xu, Jie Zhang, Zhu Sun, Alessandro Bozzon</p>
+    <p>Knowledge graphs (KGs) have proven to be effective to improve recommendation. Existing methods mainly rely on hand-engineered features from KGs, which requires domain knowledge. This paper presents RKGE, a KG embedding approach that automatically learns semantic representations of entities and paths between entities for characterizing user preferences towards items. Specifically, RKGE employs a novel recurrent network architecture that contains a batch of recurrent networks to model the semantics of paths linking a same entity pair, which are seamlessly fused into recommendation. It further employs a pooling operator to discriminate the saliency of different paths in characterizing user preferences towards items. Extensive validation shows the superiority of RKGE against the state-of-the-art. Furthermore, we show that RKGE provides meaningful explanations for recommendation results.</p>
+    <p><strong>Categories:</strong> Knowledge Graphs, Recurrent Neural Networks, Recommendation Systems, Entity Embedding, Path Semantics, Recurrent Networks Architecture, User Preferences, Knowledge Graph Embedding, Explanation in Recommendations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/350/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Recommender Systems in the Internet of Talking Things (IoTT) (2017)</h3>
+    <p><strong>Authors:</strong> Marco De Gemmis, Fedelucio Narducci, Pasquale Lops, Giovanni Semeraro</p>
+    <p>In the Internet of Things, smart devices are connected to collect and to exchange data. In our vision, in the Internet of Talking Things, objects such as intelligent fridges will be able to communicate with humans to set up preferences and profiling options which allow a personalized usage of the object. In this paper, we present a recommender system implemented as a Telegram Bot, that can fit with the previous scenario. The system is a movie recommender which exploits the information available in the Linked Open Data (LOD) cloud for generating the recommendations and leading the conversation with the user. It can be easily seen as an intelligent component of a connected TV.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Internet of Things (IoT), Human-Computer Interaction, Natural Language Processing, Movie Recommendations, Linked Open Data, Semantic Web, Knowledge Graphs, Chatbot Integration, Conversational Agents, Personalization, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/314/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

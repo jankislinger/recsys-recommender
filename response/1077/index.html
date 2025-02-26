@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Better Generalization with Semantic IDs: A Case Study in Ranking for Recommendations
+Abstract:
+Randomly-hashed item ids are used ubiquitously in recommendation models. However, the learned representations of random ids lack generalization across similar items, causing problems of learning unseen and long-tail items, especially when item corpus is large, power-law distributed, and evolving dynamically. In this paper, we first show that simply replacing ID features with content-based embeddings can cause a drop in quality due to reduced memorization capability. To strike a good balance of memorization and generalization, we further propose to use Semantic IDs — a compact discrete item representation learned from frozen content embeddings using RQ-VAE that captures the hierarchy of concepts in items — as a replacement for random item ids. Similar to content embeddings, the compactness of Semantic IDs poses a problem of easy adaption in recommendation models. We propose a few methods of adapting Semantic IDs in industry-scale ranking models, through hashing sub-pieces of of the Semantic-ID sequences. In particular, we find that the SentencePiece model that is commonly used in LLM tokenization outperforms manually crafted pieces such as bigrams. To the end, we evaluate our approaches in a real-world ranking model for YouTube recommendations. Our experiments demonstrate that Semantic IDs can replace the direct use of video IDs by improving the generalization ability on new and long-tail item slices without sacrificing overall model quality, while significantly reducing the model size.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article into multiple relevant categories based on its content. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;Better Generalization with Semantic IDs: A Case Study in Ranking for Recommendations.&#34; The abstract discusses the use of randomly hashed item IDs in recommendation models and how they lack generalization, especially with large, dynamic item corpuses. It introduces Semantic IDs as a solution, which are compact representations learned from content embeddings using RQ-VAE. The study also explores methods to adapt these IDs in industry-scale models, comparing SentencePiece with other approaches. They tested this on YouTube recommendations and found improved generalization without losing model quality.
+
+Now, I&#39;ll break down the key elements:
+
+1. **Recommendation Systems**: This is central as the paper focuses on improving recommendation ranking.
+2. **Semantic IDs**: A novel approach introduced in the paper.
+3. **Content-Based Embeddings**: Used to create Semantic IDs.
+4. **Generalization**: The main goal, especially for unseen and long-tail items.
+5. **Industry-Scale Models**: Indicates real-world application in large systems like YouTube.
+6. **SentencePiece Model**: A specific method used for adapting Semantic IDs.
+7. **Real-World Applications**: They applied their approach to YouTube recommendations.
+8. **Model Adaptation**: Discussing how to integrate Semantic IDs into existing models.
+
+Considering the guidelines, each article should be assigned 8-12 categories. I need to ensure these categories are descriptive and useful for navigation. Let me list out potential categories based on these elements:
+
+- **Recommendation Systems** (core topic)
+- **Semantic IDs** (novel approach)
+- **Content-Based Embeddings** (methodology)
+- **Generalization** (goal of the study)
+- **Item Representation** (focus on how items are represented)
+- **Industry-Scale Models** (real-world application context)
+- **Model Adaptation** (discussing integration methods)
+- **YouTube Recommendations** (specific real-world application)
+- **SentencePiece Model** (a specific technique used)
+- **Long-Tail Items** (problem addressed)
+
+I should avoid overly broad categories unless necessary. Each category should be relevant and help users find the article when exploring different aspects of recommendation systems. Let me make sure each term is clear and accurately reflects the content.
+
+Finalizing, I think these categories cover the main points without being too specific or redundant.
+&lt;/think&gt;
+
+Recommendation Systems, Semantic IDs, Content-Based Embeddings, Generalization, Item Representation, Industry-Scale Models, Model Adaptation, YouTube Recommendations, SentencePiece Model, Long-Tail Items</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

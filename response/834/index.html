@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Client Time Series Model: a Multi-Target Recommender System based on Temporally-Masked Encoders
+Abstract:
+Stitch Fix, an online personal shopping and styling service, creates a personalized shopping experience to meet any purchase occasion across multiple platforms. For example, a client who wants more one-on-one support in shopping for an outfit or look can request a stylist to curate a ‘Fix’, an assortment of 5 items; or they can browse their own personalized shop and make direct purchases in our ‘Freestyle’ experience. We know that personal style changes and evolves over time, so in order to provide the client with the most personalized and dynamic experience across platforms, it is important to recommend items based on our holistic and real-time understanding of their style across all of our platforms. This work introduces the Client Time Series Model (CTSM), a scalable and efficient recommender system based on Temporally-Masked Encoders (TME) that learns one client embedding across all platforms, yet is able to provide distinctive recommendations depending on the platform. An A/B test showed that our model outperformed the baseline model by 5.8% in terms of expected revenue.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on the guidelines provided. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;Client Time Series Model: a Multi-Target Recommender System based on Temporally-Masked Encoders.&#34; From this, I understand that it&#39;s about a recommender system model called CTSM which uses Temporally-Masked Encoders. It sounds like it&#39;s dealing with time series data and personalization across different platforms.
+
+Looking at the abstract, the article talks about Stitch Fix, an online shopping service. They mention creating personalized shopping experiences through services like &#39;Fix&#39; and &#39;Freestyle.&#39; The system aims to adapt to a client&#39;s changing style over time by using a scalable model that generates one client embedding but provides platform-specific recommendations. An A/B test showed improved expected revenue compared to the baseline.
+
+Now, I need to assign categories based on this information. Let me go through each guideline and see which categories fit.
+
+1. **Family of Algorithm**: The article uses Temporally-Masked Encoders (TME), so &#34;Temporally-Masked Encoders&#34; is a category here.
+2. **Domain of the Problem**: It&#39;s about personal styling and shopping, so &#34;Personal Style&#34; fits. Also, it&#39;s related to retail or e-commerce platforms, so &#34;E-commerce&#34; should be included.
+3. **Recommendation Space Specifics**: Since it&#39;s a multi-target recommender system tailored for different platforms, &#34;Multi-Platform Recommendations&#34; makes sense.
+4. **Time Series Data**: The model is time series-based, so that&#39;s another category.
+5. **Evaluation Aspects**: They mention A/B testing and revenue improvement, which relates to business impact. So categories like &#34;A/B Test,&#34; &#34;Revenue Impact,&#34; and &#34;Business Metrics&#34; would be appropriate.
+6. **Model Scalability**: It&#39;s mentioned as scalable and efficient, so &#34;Scalable Models&#34; is a good fit.
+7. **User-Centric Design**: The system aims for personalization across platforms, so &#34;Personalized Recommendations&#34; is relevant.
+
+I should make sure each article goes into at least 8-12 categories without overcrowding any single category. Looking back, I have &#34;Client Embeddings,&#34; which refers to the method of creating a unified client representation. That&#39;s another important point.
+
+Putting it all together, I think these categories cover the key aspects of the article and align with user interests, especially for those involved in e-commerce recommendation systems, personalization techniques, and model evaluation through A/B testing.
+&lt;/think&gt;
+
+Client Time Series Model (CTSM), Temporally-Masked Encoders, Personal Style, E-commerce, Multi-Platform Recommendations, Time Series Data, A/B Test, Revenue Impact, Business Metrics, Scalable Models, Personalized Recommendations, Client Embeddings</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Client Time Series Model: a Multi-Target Recommender System based on Temporally-Masked Encoders
+Abstract:
+Stitch Fix, an online personal shopping and styling service, creates a personalized shopping experience to meet any purchase occasion across multiple platforms. For example, a client who wants more one-on-one support in shopping for an outfit or look can request a stylist to curate a ‘Fix’, an assortment of 5 items; or they can browse their own personalized shop and make direct purchases in our ‘Freestyle’ experience. We know that personal style changes and evolves over time, so in order to provide the client with the most personalized and dynamic experience across platforms, it is important to recommend items based on our holistic and real-time understanding of their style across all of our platforms. This work introduces the Client Time Series Model (CTSM), a scalable and efficient recommender system based on Temporally-Masked Encoders (TME) that learns one client embedding across all platforms, yet is able to provide distinctive recommendations depending on the platform. An A/B test showed that our model outperformed the baseline model by 5.8% in terms of expected revenue.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about the Client Time Series Model (CTSM) for Stitch Fix. Let me start by reading through the title and abstract carefully.
+
+The title mentions it&#39;s a multi-target recommender system using Temporally-Masked Encoders. So, key terms here are &#34;Client Time Series Model,&#34; &#34;Multi-Target Recommender System,&#34; and &#34;Temporally-Masked Encoders.&#34; 
+
+Looking at the abstract: It talks about Stitch Fix providing personalized shopping experiences across multiple platforms like &#39;Fix&#39; and &#39;Freestyle.&#39; The focus is on how personal style evolves, so recommendations need to be dynamic. The model CTSM uses Temporally-Masked Encoders (TME) to learn a single client embedding for all platforms but provides tailored recommendations per platform.
+
+They mention scalability because the model is efficient and scalable. There&#39;s an A/B test showing improved revenue by 5.8%, so real-world application with A/B testing is involved.
+
+In terms of recommendation aspects, it&#39;s about temporal dynamics since style changes over time. They&#39;re addressing multi-platform recommendations, which falls under cross-domain or multi-target recommenders.
+
+Evaluation-wise, they use expected revenue as a metric and tested via A/B testing. The model handles multiple platforms, so cross-domain recommendation is applicable. Also, the problem domain here is fashion and personal shopping since it&#39;s about Stitch Fix.
+
+So, putting this together: The article deals with recommendation systems using neural networks (specifically Temporally-Masked Encoders), is scalable, involves time series analysis for dynamic recommendations, applies to fashion retail, uses A/B testing for evaluation, handles multiple platforms, focuses on user modeling, and scalability.
+
+I need to assign 8-12 categories. From the guidelines, let&#39;s list them:
+
+1. Multi-Target Recommender System
+2. Temporally-Masked Encoders (TME)
+3. Neural Networks
+4. Scalability
+5. Time Series Model
+6. Cross-Domain Recommendation
+7. Fashion/Personalized Shopping
+8. A/B Testing
+9. Evaluation Metrics
+10. User Embedding Models
+11. Real-World Applications
+12. Dynamic Recommendations
+
+That should cover the main aspects of the article and ensure it&#39;s discoverable across relevant categories without overcrowding any single category.
+&lt;/think&gt;
+
+Multi-Target Recommender System, Temporally-Masked Encoders, Neural Networks, Scalability, Time Series Model, Cross-Domain Recommendation, Fashion/Personalized Shopping, A/B Testing, Evaluation Metrics, User Embedding Models, Real-World Applications, Dynamic Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

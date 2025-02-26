@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/offline-evaluation/">Offline Evaluation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/benchmarking/">Benchmarking</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>User knowledge prompt for sequential recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Yuuki Tachioka</p>
+    <p>The large language model (LLM) based recommendation system is effective for sequential recommendation, because general knowledge of popular items is included in the LLM. To add domain knowledge of items, the conventional method uses a knowledge prompt obtained from the item knowledge graphs and has achieved SOTA performance. However, for personalized recommendation, it is necessary to consider user knowledge, which the conventional method does not fully consider because user knowledge is not included in the item knowledge graphs; thus, we propose a user knowledge prompt, which converts a user knowledge graph into a prompt using the relationship template. The existing prompt denoising framework is extended to prevent hallucination caused by undesirable interactions between knowledge graph prompts. We propose user knowledge prompts of user traits and user preferences and associate relevant items. Experiments on three types of dataset (movie, music, and book) show the significant and consistent improvement of our proposed user knowledge prompt.</p>
+    <p><strong>Categories:</strong> Large Language Models (LLMs), Knowledge Graphs, Sequential Recommendations, Personalized Recommendation, Prompt Engineering, Movies, Music, Books, User Modeling, Empirical Evaluation, Prompt Denoising (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1198/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Not All Videos Become Outdated: Short-Video Recommendation by Learning to Deconfound Release Interval Bias (2024)</h3>
+    <p><strong>Authors:</strong> Aixin Sun, Guoxiu He, Lulu Dong</p>
+    <p>Short-video recommender systems often exhibit a biased preference to recently released videos. However, not all videos become outdated; certain classic videos can still attract user’s attention. Such bias along temporal dimension can be further aggravated by the matching model between users and videos, because the model learns from preexisting interactions. From real data, we observe that different videos have varying sensitivities to recency in attracting users’ attention. Our analysis, based on a causal graph modeling short-video recommendation, suggests that the release interval serves as a confounder, establishing a backdoor path between users and videos. To address this confounding effect, we propose a model-agnostic causal architecture called Learning to Deconfound the Release Interval Bias (LDRI). LDRI enables jointly learning of the matching model and the video recency sensitivity perceptron. In the inference stage, we apply a backdoor adjustment, effectively blocking the backdoor path by intervening on each video. Extensive experiments on two benchmarks demonstrate that LDRI consistently outperforms backbone models and exhibits superior performance against state-of-the-art models. Additional comprehensive analyses confirm the deconfounding capability of LDRI. Our code is available online: https://anonymous.4open.science/r/LDRI/.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Short-Video Recommendations, Bias Mitigation, Temporal Dynamics, Model Agnostic, Causal Inference, User Modeling, Evaluation Methods, Matching Models, Confounding Variables, Recency Sensitivity (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1053/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>What We Evaluate When We Evaluate Recommender Systems: Understanding Recommender Systems’ Performance using Item Response Theory (2023)</h3>
+    <p><strong>Authors:</strong> Yang Liu, Alan Medlar, Dorota Glowacka</p>
+    <p>Current practices in offline evaluation use rank-based metrics to measure the quality of recommendation lists. This approach has practical benefits as it centers assessment on the output of the recommender system and, therefore, measures performance from the perspective of end-users. However, this methodology neglects how recommender systems more broadly model user preferences, which is not captured by only considering the top-n recommendations. In this article, we use item response theory (IRT), a family of latent variable models used in psychometric assessment, to gain a comprehensive understanding of offline evaluation. We used IRT to jointly estimate the latent abilities of 51 recommendation algorithms and the characteristics of 3 commonly used benchmark data sets. For all data sets, the latent abilities estimated by IRT suggest that higher scores from traditional rank-based metrics do not reflect improvements in modeling user preferences. Furthermore, we show the top-n recommendations with the most discriminatory power are biased towards lower difficulty items, leaving much room for improvement. Lastly, we highlight the role of popularity in evaluation by investigating how user engagement and item popularity influence recommendation difficulty.</p>
+    <p><strong>Categories:</strong> Evaluation Metrics, Item Response Theory, Recommendation Algorithms, Multi-Algorithm Analysis, User Modeling, Latent Variable Models, Offline Evaluation, Beyond Accuracy, Benchmark Datasets, Popularity Bias, Difficulty Modeling, User Engagement (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/889/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Going Beyond Local: Global Graph-Enhanced Personalized News Recommendations (2023)</h3>
+    <p><strong>Authors:</strong> Irene Li, Ruihai Dong, Dairui Liu, Toyotaro Suzumura, Boming Yang</p>
+    <p>Precisely recommending candidate news articles to users has always been a core challenge for personalized news recommendation systems. Most recent work primarily focuses on using advanced natural language processing (NLP) techniques to extract semantic information from rich textual data, employing content-based methods derived from locally viewed historical clicked news. However, this approach lacks a global perspective, failing to account for users’ hidden motivations and behaviors beyond semantic information. To address this challenge, we propose a novel model called GLORY(Global-LOcal news Recommendation sYstem), which combines global news representations learned from other users with local news representations to enhance personalized recommendation systems. We accomplish this by constructing a Global Clicked News Encoder, which includes a global news graph and employs gated graph neural networks to fuse news representations, thereby enriching clicked news representations. Similarly, we extend this approach to a Global Candidate News Encoder, utilizing a global entity graph and candidate news fusion to enhance candidate news representation. Evaluation results on two public news datasets demonstrate that our method outperforms existing approaches. Furthermore, our model offers more diverse recommendations.</p>
+    <p><strong>Categories:</strong> Graph Neural Networks, Gated Graph Neural Networks, News Recommendations, Global Representation, Personalized Recommendations, User Modeling, Recommendation Diversity, Evaluation Results (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/869/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Challenges for Anonymous Session-Based Recommender Systems in Indoor Environments (2023)</h3>
+    <p><strong>Authors:</strong> Alessio Ferrato</p>
+    <p>Recommender Systems (RSs) have gained widespread popularity for providing personalized recommendations in manifold domains. However, considering the growing user privacy concerns, the development of recommender systems that prioritize data protection has become increasingly important. In indoor environments, RSs face unique challenges, and ongoing research is being conducted to address them. Anonymous Session-Based Recommender Systems (ASBRSs) can represent a possible solution to address these challenges while ensuring user privacy. This paper aims to bridge the gap between existing RS research and the demand for privacy-preserving recommender systems, especially in indoor settings, where significant research efforts are underway. Therefore, it proposes three research questions: How does user modeling based on implicit feedback impact on ASBRSs, considering different embedding extraction networks? How can short sessions be leveraged to start the recommendation process in ASBRSs? To what extent can ASBRSs generate fair recommendations? By investigating these questions, this study establishes the foundations for applying ASBRSs in indoor environments, safeguarding user privacy, and contributing to the ongoing research in this field.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Privacy Preservation, Session-Based Recommenders, Indoor Environments, Implicit Feedback, User Modeling, Short Sessions Handling, Real-World Applications, Data Protection, Methodology, Fairness in Recommendations, Review/Foundational Research (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/979/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Fast And Accurate User Cold-Start Learning Using Monte Carlo Tree Search (2022)</h3>
+    <p><strong>Authors:</strong> Douglas Leith, Dilina Chandika Rajapakse</p>
+    <p>We revisit the cold-start task for new users of a recommender system whereby a new user is asked to rate a few items with the aim of discovering the user’s preferences. This is a combinatorial stochastic learning task, and so difficult in general. In this paper we propose using Monte Carlo Tree Search (MCTS) to dynamically select the sequence of items presented to a new user. We find that this new MCTS-based cold-start approach is able to consistently quickly identify the preferences of a user with significantly higher accuracy than with either a decision-tree or a state of the art bandit-based approach without incurring higher regret i.e the learning performance is fundamentally superior to that of the state of the art. This boost in recommender accuracy is achieved in a computationally lightweight fashion.</p>
+    <p><strong>Categories:</strong> Monte Carlo Tree Search, Multi-Armed Bandits, Cold Start, Recommendation Systems, Evaluation Metrics, Beyond Accuracy, Combinatorial Optimization, User Modeling (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/763/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Denoising User-aware Memory Network for Recommendation (2021)</h3>
+    <p><strong>Authors:</strong> Zhenqi Sun, Xiaolong Li, Kaikui Liu, Junjie Tang, Zhi Bian, Hao Fu, Qihong Yang, Shaojun Zhou, Guiquan Liu</p>
+    <p>For better user satisfaction and business effectiveness, more and more attention has been paid to the sequence-based recommendation system, which is used to infer the evolution of users’ dynamic preferences, and recent studies have noticed that the evolution of users’ preferences can be better understood from the implicit and explicit feedback sequences. However, most of the existing recommendation techniques do not consider the noise contained in implicit feedback, which will lead to the biased representation of user interest and a suboptimal recommendation performance. Meanwhile, the existing methods utilize item sequence for capturing the evolution of user interest. The performance of these methods is limited by the length of the sequence, and can not effectively model the long-term interest in a long period of time. Based on this observation, we propose a novel CTR model named denoising user-aware memory network (DUMN). Specifically, the framework: (i) proposes a feature purification module based on orthogonal mapping, which use the representation of explicit feedback to purify the representation of implicit feedback, and effectively denoise the implicit feedback; (ii) designs a user memory network to model the long-term interests in a fine-grained way by improving the memory network, which is ignored by the existing methods; and (iii) develops a preference-aware interactive representation component to fuse the long-term and short-term interests of users based on gating to understand the evolution of unbiased preferences of users. Extensive experiments on two real e-commerce user behavior datasets show that DUMN has a significant improvement over the state-of-the-art baselines.</p>
+    <p><strong>Categories:</strong> Deep Learning, Matrix Factorization, Sequence-based Recommendations, E-commerce, Hybrid Recommendation, Implicit Feedback, Explicit Feedback, Long-term Recommendations, Short-term Recommendations, Denoising Techniques, Memory Networks, Personalized Recommendations, User Modeling, Cold Start Problem, Accuracy Metrics, Beyond Accuracy, A/B Test. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/634/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Connecting Students with Research Advisors Through User-Controlled Recommendation (2021)</h3>
+    <p><strong>Authors:</strong> Peter Brusilovsky, Alireza Javadian Sabet, Behnam Rahdari</p>
+    <p>We present Grapevine, a user-controlled recommender that enables undergraduate and graduate students to find a suitable research advisor. This system combines the ideas from the areas of exploratory search, user modeling, and recommender systems by employing state-of-the-art knowledge extraction, grape-based recommendation, and an intelligent user interface. In this paper, we demonstrate the system’s key components and how they work as a whole.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, User Control/Personalization, Exploratory Search, User Modeling, Knowledge Extraction, Intelligent User Interfaces, Education, HCI, User-Centered Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/705/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Estimating and Penalizing Preference Shifts in Recommender Systems (2021)</h3>
+    <p><strong>Authors:</strong> Micah Carroll, Stuart Russell, Anca Dragan, Dylan Hadfield-Menell</p>
+    <p>Recommender systems trained via long-horizon optimization (e.g., reinforcement learning) will have incentives to actively manipulate user preferences through the recommended content. While some work has argued for making systems myopic to avoid this issue, even such systems can induce systematic undesirable preference shifts. Thus, rather than artificially stifling the capabilities of the system, in this work we explore how we can make capable systems that explicitly avoid undesirable shifts. We advocate for (1) estimating the preference shifts that would be induced by recommender system policies, and (2) explicitly characterizing what unwanted shifts are and assessing before deployment whether such policies will produce them – ideally even actively optimizing to avoid them. These steps involve two challenging ingredients: (1) requires the ability to anticipate how hypothetical policies would influence user preferences if deployed; instead, (2) requires metrics to assess whether such influences are manipulative or otherwise unwanted. We study how to do (1) from historical user interaction data by building a user predictive model that implicitly contains their preference dynamics; to address (2), we introduce the notion of a “safe policy”, which defines a trust region within which behavior is believed to be safe. We show that recommender systems that optimize for staying in the trust region avoid manipulative behaviors (e.g., changing preferences in ways that make users more predictable), while still generating engagement.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Reinforcement Learning, Preference Dynamics, Ethical Considerations, User Modeling, Trustworthy AI, Safe Policy, Fairness, Optimization, User-Centric Design, Real-World Applications, Improvement of Recommender Systems, Predictive Modeling (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/690/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Eigenvalue Perturbation for Item-based Recommender Systems (2021)</h3>
+    <p><strong>Authors:</strong> Cesare Bernardis, Paolo Cremonesi</p>
+    <p>Adding confidence estimates to predicted ratings has been shown to positively influence the quality of the recommendations provided by a recommender system. While confidence over single point predictions of ratings and preferences has been widely studied in literature, limited effort has been put in exploring the benefits provided by user-level confidence indices. In this work we exploit a recently introduced user-level confidence index, called eigenvalue confidence index, in order to provide maximum confidence recommendations for item-based recommender systems. We firstly derive a closed form solution to calculate the index, then we propose a new recommendation methodology for item-based models, called eigenvalue perturbation, founded on the strongly positive correlation between the index value and the accuracy of the recommendations. We show and discuss the accuracy results obtained with a comprehensive set of experiments over several datasets and using different item-based models, empirically proving that applying the new technique we are able to outperform the original recommendation models in most of the experimental configurations.</p>
+    <p><strong>Categories:</strong> Item-based Recommender Systems, Eigenvalue Perturbation, User-level Confidence Indices, Recommendation Accuracy, Closed-form Solution, Methodology, Experimental Evaluation, Machine Learning, Algorithmic Techniques, User Modeling (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/691/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Content-Collaborative Disentanglement Representation Learning for Enhanced Recommendation (2020)</h3>
+    <p><strong>Authors:</strong> Yin Zhang, Yun He, James Caverlee, Ziwei Zhu</p>
+    <p>Modern recommenders usually consider both collaborative features from user behavior data (e.g., clicks) and content information about the users and items (e.g., user ages or item images) for improved recommendations. While encouraging, the uncovered user preference representations derived from these collaborative and content-based perspectives can be entangled by intermixing the influence from each other, leading to sub-optimal performance and unstable recommendations. Hence, we propose to disentangle representations learned from user behavior data and content information. Specifically, we propose a novel two-level disentanglement generative recommendation model (DICER) that supports both content-collaborative disentanglement and feature disentanglement: for the content-collaborative disentanglement, DICER decomposes the features by their marginal distributions based on content and user-item interactions, to ensure the learned features from each type are statistically independent. For feature disentanglement, by decomposing the Kullback-Leibler divergence, we theoretically show that extracted features within each type are disentangled at a granular level. Furthermore, DICER utilizes a co-decoder that simultaneously decodes the content and user-item interactions to ensure the high-quality of learned features. Through extensive experiments on three real-world datasets, results show that DICER significantly outperforms other state-of-the-art methods by 13.5% in NDCG and 14.4% in hit ratio on average.</p>
+    <p><strong>Categories:</strong> Disentanglement Representation Learning, Recommendation Systems, Feature Disentanglement, Content-Collaborative Methods, Hybrid推荐系统, User Modeling, Model Improvement, Probabilistic Methods, Empirical Evaluation, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/525/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Explainable Recommendations via Attentive Multi-Persona Collaborative Filtering (2020)</h3>
+    <p><strong>Authors:</strong> Avi Caciularu, Oren Barkan, Noam Koenigstein, Yonatan Fuchs</p>
+    <p>Two main challenges in recommender systems are modeling users with heterogeneous taste, and providing explainable recommendations. In this paper, we propose the neural Attentive Multi-Persona Collaborative Filtering (AMP-CF) model as a unified solution for both problems. AMP-CF breaks down the user to several latent ‘personas’ (profiles) that identify and discern the different tastes and inclinations of the user. Then, the revealed personas are used to generate and explain the final recommendation list for the user. AMP-CF models users as an attentive mixture of personas, enabling a dynamic user representation that changes based on the item under consideration. We demonstrate AMP-CF on five collaborative filtering datasets from the domains of movies, music, video games and social networks. As an additional contribution, we propose a novel evaluation scheme for comparing the different items in a recommendation list based on the distance from the underlying distribution of “tastes” in the user’s historical items. Experimental results show that AMP-CF is competitive with other state-of-the-art models. Finally, we provide qualitative results to showcase the ability of AMP-CF to explain its recommendations.</p>
+    <p><strong>Categories:</strong> Explainable Recommendations, Collaborative Filtering, User Modeling, Multi-Persona Models, Domain-Specific Recommendations (Movies, Music, Video Games, Social Networks), Evaluation Metrics, Attention Mechanisms, Deep Learning, Performance Comparison, Beyond Accuracy, User-Centric Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/576/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Contextual User Browsing Bandits for Large-Scale Online Mobile Recommendation (2020)</h3>
+    <p><strong>Authors:</strong> Xu He, Haikai Chen, Bo An, Qingyu Guo, Yanghua Li, Zhirong Wang, Xin Li</p>
+    <p>Online recommendation services recommend multiple commodities to users. Nowadays, a considerable proportion of users visit e-commerce platforms by mobile devices. Due to the limited screen size of mobile devices, positions of items have a significant influence on clicks: 1) Higher positions lead to more clicks for one commodity. 2) The ‘pseudo-exposure’ issue: Only a few recommended items are shown at first glance and users need to slide the screen to browse other items. Therefore, some recommended items ranked behind are not viewed by users and it is not proper to treat this kind of items as negative samples. While many works model the online recommendation as contextual bandit problems, they rarely take the influence of positions into consideration and thus the estimation of the reward function may be biased. In this paper, we aim at addressing these two issues to improve the performance of online mobile recommendation. Our contributions are four-fold. First, since we concern the reward of a set of recommended items, we model the online recommendation as a contextual combinatorial bandit problem and define the reward of a recommended set. Second, we propose a novel contextual combinatorial bandit method called UBM-LinUCB to address two issues related to positions by adopting the User Browsing Model (UBM), a click model for web search. Third, we provide a formal regret analysis and prove that our algorithm achieves sublinear regret independent of the number of items. Finally, we evaluate our algorithm on two real-world datasets by a novel unbiased estimator. An online experiment is also implemented in Taobao, one of the most popular e-commerce platforms in the world. Results on two CTR metrics show that our algorithm outperforms the other contextual bandit algorithms.</p>
+    <p><strong>Categories:</strong> Multi-Armed Bandits, Mobile Recommendations, E-commerce, Online Platforms, User Modeling, Click Prediction, Cold Start, Beyond Accuracy, Unbiased Evaluation, Scalability, Recommendation Systems, A/B Test, CTR Metrics (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/529/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Aligning Daily Activities with Personality: Towards A Recommender System for Improving Wellbeing (2019)</h3>
+    <p><strong>Authors:</strong> Aleksandar Matic, Miquel Ferrer, A. Aldo Faisal, Jesus Omana Iglesias, Mohammed Khwaja</p>
+    <p>Recommender Systems have not been explored to a great extent for improving health and subjective wellbeing. Recent advances in mobile technologies and user modelling present the opportunity for delivering such systems, however the key issue is understanding the drivers of subjective wellbeing at an individual level. In this paper we propose a novel approach for deriving personalized activity recommendations to improve subjective wellbeing by maximizing the congruence between activities and personality traits. To evaluate the model, we leveraged a rich dataset collected in a smartphone study, which contains three weeks of daily activity probes, the Big-Five personality questionnaire and subjective wellbeing surveys. We show that the model correctly infers a range of activities that are ‘good’ or ‘bad’ (i.e. that are positively or negatively related to subjective wellbeing) for a given user and that the derived recommendations greatly match outcomes in the real-world. i>Presentation: Monday Poster Lunch</i</p>
+    <p><strong>Categories:</strong> Recommender Systems, Personalization, Health and Wellness, Personality Traits, Mobile Technologies, Subjective Wellbeing Surveys, Machine Learning, Activity Recommendations, User Modeling, Real-World Application, Psychological Constructs, Individualization (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/462/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>The Influence of Personal Values on Music Taste: Towards Value-Based Music Recommendations (2019)</h3>
+    <p><strong>Authors:</strong> Sandy Manolios, Alan Hanjalic, Cynthia C. S. Liem</p>
+    <p>The field of recommender systems has a lot to gain from the field of psychology. Indeed, many psychology researchers have investigated relations between models that describe humans and consumption preferences. One example of this is personality, which has been shown to be a valid construct to describe people. As a consequence, personality-based recommenders have already proven to be a lead toward improving recommendations, by adapting them to their users’ traits. Beyond personality, there are more ways to describe a person’s identity. One of these ways is to consider personal values: what is important for the users in life at the most abstract level. Being complementary to personality traits, values may give another lead towards better user understanding. In this paper, we investigate this, taking music as a use case. We use a marketing interview technique to elicit 22 users’ personal values connected to their musical preferences. We show that personal values indeed play a role in people’s music preferences, and are the first to propose a map linking personal values to music preferences. We see this map as a first step in devising a value-based user model for music recommender systems. i>Presentation: Wednesday Poster Lunch</i</p>
+    <p><strong>Categories:</strong> Psychology, Recommendation Systems, Music, User Modeling, Personality-Based Recommenders, Values, Interview Techniques, Foundational Research, Value-Based Recommendations, Abstract Concepts, Music Preferences (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/498/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Explore, Exploit, and Explain: Personalizing Explainable Recommendations with Bandits (2018)</h3>
+    <p><strong>Authors:</strong> Rishabh Mehrotra, Karl Higley, Benjamin Lacker, James McInerney, Hugues Bouchard, Alois Gruson, Samantha Hansen</p>
+    <p>The multi-armed bandit is an important framework for balancing exploration with exploitation in recommendation. Exploitation recommends content (e.g., products, movies, music playlists) with the highest predicted user engagement and has traditionally been the focus of recommender systems. Exploration recommends content with uncertain predicted user engagement for the purpose of gathering more information. The importance of exploration has been recognized in recent years, particularly in settings with new users, new items, non-stationary preferences and attributes. In parallel, explaining recommendations (“recsplanations”) is crucial if users are to understand their recommendations. Existing work has looked at bandits and explanations independently. We provide the first method that combines both in a principled manner. In particular, our method is able to jointly (1) learn which explanations each user responds to; (2) learn the best content to recommend for each user; and (3) balance exploration with exploitation to deal with uncertainty. Experiments with historical log data and tests with live production traffic in a large-scale music recommendation service show a significant improvement in user engagement.</p>
+    <p><strong>Categories:</strong> Multi-Armed Bandits, Personalization, Explainability, Recommendation Systems, Exploration vs Exploitation, Methodology, User Modeling, Music, Real-World Applications, A/B Testing, Recsplations, User Engagement (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/345/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

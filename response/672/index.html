@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Case Study on Sampling Strategies for Evaluating Neural Sequential Item Recommendation Models
+Abstract:
+At the present time, sequential item recommendation models are compared by calculating metrics on a small item subset (target set) to speed up computation. The target set contains the relevant item and a set of negative items that are sampled from the full item set. Two well-known strategies to sample negative items are uniform random sampling and sampling by popularity to better approximate the item frequency distribution in the dataset. Most recently published papers on sequential item recommendation rely on sampling by popularity to compare the evaluated models. However, recent work has already shown that an evaluation with uniform random sampling may not be consistent with the full ranking, that is, the model ranking obtained by evaluating a metric using the full item set as target set, which raises the question whether the ranking obtained by sampling by popularity is equal to the full ranking. In this work, we re-evaluate current state-of-the-art sequential recommender models from the point of view, whether these sampling strategies have an impact on the final ranking of the models. We therefore train four recently proposed sequential recommendation models on five widely known datasets. For each dataset and model, we employ three evaluation strategies. First, we compute the full model ranking. Then we evaluate all models on a target set sampled by the two different sampling strategies, uniform random sampling and sampling by popularity with the commonly used target set size of 100, compute the model ranking for each strategy and compare them with each other. Additionally, we vary the size of the sampled target set. Overall, we find that both sampling strategies can produce inconsistent rankings compared with the full ranking of the models. Furthermore, both sampling by popularity and uniform random sampling do not consistently produce the same ranking when compared over different sample sizes. Our results suggest that like uniform random sampling, rankings obtained by sampling by popularity do not equal the full ranking of recommender models and therefore both should be avoided in favor of the full ranking when establishing state-of-the-art.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m looking at this article about evaluating neural sequential item recommendation models through different sampling strategies. The title already gives a hint that it&#39;s focused on evaluation methods in recommendations. Let me break down the abstract to get more details.
+
+The article discusses how current models are compared using metrics on a small subset of items called the target set, which includes relevant and negative samples. They mention two main strategies: uniform random sampling and sampling by popularity. The authors question whether these strategies accurately reflect the full ranking of models when evaluating them.
+
+They conducted experiments with four models across five datasets, using three evaluation strategies—full ranking, uniform random, and popularity-based sampling. Their findings suggest that both sampling methods can lead to inconsistent rankings compared to the full set, implying that relying solely on samples might not be reliable for establishing state-of-the-art models.
+
+So, categorizing this article would involve several angles. First, it&#39;s about evaluation strategies in recommendation systems, so &#34;Evaluation Strategy&#34; is a key category. It specifically deals with sampling methods like uniform random and popularity-based, so those should each be categories too. 
+
+The focus is on sequential item recommendations, which ties into the broader area of sequential recommendations, so that&#39;s another category. Since they&#39;re comparing different models, &#34;Model Comparison&#34; fits here as well.
+
+They discuss metrics used in evaluating these models, hence &#34;Metrics&#34; should be included. The study addresses issues with current evaluation practices, pointing out limitations, so a category like &#34;Evaluation Limitations&#34; makes sense.
+
+The article is part of ongoing research in recommendation systems, so including &#34;Recommendation Systems&#34; is essential. It also touches on how sample size affects rankings, so &#34;Sample Size&#34; should be another category. Lastly, the discussion implies that evaluation can sometimes be misleading, which relates to &#34;Evaluation Bias.&#34;
+
+Putting it all together, these categories cover both the specific methods and broader implications of their study, ensuring users can find this article through various relevant searches.
+&lt;/think&gt;
+
+Sequential Recommendation, Evaluation Strategy, Sampling Methods, Model Comparison, Metrics, Recommendation Systems, Uniform Random Sampling, Popularity-Based Sampling, Full Ranking, Evaluation Limitations, Sample Size, Evaluation Bias</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

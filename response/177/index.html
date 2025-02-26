@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Discovering What You’re Known For: A Contextual Poisson Factorization Approach
+Abstract:
+Discovering what people are known for is valuable to many important applications such as recommender systems. Unlike an individual’s personal interests, what a user is known for is reflected by the views of others, and is often not easily discerned for a long-tail of the vast majority of users. In this paper, we tackle the problem of discovering what users are known for through a probabilistic model called Bayesian Contextual Poisson Factorization. Moving beyond just modeling user’s content, it naturally models and integrates additional contextual factors, concretely, user’s geo-spatial footprints and social influence, to overcome noisy online activities and social relations. Through GPS-tagged social media datasets, we find that the proposed method can improve known-for prediction performance by 17.5% in precision and 20.9% in recall on average, and that it can capture the implicit relationships between a user’s known-for profile and her content, geo-spatial and social influence.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;Discovering What You’re Known For: A Contextual Poisson Factorization Approach.&#34; This suggests that the article is about determining what users are recognized for, which relates to recommendation systems or user profiling.
+
+Looking at the abstract, it mentions recommender systems as an important application. So right away, I can note down &#34;Recommender Systems&#34; as one category. The method used is a probabilistic model called Bayesian Contextual Poisson Factorization. That sounds like a type of factorization technique, so &#34;Matrix Factorization&#34; or more specifically, &#34;Poisson Factorization,&#34; might be appropriate.
+
+The abstract also talks about integrating contextual factors such as user&#39;s geo-spatial footprints and social influence. This indicates that the study is looking at context-aware recommendation methods. So I should include categories like &#34;Context-Aware Recommendations&#34; and maybe even &#34;Social Influence.&#34;
+
+Another point mentioned is overcoming noisy online activities, which ties into handling noise in data. So &#34;Noise Handling&#34; could be a relevant category.
+
+They used GPS-tagged social media datasets for their experiments, so &#34;Geo-Spatial Data&#34; is definitely another category to include.
+
+The evaluation part shows improvements in precision and recall by 17.5% and 20.9%, respectively. This suggests that the article focuses on improving recommendation accuracy through better models. So categories like &#34;Recommendation Accuracy&#34; and possibly &#34;Evaluation Metrics&#34; would fit here.
+
+Additionally, since they&#39;re using real-world data from social media, this might fall under &#34;Real-World Applications.&#34; Although the abstract doesn&#39;t explicitly mention A/B testing or user surveys, it does discuss practical improvements in performance, which is a form of application. So maybe &#34;Real-World Applications&#34; is still applicable.
+
+The model integrates multiple contextual factors, so &#34;Multi-Factor Models&#34; could be another category to highlight this aspect.
+
+I should also consider the broader domain aspects. Since the paper is about users being known for certain things, it touches on user modeling or personalization. So &#34;User Modeling&#34; might be a good addition. Alternatively, considering the context of recommendations, perhaps &#34;Personalization in Recommendations&#34; would be more precise.
+
+Putting this all together, I need to make sure each category is relevant and adds value for users navigating through the articles. The categories should cover both specific technical aspects (like Poisson Factorization) as well as broader themes (such as Recommender Systems). Also, ensuring that each article is categorized in at least 8-12 areas will help with discoverability.
+
+Let me list out the potential categories:
+
+1. Recommender Systems - Core application.
+2. Matrix Factorization - The method used.
+3. Context-Aware Recommendations - Integrates contextual factors.
+4. Social Influence - One of the contextual factors.
+5. Geo-Spatial Data - Another contextual factor.
+6. Noise Handling - Dealing with noisy data.
+7. Recommendation Accuracy - Improved precision and recall.
+8. Evaluation Metrics - Since they measured performance metrics.
+9. Real-World Applications - Using real social media datasets.
+10. Multi-Factor Models - Integrates multiple factors.
+
+I think these cover a good range, from the specific algorithmic approach to broader application areas and evaluation aspects. This should help users find the article when exploring various facets related to recommendation systems.
+&lt;/think&gt;
+
+Recommender Systems, Matrix Factorization, Context-Aware Recommendations, Social Influence, Geo-Spatial Data, Noise Handling, Recommendation Accuracy, Evaluation Metrics, Real-World Applications, Multi-Factor Models</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

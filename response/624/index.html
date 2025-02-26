@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Query as Context for Item-to-Item Recommendation
+Abstract:
+Recommender Systems is one of the main machine learning applications for an e-commerce platforms such as Etsy, a two sided marketplace. A frequent usage of such system is for item-to-item recommendations that show similar items (also referred as listings) based on the listing a user is currently viewing. Item-to-item recommendations typically take into account information that are only associated with the target listing and other listings in the inventory. However, other contextual information such as user intents, queries and seasonality, are often not taken into account. In this talk, we will present two approaches we developed to utilize additional contextual information in the form of queries in generating item-to-item recommendations. Moreover, we will present our journey in migrating Etsy’s rankers from linear to non-linear models. Additionally, we propose new metrics to evaluate candidate sets that accesses diversity and price spread, while not compromising relevance. The proposed metrics can also be used beyond the current application. Our proposed candidate set generation approach outperforms the model in production as well as yielding significant lift in conversion rate and other engagement metrics as indicated by several A/B tests.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s tackle this categorization task. So, I&#39;ve got an article about recommendation systems, specifically item-to-item recommendations on Etsy. The title mentions using queries as context, which immediately tells me that context-aware methods are a key aspect here.
+
+Looking at the abstract, it talks about Etsy being a two-sided marketplace, so e-commerce is definitely a main category. Recommender Systems is obviously central since that&#39;s the focus of the article. Item-to-item recommendations are a specific type within recommendation systems, so that should be another category.
+
+The abstract also mentions using queries as contextual information, which means query-based recommendations and context-aware methods should both be included. They developed approaches to utilize this query data, so method development is relevant.
+
+Etsy&#39;s journey from linear to non-linear models indicates an evolution in machine learning techniques, so model evolution is a good category. The mention of A/B tests shows that real-world applications are important here, and they used user surveys as part of their evaluation process, so user feedback should be included too.
+
+They proposed new metrics for evaluating candidate sets, focusing on diversity, price spread, and relevance. So evaluation metrics is another key area. Since Etsy deals with listings or items, item-based recommendations make sense. The context includes user intent and seasonality, which are specific aspects of recommendation contexts.
+
+Additionally, the article discusses improvements in conversion rates and engagement metrics, so impact analysis should be a category as well.
+
+Putting it all together, I need to make sure each category is relevant and covers both broad and specific areas without overcrowding any single category. I&#39;ll go with: Recommender Systems, E-commerce, Context-Aware Recommendations, Query-Based Recommendations, Item-to-Item Recommendations, Model Evolution (Linear vs Non-linear), Machine Learning Applications, Real-World Applications (A/B Tests), Evaluation Metrics, Candidate Set Generation, User Feedback/Surveys, Diversity of Recommendations, Price Spread, Relevance, Impact Analysis on Engagement.
+&lt;/think&gt;
+
+Recommender Systems, E-commerce, Context-Aware Recommendations, Query-Based Recommendations, Item-to-Item Recommendations, Model Evolution, Machine Learning Applications, Real-World Applications (A/B Tests), Evaluation Metrics, Candidate Set Generation, User Feedback/Surveys, Diversity of Recommendations, Price Spread, Relevance, Impact Analysis on Engagement</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Query as Context for Item-to-Item Recommendation
+Abstract:
+Recommender Systems is one of the main machine learning applications for an e-commerce platforms such as Etsy, a two sided marketplace. A frequent usage of such system is for item-to-item recommendations that show similar items (also referred as listings) based on the listing a user is currently viewing. Item-to-item recommendations typically take into account information that are only associated with the target listing and other listings in the inventory. However, other contextual information such as user intents, queries and seasonality, are often not taken into account. In this talk, we will present two approaches we developed to utilize additional contextual information in the form of queries in generating item-to-item recommendations. Moreover, we will present our journey in migrating Etsy’s rankers from linear to non-linear models. Additionally, we propose new metrics to evaluate candidate sets that accesses diversity and price spread, while not compromising relevance. The proposed metrics can also be used beyond the current application. Our proposed candidate set generation approach outperforms the model in production as well as yielding significant lift in conversion rate and other engagement metrics as indicated by several A/B tests.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about query-based item recommendations for Etsy. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;Query as Context for Item-to-Item Recommendation.&#34; So it&#39;s focusing on how queries can be used as context in recommendation systems. The abstract mentions that recommenders often use item features but not enough contextual info like user intent or seasonality. They present two approaches to use queries, move from linear to non-linear models, and propose new evaluation metrics.
+
+First, the main category would definitely be &#34;Item-to-Item Recommendation&#34; because the article is all about that technique. Next, since they&#39;re using queries as context, &#34;Query-Based Recommendations&#34; makes sense. The mention of user intent ties into &#34;User Intent,&#34; so I&#39;ll add that.
+
+Etsy is an e-commerce platform, so categorizing under &#34;E-commerce&#34; is appropriate. They talk about moving from linear to non-linear models, which falls under &#34;Non-Linear Models.&#34; 
+
+The part about evaluating with metrics related to diversity and price spread leads me to include &#34;Diversity of Recommendations&#34; and &#34;Price Sensitivity.&#34; The fact that they tested in real-world scenarios using A/B tests means &#34;A/B Testing&#34; should be another category.
+
+They&#39;re improving conversion rates, so including &#34;Conversion Rate Optimization&#34; is relevant. Lastly, their metrics are beyond traditional accuracy, so &#34;Beyond Accuracy Metrics&#34; fits.
+
+I think I have covered all the key points: recommendation method, context usage, application area, models used, evaluation aspects, testing methods, and business impact.
+&lt;/think&gt;
+
+Item-to-Item Recommendation, Query-Based Recommendations, User Intent, E-commerce, Non-Linear Models, A/B Testing, Conversion Rate Optimization, Diversity of Recommendations, Beyond Accuracy Metrics, Price Sensitivity</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

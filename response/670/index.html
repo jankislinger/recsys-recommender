@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Top-K Contextual Bandits with Equity of Exposure
+Abstract:
+The contextual bandit paradigm provides a general framework for decision-making under uncertainty. It is theoretically well-defined and well-studied, and many personalisation use-cases can be cast as a bandit learning problem. Because this allows for the direct optimisation of utility metrics that rely on online interventions (such as click-through-rate (CTR)), this framework has become an attractive choice to practitioners. Historically, the literature on this topic has focused on a one-sided, user-focused notion of utility, overall disregarding the perspective of content providers in online marketplaces (for example, musical artists on streaming services). If not properly taken into account – recommendation systems in such environments are known to lead to unfair distributions of attention and exposure, which can directly affect the income of the providers. Recent work has shed a light on this, and there is now a growing consensus that some notion of “equity of exposure” might be preferable to implement in many recommendation use-cases.
+We study how the top-K contextual bandit problem relates to issues of disparate exposure, and how this disparity can be minimised. The predominant approach in practice is to greedily rank the top-K items according to their estimated utility, as this is optimal according to the well-known Probability Ranking Principle. Instead, we introduce a configurable tolerance parameter that defines an acceptable decrease in utility for a maximal increase in fairness of exposure. We propose a personalised exposure-aware arm selection algorithm that handles this relevance-fairness trade-off on a user-level, as recent work suggests that users’ openness to randomisation may vary greatly over the global populace. Our model-agnostic algorithm deals with arm selection instead of utility modelling, and can therefore be implemented on top of any existing bandit system with minimal changes. We conclude with a case study on carousel personalisation in music recommendation: empirical observations highlight the effectiveness of our proposed method and show that exposure disparity can be significantly reduced with a negligible impact on user utility.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me start by reading through the information provided.
+
+The title is &#34;Top-K Contextual Bandits with Equity of Exposure.&#34; The abstract talks about contextual bandit problems, which are a type of machine learning algorithm used for decision-making under uncertainty. It mentions how this framework is applied in personalization use-cases and focuses on optimizing utility metrics like click-through rates (CTR). However, the article highlights that existing approaches often overlook the perspective of content providers, leading to unfair exposure distributions.
+
+The authors introduce a method using a tolerance parameter to balance utility and fairness, proposing an algorithm for arm selection that considers user-level preferences. They also mention applying this in a music recommendation context through a case study, showing reduced disparity with minimal impact on user utility.
+
+Now, I&#39;ll identify the key elements from the article:
+
+1. **Contextual Bandits**: The primary framework discussed.
+2. **Equity of Exposure**: A fairness aspect regarding content providers&#39; exposure.
+3. **Personalization Use-cases**: Applications in recommendation systems.
+4. **Relevance-Fairness Trade-off**: Balancing user utility with fairness.
+5. **Algorithm Design**: Introducing a new algorithm or method.
+6. **Music Recommendation**: The specific domain of the case study.
+7. **User-Centered Approach**: Considering user-level factors.
+8. **Evaluation Methods**: They mention empirical observations and a case study.
+
+Looking at these points, I can map them to potential categories:
+
+- **Contextual Bandits** is straightforward.
+- Equity relates to **Fairness in Recommendations** and possibly **Exposure Disparity**.
+- Personalization ties into both the use-case and user-centered design.
+- The trade-off between relevance and fairness could be its own category or fall under fairness.
+- Algorithm design suggests a focus on **Algorithm Design**.
+- The music domain points to **Music Recommendation**.
+- User-centric aspects might relate to **User-Centered Design**.
+- Evaluation through case studies fits into **Evaluation Methods**.
+
+I also need to ensure the categories are user-friendly and cover both broad and specific areas. Categories like **Top-K Selection**, **Personalization Algorithms**, and **Fairness in Machine Learning** add more specificity without being too narrow.
+
+I should make sure not to have too many overlapping or redundant categories. For example, **Equity of Exposure** is a specific aspect that falls under fairness but can be its own category for clarity.
+
+Finally, I&#39;ll compile the list, ensuring it&#39;s comprehensive and covers all relevant aspects mentioned in the article.
+&lt;/think&gt;
+
+Contextual Bandits, Equity of Exposure, Personalization, Fairness in Recommendations, Top-K Selection, Music Recommendation, Algorithm Design, User-Centered Design, Relevance-Fairness Trade-off, Evaluation Methods, Exposure Disparity, Machine Learning, Bandit Algorithms, Case Study.</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

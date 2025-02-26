@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Towards Effective Exploration/Exploitation in Sequential Music Recommendation
+Abstract:
+Music streaming companies collectively serve billions of songs per day. Radio-based music services may intersperse audio advertisements among the songs as a means to generate revenue, much like traditional FM radio. Regardless of the monetization approach, the recommender system should decide when to play content that the listener is known to enjoy (exploit) and content that is novel to the listener (explore). Recommender systems that rely on this explore/exploit type framework have been deployed in a wide variety of applications such as movies, books, music, shopping and more. In this work, we investigate the impact of different ad/song sequences on listener behavior. In particular, we focus on the impact of exploring new song content for the listener given the previous sequence of ads and songs in the listener’s session. Our results show that the prior sequence matters when considering song exploration and that this prior sequence has an impact on the listener’s tendency to interrupt their current session.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about sequential music recommendation into multiple categories based on the guidelines provided. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;Towards Effective Exploration/Exploitation in Sequential Music Recommendation.&#34; The abstract mentions that it&#39;s about music streaming companies serving billions of songs daily, using radio-based services with ads like traditional FM radio. It talks about how recommender systems should decide when to exploit (play known liked content) or explore (new content). They&#39;ve applied this framework in various areas like movies, books, music, shopping, etc. The study looks at the impact of different ad/song sequences on listener behavior, especially how previous ads and songs affect the listener&#39;s tendency to interrupt their session when exploring new songs.
+
+Now, I need to map this article into relevant categories. From the guidelines, possible categories include algorithm families, problem domains, specific recommendation aspects, evaluation aspects, real-world applications, etc.
+
+First, the exploration/exploitation aspect is a key point here, which ties into reinforcement learning strategies since it&#39;s about balancing between exploring new options and exploiting known ones. So that&#39;s one category.
+
+The article focuses on music recommendations, so &#39;Music&#39; is definitely a domain category. Since it&#39;s sequential, maybe something like &#39;Sequential Recommendations&#39; would be appropriate.
+
+They mention the impact of ad/song sequences, which implies a real-world application in radio-based services. So categories like &#39;Radio-Based Services&#39; or more broadly &#39;Real-World Applications&#39; make sense.
+
+The study looks at listener behavior and how previous content affects their actions, so evaluation aspects like &#39;User Behavior Analysis&#39; and &#39;Interrupted Sessions&#39; (since they mention listeners interrupting their sessions) should be included.
+
+The framework used is explore/exploit, which is a common approach in various recommendation systems. So the problem domain could also include &#39;Recommender Systems&#39; as a broader category.
+
+Since it&#39;s about balancing between known and new content, aspects like &#39;Content Exploration&#39; and &#39;Known Content Exploitation&#39; should be included to highlight this balance.
+
+The study might involve testing different ad/song sequences in real settings or through experiments, so categories like &#39;A/B Test&#39; could apply if they used such methods. However, the abstract doesn&#39;t explicitly mention A/B tests, so I&#39;m not sure about that one. Maybe it&#39;s safer to include something more general like &#39;Real-World Applications&#39; instead.
+
+Putting this all together, the relevant categories would cover algorithmic strategies (Exploration/Exploitation), problem domains (Recommender Systems, Music), specific recommendation aspects (Sequential Recommendations), real-world applications (Radio-Based Services), evaluation aspects (User Behavior Analysis, Interrupted Sessions), and the balance between exploration and exploitation (Content Exploration, Known Content Exploitation).
+
+I should also check if these categories are clear and user-friendly. They seem to align well with potential user interests in recommendation systems, especially those looking into music or sequential content.
+
+So, compiling all these thoughts into a list of 8-12 categories as per the guidelines.
+&lt;/think&gt;
+
+Exploration/Exploitation, Music, Sequential Recommendations, Radio-Based Services, Recommender Systems, Real-World Applications, User Behavior Analysis, Interrupted Sessions, Content Exploration, Known Content Exploitation.</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Towards Effective Exploration/Exploitation in Sequential Music Recommendation
+Abstract:
+Music streaming companies collectively serve billions of songs per day. Radio-based music services may intersperse audio advertisements among the songs as a means to generate revenue, much like traditional FM radio. Regardless of the monetization approach, the recommender system should decide when to play content that the listener is known to enjoy (exploit) and content that is novel to the listener (explore). Recommender systems that rely on this explore/exploit type framework have been deployed in a wide variety of applications such as movies, books, music, shopping and more. In this work, we investigate the impact of different ad/song sequences on listener behavior. In particular, we focus on the impact of exploring new song content for the listener given the previous sequence of ads and songs in the listener’s session. Our results show that the prior sequence matters when considering song exploration and that this prior sequence has an impact on the listener’s tendency to interrupt their current session.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article about music recommendation systems. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Towards Effective Exploration/Exploitation in Sequential Music Recommendation.&#34; Okay, so it&#39;s talking about explore/exploit frameworks, which I know are common in recommendation systems to balance between suggesting known preferences (exploit) and introducing new options (explore). The abstract mentions music streaming companies serving billions of songs and using radio-based services with ads. It discusses how recommenders should decide when to play familiar content versus new stuff.
+
+Looking at the categories provided: Exploration-Exploitation, Music, Sequential Recommendation, Ad Insertion, Listener Behavior, Session Analysis. Let me break this down.
+
+First, &#34;Exploration-Exploitation&#34; is definitely relevant because that&#39;s the core framework of the study. Next, since it&#39;s about music, the category &#34;Music&#34; makes sense. The article talks about sequential recommendations, so &#34;Sequential Recommendation&#34; fits as well.
+
+There&#39;s a mention of ads being inserted among songs, which ties into &#34;Ad Insertion.&#34; Listener behavior is a key focus here, especially how prior sequences affect their actions, so that&#39;s another important category. Lastly, the study looks at sessions and how previous interactions influence decisions, hence &#34;Session Analysis.&#34;
+
+I should make sure each category is clearly relevant and that together they cover all aspects of the article without overlapping too much or missing anything crucial. I think these categories effectively capture the main points of the research.
+&lt;/think&gt;
+
+Exploration-Exploitation, Music, Sequential Recommendation, Ad Insertion, Listener Behavior, Session Analysis</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

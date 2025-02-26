@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Matrix Factorization</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/explainability/">Explainability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Calibrating the Predictions for Top-N Recommendations (2024)</h3>
+    <p><strong>Authors:</strong> Masahiro Sato</p>
+    <p>Well-calibrated predictions of user preferences are essential for many applications. Since recommender systems typically select the top-N items for users, calibration for those top-N items, rather than for all items, is important.  We show that previous calibration methods result in miscalibrated predictions for the top-N items, despite their excellent calibration performance when evaluated on all items.  In this work, we address the miscalibration in the top-N recommended items. We first define evaluation metrics for this objective and then propose a generic method to optimize calibration models focusing on the top-N items. It groups the top-N items by their ranks and optimizes distinct calibration models for each group with rank-dependent training weights.  We verify the effectiveness of the proposed method for both explicit and implicit feedback datasets, using diverse classes of recommender models.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Top-N Recommendations, Calibration of Predictions, Evaluation Metrics, Optimization Methods, Explicit Feedback, Implicit Feedback, Diverse Recommenders, Accuracy of Recommendations, Matrix Factorization, Multi-Armed Bandits, Algorithm Evaluation, Item Ranking (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1082/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>One-class Matrix Factorization: Point-Wise Regression-Based or Pair-Wise Ranking-Based? (2024)</h3>
+    <p><strong>Authors:</strong> Sheng-Wei Chen, Chih-Jen Lin</p>
+    <p>One-class matrix factorization (MF) is an important technique for recommender systems with implicit feedback. In one widely used setting, a regression function is fit in a point-wise manner on observed and some unobserved (user, item) entries. Recently, in AAAI 2019, Chen et al. [2] proposed a pair-wise ranking-based approach for observed (user, item) entries to be compared against unobserved ones. They concluded that the pair-wise setting performs consistently better than the more traditional point-wise setting. However, after some detailed investigation, we explain by mathematical derivations that their method may perform only similar to the point-wise ones. We also identified some problems when reproducing their experimental results. After considering suitable settings, we rigorously compare point-wise and pair-wise one-class MFs, and show that the pair-wise method is actually not better. Therefore, for one-class MF, the more traditional and mature point-wise setting should still be considered. Our findings contradict the conclusions in [2] and serve as a call for caution when researchers are comparing between two machine learning methods.</p>
+    <p><strong>Categories:</strong> One-class Matrix Factorization, Matrix Factorization, Recommender Systems, Implicit Feedback, Point-wise Regression, Pair-wise Ranking, Evaluation Methods, Evaluation Metrics, Reproducibility, Caution, Method Comparison, Enhanced Recommendations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1120/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Cross-Domain Latent Factors Sharing via Implicit Matrix Factorization (2024)</h3>
+    <p><strong>Authors:</strong> Alexey Vasilev, Anton Vakhrushev, Evgeny Frolov, Abdulaziz Samra, Alexander Grigorevskiy</p>
+    <p>Data sparsity has been one of the long-standing problems for recommender systems. One of the solutions to mitigate this issue is to exploit knowledge available in other source domains. However, many cross-domain recommender systems introduce a complex architecture that makes them less scalable in practice. On the other hand, matrix factorization methods are still considered to be strong baselines for single-domain recommendations. In this paper, we introduce the CDIMF, a model that extends the standard implicit matrix factorization with ALS to cross-domain scenarios. We apply the Alternating Direction Method of Multipliers to learn shared latent factors for overlapped users while factorizing the interaction matrix. In a dual-domain setting, experiments on industrial datasets demonstrate a competing performance of CDIMF for both cold-start and warm-start. The proposed model can outperform most other recent cross-domain and single-domain models.</p>
+    <p><strong>Categories:</strong> Matrix Factorization, Cross-Domain, Data Sparsity, Scalability, Cold Start, Recommender Systems, Implicit Feedback, Alternating Least Squares (ALS), Latent Factors, Evaluation Metrics Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1029/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>The Role of Unknown Interactions in Implicit Matrix Factorization — A Probabilistic View (2024)</h3>
+    <p><strong>Authors:</strong> Bart Goethals, Joey De Pauw</p>
+    <p>Matrix factorization is a well-known and effective methodology for top-k list recommendation. It became widely known during the Netflix challenge in 2006, and since then, many adapted and improved versions have been published. A particularly interesting matrix factorization algorithm called iALS (for implicit Alternating Least Squares) adapts the method for implicit feedback, i.e.\ a setting where only a very small amount of positive labels are available along with a majority of unknown labels. Compared to the classical task of rating prediction, learning from implicit feedback is applicable to many more domains, as the data is more abundant and requires less effort to elicit from users. However, the sparsity, imbalance, and implicit nature of the signal also pose unique challenges to retrieving the most relevant items to recommend. We revisit the role of unknown interactions in implicit matrix factorization. Traditionally, all unknowns are interpreted as negative samples and their importance in the training objective is then down-weighted to balance them out with the known, positive interactions. Interestingly, by adapting a probabilistic view of matrix factorization, we can retain the unknown nature of these interactions by modelling them as either positive or negative. With this new formulation that better fits the underlying data, we gain improved performance on the downstream recommendation task without any computational overhead compared to the popular iALS method. This paper outlines the key insights needed to adapt iALS to use logistic regression. Furthermore, the popular full-rank EASE model is identified as a special case of iALS. With this knowledge, EASE was trivially adapted to use logistic regression as well. An extensive experimental evaluation on several real-world datasets demonstrates the effectiveness of our approach. Additionally, a discrepancy between the need for weighting between factorization and regression models is discovered, leading towards a better understanding of these methods.</p>
+    <p><strong>Categories:</strong> Matrix Factorization, Implicit Feedback, Recommendation Systems, Algorithm Adaptation, Probabilistic Models, iALS, Real-World Applications, Cold Start, Evaluation Methods, Model Interpretation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1069/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Integrating Matrix Factorization with Graph based Models (2024)</h3>
+    <p><strong>Authors:</strong> Rachana Mehta</p>
+    <p>Graph based Recommender models make use of user-item rating and user-user social relationships to elicit recommendation performance by extracting inherent geometrical knowledge. In a social graph scenario, user-user trust plays a significant role in reducing sparsity and has varied characteristics that can be exploited. Existing models limit themselves to learning from either a high order interaction graph of user-item ratings or a user-user social graph from trust value. They explore other trust characteristics in a very limited setting. The graph based model, designed using entire user-user social information, impacts performance and escalates complexities in model learning. To alleviate these issues of graph learning, graph recommender seeks assistance from matrix factorization techniques. Incorporating graph based model with matrix factorization brings its own set of challenges of model integration, leveraging trust, graph learning, and optimization. This article presents the existing work in that line and future possibilities and challenges to be catered to through novel developments</p>
+    <p><strong>Categories:</strong> Matrix Factorization, Graph-Based Recommendations, Recommendation Systems, Trust, Collaborative Filtering, Social Networks, Algorithm Integration, Evaluation Methods, Performance Analysis, Future Directions (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1145/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Low Rank Field-Weighted Factorization Machines for Low Latency Item Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Ariel Raviv, Tularam Ban, Alex Shtoff, Oren Somekh, Michael Viderman, Naama Haramaty-Krasne</p>
+    <p>Factorization machine (FM) variants are widely used in recommendation systems that operate under strict throughput and latency requirements, such as online advertising systems. FMs have two prominent strengths. First, is their ability to model pairwise feature interactions while being resilient to data sparsity by learning factorized representations. Second, their computational graphs facilitate fast inference and training. Moreover, when items are ranked as a part of a query for each incoming user, these graphs facilitate computing the portion stemming from the user and context fields only once per query.  Thus, the computational cost for each ranked item is proportional only to the number of fields that vary among the ranked items. Consequently, in terms of inference cost, the number of user or context fields is practically unlimited. More advanced variants of FMs, such as field-aware and field-weighted FMs, provide better accuracy by learning a representation of field-wise interactions, but require computing all pairwise interaction terms explicitly. In particular, the computational cost during inference is proportional to the square of the number of fields, including user, context, and item. When the number of fields is large, this is prohibitive in systems with strict latency constraints, and imposes a limit on the number of user and context fields for a given computational budget. To mitigate this caveat, heuristic pruning of low intensity field interactions is commonly used to accelerate inference. In this work we propose an alternative to the pruning heuristic in field-weighted FMs using a diagonal plus symmetric low-rank decomposition. Our technique reduces the computational cost of inference, by allowing it to be proportional to the number of item fields only. Using a set of experiments on real-world datasets, we show that aggressive rank reduction outperforms similarly aggressive pruning, both in terms of accuracy and item recommendation speed. Beyond computational complexity analysis, we corroborate our claim of faster inference experimentally, both via a synthetic test, and by having deployed our solution to a major online advertising system, where we observed significant ranking latency improvements. We made the code to reproduce the results on public datasets and synthetic tests available at https://anonymous.4open.science/r/pytorch-fm-0EC0.</p>
+    <p><strong>Categories:</strong> Factorization Machines (FM), Matrix Factorization, Online Advertising, Low Latency, Computational Efficiency, Field-Weighted Factorization Machines, Inference Optimization, Real-World Applications, Performance Evaluation, Low Rank Decomposition (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1048/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>MARec: Metadata Alignment for cold-start Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Anirban Majumder, Wentao Lu, Julien Monteil, Volodymyr Vaskovych, Anton van den Hengel</p>
+    <p>For many recommender systems the primary data source is a historical record of user clicks. The associated click matrix which is often very sparse, however, as the number of users x products can be far larger than the number of clicks, and such sparsity is accentuated in cold-start settings. The sparsity of the click matrix is the reason matrix factorization and autoencoders techniques remain highly competitive across collaborative filtering datasets. In this work, we propose a simple approach to address cold-start recommendations by leveraging content metadata, Metadata Alignment for cold-start Recommendation (MARec). we show that this approach can readily augment existing matrix factorization and autoencoder approaches, enabling a smooth transition to top performing algorithms in warmer set-ups. Our experimental results indicate three separate contributions: first, we show that our proposed framework largely beats SOTA results on 4 cold-start datasets with different sparsity and scale characteristics, with gains ranging from +8.4% to +53.8% on reported ranking metrics; second, we provide an ablation study on the utility of semantic features, and proves the additional gain obtained by leveraging such features ranges between +46.8% and +105.5%; and third, our approach is by construction highly competitive in warm set-ups, and we propose a closed-form solution outperformed by SOTA results by only 0.8% on average.</p>
+    <p><strong>Categories:</strong> Cold Start, Metadata Alignment, Matrix Factorization, Collaborative Filtering, Data Sparsity, State of the Art, Ablation Study, Beyond Accuracy, Real-World Applications, Recommendation Systems, Novel Approach, Content-Based Filtering (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1044/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Revisiting BPR: A Replicability Study of a Common Recommender System Baseline (2024)</h3>
+    <p><strong>Authors:</strong> Aleksandr Milogradskii, Oleg Lashinin, Sergey Kolesnikov, Alexander P, Marina Ananyeva</p>
+    <p>Bayesian Personalized Rank (BPR), a collaborative filtering approach based on matrix factorization, frequently serves as a benchmark for recommender systems research. However, numerous studies often overlook the nuances of BPR implementation, claiming that it performs worse than newly proposed methods across various tasks. In this paper, we thoroughly examine the features of the BPR model, indicating their impact on its performance, and investigate open-source BPR implementations. Our analysis reveals inconsistencies between these implementations and the original BPR paper, leading to a significant decrease in performance of up to 50% for specific implementations. Furthermore, through extensive experiments on real-world datasets under modern evaluation settings, we demonstrate that with proper tuning of its hyperparameters, the BPR model can achieve performance levels close to state-of-the-art methods on the top-n recommendation tasks and even outperform them on specific datasets. Specifically, on the Million Song Dataset, the BPR model with hyperparameters tuning statistically significantly outperforms Mult-VAE by 10% in NDCG@100 with binary relevance function.</p>
+    <p><strong>Categories:</strong> Matrix Factorization, Bayesian Personalized Ranking (BPR), Recommender Systems, Replicability Study, Performance Evaluation, Real-World Applications, Evaluation Metrics, Benchmarking, Hyperparameter Tuning, State-of-the-Art Methods, Methodology Improvement, Top-N Recommendations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1131/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Private Matrix Factorization with Public Item Features (2023)</h3>
+    <p><strong>Authors:</strong> Walid Krichene, Mihaela Curmei, Li Zhang</p>
+    <p>We consider the problem of training private recommendation models with access to public item features. Training with Differential Privacy (DP) offers strong privacy guarantees, at the expense of loss in recommendation quality. We show that incorporating public item features during training can help mitigate this loss in quality. We propose a general approach based on collective matrix factorization, that works by simultaneously factorizing two matrices: the user feedback matrix (representing sensitive data) and an item feature matrix that encodes publicly available (non-sensitive) item information. The method is conceptually simple, easy to tune, and highly scalable. It can be applied to different types of public data, including: (1) categorical item features; (2) item-item similarities learned from public sources; and (3) publicly available user feedback. Evaluating our method on a standard DP recommendation benchmark, we find that using public item features significantly narrows the quality gap between the private models and their non-private counterpart. As privacy constraints become more stringent, the increased reliance on public side features leads to recommendations becoming more depersonalized, resulting in a smooth transition from collaborative filtering to item-based contextual recommendations.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Matrix Factorization, Differential Privacy, Item Features, Public Data, Privacy-Preserving, Scalability, Collaborative Filtering, Item-Based Recommendations, Evaluation Metrics, Recommendation Quality, Depersonalization (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/913/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Scalable Approximate NonSymmetric Autoencoder for Collaborative Filtering (2023)</h3>
+    <p><strong>Authors:</strong> Ladislav Peška, Radek Bartyzal, Antonín Hoskovec, Martin Spišák, Miroslav Tůma</p>
+    <p>In the field of recommender systems, shallow autoencoders have recently gained significant attention. One of the most highly acclaimed shallow autoencoders is EASE, favored for its competitive recommendation accuracy and simultaneous simplicity. However, the poor scalability of EASE (both in time and especially in memory) severely restricts its use in production environments with vast item sets. In this paper, we propose a hyperefficient factorization technique for sparse approximate inversion of the data-Gram matrix used in EASE. The resulting autoencoder, SANSA, is an end-to-end sparse solution with prescribable density and almost arbitrarily low memory requirements (even for training). As such, SANSA allows us to effortlessly scale the concept of EASE to millions of items and beyond.</p>
+    <p><strong>Categories:</strong> Autoencoders, Collaborative Filtering, Matrix Factorization, Recommender Systems, Scalability, Memory Efficiency, Sparsity Handling, Algorithm Improvements, Time Complexity, Production Environments (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/903/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Adversarial Collaborative Filtering for Free (2023)</h3>
+    <p><strong>Authors:</strong> Chin-Chia Michael Yeh, Vivian Lai, Yan Zheng, Hao Yang, Mahashweta Das, Yujie Fan, Xiaoting Li, Huiyuan Chen</p>
+    <p>Collaborative Filtering (CF) has been successfully applied to help users discover the items of interest. Nevertheless, existing CF methods suffer from noisy data issue, which negatively impacts the quality of personalized recommendation. To tackle this problem, many  prior studies leverage the adversarial learning principle to regularize the representations of users and items, which  has shown great ability in improving both generalizability and robustness. Generally, those methods  learn adversarial perturbations and model parameters using min-max optimization framework. However, there still have two major limitations: 1) Existing methods lack theoretical guarantees of why adding perturbations improve the model generalizability and robustness since noisy data is naturally different from adversarial attacks; 2)  Solving min-max optimization is time-consuming.  In addition to updating the model parameters, each iteration requires additional computations to update the perturbations, making them not scalable for industry-scale datasets. In this paper, we present Sharpness-aware Matrix Factorization (SharpMF), a simple yet effective method that conducts adversarial training without extra computational cost over the base optimizer. To achieve this goal, we first revisit the existing adversarial collaborative filtering and discuss its connection with recent Sharpness-aware Minimization. This analysis shows that adversarial training actually seeks model parameters that lie in neighborhoods having uniformly low loss values, resulting in better generalizability. To reduce the computational overhead, SharpMF introduces a novel trajectory loss to measure sharpness between current weights and past weights. Experimental results on real-world datasets demonstrate that our SharpMF achieves superior performance with almost zero additional computational cost comparing to adversarial training.</p>
+    <p><strong>Categories:</strong> Adversarial Training, Collaborative Filtering, Matrix Factorization, Recommendation Systems, Noise Handling, Generalizability, Robustness, Computational Efficiency, Optimization Techniques, Real-World Applications, User-Centric Design, Scalability, Robustness in Machine Learning (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/848/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Denoising Explicit Social Signals for Robust Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Youchen Sun</p>
+    <p>Social recommender system assumes that user’s preferences can be influenced by their social connections. However, social networks are inherently noisy and contain redundant signals that are not helpful or even harmful for the recommendation task. In this extended abstract, we classify the noise in the explicit social links into intrinsic noise and extrinsic noise. Intrinsic noises are those edges that are natural in the social network but do not have an influence on the user preference modeling; Extrinsic noises, on the other hand, are those social links that are introduced intentionally through malicious attacks such that the attackers can manipulate the social influence to bias the recommendation outcome. To tackle this issue, we first propose a denoising framework that utilizes the information bottleneck principle and contrastive learning to filter out the noisy social edges and use the edges that are socially influential to enhance item prediction. Experiments will be conducted on the real-world datasets for the Top-K ranking evaluation as well as the model’s robustness to simulated social noises. Finally, we discuss the future plan about how to defend against extrinsic noise, which results from the malicious attack.</p>
+    <p><strong>Categories:</strong> Denoising Frameworks, Contrastive Learning, Matrix Factorization, Social Recommender Systems, Noise Filtering, Robustness in Recommendations, Explicit Social Signals, Top-K Ranking Evaluation, Model Robustness, Real-World Datasets, Defense Mechanisms, Adversarial Attacks in Recommendations, Social Signal Utilization (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/974/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Of Spiky SVDs and Music Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Darius Afchar, Romain Hennequin, Vincent Guigue</p>
+    <p>The truncated singular value decomposition is a widely used methodology in music recommendation for direct similar-item retrieval or embedding musical items for downstream tasks. This paper investigates a curious effect that we show naturally occurring on many recommendation datasets: spiking formations in the embedding space. We first propose a metric to quantify this spiking organization’s strength, then mathematically prove its origin tied to underlying communities of items of varying internal popularity. With this new-found theoretical understanding, we finally open the topic with an industrial use case of estimating how music embeddings’ top-k similar items will change over time under the addition of data.</p>
+    <p><strong>Categories:</strong> Matrix Factorization, Music Recommendation, Embeddings, Spiking Formations, Metrics, Community Detection, Industrial Application, Recommendation Quality, Item Similarity, Embedding Stability Over Time (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/929/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Station and Track Attribute-Aware Music Personalization (2023)</h3>
+    <p><strong>Authors:</strong> M. Jeffrey Mei, Oliver Bembom, Andreas Ehmann</p>
+    <p>We present a transformer for music personalization that recommends tracks given a station seed (artist) and improves the accuracy vs. a baseline matrix factorization method by 10%. Adding more embeddings to capture track and station attributes further improves the accuracy of our recommendations, and also improves recommendation diversity, i.e. mitigates popularity bias. We analyze the learned embeddings and find they learn both explicit attributes provided at training and implicit attributes that may inform listener preferences. We also find that unlike matrix factorization, our model can identify and transfer relevant listener preferences across different genres and artists.</p>
+    <p><strong>Categories:</strong> Transformer-Based Models, Music Recommendations, Matrix Factorization, Attribute-Based Recommendations, Recommendation Diversity, Popularity Bias, Listener Preferences, Cross-Domain Recommendations, Evaluation Methods (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1006/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Uncertainty-adjusted Inductive Matrix Completion with Graph Neural Networks (2023)</h3>
+    <p><strong>Authors:</strong> Antoine Ledent, Petr Kasalicky, Rodrigo Alves</p>
+    <p>We propose a robust recommender systems model which performs matrix completion and a ratings-wise uncertainty estimation jointly. Whilst the prediction module is purely based on an implicit low-rank assumption imposed via nuclear norm regularization, our loss function is augmented by an uncertainty estimation module which learns an anomaly score for each individual rating via a Graph Neural Network: data points deemed more anomalous by the GNN are downregulated in the loss function used to train the low-rank module. The whole model is trained in an end-to-end fashion, allowing the anomaly detection module to tap on the supervised information available in the form of ratings. Thus, our model’s predictors enjoy the favourable generalization properties that come with being chosen from small function space (i.e., low-rank matrices), whilst exhibiting the robustness to outliers and flexibility that comes with deep learning methods. Furthermore, the anomaly scores themselves contain valuable qualitative information. Experiments on various real-life datasets demonstrate that our model outperforms standard matrix completion and other baselines, confirming the usefulness of the anomaly detection module.</p>
+    <p><strong>Categories:</strong> Matrix Factorization, Graph Neural Networks, Recommender Systems, Uncertainty Estimation, Robust Recommendations, Anomaly Detection, Empirical Evaluation, Hybrid Methods, Generalization, Deep Learning, Loss Function Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/967/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Disentangling Motives behind Item Consumption and Social Connection for Mutually-enhanced Joint Prediction (2023)</h3>
+    <p><strong>Authors:</strong> Yew Soon Ong, Jie Zhang, Zhu Sun, Youchen Sun, Xiao Sha</p>
+    <p>Item consumption and social connection, as common user behaviors in many web applications, have been extensively studied. However, most current works separately perform either item or social link prediction tasks, possibly with the help of the other as an auxiliary signal. Moreover, they merely consider the behaviors in a holistic manner yet neglect the multi-faceted motives behind them (e.g., watching movies to kill time or with friends; connecting with others due to friendships or colleagues). To fill the gap, we propose to disentangle the multi-faceted motives in each network, defined respectively by the two types of behaviors, for mutually- enhanced joint prediction (DMJP). Specifically, we first learn the disentangled user representations driven by motives of multi-facets in both networks. Thereafter, the mutual influence of the two networks is subtly discriminated at the facet-to-facet level. The fine-grained mutual influence, proven to be asymmetric, is then exploited to help refine user representations in both networks, with the goal of achieving a mutually-enhanced joint item and social link prediction. Empirical studies on three public datasets showcase the superiority of DMJP against state-of-the-arts (SOTAs) on both tasks.</p>
+    <p><strong>Categories:</strong> User Behavior, Social Networks, Item Recommendation, Joint Modeling, Disentangled Representation Learning, Multi-Task Learning, Matrix Factorization, Recommendation Quality, Empirical Analysis, Network Dynamics (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/861/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

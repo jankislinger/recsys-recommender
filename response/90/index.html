@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: E-commerce Recommendation with Personalized Promotion
+Abstract:
+Most existing e-commerce recommender systems aim to recommend the right products to a consumer, assuming the properties of each product are fixed. However, some properties, including price discount, can be personalized to respond to each consumer’s preference. This paper studies how to automatically set the price discount when recommending a product, in light of the fact that the price often will alter a consumer’s purchase decision. The key to optimizing the discount is to predict consumer’s willingness-to-pay (WTP), namely, the highest price a consumer is willing to pay for a product. Purchase data used by traditional e-commerce recommender systems provide points below or above the decision boundary. In this paper we collected training data to better predict the decision boundary. We implement a new e-commerce mechanism adapted from laboratory lottery and auction experiments that elicit a rational customer’s exact WTP for a small subset of products, and use a machine learning algorithm to predict the customer’s WTP for other products. The mechanism is implemented on our own e-commerce website that leverages Amazon’s data and subjects recruited via Mechanical Turk. The experimental results demonstrate that the proposed approach can better predict WTP, dramatically improve conversion rate and sales revenue.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on its content. Let me start by reading the title and abstract carefully.
+
+The title is &#34;E-Commerce Recommendation with Personalized Promotion.&#34; The abstract mentions that existing e-commerce recommenders assume product properties are fixed but focuses on personalized price discounts. They predict willingness-to-pay (WTP) using data from a new mechanism inspired by lottery and auction experiments, implemented on an e-commerce site using Amazon&#39;s data and Mechanical Turk.
+
+First, the main domain here is E-Commerce, so that&#39;s a clear category. The core focus is Recommendation Systems, so I&#39;ll add that as well. Since it&#39;s about personalizing promotions through discounts, Personalized Promotion fits in too.
+
+The article talks about predicting WTP using machine learning. So aspects like Willingness-to-Pay and Machine Learning are relevant. They use real-world data from Amazon and Mechanical Turk, so Real-World Applications is appropriate.
+
+They implemented an e-commerce mechanism similar to lab experiments, which ties into Laboratory Experiments or Mechanism Design in recommendations. So categories like Recommendation Mechanism and Experimental Methods make sense.
+
+The study improves conversion rates and sales revenue, which falls under Business Metrics. They used data from Amazon, so Amazon Data could be a category, but it&#39;s more specific; perhaps Domain-Specific Data would be better to cover other datasets too.
+
+They mention using data collection methods via Mechanical Turk, so crowdsourcing is involved, adding another layer with Human Computation or Crowdsourcing. The approach optimizes sales, which relates to Sales Optimization and Revenue Maximization strategies.
+
+Putting it all together, I&#39;ll list these categories making sure they&#39;re clear and cover different aspects without being too narrow. Let me check if each category accurately reflects the article&#39;s content.
+&lt;/think&gt;
+
+E-Commerce, Recommendation Systems, Personalized Promotion, Willingness-to-Pay, Machine Learning, Real-World Applications, Mechanism Design, Experimental Methods, Business Metrics, Sales Optimization, Revenue Maximization</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

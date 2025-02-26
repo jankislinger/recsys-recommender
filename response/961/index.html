@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: On the Consistency, Discriminative Power and Robustness of Sampled Metrics in Offline Top-N Recommender System Evaluation
+Abstract:
+Negative item sampling in offline top-n recommendation evaluation has become increasingly wide-spread, but remains controversial. While several studies have warned against using sampled evaluation metrics on the basis of being a poor approximation of the full ranking (i.e.~using all negative items), others have highlighted their improved discriminative power and potential to make evaluation more robust. Unfortunately, empirical studies on negative item sampling are based on relatively few methods (between 3-12) and, therefore, lack the statistical power to assess the impact of negative item sampling in practice. In this article, we present preliminary findings from a comprehensive benchmarking study of negative item sampling based on 52 recommendation algorithms and 3 benchmark data sets. We show how the number of sampled negative items and different sampling strategies affect the consistency and discriminative power of sampled evaluation metrics. Furthermore, we investigate the impact of sparsity bias and popularity bias on the robustness of these metrics. In brief, we show that the optimal parameterizations for negative item sampling are dependent on data set characteristics and the goals of the investigator, suggesting a need for greater transparency in related experimental design decisions.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article about sampled metrics in offline top-N recommendation evaluation. Let me break it down step by step.
+
+First, looking at the title: &#34;On the Consistency, Discriminative Power and Robustness of Sampled Metrics in Offline Top-Recommendation System Evaluation.&#34; The key terms here are &#34;sampled metrics,&#34; &#34;offline evaluation,&#34; &#34;top-N recommendations,&#34; consistency, discriminative power, robustness. So this is about evaluating recommendation systems using sampled data instead of the full dataset.
+
+Now, the abstract talks about negative item sampling and how it&#39;s used in offline evaluations. It mentions that some studies warn against using sampled metrics because they might not accurately represent the full ranking (using all negative items), but others say sampled metrics can improve discriminative power and robustness. The study looks at 52 recommendation algorithms across 3 datasets, examining how the number of sampled negatives and different strategies affect consistency, discriminative power, and robustness. They also look into sparsity bias and popularity bias.
+
+So, I need to assign this article to multiple categories based on its content. Let me go through possible categories:
+
+1. **Evaluation Metrics**: Definitely relevant because it&#39;s about evaluating recommendation systems using various metrics.
+2. **Offline Evaluation**: The focus is on offline methods, so that fits.
+3. **Negative Item Sampling**: This technique is central to the study.
+4. **Recommendation Algorithms**: Since they evaluate 52 algorithms, this category makes sense.
+5. **Consistency in Metrics**: One of the main aspects discussed is consistency.
+6. **Discriminative Power**: They talk about how well metrics can differentiate between algorithms.
+7. **Robustness of Metrics**: Another key point is robustness under different conditions.
+8. **Sparsity Bias**: The study looks into how sparsity affects evaluation, so this category applies.
+9. **Popularity Bias**: Similarly, they examine the impact of popularity bias on metrics.
+
+I should make sure each category accurately reflects a part of the article without overlapping too much. For example, &#34;Evaluation Metrics&#34; is broad enough to cover various aspects like consistency and discriminative power but also needs specific categories for those to be useful.
+
+Let me think if there are other relevant categories:
+
+- **Sampling Strategies**: They discuss different sampling strategies, which could be another category.
+- **Benchmarking Studies**: Since it&#39;s a comprehensive study across many algorithms and datasets.
+- **Algorithm Performance Analysis**: Focused on how different algorithms perform under various evaluation setups.
+
+But considering the guidelines to have 8-12 categories, I think the ones I&#39;ve listed so far cover the main points. The example given includes &#34;Scalability,&#34; but this article doesn&#39;t directly discuss scalability, more about evaluation techniques and metrics&#39; properties.
+
+So, final list of categories should include those that highlight the study&#39;s focus on evaluation methods, metrics&#39; characteristics, biases, and the techniques used.
+&lt;/think&gt;
+
+Evaluation Metrics, Offline Evaluation, Negative Item Sampling, Recommendation Algorithms, Consistency in Metrics, Discriminative Power, Robustness of Metrics, Sparsity Bias, Popularity Bias</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: On the Consistency, Discriminative Power and Robustness of Sampled Metrics in Offline Top-N Recommender System Evaluation
+Abstract:
+Negative item sampling in offline top-n recommendation evaluation has become increasingly wide-spread, but remains controversial. While several studies have warned against using sampled evaluation metrics on the basis of being a poor approximation of the full ranking (i.e.~using all negative items), others have highlighted their improved discriminative power and potential to make evaluation more robust. Unfortunately, empirical studies on negative item sampling are based on relatively few methods (between 3-12) and, therefore, lack the statistical power to assess the impact of negative item sampling in practice. In this article, we present preliminary findings from a comprehensive benchmarking study of negative item sampling based on 52 recommendation algorithms and 3 benchmark data sets. We show how the number of sampled negative items and different sampling strategies affect the consistency and discriminative power of sampled evaluation metrics. Furthermore, we investigate the impact of sparsity bias and popularity bias on the robustness of these metrics. In brief, we show that the optimal parameterizations for negative item sampling are dependent on data set characteristics and the goals of the investigator, suggesting a need for greater transparency in related experimental design decisions.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article based on its title and abstract. The title is &#34;On the Consistency, Discriminative Power and Robustness of Sampled Metrics in Offline Top-N Recommender System Evaluation.&#34; Hmm, that&#39;s a mouthful. Let me break it down.
+
+First, the main topic seems to be about recommendation systems, specifically top-N recommendations. They&#39;re discussing offline evaluation, which I remember means they&#39;re evaluating推荐 algorithms on historical data without interacting with real users in real-time. That makes sense because it&#39;s easier and cheaper than online testing.
+
+The abstract mentions negative item sampling, which I recall is a technique used in recommendation systems where instead of considering all possible negative items (items not chosen by the user), you sample a subset to make the evaluation process more efficient. But apparently, this method has been controversial because some say it&#39;s a poor approximation of the full ranking, while others argue it improves discriminative power and robustness.
+
+The study they&#39;re talking about is a benchmarking one with 52 recommendation algorithms and 3 datasets. They look at how the number of sampled negative items and different sampling strategies affect consistency, discriminative power, and robustness. Also, they consider sparsity bias and popularity bias on these metrics.
+
+So, looking at categories: The primary category would be &#34;Recommendation Systems&#34; since it&#39;s all about that field. Next, the article is discussing evaluation metrics specifically for recommendation systems, so &#34;Evaluation Metrics&#34; makes sense. It&#39;s focusing on offline evaluation methods, so I&#39;ll include &#34;Offline Evaluation.&#34;
+
+Negative item sampling is a key part of this study, so adding &#34;Negative Item Sampling&#34; as a category seems appropriate. The abstract also talks about aspects like consistency and discriminative power, which are evaluation aspects, so maybe &#34;Evaluation Methodology.&#34; They mention benchmarking studies, which relates to how they conducted their research across multiple algorithms and datasets, so &#34;Benchmarking Studies&#34; is another category.
+
+The article addresses issues with sampled metrics in terms of approximation versus full ranking. That falls under the broader umbrella of approximations in evaluation, so adding that as a category. They also discuss sparsity and popularity biases affecting robustness, which ties into recommendation system challenges related to data characteristics. So &#34;Data Characteristics&#34; is another relevant category.
+
+Lastly, they suggest a need for transparency in experimental design, which relates to reproducibility and best practices in research, hence &#34;Reproducibility.&#34;
+
+I should make sure not to go below 8 categories as per the guidelines, but I think these cover the main points. Let me list them out again: Recommendation Systems, Evaluation Metrics, Offline Evaluation, Negative Item Sampling, Benchmarking Studies, Approximation Methods, Data Characteristics, Reproducibility. That&#39;s eight, which fits the requirement.
+&lt;/think&gt;
+
+Recommendation Systems, Evaluation Metrics, Offline Evaluation, Negative Item Sampling, Benchmarking Studies, Approximation Methods, Data Characteristics, Reproducibility</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

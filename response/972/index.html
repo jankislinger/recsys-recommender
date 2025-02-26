@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Re2Dan: Retrieval of medical documents for e-Health in Danish
+Abstract:
+With the clinical environment becoming more data-reliant, healthcare professionals now have unparalleled access to comprehensive clinical information from numerous sources. Then, one of the main issues is how to avoid overloading practitioners with large amounts of (irrelevant) information while guiding them to the relevant documents for specific patient cases. Additional challenges appear due to the shortness of queries and the presence of long (and maybe noisy) contextual information. This demo presents Re2Dan, a web Retrieval and recommender of Danish medical documents. Re2Dan leverages several techniques to improve the quality of retrieved documents. First, it combines lexical and semantic searches to understand the meaning and context of user queries, allowing the retrieval of documents that are conceptually similar to the user’s query. Second, it recommends similar queries, allowing users to discover related documents and insights. Third, when given contextual information (e.g., from patients’ clinical notes), it suggests medical concepts to expand the user query, enabling a more focused search scope and thus obtaining more accurate recommendations. Preliminary analyses showed the effectiveness of the recommender in improving the relevance and comprehensiveness of recommendations, thereby assisting healthcare professionals in finding relevant information for informed decision-making.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article about Re2Dan: Retrieval of medical documents for e-Health in Danish. Let me start by reading through the title and abstract carefully.
+
+The title mentions it&#39;s about retrieving medical documents for e-Health in丹麦 (Denmark). So right away, I can note that the domain is healthcare or specifically e-Health. The focus seems to be on improving information retrieval for healthcare professionals, which suggests categories related to medical information retrieval.
+
+Looking at the abstract, they talk about clinical environments becoming data-reliant but facing issues with too much irrelevant information. That points towards information overload as a challenge they&#39;re addressing. They mention techniques like lexical and semantic search, which are methods used in information retrieval systems. So categories like Lexical Search and Semantic Search make sense here.
+
+The system also recommends similar queries to help users discover related documents, so Query Recommendation seems relevant. Additionally, it uses contextual information from patient notes to suggest medical concepts, expanding the user&#39;s query for better accuracy. This aspect could fall under Context-Aware Systems or maybe even Query Expansion techniques in recommendation systems.
+
+Since they&#39;re working specifically with Danish medical documents, there&#39;s a language-specific component, so adding丹麦 (Danish) as a category would be appropriate.
+
+The system is a web-based retrieval and recommender, which ties into Web-Based Systems. The ultimate goal of helping healthcare professionals make informed decisions suggests that the impact on clinical decision-making should be noted as an outcome.
+
+In terms of evaluation, they mention preliminary analyses showing effectiveness in improving relevance and comprehensiveness of recommendations. This points towards categories related to Recommendation Quality and Evaluation Metrics.
+
+Looking at other aspects, it&#39;s a real-world application since it&#39;s used by healthcare professionals, so Real-World Applications is a good fit. The system integrates retrieval with recommendation features, so Hybrid Systems might be applicable as well.
+
+I should make sure each category is clear and covers the main points without being too broad or too narrow. I need at least 8-12 categories, balancing between specific techniques and broader domains. Let me list them out:
+
+Medical Information Retrieval: Covers the core of what Re2Dan does.
+Healthcare Domain: Specifies the field where it&#39;s applied.
+E-Health: The digital health aspect.
+Lexical Search: One of the methods used.
+Semantic Search: Another method for better context understanding.
+Query Recommendation: Helping users find related queries.
+Context-Aware Systems: Using contextual info to improve results.
+Danish (丹麦): Language-specific focus.
+Web-Based Systems: As it&#39;s a web application.
+Clinical Decision-Making: The end goal for professionals.
+Recommendation Quality: How good the recommendations are.
+Evaluation Metrics: Methods used to assess effectiveness.
+
+I think that&#39;s 12 categories, covering both specific techniques and broader domains. Each should help users navigate and discover related articles effectively without overcrowding any category. I&#39;ll make sure the labels are clear and user-friendly, avoiding jargon where possible.
+&lt;/think&gt;
+
+Medical Information Retrieval, Healthcare Domain, E-Health, Lexical Search, Semantic Search, Query Recommendation, Context-Aware Systems,丹麦 (Danish), Web-Based Systems, Clinical Decision-Making, Recommendation Quality, Evaluation Metrics</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

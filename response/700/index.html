@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Play It Again, Sam! Recommending Familiar Music in Fresh Ways
+Abstract:
+In the music domain, repeated consumption is not uncommon. In this work, we explore how to recommend familiar music in fresh ways. Specifically, we design algorithms that can produce ‘tours’ through a small personal collection of songs. The tours are decorated with segues, which are textual connections between consecutive songs, chosen for their interestingness. We present three such algorithms, and we outline their strengths and weaknesses based on a comparative offline evaluation. This preliminary algorithmic work is a prelude to upcoming user-centric investigations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories. Let me read through the title and abstract again to get a good understanding.
+
+The title is &#34;Play It Again, Sam! Recommending Familiar Music in Fresh Ways.&#34; So it&#39;s about music recommendations, specifically focusing on making familiar songs seem new or interesting again.
+
+Looking at the abstract: They&#39;re designing algorithms to create &#39;tours&#39; through a personal song collection. These tours include segues with textual connections between songs, aiming for interestingness. They&#39;ve developed three algorithms and did an offline evaluation comparing them. It mentions this is preliminary work before user studies.
+
+Now, I&#39;ll break down the key elements:
+
+1. **Domain**: Definitely Music. That&#39;s clear from both title and abstract.
+2. **Algorithm Family**: The article talks about designing algorithms for tours with segues. They mention three different ones, so it involves algorithm design in recommendation systems.
+3. **Recommendation Type**: It&#39;s about familiar music but presented in fresh ways, so this is a unique angle. Maybe &#34;Familiar Music&#34; as a category?
+4. **Evaluation Aspects**: They did an offline evaluation comparing the algorithms, so aspects like Evaluation Methods and Comparative Analysis are relevant.
+5. **User-Centric Goals**: The ultimate goal seems to be user engagement or satisfaction by making recommendations more interesting.
+6. **Content Personalization**: Since it&#39;s about personal collections, this is a key aspect.
+7. **Textual Segues**: This specific feature adds an interesting twist, so including &#34;Textual Segues&#34; as a category makes sense.
+8. **Offline Evaluation**: They performed evaluations without user interaction, which is another category.
+
+I should ensure each category is broad enough to be useful but specific enough to capture the essence of the article. Also, considering the guidelines, I need at least 8-12 categories.
+
+Putting it all together, the categories would include the domain (Music), algorithm aspects (Recommendation Algorithms, Algorithm Design), evaluation methods (Offline Evaluation, Comparative Analysis), user-centric elements (User-Centric Recommendations, User Engagement), personalization (&#34;Familiar Music&#34;), and specific features like &#34;Textual Segues.&#34;
+
+I think that covers most angles without being too granular. Each category should help users find the article when exploring different facets of recommendation systems.
+&lt;/think&gt;
+
+Music, Recommendation Algorithms, Algorithm Design, Familiar Music, Evaluation Methods, Comparative Analysis, User-Centric Recommendations, Content Personalization, Textual Segues, Offline Evaluation</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Play It Again, Sam! Recommending Familiar Music in Fresh Ways
+Abstract:
+In the music domain, repeated consumption is not uncommon. In this work, we explore how to recommend familiar music in fresh ways. Specifically, we design algorithms that can produce ‘tours’ through a small personal collection of songs. The tours are decorated with segues, which are textual connections between consecutive songs, chosen for their interestingness. We present three such algorithms, and we outline their strengths and weaknesses based on a comparative offline evaluation. This preliminary algorithmic work is a prelude to upcoming user-centric investigations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Play It Again, Sam! Recommending Familiar Music in Fresh Ways.&#34; The abstract says they&#39;re looking at how to recommend familiar music but in new ways, creating tours through personal song collections with segues. They designed three algorithms and did an offline evaluation.
+
+First, I&#39;ll start by identifying the main themes. The focus is on music recommendation, so that&#39;s a key category. They mention algorithms, specifically designing them for tours and segues, so algorithm design seems relevant. Since they&#39;re dealing with personal collections, personalized recommendations fit here.
+
+They talk about recommending familiar music in fresh ways, which relates to user preferences and how familiar content can be presented innovatively. So, Personalized Recommendations and User Preferences should both be categories. 
+
+The article also touches on the idea of exploring new methods for an existing problem, so Music Domain is another category because it&#39;s specific to that field.
+
+They discuss tours through a collection, which implies some level of exploration or serendipity in recommendations. Exploration/Serendipity is a good fit here. Also, since they&#39;re creating connections between songs (segues), this suggests there&#39;s an element of creativity involved, hence Creativity in Recommendations.
+
+The algorithms are designed to produce these tours and segues, so the technical aspect of algorithm design should be included. The study is preliminary and mentions upcoming user-centric investigations, which indicates that while it&#39;s currently focused on the algorithmic side, there&#39;s a recognition of the need for user feedback, so User-Centric Design might be relevant.
+
+Looking at evaluation methods, they did an offline comparative evaluation, so Evaluation Methods is another category. They also talk about creating &#39;tours&#39; and connecting songs with segues, which suggests some form of playlist generation or experience design, leading to Playlist Generation as a category.
+
+The focus on making familiar music fresh could be seen in the context of recommendation strategies aimed at keeping users engaged by offering new spins on their existing preferences. Engagement Strategies is therefore applicable here.
+
+Putting this all together, I think these categories cover the technical aspects, domain specifics, user-focused design, and evaluation, which should help in organizing the article effectively for navigation.
+&lt;/think&gt;
+
+Algorithm Design, Personalized Recommendations, Music Domain, User Preferences, Exploration/Serendipity, Creativity in Recommendations, Evaluation Methods, Playlist Generation, User-Centric Design, Engagement Strategies</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

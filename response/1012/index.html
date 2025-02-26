@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Nonlinear Bandits Exploration for Recommendations
+Abstract:
+The paradigm of framing recommendations as (sequential) decision-making processes has gained significant interest. To achieve long-term user satisfaction, these interactive systems need to strikes a balance between exploitation (recommending high-reward items) and exploration (exploring uncertain regions for potentially better items). Classical bandit algorithms like Upper-Confidence-Bound and Thompson Sampling, and their contextual extensions with linear payoffs have exhibited strong theoretical guarantees and empirical success in managing the exploration-exploitation trade-off. Building efficient exploration-based systems for deep neural network powered real-world, large-scale industrial recommender systems remains under studied. In addition, these systems are often multi-stage, multi-objective and response time sensitive.  In this talk, we share our experience in addressing these challenges in building exploration based industrial recommender systems. Specifically, we adopt the Neural Linear Bandit algorithm, which effectively combines the representation power of deep neural networks, with the simplicity of linear bandits to incorporate exploration in DNN based recommender systems. We introduce  exploration capability to both the nomination and ranking stage of the industrial recommender system.  In the context of the ranking stage, we delve into the extension of this algorithm to accommodate the multi-task setup, enabling exploration in systems with multiple objectives. Moving on to the nomination stage, we will address the development of efficient bandit algorithms tailored to factorized bi-linear models. These algorithms play a crucial role in facilitating maximum inner product search, which is commonly employed in large-scale retrieval systems. We validate our algorithms and present findings from real-world live experiments.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article titled &#34;Nonlinear Bandits Exploration for Recommendations.&#34; Let me start by reading the title and abstract carefully.
+
+The title mentions nonlinear bandits, which immediately tells me that it&#39;s related to multi-armed bandit algorithms, a family of algorithms used in recommendation systems. So, &#39;Multi-Armed Bandits&#39; should definitely be one category.
+
+Looking at the abstract, they talk about framing recommendations as sequential decision-making processes, balancing exploration and exploitation. This indicates it&#39;s within the context of recommendation systems, so I&#39;ll add that as another main category: &#39;Recommendation Systems.&#39;
+
+The article discusses using Neural Linear Bandit algorithms, which combine deep neural networks with linear bandits. This suggests the use of deep learning in recommendations, so &#39;Deep Learning&#39; is another relevant category.
+
+They mention both the nomination and ranking stages of an industrial recommender system. That makes me think about different stages or components within recommendation systems. So categories like &#39;Nomination Stage&#39; and &#39;Ranking Stage&#39; should be included.
+
+The abstract also talks about multi-task setups, which refers to handling multiple objectives simultaneously. Therefore, &#39;Multi-Task Learning&#39; is a suitable category.
+
+Exploration in recommendations is a key theme here, so I&#39;ll add &#39;Exploration&#39; as another category. Additionally, they discuss real-world applications with live experiments, so &#39;Real World Applications&#39; should be included.
+
+The article addresses challenges specific to large-scale industrial systems, which points towards &#39;Large Scale Systems.&#39; They also mention response time sensitivity and efficiency in algorithms, so &#39;Efficiency&#39; is an important aspect here.
+
+Considering evaluation aspects, the talk might touch on how these methods perform beyond just accuracy, perhaps looking at diversity or other metrics. So including &#39;Beyond Accuracy&#39; as a category makes sense.
+
+They validate their approach with experiments, which relates to evaluation metrics and performance assessment. Hence, categories like &#39;Evaluation Metrics,&#39; &#39;Performance Evaluation,&#39; and &#39;Algorithm Performance&#39; are relevant.
+
+Putting it all together, I need to ensure these categories are clear, user-friendly, and cover both the technical aspects and practical applications discussed in the article. I&#39;ll list them out ensuring they&#39;re specific enough but also broad where necessary for discoverability.
+&lt;/think&gt;
+
+Multi-Armed Bandits, Recommendation Systems, Deep Learning, Exploration, Exploitation, Neural Linear Bandit, Industrial Recommender Systems, Nomination Stage, Ranking Stage, Multi-Task Learning, Large Scale Systems, Real World Applications, Efficiency, Beyond Accuracy, Evaluation Metrics, Performance Evaluation, Algorithm Performance</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Nonlinear Bandits Exploration for Recommendations
+Abstract:
+The paradigm of framing recommendations as (sequential) decision-making processes has gained significant interest. To achieve long-term user satisfaction, these interactive systems need to strikes a balance between exploitation (recommending high-reward items) and exploration (exploring uncertain regions for potentially better items). Classical bandit algorithms like Upper-Confidence-Bound and Thompson Sampling, and their contextual extensions with linear payoffs have exhibited strong theoretical guarantees and empirical success in managing the exploration-exploitation trade-off. Building efficient exploration-based systems for deep neural network powered real-world, large-scale industrial recommender systems remains under studied. In addition, these systems are often multi-stage, multi-objective and response time sensitive.  In this talk, we share our experience in addressing these challenges in building exploration based industrial recommender systems. Specifically, we adopt the Neural Linear Bandit algorithm, which effectively combines the representation power of deep neural networks, with the simplicity of linear bandits to incorporate exploration in DNN based recommender systems. We introduce  exploration capability to both the nomination and ranking stage of the industrial recommender system.  In the context of the ranking stage, we delve into the extension of this algorithm to accommodate the multi-task setup, enabling exploration in systems with multiple objectives. Moving on to the nomination stage, we will address the development of efficient bandit algorithms tailored to factorized bi-linear models. These algorithms play a crucial role in facilitating maximum inner product search, which is commonly employed in large-scale retrieval systems. We validate our algorithms and present findings from real-world live experiments.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let me try to figure out how to categorize this research article. The title is &#34;Nonlinear Bandits Exploration for Recommendations,&#34; so right away I&#39;m thinking about bandit algorithms and recommendation systems.
+
+Looking at the abstract, it talks a lot about the exploration-exploitation trade-off, which is a core concept in bandit problems. They mention classical algorithms like UCB and Thompson Sampling, but also their extensions with linear payoffs. However, the focus here seems to be on nonlinear approaches, so that&#39;s an important point.
+
+The article discusses applying these bandit methods to industrial recommender systems powered by deep neural networks. This makes me think about how neural networks are used in recommendations, specifically in nonlinear ways. They also mention extending these algorithms for multi-task setups and handling multiple objectives, which adds another layer of complexity.
+
+Real-world applications are a key aspect here since they talk about live experiments and response time sensitivity. This suggests that scalability and efficiency are important considerations, especially in large-scale systems.
+
+Other terms I notice include &#34;Neural Linear Bandit,&#34; which combines neural networks with linear bandits for exploration. They also mention the nomination and ranking stages of recommender systems, so those specific aspects might be relevant categories.
+
+The abstract touches on multi-stage systems and real-world applications, which makes me think about practical implementation challenges. Additionally, since they&#39;re dealing with large-scale retrieval systems, scalability is definitely a factor here.
+
+Putting it all together, the main themes are bandit algorithms (specifically nonlinear ones), recommendation systems, exploration strategies, neural networks in recommendations, multi-task and multi-objective setups, and real-world applications like A/B testing or live experiments. There&#39;s also an emphasis on efficiency and scalability for large systems.
+
+I should make sure each category is clear and relevant, avoiding too narrow or too broad terms. Also, considering the user-centric design, these categories should help users easily find related articles when navigating.
+&lt;/think&gt;
+
+Bandits, Exploration-Exploitation Trade-off, Neural Networks, Recommender Systems, Multi-Task Learning, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

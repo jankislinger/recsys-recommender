@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Automating Readers’ Advisory to Make Book Recommendations for K-12 Readers
+Abstract:
+The academic performance of students is affected by their reading ability, which explains why reading is one of the most important aspects of school curriculums. Promot- ing good reading habits among K-12 students is essential, given the enormous influence of reading on students’ de- velopment as learners and members of society. In doing so, it is indispensable to provide readers with engaging and motivating reading selections. Unfortunately, existing book recommenders have failed to offer adequate choices for K- 12 readers, since they either ignore the reading abilities of their users or cannot acquire the much-needed information to make recommendations due to privacy issues. To address these problems, we have developed Rabbit, a book recom- mender that emulates the readers’ advisory service offered at school/public libraries. Rabbit considers the readability levels of its readers and determines the facets, i.e., appeal factors, of books that evoke subconscious, emotional reac- tions on a reader. The design of Rabbit is unique, since it adopts a multi-dimensional approach to capture the reading abilities, preferences, and interests of its readers, which goes beyond the traditional book content/topical analysis. Con- ducted empirical studies have shown that Rabbit outper- forms a number of (readability-based) book recommenders.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about Rabbit, an automated book recommendation system for K-12 students. Let me start by reading the title and abstract carefully.
+
+The title mentions &#34;Automating Readers’ Advisory&#34; which suggests it&#39;s about providing recommendations similar to a librarian&#39;s advice. The focus is on making book recommendations specifically for K-12 readers. 
+
+Looking at the abstract, the article talks about how reading ability affects academic performance and how promoting good reading habits is crucial. It points out that existing recommenders don&#39;t adequately serve K-12 students because they either ignore reading abilities or face privacy issues. Rabbit addresses this by considering readability levels and emotional appeal factors of books.
+
+So, breaking it down:
+
+1. **Family of Algorithm**: The system uses a multi-dimensional approach, which probably involves multiple algorithms. From the abstract, they mention considering readability levels and facets like appeal factors. They compared Rabbit to existing readability-based recommenders. So categories like Readability-Based Recommendations and Multi-Dimensional Approach seem relevant.
+
+2. **Domain of Problem**: This is clearly about Books, specifically for K-12 readers in Education. So the domains are Books, Education (K-12).
+
+3. **Recommendation Space Specifics**: They mention addressing cold start issues because existing recommenders don&#39;t have enough information. Rabbit uses a unique approach, so categories like Cold Start and Unique Approaches could apply.
+
+4. **Evaluation Aspects**: The article talks about empirical studies showing Rabbit outperforms other recommenders. So evaluation aspects include Empirical Evaluation and Performance Comparison.
+
+5. **Real-World Applications**: They conducted A/B tests or user surveys? Wait, the abstract mentions empirical studies but doesn&#39;t specify if they were real-world applications like A/B tests. However, since it&#39;s a system designed for libraries, maybe Implementation in Libraries is relevant. But I&#39;m not sure about User Surveys.
+
+6. **Other Categories**: Since Rabbit emulates readers&#39; advisory services, that&#39;s another category. It also talks about student engagement and motivation, so Student Engagement and Motivation could be included.
+
+Putting it all together, considering the guidelines of assigning 8-12 categories without overcrowding any. Let me list possible categories:
+
+- Books (domain)
+- Education (specifically K-12)
+- Readability-Based Recommendations
+- Multi-Dimensional Approach
+- Cold Start
+- Empirical Evaluation
+- Performance Comparison
+- Student Engagement
+- Motivation
+- Implementation in Libraries
+- Readers’ Advisory Service
+
+Wait, that&#39;s 11 categories. I should make sure each is relevant and doesn&#39;t overlap too much. Maybe &#34;Readers’ Advisory Service&#34; is a bit specific but necessary as it&#39;s a core part of Rabbit&#39;s design.
+
+I think this covers the main points from the abstract: domain (books, education), algorithms (readability-based, multi-dimensional), problem aspects (cold start), evaluation methods, user aspects (engagement, motivation), and application context.
+&lt;/think&gt;
+
+Books, Education, K-12, Readability-Based Recommendations, Multi-Dimensional Approach, Cold Start, Empirical Evaluation, Performance Comparison, Student Engagement, Motivation, Implementation in Libraries, Readers’ Advisory Service</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

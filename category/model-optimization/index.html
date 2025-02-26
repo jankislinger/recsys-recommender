@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Sliding Window Training – Utilizing Historical Recommender Systems Data for Foundation Models (2024)</h3>
+    <p><strong>Authors:</strong> Ko-Jen Hsiao, Yesu Feng, Sudarshan Lamkhede, Swanand Joshi, Zhe Zhang</p>
+    <p>Long-lived recommender systems (RecSys) often encounter lengthy user-item interaction histories that span many years. To effectively learn long term user preferences, Large RecSys foundation models (FM) need to encode this information in pretraining. Usually, this is done by either generating a long enough sequence length to take all history sequences as input at the cost of large model input dimension or by dropping some parts of the user history to accommodate model size and latency requirements on the production serving side. In this paper, we introduce a sliding window training technique to incorporate long user history sequences during training time without increasing the model input dimension. We show the quantitative \& qualitative improvements this technique brings to the RecSys FM in learning user long term preferences. We additionally show that the average quality of items in the catalog learnt in pretraining also improves.</p>
+    <p><strong>Categories:</strong> Recommender Systems (RecSys), Foundation Models, Training Techniques, Sliding Window, Historical Data Utilization, Model Optimization, User Preferences Learning, Catalog Quality, Pretraining Methods, Scalability, Time Series Analysis, Model Efficiency, Evaluation Metrics, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1176/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Denoising Self-Attentive Sequential Recommendation (2022)</h3>
+    <p><strong>Authors:</strong> Yan Zheng, Fei Wang, Chin-Chia Michael Yeh, Huiyuan Chen, Menghai Pan, Yusan Lin, Xiaoting Li, Hao Yang, Lan Wang</p>
+    <p>Transformer-based sequential recommenders are very powerful for capturing both short-term and long-term sequential item dependencies. This is mainly attributed to their unique self-attention networks to exploit pairwise item-item interactions within the sequence. However, real-world item sequences are often noisy, which is particularly true for implicit feedback. For example, a large portion of clicks do not align well with user preferences, and many products end up with negative reviews or being returned. As such, the current user action only depends on a subset of items, not on the entire sequences. Many existing Transformer-based models use full attention distributions, which inevitably assign certain credits to irrelevant items. This may lead to sub-optimal performance if Transformers are not regularized properly.<br>Here we propose the Rec-denoiser model for better training of self-attentive recommender systems. In Rec-denoiser, we aim to adaptively prune noisy items that are unrelated to the next item prediction. To achieve this, we simply attach each self-attention layer with a trainable binary mask to prune noisy attentions, resulting in sparse and clean attention distributions. This largely purifies item-item dependencies and provides better model interpretability. In addition, the self-attention network is typically not Lipschitz continuous and is vulnerable to small perturbations. Jacobian regularization is further applied to the Transformer blocks to improve the robustness of Transformers for noisy sequences. Our Rec-denoiser is a general plugin that is compatible to many Transformers. Quantitative results on real-world datasets show that our Rec-denoiser outperforms the state-of-the-art baselines.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Implicit Feedback, Attention Mechanisms, Transformer-Based Models, Sequential Recommendations, Model Optimization, Noisy Data Handling, Real-World Applications, Algorithm Adaptation, Denoising Techniques, Robustness Enhancement. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/758/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Aspect Re-distribution for Learning Better Item Embeddings in Sequential Recommendation (2022)</h3>
+    <p><strong>Authors:</strong> Wei Cai, Jingwen Mao, Weike Pan, Zhechao Yu, Congfu Xu</p>
+    <p>Sequential recommendation has attracted a lot of attention from both academia and industry. Since item embeddings directly affect the recommendation results, their learning process is very important. However, most existing sequential models may introduce bias when updating the item embeddings. For example, in a sequence where all items are endorsed by a same celebrity, the co-occurrence of two items only indicates their similarity in terms of endorser, and is independent of the other aspects such as category and color. The existing models often update the entire item as a whole or update different aspects of the item without distinction, which fails to capture the contributions of different aspects to the co-occurrence pattern. To overcome the above limitations, we propose aspect re-distribution (ARD) to focus on updating the aspects that are important for co-occurrence. Specifically, we represent an item using several aspect embeddings with the same initial importance. We then re-calculate the importance of each aspect according to the other items in the sequence. Finally, we aggregate these aspect embeddings into a single aspect-aware embedding according to their importance. The aspect-aware embedding can be provided as input to a successor sequential model. Updates of the aspect-aware embedding are passed back to the aspect embeddings based on their importance. Therefore, different from the existing models, our method pays more attention to updating the important aspects. In our experiments, we choose self-attention networks as the successor model. The experimental results on four real-world datasets indicate that our method achieves very promising performance in comparison with seven state-of-the-art models.</p>
+    <p><strong>Categories:</strong> Aspect Re-distribution, Item Embeddings, Sequential Recommendation, Algorithm Design, Model Optimization, Recommendation Quality, Attribute-Based Recommendations, Self-Attention Networks, Bias Correction, Dynamic Embedding Updates, Domain-Agnostic (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/745/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>TorchRec: a PyTorch domain library for recommendation systems (2022)</h3>
+    <p><strong>Authors:</strong> Dennis Van Der Staay, Colin Taylor, Xing Liu, Rahul Kindi, Anirudh Sudarshan, Shahin Sefati, Will Feng, Dmytro Ivchenko</p>
+    <p>Recommendation Systems (RecSys) comprise a large footprint of production-deployed AI today. The neural network-based recommender systems differ from deep learning models in other domains in using high-cardinality categorical sparse features that require large embedding tables to be trained. In this talk we introduce TorchRec, a PyTorch domain library for Recommendation Systems. This new library provides common sparsity and parallelism primitives, enabling researchers to build state-of-the-art personalization models and deploy them in production. In this talk we cover the building blocks of the TorchRec library including modeling primitives such as embedding bags and jagged tensors, optimized recommender system kernels powered by FBGEMM, a flexible sharder that supports a veriety of strategies for partitioning embedding tables, a planner that automatically generates optimized and performant sharding plans, support for GPU inference and common modeling modules for building recommender system models. TorchRec library is currently used to train large-scale recommender models at Meta. We will present how TorchRec helped Meta’s recommender system platform to transition from CPU asynchronous training to accelerator-based full-sync training.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Neural Networks, PyTorch, Sparse Features, High Cardinality, Personalization Models, Embedding Bags, Jagged Tensors, FBGEMM, GPU Inference, Accelerator-Based Training, Production Deployment, Sparsity Management, Model Optimization, Sharding Strategies, Sharding Plans, Meta Platforms, Large-Scale Models, Production-Grade, Model Efficiency (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/828/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Sequence Adaptation via Reinforcement Learning in Recommender Systems (2021)</h3>
+    <p><strong>Authors:</strong> Stefanos Antaris, Dimitrios Rafailidis</p>
+    <p>Accounting for the fact that users have different sequential patterns, the main drawback of state-of-the-art recommendation strategies is that a fixed sequence length of user-item interactions is required as input to train the models. This might limit the recommendation accuracy, as in practice users follow different trends on the sequential recommendations. Hence, baseline strategies might ignore important sequential interactions or add noise to the models with redundant interactions, depending on the variety of users’ sequential behaviours. To overcome this problem, in this study we propose the SAR model, which not only learns the sequential patterns but also adjusts the sequence length of user-item interactions in a personalized manner. We first design an actor-critic framework, where the RL agent tries to compute the optimal sequence length as an action, given the user’s state representation at a certain time step. In addition, we optimize a joint loss function to align the accuracy of the sequential recommendations with the expected cumulative rewards of the critic network, while at the same time we adapt the sequence length with the actor network in a personalized manner. Our experimental evaluation on four real-world datasets demonstrates the superiority of our proposed model over several baseline approaches. Finally, we make our implementation publicly available at https://github.com/stefanosantaris/sar.</p>
+    <p><strong>Categories:</strong> Reinforcement Learning, Recommender Systems, Sequence Modeling, Personalization, Model Optimization, Recommendation Accuracy, Sequential Recommendations, Practical Applications, Evaluation Methods, Machine Learning (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/699/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Model Size Reduction Using Frequency Based Double Hashing for Recommender Systems (2020)</h3>
+    <p><strong>Authors:</strong> Pranay Kumar Myana, Caojin Zhang, Alykhan Tejani, Akshay Gupta, Deepak Dilipkumar, Ferenc Huszar, Sofia Ira Ira Ktena, Ikuhiro Ihara, Prasang Upadhyaya, Wenzhe Shi, Yuanpu Xie, Suvadip Paul, Yicun Liu</p>
+    <p>Deep Neural Networks (DNNs) with sparse input features have been widely used in recommender systems in industry. These models have large memory requirements and need a huge amount of training data. The large model size usually entails a cost, in the range of millions of dollars, for storage and communication with the inference services. In this paper, we propose a hybrid hashing method to combine frequency hashing and double hashing techniques for model size reduction, without compromising performance. We evaluate the proposed models on two product surfaces. In both cases, experiment results demonstrated that we can reduce the model size by around 90 while keeping the performance on par with the original baselines.</p>
+    <p><strong>Categories:</strong> Model Size Reduction, Recommender Systems, Deep Learning, Hashing Techniques, Frequency Hashing, Double Hashing, Model Optimization, Sparse Features, Industry Applications, Memory Efficiency, Model Compression, Evaluation Metrics (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/583/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>On the Discriminative power of Hyper-parameters in Cross-Validation and How to Choose Them (2019)</h3>
+    <p><strong>Authors:</strong> Claudio Pomo, Tommaso Di Noia, Vito Walter Anelli, Azzurra Ragone, Eugenio Di Sciascio</p>
+    <p>Hyper-parameters tuning is a crucial task to make a model perform at its best. However, despite the well-established methodologies, some aspects of the tuning remain unexplored. As an example, it may affect not just accuracy but also novelty as well as it may depend on the adopted dataset. Moreover, sometimes it could be sufficient to concentrate on a single parameter only (or a few of them) instead of their overall set. In this paper we report on our investigation on hyper-parameters tuning by performing an extensive 10-Folds Cross-Validation on MovieLens and Amazon Movies for three well-known baselines: User-kNN, Item-kNN, BPR-MF. We adopted a grid search strategy considering approximately 15 values for each parameter, and we then evaluated each combination of parameters in terms of accuracy and novelty. We investigated the discriminative power of nDCG, Precision, Recall, MRR, EFD, EPC, and, finally, we analyzed the role of parameters on model evaluation for Cross-Validation. i>Presentation: Tuesday Poster Lunch</i</p>
+    <p><strong>Categories:</strong> Model Optimization, Recommendation Systems, Cross-Validation, Grid Search, Evaluation Metrics, Matrix Factorization, Collaborative Filtering, Movies, Benchmark Datasets, User-kNN, Item-kNN, BPR-MF (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/480/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

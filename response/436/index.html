@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Domain Adaptation in Display Advertising: An Application for Partner Cold-Start
+Abstract:
+Digital advertisements connects partners (sellers) to potentially interested online users. Within the digital advertisement domain,there are multiple platforms,e.g.,user re-targeting and prospecting. Partners usually start with re-targeting campaigns and later employ prospecting campaigns to reach out to untapped customer base. There are two major challenges involved with prospecting. The first challenge is successful on-boarding of a new partner on the prospecting platform, referred to as partner cold-start problem. The second challenge revolves around the ability to leverage large amounts of re-targeting data for partner cold-start problem. In this work, we study domain adaptation for the partner cold-start problem. To this end, we propose two domain adaptation techniques, SDA-DANN and SDA-Ranking. SDA-DANN and SDA-Ranking extend domain adaptation techniques for partner cold-start by incorporating sub-domain similarities (product category level information). Through rigorous experiments, we demonstrate that our method SDA-DANN outperforms baseline domain adaptation techniques on real-world dataset, obtained from a major online advertiser. Furthermore, we show that our proposed technique SDA-Ranking outperforms baseline methods for low CTR partners
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about domain adaptation in display advertising, specifically focusing on the partner cold-start problem. Let&#39;s break it down step by step.
+
+First, looking at the title: &#34;Domain Adaptation in Display Advertising: An Application for Partner Cold-Start.&#34; So, right away, I can identify &#34;Domain Adaptation&#34; and &#34;Cold Start&#34; as key categories. The application is in display advertising, so that should be another category—maybe &#34;Display Advertising.&#34;
+
+The abstract mentions that partners start with re-targeting campaigns and then move to prospecting. Re-targeting and prospecting are specific strategies within digital advertising, so I&#39;ll add those as separate categories: &#34;Re-targeting&#34; and &#34;Prospecting.&#34;
+
+They discuss challenges related to partner cold-start, which ties into the broader context of recommendation systems, especially since it&#39;s about new partners getting started. So, &#34;Recommendation Systems&#34; should definitely be included.
+
+The techniques they propose are SDA-DAgger (I think that was a typo in the query; it might be SDA-DANN) and SDA-Ranking. These seem to be algorithm-specific approaches, so I&#39;ll categorize them under their family of algorithms. Since these are domain adaptation techniques, &#34;Domain Adaptation&#34; is already covered.
+
+The experiments show improvements using real-world data from an online advertiser, which indicates that this isn&#39;t just theoretical—it&#39;s applied in a practical setting. So categories like &#34;Real-World Application,&#34; &#34;A/B Test,&#34; and &#34;User Survey&#34; might be relevant if they tested with users or ran experiments comparing different methods.
+
+Looking at the problem domain, it&#39;s within digital advertising, so &#34;Digital Advertising&#34; is another category. They mention leveraging re-targeting data for cold-start, which relates to using existing data to improve new campaigns—so that ties into &#34;Data Utilization.&#34;
+
+Additionally, since they are focusing on partners and their specific needs when starting out, &#34;Partners&#34; or &#34;Partner Cold-Start&#34; might be a more specific category. But I think the example categories already include &#34;Cold Start,&#34; so maybe not necessary.
+
+I should also consider aspects of evaluation. They talk about improving CTR (click-through rate), which is a key metric in advertising effectiveness. So, evaluating based on metrics like CTR could fall under &#34;Evaluation Metrics.&#34;
+
+Another angle is the aspect of leveraging existing data for new partners, which touches on data transferability and scalability. Maybe &#34;Scalability&#34; or &#34;Data Transfer&#34; as categories.
+
+But looking back at the example output, it seems they prefer more specific terms where possible. So sticking with what&#39;s directly mentioned: Domain Adaptation, Display Advertising, Cold Start, Re-targeting, Prospecting, Recommendation Systems, Real-World Application, A/B Test, User Survey, Digital Advertising, Data Utilization, and Evaluation Metrics.
+
+Wait, in the example output provided by the user earlier, they had &#34;Scalability&#34; but maybe that&#39;s not directly applicable here. The focus is more on leveraging existing data rather than system scalability.
+
+I think I have a good list now: Domain Adaptation, Display Advertising, Cold Start, Re-targeting, Prospecting, Recommendation Systems, Real-World Application, A/B Test, User Survey, Digital Advertising, Data Utilization, and Evaluation Metrics. That should cover the main aspects of the article.
+&lt;/think&gt;
+
+Domain Adaptation, Display Advertising, Cold Start, Re-targeting, Prospecting, Recommendation Systems, Real-World Application, A/B Test, User Survey, Digital Advertising, Data Utilization, Evaluation Metrics</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: 30Music listening and playlists dataset
+Abstract:
+We introduce the dataset, a collection of listening and playlists data retrieved from Internet radio stations through Last.fm API. In this paper we describe the creation process, its content, and its possible uses. Attractive features of the dataset that differentiate it from existing public datasets include, among the others, (i) the user listening sessions complete of contextual time information, (ii) the user playlists, and (iii) the positive user ratings, key information to experiment with the task of modeling user taste and recommending playlists.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article about a music listening and playlists dataset. Let&#39;s break it down step by step.
+
+First, looking at the title: &#34;30Music listening and playlists dataset.&#34; That tells me right away that the article is about datasets related to music and playlists. So I can start with categories like &#34;Music&#34; and &#34;Playlists.&#34;
+
+The abstract says it&#39;s a collection of listening and playlists data retrieved from Internet radio stations using Last.fm API. This indicates it&#39;s about real-world applications since they&#39;re pulling data from actual services. Maybe &#34;Real-World Applications&#34; should be one.
+
+They mention describing the creation process, content, and possible uses. So this is more of an introductory or survey paper rather than a methodological study. That points to categories like &#34;Survey/Introductory.&#34;
+
+The dataset includes user listening sessions with time information, playlists, and positive ratings. These features are important for recommendation systems because they help model user taste and suggest playlists. So I should add &#34;Recommendation Systems,&#34; &#34;User Taste Modeling,&#34; and maybe &#34;Playlist Recommendation.&#34;
+
+Looking at the aspects of evaluation mentioned in the guidelines, this dataset seems useful for tasks beyond just accuracy—like diversity or personalization. However, the abstract doesn&#39;t specify which metrics they used, but since it&#39;s about recommendations, it&#39;s relevant to evaluation.
+
+Since it&#39;s a dataset introduction, it falls under &#34;Dataset Description.&#34; It might also be useful in machine learning contexts where recommendation algorithms are built, so &#34;Machine Learning&#34; could be another category.
+
+The data comes from Internet radio and Last.fm, which relates to specific domains like &#34;Radio&#34; or &#34;Streaming Services,&#34; but since the main focus is on music, sticking with &#34;Music&#34; makes sense. Also, it&#39;s about user behavior, so adding &#34;User Behavior Analysis&#34; would capture that aspect.
+
+I should avoid making categories too narrow unless they&#39;re clearly applicable. For example, there&#39;s no mention of A/B testing or specific algorithms like Matrix Factorization, so I won&#39;t include those unless necessary.
+
+Putting it all together: the article introduces a dataset for music recommendations, focusing on user sessions and playlists. It’s useful for recommendation systems, understanding user taste, and is a real-world application with potential for further evaluation in recommendation tasks.
+&lt;/think&gt;
+
+Music, Playlists, Real-World Applications, Dataset Description, User Taste Modeling, Recommendation Systems, Playlist Recommendation, Survey/Introductory, Machine Learning, User Behavior Analysis</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

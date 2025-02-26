@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Personalized Category Frequency prediction for Buy It Again recommendations
+Abstract:
+Buy It Again (BIA) recommendations are crucial to retailers to help improve user experience and site engagement by suggest- ing items that customers are likely to buy again based on their own repeat purchasing patterns. Most existing BIA studies analyze guests’ personalized behaviour at item granularity. This finer level of granularity might be appropriate for small businesses or small datasets for search purposes. However, this approach can be infea- sible for big retailers like Amazon, Walmart, or Target which have hundreds of millions of guests and tens of millions of items. For such data sets, it is more practical to have a coarse-grained model that captures customer behaviour at the item category level. In addition, customers commonly explore variants of items within the same categories, e.g., trying different brands or flavors of yogurt. A category-based model may be more appropriate in such scenarios. We propose a recommendation system called a hierarchical PCIC model that consists of a personalized category model (PC model) and a personalized item model within categories (IC model). PC model generates a personalized list of categories that customers are likely to purchase again. IC model ranks items within categories that guests are likely to reconsume within a category. The hierarchical PCIC model captures the general consumption rate of products using survival models. Trends in consumption are captured using time series models. Features derived from these models are used in training a category-grained neural network. We compare PCIC to twelve existing baselines on four standard open datasets. PCIC improves NDCG up to 16% while improving recall by around 2%. We were able to scale and train (over 8 hours) PCIC on a large dataset of 100M guests and 3M items where repeat categories of a guest outnumber repeat items. PCIC was deployed and A/B tested on the site of a major retailer, leading to significant gains in guest engagement.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about Personalized Category Frequency prediction for Buy It Again recommendations. Let me start by reading the title and abstract carefully.
+
+The title mentions &#34;Personalized Category Frequency prediction&#34; which suggests that it&#39;s about predicting how often users will buy items in certain categories again. The context is BIA (Buy It Again) recommendations, which are important for retailers to improve user experience and engagement.
+
+Looking at the abstract, they talk about existing studies focusing on item granularity, but this approach might not be feasible for large retailers with massive amounts of data. Instead, they propose a category-based model called PCIC, which stands for Personalized Category and Item model. They use survival models and time series models to capture consumption rates and trends, respectively.
+
+The article also mentions that they tested their model on four standard datasets and compared it against twelve baselines, showing improvements in NDCG and recall. Additionally, they scaled the model to handle a large dataset with 100M guests and 3M items, which indicates considerations for scalability. The PCIC model was deployed and A/B tested, resulting in increased engagement.
+
+Now, I need to assign categories based on this information. Let me go through each guideline:
+
+1. **Categorization Accuracy**: The core themes are personalized recommendations at the category level, handling large datasets, using hierarchical models (PC and IC), deployment with real-world applications (A/B testing). It also involves evaluation metrics like NDCG and recall.
+
+2. **Category Utility**: I should choose categories that have enough articles to be useful but not too broad or narrow. For example, &#34;Hierarchical Models&#34; might be a specific category, while &#34;Large Scale Retail&#34; is more domain-specific.
+
+3. **User-Centric Design**: Users looking for recommendation systems in retail, personalization techniques, or scalable models would benefit from these categories.
+
+4. **Consistency**: Ensuring that the categories align with common terms used in research and industry.
+
+Now, thinking about possible categories:
+
+- &#34;Buy It Again&#34; is a specific recommendation type.
+- The approach uses a hierarchical model (PCIC), so &#34;Hierarchical Models&#34; is relevant.
+- It deals with scalability for large datasets, hence &#34;Scalability&#34;.
+- Survival models are part of the methodology, so that&#39;s another category.
+- Time series analysis is also used, adding &#34;Time Series Analysis&#34;.
+- The domain is clearly retail, specifically large-scale retailers like Amazon or Walmart, so &#34;Large Scale Retail&#34;.
+- Evaluation aspects include metrics like NDCG and recall, so &#34;Evaluation Metrics&#34; fits here.
+- They mention real-world deployment and A/B testing, so categories like &#34;Real World Applications&#34; and &#34;A/B Testing&#34; are appropriate.
+
+I also considered if there should be a category for neural networks since they used a category-grained neural network, but the abstract emphasizes the hierarchical model more. Similarly, cold start isn&#39;t mentioned here, so I omitted that.
+
+I think 8 categories cover the main aspects without being too specific or broad.
+&lt;/think&gt;
+
+Buy It Again, Hierarchical Models, Scalability, Survival Models, Time Series Analysis, Large Scale Retail, Evaluation Metrics, Real World Applications, A/B Testing.</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Personalized Category Frequency prediction for Buy It Again recommendations
+Abstract:
+Buy It Again (BIA) recommendations are crucial to retailers to help improve user experience and site engagement by suggest- ing items that customers are likely to buy again based on their own repeat purchasing patterns. Most existing BIA studies analyze guests’ personalized behaviour at item granularity. This finer level of granularity might be appropriate for small businesses or small datasets for search purposes. However, this approach can be infea- sible for big retailers like Amazon, Walmart, or Target which have hundreds of millions of guests and tens of millions of items. For such data sets, it is more practical to have a coarse-grained model that captures customer behaviour at the item category level. In addition, customers commonly explore variants of items within the same categories, e.g., trying different brands or flavors of yogurt. A category-based model may be more appropriate in such scenarios. We propose a recommendation system called a hierarchical PCIC model that consists of a personalized category model (PC model) and a personalized item model within categories (IC model). PC model generates a personalized list of categories that customers are likely to purchase again. IC model ranks items within categories that guests are likely to reconsume within a category. The hierarchical PCIC model captures the general consumption rate of products using survival models. Trends in consumption are captured using time series models. Features derived from these models are used in training a category-grained neural network. We compare PCIC to twelve existing baselines on four standard open datasets. PCIC improves NDCG up to 16% while improving recall by around 2%. We were able to scale and train (over 8 hours) PCIC on a large dataset of 100M guests and 3M items where repeat categories of a guest outnumber repeat items. PCIC was deployed and A/B tested on the site of a major retailer, leading to significant gains in guest engagement.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article about &#34;Personalized Category Frequency prediction for Buy It Again recommendations.&#34; Let me start by reading through the title and abstract carefully.
+
+The main focus is on BIA (Buy It Again) recommendations. These are items that customers might buy again based on their purchasing patterns. The study highlights the challenge of using item-level analysis for large retailers like Amazon, which have massive amounts of data. Instead, they propose a category-based approach with a hierarchical PCIC model.
+
+So, breaking this down: the article talks about recommendation systems, specifically BIA recommendations. It mentions using a hierarchical model that includes both personalized category and item models within categories. They use survival models and time series to capture consumption trends, which are then used in training a neural network at the category level.
+
+Looking at the key themes here—recommendation systems, category-based recommendations, scalability for large datasets, machine learning models (survival analysis, time series), personalized recommendations, evaluation metrics like NDCG and recall. The article also discusses real-world deployment and A/B testing, indicating a focus on practical applications.
+
+Now, considering the categories I need to assign:
+
+1. **Recommendation Systems**: This is central to the paper as it&#39;s about BIA recommendations.
+2. **Buy It Again Recommendations**: Directly related to the title and focus.
+3. **Category-Based Recommendations**: The article emphasizes category-level models over item-level ones.
+4. **Scalability**: They address scaling issues for large retailers, which is a key point.
+5. **Neural Networks**: The PCIC model uses neural networks in its training.
+6. **Survival Models**: These are part of the methodology to capture consumption trends.
+7. **Time Series Analysis**: Used alongside survival models for trend analysis.
+8. **Personalization**: The recommendations are highly personalized at both category and item levels.
+9. **Evaluation Metrics**: They use NDCG and recall to measure performance.
+10. **A/B Testing**: The model was tested in real-world via A/B testing, indicating a focus on practical application.
+
+I should make sure each of these is relevant and covers the necessary aspects without overcomplicating. Each category needs to be clear and descriptive to aid users in navigating the content easily.
+&lt;/think&gt;
+
+Recommendation Systems, Buy It Again Recommendations, Category-Based Recommendations, Scalability, Neural Networks, Survival Models, Time Series Analysis, Personalization, Evaluation Metrics, A/B Testing</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

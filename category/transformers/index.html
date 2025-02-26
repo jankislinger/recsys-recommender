@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/scalability/">Scalability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>CALRec: Contrastive Alignment of Generative LLMs For Sequential Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Mohamed Hammad, Ivan Vulić, Xiang Zhai, Yaoyiran Li, Anna Korhonen, Keyi Yu, Moustafa Alzantot</p>
+    <p>Traditional recommender systems such as matrix factorization methods rely on learning a shared dense embedding space to represent both items and user preferences. Sequence models such as RNN, GRUs, and, recently, Transformers have also excelled in the task of sequential recommendation. The sequential recommendation task requires understanding the sequential structure present in users’ historical interactions to predict the next item they may like. Building upon the success of Large Language Models (LLMs) in a variety of tasks, researchers have recently explored using LLMs that are pretrained on giant corpora of text for sequential recommendation. To use LLMs in sequential recommendations, both the history of user interactions and the model’s prediction of the next item are expressed in text form. We propose CALRec, a two-stage LLM finetuning framework that finetunes a pretrained LLM in a two-tower fashion using a mixture of two contrastive losses and a language modeling loss: the LLM is first finetuned on a data mixture from multiple domains followed by another round of target domain finetuning. Our model significantly outperforms many state-of-the-art baselines (+37% in Recall@1 and +24% in NDCG@10) and systematic ablation studies reveal that (i) both stages of finetuning are crucial, and, when combined, we achieve improved performance, and (ii) contrastive alignment is effective among the target domains explored in our experiments.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Sequential Recommendation, Large Language Models (LLMs), Contrastive Learning, Transformers, Fine-tuning, Performance Improvement, Text Representation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1031/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Enhancing Transformers without Self-supervised Learning: A Loss Landscape Perspective in Sequential Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Minghua Xu, Chin-Chia Michael Yeh, Yiwei Cai, Vivian Lai, Huiyuan Chen, Hao Yang</p>
+    <p>Transformers have become the favored model for sequential recommendation. However, previous studies rely on extensive data, such as massive pre-training or repeated data augmentation, leading to optimization-related problems, such as initialization sensitivity and large batch-size memory bottleneck. In this work, we examine Transformers’ loss geometry to improve the models’ data efficiency during training and generalization. By utilizing a newly introduced sharpness-aware optimizer to promote smoothness, we significantly enhance SASRec’s accuracy and robustness, a Transformer model, on various datasets. When trained on sequential data without significant pre-training or data augmentation, the resulting SASRec outperforms S3Rec and CL4Rec, both of which are of comparable size and throughput.</p>
+    <p><strong>Categories:</strong> Transformers, Sequential Recommendation, Loss Landscape Analysis, Optimization, Data Efficiency, Initialization Sensitivity, Generalization in Recommendations, Algorithm Modification, Scalability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/909/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Integrating Offline Reinforcement Learning with Transformers for Sequential Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Xumei Xi, Yang Wu, Liwen Ouyang, Yuke Zhao, Quan Liu</p>
+    <p>We consider the problem of sequential recommendation, where the current recommendation is made based on past interactions. This recommendation task requires efficient processing of the sequential data and aims to provide recommendations that maximize the long-term reward. To this end, we train a farsighted recommender by using an offline RL algorithm with the policy network in our model architecture that has been initialized from a pre-trained transformer model. The pre-trained model leverages the superb ability of the transformer to process sequential information. Compared to prior works that rely on online interaction via simulation, we focus on implementing a fully offline RL framework that is able to converge in a fast and stable way. Through extensive experiments on public datasets, we show that our method is robust across various recommendation regimes, including e-commerce and movie suggestions. Compared to state-of-the-art supervised learning algorithms, our algorithm yields recommendations of higher quality, demonstrating the clear advantage of combining RL and transformers.</p>
+    <p><strong>Categories:</strong> Reinforcement Learning, Transformers, Sequential Recommendation, Offline Reinforcement Learning, Sequential Data Processing, Transfer Learning, E-commerce, Movies, Recommendation System, Long-term Reward Maximization, Algorithm Comparison, Efficiency (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/955/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>BRUCE – Bundle Recommendation Using Contextualized item Embeddings (2022)</h3>
+    <p><strong>Authors:</strong> Amit Livne, Bracha Shapira, Oren Sar Shalom, Mark Last, Tzoof Avny Brosh</p>
+    <p>A bundle is a pre-defined set of items that are collected together. In many domains, bundling is one of the most important marketing strategies for item promotion, commonly used in e-commerce. Bundle recommendation resembles the item recommendation task, where bundles are the recommended unit, but it poses additional challenges; while item recommendation requires only user and item understanding, bundle recommendation also requires modeling the connections between the various items in a bundle. Transformers have driven the state-of-the-art methods for set and sequence modeling in various natural language processing and computer vision tasks, emphasizing the understanding that the neighbors of an element are of crucial importance. Under some required adjustments, we believe the same applies for items in bundles, and better capturing the relations of an item with other items in the bundle may lead to improved recommendations. To address that, we introduce BRUCE - a novel model for bundle recommendation, in which we adapt Transformers to represent data on users, items, and bundles. This allows exploiting the self-attention mechanism to model the following: latent relations between the items in a bundle; and users’ preferences toward each of the items in the bundle and toward the whole bundle. Moreover, we examine various architectures to integrate the items’ and the users’ information and provide insights on architecture selection based on data characteristics. Experiments conducted on three benchmark datasets show that the proposed approach contributes to the accuracy of the recommendation and substantially outperforms state-of-the-art methods</p>
+    <p><strong>Categories:</strong> Bundle Recommendation, E-commerce, Recommendation Systems, Transformers, Attention Mechanism, Item Relationships, User Preferences, Model Architecture, Embeddings, Neighbor Modeling, Recommendation Accuracy, Novel Methods, Real-world Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/750/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Transformers4Rec: Bridging the Gap between NLP and Sequential / Session-Based Recommendation (2021)</h3>
+    <p><strong>Authors:</strong> Ronay Ak, Even Oldridge, Sara Rabhi, Gabriel de Souza Pereira Moreira, Jeong Min Lee</p>
+    <p>Much of the recent progress in sequential and session-based recommendation has been driven by improvements in model architecture and pretraining techniques originating in the field of Natural Language Processing. Transformer architectures in particular have facilitated building higher-capacity models and provided data augmentation and training techniques which demonstrably improve the effectiveness of sequential recommendation. But with a thousandfold more research going on in NLP, the application of transformers for recommendation understandably lags behind. To remedy this we introduce Transformers4Rec, an open-source library built upon HuggingFace’s Transformers library with a similar goal of opening up the advances of NLP based Transformers to the recommender system community and making these advancements immediately accessible for the tasks of sequential and session-based recommendation. Like its core dependency, Transformers4Rec is designed to be extensible by researchers, simple for practitioners, and fast and robust in industrial deployments.<br>In order to demonstrate the usefulness of the library and the applicability of Transformer architectures in next-click prediction for user sessions, where sequence lengths are much shorter than those commonly found in NLP, we have leveraged Transformers4Rec to win two recent session-based recommendation competitions. In addition, we present in this paper the first comprehensive empirical analysis comparing many Transformer architectures and training approaches for the task of session-based recommendation. We demonstrate that the best Transformer architectures have superior performance across two e-commerce datasets while performing similarly to the baselines on two news datasets. We further evaluate in isolation the effectiveness of the different training techniques used in causal language modeling, masked language modeling, permutation language modeling and replacement token detection for a single Transformer architecture, XLNet. We establish that training XLNet with replacement token detection performs well across all datasets. Finally, we explore techniques to include side information such as item and user context features in order to establish best practices and show that the inclusion of side information uniformly improves recommendation performance. Transformers4Rec library is available at https://github.com/NVIDIA-Merlin/Transformers4Rec/</p>
+    <p><strong>Categories:</strong> Transformers, Session-based Recommendation, Sequential Recommendation, Open Source Libraries, Empirical Analysis, Model Comparison, Language Modeling Techniques, E-commerce, News, Side Information, Industrial Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/668/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

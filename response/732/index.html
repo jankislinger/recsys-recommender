@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommendations at Videoland
+Abstract:
+With the largest commercial TV channels in the Netherlands, RTL
+plays an important role in society. We reach over 85% of Dutch peo-
+ple on a weekly basis, spending on average around 45 minutes a day
+with us and our content. We feel a part of all of the Netherlands. We
+actively pick up the challenge to show a diverse and representative
+view in the media.
+Videoland is our subscription-based video-on-demand (VOD)
+platform, with over a million subscribers and thousands of local
+and international titles. Our daily challenges on Videoland revolve
+around supporting our users in discovering new content, within a
+mix of editorial and personalized content.
+In this talk, we detail the challenges and practical solutions in
+building the recommender systems for Videoland. In part 1, we
+discuss the tweaks and algorithms we deployed in this commercial
+settings. We show their impact using offline evaluations and online
+experiments with our users. In part 2, we discuss what we learned in
+developing novel algorithms based on sequences of user behavior
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize the research article titled &#34;Recommendations at Videoland&#34; into multiple relevant categories following the provided guidelines. Let me break this down step by step.
+
+First, I&#39;ll read through the title and abstract carefully to identify core themes and elements that can guide the categorization process.
+
+The title is straightforward: it&#39;s about recommendations at Videoland, which suggests it&#39;s focused on a video-on-demand platform, specifically mentioning RTL in the Netherlands. So, this immediately points towards Video-on-Demand (VOD) as a category.
+
+Looking at the abstract, it mentions Videoland being a subscription-based VOD platform with over a million subscribers and a large library of content. This confirms that Video-on-Demand is definitely one category. Also, since it&#39;s about recommendations for TV and video content, another relevant category could be Television &amp; Video Content.
+
+Next, the challenges mentioned revolve around helping users discover new content through a mix of editorial and personalized content. This indicates that Personalized Recommendations is a key area here. Additionally, the talk discusses practical solutions in building recommender systems, which suggests categories like Recommender Systems and possibly Algorithms since they mention deploying specific tweaks and algorithms.
+
+The abstract also talks about offline evaluations and online experiments with users, which brings Evaluation Methods into play. They conducted A/B Testing as part of their process, so that&#39;s another category to include.
+
+Since the talk is in two parts, part one focuses on deployed algorithms and their impact, while part two discusses novel algorithms based on user behavior sequences. This implies the use of User Behavior Analysis and Sequential Data, which could be categorized under Sequence-Based Models or Behavioral Analysis.
+
+Moreover, Videoland serves a diverse audience with a mix of local and international titles, aiming to show diversity in media. This points towards Diversity of Recommendations as another category.
+
+Considering real-world applications, the platform&#39;s focus on improving user experience through recommendations makes Real-World Applications relevant. Also, since it&#39;s a commercial setting, Commercial Deployment is appropriate.
+
+I should also consider if there are any other specific aspects mentioned, like cold start problems or scalability, but from the abstract provided, those aren&#39;t explicitly addressed. So I&#39;ll avoid adding categories that aren&#39;t supported by the text.
+
+Now, compiling all these thoughts into categories:
+
+1. Video-on-Demand (VOD)
+2. Television &amp; Video Content
+3. Personalized Recommendations
+4. Recommender Systems
+5. Algorithms
+6. Evaluation Methods
+7. A/B Testing
+8. User Behavior Analysis
+9. Sequence-Based Models
+10. Diversity of Recommendations
+11. Real-World Applications
+12. Commercial Deployment
+
+I think these categories cover the main points from the abstract, balancing between specific and broad classifications to ensure utility for users exploring the content.
+&lt;/think&gt;
+
+Video-on-Demand (VOD), Television &amp; Video Content, Personalized Recommendations, Recommender Systems, Algorithms, Evaluation Methods, A/B Testing, User Behavior Analysis, Sequence-Based Models, Diversity of Recommendations, Real-World Applications, Commercial Deployment</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommendations at Videoland
+Abstract:
+With the largest commercial TV channels in the Netherlands, RTL
+plays an important role in society. We reach over 85% of Dutch peo-
+ple on a weekly basis, spending on average around 45 minutes a day
+with us and our content. We feel a part of all of the Netherlands. We
+actively pick up the challenge to show a diverse and representative
+view in the media.
+Videoland is our subscription-based video-on-demand (VOD)
+platform, with over a million subscribers and thousands of local
+and international titles. Our daily challenges on Videoland revolve
+around supporting our users in discovering new content, within a
+mix of editorial and personalized content.
+In this talk, we detail the challenges and practical solutions in
+building the recommender systems for Videoland. In part 1, we
+discuss the tweaks and algorithms we deployed in this commercial
+settings. We show their impact using offline evaluations and online
+experiments with our users. In part 2, we discuss what we learned in
+developing novel algorithms based on sequences of user behavior
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Recommendations at Videoland&#34; into multiple relevant categories. Let&#39;s start by looking at the title and abstract to understand its content.
+
+The title suggests it&#39;s about recommendation systems, specifically for a VOD platform called Videoland. The abstract mentions that Videoland is a subscription-based service with over a million subscribers. They focus on helping users discover new content through both editorial and personalized recommendations. 
+
+In Part 1, they discuss the tweaks and algorithms used in their commercial setting, showing impact using offline evaluations and online experiments. In Part 2, they talk about developing novel algorithms based on user behavior sequences.
+
+So, first, I can categorize this under recommendation systems since that&#39;s the main focus. Since Videoland is a VOD platform, it falls under video recommendations. They mention both editorial and personalized content, so those are relevant categories too.
+
+They discuss their commercial deployment, which means real-world applications are important here. The fact that they have over a million subscribers indicates a large scale, so scalability should be included. 
+
+The article also talks about user behavior sequences, implying they use sequential patterns in their algorithms. They mention offline evaluations and online experiments, which relates to evaluation methods in recommendation systems.
+
+Videoland being a media platform means it&#39;s part of the media industry, so that category makes sense. The abstract mentions diversity and representative views, which ties into content curation. 
+
+They discuss algorithms based on user behavior sequences, so behavioral analysis is another relevant category. They also deploy practical solutions in their commercial setting, indicating real-world applications.
+
+Putting this all together, I can list the categories as recommendation systems, video recommendations, media, personalized recommendations, editorial recommendations, real-world applications, offline evaluation, online experiments, scalability, content curation, user behavior, sequence modeling, and behavioral analysis. 
+
+I need to make sure these categories are relevant, clear, and cover both the technical aspects and the application context of the article.
+&lt;/think&gt;
+
+Recommendation Systems, Video Recommendations, Media, Personalized Recommendations, Editorial Recommendations, Real-World Applications, Offline Evaluation, Online Experiments, Scalability, Content Curation, User Behavior, Sequence Modeling, Behavioral Analysis</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

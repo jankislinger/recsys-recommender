@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Adaptive Collaborative Filtering with Personalized Time Decay Functions for Financial Product Recommendation
+Abstract:
+Classical recommender systems often assume that historical data are stationary and fail to account for the dynamic nature of user preferences, limiting their ability to provide reliable recommendations in time-sensitive settings. This assumption is particularly problematic in finance, where financial products exhibit continuous changes in valuations, leading to frequent shifts in client interests. These evolving interests, summarized in the past client-product interactions, see their utility fade over time with a degree that might differ from one client to another. To address this challenge, we propose a time-dependent collaborative filtering algorithm that can adaptively discount distant client-product interactions using personalized decay functions. Our approach is designed to handle the non-stationarity of financial data and produce reliable recommendations by modeling the dynamic collaborative signals between clients and products. We evaluate our method using a proprietary dataset from BNP Paribas and demonstrate significant improvements over state-of-the-art benchmarks from relevant literature. Our findings emphasize the importance of incorporating time explicitly in the model to enhance the accuracy of financial product recommendation.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article about an adaptive collaborative filtering algorithm for financial product recommendations. Let me read through it again and break down what I understand.
+
+The title mentions &#34;Adaptive Collaborative Filtering with Personalized Time Decay Functions for Financial Product Recommendation.&#34; So right away, I know the main focus is on recommendation systems, specifically in the finance domain. The method they&#39;re using is a type of collaborative filtering that&#39;s adaptive and uses personalized time decay functions. That makes sense because financial products are dynamic; their values change over time, so user preferences might shift as well.
+
+Looking at the abstract, it talks about classical recommender systems assuming historical data is stationary, which isn&#39;t the case in finance. So they&#39;re addressing the problem of non-stationary data by incorporating personalized decay functions to discount older interactions differently for each client. They mention evaluating their method on a dataset from BNP Paribas and showing improvements over existing benchmarks.
+
+Now, I need to assign categories based on this information. The guidelines suggest multiple relevant categories, so let&#39;s think about different angles: the algorithm used, the domain, specific recommendation aspects, evaluation methods, etc.
+
+First, the family of algorithms here is Collaborative Filtering since it&#39;s a CF approach. It&#39;s adaptive, so maybe Adaptive Methods or something similar could be another category. The personalized time decay functions indicate a focus on Personalization, which should definitely be included.
+
+The domain here is clearly Finance and Financial Products because they&#39;re applying this to financial recommendations. Time Sensitivity comes into play since the model adapts over time with changing user preferences and product valuations.
+
+They evaluate their approach using real-world data from BNP Paribas, so Real-World Application would fit here. The abstract also mentions improving recommendation accuracy by modeling dynamic collaborative signals, which ties into Recommendation Accuracy as an evaluation aspect.
+
+Since they&#39;re using a specific financial institution&#39;s dataset, maybe including something like Banking or Financial Institutions could be useful for categorization.
+
+They address the challenge of non-stationary data, so Non-Stationary Data is another relevant category. The approach handles evolving client interests by adjusting how past interactions are weighted, which ties into User Preference Modeling.
+
+The method focuses on dynamic collaborative signals, so that&#39;s a specific aspect within recommendation systems. They also emphasize beyond accuracy metrics since they&#39;re improving the model to handle dynamics better than existing methods.
+
+Putting it all together, I should make sure each category is clear and relevant. Let me list them out:
+
+1. Collaborative Filtering – main algorithm used.
+2. Adaptive Methods – since the system adapts over time.
+3. Personalization – using personalized decay functions.
+4. Finance – domain of application.
+5. Financial Products – specific focus within finance.
+6. Time Sensitivity – handling time-dependent data.
+7. Non-Stationary Data – dealing with changing data patterns.
+8. Real-World Application – using a real dataset from BNP Paribas.
+9. Recommendation Accuracy – evaluating the accuracy of recommendations.
+10. User Preference Modeling – understanding and adapting to user preferences over time.
+11. Dynamic Collaborative Signals – modeling how interactions change dynamically.
+12. Beyond Accuracy – considering aspects beyond just recommendation accuracy.
+
+I think these cover the main points from the article. They&#39;re specific enough but also broad enough for users to find related content easily. I should double-check that each category makes sense and isn&#39;t too niche without a good number of articles, but based on the guidelines, 8-12 is acceptable.
+&lt;/think&gt;
+
+Collaborative Filtering, Adaptive Methods, Personalization, Finance, Financial Products, Time Sensitivity, Non-Stationary Data, Real-World Application, Recommendation Accuracy, User Preference Modeling, Dynamic Collaborative Signals, Beyond Accuracy</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Adaptive Collaborative Filtering with Personalized Time Decay Functions for Financial Product Recommendation
+Abstract:
+Classical recommender systems often assume that historical data are stationary and fail to account for the dynamic nature of user preferences, limiting their ability to provide reliable recommendations in time-sensitive settings. This assumption is particularly problematic in finance, where financial products exhibit continuous changes in valuations, leading to frequent shifts in client interests. These evolving interests, summarized in the past client-product interactions, see their utility fade over time with a degree that might differ from one client to another. To address this challenge, we propose a time-dependent collaborative filtering algorithm that can adaptively discount distant client-product interactions using personalized decay functions. Our approach is designed to handle the non-stationarity of financial data and produce reliable recommendations by modeling the dynamic collaborative signals between clients and products. We evaluate our method using a proprietary dataset from BNP Paribas and demonstrate significant improvements over state-of-the-art benchmarks from relevant literature. Our findings emphasize the importance of incorporating time explicitly in the model to enhance the accuracy of financial product recommendation.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article titled &#34;Adaptive Collaborative Filtering with Personalized Time Decay Functions for Financial Product Recommendation.&#34; Let me start by reading through the title and abstract carefully.
+
+The title mentions adaptive collaborative filtering, which is a method in recommendation systems. It also talks about personalized time decay functions, so it&#39;s dealing with how user interactions change over time. The focus is on financial products, which adds an applied domain context.
+
+Looking at the abstract, the article points out that classical recommender systems assume stationary data but don&#39;t handle dynamic user preferences well, especially in finance where product values change frequently. This means user interest can shift quickly, and older interactions become less relevant over time. The proposed solution is a collaborative filtering algorithm that uses personalized decay functions to adaptively discount older interactions based on how each user&#39;s interests evolve.
+
+They evaluated their method using data from BNP Paribas, showing improvements over existing benchmarks. The key takeaway here is the explicit use of time in modeling to enhance recommendation accuracy.
+
+Now, considering the categorization guidelines, I need to assign at least 8-12 categories that accurately reflect the article&#39;s content and are user-friendly.
+
+Starting with the obvious: Collaborative Filtering is a core algorithm here. Adaptive Collaborative Filtering should be another category as it&#39;s a specific type. The use of Time Decay Functions is central, so that&#39;s another one. Personalized aspects are involved since decay functions differ per client, leading to Personalized Recommendations.
+
+The domain is clearly Finance and Banking because the case study uses BNP Paribas data, which is a financial institution. Non-Stationary Data is important because the article addresses the changing nature of user preferences and product values over time. Dynamic User Preferences tie into this as well.
+
+Real-World Applications are highlighted through the use case with BNP Paribas, so that&#39;s another relevant category. Evaluation in Recommender Systems is mentioned when they compare against benchmarks, making it a good fit.
+
+Financial Product Recommendation is specific to their application area. Handling Non-Stationarity in Data is another key aspect they address. Additionally, since time decay functions vary per user, User-Specific Models could be an appropriate category.
+
+Let me check if I have at least 8 categories: Collaborative Filtering, Adaptive Collaborative Filtering, Time Decay Functions, Personalized Recommendations, Finance and Banking, Non-Stationary Data, Dynamic User Preferences, Real-World Applications. That&#39;s eight; adding a few more to reach twelve would be good for discoverability.
+
+I can include Evaluation in Recommender Systems, Financial Product Recommendation, Handling Non-Stationarity in Data, and User-Specific Models. Now I have 12 categories, each relevant and specific enough to be useful without being too narrow.
+&lt;/think&gt;
+
+Collaborative Filtering, Adaptive Collaborative Filtering, Time Decay Functions, Personalized Recommendations, Finance and Banking, Non-Stationary Data, Dynamic User Preferences, Real-World Applications, Evaluation in Recommender Systems, Financial Product Recommendation, Handling Non-Stationarity in Data, User-Specific Models</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

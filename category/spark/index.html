@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/explainability/">Explainability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Personalizing Peloton: Combining Rankers and Filters To Balance Engagement and Business Goals (2021)</h3>
+    <p><strong>Authors:</strong> Shayak Banerjee</p>
+    <p>Peloton is at the forefront of the at-home fitness market, with two business pillars: (a) a line of connected fitness equipment, and (b) a subscription-based service that offers access to a rich catalog of high quality fitness classes. As of May 2021, the total member base for Peloton stood at over 5.4 million, who took more than 170 million workouts. Peloton classes cover a diversity of instructors, languages, fitness disciplines, durations, intensity and muscle groups. On the other side, each user has their own specific fitness goals, time available to work out, fitness equipment and level of skill or strength. This diversity of content and individuality of user needs creates the need for a recommender system capable of personalizing the Peloton experience.<br>Most recommendation engines optimize for user lifetime value or time of engagement. However, Peloton users have very different usage habits when compared to other industry recommendation problems. Users arrive on the platform with a clear intent to workout, which allows our recommendation algorithms to not just focus on the short-term classic metrics such as click-through-rates and optimizing session lengths for exploration. Instead, fitness content recommendations at Peloton also help solve longer term problems such as: <br>It helps balance engagement and business goals. A classic example of this is the introduction of a new instructor. For existing users, who already have developed affinities to certain instructors, how can we ensure that enough of them see and try some classes from the new instructor so that they can build their own following?<br>It helps guide users to explore the vast library of content. Peloton users quickly develop set routines with our fitness content, with high repeat plays of the same instructor/duration/class type. Recommendations serve as a mechanism to encourage them to try something outside this comfort zone, which both increases the breadth of a user's engagement with the platform and leads to a more holistic workout routine.<br>We achieve these two goals by utilizing a combination of rankers and filters. Ranking models help order the universe of content for each user according to their preferences. Filters take a slice of this ordered content to generate a shelf of content with a reason for suggesting it. Explainability is heavily linked to business goals, while ranking is linked to engagement goals. For instance, ranking and filtering can work in tandem to populate a shelf that helps promote a new music partnership, e.g. Workouts Featuring The Beatles, where we highlight classes that contain music by The Beatles (filter), ordered by the user's class preferences (ranker). With rankers and filters, we empower other teams to curate personalized experiences. The creation process is simplified to picking a ranker and a filter to create a shelf, and then giving it a title to then have it displayed to users.<br>Further, we have context-based models that order the shelves for each user depending on both their preferences and context, such as platform and time. For ranking our various filters, we take a multi-armed bandit approach, due to the need to handle cold starts on users and balance exploration (keep putting new shelves in front of the user) with exploitation (keep showing them shelves they already interact with). To start with, we implemented a simple Thompson Sampling based bandits algorithm, which accumulates rewards (for shelves interacted with) and penalties (for shelves ignored), which in turn constantly adapts the shelf ordering for a user, making the experience more personalized over time. We are able to perform all calculations offline in batch, using Spark, and cache the Thompson Sampling parameters in DynamoDB. When a user requests their shelves, a random sampling is performed using these parameters to serve up a contextually ordered list of shelves.<br>A unique feature of Peloton classes is that they are usually aired “live” first, which seeds the class with a set of users. This ameliorates the cold start problem for recommending classes, opening us up to using collaborative filtering approaches. Also, users typically take one session in a given day, and most even just take one class in a given day. This means we are able to compute class recommendations for each user offline, cache it and serve it up when requested. In the offline world, we use Spark to pre-process our user-class interaction data, and then train a deep learning model using PyTorch. Our ranking model is a sequential recommender using long-short-term memory (LSTMs). From our ranked list of classes, we apply our various filters and generate the shelves of recommendations. These are cached in AWS DynamoDB, and served up via Kubernetes-driven APIs.<br>Recommending fitness content at Peloton has the potential to go beyond simply guiding users to their next class. With a holistic overview of both what classes a user is taking and a user's feedback on their performance (explicit or implicit), there is an opportunity to tailor workout routines that optimize for long-term metrics such as health, strength or flexibility.</p>
+    <p><strong>Categories:</strong> Personalization, Recommendation Systems, Fitness, Multi-Armed Bandits, Hybrid Recommender Systems, User Engagement, Business Goals, Cold Start, Thompson Sampling, Sequential Recommendations, Deep Learning, Spark, PyTorch, AWS, DynamoDB, Kubernetes (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/741/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

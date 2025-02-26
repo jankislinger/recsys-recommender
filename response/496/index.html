@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Should we Embed? A Study on the Online Performance of Utilizing Embeddings for Real-Time Job Recommendations
+Abstract:
+In this work, we present the findings of an online study, where we explore the impact of utilizing embeddings to recommend job postings under real-time constraints. On the Austrian job platform Studo Jobs, we evaluate two popular recommendation scenarios: (i) providing similar jobs and, (ii) personalizing the job postings that are shown on the homepage. Our results show that for recommending similar jobs, we achieve the best online performance in terms of Click-Through Rate when we employ embeddings based on the most recent interaction. To personalize the job postings shown on a user’s homepage, however, combining embeddings based on the frequency and recency with which a user interacts with job postings results in the best online performance. i&gt;Presentation: Wednesday Poster Lunch&lt;/i
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Should we Embed? A Study on the Online Performance of Utilizing Embeddings for Real-Time Job Recommendations.&#34; From this, I gather that the main topic is about using embeddings in recommendation systems specifically for job postings. The study is conducted online and focuses on real-time performance.
+
+Looking at the abstract, it mentions two scenarios: recommending similar jobs and personalizing homepage job postings. They tested this on the Studo Jobs platform in Austria. They found that embeddings based on recent interactions worked best for similar job recommendations. For homepage personalization, combining embeddings with frequency and recency of user interactions was most effective.
+
+Now, I&#39;ll break down the key elements to categorize:
+
+1. **Algorithm Family**: The article uses embeddings, which is a type of algorithm used in recommendation systems. So, &#34;Embeddings&#34; is definitely one category.
+
+2. **Domain/Field**: The domain here is job recommendations, so &#34;Job Recommendations&#34; makes sense. Since it&#39;s an online platform, maybe also consider &#34;Online Platforms.&#34;
+
+3. **Recommendation Scenarios**: There are two main scenarios discussed—similar jobs and homepage personalization. These can be separate categories like &#34;Similar Items Recommendation&#34; and &#34;Homepage Personalization.&#34;
+
+4. **Evaluation Aspects**: They mention Click-Through Rate (CTR), which is a common metric for evaluating recommendations. So, &#34;Click-Through Rate (CTR)&#34; should be included.
+
+5. **Real-Time Constraints**: The study focuses on real-time performance, so that&#39;s another category: &#34;Real-Time Recommendations.&#34;
+
+6. **User Interaction Factors**: They considered frequency and recency of interactions. These are important aspects in recommendation systems, so categories like &#34;Frequency&#34; and &#34;Recency&#34; make sense.
+
+7. **Application Context**: It was applied to a job platform, so &#34;Job Platforms&#34; is appropriate.
+
+8. **Research Methodology**: They conducted an online study with A/B testing, so including &#34;A/B Test&#34; or similar terms might be useful.
+
+Wait, looking back at the guidelines, I should aim for 8-12 categories. Let me see if there are more aspects:
+
+- The study was applied in a real-world setting, so &#34;Real World Applications.&#34;
+- It&#39;s about recommendation systems in general, so &#34;Recommendation Systems&#34; is broad but necessary.
+- They looked into online performance, which could relate to &#34;Scalability,&#34; though that wasn&#39;t explicitly mentioned.
+
+Putting it all together, I think the categories should include the algorithm used (Embeddings), the domain (Job Recommendations, Job Platforms), specific recommendation scenarios (Similar Items Recommendation, Homepage Personalization), evaluation metrics (Click-Through Rate), real-time aspects (Real-Time Recommendations), user interaction factors (Frequency, Recency), and the application context (Real World Applications). Since they mentioned using A/B testing in the presentation note, maybe include that as well.
+
+I should make sure not to repeat categories. Also, &#34;Job Platforms&#34; might be more specific than needed; perhaps &#34;Online Platforms&#34; is better but I think &#34;Job Platforms&#34; captures it accurately.
+
+So the final list would cover all these aspects without being too redundant.
+&lt;/think&gt;
+
+Embeddings, Job Recommendations, Similar Items Recommendation, Homepage Personalization, Click-Through Rate (CTR), Real-Time Recommendations, Frequency, Recency, Real World Applications, A/B Test.</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Should we Embed? A Study on the Online Performance of Utilizing Embeddings for Real-Time Job Recommendations
+Abstract:
+In this work, we present the findings of an online study, where we explore the impact of utilizing embeddings to recommend job postings under real-time constraints. On the Austrian job platform Studo Jobs, we evaluate two popular recommendation scenarios: (i) providing similar jobs and, (ii) personalizing the job postings that are shown on the homepage. Our results show that for recommending similar jobs, we achieve the best online performance in terms of Click-Through Rate when we employ embeddings based on the most recent interaction. To personalize the job postings shown on a user’s homepage, however, combining embeddings based on the frequency and recency with which a user interacts with job postings results in the best online performance. i&gt;Presentation: Wednesday Poster Lunch&lt;/i
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Should we Embed? A Study on the Online Performance of Utilizing Embeddings for Real-Time Job Recommendations.&#34; So it&#39;s about using embeddings in job recommendation systems, specifically in real-time.
+
+Looking at the abstract, they conducted an online study on an Austrian job platform called Studo Jobs. They evaluated two scenarios: recommending similar jobs and personalizing homepages. The key findings involve using embeddings based on recent interactions for similar jobs and a combination of frequency and recency for homepage recommendations.
+
+Now, I need to map this to the categories provided in the guidelines:
+
+1. **Family of algorithm**: The article uses embeddings, which is a machine learning technique. So &#34;Embeddings&#34; would be one category.
+
+2. **Domain of the problem**: It&#39;s about job recommendations, so &#34;Job Recommendations&#34; fits here.
+
+3. **Specific aspect in recommendation space**: They&#39;re looking at real-time performance, so &#34;Real-Time Recommendations&#34; is appropriate.
+
+4. **Aspects of evaluation**: The study focuses on Click-Through Rate (CTR), which is a common metric. So &#34;Click-Through Rate (CTR)&#34; should be included.
+
+5. **Evaluation metrics**: Beyond just CTR, they also talk about online performance and user interactions, so &#34;Online Performance&#34; could be another category.
+
+6. **Real-world applications**: Since the study was conducted on a job platform with real users, &#34;A/B Testing&#34; or &#34;User Interaction Analysis&#34; might apply, but since it&#39;s an online study evaluating different methods, maybe more about application in the real world than A/B testing specifically. Alternatively, they tested on actual user interactions, so perhaps &#34;Real-World Applications.&#34;
+
+7. **Other relevant categories**: The paper discusses personalization and similarity-based recommendations, which are core concepts in recommendation systems.
+
+So compiling all these:
+
+1. Embeddings
+2. Job Recommendations
+3. Real-Time Recommendations
+4. Click-Through Rate (CTR)
+5. Online Performance
+6. Personalization
+7. Similarity-Based Recommendations
+8. Real-World Applications
+
+Wait, the guidelines mention to aim for 8-12 categories but each article should be assigned at least 8. Let me think if there are more relevant ones.
+
+Looking again, they talk about user interactions in terms of frequency and recency. Maybe &#34;User Interaction Analysis&#34; could be another category. Also, since it&#39;s about embeddings, maybe include &#34;Machine Learning Techniques.&#34; Alternatively, &#34;Real-Time Processing.&#34;
+
+Alternatively, considering the evaluation aspect beyond accuracy, like diversity or other metrics, but in this case, they specifically mention CTR.
+
+Wait, perhaps &#34;Scalability&#34; is relevant because real-time recommendations need efficient systems. So adding that as another category.
+
+So now I have:
+
+1. Embeddings
+2. Job Recommendations
+3. Real-Time Recommendations
+4. Click-Through Rate (CTR)
+5. Online Performance
+6. Personalization
+7. Similarity-Based Recommendations
+8. User Interaction Analysis
+9. Machine Learning Techniques
+10. Real-World Applications
+11. Scalability
+
+That&#39;s 11 categories. Maybe one more? Perhaps &#34;Evaluation Metrics&#34; as a broader category, but that might be redundant since I already have CTR and Online Performance.
+
+Alternatively, considering the platform is a job platform, maybe &#34;Recruitment Technology,&#34; but I&#39;m not sure if that&#39;s one of the examples given earlier. The example had categories like &#34;Scalability, Web Systems, Implicit Feedback,&#34; so perhaps it&#39;s better to stick with more general terms unless specific ones are needed.
+
+I think 11 is sufficient and covers all relevant aspects without being too broad or too narrow.
+&lt;/think&gt;
+
+Embeddings, Job Recommendations, Real-Time Recommendations, Click-Through Rate (CTR), Online Performance, Personalization, Similarity-Based Recommendations, User Interaction Analysis, Machine Learning Techniques, Real-World Applications, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

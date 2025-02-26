@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Station and Track Attribute-Aware Music Personalization
+Abstract:
+We present a transformer for music personalization that recommends tracks given a station seed (artist) and improves the accuracy vs. a baseline matrix factorization method by 10%. Adding more embeddings to capture track and station attributes further improves the accuracy of our recommendations, and also improves recommendation diversity, i.e. mitigates popularity bias. We analyze the learned embeddings and find they learn both explicit attributes provided at training and implicit attributes that may inform listener preferences. We also find that unlike matrix factorization, our model can identify and transfer relevant listener preferences across different genres and artists.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article about a transformer for music personalization. Let&#39;s see what the title says: &#34;Station and Track Attribute-Aware Music Personalization.&#34; So it&#39;s focused on music recommendations using transformers, considering station (artist) and track attributes.
+
+Looking at the abstract, they mention improving accuracy over matrix factorization by 10%. That tells me Matrix Factorization is a baseline, so that should be one category. They added more embeddings for track and station attributes, which likely falls under Attribute-Based Recommendations or maybe something like Feature Engineering.
+
+They improved recommendation diversity and mitigated popularity bias, so I should include Diversity of Recommendations and Popularity Bias as categories. Also, they mention analyzing embeddings to capture both explicit and implicit attributes, which points towards Listener Preferences as a category.
+
+The model can transfer listener preferences across genres and artists, indicating Cross-Domain Recommendations or something related to generalizability. Since it&#39;s about personalization, Personalized Recommendations is a must. The use of transformers suggests Natural Language Processing (NLP) methods, especially since it&#39;s a transformer-based approach.
+
+They evaluated the model against matrix factorization, so Evaluation Methods should be included. Real-world applications aren&#39;t explicitly mentioned in the abstract beyond A/B testing or user studies, but they did improve recommendation quality, which could imply some form of application testing.
+
+Putting this all together, I&#39;ll list categories like Transformer-Based Models, Music Recommendations, Matrix Factorization (as a baseline), Attribute-Based Recommendations, Recommendation Diversity, Popularity Bias, Listener Preferences, Cross-Domain Recommendations, Evaluation Methods, and maybe NLP. Wait, the user&#39;s example included things like Family of Algorithm, Domain, Specific recommendation aspects, etc.
+
+So, to structure this:
+
+- Family: Transformer-Based Models
+- Domain: Music Recommendations
+- Compared Method: Matrix Factorization
+- Recommendation Aspect: Attribute-Based, Diversity, Popularity Bias
+- Evaluation Aspects: Listener Preferences, Transfer Across Genres (Cross-Domain)
+- Also, since they used embeddings for attributes, maybe that&#39;s a specific technique category.
+
+Hmm, but I should make sure each category is distinct and relevant. Maybe include things like Feature Engineering if applicable, but perhaps it&#39;s better to stick with the given examples.
+&lt;/think&gt;
+
+Transformer-Based Models, Music Recommendations, Matrix Factorization, Attribute-Based Recommendations, Recommendation Diversity, Popularity Bias, Listener Preferences, Cross-Domain Recommendations, Evaluation Methods</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Domain-Aware Grade Prediction and Top-n Course Recommendation
+Abstract:
+Automated course recommendation can help deliver personalized and effective college advising and degree planning. Nearest neighbor and matrix factorization based collaborative filtering approaches have been applied to student-course grade data to help students select suitable courses. However, the student-course enrollment patterns exhibit grouping structures that are tied to the student and course academic features, which lead to grade data that are not missing at random (NMAR). Existing approaches for dealing with NMAR data, such as Response-aware and context-aware matrix factorization, do not model NMAR data in terms of the user and item features and are not designed with the characteristics of grade data in mind. In this work we investigate how the student and course academic features influence the enrollment patterns and we use these features to define student and course groups at various levels of granularity. We show how these groups can be used to design grade prediction and top-n course ranking models for neighborhood-based user collaborative filtering, matrix factorization and popularity-based ranking approaches. These methods give lower grade prediction error and more accurate top-n course rankings than the other methods that do not take domain knowledge into account.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about domain-aware grade prediction and top-N course recommendation. Let me go through it step by step.
+
+First, looking at the title, it mentions &#34;Domain-Aware Grade Prediction&#34; which immediately tells me this is related to education. The focus seems to be on predicting grades and recommending courses for students. So, Education is definitely a relevant category here.
+
+The abstract talks about automated course recommendation systems. These are used in college advising and degree planning, so that reinforces the Education category. It also mentions using techniques like nearest neighbor and matrix factorization for collaborative filtering. Collaborative Filtering is a common method in recommendation systems, so I should include that as well.
+
+The article addresses the issue of NMAR (not missing at random) data in student-course enrollment patterns. They mention existing methods like Response-aware and context-aware matrix factorization but note their limitations. So, the problem domain here is specific to educational data and how it&#39;s handled differently from typical recommendation scenarios. That makes &#34;Educational Data&#34; a good category.
+
+They discuss the influence of student and course academic features on enrollment patterns. These features help define groups at various granularities, which affects both grade prediction and course recommendations. This points towards &#34;Feature-Based Models,&#34; as they&#39;re using specific features to enhance their predictions.
+
+The methods used include neighborhood-based user collaborative filtering, matrix factorization, and popularity-based ranking approaches. Each of these is a distinct algorithm family, so I should categorize them under those terms: Collaborative Filtering, Matrix Factorization, and Popularity-Based Ranking.
+
+The article also emphasizes the importance of domain knowledge in improving grade prediction accuracy and recommendation quality. This aspect highlights &#34;Domain Knowledge&#34; as a key category because incorporating such knowledge significantly enhances their model&#39;s performance.
+
+Additionally, since they&#39;re applying these models to a specific problem within education, &#34;Course Recommendations&#34; is another relevant category that directly ties into what the article aims to achieve.
+
+Putting it all together, the categories should cover both the general areas (Education, Recommendation Systems) and the specific methods and aspects addressed in the paper. I need to make sure each category accurately reflects the content without being too broad or too narrow.
+&lt;/think&gt;
+
+Education, Recommendation Systems, Collaborative Filtering, Grade Prediction, Course Recommendations, Matrix Factorization, Feature-Based Models, Domain Knowledge, Educational Data, Student-Course Enrollment Patterns</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

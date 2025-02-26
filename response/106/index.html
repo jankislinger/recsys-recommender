@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Preference-oriented Social Networks: Group Recommendation and Inference
+Abstract:
+Social networks facilitate a variety of social, economic, and political interactions. Homophily and social influence suggest that preferences (e.g., over products, services, political parties) are likely to be correlated among people whom directly interact in a social network. We develop a model, , that captures such correlations of individual preferences, where preferences take the form of rankings over a set of options. We develop probabilistic inference methods for predicting individual preferences given observed social connections and partial observations of the preferences of others in the network. We exploit these predictions in a context to make group decisions or recommendations even when the preferences of some group members are unobserved. Experiments demonstrate the effectiveness of our algorithms and the improvements made possible by accounting for social ties.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article into multiple relevant categories based on its title and abstract. Let&#39;s start by reading through the provided information carefully.
+
+The title is &#34;Preference-oriented Social Networks: Group Recommendation and Inference.&#34; This immediately tells me that the article focuses on social networks and how preferences within these networks can be used for group recommendations. The keywords here are social networks, preference-oriented, group recommendation, and inference.
+
+Looking at the abstract, it discusses how social networks facilitate interactions in various domains—social, economic, political. It mentions homophily and social influence as factors that cause preferences to be correlated among interacting individuals. Preferences are described as rankings over options like products, services, or political parties. The model developed predicts individual preferences based on social connections and partial observations, aiming to make group decisions or recommendations even when some members&#39; preferences aren&#39;t known.
+
+So breaking this down, the key themes I can identify are:
+
+1. **Social Networks**: Clearly central as it&#39;s about how preferences spread within these networks.
+2. **Group Recommendations**: The article is about making recommendations for groups, not just individuals.
+3. **Preference Inference**: They developed methods to predict preferences based on available data and social ties.
+4. **Homophily**: This refers to people being similar to their friends in the network, which affects preferences.
+5. **Social Influence**: How one&#39;s actions or opinions can influence others in the network.
+6. **Rankings/Preferences as Rankings**: Preferences are modeled as rankings over options, not just binary choices.
+7. **Probabilistic Inference Methods**: They use probability-based methods for predicting preferences.
+
+I should also consider other relevant categories from the examples provided:
+
+- It&#39;s about recommendations within social networks, so maybe &#34;Recommendation Systems&#34; is a broad category that fits here.
+- The focus on group dynamics might fall under &#34;Collaborative Filtering,&#34; as it involves aggregating user data to make better recommendations.
+- Since it uses probabilistic methods, perhaps &#34;Probabilistic Methods&#34; or &#34;Inference Techniques&#34; could be applicable.
+- The model aims for accurate predictions in group settings, so &#34;Accuracy in Recommendations&#34; is relevant.
+
+I should ensure that each category is descriptive and useful. Let&#39;s see if there are other aspects I might have missed:
+
+- They mention experiments demonstrating effectiveness, which suggests an emphasis on evaluation methods. So maybe categories like &#34;Evaluation Methods&#34; or &#34;Empirical Studies&#34; would fit.
+- The problem domain here seems to be social networks themselves, so perhaps that&#39;s another category.
+
+I need to make sure these categories are both specific enough and broad enough for users to find the article when browsing. Also, considering user-centric design, potential users might search under &#34;Group Recommendations,&#34; &#34;Social Networks,&#34; or &#34;Preference Inference.&#34;
+
+Wait, I should also think about whether there&#39;s a mention of real-world applications. The abstract doesn&#39;t specify if they applied this in an actual A/B test or user survey, but it does talk about experiments, so maybe not adding specific application categories unless it&#39;s explicitly mentioned.
+
+Putting it all together, the relevant categories would include:
+
+- Social Networks: Directly related to the domain.
+- Group Recommendations: The article&#39;s main goal is group recommendation.
+- Preference Inference: Predicting preferences based on social ties.
+- Collaborative Filtering: Aggregating user preferences for recommendations.
+- Probabilistic Methods: They used probabilistic inference methods.
+- Homophily and Social Influence: Key concepts in their model.
+- Rankings/Preferences as Rankings: The way preferences are modeled.
+
+I think that covers the main points without being too specific or too broad. I should ensure there are enough categories for discoverability but also maintain clarity.
+&lt;/think&gt;
+
+Social Networks, Group Recommendations, Preference Inference, Collaborative Filtering, Probabilistic Methods, Homophily, Social Influence, Rankings/Preferences as Rankings</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

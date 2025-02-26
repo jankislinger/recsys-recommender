@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Toward 100TB Recommendation Models with Embedding Offloading
+Abstract:
+Training recommendation models become memory-bound with large embedding tables, and fast GPU memory is scarce. In this paper, we explore embedding caches and prefetch pipelines to effectively leverage large but slow host memory for embedding tables. We introduce Locality-Aware Sharding and iterative planning that automatically size caches optimally and produce effective sharding plans. Embedding Offloading, a system that combines all of these components and techniques, is implemented on top of Meta’s open-source libraries, FBGEMM GPU and TorchRec, and it is used to improve scalability and efficiency of industry-scale production models. Embedding Offloading achieved 37x model scale to 100TB model size with only 26% training speed regression.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on the guidelines provided. The title is &#34;Toward 100TB Recommendation Models with Embedding Offloading,&#34; and the abstract talks about training recommendation models becoming memory-bound because of large embedding tables. They mention using techniques like embedding caches, prefetch pipelines, Locality-Aware Sharding, iterative planning, and a system called Embedding Offloading implemented on Meta’s libraries. The result is scaling up to 100TB model size with minimal speed regression.
+
+First, I&#39;ll break down the key elements from the title and abstract. The main focus seems to be on recommendation models, specifically dealing with very large embedding tables which cause memory issues. They&#39;re using techniques to optimize this, like caching, sharding, and offloading embeddings to slower but larger host memory. The implementation is done on existing libraries, suggesting it&#39;s for production use.
+
+Looking at the examples of categories provided, I should map these elements into appropriate buckets. Starting with the family of algorithms: they mention embedding caches and prefetch pipelines, so maybe &#34;Embedding&#34; as a key category since that&#39;s central to their approach. They&#39;re working on scaling recommendation models, so &#34;Recommendation Systems&#34; is definitely relevant.
+
+The problem domain here seems to be related to system optimization for large-scale recommendation. So categories like &#34;Scalability,&#34; &#34;Memory Optimization,&#34; and &#34;System Design&#34; come to mind. The techniques used include locality-aware sharding and iterative planning; these are specific optimizations, so perhaps &#34;Sharding&#34; or &#34;Cache Management.&#34;
+
+They implemented their solution on existing libraries (FBGEMM GPU and TorchRec), indicating that it&#39;s applicable in production environments. So &#34;Production Systems,&#34; &#34;Industry Applications,&#34; and maybe &#34;Real-world Applications&#34; would fit here.
+
+The evaluation aspect mentions improving scalability and efficiency, so categories like &#34;Evaluation of Scaling,&#34; &#34;Efficiency Optimization,&#34; or &#34;Performance Analysis&#34; might be appropriate. They also mention a significant increase in model size (37x to 100TB) with minimal speed loss, which shows the impact on system performance, hence &#34;System Performance.&#34;
+
+Considering the technical aspects, they&#39;re dealing with GPU and host memory, so categories like &#34;GPU Memory,&#34; &#34;Host Memory Utilization&#34; could be specific points. The approach involves offloading embeddings, which is a form of resource management, so &#34;Resource Management&#34; makes sense.
+
+I should also think about whether there are any real-world applications or user interactions mentioned. The abstract doesn&#39;t specify A/B tests or surveys, but it does mention production models used in industry, so maybe &#34;Production Use Cases&#34; instead.
+
+Putting this all together, I need to assign at least 8-12 categories. Let me list out the ones that stand out:
+
+1. **Recommendation Systems**: Directly related to the paper&#39;s focus.
+2. **Embedding**: Central technique used.
+3. **Scalability**: They&#39;re scaling models up significantly.
+4. **Memory Optimization**: Addressing memory constraints.
+5. **System Design**: The system Embedding Offloading is designed.
+6. **Cache Management**: Using embedding caches and prefetching.
+7. **Sharding**: Locality-aware sharding technique.
+8. **Production Systems**: Implementation on industry libraries.
+9. **Industry Applications**: Used in real production environments.
+10. **System Performance**: Impact on performance metrics.
+11. **GPU Memory**: Utilizing GPU memory effectively.
+12. **Resource Management**: Efficiently managing resources like memory.
+
+I think that covers the main points from the abstract. Each category reflects either a key technique, problem domain, aspect of evaluation, or application context related to the article.
+&lt;/think&gt;
+
+Recommendation Systems, Embedding, Scalability, Memory Optimization, System Design, Cache Management, Sharding, Production Systems, Industry Applications, System Performance, GPU Memory, Resource Management</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Learning Recommendations from User Actions in the Item-poor Insurance Domain
+Abstract:
+While personalised recommendations are successful in domains like retail, where large volumes of user feedback on items are available, the generation of automatic recommendations in data-sparse domains, like insurance purchasing, is an open problem. The insurance domain is notoriously data-sparse because the number of products is typically low (compared to retail) and they are usually purchased to last for a long time. Also, many users still prefer the telephone over the web for purchasing products, reducing the amount of web-logged user interactions. To address this, we present a recurrent neural network recommendation model that uses past user sessions as signals for learning recommendations. Learning from past user sessions allows dealing with the data scarcity of the insurance domain. Specifically, our model learns from several types of user actions that are not always associated with items, and unlike all prior session-based recommendation models, it models relationships between input sessions and a target action (purchasing insurance) that does not take place within the input sessions. Evaluation on a real-world dataset from the insurance domain (ca. 44K users, 16 items, 54K purchases, and 117K sessions) against several state-of-the-art baselines shows that our model outperforms the baselines notably. Ablation analysis shows that this is mainly due to the learning of dependencies across sessions in our model. We contribute the first ever session-based model for insurance recommendation, and make available our dataset to the research community.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article about recommendation systems in the insurance domain. Let me break it down step by step.
+
+First, looking at the title: &#34;Learning Recommendations from User Actions in the Item-poor Insurance Domain.&#34; The key terms here are &#34;recommendation,&#34; &#34;user actions,&#34; and &#34;insurance domain.&#34; So I know this is related to recommendation algorithms applied specifically to insurance, which is a data-scarce environment compared to retail.
+
+The abstract mentions that personalized recommendations work well in domains with lots of user feedback but struggle in sparse domains like insurance. They use a recurrent neural network model to handle past user sessions as signals for recommendations. It&#39;s session-based and models relationships between input sessions and target actions, like purchasing insurance, which don&#39;t occur within the same session.
+
+They evaluated it on a real-world dataset with 44K users, 16 items, etc., showing their model outperforms baselines. They also did an ablation analysis to find that cross-session dependencies are key.
+
+So, categorizing this:
+
+1. **Recurrent Neural Networks (RNNs):** The article uses RNNs for recommendations.
+2. **Session-Based Recommendations:** Focuses on using user sessions for recommendations.
+3. **Insurance Domain:** Specific application in insurance.
+4. **Data-Sparse Domains:** Deals with low data availability.
+5. **User Actions:** Relies on user actions as signals.
+6. **Cross-Session Dependencies:** Model relationships across different sessions.
+7. **Real-World Applications:** They used a real dataset and provided the dataset for research.
+8. **Recommendation Algorithms:** General category about recommendation methods.
+
+Wait, should I include &#34;Recurrent Neural Networks&#34; or just &#34;Neural Networks&#34;? The article specifically mentions RNNs, so including both might help, but per guidelines, maybe just more specific.
+
+Also, they mention it&#39;s a session-based model that doesn&#39;t have the target action within the input sessions. So categories like &#34;Cross-Session Dependencies&#34; make sense.
+
+Additionally, they talk about evaluating against state-of-the-art models and contributing to insurance recommendations, so &#34;Insurance Domain&#34; is important.
+
+I should also consider aspects of evaluation. They did an ablation analysis, which relates to model evaluation. Maybe include that as a category.
+
+Wait, the categories mentioned in guidelines include aspects like family of algorithms (RNNs), domain (insurance), recommendation space specifics (session-based, cross-session), evaluation aspects (ablation analysis, real-world applications).
+
+So compiling all these points:
+
+- RNNs
+- Session-Based Recommendations
+- Insurance Domain
+- Data-Sparse Domains
+- User Actions
+- Cross-Session Dependencies
+- Real-World Applications
+- Recommendation Algorithms
+
+I think that covers the main categories accurately without creating too many niche ones. Maybe I can add &#34;Data Scarcity&#34; as another category to emphasize the challenge addressed.
+
+Alternatively, since it&#39;s about handling sparse data in insurance, &#34;Insurance Domain&#34; and &#34;Data-Sparse Domains&#34; might be redundant. But each captures a different aspect: one is the application area, the other is the problem tackled.
+
+I should ensure that each article goes into at least 8-12 categories. So I have:
+
+1. Recurrent Neural Networks
+2. Session-Based Recommendations
+3. Insurance Domain
+4. Data-Sparse Domains
+5. User Actions as Signals
+6. Cross-Session Dependencies
+7. Real-World Applications
+8. Ablation Analysis (as part of evaluation)
+9. Recommendation Algorithms
+
+Maybe also include &#34;Model Evaluation&#34; since they did an ablation study.
+
+Alternatively, perhaps &#34;Insurance Domain,&#34; &#34;Recommendation Systems,&#34; and &#34;Data Scarcity&#34; are primary categories. Adding the specifics like session-based and user actions would be secondary.
+
+I think I have enough categories now to cover all aspects without overcomplicating.
+&lt;/think&gt;
+
+Recurrent Neural Networks, Session-Based Recommendations, Insurance Domain, Data-Sparse Domains, User Actions as Signals, Cross-Session Dependencies, Real-World Applications, Ablation Analysis, Recommendation Algorithms, Model Evaluation.</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

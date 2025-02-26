@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: ParsRec: A Meta-Learning Recommender System for Bibliographic Reference Parsing Tools
+Abstract:
+Bibliographic reference parsers extract metadata (e.g. author names, title, year) from bibliographic reference strings. No reference parser consistently gives the best results in every scenario. For instance, one tool may be best in extracting titles, and another tool in extracting author names. In this paper, we address the problem of reference parsing from a recommender-systems perspective. We propose ParsRec, a meta-learning approach that recommends the potentially best parser(s) for a given reference string. We evaluate ParsRec on 105k references from chemistry. We propose two approaches to meta-learning recommendations. The first approach learns the best parser for an entire reference string. The second approach learns the best parser for each field of a reference string. The second approach achieved a 2.6% increase in F1 (0.909 vs. 0.886, p &lt; 0.001) over the best single parser (GROBID), reducing the false positive rate by 20.2% (0.075 vs. 0.094), and the false negative rate by 18.9% (0.107 vs. 0.132).
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its content. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;ParsRec: A Meta-Learning Recommender System for Bibliographic Reference Parsing Tools.&#34; From the title alone, I can tell that it&#39;s about a recommender system, specifically using meta-learning, applied to bibliographic reference parsing tools. 
+
+Looking at the abstract, it explains that reference parsers extract metadata like author names, titles, and years from reference strings. The problem is that no single parser works best in every scenario, so ParsRec uses meta-learning to recommend the best parser(s) for a given reference string. They tested this approach on 105k references in chemistry, using two methods: one recommending the best parser for the entire reference and another for each field within the reference.
+
+The results show that the second approach improved F1 score by 2.6%, reduced false positives by 20.2%, and false negatives by 18.9%. This indicates it&#39;s a significant improvement over existing methods like GROBID.
+
+Now, thinking about how to categorize this article:
+
+1. **Recommender Systems**: Since the core of the paper is building a recommender system for parsers.
+2. **Meta-Learning**: The approach uses meta-learning techniques to make recommendations.
+3. **Bibliographic Parsing**: Focuses on parsing bibliographic references, so this is a key domain category.
+4. **Natural Language Processing (NLP)**: Because it involves processing text strings and extracting metadata, which falls under NLP tasks.
+5. **Evaluation Metrics**: Discusses F1 score, false positives/negatives, so evaluation is important here.
+6. **Chemistry Domain**: They tested on references from chemistry, so this is a specific domain application.
+7. **Multi-Model Recommendations**: Recommending the best parser(s), which involves multiple models.
+8. **False Positive Rate, False Negative Rate**: These are specific metrics mentioned in their results, so they should be included.
+9. **Scalability**: The system was tested on 105k references, implying it&#39;s scalable.
+10. **Data Mining**: Extracting metadata from text is a data mining task.
+11. **Bibliography Management**: Since it deals with bibliographic references and their parsing.
+12. **Research Tools**: The application is for improving research tools used in bibliography management.
+
+I should ensure that each category is relevant and aligns with the content. I&#39;m avoiding overly specific terms that might not be widely recognized, aiming instead for categories that users would likely search under or find useful for navigation. Also, ensuring a good balance so no category becomes too crowded or too sparse.
+&lt;/think&gt;
+
+Recommender Systems, Meta-Learning, Bibliographic Parsing, Natural Language Processing (NLP), Evaluation Metrics, Chemistry Domain, Multi-Model Recommendations, False Positive Rate, False Negative Rate, Scalability, Data Mining, Bibliography Management, Research Tools.</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: ParsRec: A Meta-Learning Recommender System for Bibliographic Reference Parsing Tools
+Abstract:
+Bibliographic reference parsers extract metadata (e.g. author names, title, year) from bibliographic reference strings. No reference parser consistently gives the best results in every scenario. For instance, one tool may be best in extracting titles, and another tool in extracting author names. In this paper, we address the problem of reference parsing from a recommender-systems perspective. We propose ParsRec, a meta-learning approach that recommends the potentially best parser(s) for a given reference string. We evaluate ParsRec on 105k references from chemistry. We propose two approaches to meta-learning recommendations. The first approach learns the best parser for an entire reference string. The second approach learns the best parser for each field of a reference string. The second approach achieved a 2.6% increase in F1 (0.909 vs. 0.886, p &lt; 0.001) over the best single parser (GROBID), reducing the false positive rate by 20.2% (0.075 vs. 0.094), and the false negative rate by 18.9% (0.107 vs. 0.132).
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m looking at this research article titled &#34;ParsRec: A Meta-Learning Recommender System for Bibliographic Reference Parsing Tools.&#34; The abstract talks about using a meta-learning approach to recommend the best parsers for bibliographic references. Let me break down what&#39;s going on here.
+
+First off, the main goal is improving how we parse bibliographic data—things like authors, titles, years from reference strings. They mention that different tools are better at extracting specific parts, so their system, ParsRec, recommends the best tool or combination for each reference string.
+
+Looking at the categories I need to assign:
+
+1. **Recommender Systems**: This is core because they&#39;re directly working on a recommendation system.
+2. **Meta-Learning**: They use meta-learning to train their model, which is a big part of their approach.
+3. **Bibliographic Parsing**: The application is specific to parsing references, so this category makes sense.
+4. **NLP (Natural Language Processing)**: Since it&#39;s about extracting information from text, NLP is definitely involved.
+5. **Evaluation Metrics**: They mention F1 scores and other metrics like false positive and negative rates, so evaluation is key here.
+6. **Multi-Task Learning**: The system handles different parsing tasks (like titles vs. authors), which points to multi-task learning.
+7. **Applications in Research/Science**: The example given uses chemistry references, indicating it&#39;s applied in scientific research.
+
+I&#39;m thinking about whether there are other relevant categories. Maybe something like &#34;Personalization&#34; if the recommendation is tailored to specific users, but the abstract doesn&#39;t mention that. It seems more general. Also, maybe &#34;Efficiency&#34; or &#34;Scalability,&#34; but those aren&#39;t explicitly mentioned either.
+
+So sticking with the main points: Recommender Systems, Meta-Learning, their application in Bibliographic Parsing, NLP techniques, Evaluation Metrics used, Multi-Task Learning approach, and its use case in Research/Science.
+&lt;/think&gt;
+
+Recommender Systems, Meta-Learning, Bibliographic Parsing, Natural Language Processing, Evaluation Metrics, Multi-Task Learning, Applications in Research/Science</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

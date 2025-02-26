@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Creating the next generation of news experience on ekstrabladet.dk with recommender systems
+Abstract:
+With the uptake of algorithmic personalization, news organizations have to increasingly trust automated systems with previously considered editorial values, e.g., prioritizing news to readers. In the case study carried out by Ekstra Bladet, the Platform Intelligent News project demonstrates how recommender systems successfully enhanced the click-through rates (CTR) for multiple segments at ekstrabladet.dk while still prioritizing the news organization’s editorial values.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about Ekstra Bladet&#39;s use of recommender systems in their news platform. The title mentions &#34;next generation of news experience&#34; and using recommender systems, so right away I can think of categories related to Recommender Systems and News.
+
+The abstract talks about algorithmic personalization and how they enhanced click-through rates (CTR) while keeping editorial values. So Personalization seems relevant here. Click-Through Rate is also a specific metric, so that should be its own category.
+
+They mention the Platform Intelligent News project as a case study, which suggests Case Studies. This was applied in real-world scenarios with A/B tests and user surveys, so Real World Applications makes sense. The implementation involved technical aspects of news delivery, so maybe Web Systems or something similar.
+
+Editorial Values is another key point because they balanced automation with maintaining their values. Click-Through Rate again comes up, which I already noted. Trust in automated systems could be a separate category, maybe Trust in AI or Automation.
+
+The domain here is clearly News. They used real user data and feedback, so User Feedback is important. The project was applied to ekstrabladet.dk, a specific website, so Website Implementation might fit, though I&#39;m not sure if that&#39;s too specific.
+
+So putting it all together: Recommender Systems, News, Personalization, Case Study, Click-Through Rate, Real World Applications, Platform Implementation (or Web Systems), Editorial Values, Trust in Automation, and User Feedback. Maybe some others like Algorithmic Personalization could be included but I think the initial list covers the main points.
+&lt;/think&gt;
+
+Recommender Systems, News, Personalization, Case Study, Click-Through Rate, Real World Applications, Platform Implementation, Editorial Values, Trust in Automation, User Feedback</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Creating the next generation of news experience on ekstrabladet.dk with recommender systems
+Abstract:
+With the uptake of algorithmic personalization, news organizations have to increasingly trust automated systems with previously considered editorial values, e.g., prioritizing news to readers. In the case study carried out by Ekstra Bladet, the Platform Intelligent News project demonstrates how recommender systems successfully enhanced the click-through rates (CTR) for multiple segments at ekstrabladet.dk while still prioritizing the news organization’s editorial values.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article. The title mentions &#34;news experience&#34; and &#34;recommender systems,&#34; so that&#39;s a key point. Let me look at the abstract.
+
+The article talks about how Ekstra Bladet used recommender systems to enhance click-through rates across multiple segments while maintaining editorial values. So, it&#39;s definitely related to news recommendation. 
+
+Recommender Systems is the primary category here. Since they&#39;re applying this in a news context, News Recommendation is another. They mention algorithmic personalization, which ties into Algorithmic Personalization as a category.
+
+The project focuses on improving user engagement, so User Engagement should be included. Click-Through Rate (CTR) is explicitly mentioned, making that another relevant category.
+
+They talk about maintaining editorial values in the context of personalization, which points to Editorial Values. Ethical Considerations might also come into play with algorithmic decisions affecting content prioritization.
+
+Balancing Personalization and Ethics is a theme here because they&#39;re using automated systems while still considering editorial standards. This leads me to add both Editorial Values and maybe something like Media Ethics or Ethical Considerations, but since the guidelines suggest specific terms, I&#39;ll stick with Editorial Values for now.
+
+The case study aspect means it&#39;s a Case Study in Recommender Systems. They mention multiple segments, which might relate to Segment-Based Recommendations, so that could be another category.
+
+I should ensure each article goes into 8-12 categories without overcrowding any single one. Let me make sure I&#39;m covering all aspects mentioned: recommender systems, news, personalization, user engagement, CTR, editorial values, and the case study nature.
+
+So, compiling all these thoughts, the categories would be:
+
+Recommender Systems, News Recommendation, Algorithmic Personalization, User Engagement, Click-Through Rate (CTR), Editorial Values, Case Study in Recommender Systems, Segment-Based Recommendations.
+
+I think that&#39;s 8 categories. They seem relevant and cover different angles of the article.
+&lt;/think&gt;
+
+Recommender Systems, News Recommendation, Algorithmic Personalization, User Engagement, Click-Through Rate (CTR), Editorial Values, Case Study in Recommender Systems, Segment-Based Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

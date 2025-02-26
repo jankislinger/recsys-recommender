@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Optimizing Podcast Discovery: Unveiling Amazon Music’s Retrieval and Ranking Framework
+Abstract:
+This work presents the search architecture of Amazon Music, which is a highly efficient system designed to retrieve relevant content for users. The architecture consists of three key stages: indexing, retrieval, and ranking. During the indexing stage, data is meticulously parsed and processed to create a comprehensive index that contains dense representations and essential information about each document (such as a music or podcast entity) in the collection, including its title, metadata, and relevant attributes. This indexing process enables fast and efficient data access during retrieval. The retrieval stage utilizes multi-faceted retrieval strategies, resulting in improved identification of candidate matches compared to traditional structured search methods. Subsequently, candidates are ranked based on their relevance to the customer’s query, taking into account document features and personalized factors. With a specific focus on the podcast use case, this paper highlights the deployment of the architecture and demonstrates its effectiveness in enhancing podcast search capabilities, providing tailored and engaging content experiences.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about Amazon Music&#39;s retrieval and ranking framework for podcasts. Let me break it down step by step.
+
+First, looking at the title: &#34;Optimizing Podcast Discovery: Unveiling Amazon Music’s Retrieval and Ranking Framework.&#34; So the main focus is on optimizing how users discover podcasts through a search system.
+
+The abstract mentions three key stages in their architecture: indexing, retrieval, and ranking. Indexing involves creating a comprehensive index with dense representations and metadata. Retrieval uses multi-faceted strategies to find candidates better than traditional methods. Ranking then sorts these based on relevance and personalization.
+
+So I need to map this into relevant categories. Let&#39;s see the guidelines suggest multiple categories like algorithm families, problem domains, specific recommendation aspects, evaluation aspects, real-world applications, etc.
+
+Starting with algorithm families: They talk about retrieval strategies and ranking systems. Retrieval could fall under Information Retrieval or maybe something more specific like Search Algorithms. Ranking might relate to Recommender Systems since it&#39;s about relevance and personalization.
+
+Domain of the problem is definitely Podcasts, as that&#39;s their focus. Also, it&#39;s part of a larger system in Music, so both categories make sense.
+
+In terms of recommendation aspects, they mention personalized factors, so Personalized Recommendations is relevant. They also discuss improving search capabilities to enhance user experience, which ties into User Experience.
+
+Evaluation-wise, they talk about the effectiveness and real-world deployment, so Real-World Applications is a good fit. Also, since it&#39;s Amazon Music, this could be part of Web Systems or E-commerce, but maybe more specific to Digital Media Platforms.
+
+They deploy this architecture, so A/B Testing might not be explicitly mentioned, but deployment in production suggests it&#39;s been tested and applied, so Real-World Applications covers that.
+
+Looking at the example categories: Family of algorithm (like Retrieval Algorithms), Domain (Podcasts, Music), Recommendation aspects (Personalized Recommendations), Evaluation aspects (Real-World Applications), and maybe something about User Experience since they&#39;re enhancing engagement.
+
+Wait, does it touch on Cold Start? Not explicitly mentioned. They focus more on retrieval and ranking rather than handling new users or items. So probably not necessary to include that.
+
+Also, the indexing process involves dense representations which might relate to Machine Learning techniques, but unless specified, maybe not necessary here.
+
+So compiling all this: Retrieval Algorithms (for the multi-faceted strategies), Ranking Systems (since they rank candidates), Recommender Systems (as it&#39;s a recommendation aspect), Information Retrieval (broader category encompassing retrieval methods), Personalized Recommendations, Podcasts as the domain, Music as another domain, Search Algorithms (a subset of information retrieval), Real-World Applications for deployment effectiveness, and User Experience since it&#39;s about enhancing user engagement.
+
+I think that covers 10 categories. Maybe I can add more like Content Discovery or something related to how users find content, but perhaps that&#39;s covered under Recommender Systems.
+
+Alternatively, maybe Web Systems as it&#39;s part of a large-scale system like Amazon Music. So that could be another category. That would make it 11.
+
+Wait, should I include both Podcasts and Music? Yes, because the work is specifically about podcasts within the music platform.
+
+So final list: Retrieval Algorithms, Ranking Systems, Recommender Systems, Information Retrieval, Personalized Recommendations, Podcasts, Music, Search Algorithms, Real-World Applications, Web Systems, Content Discovery. Hmm, that&#39;s 11 categories. Maybe that&#39;s enough.
+&lt;/think&gt;
+
+Retrieval Algorithms, Ranking Systems, Recommender Systems, Information Retrieval, Personalized Recommendations, Podcasts, Music, Search Algorithms, Real-World Applications, Web Systems, Content Discovery</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Optimizing Podcast Discovery: Unveiling Amazon Music’s Retrieval and Ranking Framework
+Abstract:
+This work presents the search architecture of Amazon Music, which is a highly efficient system designed to retrieve relevant content for users. The architecture consists of three key stages: indexing, retrieval, and ranking. During the indexing stage, data is meticulously parsed and processed to create a comprehensive index that contains dense representations and essential information about each document (such as a music or podcast entity) in the collection, including its title, metadata, and relevant attributes. This indexing process enables fast and efficient data access during retrieval. The retrieval stage utilizes multi-faceted retrieval strategies, resulting in improved identification of candidate matches compared to traditional structured search methods. Subsequently, candidates are ranked based on their relevance to the customer’s query, taking into account document features and personalized factors. With a specific focus on the podcast use case, this paper highlights the deployment of the architecture and demonstrates its effectiveness in enhancing podcast search capabilities, providing tailored and engaging content experiences.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about Amazon Music&#39;s retrieval and ranking framework for podcasts. Let me start by reading the title and abstract carefully.
+
+The title mentions optimizing podcast discovery and focuses on the retrieval and ranking framework. So, it&#39;s definitely related to recommendation systems or information retrieval in music services.
+
+Looking at the abstract, the system has three stages: indexing, retrieval, and ranking. Indexing involves creating a comprehensive index with dense representations and metadata. Retrieval uses multi-faceted strategies, which might include different algorithms or approaches. Ranking considers relevance based on document features and personalization.
+
+Key terms here are indexing, retrieval, ranking, podcasts, search architecture, and efficient systems. Since it&#39;s about Amazon Music, the domain is music and audio streaming. The focus is on improving podcast discovery, so podcasting as a specific category makes sense.
+
+I should also consider if there are any specific aspects like scalability or real-world applications. The paper mentions deployment and effectiveness in enhancing search capabilities, which suggests real-world application and possibly scalability since it&#39;s used by a large service like Amazon Music.
+
+Other possible categories might include personalized recommendations because the ranking stage considers personalized factors. Also, retrieval strategies could fall under information retrieval techniques or recommendation algorithms.
+
+Let me think about the existing categories provided as examples: things like algorithm families (Matrix Factorization, etc.), domains like Books/Movies/Healthcare, specific recommendation aspects (Cold Start), evaluation metrics, real-world applications (A/B Test).
+
+So, for this article:
+
+1. **Recommendation Systems**: It&#39;s about optimizing content delivery to users.
+2. **Search and Retrieval**: The core of the system is retrieval architecture.
+3. **Indexing**: A key part of their framework.
+4. **Ranking**: They talk a lot about how candidates are ranked.
+5. **Podcasting**: Specific focus on podcasts.
+6. **Music Streaming**: Since it&#39;s Amazon Music, this is relevant.
+7. **Personalization**: The ranking considers personalized factors.
+8. **Real-World Applications**: It discusses deployment and effectiveness.
+9. **Scalability**: Efficient systems often imply scalability.
+
+I should ensure each category is clear and useful. Maybe also check if there are any other specific aspects like multi-faceted retrieval strategies, but perhaps that&#39;s too detailed unless it&#39;s a known category. I think the main ones would be the above nine.
+&lt;/think&gt;
+
+Recommendation Systems, Search and Retrieval, Indexing, Ranking, Podcasting, Music Streaming, Personalization, Real-World Applications, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

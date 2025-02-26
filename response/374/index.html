@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Efficient Online Recommendation via Low-Rank Ensemble Sampling
+Abstract:
+The low-rank structure is one of the most prominent features in modern recommendation problems. In this paper, we consider an online learning problem with a low-rank expected reward matrix where both row features and column features are unknown a priori, and the agent aims to learn to choose the best row-column pair (i.e. the maximum entry) in the matrix. We develop a novel online recommendation algorithm based on ensemble sampling, a recently developed computationally efficient approximation of Thompson sampling. Our computational results show that our algorithm consistently achieves order-of-magnitude improvements over the baselines in both synthetic and real-world experiments.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about online recommendations using low-rank ensemble sampling. Let me go through it step by step.
+
+First, looking at the title: &#34;Efficient Online Recommendation via Low-Rank Ensemble Sampling.&#34; The key terms here are &#34;online recommendation,&#34; &#34;low-rank,&#34; and &#34;ensemble sampling.&#34;
+
+The abstract mentions that they&#39;re dealing with an online learning problem where both row and column features are unknown. They use a low-rank expected reward matrix, which suggests the family of algorithms used might involve Matrix Factorization since low-rank structures are common there.
+
+They developed an algorithm based on ensemble sampling, which is a type of Thompson sampling approximation. So that&#39;s another category: Thompson Sampling.
+
+The problem domain here seems to be general recommendations, so &#34;Recommendation Systems&#34; would be a primary category. Since it&#39;s about online learning and adapting in real-time, &#34;Online Learning&#34; fits too.
+
+Looking at the aspects of evaluation mentioned, they talk about performance improvements over baselines, but I don&#39;t see specific metrics like diversity or accuracy mentioned, so maybe &#34;Beyond Accuracy&#34; isn&#39;t applicable here. Instead, focusing on efficiency and scalability makes sense because their algorithm achieves order-of-magnitude improvements computationally.
+
+They mention both synthetic and real-world experiments, which ties into &#34;Real-World Applications.&#34; The approach they take with unknown features could fall under &#34;Cold Start&#34; problems in recommendations, where there&#39;s little prior information about users or items.
+
+The paper also touches on matrix structure, specifically low-rank matrices, so that&#39;s another category. Additionally, the use of sampling methods points towards &#34;Sampling Methods.&#34;
+
+Putting it all together, the categories should include both specific and broader terms to ensure discoverability. I&#39;ll list them out: Matrix Factorization (from the low-rank structure), Thompson Sampling, Ensemble Methods (since they used ensemble sampling), Online Learning, Recommendation Systems as the main domain, Real-World Applications because of their experiments, Scalability since efficiency is a key point, Cold Start due to unknown features, Matrix Structure from the matrix setup, and Sampling Methods for the technique used.
+
+I think that covers all relevant aspects without being too specific or broad. Let me check if there are any other terms I missed. The abstract doesn&#39;t mention multi-armed bandits explicitly, but it&#39;s related to online learning with unknown rewards, so maybe that could be another category? Alternatively, focusing on the given example categories, maybe sticking to the ones listed is better for consistency.
+
+Yes, I&#39;ll stick with the initial list.
+&lt;/think&gt;
+
+Matrix Factorization, Thompson Sampling, Ensemble Methods, Online Learning, Recommendation Systems, Real-World Applications, Scalability, Cold Start, Matrix Structure, Sampling Methods</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

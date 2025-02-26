@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommending Learning Materials to Students by Identifying their Knowledge Gaps
+Abstract:
+We propose a new content-based method of providing recommendations of educational materials to the students by identifying gaps in their knowledge of the subject matter in the courses they take. We experimentally validate our method by conducting an A/B test on the students from an online university.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article about recommending learning materials based on the user&#39;s guidelines. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;Recommending Learning Materials to Students by Identifying their Knowledge Gaps.&#34; So it&#39;s focused on recommendation systems in education. The method used is content-based, which immediately tells me one category should be Content-Based Recommendations.
+
+Looking at the abstract, they mention conducting an A/B test with students from an online university. That means real-world application and testing, so categories like Real-World Application and A/B Testing are relevant.
+
+The domain here is clearly Education, so that&#39;s another category. The problem involves identifying knowledge gaps in students&#39; learning materials, which relates to Educational Technology or EdTech as a field.
+
+The article talks about experimenting with recommendations based on content analysis of educational materials. So Experimental Methods makes sense because they&#39;re testing their approach.
+
+Cold Start is a term I&#39;ve heard before in recommendation systems; it refers to the challenge when there&#39;s little data about users or items. The method here might address this by focusing on knowledge gaps rather than user behavior, so Cold Start seems applicable.
+
+In terms of evaluation aspects, beyond just accuracy, they&#39;re looking at how well their recommendations fill knowledge gaps and potentially improve learning outcomes. So Beyond Accuracy is a good fit.
+
+They also mention conducting an experiment with students from an online university, which suggests that the findings are applicable in Online Learning environments. Therefore, Online Learning should be included.
+
+Finally, since it&#39;s all about helping students by identifying what they don&#39;t know yet, Personalized Learning makes sense as a category because the recommendations are tailored to individual knowledge gaps.
+
+Putting it all together: I&#39;ll list these categories ensuring each is relevant and aligns with the article&#39;s focus. Each category should help users find this article when exploring similar topics or methods.
+&lt;/think&gt;
+
+Content-Based Recommendations, Education, Educational Technology (EdTech), Knowledge Gaps, A/B Testing, Experimental Methods, Real-World Application, Cold Start, Beyond Accuracy, Online Learning, Personalized Learning</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

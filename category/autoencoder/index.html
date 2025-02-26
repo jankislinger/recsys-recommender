@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/explainability/">Explainability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Scalable Linear Shallow Autoencoder for Collaborative Filtering (2022)</h3>
+    <p><strong>Authors:</strong> Vojtěch Vančura, Petr Kasalicky, Pavel Kordík, Rodrigo Alves</p>
+    <p>Recently, the RS research community has witnessed a surge in popularity for shallow autoencoder-based CF methods. Due to its straightforward implementation and high accuracy on item retrieval metrics, EASE is potentially the most prominent of these models. Despite its accuracy and simplicity, EASE cannot be employed in some real-world recommender system applications due to its inability to scale to huge interaction matrices. In this paper, we proposed ELSA, a scalable shallow autoencoder method for implicit feedback recommenders. ELSA is a scalable autoencoder in which the hidden layer is factorizable into a low-rank plus sparse structure, thereby drastically lowering memory consumption and computation time. We conducted a comprehensive offline experimental section that combined synthetic and several real-world datasets. We also validated our strategy in an online setting by comparing ELSA to baselines in a live recommender system using an A/B test. Experiments demonstrate that ELSA is scalable and has competitive performance. Finally, we demonstrate the explainability of ELSA by illustrating the recovered latent space.</p>
+    <p><strong>Categories:</strong> Scalable Linear Shallow Autoencoder, Collaborative Filtering, Recommender Systems, Matrix Factorization, Implicit Feedback, Autoencoder, Offline Evaluation, Online Evaluation, Scalability, Explainability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/796/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Learning Dynamic Insurance Recommendations from Users’ Click Sessions (2021)</h3>
+    <p><strong>Authors:</strong> Simone Borg Bruun</p>
+    <p>While personalised recommendations have been most successful in domains like retail due to large volume of users’ feedback on items, it is challenging to implement traditional recommender systems into the insurance domain where such prior information is very small in volume. This work addresses the problem of sparse feedback by studying users’ click sessions as signals for learning insurance recommendations. Our preliminary results show limitations in representing click sessions by manually engineered features. The proposed framework uses an autoencoder approach to automatically learns representation of sessions, then a neural network approach to model dependencies across sessions that can be used to predict recommendations. Thereby, it is further able to capture users’ dynamic needs of insurance products evolving over time.</p>
+    <p><strong>Categories:</strong> Insurance, Personalization, Clickstream Analysis, Implicit Feedback, Neural Networks, Recommendation Algorithms, Dynamic Recommendations, Domain-Specific Models, Feature Engineering, Autoencoder, Temporal Aspects (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/715/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>TAFA: Two-headed Attention Fused Autoencoder for Context-Aware Recommendations (2020)</h3>
+    <p><strong>Authors:</strong> Jin Peng Zhou, Felipe Perez, Maksims Volkovs, Zhaoyue Cheng</p>
+    <p>Collaborative filtering with implicit feedback is a ubiquitous class of recommendation problems where only positive interactions such as purchases or clicks are observed. Autoencoder-based recommendation models have shown strong performance on many implicit feedback benchmarks. However, these models tend to suffer from popularity bias making recommendations less personalized. User-generated reviews contain a rich source of preference information, often with specific details that are important to each user, and can help mitigate the popularity bias. Since not all reviews are equally useful, existing work has been exploring various forms of attention to distill relevant information. In the majority of proposed approaches, representations from implicit feedback and review branches are simply concatenated at the end to generate predictions. This can prevent the model from learning deeper correlations between the two modalities and affect prediction accuracy. To address these problems, we propose a novel Two-headed Attention Fused Autoencoder (TAFA) model that jointly learns representations from user reviews and implicit feedback to make recommendations. We apply early and late modality fusion which allows the model to fully correlate and extract relevant information from both input sources. To further combat popularity bias, we leverage the Noise Contrastive Estimation (NCE) objective to “de-popularize” the fused user representation via a two-headed decoder architecture. Empirically, we show that TAFA outperforms leading baselines on multiple real-world benchmarks. Moreover, by tracing attention weights back to reviews we can provide explanations for the generated recommendations and gain further insights into user preferences. Full code for this work is available here: https://github.com/layer6ai-labs/TAFA.</p>
+    <p><strong>Categories:</strong> Collaborative Filtering, Implicit Feedback, Autoencoder, Popularity Bias, User Reviews, Attention Mechanisms, Early and Late Fusion, Noise Contrastive Estimation (NCE), Real-World Applications, Interpretability/Explainability, Recommendation Systems, Context-Aware Recommendations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/555/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Performance of Hyperbolic Geometry Models in Top-N Recommendation Tasks (2020)</h3>
+    <p><strong>Authors:</strong> Alexander Tuzhilin, Evgeny Frolov, Leyla Mirvakhabova, Valentin Khrulkov, Ivan Oseledets</p>
+    <p>We introduce a simple autoencoder based on hyperbolic geometry for solving standard collaborative filtering problem. In contrast to many modern deep learning techniques, we build our solution using only a single hidden layer. Remarkably, even with such a minimalistic approach, we not only outperform the Euclidean counterpart but also achieve a competitive performance with respect to the current state-of-the-art. We additionally explore the effects of space curvature on the quality of hyperbolic models and propose an efficient data-driven method for estimating its optimal value.</p>
+    <p><strong>Categories:</strong> Hyperbolic Geometry, Recommendation Systems, Collaborative Filtering, Autoencoder, Deep Learning Techniques, Top-N Recommendations, Algorithm Performance, Space Curvature, Optimization Methods, Performance Evaluation, Matrix Factorization, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/580/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>PQ-VAE: Efficient Recommendation Using Quantized Embeddings (2019)</h3>
+    <p><strong>Authors:</strong> Mark Levy, Jan Van Balen</p>
+    <p>Large neural recommendation models can be a challenge to deploy at scale. For recommendation services with a large number of users, the most powerful models may require an impractical amount of space to store the large dense vectors encoding each of the users’ tastes. Combining ideas from auto-encoder-based recommender systems, neural discrete representation learning (VQ-VAE), and product quantization (PQ), we propose PQ-VAE, a recommendation model that learns compact, discrete embeddings at only a small cost in accuracy.</p>
+    <p><strong>Categories:</strong> Autoencoder, Variational Autoencoder (VQ-VAE), Product Quantization, Scalability, Recommendation Systems, Model Efficiency, Embedding Techniques, Space Optimization (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/522/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Deep Auto-Encoding for Context-Aware Inference of Preferred Items’ Categories (2016)</h3>
+    <p><strong>Authors:</strong> Moshe Unger, Lior Rokach, Bracha Shapira, Ariel Bar</p>
+    <p>Context-aware systems enable the sensing and analysis of user context in order to provide personalized services to users. We observed that it is possible to automatically learn contextual factors and behavioral patterns when users interact with the system. We later utilize the learned patterns to infer contextual user interests within a recommender system. We present a novel context-aware model for detecting users’ preferred items’ categories using an unsupervised deep learning technique applied to mobile sensor data. We train an auto-encoder for each item genre, using contextual data that was obtained when users interacted with the system. Given new contextual sensor data from a user, the discovered patterns from each auto-encoder are used to predict the category of items that should be recommended to the user in the given context. In order to collect rich contextual data, we conducted an extensive field study over a period of four weeks with a group of ninety users. The analysis reveals significant insights regarding the inference of different granularity levels of categories that are available within the data.</p>
+    <p><strong>Categories:</strong> Autoencoder, Deep Learning, Unsupervised Learning, Context-Aware Recommendations, User Preference Inference, Mobile Systems, Recommender Systems, Real-World Applications, Beyond Accuracy, Field Study (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/227/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

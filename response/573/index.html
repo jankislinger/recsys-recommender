@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Fit to Run: Personalised Recommendations for Marathon Training
+Abstract:
+Training for the marathon is a complex problem. In order to run an optimal time, runners must find the right workload for their current abilities and identify the correct balance between the hard work and rest throughout their training programmes. We propose a recommender system that will help guide runners through the weeks leading up to the marathon. Using a large sample of marathon training data (8730 runners), we generate user profiles that capture both a runner’s current fitness and training levels, and leverage this information to generate tailored recommendations for future weeks of training. We investigate patterns of successful runners to determine how best to schedule recommendations and training to allow for improvement in fitness levels alongside adequate rest.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let me start by carefully reading the title and abstract.
+
+The title is &#34;Fit to Run: Personalised Recommendations for Marathon Training.&#34; This immediately tells me that it&#39;s about personalized recommendations in the context of marathon training. The word &#34;Personalised&#34; suggests a focus on individualized advice, which is key for recommendation systems.
+
+Looking at the abstract, it mentions that training for a marathon is complex and requires finding the right workload based on current abilities. They propose a recommender system using data from 8730 runners to generate user profiles capturing fitness and training levels. The goal is to offer tailored recommendations for future weeks. They also look into patterns of successful runners to schedule recommendations that allow improvement in fitness with adequate rest.
+
+Now, I need to identify the key themes here:
+
+1. **Recommendation System**: The main focus is on creating a system that provides personalized recommendations.
+2. **Sports/Healthcare/Fitness**: The application is within marathon training, which falls under sports and health.
+3. **User Profiling**: They generate user profiles based on fitness and training data.
+4. **Personalization**: Tailored advice is central to their approach.
+5. **Data-Driven Approaches**: Using a large dataset of 8730 runners indicates a data-driven method.
+6. **Evaluation Metrics**: They investigate successful patterns, so evaluation might involve metrics like success in marathon performance or adherence to the training plan.
+
+Potential categories from these points:
+
+- Personalised Recommendations: Directly related to the title and focus.
+- Sports/Healthcare/Fitness: The domain of application.
+- User Profiling: A key component of their system.
+- Training Programs: Since it&#39;s about creating tailored training plans.
+- Data-Driven Approaches: As they use a large dataset for recommendations.
+- Evaluation Metrics: Although not explicitly stated, evaluating the success based on runner outcomes would be important.
+
+I should also consider if there are any other categories that might fit. The article doesn&#39;t mention things like cold start or scalability explicitly, so those might not apply here. However, since it&#39;s a recommendation system in a specific domain, I can stick with the identified categories.
+
+Wait, &#34;Sports&#34; is more precise than &#34;Healthcare,&#34; but both could be relevant. Maybe include both for broader reach. Also, perhaps &#34;Performance Optimization&#34; since they aim to help runners achieve optimal times. That adds another layer of specificity.
+
+Another thought: The system helps schedule training and rest periods, which ties into workload management. So maybe &#34;Workload Management&#34; as a category.
+
+Putting it all together, the categories should cover both the technical aspects (like recommendation systems, user profiling) and the application domain (sports, fitness). Also including how they evaluate their approach would be useful for users interested in evaluation methods.
+
+I think that&#39;s a solid list. Let me make sure each category is clear and descriptive as per the guidelines.
+&lt;/think&gt;
+
+Personalised Recommendations, Sports, Healthcare, Fitness, Training Programs, User Profiling, Performance Optimization, Data-Driven Approaches, Evaluation Metrics, Workload Management</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Fit to Run: Personalised Recommendations for Marathon Training
+Abstract:
+Training for the marathon is a complex problem. In order to run an optimal time, runners must find the right workload for their current abilities and identify the correct balance between the hard work and rest throughout their training programmes. We propose a recommender system that will help guide runners through the weeks leading up to the marathon. Using a large sample of marathon training data (8730 runners), we generate user profiles that capture both a runner’s current fitness and training levels, and leverage this information to generate tailored recommendations for future weeks of training. We investigate patterns of successful runners to determine how best to schedule recommendations and training to allow for improvement in fitness levels alongside adequate rest.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Fit to Run: Personalised Recommendations for Marathon Training.&#34; The abstract mentions that it&#39;s about a recommender system for marathon training, focusing on finding the right workload and balance between hard work and rest. They used data from 8730 runners to create user profiles and generate tailored recommendations.
+
+First, I should look at the key elements here. The article is in the recommendation systems field, specifically applied to marathon training. So, categories like &#34;Recommendation Systems&#34; make sense. Since it&#39;s about personalized recommendations for athletes, &#34;Personalization&#34; would fit too.
+
+The domain here is sports and physical activity, so &#34;Sports&#34; and maybe more specifically, &#34;Marathon Training.&#34; Another aspect is that they&#39;re tailoring recommendations based on user data, which points to &#34;User Profiles.&#34;
+
+They&#39;re using the data to predict and recommend training schedules, which involves predicting outcomes. So &#34;Predictive Analytics&#34; is another good category. The focus on optimizing performance ties into &#34;Performance Optimization,&#34; so that should be included.
+
+Looking at how they assess the effectiveness of recommendations, they probably looked at metrics like accuracy and other evaluation methods. &#34;Evaluation Metrics&#34; might cover aspects like diversity or beyond just accuracy, which could align with some part of their methodology.
+
+Since it&#39;s about training schedules and optimizing workout plans, &#34;Workout Planning&#34; is relevant. Additionally, real-world applications are mentioned, so categories like &#34;Real-World Applications&#34; would be appropriate.
+
+Considering all these points, the categories should include specific aspects of recommendation systems (like &#34;Personalization&#34;), the domain (&#34;Sports,&#34; &#34;Marathon Training&#34;), methods used (&#34;Predictive Analytics,&#34; &#34;User Profiles&#34;), evaluation (&#34;Evaluation Metrics&#34;), and practical applications (&#34;Workout Planning,&#34; &#34;Real-World Applications&#34;).
+
+I need to make sure each category is clear, descriptive, and that the article fits well within them. Also, ensuring that these categories are useful for users looking into recommendation systems in sports or marathon training.
+&lt;/think&gt;
+
+Personalization, Sports, Marathon Training, User Profiles, Predictive Analytics, Performance Optimization, Evaluation Metrics, Workout Planning, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

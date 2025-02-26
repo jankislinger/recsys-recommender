@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations
+Abstract:
+Many recommendation systems retrieve and score items from a very large corpus. A common recipe to handle data sparsity and power-law item distribution is to learn item representations from its content features. Apart from many content-aware systems based on matrix factorization, we consider a modeling framework using two-tower neural net, with one of the towers (item tower) encoding a wide variety of item content features. A general recipe of training such two-tower models is to optimize loss functions calculated from in-batch negatives, which are items sampled from a random mini-batch. However, in-batch loss is subject to sampling biases, potentially hurting model performance, particularly in the case of highly skewed distribution. In this paper, we present a novel algorithm for estimating item frequency from streaming data. Through theoretical analysis and simulation, we show that the proposed algorithm can work without requiring fixed item vocabulary, and is capable of producing unbiased estimation and being adaptive to item distribution change. We then apply the sampling-bias-corrected modeling approach to build a large scale neural retrieval system for YouTube recommendations. The system is deployed to retrieve personalized suggestions from a corpus with tens of millions of videos. We demonstrate the effectiveness of sampling-bias correction through offline experiments on two real-world datasets. We also conduct live A/B testings to show that the neural retrieval system leads to improved recommendation quality for YouTube.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me read through the provided information carefully.
+
+The title is &#34;Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations.&#34; The abstract talks about recommendation systems dealing with large corpora, using neural networks specifically a two-tower model, and addressing sampling biases during training. They applied this to YouTube recommendations, did A/B tests, and showed improved quality.
+
+Starting with the family of algorithms mentioned in the article: It uses neural modeling, so that&#39;s one category. Specifically, it&#39;s a two-tower architecture, which is another point. Also, since they&#39;re dealing with large datasets and streaming data, scalability might be relevant. They mention matrix factorization as a baseline, so that&#39;s another algorithm family.
+
+Next, the domain of the problem: The application is in recommendations for videos on YouTube, so video recommendations would be a category. More broadly, it falls under recommendation systems overall.
+
+Looking at specific aspects within recommendation space: They address cold start indirectly because handling large item sets and bias correction can help when items are new or have few interactions. Item representation learning is definitely relevant as they&#39;re encoding various content features in the item tower.
+
+Aspects of evaluation: The article talks about offline experiments, which means they used controlled settings to test their approach. They also did live A/B testing, so that&#39;s a real-world application and evaluation method. Additionally, the focus on unbiased estimation suggests they care about fairness or unbiased recommendations, though perhaps not in the traditional sense but more in model training.
+
+Other categories could include implicit feedback since recommendation systems often rely on user interactions rather than explicit ratings. They also discuss content-aware recommendations because they&#39;re using item features, which is different from collaborative filtering alone.
+
+Considering the problem aspects: The corpus size is large (tens of millions), so scaling to large corpora is a key point. They address sampling bias in their training method, so that&#39;s another category. Their approach involves streaming data for item frequency estimation, so real-time processing or stream processing could fit here.
+
+I should ensure each article is assigned 8-12 categories. Let me list what I have so far:
+
+1. Neural Networks (from the neural modeling)
+2. Two-Tower Architecture (specific model structure)
+3. Matrix Factorization (as a baseline method)
+4. Recommendation Systems (general domain)
+5. Video Recommendations (specific application)
+6. Item Representation Learning (encoding content features)
+7. Cold Start (indirectly through handling large item distribution)
+8. Scalability (handling large datasets)
+9. Offline Experiments (evaluation method)
+10. A/B Testing (real-world testing)
+11. Streaming Data Processing (item frequency estimation from streams)
+12. Sampling Bias Correction (their main contribution)
+
+I think these cover the key aspects. I don&#39;t see any categories that are too broad or narrow; each should have a sufficient number of articles to be useful.
+&lt;/think&gt;
+
+Neural Networks, Two-Tower Architecture, Matrix Factorization, Recommendation Systems, Video Recommendations, Item Representation Learning, Cold Start, Scalability, Offline Experiments, A/B Testing, Streaming Data Processing, Sampling Bias Correction</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: From the Lab to Production: A Case Study of Session-Based Recommendations in the Home-Improvement Domain
+Abstract:
+E-commerce applications rely heavily on session-based recommendation algorithms to improve the shopping experience of their customers. Recent progress in session-based recommendation algorithms shows great promise. However, translating that promise to real-world outcomes is a challenging task for several reasons, but mostly due to the large number and varying characteristics of the available models. In this paper, we discuss the approach and lessons learned from the process of identifying and deploying a successful session-based recommendation algorithm for a leading e-commerce application in the home-improvement domain. To this end, we initially evaluate fourteen session-based recommendation algorithms in an offline setting using eight different popular evaluation metrics on three datasets. The results indicate that offline evaluation does not provide enough insight to make an informed decision since there is no clear winning method on all metrics. Additionally, we observe that standard offline evaluation metrics fall short for this application. Specifically, they reward an algorithm only when it predicts the exact same item that the user clicked next or eventually purchased. In a practical scenario, however, there are near-identical products which, although they are assigned different identifiers, they should be considered as equally-good recommendations. To overcome these limitations, we perform an additional round of evaluation, where human experts provide both objective and subjective feedback for the recommendations of five algorithms that performed the best in the offline evaluation. We find that the experts’ opinion is oftentimes different from the offline evaluation results. Analysis of the feedback confirms that the performance of all models is significantly higher when we evaluate near-identical product recommendations as relevant. Finally, we run an A/B test with one of the models that performed the best in the human evaluation phase. The treatment model increased conversion rate by 15.6% and revenue per visit by 18.5% when compared with a leading third-party solution.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I&#39;m trying to categorize this research article based on its title and abstract. Let&#39;s see what it&#39;s about.
+
+The title is &#34;From the Lab to Production: A Case Study of Session-Based Recommendations in the Home-Improvement Domain.&#34; Okay, so it&#39;s a case study in e-commerce, specifically home improvement. The focus seems to be on session-based recommendations. 
+
+Looking at the abstract, they mention evaluating 14 algorithms offline with eight metrics across three datasets. They found that offline evaluation wasn&#39;t enough because there was no clear winner and the metrics didn&#39;t capture near-identical products as relevant. Then they did a human expert evaluation and an A/B test which showed significant improvements in conversion rates and revenue.
+
+So, first, I need to assign multiple categories according to the guidelines. Each article should go into 8-12 categories. Let&#39;s break it down.
+
+The main themes are session-based recommendations, so that&#39;s one category. It&#39;s a case study, so &#34;Case Study&#34; is another. The domain here is home improvement, which falls under e-commerce and retail, so maybe &#34;E-Commerce,&#34; &#34;Retail,&#34; and specifically &#34;Home Improvement.&#34; 
+
+They talk about translating lab research to production, so categories like &#34;Production Systems&#34; or &#34;Deployment&#34; make sense. They evaluated algorithms offline and then used human experts, so &#34;Algorithm Evaluation,&#34; &#34;Human Evaluation,&#34; and &#34;Offline Evaluation&#34; are relevant. The A/B test part means they have real-world applications, so &#34;A/B Test&#34; is another category.
+
+They also mention the limitations of standard metrics and how evaluating near-identical products as relevant made a difference, so maybe something like &#34;Evaluation Metrics Limitations.&#34; Additionally, the fact that multiple algorithms were evaluated could tie into &#34;Algorithm Comparison.&#34;
+
+Putting it all together, I think the categories should include things like Session-Based Recommendations, Case Study, E-commerce, Retail, Home Improvement, Algorithm Evaluation, Human Evaluation, A/B Test, Offline Evaluation, Production Systems, and maybe Algorithm Comparison or something about the limitations of metrics.
+
+I need to make sure each category is clear and user-friendly. Also, I shouldn&#39;t create too many categories that are too narrow unless they add significant value. Let me list them out:
+
+- Session-Based Recommendations
+- Case Study
+- E-Commerce
+- Retail
+- Home Improvement
+- Algorithm Evaluation
+- Human Evaluation
+- A/B Test
+- Offline Evaluation
+- Production Systems
+- Deployment (since it&#39;s about moving from lab to production)
+- Real-World Applications
+
+Wait, &#34;Deployment&#34; and &#34;Production Systems&#34; might overlap. Maybe just pick one or rephrase. Also, considering the guidelines, each category should be distinct but relevant.
+
+Another point: they mention near-identical products being considered as good recommendations. That&#39;s about recommendation relevance beyond exact matches, so perhaps a category like &#34;Recommendation Relevance&#34; could work, but maybe it&#39;s too specific. Alternatively, something under evaluation aspects like &#34;Beyond Accuracy.&#34;
+
+Looking at the example categories provided, one of them is &#34;Beyond Accuracy,&#34; which fits because they&#39;re looking at more than just accuracy in recommendations.
+
+So I think that covers most aspects: the type of recommendation (session-based), the application domain (home improvement, e-commerce, retail), the method used (evaluation methods like offline and human evaluation), real-world testing (A/B test), deployment into production, and evaluation beyond traditional metrics.
+
+I should avoid redundancy. For example, &#34;E-Commerce&#34; and &#34;Retail&#34; might be too similar, but since home improvement is a specific part of retail, maybe both are okay. Alternatively, combine them as &#34;E-commerce/Retail.&#34;
+
+But to keep it simple and clear, perhaps stick with separate categories if they&#39;re distinct enough.
+
+So finalizing the list:
+
+1. Session-Based Recommendations
+2. Case Study
+3. E-Commerce
+4. Retail
+5. Home Improvement
+6. Algorithm Evaluation
+7. Human Evaluation
+8. A/B Test
+9. Offline Evaluation
+10. Production Systems
+11. Deployment
+12. Beyond Accuracy
+
+Wait, but &#34;Deployment&#34; and &#34;Production Systems&#34; might be similar. Maybe pick one to avoid redundancy.
+
+Alternatively, since the article talks about moving from lab to production, &#34;Deployment&#34; is more specific than &#34;Production Systems.&#34; So perhaps &#34;Deployment&#34; covers it better.
+
+Also, considering the 8-12 categories guideline, I think that&#39;s a good number without being too overwhelming.
+&lt;/think&gt;
+
+Session-Based Recommendations, Case Study, E-commerce, Retail, Home Improvement, Algorithm Evaluation, Human Evaluation, A/B Test, Offline Evaluation, Deployment, Beyond Accuracy</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: From the Lab to Production: A Case Study of Session-Based Recommendations in the Home-Improvement Domain
+Abstract:
+E-commerce applications rely heavily on session-based recommendation algorithms to improve the shopping experience of their customers. Recent progress in session-based recommendation algorithms shows great promise. However, translating that promise to real-world outcomes is a challenging task for several reasons, but mostly due to the large number and varying characteristics of the available models. In this paper, we discuss the approach and lessons learned from the process of identifying and deploying a successful session-based recommendation algorithm for a leading e-commerce application in the home-improvement domain. To this end, we initially evaluate fourteen session-based recommendation algorithms in an offline setting using eight different popular evaluation metrics on three datasets. The results indicate that offline evaluation does not provide enough insight to make an informed decision since there is no clear winning method on all metrics. Additionally, we observe that standard offline evaluation metrics fall short for this application. Specifically, they reward an algorithm only when it predicts the exact same item that the user clicked next or eventually purchased. In a practical scenario, however, there are near-identical products which, although they are assigned different identifiers, they should be considered as equally-good recommendations. To overcome these limitations, we perform an additional round of evaluation, where human experts provide both objective and subjective feedback for the recommendations of five algorithms that performed the best in the offline evaluation. We find that the experts’ opinion is oftentimes different from the offline evaluation results. Analysis of the feedback confirms that the performance of all models is significantly higher when we evaluate near-identical product recommendations as relevant. Finally, we run an A/B test with one of the models that performed the best in the human evaluation phase. The treatment model increased conversion rate by 15.6% and revenue per visit by 18.5% when compared with a leading third-party solution.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on its title and abstract. Let me start by reading through them carefully.
+
+The title is &#34;From the Lab to Production: A Case Study of Session-Based Recommendations in the Home-Improvement Domain.&#34; So, it&#39;s about session-based recommendations applied in a real-world e-commerce setting, specifically for home improvement products.
+
+Looking at the abstract, they talk about evaluating 14 session-based recommendation algorithms using several metrics and datasets. They found that offline evaluation wasn&#39;t sufficient because no single method was best across all metrics. Then they did human evaluations with experts to get more accurate feedback, which showed that near-identical products should be considered as good recommendations. Finally, they ran an A/B test and saw significant improvements in conversion rates and revenue.
+
+Now, I need to map this to the categories provided:
+
+1. **Session-Based Recommendations**: This is clearly stated in the title.
+2. **Home Improvement Domain**: The application area is specified here.
+3. **Case Study**: They present a detailed case study of their implementation.
+4. **Algorithm Selection**: They evaluated multiple algorithms (14) and selected the best ones.
+5. **Evaluation Metrics**: They used several metrics, noting that standard ones were insufficient.
+6. **Offline Evaluation**: A significant part of their process was done offline.
+7. **Human Evaluation**: They involved experts to provide feedback beyond just metrics.
+8. **A/B Testing**: They conducted an A/B test to measure the impact in real-world settings.
+9. **Conversion Rate**: The outcome measured included conversion rate improvement.
+10. **Revenue Impact**: They also looked at revenue per visit, so this is relevant.
+
+I think these categories cover all aspects of the paper, from methodology to application and outcomes. Each category seems distinct enough but related to the content.
+&lt;/think&gt;
+
+Session-Based Recommendations, Home Improvement Domain, Case Study, Algorithm Selection, Evaluation Metrics, Offline Evaluation, Human Evaluation, A/B Testing, Conversion Rate, Revenue Impact</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

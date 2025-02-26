@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Adaptive Pointwise-Pairwise Learning-to-Rank for Content-based Personalized Recommendation
+Abstract:
+This paper extends the standard pointwise and pairwise paradigms for learning-to-rank in the context of personalized recommendation, by considering these two approaches as two extremes of a continuum of possible strategies. It basically consists of a surrogate loss that models how to select and combine these two approaches adaptively, depending on the context (query or user, pair of items, etc.). In other words, given a training instance, which is typically a triplet (a query/user and two items with different preferences or relevance grades), the strategy adaptively determines whether it is better to focus on the “most preferred” item (pointwise - positive instance), on the “less preferred” one (pointwise - negative instance) or on the pair (pairwise), or on anything else in between these 3 extreme alternatives. We formulate this adaptive strategy as minimizing a particular loss function that generalizes simultaneously the traditional pointwise and pairwise loss functions (negative log-likelihood) through a mixture coefficient. This coefficient is formulated as a learnable function of the features associated to the triplet. Experimental results on several real-world news recommendation datasets show clear improvements over several pointwise, pairwise, and listwise approaches.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to assign categories to this research article based on its title and abstract. The goal is to come up with 8-12 relevant categories that will help users find the content easily.
+
+First, looking at the title: &#34;Adaptive Pointwise-Pairwise Learning-to-Rank for Content-based Personalized Recommendation.&#34; It mentions pointwise and pairwise learning-to-rank methods, which are techniques used in ranking systems. So I should definitely include those as categories. Also, it&#39;s about personalized recommendation, so that&#39;s another key category.
+
+The abstract talks about extending standard paradigms by adaptively combining pointwise and pairwise approaches based on context, like user or query. This makes me think of adaptive methods and contextual modeling. The method uses a surrogate loss function that generalizes existing losses, so Loss Functions is relevant too.
+
+They mention training instances as triplets involving users, queries, and items with different relevance grades. That suggests it&#39;s related to Triplet Learning and Relevance Ranking. They also experiment on real-world news datasets, so News Recommendations should be included.
+
+The approach focuses on improving recommendation systems by better handling preferences, which ties into Preference Modeling. Since they&#39;re using learning-to-rank techniques, that&#39;s another category. The fact that they&#39;re looking beyond traditional methods to improve performance indicates it&#39;s about Beyond Accuracy and Evaluation Metrics in recommendations.
+
+Lastly, their work is applied in a real-world setting, specifically content-based personalization, so Content-Based Recommendation is also a fitting category.
+&lt;/think&gt;
+
+Learning-to-Rank, Personalized Recommendation, Pointwise Learning, Pairwise Learning, Adaptive Methods, Contextual Modeling, Loss Functions, Triplet Learning, News Recommendations, Relevance Ranking, Preference Modeling, Beyond Accuracy, Evaluation Metrics, Content-Based Recommendation</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Adaptive Pointwise-Pairwise Learning-to-Rank for Content-based Personalized Recommendation
+Abstract:
+This paper extends the standard pointwise and pairwise paradigms for learning-to-rank in the context of personalized recommendation, by considering these two approaches as two extremes of a continuum of possible strategies. It basically consists of a surrogate loss that models how to select and combine these two approaches adaptively, depending on the context (query or user, pair of items, etc.). In other words, given a training instance, which is typically a triplet (a query/user and two items with different preferences or relevance grades), the strategy adaptively determines whether it is better to focus on the “most preferred” item (pointwise - positive instance), on the “less preferred” one (pointwise - negative instance) or on the pair (pairwise), or on anything else in between these 3 extreme alternatives. We formulate this adaptive strategy as minimizing a particular loss function that generalizes simultaneously the traditional pointwise and pairwise loss functions (negative log-likelihood) through a mixture coefficient. This coefficient is formulated as a learnable function of the features associated to the triplet. Experimental results on several real-world news recommendation datasets show clear improvements over several pointwise, pairwise, and listwise approaches.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me start by reading through both carefully.
+
+The title is &#34;Adaptive Pointwise-Pairwise Learning- to-Rank for Content-based Personalized Recommendation.&#34; Hmm, okay, so it&#39;s about recommendation systems, specifically personalized ones that use content-based methods. The key here seems to be an adaptive approach combining pointwise and pairwise learning-to-rank techniques.
+
+Looking at the abstract: The paper extends standard pointwise and pairwise paradigms in learning-to-rank for personalized recommendations. It treats these approaches as extremes on a continuum and uses a surrogate loss function that adaptively selects and combines them based on context, like query or user, pair of items, etc. They formulate this strategy by minimizing a loss function that generalizes both pointwise and pairwise losses through a mixture coefficient, which is learned from triplet features.
+
+They tested it on real-world news recommendation datasets and found improvements over existing methods.
+
+So, now I need to map this into categories. Let&#39;s start with the obvious ones: Learning-to-Rank since that&#39;s central. Personalized Recommendation is another because it&#39;s about personalizing recommendations. Content-based Filtering is also there as it&#39;s a content-based approach.
+
+The paper combines pointwise and pairwise approaches, so Pointwise Loss and Pairwise Loss should be categories. Since they&#39;re combining these strategies adaptively, maybe Adaptive Strategies or something similar? The abstract mentions triplet features (query/user and two items), which relates to User Modeling because it involves understanding user preferences.
+
+They talk about minimizing loss functions, so Optimization Techniques is relevant. The application is in news recommendation, so News as a domain. Evaluation-wise, they compared against existing methods, but the abstract doesn&#39;t specify beyond accuracy, so maybe not specific evaluation aspects unless there&#39;s more info. 
+
+Wait, let me think again. The categories need to be 8-12, so I might have missed some. Let&#39;s see: They mention learning-to-rank in a personalized context, so Personalized Learning-to-Rank could be another category. Also, since they combine pointwise and pairwise as extremes on a continuum, maybe something like Hybrid Methods or Strategy Combination.
+
+Another angle is that the mixture coefficient is learned from features, which ties into Feature-Based Models or Feature Engineering. The approach might fall under Content-Driven Recommendations because it uses content information about items to make recommendations.
+
+Also, considering they applied this in real-world datasets, Real-World Applications could be a category, but I&#39;m not sure if that&#39;s standard. Alternatively, maybe News Recommendation as a specific domain is more precise.
+
+I think I have enough now. Let me compile the categories: Learning-to-Rank, Personalized Recommendation, Content-based Filtering, Pointwise Loss, Pairwise Loss, Adaptive Strategies, User Modeling, Optimization Techniques, News. Maybe add Hybrid Methods or Strategy Combination if needed. Wait, but looking back at the example, they listed 9 categories, so perhaps I can include more specific ones.
+
+Wait, in the example output, they had &#34;Scalability, Web Systems, Implicit Feedback,&#34; etc. So I should aim for similar specificity and relevance. Let me list what&#39;s relevant here: Learning-to-Rank is a family of algorithms. Personalized Recommendation is a domain or aspect. Content-based Filtering is another algorithm family.
+
+Pointwise Loss and Pairwise Loss are types of loss functions used in learning-to-rank, so those could be categories under aspects like Evaluation Methods or Loss Functions. Adaptive Strategies is about the approach taken in the algorithm. User Modeling relates to how user preferences are handled.
+
+Optimization Techniques because they&#39;re minimizing a loss function. News as the domain application. Maybe Cold Start if it&#39;s applicable, but I don&#39;t see that mentioned here. Alternatively, Real-World Applications since they tested on real datasets.
+
+So compiling all these into categories: Learning-to-Rank, Personalized Recommendation, Content-based Filtering, Pointwise Loss, Pairwise Loss, Adaptive Strategies, User Modeling, Optimization Techniques, News.
+&lt;/think&gt;
+
+Learning-to-Rank, Personalized Recommendation, Content-based Filtering, Pointwise Loss, Pairwise Loss, Adaptive Strategies, User Modeling, Optimization Techniques, News</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Adaptive Pointwise-Pairwise Learning-to-Rank for Content-based Personalized Recommendation
+Abstract:
+This paper extends the standard pointwise and pairwise paradigms for learning-to-rank in the context of personalized recommendation, by considering these two approaches as two extremes of a continuum of possible strategies. It basically consists of a surrogate loss that models how to select and combine these two approaches adaptively, depending on the context (query or user, pair of items, etc.). In other words, given a training instance, which is typically a triplet (a query/user and two items with different preferences or relevance grades), the strategy adaptively determines whether it is better to focus on the “most preferred” item (pointwise - positive instance), on the “less preferred” one (pointwise - negative instance) or on the pair (pairwise), or on anything else in between these 3 extreme alternatives. We formulate this adaptive strategy as minimizing a particular loss function that generalizes simultaneously the traditional pointwise and pairwise loss functions (negative log-likelihood) through a mixture coefficient. This coefficient is formulated as a learnable function of the features associated to the triplet. Experimental results on several real-world news recommendation datasets show clear improvements over several pointwise, pairwise, and listwise approaches.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to make it user-friendly and easy to navigate.
+
+Looking at the title: &#34;Adaptive Pointwise-Pairwise Learning-to-Rank for Content-based Personalized Recommendation&#34;. It mentions learning-to-rank which falls under recommendation algorithms, specifically using pointwise and pairwise approaches. So I should include something related to ranking in recommendations.
+
+The abstract explains that it&#39;s extending standard pointwise and pairwise methods by adaptively selecting between them based on context. They introduce a surrogate loss function that combines these strategies. This seems like a novel approach in the learning-to-rank family, so maybe &#39;Learning-to-Rank&#39; is a category.
+
+They mention using triplet data (query/user and two items) to decide whether to focus on pointwise or pairwise methods. This suggests it&#39;s about personalization because it&#39;s tailored to user preferences. So &#39;Personalized Recommendations&#39; should be included.
+
+The paper also talks about experimental results on news recommendation datasets, which falls under real-world applications. Therefore, &#39;Real-World Applications&#39; is relevant.
+
+They discuss evaluating different approaches like pointwise, pairwise, and listwise. This relates to evaluation metrics in recommendations, so &#39;Evaluation Metrics&#39; is another category.
+
+Since the method adapts based on user or query context, &#39;Adaptive Algorithms&#39; seems appropriate.
+
+The approach involves combining strategies, which ties into algorithm design specifics, so perhaps a more general category like &#39;Algorithm Design&#39;.
+
+They use features associated with triplets to determine the strategy, indicating feature engineering plays a role here. So &#39;Feature Engineering&#39; could be another category.
+
+Lastly, since it&#39;s content-based recommendations (as mentioned in the title), that&#39;s a key aspect. Therefore, including &#39;Content-Based Recommendations&#39; makes sense.
+
+Wait, let me count: I have Learning-to-Rank, Personalized Recommendations, Real-World Applications, Evaluation Metrics, Adaptive Algorithms, Algorithm Design, Feature Engineering, Content-Based Recommendations. That&#39;s eight categories. The guidelines suggest 8-12, so maybe adding more if applicable.
+
+Looking again, the abstract mentions pointwise and pairwise as extremes on a continuum, which could relate to &#39;Pointwise Methods&#39; or &#39;Pairwise Methods&#39;, but those might be too specific. Alternatively, considering scalability is often important in recommendation systems, though it&#39;s not explicitly mentioned here. However, the dataset size for news recommendations might imply scalability, so adding &#39;Scalability&#39; as another category.
+
+Now I have nine categories. Let me list them again to ensure they cover various aspects without overlapping unnecessarily.
+&lt;/think&gt;
+
+Learning-to-Rank, Personalized Recommendations, Real-World Applications, Evaluation Metrics, Adaptive Algorithms, Algorithm Design, Feature Engineering, Content-Based Recommendations, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Selection and Ordering of Linear Online Video Ads
+Abstract:
+This paper studies the selection and ordering of in-stream ads in videos shown in online content publishers. We propose an allocation algorithm that uses a collective measure of price and quality for each ad and factors in slot-specific continuation probabilities to maximize publisher revenue. The algorithm is based on cascade models and uses a dynamic programming method to assign linear (video) ads to slots in an online video. The approach accounts for the negative externality created by lower quality ads placed in a video, leading to viewer exit and thereby preventing the publisher from showing the subsequent ads scheduled in that session. Our algorithm is scalable and suited for real-time applications. A large log of viewer activity from a video ad platform is used to empirically test the algorithm. A series of simulations show that our algorithm, when compared to other algorithms currently practiced in industry, generates more revenue for the publisher and increases viewer retention.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about selection and ordering of linear online video ads. Let me read through the title and abstract again.
+
+The paper is about in-stream ads in videos on online platforms. They propose an allocation algorithm that considers both price and quality of each ad, as well as slot-specific continuation probabilities. The goal is to maximize publisher revenue. They mention using cascade models and dynamic programming for real-time applications. There&#39;s also an empirical test with viewer logs and simulations showing better performance than current industry methods.
+
+So, the main themes here are advertising, video content, recommendation systems, and algorithms. I should think about how these fit into categories.
+
+First, under families of algorithms: they use a cascade model and dynamic programming. Also, since it&#39;s about allocation, maybe something like resource allocation or matching algorithms could be relevant. Multi-armed bandits aren&#39;t mentioned, but the context might relate to online learning.
+
+For the domain, it&#39;s clearly in advertising. The specific application is video ads, so I&#39;ll include that as a subcategory under advertising.
+
+In recommendation systems, this paper deals with ad selection and ordering, which are types of recommendations for content delivery. So categories like recommendation algorithms, ad placement, or content delivery make sense here.
+
+The evaluation aspects they discuss involve revenue maximization and viewer retention, which ties into metrics beyond just accuracy—like economic impact. They also mention real-world applications since they tested with a large dataset from an actual platform.
+
+Looking at specific recommendation space topics, cold start isn&#39;t mentioned, but ad selection and ordering are more applicable here. The problem is within the video domain, so that&#39;s another category.
+
+I should ensure each article goes into 8-12 categories. Let me list them out:
+
+1. **Algorithms**: cascade model, dynamic programming.
+2. **Advertising**: general domain, video ads specifically.
+3. **Recommendation Systems**: ad selection and ordering as recommendation tasks.
+4. **Video Content** since the focus is on videos.
+5. **Resource Allocation** because they&#39;re assigning ads to slots.
+6. **Economic Impact** due to revenue maximization.
+7. **Real-World Applications** because of the empirical test.
+8. **Optimization** as they aim to maximize publisher revenue.
+
+I might also consider broader categories like online advertising or specific aspects like ad ordering, but I think the above covers it adequately without being too granular. Let me make sure each category is distinct and useful for navigation. Yeah, this should help users find related articles easily.
+&lt;/think&gt;
+
+Advertising, Video Ads, Recommendation Systems, Algorithm Selection, Dynamic Programming, Cascade Model, Resource Allocation, Economic Impact, Real-World Applications, Ad Ordering, Online Advertising, Revenue Maximization, Viewer Retention</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

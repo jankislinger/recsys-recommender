@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Investigating the Impact of Audio States in Music Streaming Sessions
+Abstract:
+Music streaming is inherently sequential in nature, with track sequence information playing a key role in user satisfaction with recommended music. In this work, we investigate the role audio characteristics of music content play in understanding music streaming sessions. Focusing on 18 audio attributes (e.g. dancability, acousticness, energy), we formulate audio transitioning in a session as a multiple changepoint detection problem, and extract latent states of different audio attributes within each session. Based on insights from large scale music streaming data from a popular music streaming platform, we investigate questions around the extent to which audio characteristics fluctuate within streaming sessions, the heterogeneity across different audio attributes and their impact on user satisfaction. Furthermore, we demonstrate the promise of such audio-based characterizing of sessions in better sequencing tracks in a session, and highlight the potential gains in user satisfaction on offer. We discuss implications on the design of track sequencing models, and identify important prediction tasks to further research on the topic.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this article about music streaming and audio states. Let me break it down step by step.
+
+First, the title mentions &#34;Investigating the Impact of Audio States in Music Streaming Sessions.&#34; So, right away, I know this is related to music recommendation systems. The abstract talks about how track sequences affect user satisfaction, which ties into recommendation algorithms.
+
+The article uses 18 audio attributes like danceability and energy. These are specific features used in music recommendations, so that&#39;s another category. They model the problem as multiple changepoint detection, which is a technique in machine learning, specifically for detecting changes in data patterns over time or sessions. That adds two more categories: changepoint detection and time series analysis.
+
+They&#39;re looking at user satisfaction through audio transitions, which means they&#39;re focusing on user experience. The dataset comes from a real music streaming platform, so real-world application is another category. They discuss improving track sequencing, which falls under track sequencing in recommendation systems.
+
+The study&#39;s goal is to enhance user satisfaction, so that&#39;s an aspect of evaluation beyond just accuracy. It also touches on how different audio attributes affect the experience, which relates to diversity and personalization in recommendations.
+
+Putting it all together, the categories should cover the core areas: music recommendation, audio features, changepoint detection, time series, user experience, real-world applications, track sequencing, beyond accuracy evaluation, diversity, and personalization. That makes ten relevant categories.
+&lt;/think&gt;
+
+Music Recommendation, Audio Features, Changepoint Detection, Time Series Analysis, User Satisfaction, Real-World Application, Track Sequencing, Beyond Accuracy, Diversity of Recommendations, Personalization</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Investigating the Impact of Audio States in Music Streaming Sessions
+Abstract:
+Music streaming is inherently sequential in nature, with track sequence information playing a key role in user satisfaction with recommended music. In this work, we investigate the role audio characteristics of music content play in understanding music streaming sessions. Focusing on 18 audio attributes (e.g. dancability, acousticness, energy), we formulate audio transitioning in a session as a multiple changepoint detection problem, and extract latent states of different audio attributes within each session. Based on insights from large scale music streaming data from a popular music streaming platform, we investigate questions around the extent to which audio characteristics fluctuate within streaming sessions, the heterogeneity across different audio attributes and their impact on user satisfaction. Furthermore, we demonstrate the promise of such audio-based characterizing of sessions in better sequencing tracks in a session, and highlight the potential gains in user satisfaction on offer. We discuss implications on the design of track sequencing models, and identify important prediction tasks to further research on the topic.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Investigating the Impact of Audio States in Music Streaming Sessions.&#34; The abstract talks about how music streaming is sequential and that track sequence matters for user satisfaction. They looked at 18 audio attributes like danceability and energy, treating the transitions between songs as a multiple changepoint detection problem.
+
+First, I should consider the main themes here. It&#39;s definitely related to Music Recommendation because they&#39;re talking about sequencing tracks and improving recommendations based on audio characteristics. Also, since they&#39;re dealing with user satisfaction, User Experience is another key category.
+
+Looking at the methodology, they used changepoint detection which falls under Sequential Models. The focus on track sequence means Session-Based Recommendations are relevant too. They&#39;re analyzing patterns in sequential data, so Sequential Pattern Analysis fits here as well.
+
+The study uses a real-world dataset from a music streaming platform, indicating that it&#39;s an Empirical Study. They also touched on latent states of audio attributes within sessions, which relates to State Transitions in recommendation systems.
+
+Evaluation-wise, they&#39;re looking at how these audio characteristics impact user satisfaction, so Evaluation Metrics is another category. The use of multiple audio attributes suggests a focus on Multivariate Analysis.
+
+The article discusses the design implications for track sequencing models, pointing towards Model Design considerations. Lastly, they mention potential gains in user satisfaction through better sequencing, which ties into User Satisfaction as a key outcome.
+
+So putting it all together, the categories should cover Music Recommendation, User Experience, Sequential Models, Session-Based Recommendations, Sequential Pattern Analysis, Empirical Study, State Transitions, Evaluation Metrics, Multivariate Analysis, and Model Design.
+&lt;/think&gt;
+
+Music Recommendation, User Experience, Sequential Models, Session-Based Recommendations, Sequential Pattern Analysis, Empirical Study, State Transitions, Evaluation Metrics, Multivariate Analysis, Model Design</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

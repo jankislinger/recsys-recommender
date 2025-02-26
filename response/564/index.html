@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: What does BERT know about books, movies and music? Probing BERT for Conversational Recommendation
+Abstract:
+Heavily pre-trained transformer models such as BERT have recently shown to be remarkably powerful at language modelling, achieving impressive results on numerous downstream tasks. It has also been shown that they implicitly store factual knowledge in their parameters after pre-training. Understanding what the pre-training procedure of LMs actually learns is a crucial step for using and improving them for Conversational Recommender Systems (CRS). We first study how much off-the-shelf pre-trained BERT “knows” about recommendation items such as books, movies and music. In order to analyze the knowledge stored in BERT’s parameters, we use different probes (i.e., tasks to examine a trained model regarding certain properties) that require different types of knowledge to solve, namely content-based and collaborative-based. Content-based knowledge is knowledge that requires the model to match the titles of items with their content information, such as textual descriptions and genres. In contrast, collaborative-based knowledge requires the model to match items with similar ones, according to community interactions such as ratings. We resort to BERT’s Masked Language Modelling (MLM) head to probe its knowledge about the genre of items, with cloze style prompts. In addition, we employ BERT’s Next Sentence Prediction (NSP) head and representations’ similarity (SIM) to compare relevant and non-relevant search and recommendation query-document inputs to explore whether BERT can, without any fine-tuning, rank relevant items first. Finally, we study how BERT performs in a conversational recommendation downstream task. To this end, we fine-tune BERT to act as a retrieval-based CRS. Overall, our experiments show that: (i) BERT has knowledge stored in its parameters about the content of books, movies and music; (ii) it has more content-based knowledge than collaborative-based knowledge; and (iii) fails on conversational recommendation when faced with adversarial data.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article titled &#34;What does BERT know about books, movies and music? Probing BERT for Conversational Recommendation.&#34; Let me break down the process step by step.
+
+First, I&#39;ll read through the title and abstract to understand the core themes of the article. The title suggests that the study is looking into what BERT knows about different recommendation items like books, movies, and music. It mentions &#34;Conversational Recommender Systems,&#34; which immediately tells me this is related to recommendation systems but with a conversational twist.
+
+Looking at the abstract, it talks about how heavily pre-trained transformer models like BERT are powerful in language modeling and hold factual knowledge after pre-training. The authors are studying how much off-the-shelf BERT knows about recommendation items. They use probes—tasks that examine specific properties of the model. These probes include content-based and collaborative-based knowledge.
+
+Content-based knowledge refers to matching item titles with their descriptions or genres, while collaborative-based is about matching items based on community interactions like ratings. The authors employed BERT&#39;s MLM, NSP heads, and representations&#39; similarity (SIM) to test how well BERT can rank relevant items without fine-tuning.
+
+They also looked into conversational recommendation by fine-tuning BERT as a retrieval-based CRS. Their findings were that BERT has content-based knowledge about books, movies, and music but less collaborative-based knowledge. It also performed poorly on adversarial data in conversational settings.
+
+Now, I need to map these elements into appropriate categories based on the guidelines provided.
+
+Starting with the family of algorithms: The article uses BERT, which is a transformer model. So &#34;BERT&#34; should be one category.
+
+Next, looking at domains: The study focuses on books, movies, and music. These are specific domains, so each can be its own category—Books, Movies, Music.
+
+Recommendation space specifics: Conversational Recommender Systems (CRS) is a key aspect here. So that&#39;s another category.
+
+Aspects of the model: They used probes like MLM, NSP, and SIM. Each of these should be separate categories.
+
+Knowledge types: The article distinguishes between content-based and collaborative-based knowledge, so both should be included as categories.
+
+Evaluation aspects: They tested BERT in a conversational recommendation task, which falls under evaluation, but since it&#39;s specific to the recommendation aspect, &#34;Conversational Recommendation&#34; is more appropriate than a general evaluation category.
+
+Real-world applications: The study mentions using these models for conversational recommenders, which implies real-world application potential. So, including &#34;Real World Applications&#34; makes sense.
+
+Now, considering the guidelines, each article should be in 8-12 categories. Let me count what I have so far:
+
+1. BERT
+2. Transformer Models (since BERT is a transformer)
+3. Conversational Recommender Systems
+4. Books
+5. Movies
+6. Music
+7. Probing Methods
+8. Content-Based Knowledge
+9. Collaborative-Based Knowledge
+10. Masked Language Modeling (MLM)
+11. Next Sentence Prediction (NSP)
+12. Similarity (SIM)
+
+That&#39;s 12 categories, which fits the guideline of at least 8-12.
+
+I should ensure that these categories are clear and user-friendly. Terms like &#34;Content-Based Knowledge&#34; and &#34;Collaborative-Based Knowledge&#34; accurately describe the study&#39;s focus areas. Including specific techniques used (MLM, NSP, SIM) makes it easier for users interested in those methods to find the article.
+
+Also, including both general domains (Books, Movies, Music) and specific recommendation aspects (Conversational Recommender Systems) ensures a balanced categorization that is useful for different user search behaviors. Users looking for BERT applications or conversational systems can easily find this article through these categories.
+
+I think I&#39;ve covered all the necessary aspects without overcrowding any category. Each category represents a key element of the study, making it discoverable from multiple angles.
+&lt;/think&gt;
+
+BERT, Transformer Models, Conversational Recommender Systems, Books, Movies, Music, Probing Methods, Content-Based Knowledge, Collaborative-Based Knowledge, Masked Language Modeling (MLM), Next Sentence Prediction (NSP), Similarity (SIM)</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

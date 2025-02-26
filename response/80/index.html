@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: The Role of Prior Experience in User’s Engagement with a New Recommender System
+Abstract:
+In this article we performed an online experiment to test the role of the user’s prior experience with recommender systems in his/her engagement with a new recommendation technology. Our research model is based on the technology acceptance model (TAM) with two new constructs corresponding to the simplicity of the graphical user interface and the skills the user believe he/she has to use recommender systems. Our experiments confirmed the hypothesis that prior user experience plays an important role in which factors affect the user engagement with a new system.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me start by understanding what the article is about.
+
+The title is &#34;The Role of Prior Experience in User’s Engagement with a New Recommender System.&#34; From this, I gather it&#39;s about how users&#39; previous experiences influence their engagement when they use a new recommendation system.
+
+Looking at the abstract, it mentions an online experiment testing the role of prior experience. The research model uses the Technology Acceptance Model (TAM) and introduces two new constructs: simplicity of the graphical user interface and the user’s perceived skills in using recommender systems. The findings suggest that prior experience affects which factors influence engagement with a new system.
+
+So, I need to identify key themes here. First, it&#39;s about user engagement, so &#34;User Engagement&#34; is definitely a category. It&#39;s specifically related to recommendation systems, so &#34;Recommendation Systems&#34; should be included. Since they&#39;re testing this through an online experiment, &#34;A/B Test&#34; or similar evaluation methods might apply.
+
+The Technology Acceptance Model (TAM) is mentioned, which is a specific theory in the field of information systems and human-computer interaction. So including &#34;Technology Acceptance Model&#34; makes sense. The constructs about GUI simplicity and user skills relate to usability, so &#34;Usability&#34; should be another category.
+
+The study focuses on how prior experience affects new system adoption, so &#34;Prior Experience&#34; is a specific aspect here. It&#39;s also looking at factors that influence user engagement, which ties into &#34;User Behavior.&#34; Additionally, since it involves an experiment with real users and their interactions, &#34;Real-World Applications&#34; would be appropriate.
+
+I need to ensure each article is assigned 8-12 categories. Let me think of more relevant ones. The research touches on user perceptions and interface design, so maybe &#34;Perceived Ease of Use.&#34; Also, it&#39;s about how users adopt new technologies, which relates to &#34;Technology Adoption.&#34;
+
+Wait, the abstract specifically mentions an online experiment, so perhaps &#34;Online Experiment&#34; as a category? Alternatively, since they are testing with real-world users, &#34;User Testing&#34; could be another category.
+
+Let me list out possible categories:
+
+1. User Engagement
+2. Recommendation Systems
+3. A/B Test (since it&#39;s an experiment)
+4. Technology Acceptance Model
+5. Usability
+6. Prior Experience
+7. User Behavior
+8. Real-World Applications
+9. GUI Design (as simplicity of GUI is a construct)
+10. Perceived Ease of Use
+11. Technology Adoption
+
+I think that&#39;s 11 categories, which fits the 8-12 range. I should make sure these are clear and user-friendly. Each category should help users find related articles easily.
+
+Wait, &#34;A/B Test&#34; is specific but maybe more accurately described as &#34;Online Experiment.&#34; Alternatively, since they used an online experiment to gather data, perhaps &#34;User Survey&#34; isn&#39;t the best fit here; it&#39;s more of a controlled experiment rather than just a survey. So maybe &#34;Online Experiment&#34; or &#34;Controlled Study.&#34;
+
+But in the guidelines, there are categories like &#34;A/B Test,&#34; which is similar but might be too specific. Alternatively, considering they tested hypotheses through an experiment, &#34;Evaluation Methods&#34; could also be a category.
+
+I should balance between being specific and broad enough. So perhaps including both more specific terms like &#34;Online Experiment&#34; and broader ones like &#34;User Testing.&#34;
+
+Wait, the example in the guidelines includes categories like &#34;A/ B Test.&#34; Maybe that&#39;s acceptable as it is a common evaluation method.
+
+So, putting it all together, I think the most relevant categories are:
+
+- User Engagement
+- Recommendation Systems
+- A/B Test (since it&#39;s an experiment)
+- Technology Acceptance Model
+- Usability
+- Prior Experience
+- User Behavior
+- Real-World Applications
+- GUI Design (but maybe better as &#34;Graphical User Interface&#34; or similar, but the example uses shorter terms, so perhaps just &#34;GUI&#34;)
+- Perceived Ease of Use
+- Technology Adoption
+
+Alternatively, if &#34;GUI Design&#34; is too specific and not a category in examples, perhaps replace it with something else. The abstract mentions simplicity of the GUI, which ties into usability, so maybe it&#39;s covered under Usability.
+
+Let me finalize:
+
+1. User Engagement
+2. Recommendation Systems
+3. A/B Test
+4. Technology Acceptance Model
+5. Usability
+6. Prior Experience
+7. User Behavior
+8. Real-World Applications
+9. GUI Design (if acceptable, else perhaps exclude)
+10. Perceived Ease of Use
+11. Technology Adoption
+
+I think 11 is manageable and covers the necessary aspects without being too overlapping.
+&lt;/think&gt;
+
+User Engagement, Recommendation Systems, A/B Test, Technology Acceptance Model, Usability, Prior Experience, User Behavior, Real-World Applications, GUI Design, Perceived Ease of Use, Technology Adoption</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: The Role of Prior Experience in User’s Engagement with a New Recommender System
+Abstract:
+In this article we performed an online experiment to test the role of the user’s prior experience with recommender systems in his/her engagement with a new recommendation technology. Our research model is based on the technology acceptance model (TAM) with two new constructs corresponding to the simplicity of the graphical user interface and the skills the user believe he/she has to use recommender systems. Our experiments confirmed the hypothesis that prior user experience plays an important role in which factors affect the user engagement with a new system.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m looking at this article titled &#34;The Role of Prior Experience in User’s Engagement with a New Recommender System.&#34; The abstract mentions they conducted an online experiment to test how users&#39; prior experience affects their engagement with a new recommendation technology. They based their model on the Technology Acceptance Model (TAM), adding two constructs: simplicity of the GUI and user skills.
+
+First, I need to categorize this article accurately. Let&#39;s break it down. The main focus is on user engagement with a recommender system, which points me towards categories related to user behavior or acceptance models.
+
+The use of TAM suggests that this falls under theories or models in the field, so &#34;Technology Acceptance Model (TAM)&#34; should be a category. Since they&#39;re looking at how prior experience influences engagement, &#34;User Experience&#34; is definitely relevant here.
+
+They conducted an online experiment, which means their approach is experimental rather than observational. So &#34;Experimental Study&#34; would be another category. The article touches on user skills and interface simplicity, which are aspects of system usability, so adding &#34;Usability&#34; makes sense.
+
+The core theme revolves around how users engage with new recommendation technologies, which ties into understanding user engagement in the context of recommendations. Thus, &#34;User Engagement&#34; is a key category here.
+
+Putting it all together, the categories should cover the methodology (Experimental Study), the model used (Technology Acceptance Model (TAM)), aspects of usability and skills (&#34;Usability&#34;), the focus on engagement (&#34;User Engagement&#34;), and the application to recommendation systems (&#34;Recommender Systems&#34;).
+
+I think that&#39;s about eight categories. Each seems relevant without overlapping too much, ensuring a balanced distribution across potential categories.
+&lt;/think&gt;
+
+Experimental Study, Technology Acceptance Model (TAM), User Experience, Usability, User Engagement, Recommender Systems</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommender Systems for Product Bundling
+Abstract:
+Recommender systems (RSs) enhance e-commerce sales by recommending relevant products to their customers. RSs aim at implementing the firm’s web-based marketing strategy to increase revenues. Generating bundles is an example of a marketing strategy that aims to satisfy consumer needs and preferences, and at the same time, to increase customers’ buying scope and the firm’s income. Thus, finding and recommending an optimal and personal bundle becomes very important. In this paper we introduce a novel model of bundle recommendations that integrates collaborative filtering (CF) techniques, personalized demand functions, and price modeling. This model provides a recommendation list by finding pairs of products that maximizes both, the probability of their purchase by the user and the revenue received by selling this bundles.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about Recommender Systems for Product Bundling. Let&#39;s start by reading the title and abstract carefully.
+
+The title is &#34;Recommender Systems for Product Bundling.&#34; So right away, I know it&#39;s about RSs, which are a common topic in recommendation systems literature. The focus here is on product bundling, so that&#39;s a specific application within e-commerce or retail settings.
+
+Looking at the abstract: The article talks about how Recommender Systems can enhance sales by suggesting relevant products, aligning with the firm&#39;s marketing strategy to boost revenues. Product bundling is mentioned as a marketing strategy aimed at meeting consumer needs while increasing buying scope and income for the firm. The authors introduce a novel model that integrates collaborative filtering (CF) techniques, personalized demand functions, and price modeling. The goal is to recommend bundles that maximize both purchase probability and revenue.
+
+So, key points here are:
+1. Recommender Systems
+2. Product Bundling
+3. E-commerce applications
+4. Marketing Strategy
+5. Revenue Maximization
+6. Collaborative Filtering
+7. Personalized Demand Functions
+8. Price Modeling
+
+Now, considering the categories from the guidelines:
+
+- Family of algorithm: They mention CF techniques, so &#34;Collaborative Filtering&#34; is a primary category.
+- Domain of the problem: This is in e-commerce, specifically about product recommendations to increase sales and revenue. So &#34;E-commerce&#34; is relevant.
+- Specific recommendation space aspects: Product bundling is a specific type of recommendation, so that&#39;s another category.
+- Evaluation aspects: The model aims to maximize both purchase probability and revenue, which touches on &#34;Revenue Maximization.&#34;
+- Real-world applications: They&#39;re talking about implementing strategies in firms, so maybe &#34;Real World Applications.&#34; But the example they gave was A/B Test or User Survey. Since this is more about applying models in a business context, perhaps &#34;Business Strategy&#34; could be another category.
+
+Also, considering the overall goal of RSs in marketing, &#34;Marketing Strategy&#34; fits well because it&#39;s about how firms use these systems to implement their strategies.
+
+Additionally, the model integrates personalized demand and price modeling. So maybe &#34;Personalization&#34; is another relevant category since it involves tailoring recommendations to individual users&#39; preferences.
+
+Putting this together, I should list the categories ensuring each article is in at least 8-12 relevant ones. Let me think of possible overlaps or related areas:
+
+- Recommender Systems (general)
+- Product Bundling
+- E-commerce
+- Marketing Strategy
+- Revenue Maximization
+- Collaborative Filtering
+- Personalization
+- Business Applications
+- Sales Optimization
+
+Wait, the user mentioned to include at least 8-12 categories. Let me check if I&#39;m missing any:
+
+- The paper also talks about maximizing revenue, so &#34;Revenue&#34; could be another category.
+- Since it&#39;s about integrating different techniques, maybe &#34;Integration of Techniques.&#34;
+- Or perhaps &#34;Personalized Recommendations.&#34;
+
+Hmm, but the guidelines suggest using clear labels that accurately reflect the content. Let me avoid being too vague.
+
+Another approach: The problem domain is e-commerce and marketing, so those are primary. The algorithm used is collaborative filtering. The specific recommendation aspect is product bundling, which is a type of recommendations. Real-world application here is about business strategies and revenue optimization in a commercial setting.
+
+So, possible categories:
+
+1. Recommender Systems
+2. Product Bundling
+3. E-commerce
+4. Marketing Strategy
+5. Revenue Maximization
+6. Collaborative Filtering
+7. Personalized Recommendations (since they talk about personalized demand)
+8. Business Applications
+9. Sales Optimization
+10. Price Modeling (as part of their approach)
+
+Wait, the abstract mentions integrating CF techniques, personalized demand functions, and price modeling. So &#34;Price Modeling&#34; is a specific aspect here.
+
+Alternatively, considering that it&#39;s about bundling products to increase sales and revenue, maybe &#34;Sales Strategy&#34; or &#34;Bundle Recommendations.&#34;
+
+Putting this all together, I think the most relevant categories are:
+
+- Recommender Systems (general)
+- Product Bundling
+- E-commerce
+- Marketing Strategy
+- Revenue Maximization
+- Collaborative Filtering
+- Personalized Recommendations
+- Business Applications
+- Price Modeling
+
+That&#39;s nine categories. To reach 12, maybe include &#34;Sales Optimization&#34; and &#34;Demand Prediction&#34; since they talk about personalized demand functions.
+
+So final list:
+
+Recommender Systems, Product Bundling, E-commerce, Marketing Strategy, Revenue Maximization, Collaborative Filtering, Personalized Recommendations, Business Applications, Price Modeling, Sales Optimization, Demand Prediction
+
+Wait, but I think the example given was a list of keywords separated by commas. Let me make sure each category is concise.
+
+Alternatively, perhaps &#34;Sales Strategy&#34; instead of Sales Optimization and Marketing Strategy. But let&#39;s see:
+
+- Recommender Systems
+- Product Bundling
+- E-commerce
+- Marketing Strategy
+- Revenue Maximization
+- Collaborative Filtering
+- Personalization (since it&#39;s about personalized demand)
+- Business Applications
+- Price Modeling
+- Bundle Recommendations
+
+That&#39;s 10 categories. Adding a few more, perhaps &#34;Algorithm Integration&#34; or something else.
+
+Alternatively, considering aspects like &#34;Business Optimization&#34; and &#34;Consumer Behavior,&#34; but I&#39;m not sure if they&#39;re covered enough in the abstract.
+
+Another thought: Since it&#39;s about combining different models (CF, demand, price), maybe &#34;Hybrid Models&#34; is another category. But that might be more technical than necessary.
+
+I think sticking to the main points is better for clarity and user-centric design.
+&lt;/think&gt;
+
+Recommender Systems, Product Bundling, E-commerce, Marketing Strategy, Revenue Maximization, Collaborative Filtering, Personalized Recommendations, Business Applications, Price Modeling, Sales Optimization, Demand Prediction</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommender Systems for Product Bundling
+Abstract:
+Recommender systems (RSs) enhance e-commerce sales by recommending relevant products to their customers. RSs aim at implementing the firm’s web-based marketing strategy to increase revenues. Generating bundles is an example of a marketing strategy that aims to satisfy consumer needs and preferences, and at the same time, to increase customers’ buying scope and the firm’s income. Thus, finding and recommending an optimal and personal bundle becomes very important. In this paper we introduce a novel model of bundle recommendations that integrates collaborative filtering (CF) techniques, personalized demand functions, and price modeling. This model provides a recommendation list by finding pairs of products that maximizes both, the probability of their purchase by the user and the revenue received by selling this bundles.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article titled &#34;Recommender Systems for Product Bundling.&#34; The abstract talks about how recommenders enhance e-commerce sales by suggesting products and helping firms with their marketing strategies. It specifically mentions generating product bundles to satisfy consumer needs while increasing revenue.
+
+First, looking at the title, it&#39;s clearly related to recommender systems, so that should be one of the categories. Then, since the article discusses product bundling, which is a specific application within e-commerce, I&#39;ll include &#34;Product Bundling&#34; and &#34;E-Commerce.&#34;
+
+The abstract mentions collaborative filtering (CF) techniques, so &#34;Collaborative Filtering&#34; is another category to add. It also talks about personalized demand functions and price modeling, which points towards personalization aspects of recommendation systems. So &#34;Personalization&#34; makes sense here.
+
+The paper introduces a novel model for bundle recommendations, aiming to maximize both purchase probability and revenue. This implies an optimization aspect, so I&#39;ll include &#34;Optimization.&#34; Additionally, since the focus is on business applications like increasing firm income, &#34;Business Applications&#34; should be another category.
+
+Looking at the example categories provided earlier, I also need to ensure that each article is assigned to 8-12 categories. Let me see if there are more relevant ones. The paper deals with marketing strategies within e-commerce, so maybe &#34;Marketing Strategies&#34; could be a fit. Also, since it&#39;s about revenue and customer buying behavior, &#34;Revenue Maximization&#34; might be appropriate.
+
+Another point from the abstract is that the model finds pairs of products to maximize both purchase probability and revenue, which involves recommendation lists tailored for bundles. This suggests an aspect of recommendation systems beyond single items, so perhaps &#34;Multi-Item Recommendations.&#34;
+
+I should also consider if there are any other specific terms like &#34;Price Modeling&#34; or &#34;Revenue Maximization,&#34; but those might be too granular. Alternatively, considering the broader aspects, &#34;E-Commerce&#34; and &#34;Business Applications&#34; cover some of that.
+
+Let me make sure I&#39;m covering all aspects: recommender systems, product bundling, collaborative filtering, personalization, optimization, business applications, e-commerce, marketing strategies, revenue maximization, multi-item recommendations. That&#39;s 10 categories so far. To reach at least 8, maybe include &#34;Marketing&#34; as a general category.
+
+Wait, but the guidelines suggest not to make too many subcategories if they&#39;re too specific. So perhaps sticking with broader ones is better for discoverability. Let me list them again:
+
+Recommender Systems
+Product Bundling
+E-Commerce
+Collaborative Filtering
+Personalization
+Optimization
+Business Applications
+Marketing Strategies
+
+That&#39;s 8. I could maybe add &#34;Revenue Maximization&#34; and &#34;Multi-Item Recommendations&#34; to make it 10, ensuring it&#39;s within the target range.
+
+I should ensure that each category is clear and not too narrow. For example, instead of &#34;Price Modeling,&#34; which might be too specific, perhaps sticking with broader terms like &#34;Business Applications.&#34;
+
+Yes, I think these categories cover the main points from the abstract and align with user interests in recommendation systems, business strategies, and e-commerce.
+&lt;/think&gt;
+
+Recommender Systems, Product Bundling, E-Commerce, Collaborative Filtering, Personalization, Optimization, Business Applications, Marketing Strategies, Revenue Maximization, Multi-Item Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

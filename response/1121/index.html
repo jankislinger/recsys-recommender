@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Do Recommender Systems Promote Local Music? A Reproducibility Study Using Music Streaming Data
+Abstract:
+This paper examines the influence of recommender systems on local music representation, discussing prior findings from an empirical study on the LFM-2b public dataset. This prior study argued that different recommender systems exhibit algorithmic biases shifting music consumption either towards or against local content. However, LFM-2b users do not reflect the diverse audience of music streaming services. To assess the robustness of this study’s conclusions, we conduct a comparative analysis using proprietary listening data from a global music streaming service, which we publicly release alongside this paper. We observe significant differences in local music consumption patterns between our dataset and LFM-2b, suggesting that caution should be exercised when drawing conclusions on local music based solely on LFM-2b. Moreover, we show that the algorithmic biases exhibited in the original work vary in our dataset, and that several unexplored model parameters can significantly influence these biases and affect the study’s conclusion on both datasets. Finally, we discuss the complexity of accurately labeling local music, emphasizing the risk of misleading conclusions due to unreliable, biased, or incomplete labels.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article about recommender systems and their impact on local music promotion. Let&#39;s start by looking at the title: &#34;Do Recommender Systems Promote Local Music? A Reproducibility Study Using Music Streaming Data.&#34; The title suggests that the study is looking into whether recommendation algorithms encourage users to listen to more local or regional music rather than popular mainstream content.
+
+The abstract goes on to mention that they&#39;re examining prior findings from a study using the LFM-2b dataset. This previous work found that different recommender systems can have biases either towards or against local music. However, the authors here argue that LFM-2b users aren&#39;t representative of typical music streaming audiences. To address this, they used data from a global music streaming service and compared it to LFM-2b.
+
+So first, I think about the family of algorithms involved. Since the study is about recommendation systems in general, maybe &#34;Recommendation Systems&#34; as a broad category makes sense. But perhaps more specific categories like &#34;Recommender Systems Analysis&#34; could be better since they&#39;re dissecting how these systems work and their biases.
+
+Next, looking at the domain, it&#39;s clearly related to music streaming services. So I should include something like &#34;Music Streaming.&#34; This helps users interested in that specific application of recommendation systems find this article easily.
+
+The study is a reproducibility analysis because they are replicating prior work with a different dataset. Therefore, &#34;Reproducibility Analysis&#34; is another relevant category. It highlights the methodological aspect of their research.
+
+They talk about algorithmic biases, which refers to how recommendation algorithms might inadvertently favor certain types of content over others. So &#34;Algorithmic Bias&#34; should definitely be included as it&#39;s a key theme in their findings and discussion.
+
+The study compares datasets (LFM-2b vs. global music streaming data), so &#34;Dataset Comparison&#34; seems appropriate. This category would attract readers interested in how different datasets affect research outcomes in recommendation systems.
+
+Another important aspect is the labeling of local music. The authors discuss the complexity and potential issues with accurately identifying what constitutes local music, which can lead to misleading conclusions. So &#34;Content Labeling&#34; fits here as it&#39;s about categorizing or tagging content within recommendation systems.
+
+The evaluation part of the study looks into how different models perform regarding promoting local music. This ties into aspects like &#34;Evaluation Metrics&#34; because they&#39;re assessing the effectiveness of recommender systems based on specific criteria related to local content promotion.
+
+Since the research involves real-world data from a global streaming service, it&#39;s not just theoretical; they applied their analysis in a practical setting. Thus, categories like &#34;Real-World Applications&#34; and &#34;Industry Data&#34; make sense here. These would help users interested in how recommendation systems function in actual companies find this study.
+
+The paper also touches on model parameters that can influence algorithmic biases. Therefore, including something like &#34;Model Parameters&#34; or more specifically &#34;Recommender Model Parameters,&#34; though the latter might be too narrow. Maybe just sticking with a broader term is better unless there&#39;s a specific category for model aspects.
+
+Putting it all together, I need to ensure each article is in at least 8-12 categories without overcrowding any. Looking back, the initial thought was using &#34;Recommendation Systems,&#34; but since they&#39;re analyzing and comparing systems, maybe &#34;Recommender Systems Analysis&#34; is more precise. Similarly, instead of a general term like &#34;Music,&#34; which might be too broad, &#34;Music Streaming&#34; is more specific and relevant.
+
+I also need to consider if any other categories fit. For example, the study discusses reproducibility, so that&#39;s covered, but maybe &#34;Bias in AI/ML&#34; could be another category since it deals with algorithmic biases. However, the guidelines mention using clear labels, so sticking with &#34;Algorithmic Bias&#34; is probably better.
+
+I should avoid creating too many new categories and stick to those that are already defined or make sense within the given examples. So perhaps I can include some broader ones like &#34;Music,&#34; but it might be too vague. Instead, focusing on more specific terms related to recommendation systems and their evaluation seems better.
+
+Finally, ensuring consistency is key. Each category should align with others in a way that makes navigation intuitive for users. For instance, grouping articles by application domains (like music streaming), analysis types (reproducibility), system aspects (algorithmic bias), and evaluation methods ensures a logical structure.
+&lt;/think&gt;
+
+Recommendation Systems Analysis, Music Streaming, Reproducibility Analysis, Algorithmic Bias, Dataset Comparison, Content Labeling, Evaluation Metrics, Real-World Applications, Industry Data, Model Parameters</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Do Recommender Systems Promote Local Music? A Reproducibility Study Using Music Streaming Data
+Abstract:
+This paper examines the influence of recommender systems on local music representation, discussing prior findings from an empirical study on the LFM-2b public dataset. This prior study argued that different recommender systems exhibit algorithmic biases shifting music consumption either towards or against local content. However, LFM-2b users do not reflect the diverse audience of music streaming services. To assess the robustness of this study’s conclusions, we conduct a comparative analysis using proprietary listening data from a global music streaming service, which we publicly release alongside this paper. We observe significant differences in local music consumption patterns between our dataset and LFM-2b, suggesting that caution should be exercised when drawing conclusions on local music based solely on LFM-2b. Moreover, we show that the algorithmic biases exhibited in the original work vary in our dataset, and that several unexplored model parameters can significantly influence these biases and affect the study’s conclusion on both datasets. Finally, we discuss the complexity of accurately labeling local music, emphasizing the risk of misleading conclusions due to unreliable, biased, or incomplete labels.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on its title and abstract. The article is about whether recommender systems promote local music and includes a reproducibility study using music streaming data.
+
+First, looking at the title: it&#39;s directly related to recommendation systems, so that&#39;s definitely one category. 
+
+Next, the abstract mentions using a music streaming dataset, which falls under Music Streaming. It also talks about evaluating different recommendation systems, which points to Evaluation Metrics.
+
+The study compares two datasets and looks at how recommender systems behave differently in each, indicating Cross-Dataset Analysis is relevant here.
+
+Bias in recommendations is another key point because they discuss algorithmic biases towards local music, so Algorithmic Bias should be included.
+
+Replication or reproducibility studies are mentioned, making Reproducibility a fitting category.
+
+The paper addresses issues with data representation and dataset limitations, so Dataset Limitations is applicable.
+
+Music recommendation systems themselves are the focus here, so Music Recommendation is another category.
+
+They talk about the complexity of accurately labeling local music, which relates to Data Quality concerns.
+
+Lastly, they discuss how model parameters can influence results, so Model Parameters is a relevant category.
+
+I think these categories cover all the main points without being too specific or too broad.
+&lt;/think&gt;
+
+Recommendation Systems, Music Streaming, Evaluation Metrics, Cross-Dataset Analysis, Algorithmic Bias, Reproducibility, Dataset Limitations, Music Recommendation, Data Quality, Model Parameters</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: User Preference Learning in Multi-criteria Recommendations using Stacked Auto Encoders
+Abstract:
+Recommender System (RS) has been an essential component of many businesses, especially in e-commerce domain. RS exploits and processes the preference history (rating, purchase, review, etc.) of users in order to provide the recommendations. A user in traditional RS can provide only one rating value about an item. Deep Neural Networks have been used in this single rating system to improve recommendation accuracy in the recent times. However, the single rating systems are inadequate to understand the users’ preferences about an item. On the other hand, business enterprises such as tourism, e-learning, etc. facilitate users to provide multiple criteria ratings about an item, thus it becomes easier to understand users’ preference over single rating system. In this paper, we propose an extended Stacked Autoencoders (a Deep Neural Network technique) to utilize the multi-criteria ratings. The proposed network is designed to learn the relationship between each user’s criteria ratings and overall rating efficiently. Experimental results on real world datasets (Yahoo! Movies and TripAdvisor) demonstrate that the proposed approach outperforms state-of-the-art single rating systems and multi-criteria approaches on various performance metrics.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me start by carefully reading through both.
+
+The title is &#34;User Preference Learning in Multi-criteria Recommendations using Stacked Auto Encoders.&#34; That tells me the main focus is on recommendation systems, specifically dealing with multi-criteria preferences and using a type of neural network called stacked autoencoders.
+
+Looking at the abstract, it mentions that Recommender Systems (RS) are essential in e-commerce. The problem addressed is that traditional RS only use single ratings from users, which might not capture their full preferences. However, some businesses like tourism or e-learning allow multiple criteria ratings, which can better reflect user preferences.
+
+The paper proposes an extended version of stacked autoencoders to handle these multi-criteria ratings. They claim it efficiently learns the relationship between each user&#39;s criteria and overall rating. They tested this on real datasets like Yahoo! Movies and TripAdvisor, and their results show it outperforms existing methods.
+
+Now, I need to map this into categories. Let me go through the guidelines provided.
+
+First, core themes: Recommender Systems (RS) is a primary category. The use of Deep Neural Networks, specifically Stacked Autoencoders, is another key point. Since they&#39;re dealing with multiple criteria, that&#39;s a specific aspect within recommendations. Also, since they applied it to real-world datasets and evaluated performance, there are aspects about evaluation metrics and real-world applications.
+
+Other points include the e-commerce domain as RS is essential here, and also mention of tourism and e-learning, which are other domains but maybe not the primary focus here. However, multi-criteria recommendation is a specific area they&#39;re contributing to. The use of neural networks falls under a family of algorithms, so that&#39;s another category.
+
+I should ensure each article goes into at least 8-12 categories, but I don&#39;t want too many or too few. Let me list possible categories:
+
+1. Recommender Systems - core topic.
+2. Multi-criteria Recommendations - specific application area within RS.
+3. Deep Neural Networks - type of algorithm used.
+4. Stacked Autoencoders - specific family of algorithms.
+5. User Preference Learning - aspect of what the system is doing.
+6. Real-world Applications - since they tested on Yahoo! Movies and TripAdvisor.
+7. Evaluation Metrics - because they compared performance against existing methods.
+8. E-commerce - one of the domains where RS are applied.
+9. Tourism - another domain mentioned, though not the main focus.
+10. Multi-Modal Learning - as they&#39;re using multiple criteria which can be seen as different modalities.
+
+Wait, maybe &#34;Multi-criteria&#34; is more accurate than multi-modal? Or do I have both?
+
+Also, aspects like Scalability might come into play if they discuss how their model scales, but the abstract doesn&#39;t mention that. So perhaps not.
+
+I should also consider any specific evaluation aspects beyond just accuracy. The paper mentions various performance metrics, so maybe &#34;Beyond Accuracy&#34; as an aspect? Or is it more about standard evaluation?
+
+Hmm. Let me think again. They say experimental results on real-world datasets demonstrate outperformance in various metrics. So they are evaluating using standard metrics but also perhaps looking at how well their model captures the multi-criteria aspects.
+
+I should make sure not to include too many overlapping categories or ones that aren&#39;t directly relevant.
+
+So compiling a list:
+
+- Recommender Systems (core)
+- Multi-criteria Recommendations (specific area)
+- Deep Neural Networks (algorithm family)
+- Stacked Autoencoders (specific algorithm)
+- User Preference Learning (theme)
+- Real-world Applications (as they used real datasets)
+- Evaluation Metrics (they compared performance)
+- E-commerce (domain where RS is applied)
+- Tourism (another domain but maybe not necessary unless it&#39;s a primary focus)
+- Multi-modal Learning (since multiple criteria can be considered as different modalities)
+
+Wait, the abstract mentions e-commerce as essential for RS and also tourism and e-learning facilitate multi-criteria ratings. So perhaps e-commerce is more central here because that&#39;s where RS are crucial, but they tested on Yahoo! Movies and TripAdvisor, which include both e-commerce (like movies?) or maybe more about entertainment.
+
+Alternatively, &#34;Entertainment&#34; could be another domain if considering movies and trips. But I think sticking with the main domains mentioned: e-commerce, tourism, etc., but perhaps not necessary to split into too many.
+
+I should also consider aspects like whether it&#39;s a real-world application since they used datasets from actual services, so that fits &#34;Real-world Applications.&#34;
+
+Additionally, using neural networks for recommendation falls under algorithm families. So categories like &#34;Deep Learning&#34; or more specifically &#34;Autoencoders&#34; as part of the family.
+
+Wait, &#34;Stacked Autoencoders&#34; is a specific type within Deep Neural Networks, so I should include both if possible.
+
+I think that&#39;s about it. Let me make sure each category is distinct and relevant.
+&lt;/think&gt;
+
+Recommender Systems, Multi-criteria Recommendations, Deep Neural Networks, Stacked Autoencoders, User Preference Learning, Real-world Applications, Evaluation Metrics, E-commerce, Tourism, Multi-modal Learning</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: User Preference Learning in Multi-criteria Recommendations using Stacked Auto Encoders
+Abstract:
+Recommender System (RS) has been an essential component of many businesses, especially in e-commerce domain. RS exploits and processes the preference history (rating, purchase, review, etc.) of users in order to provide the recommendations. A user in traditional RS can provide only one rating value about an item. Deep Neural Networks have been used in this single rating system to improve recommendation accuracy in the recent times. However, the single rating systems are inadequate to understand the users’ preferences about an item. On the other hand, business enterprises such as tourism, e-learning, etc. facilitate users to provide multiple criteria ratings about an item, thus it becomes easier to understand users’ preference over single rating system. In this paper, we propose an extended Stacked Autoencoders (a Deep Neural Network technique) to utilize the multi-criteria ratings. The proposed network is designed to learn the relationship between each user’s criteria ratings and overall rating efficiently. Experimental results on real world datasets (Yahoo! Movies and TripAdvisor) demonstrate that the proposed approach outperforms state-of-the-art single rating systems and multi-criteria approaches on various performance metrics.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on its title and abstract. Let&#39;s start by reading through them carefully.
+
+The title is &#34;User Preference Learning in Multi-criteria Recommendations using Stacked Auto Encoders.&#34; So the main focus here seems to be on recommendation systems that use multiple criteria for user preferences, employing stacked autoencoders which are a type of deep neural network.
+
+Looking at the abstract, it discusses how traditional recommender systems (RS) typically rely on single ratings, but they&#39;re inadequate for understanding users&#39; preferences. The paper proposes using stacked autoencoders to handle multi-criteria ratings in domains like tourism and e-learning. They tested their approach on datasets from Yahoo! Movies and TripAdvisor.
+
+Alright, so the key elements are:
+
+1. **Multi-criteria recommendations**: This is central to the article, as it deals with users providing multiple ratings for items.
+2. **Deep Neural Networks (specifically Stacked Autoencoders)**: The method used here is a type of DNN, so this should be a category.
+3. **Recommender Systems**: Obviously relevant since that&#39;s the core topic.
+4. **User Preference Learning**: This ties into how the system learns from user inputs across multiple criteria.
+5. **Performance Evaluation**: Since they compare their approach with existing methods, evaluation metrics are important here.
+6. **Real-world Applications**: They mention tourism and e-learning, so real-world applications are a key aspect.
+7. **Datasets Used (Yahoo! Movies and TripAdvisor)**: Including specific datasets might help in categorization for users interested in those areas.
+
+Now, considering the guidelines: I should assign at least 8-12 categories. Let&#39;s list possible ones:
+
+- Multi-criteria Recommendations
+- Deep Neural Networks
+- Stacked Autoencoders
+- Recommender Systems
+- User Preference Learning
+- Performance Evaluation
+- Real-world Applications
+- Tourism
+- E-learning
+- Yahoo! Movies
+- TripAdvisor
+
+Wait, that&#39;s 10 categories. Maybe I can add more or refine some.
+
+Looking back at the example categories provided earlier: &#34;Family of algorithm (e.g., Matrix Factorization, Encoder...)&#34;, so Stacked Autoencoders would fit here as part of deep learning algorithms.
+
+&#34;Domain of the problem (e.g., Books, Movies, Healthcare...)&#34;: The domains mentioned are tourism and e-learning, but also they used Yahoo! Movies and TripAdvisor datasets. Maybe including both application domains and specific datasets is useful for users looking into those areas.
+
+&#34;Real word applications (e.g., A/B Test, User Survey)&#34;: They do mention real-world applications in tourism and e-learning, so that&#39;s a good category.
+
+&#34;Evaluation aspects&#34;: The paper talks about performance metrics when comparing with state-of-the-art systems, so evaluation is key here.
+
+Also, considering the abstract mentions &#34;scalability&#34; implicitly through handling multiple criteria and using deep networks, but it&#39;s not explicitly stated. Maybe not necessary unless certain.
+
+Alternatively, perhaps categories like &#34;Implicit Feedback&#34; or &#34;Explicit Feedback&#34; could be relevant, but since they&#39;re dealing with ratings, which are explicit, maybe that&#39;s covered under multi-criteria.
+
+I think the list is solid as it stands: 10 categories covering methodology, application domains, algorithms used, datasets, evaluation, etc. Each category should have enough articles if others are categorized similarly.
+&lt;/think&gt;
+
+Multi-criteria Recommendations, Deep Neural Networks, Stacked Autoencoders, Recommender Systems, User Preference Learning, Performance Evaluation, Real-world Applications, Tourism, E-learning, Yahoo! Movies, TripAdvisor</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

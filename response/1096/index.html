@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: GLAMOR: Graph-based LAnguage MOdel embedding for citation Recommendation
+Abstract:
+Digital publishing’s exponential growth has created vast scholarly collections. Guiding researchers to relevant resources is crucial, and knowledge graphs (KGs) are key tools for unlocking hidden knowledge. However, current methods focus on external links between concepts, ignoring the rich information within individual papers. Challenges like insufficient multi-relational data, name ambiguity, and cold-start issues further limit existing KG-based methods, failing to capture the intricate attributes of diverse entities. To solve these issues, we propose GLAMOR, a robust KG framework encompassing entities e.g., authors, papers, fields of study, and concepts, along with their semantic interconnections. GLAMOR uses a novel random walk-based KG text generation method and then fine-tunes the language model using the generated text. Subsequently, the acquired context-preserving embeddings facilitate superior top@k predictions. Evaluation results on two public benchmark datasets demonstrate our GLAMOR’s superiority against state-of-the-art methods especially in solving the cold-start problem.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m trying to categorize this research article titled &#34;GLAMOR: Graph-based LAnguage MOdel embedding for citation Recommendation.&#34; Let me read through the abstract again to understand what it&#39;s about.
+
+So, the main issue addressed here is helping researchers find relevant resources in a vast scholarly collection. The authors mention that knowledge graphs (KGs) are key tools but point out that current methods focus too much on external links between concepts and ignore the rich information within individual papers. They list some challenges: insufficient multi-relational data, name ambiguity, and cold-start issues.
+
+They propose GLAMOR, a KG framework that includes entities like authors, papers, fields of study, and concepts along with their semantic interconnections. The method uses a random walk-based text generation for the KG and then fine-tunes a language model. This results in embeddings that preserve context, leading to better top@k predictions.
+
+The evaluation shows GLAMOR outperforms existing methods, especially in solving the cold-start problem on two benchmark datasets.
+
+Now, I need to assign categories based on the guidelines provided. Let me think about each possible category:
+
+1. **Knowledge Graphs**: Definitely relevant because the article is all about using KGs for citation recommendation.
+2. **Citation Recommendation**: That&#39;s exactly what the system is designed for.
+3. **Graph-based Methods**: The approach uses a graph-based framework, so this fits.
+4. **Language Models**: They use a language model that&#39;s fine-tuned with generated text from KGs.
+5. **Random Walk**: The method includes a novel random walk-based KG text generation method.
+6. **Cold Start Problem**: The article addresses and solves this issue effectively.
+7. **Embeddings**: They generate context-preserving embeddings as part of the process.
+8. **Research Tools/Methods**: It&#39;s about aiding researchers, so relevant here.
+9. **Scholarly Publishing**: Dealing with digital publishing growth, so fits this category.
+
+I think these cover the main aspects of the article. Maybe I can consider adding more if needed, but according to the guidelines, 8-12 categories are sufficient. Let me see if any others apply:
+
+- It&#39;s about recommendation systems in general, maybe &#34;Recommendation Systems&#34; as a broader category.
+- The problem domain is scholarly resources or academic research.
+- They mention using benchmark datasets, so perhaps &#34;Benchmark Datasets.&#34;
+- Evaluation aspects like performance metrics could be another category.
+
+Wait, the user provided examples and guidelines. Let me check if I can map these into existing categories or propose new ones. For instance:
+
+- **Recommendation Systems** is broader but relevant.
+- **Scholarly Resources** is a specific domain.
+- **Benchmark Datasets** is a type of evaluation aspect, maybe under &#34;Evaluation Metrics.&#34;
+- **Performance Evaluation** could be another category focusing on how they tested their method.
+
+But perhaps I should stick to the examples provided and not overcomplicate. The initial list covers the core aspects without being too broad or overlapping. So, I&#39;ll go with the first nine categories.
+&lt;/think&gt;
+
+Knowledge Graphs, Citation Recommendation, Graph-based Methods, Language Models, Random Walk, Cold Start Problem, Embeddings, Research Tools/Methods, Scholarly Publishing</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: GLAMOR: Graph-based LAnguage MOdel embedding for citation Recommendation
+Abstract:
+Digital publishing’s exponential growth has created vast scholarly collections. Guiding researchers to relevant resources is crucial, and knowledge graphs (KGs) are key tools for unlocking hidden knowledge. However, current methods focus on external links between concepts, ignoring the rich information within individual papers. Challenges like insufficient multi-relational data, name ambiguity, and cold-start issues further limit existing KG-based methods, failing to capture the intricate attributes of diverse entities. To solve these issues, we propose GLAMOR, a robust KG framework encompassing entities e.g., authors, papers, fields of study, and concepts, along with their semantic interconnections. GLAMOR uses a novel random walk-based KG text generation method and then fine-tunes the language model using the generated text. Subsequently, the acquired context-preserving embeddings facilitate superior top@k predictions. Evaluation results on two public benchmark datasets demonstrate our GLAMOR’s superiority against state-of-the-art methods especially in solving the cold-start problem.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article about GLAMOR, a graph-based language model for citation recommendations. Let me go through it step by step.
+
+First, looking at the title: &#34;GLAMOR: Graph-based LAnguage MOdel embedding for citation Recommendation.&#34; It clearly mentions graphs and language models, so categories related to those come to mind. I&#39;ll note down &#34;Graph-Based&#34; and &#34;Language Model.&#34;
+
+The abstract talks about KGs (Knowledge Graphs) being used for scholarly resources. So, &#34;Knowledge Graph&#34; is definitely a category here. They also mention it&#39;s for citation recommendation, which directly ties into the application area of citations, so &#34;Citation Recommendation&#34; should be included.
+
+GLAMOR uses random walk-based methods to generate text, and then fine-tunes language models. This indicates techniques like Random Walks and Fine-Tuning, so I&#39;ll add those as categories.
+
+The abstract mentions challenges like cold-start issues, which is a common problem in recommendation systems. So &#34;Cold Start&#34; is another category to include.
+
+They evaluate on benchmark datasets and show superiority against state-of-the-art methods. Evaluation Metrics are important here, so that&#39;s another category.
+
+Looking deeper, they mention entities like authors, papers, fields of study, etc., which suggests an Entity-Embedding approach, so I&#39;ll add &#34;Entity Embedding.&#34;
+
+The use of semantic interconnections in the KG implies a focus on Semantics, so that&#39;s another relevant category.
+
+Since it&#39;s applied to scholarly articles and recommendations, the domain is Scholarly Publishing. Including that makes sense for user navigation.
+
+Additionally, since it&#39;s about recommendation systems overall, &#34;Recommendation Systems&#34; should be a broad category here.
+
+I think I have covered all the key points from the title and abstract. Now, let me ensure there are enough categories—looks like I have nine, which meets the minimum requirement. Also, checking for clarity and relevance to make sure users can easily find this article through these categories.
+&lt;/think&gt;
+
+Graph-Based, Language Model, Knowledge Graph, Citation Recommendation, Random Walks, Fine-Tuning, Cold Start, Evaluation Metrics, Entity Embedding, Semantics, Scholarly Publishing, Recommendation Systems</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

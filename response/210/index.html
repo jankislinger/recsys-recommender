@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Pairwise Preferences Based Matrix Factorization and Nearest Neighbor Recommendation Techniques
+Abstract:
+Many recommendation techniques rely on the knowledge of preferences data in the form of ratings for items. In this paper, we focus on pairwise preferences as an alternative way for acquiring user preferences and building recommendations. In our scenario, users provide pairwise preference scores for a set of item pairs, indicating how much one item in each pair is preferred to the other. We propose a matrix factorization (MF) and a nearest neighbor (NN) prediction techniques for pairwise preference scores. Our MF solution maps users and items pairs to a joint latent features vector space, while the proposed NN algorithm leverages specific user-to-user similarity functions well suited for comparing users preferences of that type. We compare our approaches to state of the art solutions and show that our solutions produce more accurate pairwise preferences and ranking predictions.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me start by reading through the provided information carefully.
+
+The title is &#34;Pairwise Preferences Based Matrix Factorization and Nearest Neighbor Recommendation Techniques.&#34; From this, I gather that the paper discusses recommendation techniques using two methods: matrix factorization (MF) and nearest neighbor (NN). The focus seems to be on pairwise preferences, which means users are comparing items against each other rather than providing absolute ratings.
+
+Looking at the abstract, it elaborates that many recommendation systems use rating data, but this paper uses pairwise preferences. Users provide scores indicating their preference between item pairs. The authors propose MF and NN techniques specifically for these pairwise scores. The MF approach maps users and item pairs into a latent feature space, while the NN method uses user similarity functions tailored for pairwise preferences. They also compare their approaches to existing state-of-the-art solutions and find that their methods improve accuracy in predictions.
+
+Now, I need to assign categories based on this information. Let me go through each potential category one by one.
+
+1. **Matrix Factorization**: Definitely relevant since the paper proposes an MF technique for pairwise preferences.
+2. **Nearest Neighbor Algorithms**: Also directly mentioned as a proposed method.
+3. **Recommendation Systems**: The main focus of the article, so this is essential.
+4. **Pairwise Preferences**: This is a specific aspect discussed in both title and abstract.
+5. **User Preference Modeling**: Since the paper deals with modeling user preferences through pairwise comparisons.
+6. **Latent Features**: The MF technique maps users and items into latent feature spaces, so this fits.
+7. **Collaborative Filtering**: Both MF and NN are common methods in collaborative filtering.
+8. **Algorithm Comparison**: They compare their approaches to state-of-the-art solutions, so this is applicable.
+
+I should ensure I&#39;m covering both the specific techniques (MF, NN) and broader areas like recommendation systems and user preferences. Also, considering aspects like latent features and collaborative filtering adds more depth. Algorithm comparison is relevant since they evaluate their methods against existing ones.
+
+Are there any other categories that might fit? Let me think—perhaps &#34;Evaluation Metrics&#34; if they discuss specific metrics beyond accuracy, but the abstract mentions accuracy in predictions but doesn&#39;t specify further. Maybe not necessary unless it&#39;s a key focus. Also, &#34;Scalability&#34; isn&#39;t mentioned, so I shouldn&#39;t include it without evidence.
+
+I should avoid categories that are too vague or unrelated. For example, &#34;Healthcare&#34; or &#34;Education&#34; don&#39;t apply here since the domain isn&#39;t specified. The same goes for &#34;Cold Start&#34;—the paper doesn&#39;t address new user/item scenarios specifically.
+
+So, my final list includes all the mentioned relevant categories without overcomplicating it.
+&lt;/think&gt;
+
+Matrix Factorization, Nearest Neighbor Algorithms, Recommendation Systems, Pairwise Preferences, User Preference Modeling, Latent Features, Collaborative Filtering, Algorithm Comparison</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Pairwise Preferences Based Matrix Factorization and Nearest Neighbor Recommendation Techniques
+Abstract:
+Many recommendation techniques rely on the knowledge of preferences data in the form of ratings for items. In this paper, we focus on pairwise preferences as an alternative way for acquiring user preferences and building recommendations. In our scenario, users provide pairwise preference scores for a set of item pairs, indicating how much one item in each pair is preferred to the other. We propose a matrix factorization (MF) and a nearest neighbor (NN) prediction techniques for pairwise preference scores. Our MF solution maps users and items pairs to a joint latent features vector space, while the proposed NN algorithm leverages specific user-to-user similarity functions well suited for comparing users preferences of that type. We compare our approaches to state of the art solutions and show that our solutions produce more accurate pairwise preferences and ranking predictions.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on its title and abstract. The title is &#34;Pairwise Preferences Based Matrix Factorization and Nearest Neighbor Recommendation Techniques.&#34; So, the main topics here are matrix factorization and nearest neighbor methods in recommendation systems.
+
+Looking at the abstract, the paper focuses on pairwise preferences as an alternative to ratings. They propose both MF and NN techniques for handling these preferences. The MF part maps users and item pairs into a latent feature space, while the NN approach uses user similarity functions tailored for pairwise data. They compare their methods with existing ones and show improved accuracy.
+
+So, starting with categories: Matrix Factorization is definitely one since it&#39;s explicitly mentioned. Nearest Neighbor is another as it&#39;s part of their proposed method. Pairwise Preferences should be a category because that&#39;s the type of preference data they use. Recommendation Techniques is broad but relevant here.
+
+Next, the domain seems to be recommendation systems in general, so I&#39;ll add that. Latent Features comes up with MF, so that&#39;s another keyword. User Similarity is part of their NN approach, so that fits. Accuracy is a key metric they mention improving, so that should be included. Comparison Studies are present since they compare their methods to state-of-the-art solutions.
+
+I&#39;m trying to think if there are other relevant categories. They don&#39;t specify a particular domain like movies or books, so maybe just the general recommendation space. The techniques used include both MF and NN, which I&#39;ve already listed. Evaluation is implied through accuracy comparison, but since they focus on pairwise preferences specifically, that&#39;s covered.
+
+I should make sure each category is relevant and that I don&#39;t have too few or too many. Let me see: Matrix Factorization, Nearest Neighbor, Pairwise Preferences, Recommendation Techniques, Latent Features, User Similarity, Accuracy, Comparison Studies. That makes 8 categories. It feels balanced and covers both the methods and evaluation aspects.
+&lt;/think&gt;
+
+Matrix Factorization, Nearest Neighbor, Pairwise Preferences, Recommendation Techniques, Latent Features, User Similarity, Accuracy, Comparison Studies</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

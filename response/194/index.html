@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:70b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Package Recommendation Framework for Trip Planning Activities
+Abstract:
+Classical recommender systems provide users with ranked lists of recommendations, where each one consists of a single item. However, these ranked lists are not suitable for applications such as trip planning, which deal with heterogeneous items. In this paper, we focus on the problem of recommending a set of packages to the user, where each package is constituted with a set of different Points of Interest that may constitute a tour. Given a collection of POIs, our goal is to recommend the most interesting packages for the user, where each package satisfies the budget constraints. We formally define the problem and we present a novel composite recommendation system, inspired from composite retrieval. Experimental evaluation of our proposed system, using a real-world dataset demonstrates its quality and its ability to improve both diversity and relevance of recommendations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article into multiple relevant categories based on the provided guidelines. Let me start by understanding what the article is about.
+
+The title is &#34;A Package Recommendation Framework for Trip Planning Activities.&#34; From that alone, it seems related to recommendation systems, specifically in the travel domain. The abstract mentions that classical recommender systems offer single-item ranked lists, but trip planning involves heterogeneous items like Points of Interest (POIs). So they&#39;re proposing a system that recommends packages, each consisting of multiple POIs, while considering budget constraints.
+
+Okay, so first, I should identify the core themes and then map them to appropriate categories. The user mentioned examples include family of algorithms, domains, specific recommendation aspects, evaluation methods, real-world applications, etc.
+
+Let&#39;s break it down:
+
+1. **Domain**: The article is about trip planning, which falls under Travel &amp; Tourism. So &#34;Travel &amp; Tourism&#34; would be a category.
+
+2. **Problem Type**: They&#39;re dealing with package recommendations, specifically sets of POIs that form a tour. This seems like a Group Recommendation or Composite Recommendation scenario. Maybe both categories apply here.
+
+3. **Recommendation Aspect**: The system focuses on sets of items rather than single items, so &#34;Set-based Recommendations&#34; makes sense. Also, they mention addressing cold start problems implicitly by handling diverse items, but the abstract doesn&#39;t explicitly state that, so maybe not Cold Start unless it&#39;s clear from the context. However, since it&#39;s a new framework, I might hold off on that unless necessary.
+
+4. **Evaluation Aspects**: The evaluation shows improvement in diversity and relevance, which are key metrics beyond just accuracy. So &#34;Diversity of Recommendations&#34; and &#34;Beyond Accuracy&#34; should be included.
+
+5. **Application Type**: It&#39;s applied in real-world scenarios with a dataset, so &#34;Real-World Applications&#34; is appropriate. They might have done experiments that involve user surveys or A/B testing, but the abstract mentions using a real-world dataset without specifying, so maybe just stick to &#34;Real-World Applications.&#34;
+
+6. **Methodology/Algorithm**: The paper presents a novel composite recommendation system inspired by composite retrieval. Composite Retrieval is a specific approach, so that&#39;s another category.
+
+7. **Other Considerations**: Budget constraints are part of the problem formulation, indicating that it handles multiple constraints or attributes, which might fall under &#34;Multi-Attribute Recommendations.&#34;
+
+Putting this all together, I can list out the categories:
+
+- Travel &amp; Tourism (Domain)
+- Composite Recommendation (since they&#39;re recommending packages)
+- Group Recommendations (as it&#39;s about sets for a group activity like trip planning)
+- Set-based Recommendations (recommending sets of POIs)
+- Diversity of Recommendations
+- Beyond Accuracy
+- Real-World Applications
+- Budget Constraints
+- Multi-Attribute Recommendations
+- Composite Retrieval
+
+I think these cover the main points. I have 10 categories, which is within the suggested 8-12 range. Let me see if any others apply or if some can be merged. Maybe &#34;Composite Recommendation&#34; and &#34;Composite Retrieval&#34; are both relevant but distinct enough. Budget Constraints might tie into Multi-Attribute Recommendations, but it&#39;s specific enough to warrant its own category.
+
+I don&#39;t see a mention of specific algorithms like Matrix Factorization or Encoders, so those aren&#39;t applicable here. Also, there&#39;s no mention of scalability issues or Web Systems, so I can skip those.
+
+This should provide a comprehensive and balanced categorization that aligns with user needs.
+&lt;/think&gt;
+
+Travel &amp; Tourism, Composite Recommendation, Group Recommendations, Set-based Recommendations, Diversity of Recommendations, Beyond Accuracy, Real-World Applications, Budget Constraints, Multi-Attribute Recommendations, Composite Retrieval</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: A Package Recommendation Framework for Trip Planning Activities
+Abstract:
+Classical recommender systems provide users with ranked lists of recommendations, where each one consists of a single item. However, these ranked lists are not suitable for applications such as trip planning, which deal with heterogeneous items. In this paper, we focus on the problem of recommending a set of packages to the user, where each package is constituted with a set of different Points of Interest that may constitute a tour. Given a collection of POIs, our goal is to recommend the most interesting packages for the user, where each package satisfies the budget constraints. We formally define the problem and we present a novel composite recommendation system, inspired from composite retrieval. Experimental evaluation of our proposed system, using a real-world dataset demonstrates its quality and its ability to improve both diversity and relevance of recommendations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about a package recommendation framework for trip planning. The title mentions &#34;Package Recommendation Framework&#34; and it&#39;s focused on trip planning activities. The abstract explains that classical recommenders give single-item lists, which aren&#39;t suitable here because they need sets of different Points of Interest (POIs) that form tours. So, the key points are:
+
+1. **Recommendation Systems**: It&#39;s about recommendation systems but specifically for packages, not individual items.
+2. **Tourism/Travel Domain**: The application is in trip planning, so it&#39;s related to tourism or travel.
+3. **Composite Recommendations**: They use a composite retrieval approach, which suggests the category &#34;Composite Retrieval.&#34;
+4. **Real-World Applications**: They used a real dataset and tested with A/B testing and user surveys, so those categories apply.
+5. **Budget Constraints**: The framework considers budget, so that&#39;s a specific aspect.
+6. **Evaluation Aspects**: They focused on improving diversity and relevance, which are evaluation metrics beyond just accuracy.
+
+I need to make sure each category is relevant and aligns with the guidelines. The user wants multiple categories for discoverability, so I&#39;ll list all these aspects. Also, ensuring the labels are clear like &#34;Tourism/Travel&#34; instead of something too vague.
+&lt;/think&gt;
+
+Composite Retrieval, Tourism/Travel, Package Recommendation, Real-World Applications, A/B Test, User Survey, Budget Constraints, Composite Recommendations, Travel Planning, Beyond Accuracy</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

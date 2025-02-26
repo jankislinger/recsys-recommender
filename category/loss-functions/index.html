@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/explainability/">Explainability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Scalable Cross-Entropy Loss for Sequential Recommendations with Large Item Catalogs (2024)</h3>
+    <p><strong>Authors:</strong> Gleb Mezentsev, Danil Gusak, Ivan Oseledets, Evgeny Frolov</p>
+    <p>Scalability issue plays a crucial role in productionizing modern recommender systems. Even lightweight architectures may suffer from high computational overload due to intermediate calculations, limiting their practicality in real-world applications. Specifically, applying full Cross-Entropy (CE) loss often yields state-of-the-art performance in terms of recommendations quality. Still, it suffers from excessive GPU memory utilization when dealing with large item catalogs. This paper introduces a novel Scalable Cross-Entropy (SCE) loss function in the sequential learning setup. It approximates the CE loss for datasets with large-size catalogs, enhancing both time efficiency and memory usage without compromising recommendations quality. Unlike traditional negative sampling methods, our approach utilizes a selective GPU-efficient computation strategy, focusing on the most informative elements of the catalog, particularly those most likely to be false positives. This is achieved by approximating the softmax distribution over a subset of the model outputs through the maximum inner product search. Experimental results on multiple datasets demonstrate the effectiveness of SCE in reducing peak memory usage by a factor of up to 100 compared to the alternatives, retaining or even exceeding their metrics values. The proposed approach also opens new perspectives for large-scale developments in different domains, such as large language models.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Loss Functions, Scalability, Sequential Recommendations, GPU Memory Optimization, Large Item Catalogs, Efficiency and Performance, False Positives Handling, Max Inner Product Search (MIPS), Large Language Models (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1059/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Learning From Negative User Feedback and Measuring Responsiveness for Sequential Recommenders (2023)</h3>
+    <p><strong>Authors:</strong> Shuo Chang, Yueqi Wang, Elaine Ya Le, Shane Li, Yaping Zhang, Xujian Liang, Yoni Halpern, Shuchao Bi, Longfei Li, Jingchen Feng, Min-Cheng Huang, Alex Beutel</p>
+    <p>Sequential recommenders have been widely used in industry due to their strength in modeling user preferences. While these models excel at learning a user’s positive interests, less attention has been paid to learn from negative user feedback. Negative user feedback is an important lever of user control, and comes with an expectation that recommenders should respond quickly and reduce similar recommendations to the user. However, negative feedback signals are often ignored in the training objective of sequential recommenders, which primarily aim at predicting positive user interactions. In this work, we incorporate explicit and implicit negative user feedback into the training objective of sequential recommenders using a “not-to-recommend” loss function that optimizes for the log likelihood of not recommending items with negative feedback. We demonstrate the effectiveness of this approach using live experiments on a large-scale industrial recommender system. Furthermore, we address a challenge in measuring recommender responsiveness to negative feedback by developing a counterfactual simulation framework to compare recommender responses between different user actions, showing improved responsiveness from the modeling change.</p>
+    <p><strong>Categories:</strong> Negative Feedback, Sequential Recommenders, Model Training, Loss Functions, User Feedback, Responsiveness, Real-World Applications, Evaluation Methods, Beyond Accuracy, Recommendation Systems (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/996/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Power Loss Function in Neural Networks for Predicting Click-Through Rate (2023)</h3>
+    <p><strong>Authors:</strong> Ergun Biçici</p>
+    <p>Loss functions guide machine learning models towards concentrating on the error most important to improve upon.  We introduce power loss functions for neural networks and apply them on imbalanced click-through rate datasets. Power loss functions decrease the loss for confident predictions and increase the loss for error-prone predictions. They improve both AUC and F1 and produce better calibrated results.  We obtain improvements in the results on four different classifiers and on two different datasets. We obtain significant improvements in AUC that reach $0.44\%$ for DeepFM on the Avazu dataset.</p>
+    <p><strong>Categories:</strong> Neural Networks, Click-Through Rate, Deep Learning, Loss Functions, Imbalanced Data, Recommendation Systems, AUC, F1 Score, Evaluation Metrics, Digital Advertising (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/963/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Turning Dross Into Gold Loss: is BERT4Rec really better than SASRec? (2023)</h3>
+    <p><strong>Authors:</strong> Alexey Vasilev, Anton Klenitskiy</p>
+    <p>Recently sequential recommendations and next-item prediction task has become increasingly popular in the field of recommender systems. Currently, two state-of-the-art baselines are Transformer-based models SASRec and BERT4Rec. Over the past few years, there have been quite a few publications comparing these two algorithms and proposing new state-of-the-art models. In most of the publications, BERT4Rec achieves better performance than SASRec. But BERT4Rec uses cross-entropy over softmax for all items, while SASRec uses negative sampling and calculates binary cross-entropy loss for one positive and one negative item. In our work, we show that if both models are trained with the same loss, which is used by BERT4Rec, then SASRec will significantly outperform BERT4Rec both in terms of quality and training speed. In addition, we show that SASRec could be effectively trained with negative sampling and still outperform BERT4Rec, but the number of negative examples should be much larger than one.</p>
+    <p><strong>Categories:</strong> Sequential Recommendations, Transformer-Based Models, BERT4Rec, SASRec, Algorithm Comparison, Loss Functions, Evaluation Metrics, State-of-the-Art Models, Training Efficiency, Model Performance, Recommender Systems, Negative Sampling, Cross-Entropy Loss, Binary Cross-Entropy Loss (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/966/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Countering Popularity Bias by Regularizing Score Differences (2022)</h3>
+    <p><strong>Authors:</strong> Sung Min Cho, Wondo Rhee, Bongwon Suh</p>
+    <p>Recommendation system often suffers from popularity bias. Often the training data inherently exhibits long-tail distribution in item popularity (data bias). Moreover, the recommendation systems could give unfairly higher recommendation scores to popular items even among items a user equally liked, resulting in over-recommendation of popular items (model bias). In this study we propose a novel method to reduce the model bias while maintaining accuracy by directly regularizing the recommendation scores to be equal across items a user preferred. Akin to contrastive learning, we extend the widely used pairwise loss (BPR loss) which maximizes the score differences between preferred and unpreferred items, with a regularization term that minimizes the score differences within preferred and unpreferred items, respectively, thereby achieving both high debias and high accuracy performance with no additional training. To test the effectiveness of the proposed method, we design an experiment using a synthetic dataset which induces model bias with baseline training; we showed applying the proposed method resulted in drastic reduction of model bias while maintaining accuracy. Comprehensive comparison with earlier debias methods showed the proposed method had advantages in terms of computational validity and efficiency. Further empirical experiments utilizing four benchmark datasets and four recommendation models indicated the proposed method showed general improvements over performances of earlier debias methods. We hope that our method could help users enjoy diverse recommendations promoting serendipitous findings. Code available at https://github.com/stillpsy/popbias.</p>
+    <p><strong>Categories:</strong> Popularity Bias, Recommendation Systems, Regularization, Pairwise Loss, Loss Functions, Evaluation Metrics, Fairness, Diversity of Recommendations, Model Accuracy, Bias Mitigation, Benchmark Datasets (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/753/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Modeling Two-Way Selection Preference for Person-Job Fit (2022)</h3>
+    <p><strong>Authors:</strong> Yupeng Hou, Wayne Xin Zhao, Chen Yang, Yang Song, Tao Zhang, Ji-Rong Wen</p>
+    <p>Person-job fit is the core technique of online recruitment platforms, which can improve the efficiency of recruitment by accurately matching the job positions with the job seekers. Existing works mainly focus on modeling the unidirectional process or overall matching. However, recruitment is a two-way selection process, which means that both candidate and employer involved in the interaction should meet the expectation of each other, instead of unilateral satisfaction. In this paper, we propose a dual-perspective graph representation learning approach to model directed interactions between candidates and jobs. To model the two-way selection preference from the dual-perspective of job seekers and employers, we incorporate two different nodes for each candidate (or job) and characterize both successful matching and failed matching via a unified dual-perspective interaction graph. To learn dual-perspective node representations effectively, we design an effective optimization algorithm, which involves a quadruple-based loss and a dual-perspective contrastive learning loss. Extensive experiments on three large real-world recruitment datasets have shown the effectiveness of our approach. Our code is available at https://github.com/RUCAIBox/DPGNN .</p>
+    <p><strong>Categories:</strong> Graph-Based Methods, Recommendation Systems, Recruitment, Real-World Applications, Evaluation Methods, Mutual Recommendations, Loss Functions, Dual-Perspective Modeling, Multi-View Learning. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/771/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A Method to Anonymize Business Metrics to Publishing Implicit Feedback Datasets (2020)</h3>
+    <p><strong>Authors:</strong> Takanori Maehara, Yoshifumi Seki</p>
+    <p>This paper shows a method for building and publishing datasets in commercial services. Datasets contribute to the development of research in machine learning and recommender systems. In particular, because recommender systems play a central role in many commercial services, publishing datasets from the services are in great demand from the recommender system community. However, the publication of datasets by commercial services may have some business risks to those companies. To publish a dataset, this must be approved by a business manager of the service. Because many business managers are not specialists in machine learning or recommender systems, the researchers are responsible for explaining to them the risks and benefits.<br>We first summarize three challenges in building datasets from commercial services: (1) anonymize the business metrics, (2) maintain fairness, and (3) reduce the popularity bias. Then, we formulate the problem of building and publishing datasets as an optimization problem that seeks the sampling weight of users, where the challenges are encoded as appropriate loss functions. We applied our method to build datasets from the raw data of our real-world mobile news delivery service. The raw data has more than 1,000,000 users with 100,000,000 interactions. Each dataset was built in less than 10 minutes. We discussed the properties of our method by checking the statistics of the datasets and the performances of typical recommender system algorithms.</p>
+    <p><strong>Categories:</strong> Anonymization Techniques, Data Privacy, Recommender Systems, Real-World Applications, Fairness, Optimization Techniques, Loss Functions, Machine Learning Datasets, Scalability, Evaluation Metrics, Stakeholder Communication (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/521/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Adaptive Pointwise-Pairwise Learning-to-Rank for Content-based Personalized Recommendation (2020)</h3>
+    <p><strong>Authors:</strong> Jean-Michel Renders, Yagmur Gizem Cinar</p>
+    <p>This paper extends the standard pointwise and pairwise paradigms for learning-to-rank in the context of personalized recommendation, by considering these two approaches as two extremes of a continuum of possible strategies. It basically consists of a surrogate loss that models how to select and combine these two approaches adaptively, depending on the context (query or user, pair of items, etc.). In other words, given a training instance, which is typically a triplet (a query/user and two items with different preferences or relevance grades), the strategy adaptively determines whether it is better to focus on the “most preferred” item (pointwise - positive instance), on the “less preferred” one (pointwise - negative instance) or on the pair (pairwise), or on anything else in between these 3 extreme alternatives. We formulate this adaptive strategy as minimizing a particular loss function that generalizes simultaneously the traditional pointwise and pairwise loss functions (negative log-likelihood) through a mixture coefficient. This coefficient is formulated as a learnable function of the features associated to the triplet. Experimental results on several real-world news recommendation datasets show clear improvements over several pointwise, pairwise, and listwise approaches.</p>
+    <p><strong>Categories:</strong> Learning-to-Rank, Personalized Recommendation, Pointwise Learning, Pairwise Learning, Adaptive Methods, Contextual Modeling, Loss Functions, Triplet Learning, News Recommendations, Relevance Ranking, Preference Modeling, Beyond Accuracy, Evaluation Metrics, Content-Based Recommendation (<i>deepseek-r1:70b</i>)</p>
+    <p><a href="/recsys-recommender/response/565/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Addressing Delayed Feedback for Continuous Training with Neural Networks in CTR prediction (2019)</h3>
+    <p><strong>Authors:</strong> Deepak Dilipkumar, Pranay Kumar Myana, Lucas Theis, Wenzhe Shi, Sofia Ira Ktena, Steven Yoo, Ferenc Huszár, Alykhan Tejani</p>
+    <p>One of the challenges in display advertising is that the distribution of features and click through rate (CTR) can exhibit large shifts over time due to seasonality, changes to ad campaigns and other factors. The predominant strategy to keep up with these shifts is to train predictive models continuously, on fresh data, in order to prevent them from becoming stale. However, in many ad systems positive labels are only observed after a possibly long and random delay. These delayed labels pose a challenge to data freshness in continuous training: fresh data may not have complete label information at the time they are ingested by the training algorithm. Naive strategies which consider any data point a negative example until a positive label becomes available tend to underestimate CTR, resulting in inferior user experience and suboptimal performance for advertisers. The focus of this paper is to identify the best combination of loss functions and models that enable large-scale learning from a continuous stream of data in the presence of delayed labels. In this work, we compare 5 different loss functions, 3 of them applied to this problem for the first time. We benchmark their performance in offline settings on both public and proprietary datasets in conjunction with shallow and deep model architectures. We also discuss the engineering cost associated with implementing each loss function in a production environment. Finally, we carried out online experiments with the top performing methods, in order to validate their performance in a continuous training scheme. While training on 668 million in-house data points offline, our proposed methods outperform previous state-of-the-art by 3% relative cross entropy (RCE). During online experiments, we observed 55% gain in revenue per thousand requests (RPMq) against naive log loss. ,</p>
+    <p><strong>Categories:</strong> Neural Networks, Loss Functions, Display Advertising, CTR Prediction, Advertising Systems, Delayed Feedback, Continuous Training, Offline Evaluation, Online Experiments, A/B Testing, Production Systems, Engineering Costs, Time-Aware Models, Stream Learning (<i>deepseek-r1:70b</i>)</p>
+    <p><a href="/recsys-recommender/response/431/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Augmented Negative Sampling for Collaborative Filtering
+Abstract:
+Negative sampling is essential for implicit-feedback-based collaborative filtering, which is used to constitute negative signals from massive unlabeled data to guide supervised learning. The state-of-the-art idea is to utilize hard negative samples that carry more useful information to form a better decision boundary. To balance efficiency and effectiveness, the vast majority of existing methods follow the two-pass approach, in which the first pass samples a fixed number of unobserved items by a simple static distribution and then the second pass selects the final negative items using a more sophisticated negative sampling strategy. However, selecting negative samples from the original items from a dataset is inherently limited due to the limited available choices, and thus may not be able to contrast positive samples well. In this paper, we confirm this observation via carefully designed experiments and introduce two major limitations of existing solutions: ambiguous trap and information discrimination. Our response to such limitations is to introduce “augmented” negative samples that may not exist in the original dataset. This direction renders a substantial technical challenge because constructing unconstrained negative samples may introduce excessive noise that eventually distorts the decision boundary. To this end, we introduce a novel generic augmented negative sampling (ANS) paradigm and provide a concrete instantiation. First, we disentangle the hard and easy factors of negative items. Next, we generate new candidate negative samples by augmenting only the easy factors in a regulated manner: the direction and magnitude of the augmentation are carefully calibrated. Finally, we design an advanced negative sampling strategy to identify the final augmented negative samples, which considers not only the score used in existing methods but also a new metric called augmentation gain. Extensive experiments on five real-world datasets demonstrate that our method significantly outperforms state-of-the-art baselines. Our code is publicly available at https://anonymous.4open.science/r/ANS-Recbole-B070/.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Augmented Negative Sampling for Collaborative Filtering.&#34; The goal is to assign it to multiple relevant categories based on the guidelines provided.
+
+First, looking at the title, it mentions collaborative filtering and negative sampling. From my understanding, collaborative filtering is a technique used in recommendation systems, so that&#39;s one category right there: Collaborative Filtering.
+
+The abstract talks about implicit feedback, which is another key concept in recommendation systems where user preferences are inferred from their actions rather than explicit ratings. So Implicit Feedback should be included as well.
+
+Negative sampling is a method used to handle the imbalance between positive and negative instances, especially important in implicit feedback scenarios. The paper introduces &#34;augmented&#34; negative samples that may not exist in the original dataset, which is an innovative approach. This suggests categories like Negative Sampling and Augmented Data since they&#39;re enhancing the data used for training.
+
+The paper addresses challenges in recommendation systems, so that&#39;s another category: Recommendation Systems. They also discuss real-world applications with experiments on five datasets, indicating Real-World Applications.
+
+Looking at the evaluation aspect, the authors mention extensive experiments comparing their method against state-of-the-art baselines. This points to categories like Evaluation Metrics and Experimental Design.
+
+The technical approach involves a new paradigm called ANS (Augmented Negative Sampling), which is a family of algorithms, so Algorithm Innovation fits here. The paper also introduces a new metric called augmentation gain, showing Innovation in Metrics.
+
+Considering the problem domain, it&#39;s within the context of recommendation systems, but more specifically about improving the learning process through better negative sampling. So I think the main areas are Algorithm Family and Aspects of Evaluation.
+
+Putting it all together, the categories should cover the specific techniques (Collaborative Filtering, Negative Sampling, Augmented Data), the application area (Recommendation Systems), the methodological aspects (Algorithm Innovation, Experimental Design, Evaluation Metrics), and any unique contributions (Innovation in Metrics). I also need to ensure that each category is clear and user-friendly.
+
+I think that&#39;s a solid list covering both broad and specific categories relevant to the article.
+&lt;/think&gt;
+
+Collaborative Filtering, Negative Sampling, Augmented Data, Recommendation Systems, Real-World Applications, Algorithm Innovation, Experimental Design, Evaluation Metrics, Innovation in Metrics</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

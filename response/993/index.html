@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Beyond Labels: Leveraging Deep Learning and LLMs for Content Metadata
+Abstract:
+Content metadata plays a very important role in movie recommender systems as it provides valuable information about various aspects of a movie such as genre, cast, plot synopsis, box office summary, etc. Analyzing the metadata can help understand the user preferences and generate personalized recommendations catering to the niche tastes of the users. It can also help with content cold starting when the recommender system has little or no interaction data available to perform collaborative filtering. In this talk, we will focus on one particular type of metadata – genre labels. Genre labels associated with a movie or a TV series such as “horror” or “comedy” or “romance” help categorize a collection of movies into different themes and correspondingly setting up the audience expectation for a title. We present some of the challenges associated with using genre label information via traditional methods and propose a new way of examining the genre information that we call as the Genre Spectrum. The Genre Spectrum helps capture the various nuanced genres in a title and our offline and online experiments corroborate the effectiveness of the approach.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Beyond Labels: Leveraging Deep Learning and LLMs for Content Metadata.&#34; Hmm, that suggests it&#39;s about using advanced techniques like deep learning and large language models (LLMs) in handling content metadata. The abstract expands on this, mentioning movie recommender systems where content metadata is crucial because it provides details like genre, cast, plot, etc.
+
+The article talks about how analyzing metadata helps understand user preferences for personalized recommendations, especially during the cold start problem when there&#39;s little interaction data. They focus on genre labels and present challenges with traditional methods, proposing a new approach called Genre Spectrum to capture nuanced genres more effectively.
+
+Now, I need to map this into categories. The key elements here are:
+
+1. **Deep Learning**: Since they&#39;re leveraging deep learning techniques.
+2. **Large Language Models (LLMs)**: They mention using LLMs for metadata analysis.
+3. **Recommendation Systems**: The application is in movie recommender systems, so that&#39;s a primary category.
+4. **Content Metadata**: This is central to the article.
+5. **Genre Analysis**: They focus on genre labels and propose a new method called Genre Spectrum.
+6. **Cold Start Problem**: Addressing scenarios with little interaction data, which is a common issue in recommendation systems.
+7. **Personalized Recommendations**: The goal of their approach.
+8. **User Preferences**: Understanding user preferences through metadata analysis.
+9. **Offline and Online Experiments**: They conducted experiments to validate their approach.
+
+Now, considering the categories provided as examples: 
+
+- Family of algorithm (e.g., Matrix Factorization, Encoder, etc.)
+- Domain of problem (Movies here)
+- Specific recommendation aspects (Cold Start)
+- Evaluation aspects (like effectiveness, diversity)
+- Real-world applications (A/B tests, user surveys)
+
+Looking at this, I can assign the following categories:
+
+1. **Deep Learning**: Definitely relevant.
+2. **Large Language Models (LLMs)**: They&#39;re using LLMs for analysis.
+3. **Recommendation Systems**: Core application area.
+4. **Content Metadata**: Central to their work.
+5. **Genre Analysis**: Focus on genres and improving genre-based recommendations.
+6. **Cold Start Problem**: Addressing the issue when data is scarce.
+7. **Personalized Recommendations**: The outcome they aim for.
+8. **User Preferences**: Understanding these through metadata.
+9. **Offline/Online Experiments**: They tested their approach in both settings.
+
+I think that covers most aspects of the article. Maybe also consider &#34;Movie Recommender Systems&#34; as a specific domain category since it&#39;s about movies. But I already included &#34;Recommendation Systems&#34; which is broader. Alternatively, adding &#34;Movies&#34; might make it more specific but perhaps not necessary if &#34;Recommendation Systems&#34; suffices.
+
+Also, considering evaluation aspects, they mention the effectiveness of their approach through experiments, so maybe &#34;Evaluation Methods&#34; or something similar could be a category, but the examples provided don&#39;t have that exact term. Maybe &#34;Effectiveness Evaluation&#34; as a subcategory?
+
+But sticking to the provided categories and avoiding creating too many new ones unless necessary, I&#39;ll focus on the main points.
+
+So, compiling all these into the required format, making sure each is concise and user-friendly.
+&lt;/think&gt;
+
+Deep Learning, Large Language Models (LLMs), Recommendation Systems, Content Metadata, Genre Analysis, Cold Start Problem, Personalized Recommendations, User Preferences, Offline Experiments, Online Experiments</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Beyond Labels: Leveraging Deep Learning and LLMs for Content Metadata
+Abstract:
+Content metadata plays a very important role in movie recommender systems as it provides valuable information about various aspects of a movie such as genre, cast, plot synopsis, box office summary, etc. Analyzing the metadata can help understand the user preferences and generate personalized recommendations catering to the niche tastes of the users. It can also help with content cold starting when the recommender system has little or no interaction data available to perform collaborative filtering. In this talk, we will focus on one particular type of metadata – genre labels. Genre labels associated with a movie or a TV series such as “horror” or “comedy” or “romance” help categorize a collection of movies into different themes and correspondingly setting up the audience expectation for a title. We present some of the challenges associated with using genre label information via traditional methods and propose a new way of examining the genre information that we call as the Genre Spectrum. The Genre Spectrum helps capture the various nuanced genres in a title and our offline and online experiments corroborate the effectiveness of the approach.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I&#39;m trying to categorize this research article about using deep learning and LLMs for content metadata in movie recommender systems. Let me go through the process step by step.
+
+First, I&#39;ll read the title: &#34;Beyond Labels: Leveraging Deep Learning and LLMs for Content Metadata.&#34; The title suggests that they&#39;re moving beyond traditional labels (like genre tags) to use more advanced methods like deep learning and large language models (LLMs) for handling content metadata. So, I&#39;m thinking categories related to machine learning techniques might be relevant here.
+
+Looking at the abstract, it mentions the importance of content metadata in movie recommendation systems. It talks about how metadata helps understand user preferences and generate personalized recommendations, especially useful for cold-start problems where there&#39;s little interaction data. They introduce a concept called &#34;Genre Spectrum,&#34; which seems like a new way to analyze genres beyond simple labels.
+
+So, breaking this down:
+
+1. **Machine Learning**: The article uses deep learning and LLMs, so that&#39;s definitely a primary category.
+2. **Content-Based Filtering**: Since they&#39;re focusing on metadata and content aspects for recommendations, this is another key category.
+3. **Cold Start Problem**: They explicitly mention how the approach helps with cold starting, so that should be included.
+4. **Genre Analysis**: The Genre Spectrum method is about analyzing genres more deeply, so that&#39;s a specific category.
+5. **Metadata**: Content metadata is central to the article, so this is another important category.
+
+I&#39;m also thinking about other relevant categories. Since they&#39;re using LLMs, maybe something like NLP or Text Processing could be applicable, but it&#39;s not explicitly stated beyond the use of these models for genre analysis. However, since the focus is on metadata and genres, perhaps sticking to more direct categories is better.
+
+Another thought: They mention personalized recommendations, which ties into recommendation systems as a broader category. Also, the approach seems innovative, so maybe &#34;Innovative Methods&#34; or something similar could apply, but I&#39;m not sure if that&#39;s one of the example categories provided earlier.
+
+Wait, looking back at the examples given, categories like Scalability, Web Systems, Implicit Feedback were mentioned, but those don&#39;t seem to fit here. Instead, focusing on the aspects directly discussed in the abstract seems better.
+
+I should also consider existing categories from the example: Family of algorithms (like Matrix Factorization), Domains (Movies), Specific recommendation aspects (Cold Start), Evaluation aspects, and real-world applications (A/B Test, User Survey). 
+
+So applying that:
+
+- **Family of Algorithm**: They&#39;re using deep learning and LLMs, so maybe &#34;Deep Learning&#34; as a family.
+- **Domain of the Problem**: Movies, since it&#39;s about movie recommender systems.
+- **Specific Aspect in Recommendation Space**: Cold Start is explicitly mentioned.
+- **Evaluation Aspects**: The abstract mentions offline and online experiments to validate their approach, but they don&#39;t specify evaluation metrics beyond effectiveness. So maybe &#34;Evaluation&#34; as a category isn&#39;t directly applicable unless we have more specifics.
+
+Also, the use of LLMs for metadata processing might touch on aspects like content understanding or text analysis, so perhaps &#34;Text Processing&#34; or &#34;NLP&#34; could be relevant, but since it&#39;s not explicitly stated beyond the mention of LLMs, I&#39;m unsure. The example categories didn&#39;t include NLP, so maybe it&#39;s better to stick with what&#39;s provided.
+
+Additionally, they&#39;re looking at genres in a more nuanced way (Genre Spectrum), which is a specific aspect of metadata handling. So &#34;Genre Analysis&#34; or &#34;Metadata Analysis&#34; could be another category.
+
+Putting this all together:
+
+- **Deep Learning**: As the technique used.
+- **Content-Based Filtering**: Since it&#39;s about content metadata.
+- **Cold Start Problem**: Directly addressed.
+- **Genre Spectrum/Genre Analysis**: The specific method discussed.
+- **Metadata**: Core topic.
+- **Movies**: Domain of application.
+
+I might be overcomplicating this, but I think these categories cover the main points without including unnecessary ones. Ensuring each article is in at least 8-12 categories, but here I have six, so maybe I need to add more from the guidelines.
+
+Looking back at the example categories provided earlier: Family of algorithm (e.g., Matrix Factorization), Domain (Movies), Specific recommendation aspect (Cold Start), Evaluation aspects. Also, any other relevant categorizations like applications in real-world scenarios (like A/B testing) or aspects like Scalability.
+
+In this case, scalability isn&#39;t discussed, but the approach might be scalable since it uses advanced models for handling metadata more effectively. However, without explicit mention, I shouldn&#39;t assume. 
+
+Another angle: The use of LLMs could tie into &#34;Large Language Models&#34; as a category if that&#39;s one we have. But based on the example output, perhaps sticking to the main points.
+
+Wait, the user mentioned in guidelines that categories like something specific in the recommendation space (e.g., Cold Start) and whether there are real-world applications (e.g., A/B Test). In this case, they mention offline and online experiments, which could relate to evaluation or real-world testing. So maybe &#34;Evaluation&#34; or &#34;Real-World Applications.&#34;
+
+Alternatively, since they&#39;re leveraging LLMs, it might touch on aspects like &#34;Natural Language Processing,&#34; but I&#39;m not sure if that&#39;s one of the example categories.
+
+So, compiling all these thoughts:
+
+1. Deep Learning
+2. Content-Based Filtering
+3. Cold Start Problem
+4. Genre Analysis
+5. Metadata
+6. Movies (Domain)
+7. Evaluation (since they have experiments)
+8. LLMs (if applicable)
+
+I think that&#39;s 8 categories. Maybe I can add &#34;Recommendation Systems&#34; as a broader category, but it might be too general.
+
+Alternatively, perhaps &#34;Innovative Methods&#34; or &#34;Advanced Techniques,&#34; but without explicit mention in the example categories, it&#39;s safer to stick with what&#39;s directly discussed.
+
+So final list: Deep Learning, Content-Based Filtering, Cold Start Problem, Genre Analysis, Metadata, Movies, Evaluation.
+&lt;/think&gt;
+
+Deep Learning, Content-Based Filtering, Cold Start Problem, Genre Analysis, Metadata, Movies, Evaluation</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

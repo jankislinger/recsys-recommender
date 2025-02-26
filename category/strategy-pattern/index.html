@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Recommendations: They’re in fashion (2022)</h3>
+    <p><strong>Authors:</strong> Tiago Lacerda, Diogo Gonçalves, Carlos Carvalheira</p>
+    <p>Farfetch, the leading online platform for luxury fashion, has spent several years developing a recommender system. In fact, recommendations have been quite successful in improving both the user experience and the company’s own business metrics [3 – 9]. In this talk we will shed some light on how we built our recommender system at Farfetch, the main obstacles we faced, and some plans for the future. Recommendations started their journey at Farfetch somewhere around 2015. At the time, we had a single model that trained once per day that updated the users’ recommendations with the same frequency. Currently, we have around 20 models in production and the majority of them are designed to handle streaming data from the users and adapt in realtime to user actions. How can we balance training and improving existing models, creating new models, serving them in real time and still keep our code in check, our tests up to date and our pipelines moving? We will discuss the three main components that we created in order to tackle our real world issue of providing ever-improving recommendations to our customers: The Gym, The Recommenders and The API. The Gym (Fig. 1) is the place where model training takes place. Inspired by the gyms from Open-AI and Criteo [ 1, 2], it mixes Spark and Python according to what we need to process. It has three main goals. Process the data that is going to feed the models, train the models, and evaluate the models. The Gym is equipped to handle every model from deep neural networks to simple collaborative models. It provides a fluid platform for multi model creation. The Recommenders (Fig. 2) define the common structure and interface for each recommender model. From applying the literature and our own experience, we found a predetermined behaviour that every recommendation follows, even though the models can be quite different from one another. It’s the individual components of a specific recommender that change. The components determine which products or brands are the candidates for a recommendation, what the right context for the recommendation is and how to score the candidates in light of the context. We can then mix and match these components to achieve the right recommender model. The Recommenders define these components and the common path that uses them. It’s Strategy Pattern all the way down. The API (Fig. 3), which we call Precog, loads and serves the models previously trained in The Gym and defined in The Recommenders. Every request made to this application triggers an execution for the particular context of the request, which means we can deliver highly personalized and context-aware recommendations. Since every recommender model is defined as implementing a recommend method, the API is simultaneously flexible in the variety of models it handles, but also quite unconcerned with the specific implementation of a recommender model and the libraries/packages needed to train it. Finally, with this presentation, we aim to give an overview and understanding of our recommendations cycle, going in detail about how these three components communicate among them. The final goal is to give a personalised experience to our customers, which given the luxury ecosystem in which Farfetch is involved, has high demands and expectations associated with it.</p>
+    <p><strong>Categories:</strong> Luxury Fashion, Recommendation Systems, Real-Time Processing, Scalability, Software Engineering, Model Training Infrastructure, Real-Time Recommendations, Microservices, Architecture Patterns, Strategy Pattern, Algorithm Design, Personalization, DevOps, System Evolution, Model Serving (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/845/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Unifying Nearest Neighbors Collaborative Filtering
+Abstract:
+We study collaborative filtering for applications in which there exists for every user a set of items about which the user has given binary, positive-only feedback (one-class collaborative filtering). Take for example an on-line store that knows all past purchases of every customer. An important class of algorithms for one-class collaborative filtering are the nearest neighbors algorithms, typically divided into user-based and item-based algorithms. We introduce a reformulation that unifies user- and item-based nearest neighbors algorithms and use this reformulation to propose a novel algorithm that incorporates the best of both worlds and outperforms state-of-the-art algorithms. Additionally, we propose a method for naturally explaining the recommendations made by our algorithm and show that this method is also applicable to existing user-based nearest neighbors methods.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article about unifying nearest neighbors collaborative filtering. Let me go through it step by step.
+
+First, looking at the title: &#34;Unifying Nearest Neighbors Collaborative Filtering.&#34; That tells me the main focus is on collaborative filtering techniques, specifically a unified approach between user-based and item-based methods.
+
+Now the abstract mentions it&#39;s about one-class collaborative filtering where users have given positive feedback only, like past purchases. So this falls under Recommendation Systems because that&#39;s the application area. They discuss nearest neighbors algorithms, both user-based and item-based, which are common in recommendation techniques. The fact that they&#39;re unifying these suggests it&#39;s a novel approach, so maybe that&#39;s a category.
+
+They introduce a reformulation to combine the best of user- and item-based methods, resulting in better performance than existing state-of-the-art algorithms. This indicates innovation in recommendation algorithms, which is another category.
+
+The article also talks about explaining recommendations, which touches on Transparency and Interpretability—important aspects for users understanding why certain items are recommended. So that&#39;s another category.
+
+Looking at evaluation, they mention outperforming existing methods, so Evaluation Metrics would be relevant. Since it&#39;s a new approach combining two methods, Algorithm Design is definitely applicable.
+
+Real-world applications aren&#39;t directly mentioned here except in the context of online stores, but maybe that falls under Domain-specific Applications? Alternatively, since it&#39;s about recommendation systems, perhaps that&#39;s covered already.
+
+Considering other categories: The problem domain is recommendation systems. They’re using collaborative filtering which is a family of algorithms. The unified approach suggests they&#39;re improving Recommendation Accuracy by combining user and item-based methods.
+
+They also mention explaining recommendations, so maybe that falls under Explainability or Transparency. Let me check the example categories provided to see what fits best.
+
+Looking at examples: Family of algorithm (e.g., Collaborative Filtering), Domain (Recommendation Systems), Specific recommendation aspects (Cold Start isn&#39;t relevant here), Evaluation aspects (Diversity might not be, but they do talk about performance which is part of evaluation). They use nearest neighbors so that&#39;s a specific algorithm family.
+
+Wait, the article doesn&#39;t mention real-world applications beyond an online store example. So maybe A/B Test or User Survey aren&#39;t applicable here unless they did some user testing, which isn&#39;t clear from the abstract. I&#39;ll leave that out for now.
+
+Putting it all together:
+
+1. Collaborative Filtering (family of algorithm)
+2. Recommendation Systems (domain)
+3. Nearest Neighbors (specific algorithm)
+4. Algorithm Design (since they designed a new method)
+5. Transparency and Interpretability (they explain recommendations)
+6. Evaluation Metrics (they compare performance)
+7. Innovation in Algorithms (novel approach)
+8. User-Based Recommendations
+9. Item-Based Recommendations
+10. One-Class Collaborative Filtering (specific problem type)
+
+I think these cover the main aspects without overlapping too much. Each category is relevant and should help users find this article when exploring different facets of recommendation systems.
+&lt;/think&gt;
+
+Collaborative Filtering, Recommendation Systems, Nearest Neighbors, Algorithm Design, Transparency and Interpretability, Evaluation Metrics, Innovation in Algorithms, User-Based Recommendations, Item-Based Recommendations, One-Class Collaborative Filtering</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Unifying Nearest Neighbors Collaborative Filtering
+Abstract:
+We study collaborative filtering for applications in which there exists for every user a set of items about which the user has given binary, positive-only feedback (one-class collaborative filtering). Take for example an on-line store that knows all past purchases of every customer. An important class of algorithms for one-class collaborative filtering are the nearest neighbors algorithms, typically divided into user-based and item-based algorithms. We introduce a reformulation that unifies user- and item-based nearest neighbors algorithms and use this reformulation to propose a novel algorithm that incorporates the best of both worlds and outperforms state-of-the-art algorithms. Additionally, we propose a method for naturally explaining the recommendations made by our algorithm and show that this method is also applicable to existing user-based nearest neighbors methods.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on its title and abstract. The title mentions &#34;Unifying Nearest Neighbors Collaborative Filtering,&#34; which suggests it&#39;s about collaborative filtering techniques, specifically nearest neighbor algorithms. 
+
+Looking at the abstract, the authors discuss one-class collaborative filtering where users provide binary positive feedback, like past purchases in an online store. They unify user-based and item-based nearest neighbors approaches and propose a new algorithm that combines their strengths.
+
+So, the main categories would include Collaborative Filtering since it&#39;s the core topic. Nearest Neighbors is also key because they&#39;re unifying both user and item-based methods under this framework.
+
+The problem domain here seems to be recommendation systems, so that&#39;s another category. The application mentioned is e-commerce, specifically online stores, so E-Commerce is relevant.
+
+They talk about improving existing algorithms, which falls under Algorithm Improvement. Since the focus is on recommendation techniques, Recommendation Techniques should be included as well.
+
+Also, the paper introduces a novel method for explaining recommendations, which relates to Explanation Methods in recommendation systems. 
+
+Finally, since they&#39;re proposing a unified approach, Unification could be another category, though it might not be as widely used as others. I&#39;ll include it for specificity.
+&lt;/think&gt;
+
+Collaborative Filtering, Nearest Neighbors, Recommendation Systems, E-Commerce, Algorithm Improvement, Unification, Explanation Methods</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Biased User History Synthesis for Personalized Long-Tail Item Recommendation
+Abstract:
+Recommendation systems connect users to items and create value chains in the internet economy. Recommendation systems learn from past user-item interaction histories. As such, items that have short interaction histories, either because they are new or not popular, are disproportionately under-recommended. This long-tail item problem can exacerbate model bias, and reinforce poor recommendation of tail items. In this paper, we propose a novel training algorithm, \textit{biased user history synthesis}, to not only address this problem but also achieve better personalization in recommendation systems. As a result, we concurrently improve tail and head item recommendation performance. Our approach is built on a tail item biased User Interaction History (UIH) sampling strategy and a synthesis model that produces an augmented user representation from the sampled user history. We provide a theoretical justification for our approach using information theory and demonstrate through extensive experimentation, that our model outperforms state-of-the-art baselines on tail, head, and overall recommendation. the source code is available at https://github.com/lkp411/BiasedUserHistorySynthesis.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article into multiple relevant categories as per the guidelines provided. Let me start by understanding what the article is about.
+
+The title is &#34;Biased User History Synthesis for Personalized Long-Tail Item Recommendation.&#34; Hmm, okay, that sounds like it&#39;s related to recommendation systems, specifically dealing with long-tail items. The abstract mentions that recommendation systems learn from past user interactions and that items with short interaction histories (like new or unpopular ones) are under-recommended, leading to the long-tail item problem.
+
+The authors propose a training algorithm called &#34;biased user history synthesis&#34; which aims to address this issue while improving personalization. They use a sampling strategy for tail items in user interaction histories and build a synthesis model to create an augmented user representation. The results show that their approach outperforms existing methods across different recommendation metrics, including head and tail items.
+
+Now, looking at the guidelines, each article should be assigned 8-12 categories, so I need to think of multiple areas this article fits into. Let&#39;s break it down:
+
+1. **Algorithm Family**: The paper introduces a novel training algorithm called Biased User History Synthesis. So &#34;Algorithm&#34; is definitely one category.
+
+2. **Personalization**: Since the approach aims to improve personalization in recommendations, that&#39;s another relevant category.
+
+3. **Long-Tail Item Recommendation**: This seems specific enough and directly relates to the problem addressed in the paper.
+
+4. **Cold Start Problem**: The long-tail items are often new or less popular, which is a form of the cold start issue where models struggle with items having little historical data.
+
+5. **User Interaction History**: The method uses user interaction history, so that&#39;s another category.
+
+6. **Data Augmentation**: They mention synthesizing an augmented user representation, so this fits here.
+
+7. **Recommendation Systems**: Broad but necessary as the main topic is recommendation systems.
+
+8. **Evaluation Metrics**: They demonstrate performance improvements across various metrics, so evaluation is a key aspect.
+
+9. **Theoretical Justification**: The paper provides theoretical backing using information theory, which is important for academic rigor.
+
+10. **Scalability and Performance**: Their approach improves performance on both head and tail items, indicating better scalability in recommendation systems.
+
+I think that covers 10 categories. Let me see if I can add a couple more:
+
+- **Bias Mitigation**: The method addresses model bias related to long-tail items.
+- **Synthesis Model**: Specific mention of the synthesis model used could be another category.
+
+Wait, but some of these might overlap or not fit as neatly. Maybe &#34;Bias Mitigation&#34; is better than having separate categories for each technique. Alternatively, considering user behavior since it&#39;s about how users interact with items.
+
+But to keep within the guidelines and ensure clarity, I&#39;ll stick with the initial 10. Let me structure them clearly.
+&lt;/think&gt;
+
+Algorithm, Personalization, Long-Tail Item Recommendation, Cold Start Problem, User Interaction History, Data Augmentation, Recommendation Systems, Evaluation Metrics, Theoretical Justification, Scalability and Performance</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Biased User History Synthesis for Personalized Long-Tail Item Recommendation
+Abstract:
+Recommendation systems connect users to items and create value chains in the internet economy. Recommendation systems learn from past user-item interaction histories. As such, items that have short interaction histories, either because they are new or not popular, are disproportionately under-recommended. This long-tail item problem can exacerbate model bias, and reinforce poor recommendation of tail items. In this paper, we propose a novel training algorithm, \textit{biased user history synthesis}, to not only address this problem but also achieve better personalization in recommendation systems. As a result, we concurrently improve tail and head item recommendation performance. Our approach is built on a tail item biased User Interaction History (UIH) sampling strategy and a synthesis model that produces an augmented user representation from the sampled user history. We provide a theoretical justification for our approach using information theory and demonstrate through extensive experimentation, that our model outperforms state-of-the-art baselines on tail, head, and overall recommendation. the source code is available at https://github.com/lkp411/BiasedUserHistorySynthesis.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article based on its title and abstract. The title is &#34;Biased User History Synthesis for Personalized Long-Tail Item Recommendation.&#34; Let me break down the key elements here.
+
+First, the main topic seems to be recommendation systems, specifically addressing long-tail items. The abstract mentions that the paper proposes a novel training algorithm called Biased User History Synthesis. This method aims to improve the recommendation of tail items and achieve better personalization.
+
+Looking at the example categories provided earlier, I should map this article accordingly. 
+
+1. **Family of Algorithm**: Since they&#39;re talking about a training algorithm, perhaps it&#39;s related to synthesis models or some form of machine learning technique used in recommendations. Maybe &#34;Synthesis Models&#34; or &#34;User History Synthesis.&#34;
+
+2. **Domain of the Problem**: The domain here is recommendation systems, specifically dealing with long-tail items. So categories like &#34;Long-Tail Recommendation,&#34; &#34;Item推荐 (Recommendation),&#34; and &#34;Personalized Recommendations&#34; seem relevant.
+
+3. **Specific Aspect in Recommendation Space**: The paper addresses under-recommendation of tail items, so &#34;Cold Start&#34; might not apply here directly, but &#34;Tail Items&#34; is definitely applicable. Also, since they&#39;re talking about personalization, that&#39;s another category.
+
+4. **Evaluation Aspects**: They mention improving both tail and head recommendations, which suggests a focus on overall recommendation performance and possibly personalization metrics. So categories like &#34;Recommendation Performance,&#34; &#34;Personalization,&#34; and maybe &#34;Beyond Accuracy&#34; could fit.
+
+5. **Real-World Applications**: The abstract doesn&#39;t explicitly mention real-world applications beyond the context of recommendation systems in general. However, since it&#39;s about improving recommendations, which is a real-world application, that might be relevant.
+
+Looking back at the example categories provided earlier:
+
+- Family of algorithm: Since they&#39;re proposing a new training algorithm, maybe &#34;Synthesis Models&#34; or under Encoder (but I&#39;m not sure if that&#39;s the right family). Alternatively, perhaps it falls under Collaborative Filtering or another method. But since the term used is &#34;synthesis model,&#34; I&#39;ll go with that.
+
+- Domain of problem: Definitely recommendation systems, so that&#39;s a primary category.
+
+- Specific in recommendation space: Long-tail items are a key focus here.
+
+- Aspects of evaluation: They mention improving both tail and head performance, which relates to the overall recommendation quality and possibly beyond accuracy metrics since they&#39;re focusing on underrepresented items.
+
+Putting it all together, the categories should include:
+
+- Recommendation Systems (primary domain)
+- Long-Tail Items (specific aspect)
+- Personalized Recommendations (as they focus on personalization)
+- Synthesis Models (family of algorithm)
+- User History (since they talk about user interaction history)
+- Tail Items (another way to refer to long-tail items)
+- Performance Improvement (evaluation aspect)
+- Information Theory (they provide theoretical justification using information theory)
+- Open Source (as they mention source code availability, though it&#39;s a bit tangential)
+
+Wait, the abstract does mention that the source code is available, which could be another category. So adding &#34;Open Source&#34; makes sense.
+
+So compiling all these, I&#39;ll list them ensuring each is relevant and we cover multiple aspects without being too redundant.
+&lt;/think&gt;
+
+Recommendation Systems, Long-Tail Items, Personalized Recommendations, Synthesis Models, User History, Tail Items, Performance Improvement, Information Theory, Open Source</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

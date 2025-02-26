@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Get Me The Best: Predicting Best Answerers in Community Question Answering Sites
+Abstract:
+There has been a massive rise in the use of Community Question and Answering (CQA) forums to get solutions to various technical and non-technical queries. One common problem faced in CQA is the small number of experts, which leaves many questions unanswered. This paper addresses the challenging problem of predicting the best answerer for a new question and thereby recommending the best expert for the same. Although there are work in the literature that aim to find possible answerers for questions posted in CQA, very few algorithms exist for finding the best answerer whose answer will satisfy the information need of the original Poster. For finding answerers, existing approaches mostly use features based on content and tags associated with the questions. There are few approaches that additionally consider the users’ history. In this paper, we propose an approach that considers a comprehensive set of features including but not limited to text representation, tag based similarity as well as multiple user-based features that target users’ availability, agility as well as expertise for predicting the best answerer for a given question. We also include features that give incentives to users who answer less but more important questions over those who answer a lot of questions of less importance. A learning to rank algorithm is used to find the weight for each feature. Experiments conducted on a real dataset from Stack Exchange show the efficacy of the proposed method in terms of multiple evaluation metrics for accuracy, robustness and real time performance.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its content. Let me read through the title and abstract carefully to understand what it&#39;s about.
+
+The title is &#34;Get Me The Best: Predicting Best Answerers in Community Question Answering Sites.&#34; Hmm, that sounds like it&#39;s related to recommendation systems within online communities where people ask and answer questions.
+
+Looking at the abstract, the paper addresses the problem of predicting the best expert to answer a new question in CQA forums. They mention that while there are existing methods for finding possible answerers, few focus on identifying the single best one whose answer will satisfy the original poster. The proposed approach uses various features like text representation, tag similarity, and user-based factors such as availability, agility, and expertise.
+
+They also mention using a learning-to-rank algorithm to determine feature weights and conducted experiments on a Stack Exchange dataset, evaluating accuracy, robustness, and real-time performance.
+
+So, the main themes here are recommendation systems, specifically within community Q&amp;A platforms. It involves predicting user behavior (best answerers), uses machine learning techniques like ranking algorithms, and evaluates system performance with metrics related to accuracy and efficiency.
+
+Now, considering the guidelines, I need to assign at least 8-12 categories that cover both specific and broader aspects of the research. Let me brainstorm possible categories:
+
+1. **Recommendation Systems**: Since it&#39;s about recommending experts.
+2. **Community Question Answering (CQA)**: Directly related to the context.
+3. **Expert Finding**: The core problem is identifying the best expert.
+4. **Learning to Rank**: They used this technique for feature weighting.
+5. **User Behavior Modeling**: Analyzing user history and behavior.
+6. **Text Representation**: Used as a feature in their model.
+7. **Tag-Based Similarity**: Another key feature they considered.
+8. **Performance Evaluation**: They tested accuracy, robustness, etc.
+9. **Real-Time Performance**: Focus on efficiency for practical use.
+10. **User Incentives**: Mentioned features that incentivize answering important questions.
+
+Wait, the example provided earlier had &#34;Scalability&#34; and &#34;Implicit Feedback,&#34; but I don&#39;t see those in this paper. They did talk about real-time performance, so maybe that&#39;s a better fit than scalability.
+
+I should also check if any categories are redundant or not specific enough. For instance, &#34;Recommendation Systems&#34; is broad, while &#34;Expert Finding&#34; is more specific. Both seem necessary as they cover different levels of specificity.
+
+Are there other aspects I might be missing? The paper uses machine learning techniques but doesn&#39;t focus on a specific algorithm family beyond learning to rank. So maybe not including a specific algorithm category unless it&#39;s prominent, which in this case, it is mentioned, so &#34;Learning to Rank&#34; is appropriate.
+
+I think the categories I&#39;ve identified cover the key aspects of the article: recommendation within CQA, expert prediction, methodology (learning to rank), features used, evaluation metrics, and real-world application through experiments on Stack Exchange data. That should make the article easily discoverable for users interested in these areas.
+&lt;/think&gt;
+
+Recommendation Systems, Community Question Answering, Expert Finding, Learning to Rank, User Behavior Modeling, Text Representation, Tag-Based Similarity, Performance Evaluation, Real-Time Performance, User Incentives</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Get Me The Best: Predicting Best Answerers in Community Question Answering Sites
+Abstract:
+There has been a massive rise in the use of Community Question and Answering (CQA) forums to get solutions to various technical and non-technical queries. One common problem faced in CQA is the small number of experts, which leaves many questions unanswered. This paper addresses the challenging problem of predicting the best answerer for a new question and thereby recommending the best expert for the same. Although there are work in the literature that aim to find possible answerers for questions posted in CQA, very few algorithms exist for finding the best answerer whose answer will satisfy the information need of the original Poster. For finding answerers, existing approaches mostly use features based on content and tags associated with the questions. There are few approaches that additionally consider the users’ history. In this paper, we propose an approach that considers a comprehensive set of features including but not limited to text representation, tag based similarity as well as multiple user-based features that target users’ availability, agility as well as expertise for predicting the best answerer for a given question. We also include features that give incentives to users who answer less but more important questions over those who answer a lot of questions of less importance. A learning to rank algorithm is used to find the weight for each feature. Experiments conducted on a real dataset from Stack Exchange show the efficacy of the proposed method in terms of multiple evaluation metrics for accuracy, robustness and real time performance.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Get Me The Best: Predicting Best Answerers in Community Question Answering Sites&#34;. Let me read through the abstract to understand what it&#39;s about. 
+
+The paper talks about the rise of CQA forums where people ask questions and get answers. One problem they face is that there aren&#39;t enough experts, so many questions go unanswered. The main goal here is predicting who the best answerer would be for a new question, effectively recommending the best expert.
+
+From what I know, existing work focuses on finding possible answerers using content and tags, but not many algorithms determine the best one whose answer will satisfy the original poster. This paper proposes an approach that uses a comprehensive set of features: text representation, tag-based similarity, and user-based features like availability, agility, expertise. They also consider incentivizing users who answer fewer but more important questions.
+
+They used a learning-to-rank algorithm to assign weights to each feature. The experiments were done on Stack Exchange data, showing good performance in accuracy, robustness, and real-time metrics.
+
+Now, I need to map this to the categories provided earlier: Family of algorithms, domain, specific recommendation aspects, evaluation aspects, real-world applications, etc.
+
+First, the family of algorithm: They used a learning-to-rank approach. So that&#39;s one category.
+
+Domain is definitely Community Question Answering (CQA), which falls under Information Retrieval or maybe even Social Computing. But since CQA is more specific, I&#39;ll go with CQ&amp;A Sites.
+
+They&#39;re predicting best answerers to satisfy the information need, so this relates to User Satisfaction and Best Experts in recommendation systems. Also, this involves Expertise Detection because they&#39;re identifying who&#39;s knowledgeable enough to answer.
+
+Evaluation metrics are mentioned: accuracy, robustness, real-time performance. So Evaluation Metrics is a category here.
+
+They used a real dataset from Stack Exchange for experiments, which counts as Real-World Applications and Empirical Studies.
+
+Since they&#39;re looking into user history beyond just content features, User History Features is another category.
+
+Considering all these points, the categories would be:
+
+Learning to Rank, Community Question Answering Sites, User Satisfaction, Best Experts, Expertise Detection, Evaluation Metrics, Real-World Applications, User History Features.
+
+I think that covers all relevant aspects without overlapping too much or creating underrepresented categories.
+&lt;/think&gt;
+
+The research article is categorized into the following relevant areas:
+
+1. **Learning to Rank**: The study employs a learning-to-rank algorithm to predict the best answerer for a given question.
+
+2. **Community Question Answering Sites**: The domain of study focuses on CQA forums, which are platforms where users pose questions and seek answers from others.
+
+3. **User Satisfaction**: The primary goal is to enhance user satisfaction by ensuring that the most suitable expert is recommended to answer their query.
+
+4. **Best Experts**: The paper aims to identify and recommend the best experts for each question based on a comprehensive set of features.
+
+5. **Expertise Detection**: A key aspect involves detecting expertise among users to determine who can provide the most accurate and useful answers.
+
+6. **Evaluation Metrics**: The study evaluates its method using metrics such as accuracy, robustness, and real-time performance.
+
+7. **Real-World Applications**: The research is applied to a real dataset from Stack Exchange, indicating its practical application in real-world scenarios.
+
+8. **User History Features**: The approach considers user history features like availability and agility alongside content-based features.
+
+These categories encapsulate the study&#39;s methodology, domain focus, and evaluation aspects, ensuring comprehensive coverage of the article&#39;s contributions.</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

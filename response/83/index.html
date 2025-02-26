@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Timely Tip Selection for Foursquare Recommendations
+Abstract:
+This poster summarizes the techniques we use to serve Foursquare tips for a given venue and more specically the strategies employed for choosing timely and seasonal tips.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article titled &#34;Timely Tip Selection for Foursquare Recommendations&#34; with the provided abstract. The goal is to assign it to multiple relevant categories so that users can easily navigate and discover content. Let me break down my thought process step by step.
+
+First, I&#39;ll look at the title: &#34;Timely Tip Selection for Foursquare Recommendations.&#34; This immediately tells me that the article is about recommendation systems, specifically focusing on tips in a location-based service like Foursquare. The key terms here are &#34;timely tip selection&#34; and &#34;recommendations.&#34;
+
+Next, the abstract states that it&#39;s about techniques used to serve Foursquare tips for a venue, particularly strategies for choosing timely and seasonal tips. So, this is not just a general recommendation system but one tailored for a specific domain—Foursquare—and its tips feature.
+
+Now, considering the categorization guidelines, each article should be placed in at least 8-12 categories. I need to identify both broad and specific categories that accurately reflect the content without overcrowding any category.
+
+Starting with the family of algorithms: The article doesn&#39;t specify which algorithm is used, but since it&#39;s about recommendation systems, &#34;Recommendation Systems&#34; is a primary category.
+
+Moving to the domain of the problem: The focus is on Foursquare tips for venues. So, &#34;Location-Based Services&#34; is relevant. Also, within that, it&#39;s specific to tips, so &#34;Tips&#34; can be another category.
+
+Looking at aspects in the recommendation space: Timeliness and seasonality are crucial here. Therefore, categories like &#34;Timeliness,&#34; &#34;Seasonal Recommendations,&#34; and &#34;Context-Aware Recommendations&#34; make sense because they deal with timely and seasonal content based on context (like time of year or day).
+
+Evaluation aspects: The article doesn&#39;t mention specific evaluations beyond serving strategies, but it&#39;s about improving user experience by providing relevant tips. So, &#34;User Experience&#34; is a good fit.
+
+Real-world applications: Since this is applied to Foursquare, which is a real service, categories like &#34;Real-World Applications,&#34; &#34;A/B Testing,&#34; and &#34;User Surveys&#34; might be relevant if they were discussed. However, the abstract doesn&#39;t mention these specifically, so maybe only &#34;Real-World Applications&#34; applies.
+
+Other considerations: The strategy for tip selection could involve techniques like filtering or scoring, so categories such as &#34;Filtering Techniques&#34; and &#34;Scoring Mechanisms&#34; would be appropriate.
+
+Putting it all together, I need to ensure a balanced distribution. Categories should cover the recommendation system aspect, the domain specifics (location-based services and tips), the strategies involved (timeliness, seasonality, context-awareness), evaluation aspects (user experience), and real-world application. Additionally, including specific techniques like filtering and scoring adds more depth.
+
+I should also make sure that the categories are clear and user-friendly. Terms like &#34;Timely Tips&#34; instead of just &#34;Timeliness&#34; might be more intuitive, but based on the examples given, using terms like &#34;Seasonal Recommendations&#34; seems appropriate.
+
+Now, reviewing for consistency: Each category relates to the content without overlapping too much. For example, &#34;Recommendation Systems,&#34; &#34;Location-Based Services,&#34; and &#34;Tips&#34; cover broad to specific domains. The strategy aspects are covered by &#34;Timeliness,&#34; &#34;Seasonal Recommendations,&#34; etc., which are specific features of the recommendation system.
+
+I think I have a solid list here, covering multiple angles without overcrowding any category.
+&lt;/think&gt;
+
+Recommendation Systems, Location-Based Services, Tips, Timeliness, Seasonal Recommendations, Context-Aware Recommendations, User Experience, Real-World Applications, Filtering Techniques, Scoring Mechanisms</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

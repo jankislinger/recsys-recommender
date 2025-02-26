@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Towards Sustainable Recommendations in Urban Tourism
+Abstract:
+In the context of urban tourism promotion, I am exploring how recommender systems (RSs) can personalise information in order to shift tourists behaviour from typically popularity-biased towards more niche and urban-friendly. This problem has a great importance in sustainability online promotion campaigns. Urban destination managers strive to prevent overcrowding at popular points of interest (POIs), by attracting visitors to less popular POIs, while still providing personalised access to information. It is assumed, that this approach will maintain a healthy distribution of tourists in a city; both reducing tourist congestion, and, considering each POI as a local business, maintaining the long-term economic viability in a city. This problem has already received some attention in the literature, targeting major European touristic cities. However, many complex issues still need to be resolved for a comprehensive solution. In this extended abstract, I highlight open research problems, and identify key research questions (RQs) that are crucial for advancing sustainable tourism development leveraging RSs. Although the proposed methods are focused on urban tourism, their application extends to different areas of recommendations because the RQs and the proposed methods and techniques are general.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this article titled &#34;Towards Sustainable Recommendations in Urban Tourism&#34; based on its abstract. Let me read through it carefully.
+
+The title suggests it&#39;s about recommendation systems (RS) applied to urban tourism with a focus on sustainability. The abstract talks about personalizing recommendations to shift tourist behavior from popularity bias to more niche and urban-friendly options. This is important for sustainability, as urban destination managers want to prevent overcrowding at popular POIs by attracting visitors to less popular ones.
+
+So, the key themes here are:
+1. Recommendation systems (RSs) applied in an urban tourism context.
+2. Sustainability and reducing tourist congestion.
+3. Personalization and behavior shift in recommendations.
+4. Economic viability of local businesses as POIs.
+5. It mentions that while there&#39;s existing literature on major European cities, more research is needed to address complex issues.
+
+Given these points, I should map them to appropriate categories.
+
+First, the family of algorithms isn&#39;t specified here, but since it&#39;s about RSs in tourism, maybe &#34;Recommendation Systems&#34; as a general category. Also, &#34;Sustainability&#34; is a clear theme because the goal is sustainable tourism development.
+
+The domain is urban tourism, so that should be another category. Since it&#39;s about shifting behavior towards less crowded areas, &#34;Tourism&#34; makes sense too.
+
+They mention preventing overcrowding and maintaining distribution of tourists, which relates to &#34;Congestion Management.&#34; The focus on niche POIs could fall under &#34;Personalization.&#34;
+
+Economic viability ties into the sustainability aspect but also touches on economic factors, so maybe a category like &#34;Economic Impact.&#34;
+
+The problem is about balancing popularity bias with more sustainable options, so perhaps &#34;Balancing Act&#34; as a specific recommendation space issue.
+
+The methods and techniques proposed are generalizable beyond urban tourism, so &#34;Generalizability&#34; could be another category. They also discuss real-world applications since destination managers are involved, which relates to practical implementation in the field.
+
+They highlight open research questions (RQs), so &#34;Research Questions&#34; is relevant. Evaluation aspects might include assessing diversity of recommendations and ensuring long-term economic viability, so perhaps &#34;Diversity of Recommendations&#34; as an evaluation aspect.
+
+Putting it all together, I should ensure each category is clear and user-friendly. Let me list them out:
+
+- Recommendation Systems
+- Sustainability
+- Urban Tourism
+- Congestion Management
+- Personalization
+- Economic Impact
+- Balancing Act (for the balance between popular and niche)
+- Generalizability
+- Real-World Applications
+- Research Questions
+- Diversity of Recommendations
+
+Wait, that&#39;s 11 categories. Let me check if any can be merged or if I need to adjust.
+
+&#34;Congestion Management&#34; seems specific enough. &#34;Balancing Act&#34; might be a bit vague; perhaps another term like &#34;Supply and Demand Balance.&#34; But since the example uses similar terms, maybe it&#39;s acceptable as is.
+
+Alternatively, considering the categories given in examples, &#34;Cold Start&#34; isn&#39;t relevant here. Another aspect could be &#34;Tourist Behavior,&#34; but that wasn&#39;t explicitly mentioned beyond shifting behavior.
+
+I think these 11 categories cover the necessary aspects without overcrowding any single category. Each should have enough articles to be useful for navigation.
+&lt;/think&gt;
+
+Recommendation Systems, Sustainability, Urban Tourism, Congestion Management, Personalization, Economic Impact, Balancing Act, Generalizability, Real-World Applications, Research Questions, Diversity of Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

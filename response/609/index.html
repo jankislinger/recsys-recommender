@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Smart Targeting: A Relevance-driven and Configurable Targeting Framework for Advertising System
+Abstract:
+Targeting system is an essential part of computational advertising. It allows advertisers to select and reach their targeted users. Due to various advertising goals and the demand for making budget plans, advertisers have a strong will to configure the final targeting results, or they can become very cautious in spending money on advertising campaigns. Meanwhile, to guarantee the advertising performance, the targeted users should also be relevant to the ads of the advertisers. Recent targeting methods are mainly based on tags produced by the Data Management Platform (DMP) which is easy for the advertisers to configure the targeting results. However, in such methods, the relevance between the targeted users and ads is not technically evaluated and cannot be guaranteed. The biggest challenge is that it is hard for a machine learning model to both model the relevance and take account of the advertiser’s configuration demands. In this paper, we propose a novel relevance-driven and configurable targeting framework called Smart Targeting to solve the problem. Specifically, different from Tag-wise Targeting, we first use a relevance model to retrieve the most relevant users for the ads. To further enable the advertisers to configure the final results, we develop a Delay Intervention Mechanism to leverage the power of DMP. As far as we know, this is the first attempt of combining relevance modeling and advertiser intervention into a unified targeting system. We implement and evaluate our framework on JD.com platform with over 300 million users and the results show that it can bring significant improvements to the core indicators such as CTR and eCPM. The long term monitoring also demonstrates that Smart Targeting gradually becomes the most popular targeting tool after its release.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about Smart Targeting in advertising systems. Let me start by reading through the title and abstract again to understand what it&#39;s about.
+
+The title mentions a relevance-driven and configurable framework for advertising targeting. The abstract explains that the system aims to help advertisers reach users who are relevant to their ads while allowing configuration of targeting results, which is important because advertisers want control over where their ads appear.
+
+Looking at the key themes here: it&#39;s about computational advertising, specifically targeting frameworks. They use a relevance model and integrate advertiser configuration through something called Delay Intervention Mechanism. The evaluation was done on JD.com with millions of users, showing improvements in metrics like CTR and eCPM.
+
+Now, I need to map this into categories based on the guidelines. Let me think about possible categories:
+
+1. **Computational Advertising**: Definitely relevant since it&#39;s about targeting in ads.
+2. **Targeting Frameworks**: The paper introduces a new framework called Smart Targeting.
+3. **Relevance Modeling**: They mention using a relevance model to retrieve users.
+4. **Advertiser Configuration**: Advertisers can configure the results, so this is a specific aspect.
+5. **User Relevance**: Ensuring users are relevant to ads is a key focus.
+6. **Machine Learning Models**: Since they use models for relevance and configuration.
+7. **Performance Evaluation**: They evaluated on JD.com with real metrics like CTR.
+8. **Large-Scale Systems**: The system was implemented on a platform with over 300 million users.
+9. **User-Driven Configuration**: It&#39;s about allowing advertisers (users) to configure the system.
+10. **Dynamic Targeting**: The framework seems adaptable, so dynamic aspects might be relevant.
+
+I should make sure these categories are clear and cover both specific and broader areas. Maybe &#34;Relevance Modeling&#34; is too narrow? Alternatively, it could fit under &#34;Machine Learning Models.&#34; But since they specifically talk about relevance, it&#39;s better to keep it separate.
+
+Is there a category related to the evaluation using real-world applications? They did an A/B test or user survey? Wait, the abstract says they implemented and evaluated on JD.com but doesn&#39;t mention A/B tests or surveys. So maybe &#34;Real-World Applications&#34; is appropriate since they applied it in a real setting with millions of users.
+
+Also, considering other categories like &#34;Configuration Mechanisms&#34; but that might be too specific. Alternatively, &#34;Advertiser Configuration&#34; seems fitting.
+
+I think I have 10 categories here. Let me list them again to ensure they cover all aspects without overlap:
+
+- Computational Advertising
+- Targeting Frameworks
+- Relevance Modeling
+- Advertiser Configuration
+- User Relevance
+- Machine Learning Models
+- Performance Evaluation
+- Large-Scale Systems
+- User-Driven Configuration
+- Real-World Applications
+
+Wait, &#34;Advertiser Configuration&#34; and &#34;User-Driven Configuration&#34; might be overlapping. Since the advertisers are the users in this context, maybe combining them into &#34;Configuration Mechanisms&#34; would make sense to avoid redundancy.
+
+Alternatively, keeping them separate could provide more specificity. But given the guidelines suggest up to 12 categories, having both is acceptable if they add distinct value. However, I think combining might be better for clarity. Let me adjust:
+
+- Computational Advertising
+- Targeting Frameworks
+- Relevance Modeling
+- Configuration Mechanisms (covers both advertiser and user-driven)
+- User Relevance
+- Machine Learning Models
+- Performance Evaluation
+- Large-Scale Systems
+- Real-World Applications
+
+That brings it down to 9. I can add a couple more if needed, perhaps looking at other aspects like the delay intervention mechanism or evaluation metrics beyond CTR.
+
+&#34;Delay Intervention Mechanism&#34; might be too specific unless others are using similar terms. Maybe &#34;Dynamic Targeting&#34; covers that aspect. Also, considering they talk about improving core indicators like eCPM, &#34;Performance Metrics&#34; could be another category, though it&#39;s somewhat covered under Performance Evaluation.
+
+Alternatively, looking at aspects of evaluation beyond accuracy, maybe &#34;Beyond Accuracy&#34; is a category if applicable. However, the focus here is more on relevance and performance metrics rather than diversity or other aspects.
+
+Another angle: since they&#39;re combining relevance modeling with advertiser intervention, perhaps &#34;Hybrid Systems&#34; as it&#39;s a mix of automated relevance and manual configuration by advertisers.
+
+So adding &#34;Hybrid Systems&#34; could be beneficial. Now I have:
+
+- Computational Advertising
+- Targeting Frameworks
+- Relevance Modeling
+- Configuration Mechanisms
+- User Relevance
+- Machine Learning Models
+- Performance Evaluation
+- Large-Scale Systems
+- Real-World Applications
+- Hybrid Systems
+
+That&#39;s 10 categories, each adding value without too much overlap. I think this covers the necessary aspects for categorization accuracy and utility.
+&lt;/think&gt;
+
+Computational Advertising, Targeting Frameworks, Relevance Modeling, Configuration Mechanisms, User Relevance, Machine Learning Models, Performance Evaluation, Large-Scale Systems, Real-World Applications, Hybrid Systems</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Smart Targeting: A Relevance-driven and Configurable Targeting Framework for Advertising System
+Abstract:
+Targeting system is an essential part of computational advertising. It allows advertisers to select and reach their targeted users. Due to various advertising goals and the demand for making budget plans, advertisers have a strong will to configure the final targeting results, or they can become very cautious in spending money on advertising campaigns. Meanwhile, to guarantee the advertising performance, the targeted users should also be relevant to the ads of the advertisers. Recent targeting methods are mainly based on tags produced by the Data Management Platform (DMP) which is easy for the advertisers to configure the targeting results. However, in such methods, the relevance between the targeted users and ads is not technically evaluated and cannot be guaranteed. The biggest challenge is that it is hard for a machine learning model to both model the relevance and take account of the advertiser’s configuration demands. In this paper, we propose a novel relevance-driven and configurable targeting framework called Smart Targeting to solve the problem. Specifically, different from Tag-wise Targeting, we first use a relevance model to retrieve the most relevant users for the ads. To further enable the advertisers to configure the final results, we develop a Delay Intervention Mechanism to leverage the power of DMP. As far as we know, this is the first attempt of combining relevance modeling and advertiser intervention into a unified targeting system. We implement and evaluate our framework on JD.com platform with over 300 million users and the results show that it can bring significant improvements to the core indicators such as CTR and eCPM. The long term monitoring also demonstrates that Smart Targeting gradually becomes the most popular targeting tool after its release.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article titled &#34;Smart Targeting: A Relevance-driven and Configurable Targeting Framework for Advertising System.&#34; Let me break it down step by step.
+
+First, the title mentions &#34;Targeting Framework&#34; which immediately makes me think of advertising systems. So that&#39;s one category right there. The abstract talks a lot about how advertisers want to target users effectively, so I should include both Advertising Systems and maybe something more specific like Targeting Methods or Advertising Technologies.
+
+The article discusses relevance in targeting, so Relevance Models is another key category. They mention using a relevance model to retrieve the most relevant users for ads, which ties into this.
+
+Configuration is also a big part of it because advertisers want to tweak their targeting based on their goals and budgets. So Configurability would be a good fit here. The abstract explains that they developed a mechanism to allow advertisers to configure results, so this seems directly related.
+
+The framework&#39;s application in real-world scenarios is mentioned, particularly on JD.com with millions of users. This points towards Real-World Applications as a category since it shows practical implementation and evaluation.
+
+Performance Evaluation is another area because the paper talks about improvements in metrics like CTR (Click-Through Rate) and eCPM (effective Cost Per Mille). So including Performance Metrics would be relevant.
+
+They also talk about combining relevance modeling with advertiser intervention, which makes me think of Hybrid Models since it&#39;s blending different approaches or methods.
+
+Since the framework is implemented on a large-scale platform like JD.com, Scalability is important. Handling 300 million users suggests that the system must be scalable to handle such volumes.
+
+Data Management Platform (DMP) is mentioned as part of their method, so DMP should definitely be included in the categories. It&#39;s a specific component they used, so it&#39;s relevant.
+
+Looking at evaluation aspects, the paper evaluates beyond just accuracy by mentioning core indicators and long-term monitoring, which ties into Evaluation Metrics beyond just accuracy. So Beyond Accuracy could be another category.
+
+They specifically address cold-start scenarios in some way because they&#39;re dealing with targeting users for ads, which often relates to situations where there&#39;s limited data. Therefore, Cold Start is a good fit as a category.
+
+Putting all this together, the categories I come up with are: Advertising Systems, Targeting Methods, Relevance Models, Configurability, Real-World Applications, Performance Metrics, Hybrid Models, Scalability, DMP, Evaluation Metrics (Beyond Accuracy), and Cold Start.
+&lt;/think&gt;
+
+Advertising Systems, Targeting Methods, Relevance Models, Configurability, Real-World Applications, Performance Metrics, Hybrid Models, Scalability, DMP, Evaluation Metrics, Cold Start</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

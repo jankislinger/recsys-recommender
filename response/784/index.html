@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: TinyKG: Memory-Efficient Training Framework for Knowledge Graph Neural Recommender Systems
+Abstract:
+There has been an explosion of interest in designing various Knowledge Graph Neural Networks (KGNNs), which achieve state-of-the-art performance and provide great explainability for recommendation. The promising performance is mainly resulting from their capability of capturing high-order proximity messages over the knowledge graphs. However, training KGNNs at scale is challenging due to the high memory usage. In the forward pass, the automatic differentiation engines (e.g., TensorFlow/PyTorch) generally need to cache all intermediate activation maps in order to compute gradients in the backward pass, which leads to a large GPU memory footprint. Existing work solves this problem by utilizing multi-GPU distributed frameworks. Nonetheless, this poses a practical challenge when seeking to deploy KGNNs in memory-constrained environments, especially for industry-scale graphs.
+Here we present TinyKG, a memory-efficient GPU-based training framework for KGNNs for the tasks of recommendation. Specifically, TinyKG uses exact activations in the forward pass while storing a quantized version of activations in the GPU buffers. During the backward pass, these low-precision activations are dequantized back to full-precision tensors, in order to compute gradients. To reduce the quantization errors, TinyKG applies a simple yet effective quantization algorithm to compress the activations, which ensures unbiasedness with low variance. As such, the training memory footprint of KGNNs is largely reduced with negligible accuracy loss. To evaluate the performance of our TinyKG, we conduct comprehensive experiments on real-world datasets. We found that our TinyKG with INT2 quantization aggressively reduces the memory footprint of activation maps with 7 ×, only with 2% loss in accuracy, allowing us to deploy KGNNs on memory-constrained devices.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on its content and the guidelines provided. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;TinyKG: Memory-Efficient Training Framework for Knowledge Graph Neural Recommender Systems.&#34; So, right off the bat, I know it&#39;s about recommendation systems using knowledge graphs (KGNNs) and focuses on memory efficiency during training.
+
+Looking at the abstract, the main issue addressed is high memory usage when training KGNNs. The article introduces TinyKG as a solution that uses quantized activations to reduce memory footprint without significant accuracy loss. They tested this framework with real-world datasets and achieved notable reductions in memory use.
+
+Now, considering the key objectives and guidelines: I need at least 8-12 categories that accurately represent the article&#39;s content. Let me brainstorm possible categories based on different aspects of the paper.
+
+First, the family of algorithms involved. The paper uses knowledge graph neural networks (KGNNs), so that&#39;s one category. It also mentions techniques like quantization and activation compression, which are optimization methods for memory efficiency. So I can include Memory Optimization as another category.
+
+The domain here is recommendation systems since it&#39;s about improving recommenders. Another aspect is system design because the framework TinyKG is a system-level solution. The problem size they tackle is industry-scale, so that&#39;s relevant too.
+
+They mention real-world applications with experiments on datasets, which falls under Real-World Applications. The approach uses optimization techniques to address resource constraints (like memory), so Resource Constraints could be another category. They also discuss evaluating their framework against existing methods, so Evaluation Methodology makes sense.
+
+The technical aspect of GPU-based training is crucial here since TinyKG operates on GPUs, hence GPU-Based Training. Memory Efficiency ties directly into the problem they&#39;re solving. Since it&#39;s a specific technique within recommendation systems, KGNNs are a subcategory there. The quantization method they use ensures unbiasedness with low variance, so Quantization Methods should be included.
+
+I need to ensure these categories cover both broad and specific aspects of the article. Let me check if I have enough: Knowledge Graph Neural Networks, Memory Optimization, Recommendation Systems, System Design, Industry-Scale Problems, Real-World Applications, Optimization Techniques, Resource Constraints, Evaluation Methodology, GPU-Based Training, Memory Efficiency, KGNNs (as a subcategory), and Quantization Methods.
+
+Wait, that&#39;s more than 12. Maybe I can consolidate some or see if any are redundant. For instance, Knowledge Graph Neural Networks and KGNNs might be the same thing, so perhaps I should only include one to avoid duplication. Similarly, GPU-Based Training is part of System Design but can stand on its own as it&#39;s a specific technical aspect.
+
+So finalizing, I think 12 categories should suffice without redundancy.
+&lt;/think&gt;
+
+Memory Optimization, Knowledge Graph Neural Networks, Recommendation Systems, Real-World Applications, Quantization Methods, GPU-Based Training, Memory Efficiency, Industry-Scale Problems, Resource Constraints, Evaluation Methodology, System Design, Activation Compression.</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Accelerating Creator Audience Building through Centralized Exploration
+Abstract:
+On Spotify, multiple recommender systems enable personalized user experiences across a wide range of product features. These systems are owned by different teams and serve different goals, but all of these systems need to explore and learn about new content as it appears on the platform. In this work, we describe ongoing efforts at Spotify to develop an efficient solution to this problem, by centralizing content exploration and providing signals to existing, decentralized recommendation systems (a.k.a. exploitation systems). We take a creator-centric perspective, and argue that this approach can dramatically reduce the time it takes for new content to reach its full potential.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article based on the given title and abstract. The title is &#34;Accelerating Creator Audience Building through Centralized Exploration,&#34; and the abstract mentions Spotify&#39;s recommender systems that are decentralized but need a centralized way to explore new content efficiently.
+
+First, I&#39;ll break down the key elements from the abstract:
+
+1. **Spotify Recommender Systems**: This indicates the domain is related to music or audio recommendation. So categories like &#34;Music&#34; or &#34;Recommendation Systems&#34; come to mind.
+2. **Centralized Exploration vs Decentralized Exploitation**: The article talks about centralizing exploration (learning about new content) while existing systems handle exploitation (serving recommendations). This suggests themes around system architecture, so maybe &#34;System Architecture,&#34; and perhaps &#34;Decentralized Systems.&#34;
+3. **Creator-Centric Perspective**: Focusing on creators and how they build their audience implies categories related to creator tools or support, so &#34;Creator Support&#34; might be a good fit.
+4. **Efficient Content Exploration**: This is about improving how new content is discovered and recommended, which ties into algorithm efficiency and maybe specific techniques used in recommendation systems like exploration vs exploitation strategies. So &#34;Algorithm Efficiency,&#34; &#34;Exploration vs Exploitation.&#34;
+5. **User Experience**: Since the goal is to accelerate audience building for creators, it affects user experience by making new content reach users faster.
+6. **Real-World Application**: The work is ongoing at Spotify, so this is a real-world application of recommendation systems.
+
+Considering all these points, I should assign categories that cover the domain (Music/Recommendation Systems), technical aspects (System Architecture, Algorithm Efficiency), strategies (Exploration vs Exploitation), focus areas (Creator-Centric, User Experience), and applications (Real-World Application). 
+
+I need to ensure each article is in at least 8-12 categories. So I&#39;ll list the main ones from above and maybe add some more like &#34;Audience Building,&#34; which is directly mentioned in the title.
+
+Wait, should I include something about the architecture being centralized? Maybe &#34;Centralized Systems&#34; as a category. Also, since it&#39;s about different teams owning systems, perhaps &#34;Multi-Team Collaboration&#34; or &#34;Decentralized Systems.&#34;
+
+But looking back at the guidelines, I need to ensure categories are clear and user-friendly. So maybe &#34;System Architecture,&#34; &#34;Decentralized Systems,&#34; and &#34;Centralized Exploration&#34; would be more precise.
+
+Also, considering evaluation aspects, the article mentions reducing the time for new content to reach potential. That might relate to metrics like speed or efficiency in recommendation systems, so perhaps a category like &#34;Efficiency Metrics.&#34;
+
+But I think sticking to what&#39;s provided is better unless it&#39;s obvious. Let me tally up:
+
+- Music (domain)
+- Recommendation Systems
+- System Architecture
+- Centralized Exploration
+- Decentralized Exploitation/Systems
+- Algorithm Efficiency
+- Creator-Centric
+- Audience Building
+- User Experience
+- Real-World Application
+
+That makes 10 categories, which fits within the 8-12 range. I might also consider if there&#39;s a specific technique or family of algorithms mentioned, but the abstract doesn&#39;t specify, so perhaps better to avoid unless necessary.
+
+I should make sure these categories align with user needs and are intuitive. For example, &#34;Creator Support&#34; is clear for users interested in how creators are helped. Similarly, &#34;User Experience&#34; is broad enough but relevant.
+
+So, compiling all that, the final list of categories would be: Centralized Exploration, Decentralized Systems, Music, Recommendation Systems, System Architecture, Algorithm Efficiency, Creator-Centric, Audience Building, User Experience, Real-World Application.
+&lt;/think&gt;
+
+Centralized Exploration, Decentralized Systems, Music, Recommendation Systems, System Architecture, Algorithm Efficiency, Creator-Centric, Audience Building, User Experience, Real-World Application</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Accelerating Creator Audience Building through Centralized Exploration
+Abstract:
+On Spotify, multiple recommender systems enable personalized user experiences across a wide range of product features. These systems are owned by different teams and serve different goals, but all of these systems need to explore and learn about new content as it appears on the platform. In this work, we describe ongoing efforts at Spotify to develop an efficient solution to this problem, by centralizing content exploration and providing signals to existing, decentralized recommendation systems (a.k.a. exploitation systems). We take a creator-centric perspective, and argue that this approach can dramatically reduce the time it takes for new content to reach its full potential.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I&#39;m looking at an article titled &#34;Accelerating Creator Audience Building through Centralized Exploration.&#34; The abstract mentions Spotify&#39;s use of multiple recommender systems across different teams and features. These systems are decentralized but need to explore and learn about new content efficiently.
+
+First, the main theme seems to be recommendation systems, specifically how they handle exploration. Since it&#39;s about centralizing exploration for efficiency, that points me towards Exploration in recommendation as a category.
+
+The article is focused on helping creators build their audience faster, which ties into creator-centric strategies. So Creator-Centric Strategy should definitely be included.
+
+Spotify is mentioned, so Industry Perspective (Music Streaming) makes sense because the context is within a specific industry.
+
+The approach of centralizing exploration to serve decentralized systems suggests that Centralized Exploration is a key part of the method discussed in the article.
+
+Efficiency improvements and scaling are likely important here, as the goal is to accelerate content reach. So Scalability would be relevant.
+
+Looking at the broader aspects of recommendation challenges, this article addresses one such area, so Recommendation Challenges fits well.
+
+Personalization is mentioned since the systems provide personalized user experiences, making it another relevant category.
+
+Decentralized vs centralized systems are a topic here, so Decentralized Systems should be included to reflect that aspect.
+
+Finally, audience growth and creator success are central themes, so Creator Success/ Audience Growth ties everything together.
+&lt;/think&gt;
+
+Exploration in recommendation, Creator-Centric Strategy, Industry Perspective (Music Streaming), Centralized Exploration, Scalability, Recommendation Challenges, Personalization, Decentralized Systems, Creator Success/Audience Growth</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

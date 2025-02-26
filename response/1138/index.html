@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Explainable and Faithful Educational Recommendations through Causal Language Modelling via Knowledge Graphs
+Abstract:
+The rapid expansion of digital education has significantly increased the need for recommender systems to help learners navigate the extensive variety of available learning resources. Recent advancements in these systems have notably improved the personalization of course recommendations. However, many existing systems fail to provide clear explanations for their recommendations, making it difficult for learners to understand why a particular suggestion was made. This lack of transparency can negatively impact trust and acceptance of the system. Researchers have emphasized the importance of explanations in various other domains such as ecommerce, media, and entertainment, demonstrating how explanations can enhance system transparency, foster user trust, and improve decision-making processes. Despite these insights, such approaches have been rarely applied to the educational domain, and their effectiveness in practical use remains largely unexamined. My research focuses on developing explainable recommender systems for digital education. First, I aim to design knowledge graphs that can support high-quality recommendations in the context of education. Second, I will create models backed by these knowledge graphs that not only deliver accurate recommendations but also provide faithful explanations for each suggestion, helping learners make informed decisions. Third, I will evaluate the effectiveness of these explainable recommender systems in real-world scenarios.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I need to categorize this research article into multiple relevant categories based on its title and abstract. The user has provided a set of guidelines, so I&#39;ll follow those step by step.
+
+First, let&#39;s read through the title: &#34;Explainable and Faithful Educational Recommendations through Causal Language Modelling via Knowledge Graphs.&#34; Okay, so the main themes here are explainability in recommendation systems, specifically within the educational domain. They&#39;re using causal language modeling and knowledge graphs as their approach.
+
+Looking at the abstract, it talks about the need for recommender systems in digital education to help learners navigate resources. It mentions that current systems often lack clear explanations, which affects trust and acceptance. The research aims to develop explainable recommenders using knowledge graphs and evaluate them in real-world settings.
+
+Now, applying the categorization guidelines:
+
+1. **Family of Algorithm**: They mention causal language modeling, so that&#39;s one category. Knowledge graphs are also a part of their approach, so another category here.
+
+2. **Domain of the Problem**: Clearly, this is about Education since it&#39;s focused on digital education and learning resources.
+
+3. **Recommendation Space Specifics**: The article talks about explainability and providing faithful explanations for recommendations. So categories like Explainable Recommendations, Faithful Explanations, and maybe Transparency in Recommendations fit here.
+
+4. **Aspects of Evaluation**: They mention evaluating the effectiveness in real-world scenarios, so Real-World Evaluation is relevant. Also, since they&#39;re focusing on trust and user acceptance, those could be aspects to consider under evaluation or user-centric aspects.
+
+5. **Real-World Applications**: The abstract mentions practical use and real-world evaluation, so this category applies.
+
+6. **Other Relevant Categories**: Trust in Systems is important here because the lack of explanations affects trust. User-Centric Design makes sense since they&#39;re focusing on helping learners make informed decisions. Personalization is another aspect since recommender systems aim to personalize course recommendations.
+
+Putting it all together, I need to ensure each article is assigned 8-12 categories. Let me list out possible categories based on the above:
+
+- Causal Language Modeling
+- Knowledge Graphs
+- Explainable Recommendations
+- Faithful Explanations
+- Transparency in Recommendations
+- Trust in Systems
+- Real-World Evaluation
+- Education Domain
+- User-Centric Design
+- Personalization
+
+I think that&#39;s 10 categories. Let me double-check if any are redundant or could be merged. &#34;Faithful Explanations&#34; and &#34;Explainable Recommendations&#34; seem distinct enough to keep separate. &#34;Real-World Evaluation&#34; and &#34;Practical Applications&#34; might overlap, but since the article mentions both practical use and evaluation in real-world scenarios, including both as separate categories makes sense.
+
+I should ensure that these categories are clear and user-friendly. For example, instead of saying &#34;Trust in Systems,&#34; maybe &#34;Trustworthiness&#34; is a bit more concise. But given the examples provided earlier, &#34;Trust in Systems&#34; seems acceptable.
+
+Also, considering the guidelines for dynamic updates and balanced distribution, these categories seem to cover both technical aspects (algorithms, knowledge graphs) and user-related aspects (transparency, trust), which should help in making the interface navigable.
+&lt;/think&gt;
+
+Causal Language Modeling, Knowledge Graphs, Explainable Recommendations, Faithful Explanations, Transparency in Recommendations, Trust in Systems, Real-World Evaluation, Education Domain, User-Centric Design, Personalization</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Explainable and Faithful Educational Recommendations through Causal Language Modelling via Knowledge Graphs
+Abstract:
+The rapid expansion of digital education has significantly increased the need for recommender systems to help learners navigate the extensive variety of available learning resources. Recent advancements in these systems have notably improved the personalization of course recommendations. However, many existing systems fail to provide clear explanations for their recommendations, making it difficult for learners to understand why a particular suggestion was made. This lack of transparency can negatively impact trust and acceptance of the system. Researchers have emphasized the importance of explanations in various other domains such as ecommerce, media, and entertainment, demonstrating how explanations can enhance system transparency, foster user trust, and improve decision-making processes. Despite these insights, such approaches have been rarely applied to the educational domain, and their effectiveness in practical use remains largely unexamined. My research focuses on developing explainable recommender systems for digital education. First, I aim to design knowledge graphs that can support high-quality recommendations in the context of education. Second, I will create models backed by these knowledge graphs that not only deliver accurate recommendations but also provide faithful explanations for each suggestion, helping learners make informed decisions. Third, I will evaluate the effectiveness of these explainable recommender systems in real-world scenarios.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about explainable educational recommendations using causal language models and knowledge graphs. Let me start by reading the title and abstract carefully.
+
+The title mentions &#34;Explainable and Faithful Educational Recommendations&#34; and uses &#34;Causal Language Modelling via Knowledge Graphs.&#34; So key elements here are education, explanations, causal models, and knowledge graphs.
+
+Looking at the abstract: It talks about digital education growth and the need for better recommender systems. Current systems are good at personalization but lack clear explanations, which is a problem because it affects trust. The researcher wants to create systems that provide accurate recommendations with faithful explanations, using knowledge graphs and causal language models. They also aim to evaluate these systems in real-world settings.
+
+Now, considering the categorization guidelines: I need to assign at least 8-12 categories, ensuring they are relevant and cover different aspects of the article. Let&#39;s break down the main themes:
+
+1. **Explainable Recommender Systems**: This is central because the focus is on making recommendations transparent.
+2. **Educational Technology/Recommendation in Education**: The domain here is education, so this category makes sense.
+3. **Knowledge Graphs**: The abstract mentions using knowledge graphs for high-quality recommendations.
+4. **Causal Language Models**: Causal inference and language models are key methods used.
+5. **Transparency and Trust**: Important because the article addresses the lack of transparency in current systems.
+6. **User-Centered Design**: Since it&#39;s about improving user trust, this is relevant.
+7. **Real-World Applications**: The research includes evaluation in real-world scenarios, so this category fits.
+8. **Explanations in recommender systems**: Directly related to providing clear explanations.
+9. **Causality in Machine Learning**: Causal models are a part of the methodology.
+10. **Evaluation Methods**: The study evaluates effectiveness, which is an important aspect.
+11. **Ethical Considerations in AI**: Trust and transparency touch on ethical issues.
+12. **Personalization in Education**: Recommender systems often aim to personalize learning.
+
+I need to make sure these categories are clear and descriptive. Let me check if I&#39;ve covered all key aspects: the methods (causal models, knowledge graphs), the domain (education), the focus areas (explainability, trust, evaluation), and real-world applications. 
+
+Wait, &#34;Causality in Machine Learning&#34; might be too broad; maybe stick to something more specific like &#34;Causal Models.&#34; Also, &#34;Ethical Considerations in AI&#34; is relevant but perhaps &#34;Explainable AI&#34; would be better as a category since that&#39;s the main focus.
+
+So, refining the list:
+
+- Explainable Recommender Systems
+- Educational Technology/Recommendation in Education
+- Knowledge Graphs
+- Causal Language Models
+- Transparency and Trust
+- User-Centered Design
+- Real-World Applications
+- Explanations in recommender systems
+- Causality in Recommendation
+- Evaluation Methods
+- Personalization in Education
+
+That&#39;s 11 categories, which fits within the guideline of 8-12. Each category is relevant and covers different aspects of the article, ensuring a balanced distribution across topics without overcrowding any single category.
+&lt;/think&gt;
+
+Explainable Recommender Systems, Educational Technology/Recommendation in Education, Knowledge Graphs, Causal Language Models, Transparency and Trust, User-Centered Design, Real-World Applications, Explanations in recommender systems, Causality in Recommendation, Evaluation Methods, Personalization in Education</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

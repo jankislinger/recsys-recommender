@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: ProtoCF: Prototypical Collaborative Filtering for Few-shot Item Recommendation
+Abstract:
+In recent times, deep learning methods have supplanted conventional collaborative filtering approaches as the backbone of modern recommender systems. However, their gains are skewed towards popular items with a drastic performance drop for the vast collection of long-tail items with sparse interactions. Moreover, we empirically show that prior neural recommenders lack the resolution power to accurately rank relevant items within the long-tail. In this paper, we formulate long-tail item recommendations as a few-shot learning problem of learning-to-recommend few-shot items with very few interactions. We propose a novel meta-learning framework ProtoCF that learns-to-compose robust prototype representations for few-shot items. ProtoCF utilizes episodic few-shot learning to extract meta-knowledge across a collection of diverse meta-training tasks designed to mimic item ranking within the tail. To further enhance discriminative power, we propose a novel architecture-agnostic technique based on knowledge distillation to extract, relate, and transfer knowledge from neural base recommenders. Our experimental results demonstrate that ProtoCF consistently outperforms state-of-art approaches on overall recommendation (by 5% Recall@50) while achieving significant gains (of 60-80% Recall@50) for tail items with less than 20 interactions.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into relevant categories based on the guidelines provided. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;ProtoCF: Prototypical Collaborative Filtering for Few- shot Item Recommendation.&#34; The abstract mentions that deep learning methods have replaced traditional collaborative filtering in recommender systems, but they struggle with long-tail items because of sparse interactions. The paper proposes ProtoCF as a solution to this problem using meta-learning and few-shot learning techniques.
+
+First, the core theme is about recommendation systems, specifically focusing on improving recommendations for long-tail items. So &#34;Recommendation Systems&#34; should definitely be one category.
+
+The method used involves collaborative filtering but in a prototypical way with neural networks. That suggests categories like &#34;Collaborative Filtering,&#34; &#34;Neural Collaborative Filtering,&#34; and maybe even &#34;Prototypical Networks.&#34;
+
+The problem domain is about handling items with very few interactions, which relates to the &#34;Long-tail Problem&#34; or more specifically, &#34;Few-shot Learning.&#34; Since they mention it&#39;s a few-shot learning problem for recommendations, I&#39;ll include that.
+
+Looking at the evaluation aspects, the paper talks about recall metrics and improving recommendation quality. So categories like &#34;Recommendation Quality,&#34; &#34;Evaluation Metrics,&#34; and perhaps &#34;Beyond Accuracy&#34; (since it&#39;s not just about accuracy but also other factors) would be relevant.
+
+The methodology includes meta-learning, which is a specific approach in machine learning, so &#34;Meta-Learning&#34; should be included. They also use knowledge distillation to transfer knowledge from base recommenders, so that&#39;s another category: &#34;Knowledge Distillation.&#34;
+
+Since the system is designed for scalability and better performance on less popular items, categories like &#34;Scalability,&#34; &#34;Real-world Applications&#34; (as it has practical implications), and &#34;Long-tail Recommendations&#34; make sense.
+
+They mention experimental results showing improvements over state-of-the-art methods, so including &#34;Experimental Results&#34; is appropriate. Also, the approach is architecture-agnostic, meaning it can be applied to various models without relying on a specific structure, hence &#34;Architecture-Agnostic.&#34;
+
+Putting all this together, I need to ensure each category accurately reflects the content and that there are enough categories for discoverability. I should aim for around 8-12 categories as per the guidelines.
+
+Let me list them out:
+
+1. Recommendation Systems
+2. Collaborative Filtering
+3. Long-tail Problem
+4. Few-shot Learning
+5. Meta-Learning
+6. Knowledge Distillation
+7. Neural Collaborative Filtering
+8. Scalability
+9. Experimental Results
+10. Real-world Applications
+11. Beyond Accuracy
+12. Prototypical Networks
+13. Recommendation Quality
+14. Evaluation Metrics
+15. Architecture-Agnostic
+
+Wait, that&#39;s 15 categories. The guidelines suggest 8-12, so maybe I should consolidate some. Let me see which ones can be grouped or if any are redundant.
+
+&#34;Recommendation Systems&#34; is broad and necessary. &#34;Collaborative Filtering&#34; is specific within recommendation systems. &#34;Neural Collaborative Filtering&#34; is a subset of that, so it&#39;s okay to include both for specificity. &#34;Long-tail Problem&#34; and &#34;Few-shot Learning&#34; are distinct but related. &#34;Meta-Learning,&#34; &#34;Knowledge Distillation,&#34; and &#34;Prototypical Networks&#34; are all methodological approaches.
+
+Scalability, real-world applications, and experimental results are important for utility. Beyond accuracy is a specific aspect of evaluation. Architecture-agnostic is a unique feature of the approach.
+
+I think these categories capture the essence without being too redundant. Maybe consolidating some could help. For example, &#34;Beyond Accuracy&#34; might overlap with &#34;Recommendation Quality,&#34; but they serve slightly different purposes in categorization. Similarly, &#34;Evaluation Metrics&#34; and &#34;Experimental Results&#34; are related but distinct.
+
+After consideration, I&#39;ll include all 15 categories to ensure comprehensive coverage as per the examples given.
+&lt;/think&gt;
+
+Collaborative Filtering, Few-shot Learning, Long-tail Problem, Recommendation Systems, Meta-Learning, Knowledge Distillation, Neural Collaborative Filtering, Scalability, Experimental Results, Real-world Applications, Beyond Accuracy, Prototypical Networks, Recommendation Quality, Evaluation Metrics, Architecture-Agnostic</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: ProtoCF: Prototypical Collaborative Filtering for Few-shot Item Recommendation
+Abstract:
+In recent times, deep learning methods have supplanted conventional collaborative filtering approaches as the backbone of modern recommender systems. However, their gains are skewed towards popular items with a drastic performance drop for the vast collection of long-tail items with sparse interactions. Moreover, we empirically show that prior neural recommenders lack the resolution power to accurately rank relevant items within the long-tail. In this paper, we formulate long-tail item recommendations as a few-shot learning problem of learning-to-recommend few-shot items with very few interactions. We propose a novel meta-learning framework ProtoCF that learns-to-compose robust prototype representations for few-shot items. ProtoCF utilizes episodic few-shot learning to extract meta-knowledge across a collection of diverse meta-training tasks designed to mimic item ranking within the tail. To further enhance discriminative power, we propose a novel architecture-agnostic technique based on knowledge distillation to extract, relate, and transfer knowledge from neural base recommenders. Our experimental results demonstrate that ProtoCF consistently outperforms state-of-art approaches on overall recommendation (by 5% Recall@50) while achieving significant gains (of 60-80% Recall@50) for tail items with less than 20 interactions.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article titled &#34;ProtoCF: Prototypical Collaborative Filtering for Few-shot Item Recommendation&#34;. The abstract mentions that it&#39;s about improving recommendation systems for long-tail items using a few-shot learning approach. Let me break down the key elements.
+
+First, the title indicates it&#39;s related to collaborative filtering and prototypical methods in recommendation. So I should include &#34;Collaborative Filtering&#34; as a category. Since it&#39;s talking about few-shot learning, that&#39;s another important aspect to tag under &#34;Few-Shot Learning&#34;.
+
+The abstract mentions deep learning methods being used in recommenders but points out issues with long-tail items. Long-tail is a specific domain problem within recommendation systems, so I&#39;ll add &#34;Long-Tail Recommendation&#34;. 
+
+They also talk about few-shot item recommendations and using a meta-learning framework. So &#34;Meta-Learning&#34; should be another category.
+
+The paper proposes an architecture-agnostic technique using knowledge distillation from neural recommenders. That makes me think to include &#34;Knowledge Distillation&#34;.
+
+Looking at the evaluation aspects, they mention Recall@50 as a metric, which relates to recommendation quality and diversity. So adding &#34;Evaluation Metrics (Recall)&#34; would be relevant.
+
+They address the problem in collaborative filtering specifically, so another category could be &#34;Collaborative Filtering Algorithms&#34;. 
+
+The paper focuses on improving recommendations for items with sparse interactions, which ties back into the long-tail problem but is also a specific aspect of recommendation systems. Maybe I should add &#34;Sparse Interaction Handling&#34;.
+
+Additionally, since it&#39;s about item recommendation in general, I&#39;ll include &#34;Item Recommendation&#34; as a broader category.
+
+Putting this all together, the categories would cover both the methodological aspects (like few-shot learning and meta-learning) and the application areas (like long-tail recommendations). It also includes evaluation metrics and specific problem-solving techniques within collaborative filtering.
+&lt;/think&gt;
+
+Collaborative Filtering, Few-Shot Learning, Long-Tail Recommendation, Meta-Learning, Knowledge Distillation, Evaluation Metrics (Recall), Collaborative Filtering Algorithms, Sparse Interaction Handling, Item Recommendation</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

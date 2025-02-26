@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Analyzing User Preferences and Quality Improvement on Bing’s WebPage Recommendation Experience with Large Language Models
+Abstract:
+Explore Further @ Bing (Web Recommendations) is a web-scale query independent webpage-to-webpage recommendation system with an index size of over 200 billion webpages. Due to the significant variability in webpage quality across the web and the reliance of our system on learning soleley user behavior (clicks), our production system was susceptible to serving clickbait and low-quality recommendations. Our team invested several months in developing and shipping several improvements that utilize LLM-generated recommendation quality labels to enhance our ranking stack to improve the nature of the recommendations we show to our users. Another key motivation behind our efforts was to go beyond merely surfacing relevant webpages, focusing instead on prioritizing more useful and authoritative content that delivers value to users based on their implied intent. We demonstrate how large language models (LLMs) offer a powerful tool for product teams to gain deeper insights into shifts in product experience and user behavior following significant improvements or changes to a production system. In this work, to enable our analysis, we also showcase the use of a small language model (SLM) to generate better-quality webpage text features and summaries at scale and describe our approach to mitigating position bias in user interaction logs.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I&#39;m trying to categorize this research article about Bing&#39;s web recommendations using large language models. Let me start by reading through the title and abstract carefully.
+
+The title mentions &#34;Analyzing User Preferences&#34; and &#34;Quality Improvement on Bing’s WebPage Recommendation Experience with Large Language Models.&#34; That tells me it&#39;s about improving recommendation systems, specifically for webpages, using LLMs. 
+
+Looking at the abstract: The system is a large-scale webpage-to-webpage recommender with over 200 billion pages. They faced issues with low-quality and clickbait content because they relied solely on user clicks. To fix this, they used LLM-generated labels to improve their ranking. Their goal was to prioritize useful and authoritative content based on user intent.
+
+So, the main points are:
+1. Web recommendations at a large scale.
+2. Use of LLMs (specifically SLM as well) for quality improvement.
+3. Addressing issues like clickbait and low-quality content.
+4. Enhancing ranking systems with LLM-generated features.
+5. User behavior analysis, including position bias mitigation.
+
+Now, applying the categorization guidelines:
+- I need at least 8-12 categories. Let me think of relevant ones.
+- Categories should be specific but also broad enough to be useful.
+- Use clear labels that reflect the content accurately.
+
+Potential categories based on the article&#39;s focus:
+- Web Recommendations (obvious from title and context).
+- Large Language Models (since they are central to their approach).
+- Quality Improvement in Recommendations (they focused on enhancing quality).
+- Clickbait Detection might be a category since they addressed low-quality recommendations.
+- Ranking Algorithms because they improved their ranking system with LLMs.
+- User Behavior Analysis as they looked into user interactions and position bias.
+- Position Bias Mitigation is another specific aspect they tackled.
+- Content Quality could be a broader category that includes quality improvement efforts.
+- Webpage Summarization (they used SLM to generate summaries).
+- Authoritative Content (as their goal was to prioritize this).
+
+Let me check if these fit the guidelines. They cover both broad and specific areas, align with user interests in recommendation systems and LLM applications, and are clear labels.
+
+Wait, maybe I should consider other categories like Real-world Applications since they implemented changes in a production system. That&#39;s important because it shows practical use rather than just theoretical research.
+
+Also, the aspect of Beyond Accuracy might fit since they moved beyond just relevant pages to more useful and authoritative ones.
+
+Putting this all together, I have:
+- Web Recommendations
+- Large Language Models
+- Quality Improvement
+- Clickbait Detection
+- Ranking Algorithms
+- User Behavior Analysis
+- Position Bias Mitigation
+- Content Quality
+- Webpage Summarization
+- Authoritative Content
+- Real-world Applications
+- Beyond Accuracy
+
+That&#39;s 12 categories, which meets the guideline of assigning at least 8-12. I think these cover all aspects of the article without overlapping too much and should be useful for users navigating through research articles.
+&lt;/think&gt;
+
+Web Recommendations, Large Language Models, Quality Improvement, Clickbait Detection, Ranking Algorithms, User Behavior Analysis, Position Bias Mitigation, Content Quality, Webpage Summarization, Authoritative Content, Real-world Applications, Beyond Accuracy</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

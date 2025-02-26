@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: SSE-PT: Sequential Recommendation Via Personalized Transformer
+Abstract:
+Temporal information is crucial for recommendation problems because user preferences are naturally dynamic in the real world. Recent advances in deep learning, especially the discovery of various attention mechanisms and newer architectures in addition to widely used RNN and CNN in natural language processing, have allowed for better use of the temporal ordering of items that each user has engaged with. In particular, the SASRec model, inspired by the popular Transformer model in natural languages processing, has achieved state-of-the-art results. However, SASRec, just like the original Transformer model, is inherently an un-personalized model and does not include personalized user embeddings. To overcome this limitation, we propose a Personalized Transformer (SSE-PT) model, outperforming SASRec by almost 5% in terms of NDCG@10 on 5 real-world datasets. Furthermore, after examining some random users’ engagement history, we find our model not only more interpretable but also able to focus on recent engagement patterns for each user. Moreover, our SSE-PT model with a slight modification, which we call SSE-PT++, can handle extremely long sequences and outperform SASRec in ranking results with comparable training speed, striking a balance between performance and speed requirements. Our novel application of the Stochastic Shared Embeddings (SSE) regularization is essential to the success of personalization. Code and data are open-sourced at https://github.com/wuliwei9278/SSE-PT.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;SSE-PT: Sequential Recommendation Via Personalized Transformer.&#34; The abstract talks about temporal information being crucial for recommendation problems because user preferences change over time. They mention advances in deep learning, attention mechanisms, and newer architectures beyond RNNs and CNNs, particularly in NLP.
+
+The SASRec model is highlighted as a state-of-the-art method inspired by the Transformer model but lacks personalization. The authors propose SSE-PT, which adds personalized user embeddings, improving performance on real-world datasets. They also discuss an enhanced version, SSE-PT++, for handling long sequences and balancing performance with speed. They use stochastic shared embeddings (SSE) for regularization.
+
+So, looking at the categories:
+
+1. **Recommendation Systems**: The article is about recommendations, so this is a given.
+2. **Sequential Recommendations**: It focuses on sequential data, hence this category.
+3. **Personalization**: Since it&#39;s about personalized models, that&#39;s key.
+4. **Transformer Models**: They build upon and enhance the Transformer architecture.
+5. **Attention Mechanisms**: As part of deep learning advancements in NLP, attention is central here.
+6. **Deep Learning**: The underlying methodology uses deep learning techniques.
+7. **User Engagement History**: They analyze user engagement patterns, so this fits.
+8. **Scalability**: SSE-PT++ handles long sequences efficiently, touching on scalability.
+9. **Model Interpretability**: The model is more interpretable than SASRec.
+10. **Evaluation Metrics**: NDCG@10 is mentioned, indicating focus on evaluation metrics.
+11. **Real-World Applications**: They tested on 5 real-world datasets and have an open-source implementation.
+12. **Regularization Techniques**: SSE regularization is a novel application here.
+
+These categories cover the main aspects of the article, ensuring it&#39;s discoverable under various relevant topics without overcrowding any category. Each category is specific enough but also broad enough to be useful for users exploring different angles of recommendation systems and related machine learning techniques.
+&lt;/think&gt;
+
+Recommendation Systems, Sequential Recommendations, Personalization, Transformer Models, Attention Mechanisms, Deep Learning, User Engagement History, Scalability, Model Interpretability, Evaluation Metrics, Real-World Applications, Regularization Techniques</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: SSE-PT: Sequential Recommendation Via Personalized Transformer
+Abstract:
+Temporal information is crucial for recommendation problems because user preferences are naturally dynamic in the real world. Recent advances in deep learning, especially the discovery of various attention mechanisms and newer architectures in addition to widely used RNN and CNN in natural language processing, have allowed for better use of the temporal ordering of items that each user has engaged with. In particular, the SASRec model, inspired by the popular Transformer model in natural languages processing, has achieved state-of-the-art results. However, SASRec, just like the original Transformer model, is inherently an un-personalized model and does not include personalized user embeddings. To overcome this limitation, we propose a Personalized Transformer (SSE-PT) model, outperforming SASRec by almost 5% in terms of NDCG@10 on 5 real-world datasets. Furthermore, after examining some random users’ engagement history, we find our model not only more interpretable but also able to focus on recent engagement patterns for each user. Moreover, our SSE-PT model with a slight modification, which we call SSE-PT++, can handle extremely long sequences and outperform SASRec in ranking results with comparable training speed, striking a balance between performance and speed requirements. Our novel application of the Stochastic Shared Embeddings (SSE) regularization is essential to the success of personalization. Code and data are open-sourced at https://github.com/wuliwei9278/SSE-PT.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m looking at this article titled &#34;SSE-PT: Sequential Recommendation Via Personalized Transformer.&#34; The abstract mentions that it&#39;s about improving recommendation systems using a personalized Transformer model. Let me break down the key points.
+
+First, the focus is on temporal information in recommendations, which makes sense since user preferences change over time. They talk about deep learning advancements and how attention mechanisms, especially those from the Transformer model, have been effective. The SASRec model is mentioned as state-of-the-art but lacks personalization. So the article introduces SSE-PT, which adds personalized user embeddings to the Transformer architecture, improving performance by 5% in NDCG@10 across five datasets.
+
+They also mention that SSE-PT++ can handle long sequences and maintain training speed while being effective. The use of Stochastic Shared Embeddings (SSE) is a novel regularization technique they applied.
+
+Now, categorizing this. It&#39;s about sequential recommendation, so &#34;Sequential Recommendation&#34; is a must. Since they&#39;re using Transformer models, that&#39;s another key category: &#34;Transformer.&#34; Personalization is central to their approach, so &#34;Personalized Recommendations&#34; fits too.
+
+They address the temporal aspect of user behavior, so &#34;Temporal Dynamics&#34; should be included. The model handles long sequences, which ties into &#34;Long Sequence Handling.&#34; Performance metrics like NDCG are discussed, making &#34;Performance Metrics&#34; relevant. Additionally, they mention real-world datasets, so &#34;Real-World Applications&#34; is appropriate.
+
+Looking at the example categories provided, I think these cover the main aspects without overlapping too much. Each category is specific enough to be useful but broad enough to attract related articles.
+&lt;/think&gt;
+
+Sequential Recommendation, Transformer, Personalized Recommendations, Temporal Dynamics, Long Sequence Handling, Performance Metrics, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

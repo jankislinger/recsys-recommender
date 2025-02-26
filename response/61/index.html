@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Content Ordering Based On Commuting Patterns
+Abstract:
+Recommender systems take into account a wide range of information about both an individual user and other user&#39;s preferences in order to provide relevant content. However, one source of information that appears to be under-utilized is contextual information about the users&#39; trajectory: where they are currently located, and where they are traveling to. We demonstrate a system that recommends the reading order of Twitter content based on the user&#39;s planned travel.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article titled &#34;Content Ordering Based On Commuting Patterns&#34; with the given abstract. The goal is to assign it to multiple relevant categories so users can easily find it. Let me start by understanding what the article is about.
+
+The title mentions content ordering based on commuting patterns. From the abstract, I gather that the system uses contextual information like a user&#39;s location and travel plans to recommend the reading order of Twitter content. So, this is a recommendation system that leverages real-time or planned travel data.
+
+First, looking at algorithm families. The article doesn&#39;t specify which algorithms they used, but it does talk about recommending based on commuting patterns. This sounds like context-aware recommendations, so maybe Context-Aware Filtering as a category. Also, since it&#39;s dealing with user movement and location, Geolocation might be another relevant algorithm family.
+
+Next, considering the domain of the problem. The recommendation is applied to Twitter content, which falls under Social Media. It’s about how users consume information while commuting, so that fits into Content Recommendation. Also, the system considers real-time or planned travel, which relates to Travel and Navigation domains.
+
+For specific aspects in recommendation space, cold start isn&#39;t mentioned here, but they&#39;re using user trajectories and contextual data. So User Trajectory could be a category. They’re considering where users are going, so Commute Patterns would make sense as well.
+
+Looking at evaluation aspects, the abstract doesn’t specify how they evaluated diversity or beyond accuracy metrics, so maybe not applicable here. But they did an implementation with real-world commuting patterns and Twitter content, so Real-World Application is relevant.
+
+Other categories: The system adapts recommendations based on movement, which could be Dynamic Adaptation. They’re using location data for personalization, so Location-Based Personalization fits too.
+
+Putting it all together, the article should be categorized under Context-Aware Filtering (algorithm), Social Media and Content Recommendation domains, Real-World Application, User Trajectory, Commute Patterns, Geolocation, Travel/Navigation, Dynamic Adaptation, Location-Based Personalization. I think that covers the main points without being too redundant.
+
+Wait, let me double-check: The article is about recommendations based on commuting, using Twitter data, so Social Media and Content Recommendation are accurate. It&#39;s a real application they implemented, not just theoretical. They use location info, which ties into Geolocation and Location-Based Personalization. The movement patterns of users for ordering content suggest Dynamic Adaptation. All these categories seem relevant and user-centric.
+&lt;/think&gt;
+
+Context-Aware Filtering, Social Media, Content Recommendation, Real-World Application, User Trajectory, Commute Patterns, Geolocation, Travel/Navigation, Dynamic Adaptation, Location-Based Personalization</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Content Ordering Based On Commuting Patterns
+Abstract:
+Recommender systems take into account a wide range of information about both an individual user and other user&#39;s preferences in order to provide relevant content. However, one source of information that appears to be under-utilized is contextual information about the users&#39; trajectory: where they are currently located, and where they are traveling to. We demonstrate a system that recommends the reading order of Twitter content based on the user&#39;s planned travel.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let me break down how I categorized this article. The title mentions &#34;Content Ordering Based On Commuting Patterns,&#34; which immediately makes me think about location-based recommendations or something related to user movement. The abstract talks about recommender systems using not just user preferences but also their commuting patterns—where they are and where they&#39;re going—to order Twitter content.
+
+First, the obvious categories jump out: Location-Based Recommendations and User Mobility. These directly relate to how the system uses where users are traveling to influence recommendations.
+
+Next, since the focus is on optimizing the reading order of tweets based on travel plans, this seems like a personalized approach. So Personalized Recommendations fits well here.
+
+Temporal Context is another key point because commuting patterns inherently involve time—when and where users move during different times. This temporal aspect affects what content is recommended, so it&#39;s crucial to include Temporal Aspects.
+
+Context-Aware Systems is a broader category but definitely relevant since the system uses contextual data (commuting patterns) beyond just user preferences or item features.
+
+Geospatial Data plays into this too because commuting involves geographic locations, making Geospatial Analysis an appropriate category.
+
+Scalability might be inferred if the article discusses how efficiently the system handles large datasets or many users, though it&#39;s not explicitly mentioned. However, considering Twitter&#39;s vast user base, scalability is a practical concern.
+
+Real-World Applications is another important category because the example given uses a real application (Twitter commuting patterns), which aligns with actual deployment scenarios.
+
+Behavioral Analysis could be relevant if the system analyzes user behavior based on their movement and travel plans to tailor recommendations accordingly.
+
+Lastly, Travel Patterns specifically captures the essence of the article since it&#39;s all about how commuting and travel influence content ordering.
+
+I made sure each category is distinct yet relevant, avoiding overlap while ensuring coverage from different angles—geographic, temporal, personalized, and practical applications.
+&lt;/think&gt;
+
+Location-Based Recommendations, User Mobility, Personalized Recommendations, Temporal Context, Context-Aware Systems, Geospatial Data, Scalability, Real-World Applications, Behavioral Analysis, Travel Patterns</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

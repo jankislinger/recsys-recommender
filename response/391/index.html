@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommending Social-Interactive Games for Adults with Autism Spectrum Disorders (ASD)
+Abstract:
+Games play a significant role in modern society, since they affect people of all ages and all walks of life, whether it be socially or mentally, and have direct impacts on adults with autism. Autism spectrum disorders (ASD) are a collection of neurodevelopmental disorders characterized by qualitative impairments in social relatedness and interaction, as well as difficulties in acquiring and using communication and language abilities. Adults with ASD often find it difficult to express and recognize emotions which makes it hard for them to interact with others socially. We have designed new interactive and collaborative games for autistic adults and developed a novel strategy to recommend games to them. Using modern computer vision and graphics techniques, we (i) track the player’s speech rate, facial features, eye contact, audio communication, and emotional states, and (ii) foster their collaboration. These games are personalized and recommended to a user based on games interested to the user, besides the complexity of games at different levels according to the deficient level of the emotional understanding and social skills to which the user belongs. The objective of developing and recommending short-head (i.e., familiar) and long-tail (i.e., unfamiliar) games for adults with ASD is to enhance their necessary social interacting skills with peers so that they can live a normal life.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s try to figure out how to categorize this research article about recommending social-interactive games for adults with Autism Spectrum Disorders (ASD). I&#39;m new to this, but I&#39;ll give it my best shot.
+
+First, the title mentions &#34;Recommending Social-Interactive Games,&#34; so that suggests some categories related to recommendation systems and game design. The abstract talks about using computer vision and graphics techniques, specifically tracking things like speech rate, facial features, eye contact, audio communication, and emotional states. That makes me think of user interaction and behavioral analysis.
+
+The article is focused on ASD adults, who have difficulties with social interaction and communication. So categories related to special needs or disabilities seem appropriate here. Also, since the games are designed for autistic adults, the domain here is healthcare, but more specifically, it&#39;s about educational tools because they aim to help develop social skills, which is a form of education.
+
+The recommendation strategy mentioned includes personalization based on user interest and game complexity according to the individual&#39;s skill level. This points towards personalized recommendations as a category. They also mention both short-head (familiar) and long-tail (unfamiliar) games, so that should be included too.
+
+Looking at evaluation aspects, they talk about fostering collaboration and enhancing social interaction skills, which ties into social aspects of recommendation systems. Additionally, the techniques used involve machine learning elements like tracking user behaviors, so a category related to those technologies makes sense.
+
+Putting it all together, I need to assign 8-12 categories that cover these points without overlapping too much. Let me list out potential categories based on my understanding:
+
+1. **Recommendation Systems** - The main focus is on recommending games.
+2. **Game Design** - Since they designed new interactive and collaborative games.
+3. **User Interaction** - Involves tracking user behaviors like speech rate, facial features, etc.
+4. **Behavioral Analysis** - Analyzing emotional states and communication patterns.
+5. **Special Needs/Disabilities** - Targeted towards adults with ASD.
+6. **Personalized Recommendations** - Games are personalized based on the user&#39;s interests and skill level.
+7. **Healthcare Applications** - The domain is about helping individuals with ASD, which falls under healthcare.
+8. **Educational Tools** - Aiming to enhance social skills through games, which serves an educational purpose.
+9. **Social Interaction** - The goal is to improve social interacting skills.
+10. **Collaborative Games** - They designed collaborative games for autistic adults.
+11. **Machine Learning Techniques** - Using computer vision and graphics techniques falls under this category.
+12. **Short-Head and Long-Tail Recommendations** - Mentioned as part of the recommendation strategy.
+
+I think that covers all the key points from the abstract without missing any important aspects. Each category is relevant to different facets of the research, ensuring the article can be discovered through various angles. I should double-check if any categories overlap or if some could be more specific, but overall, this seems comprehensive.
+&lt;/think&gt;
+
+Recommendation Systems, Game Design, User Interaction, Behavioral Analysis, Special Needs/Disabilities, Personalized Recommendations, Healthcare Applications, Educational Tools, Social Interaction, Collaborative Games, Machine Learning Techniques, Short-Head and Long-Tail Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Recommending Social-Interactive Games for Adults with Autism Spectrum Disorders (ASD)
+Abstract:
+Games play a significant role in modern society, since they affect people of all ages and all walks of life, whether it be socially or mentally, and have direct impacts on adults with autism. Autism spectrum disorders (ASD) are a collection of neurodevelopmental disorders characterized by qualitative impairments in social relatedness and interaction, as well as difficulties in acquiring and using communication and language abilities. Adults with ASD often find it difficult to express and recognize emotions which makes it hard for them to interact with others socially. We have designed new interactive and collaborative games for autistic adults and developed a novel strategy to recommend games to them. Using modern computer vision and graphics techniques, we (i) track the player’s speech rate, facial features, eye contact, audio communication, and emotional states, and (ii) foster their collaboration. These games are personalized and recommended to a user based on games interested to the user, besides the complexity of games at different levels according to the deficient level of the emotional understanding and social skills to which the user belongs. The objective of developing and recommending short-head (i.e., familiar) and long-tail (i.e., unfamiliar) games for adults with ASD is to enhance their necessary social interacting skills with peers so that they can live a normal life.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m looking at this article about recommending social-interactive games for adults with Autism Spectrum Disorders (ASD). The title already gives me some clues: it&#39;s focused on game recommendations tailored for a specific group. 
+
+First, the abstract mentions that games are used to help adults with ASD improve their social and communication skills. It talks about using computer vision and graphics to track things like speech rate, facial features, eye contact, and emotional states. These are all specific techniques in the recommendation process, so I should note Computer Vision and Graphics here.
+
+Next, the article discusses personalization of games based on the user&#39;s level of social and emotional skills. This points towards Personalized Recommendations as a key category. 
+
+The fact that they&#39;re targeting a specific group (adults with ASD) means this is niche recommendation. Also, since it&#39;s about helping them develop social skills, Social Skills Development fits well.
+
+They mention both short-head and long-tail games, which refers to the variety of recommendations—some popular and others less so. So Long-Tail Recommendations should be included as a category.
+
+The use of collaborative and interactive games indicates that Collaborative Games are central to this study. 
+
+Another point is the adaptive nature of the games based on user proficiency, which relates to Proficiency Adaptation in recommendation systems. 
+
+The article also deals with emotional states and facial recognition, so Emotion Recognition and Affective Computing are relevant here.
+
+Finally, since it&#39;s aimed at individuals with ASD, Autism Spectrum Disorders (ASD) is a primary category that must be included.
+&lt;/think&gt;
+
+Computer Vision, Graphics, Personalized Recommendations, Niche Recommendation, Social Skills Development, Collaborative Games, Long-Tail Recommendations, Proficiency Adaptation, Emotion Recognition, Affective Computing, Autism Spectrum Disorders (ASD).</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

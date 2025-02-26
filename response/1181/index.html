@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Privacy Preserving Conversion Modeling in Data Clean Room
+Abstract:
+In the realm of online advertising, accurately predicting the conversion rates (CVR) is crucial for enhancing advertising efficiency and user satisfaction. However, it faces the challenge that due to user privacy choices and advertiser requirements, the advertising platform cannot get the conversion data from some advertisers, making accurate CVR predictions difficult. Although current methods like split learning or vertical federated learning do not share label information directly, they still exchange sample-level gradients, which introduces a privacy risk as adversaries might infer label information through the shared gradients. To address these challenges, our proposed model training framework incorporates several innovative techniques. Firstly, we employ batch-level aggregated gradients instead of sample-level gradients to enhance privacy. Secondly, to minimize communication costs, we utilize adapter-based parameter-efficient fine-tuning methods such as Low-Rank Adaptation (LoRA) and gradient compression in conversion models. These methods allow for efficient collaboration between different parties while reducing the amount of data transferred. Lastly, we incorporate label differential privacy to protect model privacy. Given that this privacy protection alters the data distribution and can result in significant calibration error, we propose a de-biasing technique to ensure accurate model predictions even with perturbed label information. Our experimental results on industrial datasets demonstrate that our method achieves competitive performance while significantly reducing the communication overhead and complying with advertisers’ privacy requirements and user privacy choice. This framework establishes a new benchmark for privacy-preserving and high-performance CVR prediction in the digital advertising industry.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s tackle this categorization task step by step. The article is about &#34;Privacy Preserving Conversion Modeling in Data Clean Room.&#34; I need to assign it to multiple relevant categories based on its content.
+
+First, looking at the title and abstract, the main focus is on privacy-preserving techniques applied to conversion rate (CVR) prediction in online advertising. The authors address challenges with user privacy and advertiser requirements where conversion data isn&#39;t always accessible.
+
+One of the key themes here is **Privacy Preservation** because they&#39;re specifically working on methods that protect user data. They mention using label differential privacy, which directly ties into this category.
+
+Another important aspect is **Conversion Rate Prediction**, as the model aims to accurately predict CVR despite privacy constraints. This falls under the domain of online advertising and marketing strategies.
+
+They use techniques like batch-level aggregated gradients instead of sample-level ones to enhance privacy. This relates to **Machine Learning** since it&#39;s about training models, and specifically touches on **Federated Learning**, a method that allows multiple parties to collaborate without sharing data directly. The paper references split learning and vertical federated learning, so these should be included.
+
+The article also discusses optimization techniques such as LoRA (Low-Rank Adaptation) for parameter-efficient fine-tuning and gradient compression to minimize communication costs. These methods fall under **Optimization Methods** in machine learning.
+
+Moreover, they mention the use of a data clean room, which is a setting where data is processed without exposing sensitive information. This ties into **Data Processing Environments**, indicating the specific context of their work.
+
+The framework&#39;s goal is to comply with advertisers’ privacy requirements and user choices, making it relevant to **Advertising Technology** and how it intersects with privacy concerns.
+
+Additionally, the problem they&#39;re addressing relates to challenges in data accessibility due to privacy, which can be seen as part of **Data Sharing Challenges**, though this might be a bit broader than some other categories.
+
+They also talk about experimental results on industrial datasets, showing that their method is efficient and maintains performance despite privacy measures. This practical application aspect fits into **Real-World Applications**.
+
+Considering the user-centric design, these categories should align with interests in privacy, advertising tech, machine learning, and optimization techniques. They&#39;re broad enough to be useful but specific enough to provide meaningful navigation points.
+
+I need to ensure that each category is both relevant and covers different aspects of the article without being too narrow or overlapping excessively. For example, including **Privacy Preservation** and **Differential Privacy** together provides a clear focus on their approach to privacy. Similarly, combining **Conversion Rate Prediction** with **Online Advertising** ensures users interested in advertising metrics can find this article.
+
+I should also check if any other categories are relevant. They mention de-biasing techniques to handle perturbed data, but that might not fit neatly into the predefined examples without creating a new category, which isn&#39;t necessary here as the existing ones cover it sufficiently.
+
+In summary, by analyzing each component of the article—privacy techniques, machine learning approaches, optimization methods, and their application in advertising—I can confidently assign these categories. This should make the article easily discoverable for users interested in any of these areas.
+&lt;/think&gt;
+
+Privacy Preservation, Conversion Rate Prediction, Online Advertising, Machine Learning, Federated Learning, Differential Privacy, Optimization Methods, Data Sharing Challenges, Low-Rank Adaptation (LoRA), Gradient Compression, Advertising Technology, Real-World Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Privacy Preserving Conversion Modeling in Data Clean Room
+Abstract:
+In the realm of online advertising, accurately predicting the conversion rates (CVR) is crucial for enhancing advertising efficiency and user satisfaction. However, it faces the challenge that due to user privacy choices and advertiser requirements, the advertising platform cannot get the conversion data from some advertisers, making accurate CVR predictions difficult. Although current methods like split learning or vertical federated learning do not share label information directly, they still exchange sample-level gradients, which introduces a privacy risk as adversaries might infer label information through the shared gradients. To address these challenges, our proposed model training framework incorporates several innovative techniques. Firstly, we employ batch-level aggregated gradients instead of sample-level gradients to enhance privacy. Secondly, to minimize communication costs, we utilize adapter-based parameter-efficient fine-tuning methods such as Low-Rank Adaptation (LoRA) and gradient compression in conversion models. These methods allow for efficient collaboration between different parties while reducing the amount of data transferred. Lastly, we incorporate label differential privacy to protect model privacy. Given that this privacy protection alters the data distribution and can result in significant calibration error, we propose a de-biasing technique to ensure accurate model predictions even with perturbed label information. Our experimental results on industrial datasets demonstrate that our method achieves competitive performance while significantly reducing the communication overhead and complying with advertisers’ privacy requirements and user privacy choice. This framework establishes a new benchmark for privacy-preserving and high-performance CVR prediction in the digital advertising industry.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Privacy Preserving Conversion Modeling in Data Clean Room.&#34; Let me start by reading through the abstract to understand what it&#39;s about.
+
+The article talks about predicting conversion rates (CVR) in online advertising. The challenge is that some advertisers don&#39;t share their conversion data due to privacy concerns, making accurate predictions tough. Current methods like split learning or vertical federated learning still exchange sample-level gradients, which can pose privacy risks since adversaries might infer labels from these gradients.
+
+The proposed solution includes a few key techniques:
+1. Using batch-level aggregated gradients instead of sample-level ones for better privacy.
+2. Employing adapter-based fine-tuning methods (like LoRA) and gradient compression to reduce communication costs.
+3. Incorporating label differential privacy to protect model privacy.
+4. Introducing a de-biasing technique to handle calibration errors caused by perturbed labels.
+
+They tested this on industrial datasets and found that their method performs well, reduces overhead, and complies with privacy requirements.
+
+Now, I need to assign this article to multiple categories as per the guidelines. Let&#39;s break it down.
+
+First, looking at the family of algorithms, they mention techniques like split learning, vertical federated learning, LoRA (which is parameter-efficient fine-tuning), differential privacy, and gradient compression. So those could be potential categories.
+
+Next, the domain is online advertising since it&#39;s about CVR prediction in that context.
+
+In terms of specific recommendation aspects, the focus here isn&#39;t on recommendations per se but on conversion modeling. However, since it deals with data privacy in a recommendation-like setting (advertising), maybe &#34;Privacy &amp; Security&#34; is more fitting as a category.
+
+Evaluation aspects might include metrics related to accuracy and communication overhead, but I&#39;m not sure if they explicitly talk about evaluation beyond performance. Maybe not necessary here.
+
+Real-world applications are definitely present—this is applied in digital advertising with A/B testing mentioned in the results.
+
+Other relevant categories could be differential privacy techniques and data privacy frameworks since that&#39;s a core part of their solution.
+
+So, putting it all together:
+
+- Algorithm Families: Split Learning, Vertical Federated Learning, LoRA (Low-Rank Adaptation), Differential Privacy
+- Domain: Online Advertising
+- Privacy &amp; Security: Label Differential Privacy, Model Privacy
+- Real-world Applications: A/B Test
+- Technique: Gradient Compression
+
+I think that covers the main points. Each category should be relevant and descriptive to help users navigate easily.
+&lt;/think&gt;
+
+Split Learning, Vertical Federated Learning, LoRA (Low-Rank Adaptation), Differential Privacy, Online Advertising, Label Differential Privacy, Model Privacy, A/B Test, Gradient Compression</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

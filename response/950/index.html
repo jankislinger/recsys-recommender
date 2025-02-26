@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: An Exploration of Sentence-Pair Classification for Algorithmic Recruiting
+Abstract:
+Recent years have seen a rapid increase in the application of computational approaches to different HR tasks, such as algorithmic hiring, skill extraction, and monitoring of employee satisfaction. Much of the recent work on estimating the fit between a person and a job has used representation learning to represent both resumes and job vacancies computationally and determine the degree to which they match. A common approach to this task is Sentence-BERT, which uses a Siamese network to encode resumes and job descriptions into fixed-length vectors and estimates how well they match based on the similarity between those vectors. In our paper, we adapt BERT’s next-sentence prediction task—predicting whether one sentence is likely to follow another in a given context—to the task of matching resumes with job descriptions. Using historical data on past (mis)matches between job-resume pairs, we fine-tune BERT for this downstream task. Through a combination of offline and online experiments on data from a large Scandinavian job portal, we show that this approach performs significantly better than Sentence-BERT and other state-of-the-art approaches for determining person-job fit.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let me start by carefully reading the title and abstract.
+
+The title is &#34;An Exploration of Sentence-Pair Classification for Algorithmic Recruiting.&#34; So it&#39;s about using sentence-pair classification in the context of algorithmic recruiting. That immediately tells me that the main areas are related to recruitment, HR tasks, and machine learning techniques.
+
+Looking at the abstract: The paper discusses computational approaches in HR tasks like algorithmic hiring, skill extraction, and employee satisfaction monitoring. It uses representation learning for matching resumes and job vacancies. The method involves adapting BERT&#39;s next-sentence prediction task for this purpose. They compare their approach to Sentence-BERT and other state-of-the-art methods, showing better performance using data from a Scandinavian job portal.
+
+Now, I need to map these elements into categories based on the provided examples and guidelines. Let me go through each aspect:
+
+1. **Family of Algorithm**: The paper uses BERT and adapts its next-sentence prediction task. It also mentions Sentence-BERT, which is a specific algorithm for sentence pair classification. So, relevant categories here are BERT, Sentence-BERT, Representation Learning, Fine-Tuning (since they fine-tuned BERT), and Next-Sentence Prediction.
+
+2. **Domain of the Problem**: The domain is clearly HR tasks, specifically recruitment or job matching. So categories like Recruitment, Job Matching, Hiring would be appropriate.
+
+3. **Recommendation Space Specifics**: This isn&#39;t exactly a recommendation system in the traditional sense (like product recommendations), but it&#39;s about matching people to jobs. However, some specific aspects might still apply, such as Person-Job Fit and Candidate-Position Matching.
+
+4. **Aspects of Evaluation**: The paper uses both offline and online experiments with real-world data. They evaluated performance against existing methods like Sentence-BERT. So categories could include Offline Testing, Online Experiments, Historical Data Analysis, and Performance Comparison.
+
+5. **Real-World Applications**: Since they used data from a job portal and tested in real scenarios (A/B tests or user surveys aren&#39;t explicitly mentioned, but online experiments suggest some form of real-world application). However, the abstract doesn&#39;t mention A/B testing or user surveys specifically, so I might exclude those unless I&#39;m certain.
+
+6. **Other Relevant Categories**: The paper deals with text matching, which is a key aspect. So categories like Text Matching and Sentence-Pair Classification are relevant.
+
+Now, considering the guidelines: Each article should be assigned 8-12 categories, ensuring they&#39;re both specific and broad enough. Let me compile these thoughts into a list:
+
+- **BERT**: Since BERT is central to their approach.
+- **Sentence-BERT**: They compare against this method.
+- **Representation Learning**: The paper uses this technique for matching resumes and job descriptions.
+- **Recruitment**: The main domain of application.
+- **Job Matching**: Specific task within recruitment.
+- **Text Matching**: Focuses on matching text pairs (resumes and job descriptions).
+- **Sentence-Pair Classification**: The specific task addressed in the paper.
+- **Fine-Tuning**: They fine-tuned BERT for their task.
+- **Next-Sentence Prediction**: Adapted this part of BERT&#39;s training.
+- **Performance Comparison**: Evaluated against other methods.
+- **Offline Testing**: Part of their experimental setup.
+- **Online Experiments**: Tested in real-world scenarios.
+
+I should avoid categories with too few articles, so I&#39;ll make sure each category is sufficiently broad or specific but not overly narrow unless it&#39;s a common theme. Also, the names need to be clear and descriptive. For example, &#34;Historical Data Analysis&#34; is clear, but if that&#39;s too generic, maybe something more precise like &#34;Real-World Data&#34; could work.
+
+Wait, I see some categories might overlap or be redundant. Let me check:
+
+- **Person-Job Fit**: This is a specific aspect within recruitment, so it should be included.
+- **Candidate-Position Matching**: Another way to describe the task.
+
+I think these add value without overlapping too much with &#34;Job Matching.&#34;
+
+Also, ensuring that each category aligns with user interests. Users looking for HR applications would search under Recruitment or Job Matching. Those interested in machine learning techniques might look for BERT or Sentence-Pair Classification.
+
+Let me list all potential categories and then select the most relevant ones:
+
+1. BERT
+2. Sentence-BERT
+3. Representation Learning
+4. Fine-Tuning
+5. Next-Sentence Prediction
+6. Recruitment
+7. Job Matching
+8. Hiring
+9. Text Matching
+10. Sentence-Pair Classification
+11. Person-Job Fit
+12. Candidate-Position Matching
+13. Performance Comparison
+14. Offline Testing
+15. Online Experiments
+
+But I should limit it to 8-12 categories, so let me prioritize the most relevant and specific ones:
+
+- BERT
+- Sentence-BERT
+- Representation Learning
+- Fine-Tuning
+- Next-Sentence Prediction
+- Recruitment
+- Job Matching
+- Text Matching
+- Sentence-Pair Classification
+- Person-Job Fit
+- Candidate-Position Matching
+- Performance Comparison
+
+This gives me 12 categories, which fits the guideline. Each is relevant and covers both specific techniques and broader domains. I think this should help users navigate and discover content effectively.
+&lt;/think&gt;
+
+BERT, Sentence-BERT, Representation Learning, Fine-Tuning, Next-Sentence Prediction, Recruitment, Job Matching, Text Matching, Sentence-Pair Classification, Person-Job Fit, Candidate-Position Matching, Performance Comparison</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

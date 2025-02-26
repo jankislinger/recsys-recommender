@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Behaviorism is Not Enough
+Abstract:
+Behaviorism is the currently-dominant paradigm for building and evaluating recommender systems. Both the operation and the evaluation of recommender system applications are most often driven by analyzing the behavior of users. In this paper, we argue that listening to what users say — about the items and recom-mendations they like, the control they wish to exert on the output, and the ways in which they perceive the system — and not just observing what they do will enable important developments in the future of recommender systems. We provide both philosophi-cal and pragmatic motivations for this idea, describe the various points in the recommendation and evaluation processes where explicit user input may be considered, and discuss benefits that may result from considered incorporation of user preferences at each of these points. In particular, we envision recommender applications that aim to support users’ better selves: helping them live the life that they desire to lead. For example, recommender-assisted behavior change requires algorithms to predict not what users choose or do now, inferable from behavioral data, but what they should choose or do in the future to become healthier, fitter, more sustainable, or culturally aware. We hope that our work will spur useful discussion and many new ideas for recommenders that empower their users.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Behaviorism is Not Enough&#34; into multiple relevant categories based on the guidelines provided. Let me start by reading through the abstract carefully to understand its main points.
+
+The title suggests that behaviorism isn&#39;t sufficient in the context of recommender systems. The abstract explains that currently, these systems are built and evaluated mainly using user behavior data—what users do. However, the authors argue that incorporating what users say (explicit feedback) is crucial for future advancements. They mention both philosophical and pragmatic reasons, discussing where explicit input can be integrated into recommendation and evaluation processes.
+
+They also talk about benefits from considering user preferences more deeply and envision recommenders that support users in living their desired lives—like helping them become healthier or more culturally aware. This implies a focus on behavior change and empowerment through recommendations.
+
+Now, looking at the categories provided as examples: family of algorithms, domains like books or healthcare, specific recommendation aspects like cold start, evaluation aspects, real-world applications such as A/B testing, etc.
+
+Let me break down the abstract to identify key themes:
+
+1. **Recommender Systems**: Clearly central.
+2. **Behaviorism vs. Explicit Feedback**: Contrast between relying solely on behavior (implicit feedback) and incorporating user statements (explicit).
+3. **Evaluation Methods**: The paper discusses evaluating systems not just by behavior but also by what users say, so evaluation is a key aspect.
+4. **User-Centered Design**: Focuses on supporting users&#39; goals beyond current behaviors.
+5. **Behavior Change**: Recommenders that help users change their habits towards healthier or more sustainable lifestyles.
+6. **Empowerment/Ownership**: Users have control and are empowered by the recommendations.
+7. **Philosophical Considerations**: Discussing the reasons why behaviorism isn&#39;t enough, which is a deeper philosophical argument.
+8. **Interdisciplinary Approach**: The paper touches on how recommenders can influence areas like health or sustainability, suggesting applications across different domains.
+
+Considering these points, I should map them to existing categories. For example:
+
+- Recommender Systems (core category)
+- Explicit Feedback (since it&#39;s about user statements)
+- Evaluation Methods (as they discuss evaluation beyond behavior)
+- User-Centered Design (focus on user goals)
+- Behavior Change (helping users change)
+- Empowerment/Owenership (user control and empowerment)
+- Ethical Considerations (philosophical motivations for why current methods are lacking)
+- Interdisciplinary Approaches (since the applications span various domains like health, sustainability)
+
+Wait, but in the example categories, there&#39;s &#34;User-Centered Design,&#34; which seems relevant. Also, &#34;Evaluation&#34; is a broad category, but since they talk about aspects of evaluation beyond accuracy, maybe &#34;Beyond Accuracy&#34; as a subcategory? Or perhaps &#34;Evaluation Methods.&#34;
+
+I should also consider whether any real-world applications are discussed. The paper mentions A/B testing or user surveys as examples in the guidelines, but this abstract doesn&#39;t explicitly mention those methods. So maybe it&#39;s more theoretical than applied.
+
+Another category could be &#34;Philosophical Foundations&#34; since they discuss why behaviorism isn&#39;t enough from a philosophical standpoint. Alternatively, &#34;Ethical Considerations&#34; if it touches on ethical implications of recommendation systems that don&#39;t consider user statements.
+
+Putting this together, I can assign categories like:
+
+- Recommender Systems
+- Explicit Feedback
+- Evaluation Methods
+- User-Centered Design
+- Behavior Change
+- Empowerment/Owenership
+- Ethical Considerations (or Philosophical Foundations)
+- Interdisciplinary Approaches
+
+I should ensure each category is clear and descriptive. Maybe &#34;User-Centric Design&#34; instead of ownership? Or perhaps separate categories for Control and Empowerment.
+
+Also, looking at the example output from earlier, the user included a variety of categories that blend algorithm families, domains, recommendation aspects, evaluation aspects, etc. So I need to balance between specific and broader categories.
+
+Let me check if there&#39;s any overlap or more precise terms. For instance, &#34;User Feedback&#34; is already covered under &#34;Explicit Feedback.&#34; 
+
+I think these categories should cover the main points without being too narrow or overlapping excessively.
+&lt;/think&gt;
+
+Recommender Systems, Explicit Feedback, Evaluation Methods, User-Centered Design, Behavior Change, Empowerment, Ethical Considerations, Interdisciplinary Approaches</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Behaviorism is Not Enough
+Abstract:
+Behaviorism is the currently-dominant paradigm for building and evaluating recommender systems. Both the operation and the evaluation of recommender system applications are most often driven by analyzing the behavior of users. In this paper, we argue that listening to what users say — about the items and recom-mendations they like, the control they wish to exert on the output, and the ways in which they perceive the system — and not just observing what they do will enable important developments in the future of recommender systems. We provide both philosophi-cal and pragmatic motivations for this idea, describe the various points in the recommendation and evaluation processes where explicit user input may be considered, and discuss benefits that may result from considered incorporation of user preferences at each of these points. In particular, we envision recommender applications that aim to support users’ better selves: helping them live the life that they desire to lead. For example, recommender-assisted behavior change requires algorithms to predict not what users choose or do now, inferable from behavioral data, but what they should choose or do in the future to become healthier, fitter, more sustainable, or culturally aware. We hope that our work will spur useful discussion and many new ideas for recommenders that empower their users.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article based on its title and abstract. The title is &#34;Behaviorism is Not Enough,&#34; which suggests the paper critiques the dominant paradigm in recommender systems that relies solely on user behavior data.
+
+Looking at the abstract, it discusses how current systems focus on analyzing what users do, but argue for also considering what users say about their preferences, control over recommendations, and perceptions. The paper introduces philosophical and pragmatic reasons for this approach, suggesting incorporating explicit user input into recommendation processes.
+
+Key points from the abstract:
+- Critique of behaviorism in recommender systems.
+- Emphasis on explicit user feedback (what they say) alongside implicit data (what they do).
+- Discussion of various points in the recommendation process where user input could be integrated.
+- Benefits include better alignment with users&#39; self-improvement goals, like health, fitness, sustainability, cultural awareness.
+- Envisioning recommenders that empower users to achieve their desired life outcomes.
+
+Now, mapping this to possible categories:
+1. **Explicit Feedback**: The paper talks about incorporating explicit user input, so this category fits.
+2. **User-Centered Design**: Focuses on understanding user needs and preferences beyond behavior.
+3. **Ethical Considerations**: As it discusses the ethical implications of recommendation systems empowering users towards positive outcomes.
+4. **Personalization**: Tailoring recommendations to individual user goals and self-improvement.
+5. **Evaluation Methods**: Since it critiques current evaluation paradigms based solely on behavior, this relates to evaluation methods needing expansion.
+6. **User Preferences**: The core theme is about considering what users prefer and desire beyond their actions.
+
+I should ensure each category is relevant and aligns with the content without overcrowding any single category. These categories capture the essence of the paper&#39;s arguments and implications for recommender systems.
+&lt;/think&gt;
+
+Explicit Feedback, User-Centered Design, Ethical Considerations, Personalization, Evaluation Methods, User Preferences</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

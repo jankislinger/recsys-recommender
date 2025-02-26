@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Darwin &amp; Goliath: A White-Label Recommender-System As-a-Service with Automated Algorithm-Selection
+Abstract:
+Recommendations-as-a-Service (RaaS) ease the process for small and medium-sized enterprises (SMEs) to offer product recommendations to their customers. Current RaaS, however, suffer from a one-size-fits-all concept, i.e. they apply the same recommendation algorithm for all SMEs. We introduce Darwin &amp; Goliath, a RaaS that features multiple recommendation frameworks (Apache Lucene, TensorFlow, ...), and identifies the ideal algorithm for each SME automatically. Darwin &amp; Goliath further offers per-instance algorithm selection and a white label feature that allows SMEs to offer a RaaS under their own brand. Since November 2018, Darwin &amp; Goliath has delivered more than 1m recommendations with a CTR = 0.5%.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m trying to categorize this research article about Darwin &amp; Goliath, which is a Recommender-System as-a-Service (RaaS). Let me go through the process step by step.
+
+First, looking at the title and abstract, the main focus seems to be on providing SMEs with recommendation solutions. So, &#34;Small and Medium-Sized Enterprises&#34; should definitely be one category.
+
+The article mentions they offer automated algorithm selection, so that&#39;s another key point. They use multiple frameworks like Apache Lucene and TensorFlow, which tells me their approach is framework-agnostic, so &#34;Framework-Agnostic&#34; makes sense as a category.
+
+They provide white-label services, allowing SMEs to brand the RaaS under their own names. So, &#34;White Label&#34; should be included too.
+
+Since this is about recommendations, it&#39;s essential to include &#34;Recommendation Systems.&#34; The system uses machine learning algorithms because they mention TensorFlow, so &#34;Machine Learning&#34; is relevant.
+
+The article talks about automated algorithm selection, which means the system adapts based on different SME needs. That makes me think of &#34;Algorithm Adaptation.&#34;
+
+They deliver a lot of recommendations (over 1 million) with a certain CTR, indicating real-world applications and usage. So categories like &#34;Real World Applications,&#34; &#34;A/B Test&#34; (though not directly mentioned, it&#39;s part of application evaluation), and &#34;User Survey&#34; could be relevant since they might have tested their system with users.
+
+Looking at the problem domain, this is more about e-commerce as SMEs are likely using it for product recommendations. So, &#34;E-Commerce&#34; should be included.
+
+The article mentions scalability because it serves many recommendations efficiently. Thus, &#34;Scalability&#34; is another category.
+
+They also mention per-instance algorithm selection, which implies customization at a granular level. Therefore, &#34;Customization&#34; fits here.
+
+I need to ensure each article is assigned 8-12 categories. Let me count: SMEs, Automated Algorithm Selection, Framework-Agnostic, White Label, Recommendation Systems, Machine Learning, Algorithm Adaptation, Real World Applications, A/B Test, User Survey, E-Commerce, Scalability, Customization. That&#39;s more than 12, so I should pick the most relevant ones.
+
+The key themes are RaaS for SMEs with automated algorithm selection and white-labeling. So I&#39;ll include SMEs, Automated Algorithm Selection, White Label, Framework-Agnostic, Recommendation Systems, Machine Learning, Real World Applications, Scalability, and maybe E-Commerce as the domain.
+
+I think that&#39;s a solid set covering both specific aspects like automated selection and broader categories like recommendation systems and e-commerce. It also includes real-world application elements which are important for user-centric design.
+&lt;/think&gt;
+
+Small and Medium-Sized Enterprises (SMEs), Automated Algorithm Selection, White Label, Framework-Agnostic, Recommendation Systems, Machine Learning, Real World Applications, Scalability</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

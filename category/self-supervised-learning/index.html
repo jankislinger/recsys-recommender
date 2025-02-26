@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/multi-task-learning/">Multi-Task Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Knowledge-Enhanced Multi-Behaviour Contrastive Learning for Effective Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Iadh Ounis, Zeyuan Meng, Zixuan Yi</p>
+    <p>Real-world recommendation scenarios usually need to handle diverse user-item interaction behaviours, including page views, adding items into carts, and purchasing activities. The interactions that precede the actual target behaviour (e.g. purchasing an item) allow to better capture the user’s preferences from different angles, and are used  as auxiliary information (e.g. page views) to enrich the system’s knowledge about the users’ preferences, thereby helping to enhance recommendation for the target behaviour. Despite efforts in modelling the users’ multi-behaviour interaction information, the existing multi-behaviour recommenders  still face two challenges: (1) Data sparsity across multiple user behaviours is a common issue that limits the recommendation performance, particularly for the target behaviour, which typically exhibits fewer interactions compared to other auxiliary behaviours. (2) Noisy auxiliary interactive behaviour where the information in the auxiliary information  might be non-relevant to recommendation.  In this case, a direct  adoption of  contrastive learning between the target behaviour and the auxiliary behaviours will amplify the noise in the auxiliary behaviours, thereby negatively impacting the real semantics that can be derived from the target behaviour. To address these two challenges, we propose a new model called Knowledge-Enhanced Multi-behaviour Contrastive Learning for Recommendation (KEMCL). In particular, to address the problem of sparse user multi-behaviour interaction information, we leverage a tailored knowledge graph (KG) to enrich the semantic representations of items, and generate supervision signals through self-supervised learning so as to enhance  recommendation. In addition, we develop two contrastive learning (CL) methods, inter CL and intra CL, to alleviate the problem of noisy auxiliary interactions. Extensive experiments on three public recommendation datasets show that our proposed KEMCL model significantly outperforms the existing state-of-the-art (SOTA) methods. In particular, our KEMCL model outperforms the best baseline performance, namely KMCLR,  by 5.42% on the large Tmall dataset.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, User Interaction, Auxiliary Information, Data Sparsity, Noisy Data, Contrastive Learning, Knowledge Graphs, Self-Supervised Learning, Real-World Applications, Performance Improvement, E-Commerce (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1095/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Multi-task Item-attribute Graph Pre-training for Strict Cold-start Item Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Hao Peng, Zhiwei Liu, Chenyu You, Philip Yu, Liangwei Yang, Chen Wang, Yuwei Cao</p>
+    <p>Recommendation systems suffer in the strict cold-start (SCS) scenario, where the user-item interactions are entirely unavailable. The well-established, dominating identity (ID)-based approaches completely fail to work. Cold-start recommenders, on the other hand, leverage item contents (brand, title, descriptions, etc.) to map the new items to the existing ones. However, the existing SCS recommenders explore item contents in coarse-grained manners that introduce noise or information loss. Moreover, informative data sources other than item contents, such as users’ purchase sequences and review texts, are largely ignored. In this work, we explore the role of the fine-grained item attributes in bridging the gaps between the existing and the SCS items and pre-train a knowledgeable item-attribute graph for SCS item recommendation. Our proposed framework, ColdGPT, models item-attribute correlations into an item-attribute graph by extracting fine-grained attributes from item contents. ColdGPT then transfers knowledge into the item-attribute graph from various available data sources, i.e., item contents, historical purchase sequences, and review texts of the existing items, via multi-task learning. To facilitate the positive transfer, ColdGPT designs specific submodules according to the natural forms of the data sources and proposes to coordinate the multiple pre-training tasks via unified alignment-and-uniformity losses. Our pre-trained item-attribute graph acts as an implicit, extendable item embedding matrix, which enables the SCS item embeddings to be easily acquired by inserting these items into the item-attribute graph and propagating their attributes’ embeddings. We carefully process three public datasets, i.e., Yelp, Amazon-home, and Amazon-sports, to guarantee the SCS setting for evaluation. Extensive experiments show that ColdGPT consistently outperforms the existing SCS recommenders by large margins and even surpasses models that are pre-trained on 75 – 224 times more, cross-domain data on two out of four datasets. Our code and pre-processed datasets for SCS evaluations are publicly available to help future SCS studies.</p>
+    <p><strong>Categories:</strong> Cold Start, Multi-Modal Learning, Fine-Grained Item Attributes, Graph Neural Networks, Recommendation Systems, Self-Supervised Learning, Multi-Task Learning, Real-World Applications, Pre-trained Models (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/872/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Equivariant Contrastive Learning for Sequential Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Yueqi Xie, Yining Hua, Sunghun Kim, Jaeboum Kim, Shoujin Wang, Jingqi Gao, Qichen Ye, Peilin Zhou</p>
+    <p>Contrastive learning (CL) benefits the training of sequential recommendation models with informative self-supervision signals. Existing solutions apply general sequential data augmentation strategies to generate positive pairs and encourage their representations to be invariant. However, due to the inherent properties of user behavior sequences, some augmentation strategies, such as item substitution, can lead to changes in user intent. Learning indiscriminately invariant representations for all augmentation strategies might be sub-optimal. Therefore, we propose Equivariant Contrastive Learning for Sequential Recommendation (ECL-SR), which endows SR models with great discriminative power, making the learned user behavior representations sensitive to invasive augmentations (e.g., item substitution) and insensitive to mild augmentations (e.g., feature-level dropout masking). In detail, we use the conditional discriminator to capture differences in behavior due to item substitution, which encourages the user behavior encoder to be equivariant to invasive augmentations. Comprehensive experiments on four benchmark datasets show that the proposed ECL-SR framework achieves competitive performance compared to state-of-the-art SR models. The source code will be released.</p>
+    <p><strong>Categories:</strong> Contrastive Learning, Sequential Recommendation, Data Augmentation, Model Architecture, Recommendation Systems, Self-Supervised Learning, User Behavior Analysis, Discriminative Models, Performance Evaluation/Metrics, Sequential Modeling (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/862/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Self-Supervised Bot Play for Transcript-Free Conversational Recommendation with Rationales (2022)</h3>
+    <p><strong>Authors:</strong> Julian McAuley, Bodhisattwa Prasad Majumder, Shuyang Li</p>
+    <p>Conversational recommender systems offer a way for users to engage in multi-turn conversations to find items they enjoy. For users to trust an agent and give effective feedback, the recommender system must be able to explain its suggestions and rationales. We develop a two-part framework for training multi-turn conversational recommenders that provide recommendation rationales that users can effectively interact with to receive better recommendations. First, we train a recommender system to jointly suggest items and explain its reasoning via subjective rationales. We then fine-tune this model to incorporate iterative user feedback via self-supervised bot-play. Experiments on three real-world datasets demonstrate that our system can be applied to different recommendation models across diverse domains to achieve state-of-the-art performance in multi-turn recommendation. Human studies show that systems trained with our framework provide more useful, helpful, and knowledgeable suggestions in warm- and cold-start settings. Our framework allows us to use only product reviews during training, avoiding the need for expensive dialog transcript datasets that limit the applicability of previous conversational recommender agents.</p>
+    <p><strong>Categories:</strong> Conversational Recommender Systems, Self-Supervised Learning, Multi-Turn Conversations, Recommendation Rationales, Transparency, Cold Start, Human Studies, Beyond Accuracy, Data Efficiency, Bot Play (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/778/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Fast Multi-Step Critiquing for VAE-based Recommender Systems (2021)</h3>
+    <p><strong>Authors:</strong> Boi Faltings, Diego Antognini</p>
+    <p>Recent studies have shown that providing personalized explanations alongside recommendations increases trust and perceived quality. Furthermore, it gives users an opportunity to refine the recommendations by critiquing parts of the explanations. On one hand, current recommender systems model the recommendation, explanation, and critiquing objectives jointly, but this creates an inherent trade-off between their respective performance. On the other hand, although recent latent linear critiquing approaches are built upon an existing recommender system, they suffer from computational inefficiency at inference due to the objective optimized at each conversation’s turn. We address these deficiencies with M&Ms-VAE, a novel variational autoencoder for recommendation and explanation that is based on multimodal modeling assumptions. We train the model under a weak supervision scheme to simulate both fully and partially observed variables. Then, we leverage the generalization ability of a trained M&Ms-VAE model to embed the user preference and the critique separately. Our work’s most important innovation is our critiquing module, which is built upon and trained in a self-supervised manner with a simple ranking objective. Experiments on four real-world datasets demonstrate that among state-of-the-art models, our system is the first to dominate or match the performance in terms of recommendation, explanation, and multi-step critiquing. Moreover, M&Ms-VAE processes the critiques up to 25.6x faster than the best baselines. Finally, we show that our model infers coherent joint and cross generation, even under weak supervision, thanks to our multimodal-based modeling and training scheme.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Variational Autoencoder (VAE), Explainability, User Interaction, Multi-Modal Modeling, Weak Supervision, Self-Supervised Learning, Scalability, Efficiency, Inference Methods, AI/ML Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/638/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

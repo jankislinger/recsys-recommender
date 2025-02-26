@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Content-based book recommendations
+Abstract:
+The content-based book recommendation approach developed by Bookarang yields many improvements over existing systems, not only in recommendation quality and consistency, but also in flexibility, depth and transparency. Content-based book recommenders can be implemented in a large array of products, from personalised newsletters to conversational AI systems.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, I need to categorize this article about content-based book recommendations. Let me start by reading the title and abstract carefully.
+
+The title is &#34;Content- based book recommendations.&#34; That immediately tells me that the main focus is on a recommendation system specifically for books, using a content-based approach. So the primary categories should include Book Recommendations and Content-Based Filtering.
+
+Looking at the abstract, it mentions improvements over existing systems in terms of quality, consistency, flexibility, depth, and transparency. These aspects suggest that the article might discuss various evaluation metrics beyond just accuracy. Therefore, I&#39;ll add Beyond Accuracy to the list.
+
+The abstract also states that content-based recommenders can be used in many products like personalized newsletters and conversational AI systems. This implies real-world applications, so categories like Real-World Applications and Industry Use Cases are relevant.
+
+Since the system is implemented across different platforms, scalability might be a factor they considered, though it&#39;s not explicitly stated. However, given that it&#39;s scalable across various products, I&#39;ll include Scalability as a precaution.
+
+The article seems to address specific recommendation techniques, so adding Recommendation Techniques makes sense. It&#39;s also about personalization in the context of books, so Personalization is another category.
+
+Considering the domain-specific aspect, Books is an obvious category. The approach might involve natural language processing since it&#39;s dealing with book content, so NLP is relevant as well.
+
+Lastly, the article discusses how recommendations can be implemented across different systems, which falls under Cross-Domain Applications.
+
+Putting it all together, I&#39;ll list these categories to ensure comprehensive coverage without overcrowding any single category.
+&lt;/think&gt;
+
+Content-Based Filtering, Book Recommendations, Personalization, Recommendation Techniques, Scalability, Real-World Applications, Industry Use Cases, Beyond Accuracy, Books, NLP, Cross-Domain Applications</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Content-based book recommendations
+Abstract:
+The content-based book recommendation approach developed by Bookarang yields many improvements over existing systems, not only in recommendation quality and consistency, but also in flexibility, depth and transparency. Content-based book recommenders can be implemented in a large array of products, from personalised newsletters to conversational AI systems.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article titled &#34;Content-based book recommendations&#34; with the given abstract. Let me read through it carefully.
+
+The title itself mentions content-based recommendations for books, which immediately tells me that the category related to recommendation algorithms is relevant here. Content-based methods are a specific type of filtering used in recommendation systems, so that&#39;s one category.
+
+Looking at the abstract, it talks about improvements over existing systems in areas like recommendation quality and flexibility. So, quality improvement might be another category. Also, the abstract mentions depth and transparency, which could relate to evaluation aspects beyond just accuracy, perhaps under &#39;Beyond Accuracy&#39; as a category.
+
+The domain here is clearly books since they&#39;re discussing book recommendations. That&#39;s straightforward—books should definitely be one of the categories.
+
+They also mention that content-based recommenders can be used in various products like personalized newsletters and conversational AI systems. This suggests applications beyond just traditional recommendation interfaces, so conversational AI and maybe even real-world applications or implementation aspects could come into play. Real world applications might include things like A/B testing or user surveys, but since the abstract doesn&#39;t mention those specifically, I&#39;m not sure about adding A/B Test or User Survey categories here.
+
+The article focuses on content-based methods, so that&#39;s a specific family of algorithms within recommendation systems. So, &#39;Content-Based Filtering&#39; should definitely be included as another category.
+
+Additionally, the flexibility and depth mentioned might touch upon scalability aspects if the system can handle varying scales or user bases. Scalability is an important factor in recommendation systems, especially when moving from one product to another like newsletters or AI systems.
+
+Putting it all together, I think the categories would include:
+
+- Content-Based Filtering: because that&#39;s the specific algorithm used.
+- Books: the domain of the recommendations.
+- Quality Improvement: improvements over existing systems in terms of quality.
+- Scalability: considering the range of products and flexibility mentioned.
+- Conversational AI: since it&#39;s mentioned as a potential application.
+
+I should make sure each category is clear and relevant without overlapping too much. I&#39;ll avoid adding categories not directly supported by the abstract, like A/B Test or User Survey, unless they&#39;re explicitly mentioned. The abstract doesn&#39;t mention evaluation metrics beyond quality and consistency, so &#39;Beyond Accuracy&#39; might be stretching it a bit, but given that transparency is discussed, maybe it&#39;s worth including.
+
+Wait, no, the abstract says &#34;improvements... in flexibility, depth and transparency.&#34; Transparency isn&#39;t directly an evaluation aspect like diversity or beyond accuracy. So maybe sticking to more concrete categories based on what&#39;s mentioned would be better.
+
+So, finalizing the categories:
+
+1. Content-Based Filtering
+2. Books
+3. Quality Improvement
+4. Scalability
+5. Conversational AI
+
+I think that covers the main points without stretching too far from the abstract.
+&lt;/think&gt;
+
+Content-Based Filtering, Books, Quality Improvement, Scalability, Conversational AI</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

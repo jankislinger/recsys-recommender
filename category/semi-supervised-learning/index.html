@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/explainability/">Explainability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Unlocking the Hidden Treasures: Enhancing Recommendations with Unlabeled Data (2024)</h3>
+    <p><strong>Authors:</strong> Rui Chen, Li Chen, Hongtao Song, Yuhan Zhao, Qilong Han</p>
+    <p>Collaborative filtering (CF) stands as a cornerstone in recommender systems, yet effectively leveraging the vast reservoir of unlabeled data presents a persistent challenge. Current research endeavors to address the challenge of unlabeled data by extracting a subset closely approximating negative samples. Regrettably, the remaining data are overlooked, failing to fully integrate this valuable information into the construction of user preferences. To address this gap, we introduce a novel positive-neutral-negative (PNN) learning paradigm. PNN introduces a neutral class, encompassing intricate items challenging to categorize directly as positive or negative samples. By training a model based on this triple-wise partial ranking, PNN offers a promising solution to learning complex user preferences. Through theoretical analysis, we connect PNN to one-way partial AUC (OPAUC) to validate its efficacy. Implementing the PNN paradigm is, however, technically challenging because: (1) it is difficult to classify unobserved items into neutral or negative in the absence of supervisory signals; (2) there does not exist any loss function that can handle set-level triple-wise ranking relationships. To address these challenges, we propose a semi-supervised learning method coupled with a user-aware attention model for knowledge acquisition and classification refinement. Additionally, a novel loss function and two-step centroid ranking approach enable handling set-level rankings. Extensive experiments on four real-world datasets demonstrate that, when combined with PNN, a wide range of representative CF models can consistently and significantly boost their performance. Our code is publicly available at https://anonymous.4open.science/r/PNN-RecBole-4E04.</p>
+    <p><strong>Categories:</strong> Collaborative Filtering, Semi-Supervised Learning, Recommendation Systems, Unlabeled Data, Neutral Class, User Preferences, Real-World Application, Cold Start. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1075/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Utilizing Non-click Samples via Semi-supervised Learning for Conversion Rate Prediction (2024)</h3>
+    <p><strong>Authors:</strong> Junhao Wang, Dongbo Huang, Shanyang Jiang, Lan Zhang, Cheng Ding, Lan Xu, Jiahui Huang</p>
+    <p>Conversion rate (CVR) prediction is essential in recommendation systems, facilitating precise matching between recommended items and users’ preferences. However, the sample selection bias (SSB) and data sparsity (DS) issues pose challenges to accurate prediction. Existing works have proposed the click-through and conversion rate (CTCVR) prediction task which models samples from exposure to “click and conversion” in entire space and incorporates multi-task learning. This approach has shown efficacy in mitigating these challenges. Nevertheless, it intensifies the false negative sample (FNS) problem. To be more specific, the CTCVR task implicitly treats all the CVR labels of non-click samples as negative, overlooking the possibility that some samples might convert if clicked. This oversight can negatively impact CVR model performance, as empirical analysis has confirmed. To this end, we advocate for discarding the CTCVR task and proposing a Non-click samples Improved Semi-supErvised (NISE) method for conversion rate prediction, where the non-click samples are treated as unlabeled. Our approach aims to predict their probabilities of conversion if clicked, utilizing these predictions as pseudo-labels for further model training. This strategy can help alleviate the FNS problem, and direct modeling of the CVR task across the entire space also mitigates the SSB and DS challenges. Additionally, we conduct multi-task learning by introducing an auxiliary click-through rate prediction task, thereby enhancing embedding layer representations. Our approach is applicable to various multi-task architectures. Comprehensive experiments are conducted on both public and production datasets, demonstrating the superiority of our proposed method in mitigating the FNS challenge and improving the CVR estimation.</p>
+    <p><strong>Categories:</strong> Semi-Supervised Learning, Conversion Rate Prediction, Recommendation Systems, Click-Through Rate (CTR), Sample Selection Bias, Data Sparsity, Multi-Task Learning, Non-Click Samples, False Negative Samples, Model Improvement, User Behavior Prediction, Enhanced Models (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1073/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Semi-Supervised Visual Representation Learning for Fashion Compatibility (2021)</h3>
+    <p><strong>Authors:</strong> Deepthi Sharma, Ambareesh Revanur, Vijay Kumar</p>
+    <p>We consider the problem of complementary fashion prediction. Existing approaches focus on learning an embedding space where fashion items from different categories that are visually compatible are closer to each other. However, creating such labeled outfits is intensive and also not feasible to generate all possible outfit combinations, especially with large fashion catalogs. In this work, we propose a semi-supervised learning approach where we leverage large unlabeled fashion corpus to create pseudo positive and negative outfits on the fly during training. For each labeled outfit in a training batch, we obtain a pseudo-outfit by matching each item in the labeled outfit with unlabeled items. Additionally, we introduce consistency regularization to ensure that representation of the original images and their transformations are consistent to implicitly incorporate colour and other important attributes through self-supervision. We conduct extensive experiments on Polyvore, Polyvore-D and our newly created large-scale Fashion Outfits datasets, and show that our approach with only a fraction of labeled examples performs on-par with completely supervised methods.</p>
+    <p><strong>Categories:</strong> Semi-Supervised Learning, Visual Representation Learning, Fashion Compatibility, Unsupervised Learning, Self-Supervision, Consistency Regularization, Dataset Creation, Evaluation Metrics, Real-World Applications, Scalability, Transfer Learning, Image Processing, Item Compatibility, Visual Similarity, Recommendation Systems (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/660/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Style Conditioned Recommendations (2019)</h3>
+    <p><strong>Authors:</strong> Kamelia Aryafar, Murium Iqbal, Timothy Anderton</p>
+    <p>We propose Style Conditioned Recommendations (SCR) and introduce style injection as a method to diversify recommendations. We use Conditional Variational Autoencoder (CVAE) architecture, where both the encoder and decoder are conditioned on a user profile learned from item content data. This allows us to apply style transfer methodologies to the task of recommendations, which we refer to as injection. To enable style injection, user profiles are learned to be interpretable such that they express users’ propensities for specific predefined styles. These are learned via label-propagation from a dataset of item content, with limited labeled points. To perform injection, the condition on the encoder is learned while the condition on the decoder is selected per explicit feedback. Explicit feedback can be taken either from a user’s response to a style or interest quiz, or from item ratings. In the absence of explicit feedback, the condition at the encoder is applied to the decoder. We show a 12% improvement on NDCG@20 over the traditional VAE based approach on the task of recommendations. We show an average 22% improvement on AUC across all classes for predicting user style profiles against our best performing baseline. After injecting styles we compare the user style profile to the style of the recommendations and show that injected styles have an average +133% increase in presence. Our results show that style injection is a powerful method to diversify recommendations while maintaining personal relevance. Our main contribution is an application of a semi-supervised approach that extends item labels to interpretable user profiles.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Variational Autoencoders, Diversification of Recommendations, Explicit Feedback, Content-Based Filtering, Semi-Supervised Learning, Evaluation of Recommendation Systems, Personalization, Beyond Accuracy, Style/Theme, Interpretability, Diversity of Recommendations, Conditional Generative Models, Performance Metrics, User Feedback Mechanisms, Novelty in Recommendations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/453/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Module Advisor: A Hybrid Recommender System for Elective Module Exploration
+Abstract:
+Recommender systems are omni-present in our every day lives, guiding us through the vast amount of information available. However, in the academic world, personalised recommendations are less prominent, leaving students to navigate through the typically large space of available courses and modules manually. Since it is crucial for students to make informed choices about their learning pathways, we aim to improve the way students discover elective modules by developing a hybrid recommender system prototype that is specifically designed to help students find elective modules from a diverse set of subjects. We can improve the discoverability of long-tail options and help students broaden their horizons by combining notions of similarity and diversity.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, let&#39;s tackle this categorization task step by step. The user has provided an article about a hybrid recommender system designed to help students choose elective modules. My goal is to assign it to multiple relevant categories based on the guidelines given.
+
+First, I&#39;ll look at the title: &#34;Module Advisor: A Hybrid Recommender System for Elective Module Exploration.&#34; This tells me it&#39;s about a recommendation system specifically tailored for academic module selection. So, right away, I can note down &#34;Recommender Systems&#34; and &#34;Education&#34; as primary categories.
+
+Moving on to the abstract, it mentions that the system combines notions of similarity and diversity to improve discoverability of long-tail options. That suggests it&#39;s focusing on both how similar modules are (which relates to personalization) and ensuring a diverse range of recommendations. So, &#34;Personalized Recommendations,&#34; &#34;Diversity of Recommendations,&#34; and maybe &#34;Long-Tail Recommendations&#34; come into play here.
+
+The system is described as a hybrid recommender, which implies that it uses more than one recommendation approach—perhaps combining collaborative filtering with content-based methods or something else. Therefore, &#34;Hybrid Recommender Systems&#34; should definitely be included.
+
+Since the focus is on academic modules and helping students choose their learning pathways, &#34;Elective Module Selection&#34; seems like a specific category that captures this niche application.
+
+The abstract also mentions that this system is designed to help students discover modules from a diverse set of subjects. This points towards an educational context where exploration and broadening horizons are important. So, &#34;Education&#34; as a domain makes sense here, along with &#34;Academic Recommendations.&#34;
+
+Additionally, the article discusses combining similarity and diversity, which touches on different aspects of recommendation strategies beyond just accuracy—so &#34;Beyond Accuracy&#34; is another relevant category.
+
+I should also consider whether there are any real-world applications mentioned. The abstract doesn&#39;t explicitly talk about A/B tests or user surveys, but since it&#39;s a prototype designed for students, maybe &#34;Prototypes&#34; could be a category. However, the example provided in the guidelines didn&#39;t include that, so I might leave it out unless more specific information is given.
+
+Looking back at the example categories, they included things like family of algorithms (e.g., Matrix Factorization), domains (Education here), specific recommendation aspects (Cold Start isn&#39;t applicable here but &#34;Elective Module Selection&#34; fits), evaluation aspects (Diversity, Beyond Accuracy), and real-world applications. Since this system is a prototype for academic use, maybe &#34;Prototype Systems&#34; could be another category.
+
+But I need to stick to the user&#39;s example where they didn&#39;t mention prototypes, so perhaps it&#39;s safer not to include that unless necessary. Instead, focus on areas like the domain (Education), specific recommendation type (Hybrid), and aspects of evaluation (Diversity).
+
+I should aim for at least 8-12 categories. So far, I have: Recommender Systems, Hybrid Recommender Systems, Personalized Recommendations, Education, Academic Recommendations, Elective Module Selection, Diversity of Recommendations, Long-Tail Recommendations, Beyond Accuracy.
+
+That&#39;s nine categories. Let me see if there are more to add. The system is designed for students exploring modules, which implies it&#39;s about exploration rather than just filtering or ranking. So &#34;Exploration&#34; could be a category. Also, since it&#39;s helping students make informed choices about their learning pathways, maybe &#34;Learning Pathways.&#34;
+
+Additionally, the article mentions combining similarity and diversity, so perhaps &#34;Similarity-Based Recommendations&#34; is another relevant category.
+
+Wait, that might be too specific. Let me check the example categories again to ensure consistency. The example had things like domain-specific (Healthcare), recommendation aspects (Cold Start), evaluation aspects, etc. So &#34;Elective Module Selection&#34; fits as a specific recommendation space.
+
+I think I have enough now. To recap:
+
+1. Recommender Systems
+2. Hybrid Recommender Systems
+3. Personalized Recommendations
+4. Education
+5. Academic Recommendations
+6. Elective Module Selection
+7. Diversity of Recommendations
+8. Long-Tail Recommendations
+9. Beyond Accuracy
+
+That&#39;s nine categories, which meets the 8-12 guideline. I should ensure that each category is clear and user-friendly, avoiding overly technical jargon where possible.
+
+I might consider adding &#34;Exploration&#34; as another aspect since it&#39;s about helping students explore modules beyond what they might naturally find. That would make it ten categories. Alternatively, &#34;Learning Pathways&#34; could be included if it&#39;s a recognized category in the system.
+
+But to keep it concise and within the guidelines, I&#39;ll stick with the nine categories above. They cover the main aspects of the article: the type of recommendation system, its application domain, specific use case, evaluation aspects, and broader implications.
+&lt;/think&gt;
+
+Recommender Systems, Hybrid Recommender Systems, Personalized Recommendations, Education, Academic Recommendations, Elective Module Selection, Diversity of Recommendations, Long-Tail Recommendations, Beyond Accuracy</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Module Advisor: A Hybrid Recommender System for Elective Module Exploration
+Abstract:
+Recommender systems are omni-present in our every day lives, guiding us through the vast amount of information available. However, in the academic world, personalised recommendations are less prominent, leaving students to navigate through the typically large space of available courses and modules manually. Since it is crucial for students to make informed choices about their learning pathways, we aim to improve the way students discover elective modules by developing a hybrid recommender system prototype that is specifically designed to help students find elective modules from a diverse set of subjects. We can improve the discoverability of long-tail options and help students broaden their horizons by combining notions of similarity and diversity.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I&#39;m looking at this article titled &#34;Module Advisor: A Hybrid Recommender System for Elective Module Exploration.&#34; The abstract mentions that it&#39;s about developing a hybrid recommender system to help students find elective modules. So, first off, the main theme here is obviously recommendation systems.
+
+Since it&#39;s focused on education and specifically helping students with their module choices, the domain should definitely be Education. That makes sense because the problem they&#39;re addressing is within an academic context.
+
+The abstract also talks about combining notions of similarity and diversity to improve discoverability, especially for long-tail options. So &#34;Diversity of Recommendations&#34; seems like a key category here. It&#39;s directly tied to how the system enhances recommendation variety.
+
+Another point they make is about improving the way students discover modules by making it easier for them. This sounds like an exploration aspect within the recommendation process, so I&#39;d categorize it under &#34;Exploration in Recommendation.&#34;
+
+The fact that this is a hybrid recommender system means it&#39;s combining different techniques or approaches. So &#34;Hybrid Recommender Systems&#34; should be another category to include.
+
+Looking deeper, since it&#39;s designed for students to choose modules, personalization must play a role here. Even though the abstract doesn&#39;t explicitly mention it, personalized recommendations are usually part of such systems to tailor suggestions based on individual user preferences.
+
+They also talk about helping students broaden their horizons by offering diverse options, which ties into &#34;Long-Tail Recommendations.&#34; This is because long-tail refers to less popular items that might be more niche but still valuable for users looking for variety.
+
+Lastly, the system&#39;s goal is to make informed choices easier for students, so it&#39;s likely leveraging some form of evaluation metrics beyond just accuracy. They mention improving discoverability and diversity, which are aspects beyond basic recommendation accuracy. Therefore, &#34;Beyond Accuracy&#34; fits as a category.
+
+Wait, did I cover everything? Let me check again. The article mentions hybrid systems, education domain, diversity, exploration, long-tail, and personalized recommendations. Oh, right, I included all those. But maybe &#34;Personalized Recommendations&#34; should be there too, since it&#39;s about helping students make informed choices based on their preferences.
+
+Hmm, but the original categories didn&#39;t include that, so perhaps it&#39;s better to stick with the ones already identified. Or maybe they&#39;re subsumed under other categories like hybrid systems and diversity.
+
+I think I&#39;ve got all the main points covered. Now, let me list them out clearly.
+&lt;/think&gt;
+
+- Hybrid Recommender Systems
+- Education
+- Diversity of Recommendations
+- Exploration in Recommendation
+- Long-Tail Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

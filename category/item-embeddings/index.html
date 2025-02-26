@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+  <h1 class="ui header">RecSys Articles</h1>
+
+  
+  <div class="ui segment center aligned">
+    <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/explainability/">Explainability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+    </div>
+  </div>
+
+  
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A Model-Agnostic Framework for Recommendation via Interest-aware Item Embeddings (2023)</h3>
+    <p><strong>Authors:</strong> Yu Xiong, Amit Kumar Jaiswal</p>
+    <p>Item representation holds significant importance in recommendation systems, which encompasses domains such as news, retail, and videos. Retrieval and ranking models utilise item representation to capture the user-item relationship based on user behaviours. While existing representation learning methods primarily focus on optimising item-based mechanisms, such as attention and sequential modelling. However, these methods lack a modelling mechanism to directly reflect user interests within the learned item representations. Consequently, these methods may be less effective in capturing user interests indirectly. To address this challenge, we propose a novel Interest-aware Capsule network (IaCN) recommendation model, a model-agnostic framework that directly learns interest-oriented item representations. IaCN serves as an auxiliary task, enabling the joint learning of both item-based and interest-based representations. This framework adopts existing recommendation models without requiring substantial redesign. We evaluate the proposed approach on benchmark datasets, exploring various scenarios involving different deep neural networks, behaviour sequence lengths, and joint learning ratios of interest-oriented item representations. Experimental results demonstrate significant performance enhancements across diverse recommendation models, validating the effectiveness of our approach.</p>
+    <p><strong>Categories:</strong> Model-Agnostic Methods, Neural Networks, News Recommendations, Retail Recommendations, Video Recommendations, Item Embeddings, User Interest Modeling, Recommendation Frameworks, Deep Learning Models, Behavior Modeling (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/949/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Aspect Re-distribution for Learning Better Item Embeddings in Sequential Recommendation (2022)</h3>
+    <p><strong>Authors:</strong> Wei Cai, Jingwen Mao, Weike Pan, Zhechao Yu, Congfu Xu</p>
+    <p>Sequential recommendation has attracted a lot of attention from both academia and industry. Since item embeddings directly affect the recommendation results, their learning process is very important. However, most existing sequential models may introduce bias when updating the item embeddings. For example, in a sequence where all items are endorsed by a same celebrity, the co-occurrence of two items only indicates their similarity in terms of endorser, and is independent of the other aspects such as category and color. The existing models often update the entire item as a whole or update different aspects of the item without distinction, which fails to capture the contributions of different aspects to the co-occurrence pattern. To overcome the above limitations, we propose aspect re-distribution (ARD) to focus on updating the aspects that are important for co-occurrence. Specifically, we represent an item using several aspect embeddings with the same initial importance. We then re-calculate the importance of each aspect according to the other items in the sequence. Finally, we aggregate these aspect embeddings into a single aspect-aware embedding according to their importance. The aspect-aware embedding can be provided as input to a successor sequential model. Updates of the aspect-aware embedding are passed back to the aspect embeddings based on their importance. Therefore, different from the existing models, our method pays more attention to updating the important aspects. In our experiments, we choose self-attention networks as the successor model. The experimental results on four real-world datasets indicate that our method achieves very promising performance in comparison with seven state-of-the-art models.</p>
+    <p><strong>Categories:</strong> Aspect Re-distribution, Item Embeddings, Sequential Recommendation, Algorithm Design, Model Optimization, Recommendation Quality, Attribute-Based Recommendations, Self-Attention Networks, Bias Correction, Dynamic Embedding Updates, Domain-Agnostic (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/745/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Word2vec applied to Recommendation: Hyperparameters Matter (2018)</h3>
+    <p><strong>Authors:</strong> Jimena Royo-Letelier, Hugo Caselles-Dupré, Florian Lesaint</p>
+    <p>Skip-gram with negative sampling, a popular variant of Word2vec originally designed and tuned to create word embeddings for Natural Language Processing, has been used to create item embeddings with successful applications in recommendation. While these fields do not share the same type of data, neither evaluate on the same tasks, recommendation applications tend to use the same already tuned hyperparameters values, even if optimal hyperparameters values are often known to be data and task dependent. We thus investigate the marginal importance of each hyperparameter in a recommendation setting through large hyperparameter grid searches on various datasets. Results reveal that optimizing neglected hyperparameters, namely negative sampling distribution, number of epochs, subsampling parameter and window-size, significantly improves performance on a recommendation task, and can increase it by an order of magnitude. Importantly, we find that optimal hyperparameters configurations for Natural Language Processing tasks and Recommendation tasks are noticeably different.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Word Embeddings, Collaborative Filtering, Algorithm Performance, Hyperparameter Optimization, Item Embeddings, Cross-Domain Applications, Beyond Accuracy, Explicit Feedback, Implicit Feedback, Domain Adaptation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/407/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Translation-based Recommendation (2017)</h3>
+    <p><strong>Authors:</strong> Ruining He, Julian McAuley, Wang-Cheng Kang</p>
+    <p>Modeling the complex interactions between users and items as well as amongst items themselves is at the core of designing successful recommender systems. One classical setting is predicting users’ personalized sequential behavior (or ‘next-item’ recommendation), where the challenges mainly lie in modeling ‘third-order’ interactions between a user, her previously visited item(s), and the next item to consume. Existing methods typically decompose these higher-order interactions into a combination pairwise relationships, by way of which user preferences (user-item interactions) and sequential patterns (item-item interactions) are captured by separate components. In this paper, we propose a unified method, TransRec, to model such third-order relationships for large-scale sequential prediction. Methodologically, we embed items into a ‘transition space’ where users are modeled as translation vectors operating on item sequences. Empirically, this approach outperforms the state-of-the-art on a wide spectrum of real-world datasets.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Sequential Recommendations, Third-order Interactions, Translation Models, Item Embeddings, User Modeling, Interaction Modeling, Large-scale Data, State-of-the-art Methods, Real-world Applications, Representation Learning, Scalability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/279/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Factorization Meets the Item Embedding: Regularizing Matrix Factorization with Item Co-occurrence (2016)</h3>
+    <p><strong>Authors:</strong> David M. Blei, Dawen Liang, Jaan Altosaar, Laurent Charlin</p>
+    <p>Matrix factorization (MF) models and their extensions are standard in modern recommender systems. MF models decompose the observed user-item interaction matrix into user and item latent factors. In this paper, we propose a co-factorization model, CoFactor, which jointly decomposes the user-item interaction matrix and the item-item co-occurrence matrix with shared item latent factors. For each pair of items, the co-occurrence matrix encodes the number of users that have consumed both items. CoFactor is inspired by the recent success of word embedding models (e.g., word2vec) which can be interpreted as factorizing the word co-occurrence matrix. We show that this model significantly improves the performance over MF models on several datasets with little additional computational overhead. We provide qualitative results that explain how CoFactor improves the quality of the inferred factors and characterize the circumstances where it provides the most significant improvements.</p>
+    <p><strong>Categories:</strong> Matrix Factorization, Recommendation Systems, Item Embeddings, Co-Occurrence Analysis, Latent Factor Models, Regularization Techniques, Word Embeddings Inspiration, Scalability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/173/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

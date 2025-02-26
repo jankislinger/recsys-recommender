@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Continual Collaborative Filtering Through Gradient Alignment
+Abstract:
+A recommender system operates in a dynamic environment where new items emerge and new users join the system, resulting in ever-growing user-item interactions over time. Existing works either assume a model trained offline on a static dataset (requiring periodic re-training with ever larger datasets); or an online learning setup that favors recency over history. As privacy-aware users could hide their histories, the loss of older information means that periodic retraining may not always be feasible, while online learning may lose sight of users’ long-term preferences. In this work, we adopt a continual learning perspective to collaborative filtering, by compartmentalizing users and items over time into a notion of tasks. Of particular concern is to mitigate catastrophic forgetting that occurs when the model would reduce in performance for older users and items in prior tasks even as it tries to fit the newer users and items in the current task. To alleviate this, we propose a method that leverages gradient alignment to deliver a model that is more compatible across tasks and maximizes user agreement for better user representations to improve long-term recommendations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article into multiple relevant categories based on its content and the guidelines provided. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;Continual Collaborative Filtering Through Gradient Alignment.&#34; From what I know, collaborative filtering is a technique used in recommendation systems where user preferences are predicted based on interactions with items. The term &#34;continual&#34; suggests that it&#39;s dealing with ongoing or dynamic processes, which might relate to handling new users and items over time.
+
+The abstract mentions the recommender system operating in a dynamic environment, so this indicates it&#39;s about online learning rather than static datasets. It talks about challenges like periodic retraining, recency bias in online learning, privacy issues where users hide their history, leading to loss of older information. The solution proposed is using a continual learning approach with gradient alignment.
+
+Let me break down the key themes:
+
+1. **Collaborative Filtering**: This is directly mentioned and the main technique being discussed.
+2. **Continual Learning**: The article addresses how models can adapt over time without forgetting previous information, which ties into this category.
+3. **Dynamic Environment**: Recommender systems operating in environments where new users and items are constantly added.
+4. **Online Learning**: As opposed to static models, this is about learning incrementally as data comes in.
+5. **Catastrophic Forgetting**: A problem in machine learning where a model forgets previously learned information when trained on new data.
+6. **Gradient Alignment**: The method proposed to mitigate catastrophic forgetting by aligning gradients across tasks.
+7. **Long-term Recommendations**: Focusing on maintaining the quality of recommendations over time, not just for current or recent interactions.
+8. **Recommender Systems**: The broader category that all these points fall under.
+
+I should also consider other possible categories from the examples given:
+
+- It doesn&#39;t mention a specific domain like Books or Movies, so maybe not applicable here.
+- There&#39;s no explicit real-world application mentioned beyond the recommendation system itself.
+- Evaluation aspects aren&#39;t highlighted specifically in the abstract.
+
+So focusing on the main themes: collaborative filtering, continual learning, dynamic environment, online learning, catastrophic forgetting, gradient alignment, long-term recommendations, and recommender systems. These seem to cover the core topics without overstepping into areas not discussed in the article.
+
+I think these categories are specific enough to be useful for users interested in recommendation systems and machine learning techniques related to maintaining performance over time.
+&lt;/think&gt;
+
+Collaborative Filtering, Continual Learning, Online Learning, Catastrophic Forgetting, Recommender Systems, Dynamic Environment, Gradient Alignment, Long-term Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Exploiting Socio-Economic Models for Lodging Recommendation in the Sharing Economy
+Abstract:
+Recent years have witnessed the emergence of sharing economy marketplaces, which enable users to share goods and services in a peer-to-peer fashion. A prominent example in the travel industry is Airbnb, which connects guests with hosts, allowing both to exchange cultural experiences in addition to the economic transaction. Nonetheless, Airbnb guest profiles are typically sparse, which limits the applicability of traditional lodging recommendation approaches. Inspired by recent socio-economic analyses of repurchase intent behavior on Airbnb, we propose a context-aware learning-to-rank approach for lodging recommendation, aimed to infer the user’s perception of several dimensions involved in choosing which lodging to book. In particular, we devise features aimed to capture the user’s price sensitivity as well as their perceived value of a particular lodging, the risk involved in choosing it rather than other available options, the authenticity of the cultural experience it could provide, and its overall perception by other users through word of mouth. Through a comprehensive evaluation using publicly available Airbnb data, we demonstrate the effectiveness of our proposed approach compared to a number of alternative recommendation baselines, including a simulation of Airbnb’s own recommender.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, so I&#39;m trying to categorize this research article about lodging recommendations in the sharing economy. Let me start by reading through the title and abstract to understand what it&#39;s about.
+
+The title is &#34;Exploiting Socio-Economic Models for Lodging Recommendation in the Sharing Economy.&#34; Okay, so it&#39;s talking about using socio-economic models to improve recommendations, specifically in the context of lodging, like Airbnb.
+
+Looking at the abstract: They mention sharing economy marketplaces and use Airbnb as an example. The issue they&#39;re addressing is that guest profiles on Airbnb are sparse, which makes traditional recommendation methods less effective. So they propose a context-aware learning-to-rank approach to infer user perceptions across several dimensions when choosing a lodging.
+
+They talk about features capturing price sensitivity, perceived value, risk involved, authenticity of cultural experience, and word-of-mouth perception from others. They tested this with Airbnb data and compared it against existing recommendation baselines, including Airbnb&#39;s own system.
+
+Now, I need to assign categories based on the guidelines. Let&#39;s break down the key elements:
+
+1. **Algorithm Family**: The method they used is context-aware learning-to-rank. So that&#39;s one category.
+2. **Domain of Problem**: It&#39;s about the sharing economy, specifically lodging recommendations in platforms like Airbnb, so &#34;Sharing Economy&#34; and &#34;Lodging/Travel&#34; are relevant.
+3. **Recommendation Space Specifics**: They mention cold start issues because guest profiles are sparse, so &#34;Cold Start&#34; is applicable.
+4. **Aspects of Evaluation**: They focused on diversity beyond just accuracy, looking into various dimensions users care about, so &#34;Beyond Accuracy&#34; and &#34;Diversity of Recommendations&#34; fit here.
+5. **Real-World Applications**: They used publicly available Airbnb data for evaluation and simulated the system&#39;s recommendations, so &#34;Real-World Application,&#34; &#34;A/B Test,&#34; and &#34;User Survey&#34; might be relevant? Wait, the abstract mentions a simulation but doesn&#39;t specify A/B testing or user surveys as methods they used. So maybe just &#34;Real-World Application.&#34;
+6. **Other Categories**: They talk about socio-economic models, so that&#39;s another category. Also, since they&#39;re dealing with implicit feedback (like user interactions and word of mouth), &#34;Implicit Feedback&#34; is appropriate.
+
+Putting it all together: Context-aware learning-to-rank, sharing economy, socio-economic model, lodging/travel, cold start problem, beyond accuracy evaluation, diversity of recommendations, real-world application, and implicit feedback. That makes 9 categories. Maybe I can add more if needed, but the guidelines say at least 8-12.
+
+Wait, do they use any specific algorithms like matrix factorization or encoder? The abstract doesn&#39;t mention those specifically; it&#39;s about learning-to-rank, so maybe that&#39;s enough. Also, aspects of evaluation include looking into user perception through word of mouth, which ties into implicit feedback.
+
+I think these categories cover the main points and align with the guidelines for discoverability and user-centric design.
+&lt;/think&gt;
+
+Context-aware Learning to Rank, Sharing Economy, Socio-Economic Model, Lodging/Travel, Cold Start Problem, Beyond Accuracy Evaluation, Diversity of Recommendations, Real-World Application, Implicit Feedback</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

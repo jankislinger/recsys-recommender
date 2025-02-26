@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: ADER: Adaptively Distilled Exemplar Replay Towards Continual Learning for Session-based Recommendation
+Abstract:
+Session-based recommendation has received growing attention recently due to the increasing privacy concern. Despite the recent success of neural session-based recommenders, they are typically developed in an offline manner using a static dataset. However, recommendation requires continual adaptation to take into account new and obsolete items and users, and requires “continual learning” in real-life applications. In this case, the recommender is updated continually and periodically with new data that arrives in each update cycle, and the updated model needs to provide recommendations for user activities before the next model update. A major challenge for continual learning with neural models is catastrophic forgetting, in which a continually trained model forgets user preference patterns it has learned before. To deal with this challenge, we propose a method called Adaptively Distilled Exemplar Replay (ADER) by periodically replaying previous training samples (i.e., exemplars) to the current model with an adaptive distillation loss. Experiments are conducted based on the state-of-the-art SASRec model using two widely used datasets to benchmark ADER with several well-known continual learning techniques. We empirically demonstrate that ADER consistently outperforms other baselines, and it even outperforms the method using all historical data at every update cycle. This result reveals that ADER is a promising solution to mitigate the catastrophic forgetting issue towards building more realistic and scalable session-based recommenders.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to make sure it&#39;s discoverable by users who are interested in various aspects of recommendation systems and related areas.
+
+First, looking at the title: &#34;ADER: Adaptively Distilled Exemplar Replay Towards Continual Learning for Session-based Recommendation&#34;. The key terms here are ADER, which is a method they&#39;ve developed. It mentions &#39;Continual Learning&#39;, which is about models adapting over time without forgetting previous information. It&#39;s specifically applied to session-based recommendation.
+
+Reading the abstract: They talk about the increasing attention on session-based recommendations due to privacy concerns. Traditional neural recommenders use static datasets offline but need to adapt continually in real-life. The problem addressed is catastrophic forgetting, where models forget old user preferences when learning new data. Their solution, ADER, uses exemplar replay with adaptive distillation loss.
+
+So breaking this down:
+
+1. **Session-based Recommendation**: Directly mentioned multiple times, so that&#39;s a key category.
+2. **Continual Learning**: The main approach to handle the adaptation over time.
+3. **Catastrophic Forgetting**: The problem they&#39;re addressing.
+4. **Exemplar Replay**: A technique used in their method.
+5. **Adaptive Distillation Loss**: Part of their solution, so that&#39;s another category.
+
+Looking at the broader areas:
+
+6. **Neural Recommenders**: Since they discuss neural models and SASRec is mentioned as a baseline.
+7. **Real-world Applications**: They talk about real-life applications and experiments with datasets.
+8. **Recommendation Systems**: The overarching field.
+
+They also mention aspects like privacy concerns, which ties into user behavior tracking, but maybe that&#39;s more specific. However, the categories should be broad enough to capture relevant searches.
+
+Considering evaluation aspects:
+
+9. **Evaluation of Recommendations**: Since they conduct experiments and compare with baselines.
+10. **Scalability**: Their solution is scalable as shown in experiments.
+11. **Model Updates**: They discuss updating models periodically.
+12. **User Behavior Modeling**: As they model user preferences over time.
+
+I think these 12 categories cover the main aspects of the article, ensuring it&#39;s discoverable under various relevant topics without being too niche. Each category is clear and should help users find the article when exploring different facets of recommendation systems and machine learning techniques.
+&lt;/think&gt;
+
+Session-based Recommendation, Continual Learning, Catastrophic Forgetting, Exemplar Replay, Adaptive Distillation Loss, Neural Recommenders, Real-world Applications, Recommendation Systems, Evaluation of Recommendations, Scalability, Model Updates, User Behavior Modeling</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: ADER: Adaptively Distilled Exemplar Replay Towards Continual Learning for Session-based Recommendation
+Abstract:
+Session-based recommendation has received growing attention recently due to the increasing privacy concern. Despite the recent success of neural session-based recommenders, they are typically developed in an offline manner using a static dataset. However, recommendation requires continual adaptation to take into account new and obsolete items and users, and requires “continual learning” in real-life applications. In this case, the recommender is updated continually and periodically with new data that arrives in each update cycle, and the updated model needs to provide recommendations for user activities before the next model update. A major challenge for continual learning with neural models is catastrophic forgetting, in which a continually trained model forgets user preference patterns it has learned before. To deal with this challenge, we propose a method called Adaptively Distilled Exemplar Replay (ADER) by periodically replaying previous training samples (i.e., exemplars) to the current model with an adaptive distillation loss. Experiments are conducted based on the state-of-the-art SASRec model using two widely used datasets to benchmark ADER with several well-known continual learning techniques. We empirically demonstrate that ADER consistently outperforms other baselines, and it even outperforms the method using all historical data at every update cycle. This result reveals that ADER is a promising solution to mitigate the catastrophic forgetting issue towards building more realistic and scalable session-based recommenders.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about &#34;ADER: Adaptively Distilled Exemplar Replay Towards Continual Learning for Session-based Recommendation.&#34; Let me start by reading through the title and abstract carefully.
+
+The title mentions &#34;Continual Learning&#34; which suggests that the article is about models that can learn over time without forgetting previous knowledge. It&#39;s specifically applied to session-based recommendations, so it&#39;s related to recommendation systems in general.
+
+Looking at the abstract, they talk about neural session-based recommenders being trained offline but needing continual adaptation for real-life use. They mention the problem of catastrophic forgetting when training neural models continually. The proposed method is ADER, which uses adaptive distillation loss by replaying previous exemplars. They test this using the SASRec model on two datasets and show that ADER outperforms other methods.
+
+So, key points to extract: continual learning, session-based recommendations, neural networks, catastrophic forgetting, adaptive methods, distillation techniques, scalability (since it&#39;s mentioned in the conclusion about building scalable recommenders), and online recommendation systems.
+
+Let me list potential categories based on these points:
+
+1. **Continual Learning**: Directly related as the article addresses this challenge.
+2. **Session-based Recommendation**: Core topic of the research.
+3. **Neural Networks**: The method uses neural models (SASRec).
+4. **Catastrophic Forgetting**: A specific problem in machine learning they aim to solve.
+5. **Adaptive Methods**: Their solution involves adaptively replaying examples.
+6. **Distillation Techniques**: They use knowledge distillation in their approach.
+7. **Scalability**: Mentioned as a key benefit of their method.
+8. **Recommendation Systems**: Broad category covering all recommendation-related topics.
+9. **Online Learning**: Since it&#39;s about real-time adaptation, which is an aspect of online learning.
+
+I should ensure each article is assigned to 8-12 categories, so I need a few more. Let me think if there are other relevant areas like real-world applications (they mention real-life applications), but &#34;Real-World Applications&#34; might be too broad. Alternatively, maybe something about techniques or evaluation metrics?
+
+Wait, the abstract doesn&#39;t specifically mention evaluation metrics beyond outperforming baselines, so perhaps that&#39;s not necessary. Maybe I can include more specific terms related to recommendation systems like &#34;Reinforcement Learning&#34; if applicable, but in this case, it&#39;s more about neural networks and distillation.
+
+Another point is that they are using a replay-based approach for continual learning, which ties into the broader concept of memory mechanisms or data replay techniques. But maybe &#34;Data Replay&#34; is too specific unless it&#39;s a common category.
+
+Alternatively, considering the problem they solve relates to model updates, perhaps &#34;Model Updates&#34; could be a category, but I&#39;m not sure if that&#39;s standard.
+
+I should stick to more general categories to ensure they are useful and have enough articles. Let me see:
+
+- **Continual Learning**: 1
+- **Session-based Recommendation**: 2
+- **Neural Networks**:3
+- **Catastrophic Forgetting**:4
+- **Adaptive Methods**:5
+- **Distillation Techniques**:6
+- **Scalability**:7
+- **Recommendation Systems**:8
+
+That&#39;s eight categories. Should I add more? Maybe &#34;Reinforcement Learning&#34; if it applies, but the article doesn&#39;t mention that. Alternatively, maybe &#34;Real-Time Processing&#34; or &#34;Data Stream Processing,&#34; as they talk about online adaptation. Or perhaps &#34;Efficient Training Methods.&#34;
+
+Wait, the abstract mentions experiments with two datasets and compares against other methods, so maybe &#34;Evaluation Metrics&#34; could be a category, but again, it&#39;s quite broad.
+
+Alternatively, thinking of existing categories from the guidelines: family of algorithms (e.g., neural networks), domain (recommendation systems), specific recommendation aspects (session-based), evaluation aspects (maybe not directly mentioned), real-world applications (yes, they talk about real-life use).
+
+I think I&#39;ll stick with the initial eight categories as adding more might be too vague or not necessarily aligned. So:
+
+Continual Learning, Session-based Recommendation, Neural Networks, Catastrophic Forgetting, Adaptive Methods, Distillation Techniques, Scalability, Recommendation Systems.
+
+Wait, that&#39;s 8 categories. Maybe add &#34;Data Replay&#34; as a ninth? But I&#39;m not sure if that&#39;s commonly used or too specific. Alternatively, &#34;Memory Mechanisms&#34; could be another category.
+
+But to keep it user-friendly and ensure each category has enough articles, perhaps better to stick with the ones that are more established in the literature. So I&#39;ll go with:
+
+Continual Learning, Session-based Recommendation, Neural Networks, Catastrophic Forgetting, Adaptive Methods, Distillation Techniques, Scalability, Recommendation Systems.
+
+Yes, that seems appropriate.
+&lt;/think&gt;
+
+Continual Learning, Session-based Recommendation, Neural Networks, Catastrophic Forgetting, Adaptive Methods, Distillation Techniques, Scalability, Recommendation Systems.</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

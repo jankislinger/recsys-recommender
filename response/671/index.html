@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Tops, Bottoms, and Shoes: Building Capsule Wardrobes via Cross-Attention Tensor Network
+Abstract:
+Fashion is more than Paris runways. Fashion is about how people express their interests, identity, mood, and cultural influences. Given an inventory of candidate garments from different categories, how to assemble them together would most improve their fashionability? This question presents an intriguing visual recommendation challenge to automatically create capsule wardrobes. Capsule wardrobe generation is a complex combinatorial problem that requires the understanding of how multiple visual items interact. The generative process often needs fashion experts to manually tease the combinations out, making it hard to scale.
+We introduce TensorNet, an approach that captures the key ingredients of visual compatibility among tops, bottoms, and shoes. TensorNet aims to provide actionable advice for full-body clothing outfits that mix and match well. Our TensorNet consists of two core modules: a Cross-Attention Message Passing module and a Wide&amp;Deep Tensor Interaction module. As such, TensorNet is able to characterize the local region-based patterns as well as the global compatibility of the entire outfits. Our experimental results on the real-word datasets indicate that the proposed method is capable of learning visual compatibility and outperforms all the baselines. TensorNet opens up opportunities for fashion designers to narrow down the search space for multi-clothes combinations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Alright, I need to categorize this research article about building capsule wardrobes using a cross-attention tensor network. Let me start by reading the title and abstract carefully.
+
+The title mentions &#34;Tops, Bottoms, and Shoes&#34; and talks about creating capsule wardrobes via a specific network model called TensorNet. The abstract elaborates that fashion is about personal expression and how to combine garments effectively. They introduce TensorNet as an approach that captures visual compatibility among different clothing items, using two modules: Cross-Attention Message Passing and Wide&amp;Deep Tensor Interaction. The experiments show it outperforms baselines.
+
+First, I&#39;ll note the key elements here. It&#39;s a recommendation system focused on fashion, specifically combining tops, bottoms, and shoes into capsule wardrobes. They use deep learning techniques like neural networks and attention mechanisms. The modules mentioned are Cross-Attention (which is part of attention mechanisms) and Wide&amp;Deep (a type of model architecture).
+
+The problem addressed is combinatorial in nature—figuring out the best combinations of clothes. This relates to multi-item recommendation or fashion recommendations. They mention it&#39;s a visual compatibility issue, so computer vision aspects are involved.
+
+Looking at evaluation, they tested on real-world datasets and compared against baselines, which suggests empirical validation. The applications could include personal style assistants where users get tailored outfit suggestions. Real-world applications here imply that this model might be used in A/B testing or user surveys to gather feedback.
+
+I need to assign categories based on the guidelines. Let me go through each example category:
+
+1. Family of algorithm: They use neural networks, cross-attention (which is part of attention mechanisms), and wide&amp;deep models. So categories here could be Neural Networks, Attention Mechanisms, Wide&amp;Deep Models.
+2. Domain of the problem: The domain is clearly Fashion or Clothing. It&#39;s about recommending outfits, so maybe also Retail.
+3. Specific recommendation space: They&#39;re dealing with multi-item recommendations for capsule wardrobes, so Multi-Item Recommendation and Visual Compatibility make sense.
+4. Aspects of evaluation: They used real datasets and compared against baselines, so Empirical Validation fits here.
+5. Real-world applications: The model could be applied in personal style assistants or fashion e-commerce platforms, possibly using A/B testing to validate effectiveness.
+
+I should also consider if there are other relevant categories like Computer Vision since they&#39;re dealing with visual compatibility, but that might overlap with the existing ones.
+
+Putting it all together, the article touches on algorithms (Neural Networks, Attention Mechanisms), domain-specific areas (Fashion, Retail), recommendation aspects (Multi-Item Recommendation, Visual Compatibility), evaluation methods (Empirical Validation), and applications (Personal Style Assistant). I think these cover the key points without overcrowding any category.
+
+I should ensure each category is descriptive and aligns with user interests. Users looking for fashion recommendations or those interested in deep learning models would find these categories useful.
+&lt;/think&gt;
+
+Neural Networks, Attention Mechanisms, Multi-Item Recommendation, Fashion, Cross-Attention, Retail, Computer Vision, Capsule Wardrobes, Visual Compatibility, Empirical Validation, Wide&amp;Deep Models, Personal Style Assistant</code></pre>
+      </div>
+    </div>
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:14b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Tops, Bottoms, and Shoes: Building Capsule Wardrobes via Cross-Attention Tensor Network
+Abstract:
+Fashion is more than Paris runways. Fashion is about how people express their interests, identity, mood, and cultural influences. Given an inventory of candidate garments from different categories, how to assemble them together would most improve their fashionability? This question presents an intriguing visual recommendation challenge to automatically create capsule wardrobes. Capsule wardrobe generation is a complex combinatorial problem that requires the understanding of how multiple visual items interact. The generative process often needs fashion experts to manually tease the combinations out, making it hard to scale.
+We introduce TensorNet, an approach that captures the key ingredients of visual compatibility among tops, bottoms, and shoes. TensorNet aims to provide actionable advice for full-body clothing outfits that mix and match well. Our TensorNet consists of two core modules: a Cross-Attention Message Passing module and a Wide&amp;Deep Tensor Interaction module. As such, TensorNet is able to characterize the local region-based patterns as well as the global compatibility of the entire outfits. Our experimental results on the real-word datasets indicate that the proposed method is capable of learning visual compatibility and outperforms all the baselines. TensorNet opens up opportunities for fashion designers to narrow down the search space for multi-clothes combinations.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about capsule wardrobes using cross-attention tensor networks. Let me read through it carefully.
+
+The title is &#34;Tops, Bottoms, and Shoes: Building Capsule Wardrobes via Cross-Attention Tensor Network.&#34; It sounds like it&#39;s focused on fashion recommendation systems, specifically helping people assemble outfits that look good together.
+
+Looking at the abstract, they mention that fashion is about self-expression and how people combine different garment categories. The challenge is to create capsule wardrobes by automatically recommending compatible items. They talk about a complex combinatorial problem, which requires understanding visual compatibility among tops, bottoms, and shoes.
+
+They introduce TensorNet, which has two modules: Cross-Attention Message Passing and Wide&amp;Deep Tensor Interaction. These seem like machine learning components designed to capture both local and global patterns of outfit compatibility. The experiments show that it outperforms baselines on real-world datasets.
+
+Now, I need to assign this article to multiple categories based on the guidelines provided. Let me go through each part:
+
+1. **Family of Algorithm**: They mention TensorNet uses cross-attention and tensor interaction. Cross-Attention is a type of attention mechanism similar to what&#39;s used in transformers or multi-head models. So that&#39;s one category.
+
+2. **Domain of the Problem**: The article is clearly about fashion, specifically capsule wardrobes which are a subset of clothing recommendation. So &#34;Fashion&#34; would be another category.
+
+3. **Specific Aspect in Recommendation Space**: They&#39;re dealing with visual compatibility among different garment categories (tops, bottoms, shoes). This seems related to multi-item recommendations or outfit coordination. So maybe &#34;Outfit Coordination&#34; is appropriate.
+
+4. **Evaluation Aspects**: The abstract mentions the method&#39;s ability to learn visual compatibility and outperform baselines. While they don&#39;t specify evaluation metrics beyond performance against baselines, perhaps &#34;Diversity of Recommendations&#34; isn&#39;t directly applicable here since it&#39;s more about compatibility than variety. Maybe a better fit is &#34;Visual Compatibility.&#34;
+
+5. **Real-World Applications**: The article talks about real-world datasets and applications for fashion designers to narrow down search spaces. This points towards practical implementations in the industry, so &#34;Real-World Applications&#34; would be a good category.
+
+6. **Other Relevant Categorizations**: Since they&#39;re using multi-attention mechanisms and tensor interactions, maybe that&#39;s another point under algorithm family or perhaps &#34;Multi-Item Recommendations.&#34;
+
+Let me list these out:
+
+- Cross-Attention: From the TensorNet modules.
+- Fashion: The problem domain is fashion.
+- Outfit Coordination: Specifically about how items are combined.
+- Visual Compatibility: Focus on how different garment types work together visually.
+- Real-World Applications: Mentioned in experiments and practical use for designers.
+
+I think that&#39;s five categories. Do I need more? The guidelines suggest at least 8-12, but maybe based on the content, these are the primary ones. Let me check if there are other aspects.
+
+They also talk about scalability since they mention making it hard to scale without their approach. So &#34;Scalability&#34; could be another category.
+
+Also, they&#39;re working on multi-clothes combinations, so perhaps &#34;Multi-Item Recommendations.&#34;
+
+Additionally, the method is applied in a real-world context with datasets, so maybe &#34;Applied Machine Learning&#34; or something similar, but &#34;Real-World Applications&#34; already covers that. Alternatively, &#34;Capsule Wardrobe Generation,&#34; but that&#39;s too specific.
+
+I think I&#39;ll stick with the categories identified.
+&lt;/think&gt;
+
+Cross-Attention, Fashion, Outfit Coordination, Visual Compatibility, Real-World Applications, Scalability, Multi-Item Recommendations</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
+</head>
+
+<body>
+
+<div class="ui menu container">
+  <div class="header item">
+    RecSys Recommender
+  </div>
+  <a class="item" href="/recsys-recommender/">
+    Recommendations
+  </a>
+  <a class="item" href="/recsys-recommender/embedding/">
+    Embedding
+  </a>
+</div>
+
+<div class="ui inverted main container">
+  <div class="ui masthead vertical segment">
+    
+
+
+  
+
+    <div class="item">
+      <h3>deepseek-r1:32b</h3>
+      <div class="ui segment">
+        <h4>Prompt</h4>
+        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+
+Key Objectives:
+
+    1. Categorization Accuracy: Ensure each article is placed in the most appropriate categories based on its content, themes, and relevance.
+    2. Category Utility: Each category should contain a sufficient number of articles to be useful for navigation. Avoid creating categories with too few articles.
+    3. User-Centric Design: Prioritize categories that align with user interests and search behaviors, making the interface intuitive and efficient.
+    4. Consistency: Maintain consistent categorization logic across all articles to avoid confusion and ensure a cohesive user experience.
+
+Guidelines:
+
+    - Multiple Categories: Assign each article to at least 8-12 categories to enhance discoverability.
+    - Balanced Distribution: Aim for a balanced distribution of articles across categories to prevent overcrowding in some and underrepresentation in others.
+    - Dynamic Updates: Be prepared to adjust categories as new articles are added or user needs evolve.
+    - Clear Labels: Use clear, descriptive, and user-friendly category names that accurately reflect the content within.
+
+Example Workflow:
+
+    - Analyze the article&#39;s title and abstract to identify its core themes.
+    - Map the article to existing categories or propose new ones if necessary.
+    - Ensure the article is placed in categories that are both specific and broad enough to be useful.
+    - Review the categorization to confirm it aligns with user needs and interface goals.
+
+Examples of Categories:
+
+    - Family of algorithm (e.g., Matrix Factorization, Encoder, Multi-Armed Bandits, etc.).
+    - Domain of the problem (e.g., Books, Movies, Healthcare, Education, etc.).
+    - Something specific in the recommendation space (e.g. Cold Start)
+    - Aspects of evaluation (e.g. Diversity of Recommendations, Beyond Accuracy)
+    - Whether there are any real word applications (e.g. A/B Test, User Survey, etc.)
+    - Any other type of categorization that seems relevant to the article.
+
+Output:
+
+    - Return just the list of categories.
+    - The format should be a list of keywords separated by comma, e.g. &#34;Scalability, Web Systems, Implicit Feedback&#34;
+
+
+Title: Identifying Controversial Pairs in Item-to-Item Recommendations
+Abstract:
+Recommendation systems in large-scale online marketplaces are essential to aiding users in discovering new content. However, state-of-the-art systems for item-to-item recommendation tasks are often based on a shallow level of contextual relevance, which can make the system insufficient for tasks where item relationships are more nuanced. Contextually relevant item pairs can sometimes have controversial or problematic relationships, and they could degrade user experiences and brand perception when recommended to users. For example, a  recommendation of a divorce and co-parenting book can create a disturbing experience for someone who is downloading or viewing a marriage therapy book. In this paper, we propose a classifier to identify and prevent such problematic item-to-item recommendations and to enhance overall user experiences. The proposed approach utilizes active learning to sample hard examples effectively across sensitive item categories and uses human raters for data labeling. We also perform offline experiments to demonstrate the efficacy of this system for identifying and filtering controversial recommendations while maintaining recommendation quality.
+</code></pre>
+      </div>
+      <div class="ui segment">
+        <h4>Response</h4>
+        <pre><code>&lt;think&gt;
+Okay, so I need to categorize this research article about identifying controversial pairs in item-to-item recommendations. Let me start by reading through the title and abstract carefully.
+
+The title is &#34;Identifying Controversial Pairs in Item- to-Item Recommendations.&#34; That immediately tells me it&#39;s about recommendation systems, specifically looking at when recommended items might conflict or cause issues for users. The abstract adds more context: they&#39;re talking about online marketplaces where recommendations are crucial but can sometimes be problematic because of the relationships between items.
+
+They mention that current item-to-item recommendation systems often rely on shallow contextual relevance, which isn&#39;t enough when dealing with nuanced relationships. For example, recommending a divorce book alongside a marriage therapy book could be upsetting for some users. The authors propose a classifier using active learning and human raters to identify and prevent these controversial recommendations.
+
+So, breaking this down, the main areas I see are:
+
+1. **Recommendation Systems**: Clearly central since it&#39;s about improving how items are recommended.
+2. **Item-to-Item Recommendations**: A specific type of recommendation system where each item is suggested based on another.
+3. **User Experience (UX)**: The focus on enhancing user experience by avoiding controversial recommendations suggests this category is relevant.
+4. **Controversial Content**: They’re specifically looking at how to identify and filter out such content, so that&#39;s a key area.
+5. **Active Learning**: This machine learning technique is used in their approach for sampling hard examples.
+6. **Human Raters**: Involves human input for data labeling, which ties into user studies or evaluation methods.
+7. **Offline Experiments**: They tested the system offline to demonstrate its effectiveness without live user testing.
+
+I should also consider other relevant categories from the examples given:
+
+- **Content Filtering**: Since they’re filtering out controversial content.
+- **Ethical Considerations in AI/ML**: Because dealing with sensitive topics requires ethical approaches.
+- **Evaluation Metrics**: Beyond accuracy, maybe looking at metrics that assess recommendation quality beyond just correctness.
+
+Looking back, the guidelines suggest using 8-12 categories. I have a list of possible ones but need to ensure they&#39;re both specific and broad enough. Let me see:
+
+- Recommendation Systems: Broad category.
+- Item-to-Item Recommendations: More specific within recommendations.
+- Controversial Content: Specific issue addressed.
+- User Experience (UX): Broader impact on users.
+- Active Learning: A method used, so it&#39;s a technical approach category.
+- Human Raters: Involves user studies or data labeling processes.
+- Offline Experiments: Evaluation method.
+
+I might be missing some. Let me think again:
+
+They also talk about improving recommendation quality while filtering out controversial pairs, which ties into evaluation aspects beyond just accuracy. So maybe **Beyond Accuracy** as a category? Also, since they&#39;re dealing with real-world applications (using A/B tests or user surveys isn&#39;t mentioned here, but they do mention human raters and offline experiments), perhaps **Real-World Applications** could be considered, though it&#39;s not explicitly stated.
+
+Another angle is the domain of the problem. They don’t specify a particular domain like movies or books, but since it&#39;s about general item recommendations in online marketplaces, maybe that’s too broad unless there&#39;s a specific category for e-commerce or similar.
+
+Alternatively, they might fit under **Content Recommendations**, which is a bit more specific than just recommendation systems.
+
+Also, considering the aspect of evaluation, they talk about maintaining recommendation quality, so perhaps **Recommendation Quality** as a category. But I think that might overlap with &#34;Beyond Accuracy.&#34;
+
+Let me compile the list:
+
+1. Recommendation Systems
+2. Item-to-Item Recommendations
+3. User Experience (UX)
+4. Controversial Content
+5. Active Learning
+6. Human Raters
+7. Offline Experiments
+8. Content Filtering
+9. Ethical Considerations in AI/ML
+10. Beyond Accuracy
+
+That&#39;s 10 categories, which fits within the 8-12 range. I think this covers the technical methods (active learning), evaluation aspects (offline experiments), ethical concerns, and both specific and broader recommendation system topics.
+&lt;/think&gt;
+
+Recommendation Systems, Item-to-Item Recommendations, User Experience (UX), Controversial Content, Active Learning, Human Raters, Offline Experiments, Content Filtering, Ethical Considerations in AI/ML, Beyond Accuracy</code></pre>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+
+</html>
