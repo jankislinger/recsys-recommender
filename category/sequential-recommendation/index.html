@@ -34,43 +34,13 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Sequential Recommendation</a>
+        
+      
+        
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/explainability/">Explainability</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/fairness/">Fairness</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
         
       
         
@@ -80,7 +50,37 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/cold-start/">Cold Start</a>
         
       
     </div>
@@ -91,11 +91,23 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Dynamic Stage-aware User Interest Learning for Heterogeneous Sequential Recommendation (2024)</h3>
-    <p><strong>Authors:</strong> Zhong Ming, Weixin Li, Xiaolin Lin, Weike Pan</p>
-    <p>Sequential recommendation has been widely used to predict users’ potential preferences by learning their dynamic user interests, for which most previous works focus on capturing item-level dependencies. Despite the great success, they often overlook the stage-level interest dependencies. In real-world scenarios, user interests tend to be staged, e.g., following an item purchase, a user’s interests may undergo a transition into the subsequent phase. And there are intricate dependencies across different stages. Meanwhile, users’ behaviors are usually heterogeneous, including auxiliary behaviors (e.g., examinations) and target behaviors (e.g., purchases), which imply more fine-grained user interests. However, existing works have limitations in explicitly modeling the relationships between auxiliary behaviors and target behaviors. To address the above issues, we propose a novel framework, i.e., dynamic stage-aware user interest learning (DSUIL), for heterogeneous sequential recommendation, which is the first solution to model user interests in a cross-stage manner. Specifically, our DSUIL consists of three modules: a dynamic graph convolution module that dynamically learns item representations in each stage, a behavior-aware subgraph representation learning module that learns heterogeneous dependencies between behaviors and aggregates item representations to represent the user interests for each stage, and a sequence decoder to capture the evolving pattern of user interests and make item prediction. Extensive experimental results on two public datasets show that our DSUIL performs significantly better than the state-of-the-art methods.</p>
-    <p><strong>Categories:</strong> Sequential Recommendation, Stage-aware Interest Modeling, Heterogeneous Behaviors, User Interest Evolution, Dynamic Learning, Cross-Stage Dependencies, Auxiliary Behaviors, Target Behaviors, Behavior Relationships, Recommendation Systems, State-of-the-Art Methods, User Behavior Analysis (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1039/">See reasoning</a></p>
+    <h3>Efficient Inference of Sub-Item Id-based Sequential Recommendation Models with Millions of Items (2024)</h3>
+    <p><strong>Authors:</strong> Aleksandr Petrov, Craig Macdonald, Nicola Tonellotto</p>
+    <p>Transformer-based recommender systems, such as BERT4Rec or SASRec, achieve state-of-the-art results in sequential recommendation. However, it is challenging to use these models in production environments with catalogues of millions of items: scaling Transformers beyond a few thousand items is problematic for several reasons, including high model memory consumption and slow inference. In this respect, RecJPQ is a state-of-the-art method of reducing the models’ memory consumption; RecJPQ compresses item catalogues by decomposing item IDs into a small number of shared sub-item IDs. Despite reporting the reduction of memory consumption by a factor of up to 50x, the original RecJPQ paper did not report inference efficiency improvements over the baseline Transformer-based models. On analysis of RecJPQ’s scoring algorithm, we find that its efficiency is limited by its use of item score accumulators, which prevent parallelisation. On the other hand, LightRec (a non-sequential method that uses a similar idea of sub-ids) reported large inference efficiency improvements using an algorithm we call PQTopK. We show that it is also possible to improve RecJPQ-based models’ inference efficiency using the PQTopK algorithm. In particular, we speed up RecJPQ-enhanced SASRec by a factor of 4.5x compared to the original SASRec’s inference method and by the factor of 1.56x compared to the method implemented in RecJPQ code on a large-scale Gowalla dataset with more than a million items. Further, using simulated data, we show that PQTopK remains efficient with catalogues of up to tens of millions of items, removing one of the last obstacles to using Transformer-based models in production environments with large catalogues.</p>
+    <p><strong>Categories:</strong> Sequential Recommendation, Transformer-based Models, Sub-item ID techniques, Scalability, Inference Efficiency, Memory Consumption Optimization, Algorithm Optimization, Production Environments, Large-scale Data Handling (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1085/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>The Elephant in the Room: Rethinking the Usage of Pre-trained Language Model in Sequential Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Zekai Qu, Chaojun Xiao, Zhanhui Kang, Ruobing Xie, Xingwu Sun</p>
+    <p>Sequential recommendation (SR) has seen significant advancements with the help of Pre-trained Language Models (PLMs). Some PLM-based SR models directly use PLM to encode user historical behavior’s text sequences to learn user representations, while there is seldom an in-depth exploration of the capability and suitability of PLM in behavior sequence modeling. In this work, we first conduct extensive model analyses between PLMs and PLM-based SR models, discovering great underutilization and parameter redundancy of PLMs in behavior sequence modeling. Inspired by this, we explore different lightweight usages of PLMs in SR, aiming to maximally stimulate the ability of PLMs for SR while satisfying the efficiency and usability demands of practical systems. We discover that adopting behavior-tuned PLMs for item initializations of conventional ID-based SR models is the most economical framework of PLM-based SR, which would not bring in any additional inference cost but could achieve a dramatic performance boost compared with the original version. Extensive experiments on five datasets show that our simple and universal framework leads to significant improvement compared to classical SR and SOTA PLM-based SR models without additional inference costs.</p>
+    <p><strong>Categories:</strong> Pre-trained Language Models, Sequential Recommendation, Model Analysis, Behavior Sequence Modeling, Efficiency in Recommendations, Lightweight Usage of PLMs, Parameter Redundancy, Model Adaptation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1064/">See reasoning</a></p>
   </div>
 
     </div>
@@ -127,35 +139,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>The Elephant in the Room: Rethinking the Usage of Pre-trained Language Model in Sequential Recommendation (2024)</h3>
-    <p><strong>Authors:</strong> Zekai Qu, Chaojun Xiao, Zhanhui Kang, Ruobing Xie, Xingwu Sun</p>
-    <p>Sequential recommendation (SR) has seen significant advancements with the help of Pre-trained Language Models (PLMs). Some PLM-based SR models directly use PLM to encode user historical behavior’s text sequences to learn user representations, while there is seldom an in-depth exploration of the capability and suitability of PLM in behavior sequence modeling. In this work, we first conduct extensive model analyses between PLMs and PLM-based SR models, discovering great underutilization and parameter redundancy of PLMs in behavior sequence modeling. Inspired by this, we explore different lightweight usages of PLMs in SR, aiming to maximally stimulate the ability of PLMs for SR while satisfying the efficiency and usability demands of practical systems. We discover that adopting behavior-tuned PLMs for item initializations of conventional ID-based SR models is the most economical framework of PLM-based SR, which would not bring in any additional inference cost but could achieve a dramatic performance boost compared with the original version. Extensive experiments on five datasets show that our simple and universal framework leads to significant improvement compared to classical SR and SOTA PLM-based SR models without additional inference costs.</p>
-    <p><strong>Categories:</strong> Pre-trained Language Models, Sequential Recommendation, Model Analysis, Behavior Sequence Modeling, Efficiency in Recommendations, Lightweight Usage of PLMs, Parameter Redundancy, Model Adaptation (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1064/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Efficient Inference of Sub-Item Id-based Sequential Recommendation Models with Millions of Items (2024)</h3>
-    <p><strong>Authors:</strong> Aleksandr Petrov, Craig Macdonald, Nicola Tonellotto</p>
-    <p>Transformer-based recommender systems, such as BERT4Rec or SASRec, achieve state-of-the-art results in sequential recommendation. However, it is challenging to use these models in production environments with catalogues of millions of items: scaling Transformers beyond a few thousand items is problematic for several reasons, including high model memory consumption and slow inference. In this respect, RecJPQ is a state-of-the-art method of reducing the models’ memory consumption; RecJPQ compresses item catalogues by decomposing item IDs into a small number of shared sub-item IDs. Despite reporting the reduction of memory consumption by a factor of up to 50x, the original RecJPQ paper did not report inference efficiency improvements over the baseline Transformer-based models. On analysis of RecJPQ’s scoring algorithm, we find that its efficiency is limited by its use of item score accumulators, which prevent parallelisation. On the other hand, LightRec (a non-sequential method that uses a similar idea of sub-ids) reported large inference efficiency improvements using an algorithm we call PQTopK. We show that it is also possible to improve RecJPQ-based models’ inference efficiency using the PQTopK algorithm. In particular, we speed up RecJPQ-enhanced SASRec by a factor of 4.5x compared to the original SASRec’s inference method and by the factor of 1.56x compared to the method implemented in RecJPQ code on a large-scale Gowalla dataset with more than a million items. Further, using simulated data, we show that PQTopK remains efficient with catalogues of up to tens of millions of items, removing one of the last obstacles to using Transformer-based models in production environments with large catalogues.</p>
-    <p><strong>Categories:</strong> Sequential Recommendation, Transformer-based Models, Sub-item ID techniques, Scalability, Inference Efficiency, Memory Consumption Optimization, Algorithm Optimization, Production Environments, Large-scale Data Handling (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1085/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Multi-Behavioral Sequential Recommendation (2024)</h3>
-    <p><strong>Authors:</strong> Shereen Elsayed, Lars Schmidt-Thieme, Ahmed Rashed</p>
-    <p>Sequential recommendation models are crucial for next-item prediction tasks in various online platforms, yet many focus on a single behavior, neglecting valuable implicit interactions. While multi-behavioral models address this using graph-based approaches, they often fail to capture sequential patterns simultaneously. Our proposed Multi-Behavioral Sequential Recommendation framework (MBSRec) captures the multi-behavior dependencies between the heterogeneous historical interactions via multi-head self-attention. Furthermore, we utilize a weighted binary cross-entropy loss for precise behavior control. Experimental results on four datasets demonstrate MBSRec’s significant outperformance of state-of-the-art approaches. The implementation code is available here (https://drive.google.com/drive/folders/1EGRQutc9xtVYbsbXswUcTb9nvT1Tc9cZ?usp=sharing) during the review and will be added to GitHub upon acceptance.</p>
-    <p><strong>Categories:</strong> Multi-Behavioral Models, Sequential Recommendation, Implicit Feedback, Attention Mechanism, Recommender Systems, Loss Function Optimization, Deep Learning, Evaluation Metrics, Implementation Details, Cross-Entropy Loss, Multi-Head Self Attention, Heterogeneous Interactions (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1101/">See reasoning</a></p>
+    <h3>Dynamic Stage-aware User Interest Learning for Heterogeneous Sequential Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Zhong Ming, Weixin Li, Xiaolin Lin, Weike Pan</p>
+    <p>Sequential recommendation has been widely used to predict users’ potential preferences by learning their dynamic user interests, for which most previous works focus on capturing item-level dependencies. Despite the great success, they often overlook the stage-level interest dependencies. In real-world scenarios, user interests tend to be staged, e.g., following an item purchase, a user’s interests may undergo a transition into the subsequent phase. And there are intricate dependencies across different stages. Meanwhile, users’ behaviors are usually heterogeneous, including auxiliary behaviors (e.g., examinations) and target behaviors (e.g., purchases), which imply more fine-grained user interests. However, existing works have limitations in explicitly modeling the relationships between auxiliary behaviors and target behaviors. To address the above issues, we propose a novel framework, i.e., dynamic stage-aware user interest learning (DSUIL), for heterogeneous sequential recommendation, which is the first solution to model user interests in a cross-stage manner. Specifically, our DSUIL consists of three modules: a dynamic graph convolution module that dynamically learns item representations in each stage, a behavior-aware subgraph representation learning module that learns heterogeneous dependencies between behaviors and aggregates item representations to represent the user interests for each stage, and a sequence decoder to capture the evolving pattern of user interests and make item prediction. Extensive experimental results on two public datasets show that our DSUIL performs significantly better than the state-of-the-art methods.</p>
+    <p><strong>Categories:</strong> Sequential Recommendation, Stage-aware Interest Modeling, Heterogeneous Behaviors, User Interest Evolution, Dynamic Learning, Cross-Stage Dependencies, Auxiliary Behaviors, Target Behaviors, Behavior Relationships, Recommendation Systems, State-of-the-Art Methods, User Behavior Analysis (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1039/">See reasoning</a></p>
   </div>
 
     </div>
@@ -175,11 +163,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>gSASRec: Reducing Overconfidence in Sequential Recommendation Trained with Negative Sampling (2023)</h3>
-    <p><strong>Authors:</strong> Craig Macdonald, Aleksandr V. Petrov</p>
-    <p>Large catalogue size is one of the central challenges in training recommendation models: a large number of items makes it infeasible to compute scores for all items during training, forcing models to deploy negative sampling. However, negative sampling increases the proportion of positive interactions in the training data. Therefore models trained with negative sampling tend to overestimate the probabilities of positive interactions — a phenomenon we call overconfidence. While the absolute values of the predicted scores/probabilities are unimportant for ranking retrieved recommendations, overconfident models may fail to estimate nuanced differences in the top-ranked items, resulting in degraded performance. This paper shows that overconfidence explains why the popular SASRec model underperforms when compared to BERT4Rec (contrary to the BERT4Rec authors’ attribution to the bi-directional attention mechanism). We propose a novel Generalised Binary Cross-Entropy Loss function (gBCE) to mitigate overconfidence and theoretically prove that it can mitigate overconfidence. We further propose the gSASRec model, an improvement over SASRec that deploys an increased number of negatives and gBCE loss. We show through detailed experiments on three datasets that gSASRec does not exhibit the overconfidence problem. As a result, gSASRec can outperform BERT4Rec (e.g.\ +9.47\% NDCG on MovieLens-1M), while requiring less training time (e.g.\ -73\% training time on MovieLens-1M). Moreover, in contrast to BERT4Rec, gSASRec is suitable for large datasets that contain more than 1 million items.</p>
-    <p><strong>Categories:</strong> Sequential Recommendation, Negative Sampling, Cross-Entropy Loss, Overconfidence, Recommendation Systems, Movies, Diversity of Recommendations, Beyond Accuracy, Scalability, Training Efficiency (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/864/">See reasoning</a></p>
+    <h3>Multi-Behavioral Sequential Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Shereen Elsayed, Lars Schmidt-Thieme, Ahmed Rashed</p>
+    <p>Sequential recommendation models are crucial for next-item prediction tasks in various online platforms, yet many focus on a single behavior, neglecting valuable implicit interactions. While multi-behavioral models address this using graph-based approaches, they often fail to capture sequential patterns simultaneously. Our proposed Multi-Behavioral Sequential Recommendation framework (MBSRec) captures the multi-behavior dependencies between the heterogeneous historical interactions via multi-head self-attention. Furthermore, we utilize a weighted binary cross-entropy loss for precise behavior control. Experimental results on four datasets demonstrate MBSRec’s significant outperformance of state-of-the-art approaches. The implementation code is available here (https://drive.google.com/drive/folders/1EGRQutc9xtVYbsbXswUcTb9nvT1Tc9cZ?usp=sharing) during the review and will be added to GitHub upon acceptance.</p>
+    <p><strong>Categories:</strong> Multi-Behavioral Models, Sequential Recommendation, Implicit Feedback, Attention Mechanism, Recommender Systems, Loss Function Optimization, Deep Learning, Evaluation Metrics, Implementation Details, Cross-Entropy Loss, Multi-Head Self Attention, Heterogeneous Interactions (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1101/">See reasoning</a></p>
   </div>
 
     </div>
@@ -187,35 +175,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Distribution-based Learnable Filters with Side Information for Sequential Recommendation (2023)</h3>
-    <p><strong>Authors:</strong> Liang Wang, Haibo Liu, Zhixiang Deng, Jinjia Peng, Shi Feng</p>
-    <p>Sequential Recommendation aims to predict the next item by mining out the dynamic preference from user previous interactions. However, most methods represent each item as a single fixed vector, which is incapable of capturing the uncertainty of item-item transitions that result from time-dependent and multifarious interests of users. Besides, they fail to effectively exploit side information that helps to better express user preferences. At last, the noise in user’s access sequence, which is due to accidental clicks, can interfere with the next item prediction and lead to lower recommendation performance. To deal with these issues, we propose DLFS-Rec, a novel model that combines Distribution-based Learnable Filters with Side information for sequential Recommendation. Specifically, items and their side information are represented by stochastic Gaussian distribution, which is described by mean and covariance embeddings, and then the corresponding embeddings are fused to generate a final representation for each item. To attenuate noise, stacked learnable filter layers are applied to smooth the fused embeddings. The similarities between the distributions inferred from the last filter layer and candidates are measured by 2-Wasserstein distance for generating recommendation list. Extensive experiments on four public real-world datasets demonstrate the superiority of the proposed model over state-of-the-art baselines, especially on cold start users and items.</p>
-    <p><strong>Categories:</strong> Distribution-Based Methods, Learnable Filters, Sequential Recommendation, Recommendation Systems, Side Information, Noise Reduction, Cold Start, Probabilistic Models, Model-Based Methods, Real-World Applications, Recommendation Quality (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/860/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Sequential Recommendation Models: A Graph-based Perspective (2023)</h3>
-    <p><strong>Authors:</strong> Andreas Peintner</p>
-    <p>Recommender systems (RecSys) traditionally leverage the users’ rich interaction data with the system, but ignore the sequential dependency of items. Sequential recommender systems aim to predict the next item the user will interact with (e.g., click on, purchase, or listen to) based on the preceding interactions of the user. Current state-of-the-art approaches focus on transformer-based architectures and graph neural networks. Specifically, the modeling of sequences as graphs has shown to be a promising approach to introduce a structured bias into the recommendation learning framework. In this work, we will outline our research of exploring different applications of graphs in sequential recommendation.</p>
-    <p><strong>Categories:</strong> Sequential Recommendation, Graph-based Models, Recommender Systems (RecSys), Transformer-Based Architectures, Graph Neural Networks (GNNs), Temporal Dynamics, Interaction Sequences, Model Architectures, Methodology Exploration, User Interaction Modeling, Deep Learning in RecSys, Sequence Modeling, Innovative Models in RecSys (<i>deepseek-r1:70b</i>)</p>
-    <p><a href="/recsys-recommender/response/987/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Understanding and Modeling Passive-Negative Feedback for Short-video Sequential Recommendation (2023)</h3>
-    <p><strong>Authors:</strong> Chen Gao, Yong Li, Depeng Jin, Yunzhu Pan, Kun Gai, Yang Song</p>
-    <p>Sequential recommendation is one of the most important tasks in recommender systems, which aims to recommend the next interacted item with historical behaviors as input. Traditional sequential recommendation always mainly considers the collected positive feedback such as click, purchase, etc. However, in short-video platforms such as TikTok, video viewing behavior may not always represent positive feedback. Specifically, the videos are played automatically, and users passively receive the recommended videos. In this new scenario, users passively express negative feedback by skipping over videos they do not like, which provides valuable information about their preferences. Different from the negative feedback studied in traditional recommender systems, this passive-negative feedback can reflect users’ interests and serve as an important supervision signal in extracting users’ preferences. Therefore, it is essential to carefully design and utilize it in this novel recommendation scenario. In this work, we first conduct analyses based on a large-scale real-world short-video behavior dataset and illustrate the significance of leveraging passive feedback. We then propose a novel method that deploys the sub-interest encoder, which incorporates positive feedback and passive-negative feedback as supervision signals to learn the user’s current active sub-interest. Moreover, we introduce an adaptive fusion layer to integrate various sub-interests effectively. To enhance the robustness of our model, we then introduce a multi-task learning module to simultaneously optimize two kinds of feedback – passive-negative feedback and traditional randomly-sampled negative feedback. The experiments on two large-scale datasets verify that the proposed method can significantly outperform state-of-the-art approaches. The codes and collected datasets are anonymously released at https:// anonymous.4open.science/ r/ SINE-2047/ to benefit the community.</p>
-    <p><strong>Categories:</strong> Passive-Negative Feedback, Short-Video Recommendation, Sequential Recommendation, User Preferences Modeling, Recommendation Systems, Passive Feedback, Negative Feedback Handling, Behavior Analysis, Content Consumption Patterns, Modeling User Interests, Multi-Task Learning, Large-Scale Datasets (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/888/">See reasoning</a></p>
+    <h3>Reciprocal Sequential Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Bowen Zheng, Hengshu Zhu, Yang Song, Wayne Xin Zhao, Yupeng Hou</p>
+    <p>Reciprocal recommender system (RRS), considering a two-way matching between two parties, has been widely applied in online platforms like online dating and recruitment. Existing RRS models mainly capture static user preferences, which have neglected the evolving user tastes and the dynamic matching relation between the two parties. Although dynamic user modeling has been well-studied in sequential recommender systems, existing solutions are developed in a user-oriented manner. Therefore, it is non-trivial to adapt sequential recommendation algorithms to reciprocal recommendation. In this paper, we formulate RRS as a distinctive sequence matching task, and further propose a new approach ReSeq for RRS, which is short for Reciprocal Sequential recommendation. To capture duel-perspective matching, we propose to learn fine-grained sequence similarities by co-attention mechanism across different time steps. Further, to improve the inference efficiency, we introduce the self-distillation technique to distill knowledge from the fine-grained matching module into the more efficient student module. In the deployment stage, only the efficient student module is used, greatly speeding up the similarity computation. Extensive experiments on five real-world datasets from two scenarios demonstrate the effectiveness and efficiency of the proposed method. Our code is available at https://anonymous.4open.science/r/ReSeq/.</p>
+    <p><strong>Categories:</strong> Reciprocal Recommendation, Sequential Recommendation, Dating, Recruitment, Attention-Based Models, Co-Attention Mechanism, Self-Distillation, Inference Efficiency, Scalable Algorithms, Real-World Applications, Effectiveness Evaluation, Efficiency Evaluation, Reciprocal Dynamics, Mutual Matching, Efficient Computation, Online Platforms, Dynamic User Modeling, Variation of Sequential Recommendation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/883/">See reasoning</a></p>
   </div>
 
     </div>
@@ -235,11 +199,23 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>SPARE: Shortest Path Global Item Relations for Efficient Session-based Recommendation (2023)</h3>
-    <p><strong>Authors:</strong> Andreas Peintner, Eva Zangerle, Amir Reza Mohammadi</p>
-    <p>Session-based recommendation aims to predict the next item based on a set of anonymous sessions. Capturing user intent from a short interaction sequence imposes a variety of challenges since no user profiles are available and interaction data is naturally sparse. Recent approaches relying on graph neural networks (GNNs) for session-based recommendation use global item relations to explore collaborative information from different sessions. These methods capture the topological structure of the graph and rely on multi-hop information aggregation in GNNs to exchange information along edges. Consequently, graph-based models suffer from noisy item relations in the training data and introduce high complexity for large item catalogs. We propose to explicitly model the multi-hop information aggregation mechanism over multiple layers via shortest-path edges based on knowledge from the sequential recommendation domain. Our approach does not require multiple layers to exchange information and ignores unreliable item-item relations. Furthermore, to address inherent data sparsity, we are the first to apply supervised contrastive learning by mining data-driven positive and hard negative item samples from the training data. Extensive experiments on three different datasets show that the proposed approach outperforms almost all of the state-of-the-art methods.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Session-Based Recommendations, Graph Neural Networks, Handling Sparse Data, Sequential Recommendation, Contrastive Learning, Efficient Algorithms, Performance Evaluation, Graph Theory (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/880/">See reasoning</a></p>
+    <h3>Contrastive Learning with Frequency-Domain Interest Trends for Sequential Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Guisheng Yin, Yuxin Dong, Yichi Zhang</p>
+    <p>Recently, contrastive learning for sequential recommendation has demonstrated its powerful ability to learn high-quality user representations. However, constructing augmented samples in the time domain poses challenges due to various reasons, such as fast-evolving trends, interest shifts, and system factors. Furthermore, the F-principle indicates that deep learning preferentially fits the low-frequency part, resulting in poor performance on high-frequency tasks. The complexity of time series and the low-frequency preference limit the utility of sequence encoders. To address these challenges, we need to construct augmented samples from the frequency domain, thus improving the ability to accommodate events of different frequency sizes. To this end, we propose a novel Contrastive Learning with Frequency-Domain Interest Trends for Sequential Recommendation (CFIT4SRec). We treat the embedding representations of historical interactions as “images” and introduce the second-order Fourier transform to construct augmented samples. The components of different frequency sizes reflect the interest trends between attributes and their surroundings in the hidden space. We introduce three data augmentation operations to accommodate events of different frequency sizes: low-pass augmentation, high-pass augmentation, and band-stop augmentation. Extensive experiments on four public benchmark datasets demonstrate the superiority of CFIT4SRec over the state-of-the-art baselines. The implementation code is available at https://github.com/zhangyichi1Z/CFIT4SRec.</p>
+    <p><strong>Categories:</strong> Contrastive Learning, Sequential Recommendation, Frequency-Domain Analysis, Data Augmentation, User Representation Learning, Recommendation Algorithms, Time Series Analysis, Deep Learning, Signal Processing Techniques, Interest Evolution Modeling (<i>deepseek-r1:70b</i>)</p>
+    <p><a href="/recsys-recommender/response/855/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Understanding and Modeling Passive-Negative Feedback for Short-video Sequential Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Chen Gao, Yong Li, Depeng Jin, Yunzhu Pan, Kun Gai, Yang Song</p>
+    <p>Sequential recommendation is one of the most important tasks in recommender systems, which aims to recommend the next interacted item with historical behaviors as input. Traditional sequential recommendation always mainly considers the collected positive feedback such as click, purchase, etc. However, in short-video platforms such as TikTok, video viewing behavior may not always represent positive feedback. Specifically, the videos are played automatically, and users passively receive the recommended videos. In this new scenario, users passively express negative feedback by skipping over videos they do not like, which provides valuable information about their preferences. Different from the negative feedback studied in traditional recommender systems, this passive-negative feedback can reflect users’ interests and serve as an important supervision signal in extracting users’ preferences. Therefore, it is essential to carefully design and utilize it in this novel recommendation scenario. In this work, we first conduct analyses based on a large-scale real-world short-video behavior dataset and illustrate the significance of leveraging passive feedback. We then propose a novel method that deploys the sub-interest encoder, which incorporates positive feedback and passive-negative feedback as supervision signals to learn the user’s current active sub-interest. Moreover, we introduce an adaptive fusion layer to integrate various sub-interests effectively. To enhance the robustness of our model, we then introduce a multi-task learning module to simultaneously optimize two kinds of feedback – passive-negative feedback and traditional randomly-sampled negative feedback. The experiments on two large-scale datasets verify that the proposed method can significantly outperform state-of-the-art approaches. The codes and collected datasets are anonymously released at https:// anonymous.4open.science/ r/ SINE-2047/ to benefit the community.</p>
+    <p><strong>Categories:</strong> Passive-Negative Feedback, Short-Video Recommendation, Sequential Recommendation, User Preferences Modeling, Recommendation Systems, Passive Feedback, Negative Feedback Handling, Behavior Analysis, Content Consumption Patterns, Modeling User Interests, Multi-Task Learning, Large-Scale Datasets (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/888/">See reasoning</a></p>
   </div>
 
     </div>
@@ -259,11 +235,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Enhancing Transformers without Self-supervised Learning: A Loss Landscape Perspective in Sequential Recommendation (2023)</h3>
-    <p><strong>Authors:</strong> Minghua Xu, Chin-Chia Michael Yeh, Yiwei Cai, Vivian Lai, Huiyuan Chen, Hao Yang</p>
-    <p>Transformers have become the favored model for sequential recommendation. However, previous studies rely on extensive data, such as massive pre-training or repeated data augmentation, leading to optimization-related problems, such as initialization sensitivity and large batch-size memory bottleneck. In this work, we examine Transformers’ loss geometry to improve the models’ data efficiency during training and generalization. By utilizing a newly introduced sharpness-aware optimizer to promote smoothness, we significantly enhance SASRec’s accuracy and robustness, a Transformer model, on various datasets. When trained on sequential data without significant pre-training or data augmentation, the resulting SASRec outperforms S3Rec and CL4Rec, both of which are of comparable size and throughput.</p>
-    <p><strong>Categories:</strong> Transformers, Sequential Recommendation, Loss Landscape Analysis, Optimization, Data Efficiency, Initialization Sensitivity, Generalization in Recommendations, Algorithm Modification, Scalability (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/909/">See reasoning</a></p>
+    <h3>Distribution-based Learnable Filters with Side Information for Sequential Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Liang Wang, Haibo Liu, Zhixiang Deng, Jinjia Peng, Shi Feng</p>
+    <p>Sequential Recommendation aims to predict the next item by mining out the dynamic preference from user previous interactions. However, most methods represent each item as a single fixed vector, which is incapable of capturing the uncertainty of item-item transitions that result from time-dependent and multifarious interests of users. Besides, they fail to effectively exploit side information that helps to better express user preferences. At last, the noise in user’s access sequence, which is due to accidental clicks, can interfere with the next item prediction and lead to lower recommendation performance. To deal with these issues, we propose DLFS-Rec, a novel model that combines Distribution-based Learnable Filters with Side information for sequential Recommendation. Specifically, items and their side information are represented by stochastic Gaussian distribution, which is described by mean and covariance embeddings, and then the corresponding embeddings are fused to generate a final representation for each item. To attenuate noise, stacked learnable filter layers are applied to smooth the fused embeddings. The similarities between the distributions inferred from the last filter layer and candidates are measured by 2-Wasserstein distance for generating recommendation list. Extensive experiments on four public real-world datasets demonstrate the superiority of the proposed model over state-of-the-art baselines, especially on cold start users and items.</p>
+    <p><strong>Categories:</strong> Distribution-Based Methods, Learnable Filters, Sequential Recommendation, Recommendation Systems, Side Information, Noise Reduction, Cold Start, Probabilistic Models, Model-Based Methods, Real-World Applications, Recommendation Quality (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/860/">See reasoning</a></p>
   </div>
 
     </div>
@@ -271,11 +247,35 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Reciprocal Sequential Recommendation (2023)</h3>
-    <p><strong>Authors:</strong> Bowen Zheng, Hengshu Zhu, Yang Song, Wayne Xin Zhao, Yupeng Hou</p>
-    <p>Reciprocal recommender system (RRS), considering a two-way matching between two parties, has been widely applied in online platforms like online dating and recruitment. Existing RRS models mainly capture static user preferences, which have neglected the evolving user tastes and the dynamic matching relation between the two parties. Although dynamic user modeling has been well-studied in sequential recommender systems, existing solutions are developed in a user-oriented manner. Therefore, it is non-trivial to adapt sequential recommendation algorithms to reciprocal recommendation. In this paper, we formulate RRS as a distinctive sequence matching task, and further propose a new approach ReSeq for RRS, which is short for Reciprocal Sequential recommendation. To capture duel-perspective matching, we propose to learn fine-grained sequence similarities by co-attention mechanism across different time steps. Further, to improve the inference efficiency, we introduce the self-distillation technique to distill knowledge from the fine-grained matching module into the more efficient student module. In the deployment stage, only the efficient student module is used, greatly speeding up the similarity computation. Extensive experiments on five real-world datasets from two scenarios demonstrate the effectiveness and efficiency of the proposed method. Our code is available at https://anonymous.4open.science/r/ReSeq/.</p>
-    <p><strong>Categories:</strong> Reciprocal Recommendation, Sequential Recommendation, Dating, Recruitment, Attention-Based Models, Co-Attention Mechanism, Self-Distillation, Inference Efficiency, Scalable Algorithms, Real-World Applications, Effectiveness Evaluation, Efficiency Evaluation, Reciprocal Dynamics, Mutual Matching, Efficient Computation, Online Platforms, Dynamic User Modeling, Variation of Sequential Recommendation (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/883/">See reasoning</a></p>
+    <h3>gSASRec: Reducing Overconfidence in Sequential Recommendation Trained with Negative Sampling (2023)</h3>
+    <p><strong>Authors:</strong> Craig Macdonald, Aleksandr V. Petrov</p>
+    <p>Large catalogue size is one of the central challenges in training recommendation models: a large number of items makes it infeasible to compute scores for all items during training, forcing models to deploy negative sampling. However, negative sampling increases the proportion of positive interactions in the training data. Therefore models trained with negative sampling tend to overestimate the probabilities of positive interactions — a phenomenon we call overconfidence. While the absolute values of the predicted scores/probabilities are unimportant for ranking retrieved recommendations, overconfident models may fail to estimate nuanced differences in the top-ranked items, resulting in degraded performance. This paper shows that overconfidence explains why the popular SASRec model underperforms when compared to BERT4Rec (contrary to the BERT4Rec authors’ attribution to the bi-directional attention mechanism). We propose a novel Generalised Binary Cross-Entropy Loss function (gBCE) to mitigate overconfidence and theoretically prove that it can mitigate overconfidence. We further propose the gSASRec model, an improvement over SASRec that deploys an increased number of negatives and gBCE loss. We show through detailed experiments on three datasets that gSASRec does not exhibit the overconfidence problem. As a result, gSASRec can outperform BERT4Rec (e.g.\ +9.47\% NDCG on MovieLens-1M), while requiring less training time (e.g.\ -73\% training time on MovieLens-1M). Moreover, in contrast to BERT4Rec, gSASRec is suitable for large datasets that contain more than 1 million items.</p>
+    <p><strong>Categories:</strong> Sequential Recommendation, Negative Sampling, Cross-Entropy Loss, Overconfidence, Recommendation Systems, Movies, Diversity of Recommendations, Beyond Accuracy, Scalability, Training Efficiency (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/864/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Towards Self-Explaining Sequence-Aware Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Ludovico Boratto, Alejandro Ariza-Casabona, Maria Salamo, Gianni Fenu</p>
+    <p>Self-explaining models are becoming an important perk of recommender systems, as they help users understand the reason behind certain recommendations, which encourages them to interact more often with the platform. In order to personalize recommendations, modern recommender approaches make the model aware of the user behavior history for interest evolution representation. However, existing explainable recommender systems do not consider the past user history to further personalize the explanation based on the user interest fluctuation. In this work, we propose a SEQuence-Aware Explainable Recommendation model (SEQUER) that is able to leverage the sequence of user-item review interactions to generate better explanations while maintaining recommendation performance. Experiments validate the effectiveness of our proposal on multiple recommendation scenarios. Our source code and preprocessed datasets are available at https://tinyurl.com/SEQUER-RECSYS23.</p>
+    <p><strong>Categories:</strong> Explainable Recommendation Systems, Sequence-Aware Modeling, Personalized Explanations, User Interest Evolution, Temporal Dynamics, User Interaction Data, Recommendation Performance, Sequential Recommendation, Model Interpretability, Human Factors in Recommendations, Evaluation Metrics for Explainability, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/923/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Enhancing Transformers without Self-supervised Learning: A Loss Landscape Perspective in Sequential Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Minghua Xu, Chin-Chia Michael Yeh, Yiwei Cai, Vivian Lai, Huiyuan Chen, Hao Yang</p>
+    <p>Transformers have become the favored model for sequential recommendation. However, previous studies rely on extensive data, such as massive pre-training or repeated data augmentation, leading to optimization-related problems, such as initialization sensitivity and large batch-size memory bottleneck. In this work, we examine Transformers’ loss geometry to improve the models’ data efficiency during training and generalization. By utilizing a newly introduced sharpness-aware optimizer to promote smoothness, we significantly enhance SASRec’s accuracy and robustness, a Transformer model, on various datasets. When trained on sequential data without significant pre-training or data augmentation, the resulting SASRec outperforms S3Rec and CL4Rec, both of which are of comparable size and throughput.</p>
+    <p><strong>Categories:</strong> Transformers, Sequential Recommendation, Loss Landscape Analysis, Optimization, Data Efficiency, Initialization Sensitivity, Generalization in Recommendations, Algorithm Modification, Scalability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/909/">See reasoning</a></p>
   </div>
 
     </div>

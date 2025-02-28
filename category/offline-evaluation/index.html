@@ -35,7 +35,12 @@
       
         
           <a class="ui primary button" style="margin: 5px;"
-             href="/recsys-recommender/">Offline Evaluation</a>
+             href="/recsys-recommender/">Offline evaluation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/online-evaluation/">Online Evaluation</a>
         
       
         
@@ -45,17 +50,17 @@
       
         
           <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/popularity-bias/">Popularity Bias</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/fairness/">Fairness</a>
         
       
         
@@ -65,7 +70,7 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+             href="/recsys-recommender/category/fairness/">Fairness</a>
         
       
         
@@ -75,12 +80,7 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/beyond-accuracy/">Beyond Accuracy</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/explainability/">Explainability</a>
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
         
       
     </div>
@@ -91,11 +91,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Self-Auxiliary Distillation for Sample Efficient Learning in Google-Scale Recommenders (2024)</h3>
-    <p><strong>Authors:</strong> Ruoxi Wang, Tiansheng Yao, Ed H. Chi, Andrew Evdokimov, Yuan Gao, Jerry Zhang, Evan Ettinger, Derek Zhiyuan Cheng, Yin Zhang, Jonathan Valverde, Xiang Li</p>
-    <p>Industrial recommendation systems process billions of daily user feedback which are complex and noisy. Efficiently uncovering user preference from these signals becomes crucial for high-quality recommendation. We argue that those signals are not inherently equal in terms of their informative value and training ability, which is particularly salient in industrial applications with multi-stage processes (e.g., augmentation, retrieval, ranking). Considering that, in this work, we propose a novel self-auxiliary distillation framework that prioritizes training on high-quality labels, and improves the resolution of low-quality labels through distillation by adding a bilateral branch-based auxiliary task. This approach enables flexible learning from diverse labels without additional computational costs, making it highly scalable and effective for Google-scale recommenders. Our framework consistently improved both offline and online key business metrics across three Google major products. Notably, self-auxiliary distillation proves to be highly effective in addressing the severe signal loss challenge posed by changes such as Apple iOS policy. It further delivered significant improvements in both offline (+17\% AUC) and online metrics for a Google Apps recommendation system. This highlights the opportunities of addressing real-world signal loss problems through self-auxiliary distillation techniques.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Self-Auxiliary Distillation, Large Scale Recommenders, Sample Efficient Learning, Noise Handling, Signal Loss Problems, Offline Evaluation, Online Evaluation, A/B Test, Scalability, User Feedback (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1179/">See reasoning</a></p>
+    <h3>Towards Understanding The Gaps of Offline And Online Evaluation Metrics: Impact of Series vs. Movie Recommendations (2024)</h3>
+    <p><strong>Authors:</strong> Ashok Chandrashekar, Puja Das, Bora Edizel, Tim Sweetser, Kamilia Ahmadi</p>
+    <p>In the realm of recommender systems research, offline evaluation metrics like NDCG, Recall, or Precision are often used to measure the impact. On the other hand, common industry practices suggest evaluating new ideas/models through A/B tests where decisions are made based on business metrics like the overall engagement of users. A new model may show improvement in offline metrics but performance loss in online metrics. One reason that leads to this phenomenon is the counterfactual nature of the recommendation problem which can be addressed by off-policy evaluation methods. Another reason is the degree of causal connection between offline evaluation metrics and observed online metrics. In this work, we will share our learnings from two sets of A/B tests that we conducted at Max1 where we observed a mismatch between online and offline metrics due to a weak causal connection between online and offline metrics. Thanks to learnings from A/B tests, we discovered and quantified the impact of series to movie ratio at recommendations. Our experiments show that there is an optimal amount of series to movies ratio that provides the best possible results for user engagement</p>
+    <p><strong>Categories:</strong> Evaluation Metrics, Offline Evaluation, Online Evaluation, Recommender Systems, A/B Testing, User Engagement, Content Types, Causal Inference, Business Metrics, Movie Recommendations, Series Recommendations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1182/">See reasoning</a></p>
   </div>
 
     </div>
@@ -108,6 +108,30 @@
     <p>Recommender systems have been widely used in e-commerce, and re-ranking models are playing an increasingly significant role in the domain, which leverages the inter-item influence and determines the final recommendation lists. Online learning methods keep updating a deployed model with the latest available samples to capture the shifting of the underlying data distribution in e-commerce. However, they depend on the availability of real user feedback, which may be delayed by hours or even days, such as item purchases, leading to a lag in model enhancement.  In this paper, we propose a novel extension of online learning methods for re-ranking modeling, which we term LAST, an acronym for Learning At Serving Time. It circumvents the requirement of user feedback by using a surrogate model to provide the instructional signal needed to steer model improvement. Upon receiving an online request, LAST finds and applies a model modification on the fly before generating a recommendation result for the request. The modification is request-specific and transient. It means the modification is tailored to and only to the current request to capture the specific context of the request. After a request, the modification is discarded, which helps to prevent error propagation and stabilizes the online learning procedure since the predictions of the surrogate model may be inaccurate. Most importantly, as a complement to feedback-based online learning methods, LAST can be seamlessly integrated into existing online learning systems to create a more adaptive and responsive recommendation experience. Comprehensive experiments, both offline and online, affirm that LAST outperforms state-of-the-art re-ranking models.</p>
     <p><strong>Categories:</strong> Recommender Systems, E-Commerce, Re-ranking Models, Online Learning, Without User Feedback at Serving Time, Surrogate Model, Comprehensive Experiments, Offline Evaluation, Online Evaluation, Novel Method (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/1080/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Off-Policy Selection for Optimizing Ad Display Timing in Mobile Games (Samsung Instant Plays) (2024)</h3>
+    <p><strong>Authors:</strong> Michał Romaniuk, Katarzyna Siudek-Tkaczuk, Sławomir Kapka, Jędrzej Alchimowicz, Bartłomiej Swoboda</p>
+    <p>Off-Policy Selection (OPS) aims to select the best policy form a set of policies trained using offline Reinforcement Learning. In this work, we describe our custom OPS method and its successful application in Samsung Instant Plays for optimizing ad delivery timings. The motivation behind proposing our custom OPS method is the fact that traditional Off-Policy Evaluation (OPE) methods often exhibit enormous variance leading to unreliable results. We applied our OPS method to initialize policies for ours custom pseudo-online training pipeline. The final policy resulted in a substantial 49% lift in the number of watched ads while maintaining similar retention rate.</p>
+    <p><strong>Categories:</strong> Off-Policy Selection, Reinforcement Learning, Offline Evaluation, Mobile Games, Digital Advertising, Ad Display Optimization, Policy Selection, Variance Reduction, User Retention, Custom Pipelines (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1172/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Self-Auxiliary Distillation for Sample Efficient Learning in Google-Scale Recommenders (2024)</h3>
+    <p><strong>Authors:</strong> Ruoxi Wang, Tiansheng Yao, Ed H. Chi, Andrew Evdokimov, Yuan Gao, Jerry Zhang, Evan Ettinger, Derek Zhiyuan Cheng, Yin Zhang, Jonathan Valverde, Xiang Li</p>
+    <p>Industrial recommendation systems process billions of daily user feedback which are complex and noisy. Efficiently uncovering user preference from these signals becomes crucial for high-quality recommendation. We argue that those signals are not inherently equal in terms of their informative value and training ability, which is particularly salient in industrial applications with multi-stage processes (e.g., augmentation, retrieval, ranking). Considering that, in this work, we propose a novel self-auxiliary distillation framework that prioritizes training on high-quality labels, and improves the resolution of low-quality labels through distillation by adding a bilateral branch-based auxiliary task. This approach enables flexible learning from diverse labels without additional computational costs, making it highly scalable and effective for Google-scale recommenders. Our framework consistently improved both offline and online key business metrics across three Google major products. Notably, self-auxiliary distillation proves to be highly effective in addressing the severe signal loss challenge posed by changes such as Apple iOS policy. It further delivered significant improvements in both offline (+17\% AUC) and online metrics for a Google Apps recommendation system. This highlights the opportunities of addressing real-world signal loss problems through self-auxiliary distillation techniques.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Self-Auxiliary Distillation, Large Scale Recommenders, Sample Efficient Learning, Noise Handling, Signal Loss Problems, Offline Evaluation, Online Evaluation, A/B Test, Scalability, User Feedback (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1179/">See reasoning</a></p>
   </div>
 
     </div>
@@ -139,54 +163,6 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Off-Policy Selection for Optimizing Ad Display Timing in Mobile Games (Samsung Instant Plays) (2024)</h3>
-    <p><strong>Authors:</strong> Michał Romaniuk, Katarzyna Siudek-Tkaczuk, Sławomir Kapka, Jędrzej Alchimowicz, Bartłomiej Swoboda</p>
-    <p>Off-Policy Selection (OPS) aims to select the best policy form a set of policies trained using offline Reinforcement Learning. In this work, we describe our custom OPS method and its successful application in Samsung Instant Plays for optimizing ad delivery timings. The motivation behind proposing our custom OPS method is the fact that traditional Off-Policy Evaluation (OPE) methods often exhibit enormous variance leading to unreliable results. We applied our OPS method to initialize policies for ours custom pseudo-online training pipeline. The final policy resulted in a substantial 49% lift in the number of watched ads while maintaining similar retention rate.</p>
-    <p><strong>Categories:</strong> Off-Policy Selection, Reinforcement Learning, Offline Evaluation, Mobile Games, Digital Advertising, Ad Display Optimization, Policy Selection, Variance Reduction, User Retention, Custom Pipelines (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1172/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Towards Understanding The Gaps of Offline And Online Evaluation Metrics: Impact of Series vs. Movie Recommendations (2024)</h3>
-    <p><strong>Authors:</strong> Ashok Chandrashekar, Puja Das, Bora Edizel, Tim Sweetser, Kamilia Ahmadi</p>
-    <p>In the realm of recommender systems research, offline evaluation metrics like NDCG, Recall, or Precision are often used to measure the impact. On the other hand, common industry practices suggest evaluating new ideas/models through A/B tests where decisions are made based on business metrics like the overall engagement of users. A new model may show improvement in offline metrics but performance loss in online metrics. One reason that leads to this phenomenon is the counterfactual nature of the recommendation problem which can be addressed by off-policy evaluation methods. Another reason is the degree of causal connection between offline evaluation metrics and observed online metrics. In this work, we will share our learnings from two sets of A/B tests that we conducted at Max1 where we observed a mismatch between online and offline metrics due to a weak causal connection between online and offline metrics. Thanks to learnings from A/B tests, we discovered and quantified the impact of series to movie ratio at recommendations. Our experiments show that there is an optimal amount of series to movies ratio that provides the best possible results for user engagement</p>
-    <p><strong>Categories:</strong> Evaluation Metrics, Offline Evaluation, Online Evaluation, Recommender Systems, A/B Testing, User Engagement, Content Types, Causal Inference, Business Metrics, Movie Recommendations, Series Recommendations (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1182/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Widespread flaws in offline evaluation of recommender systems (2023)</h3>
-    <p><strong>Authors:</strong> Ádám Tibor Czapp, Balázs Hidasi</p>
-    <p>Even though offline evaluation is just an imperfect proxy of online performance — due to the interactive nature of recommenders — it will probably remain the primary way of evaluation in recommender systems research for the foreseeable future, since the proprietary nature of production recommenders prevents independent validation of A/B test setups and verification of online results. Therefore, it is imperative that offline evaluation setups are as realistic and as flawless as they can be. Unfortunately, evaluation flaws are quite common in recommenders systems research nowadays, due to later works copying flawed evaluation setups from their predecessors without questioning their validity. In the hope of improving the quality of offline evaluation of recommender systems, we discuss four of these widespread flaws and why researchers should avoid them.</p>
-    <p><strong>Categories:</strong> Evaluation Methodology, Offline Evaluation, Research Limitations, Research Flaws, Evaluation Challenges, Methodology Design, Underlying Assumptions, Real-World Applications, Research Practices, Evaluation Setup and Execution, Best Practices. (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/917/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>On the Consistency, Discriminative Power and Robustness of Sampled Metrics in Offline Top-N Recommender System Evaluation (2023)</h3>
-    <p><strong>Authors:</strong> Dorota Glowacka, Yang Liu, Alan Medlar</p>
-    <p>Negative item sampling in offline top-n recommendation evaluation has become increasingly wide-spread, but remains controversial. While several studies have warned against using sampled evaluation metrics on the basis of being a poor approximation of the full ranking (i.e.~using all negative items), others have highlighted their improved discriminative power and potential to make evaluation more robust. Unfortunately, empirical studies on negative item sampling are based on relatively few methods (between 3-12) and, therefore, lack the statistical power to assess the impact of negative item sampling in practice. In this article, we present preliminary findings from a comprehensive benchmarking study of negative item sampling based on 52 recommendation algorithms and 3 benchmark data sets. We show how the number of sampled negative items and different sampling strategies affect the consistency and discriminative power of sampled evaluation metrics. Furthermore, we investigate the impact of sparsity bias and popularity bias on the robustness of these metrics. In brief, we show that the optimal parameterizations for negative item sampling are dependent on data set characteristics and the goals of the investigator, suggesting a need for greater transparency in related experimental design decisions.</p>
-    <p><strong>Categories:</strong> Evaluation Metrics, Offline Evaluation, Negative Item Sampling, Recommendation Algorithms, Consistency in Metrics, Discriminative Power, Robustness of Metrics, Sparsity Bias, Popularity Bias (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/961/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
     <h3>What We Evaluate When We Evaluate Recommender Systems: Understanding Recommender Systems’ Performance using Item Response Theory (2023)</h3>
     <p><strong>Authors:</strong> Yang Liu, Alan Medlar, Dorota Glowacka</p>
     <p>Current practices in offline evaluation use rank-based metrics to measure the quality of recommendation lists. This approach has practical benefits as it centers assessment on the output of the recommender system and, therefore, measures performance from the perspective of end-users. However, this methodology neglects how recommender systems more broadly model user preferences, which is not captured by only considering the top-n recommendations. In this article, we use item response theory (IRT), a family of latent variable models used in psychometric assessment, to gain a comprehensive understanding of offline evaluation. We used IRT to jointly estimate the latent abilities of 51 recommendation algorithms and the characteristics of 3 commonly used benchmark data sets. For all data sets, the latent abilities estimated by IRT suggest that higher scores from traditional rank-based metrics do not reflect improvements in modeling user preferences. Furthermore, we show the top-n recommendations with the most discriminatory power are biased towards lower difficulty items, leaving much room for improvement. Lastly, we highlight the role of popularity in evaluation by investigating how user engagement and item popularity influence recommendation difficulty.</p>
@@ -211,11 +187,23 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Enhancing Counterfactual Evaluation and Learning for Recommendation Systems (2022)</h3>
-    <p><strong>Authors:</strong> Nicolò Felicioni</p>
-    <p>Evaluating recommendation systems is a task of utmost importance and a very active research field. While online evaluation is the most reliable evaluation procedure, it may also be too expensive to perform, if not unfeasible. Therefore, researchers and practitioners resort to offline evaluation. Offline evaluation is much more efficient and scalable, but traditional approaches suffer from high bias. This issue led to the increased popularity of counterfactual techniques. These techniques are used for evaluation and learning in recommender systems and reduce the bias in offline evaluation. While counterfactual approaches have a solid statistical basis, their application to recommendation systems is still in a preliminary research phase. In this paper, we identify some limitations of counterfactual techniques applied to recommender systems, and we propose possible ways to overcome them.</p>
-    <p><strong>Categories:</strong> Evaluation, Recommendation Systems, Counterfactual Evaluation, Offline Evaluation, Bias Reduction, Scalability, Statistical Methods, Methodology Improvement, Research Limitations, Theoretical Foundations (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/814/">See reasoning</a></p>
+    <h3>On the Consistency, Discriminative Power and Robustness of Sampled Metrics in Offline Top-N Recommender System Evaluation (2023)</h3>
+    <p><strong>Authors:</strong> Dorota Glowacka, Yang Liu, Alan Medlar</p>
+    <p>Negative item sampling in offline top-n recommendation evaluation has become increasingly wide-spread, but remains controversial. While several studies have warned against using sampled evaluation metrics on the basis of being a poor approximation of the full ranking (i.e.~using all negative items), others have highlighted their improved discriminative power and potential to make evaluation more robust. Unfortunately, empirical studies on negative item sampling are based on relatively few methods (between 3-12) and, therefore, lack the statistical power to assess the impact of negative item sampling in practice. In this article, we present preliminary findings from a comprehensive benchmarking study of negative item sampling based on 52 recommendation algorithms and 3 benchmark data sets. We show how the number of sampled negative items and different sampling strategies affect the consistency and discriminative power of sampled evaluation metrics. Furthermore, we investigate the impact of sparsity bias and popularity bias on the robustness of these metrics. In brief, we show that the optimal parameterizations for negative item sampling are dependent on data set characteristics and the goals of the investigator, suggesting a need for greater transparency in related experimental design decisions.</p>
+    <p><strong>Categories:</strong> Evaluation Metrics, Offline Evaluation, Negative Item Sampling, Recommendation Algorithms, Consistency in Metrics, Discriminative Power, Robustness of Metrics, Sparsity Bias, Popularity Bias (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/961/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Widespread flaws in offline evaluation of recommender systems (2023)</h3>
+    <p><strong>Authors:</strong> Ádám Tibor Czapp, Balázs Hidasi</p>
+    <p>Even though offline evaluation is just an imperfect proxy of online performance — due to the interactive nature of recommenders — it will probably remain the primary way of evaluation in recommender systems research for the foreseeable future, since the proprietary nature of production recommenders prevents independent validation of A/B test setups and verification of online results. Therefore, it is imperative that offline evaluation setups are as realistic and as flawless as they can be. Unfortunately, evaluation flaws are quite common in recommenders systems research nowadays, due to later works copying flawed evaluation setups from their predecessors without questioning their validity. In the hope of improving the quality of offline evaluation of recommender systems, we discuss four of these widespread flaws and why researchers should avoid them.</p>
+    <p><strong>Categories:</strong> Evaluation Methodology, Offline Evaluation, Research Limitations, Research Flaws, Evaluation Challenges, Methodology Design, Underlying Assumptions, Real-World Applications, Research Practices, Evaluation Setup and Execution, Best Practices. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/917/">See reasoning</a></p>
   </div>
 
     </div>
@@ -235,18 +223,6 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Scalable Linear Shallow Autoencoder for Collaborative Filtering (2022)</h3>
-    <p><strong>Authors:</strong> Vojtěch Vančura, Petr Kasalicky, Pavel Kordík, Rodrigo Alves</p>
-    <p>Recently, the RS research community has witnessed a surge in popularity for shallow autoencoder-based CF methods. Due to its straightforward implementation and high accuracy on item retrieval metrics, EASE is potentially the most prominent of these models. Despite its accuracy and simplicity, EASE cannot be employed in some real-world recommender system applications due to its inability to scale to huge interaction matrices. In this paper, we proposed ELSA, a scalable shallow autoencoder method for implicit feedback recommenders. ELSA is a scalable autoencoder in which the hidden layer is factorizable into a low-rank plus sparse structure, thereby drastically lowering memory consumption and computation time. We conducted a comprehensive offline experimental section that combined synthetic and several real-world datasets. We also validated our strategy in an online setting by comparing ELSA to baselines in a live recommender system using an A/B test. Experiments demonstrate that ELSA is scalable and has competitive performance. Finally, we demonstrate the explainability of ELSA by illustrating the recovered latent space.</p>
-    <p><strong>Categories:</strong> Scalable Linear Shallow Autoencoder, Collaborative Filtering, Recommender Systems, Matrix Factorization, Implicit Feedback, Autoencoder, Offline Evaluation, Online Evaluation, Scalability, Explainability (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/796/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
     <h3>Reusable Self-Attention Recommender Systems in Fashion Industry Applications (2022)</h3>
     <p><strong>Authors:</strong> Marjan Celikik, Ana Peleteiro Ramallo, Jacek Wasilewski</p>
     <p>A large number of empirical studies on applying self-attention models in the domain of recommender systems are based on offline evaluation and metrics computed on standardized datasets. Moreover, many of them do not consider side information such as item and customer metadata although deep-learning recommenders live up to their full potential only when numerous features of heterogeneous type are included. Also, normally the model is used only for a single use case. Due to these shortcomings, even if relevant, previous works are not always representative of their actual effectiveness in real-world industry applications. In this talk, we contribute to bridging this gap by presenting live experimental results demonstrating improvements in user retention of up to 30%. Moreover, we share our learnings and challenges from building a re-usable and configurable recommender system for various applications from the fashion industry. In particular, we focus on fashion inspiration use-cases, such as outfit ranking, outfit recommendation and real-time personalized outfit generation.</p>
@@ -259,11 +235,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Towards Unified Metrics for Accuracy and Diversity for Recommender Systems (2021)</h3>
-    <p><strong>Authors:</strong> Filip Radlinski, Javier Parapar</p>
-    <p>Recommender systems evaluation has evolved rapidly in recent years. However, for offline evaluation, accuracy is the de facto standard for assessing the superiority of one method over another, with most research comparisons focused on tasks ranging from rating prediction to ranking metrics for top-n recommendation. Simultaneously, recommendation diversity and novelty have become recognized as critical to users’ perceived utility, with several new metrics recently proposed for evaluating these aspects of recommendation lists. Consequently, the accuracy-diversity dilemma frequently shows up as a choice to make when creating new recommendation algorithms.<br>We propose a novel adaptation of a unified metric, derived from one commonly used for search system evaluation, to Recommender Systems. The proposed metric combines topical diversity and accuracy, and we show it to satisfy a set of desired properties that we formulate axiomatically. These axioms are defined as fundamental constraints that a good unified metric should always satisfy. Moreover, beyond the axiomatic analysis, we present an experimental evaluation of the metric with collaborative filtering data. Our analysis shows that the metric respects the desired theoretical constraints and behaves as expected when performing offline evaluation.</p>
-    <p><strong>Categories:</strong> Evaluation Metrics, Accuracy, Diversity, Recommender Systems, Collaborative Filtering, Combined Metrics, Recommendation Lists, User Perceived Utility, Offline Evaluation, Accuracy-Diversity Dilemma, Application (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/667/">See reasoning</a></p>
+    <h3>Enhancing Counterfactual Evaluation and Learning for Recommendation Systems (2022)</h3>
+    <p><strong>Authors:</strong> Nicolò Felicioni</p>
+    <p>Evaluating recommendation systems is a task of utmost importance and a very active research field. While online evaluation is the most reliable evaluation procedure, it may also be too expensive to perform, if not unfeasible. Therefore, researchers and practitioners resort to offline evaluation. Offline evaluation is much more efficient and scalable, but traditional approaches suffer from high bias. This issue led to the increased popularity of counterfactual techniques. These techniques are used for evaluation and learning in recommender systems and reduce the bias in offline evaluation. While counterfactual approaches have a solid statistical basis, their application to recommendation systems is still in a preliminary research phase. In this paper, we identify some limitations of counterfactual techniques applied to recommender systems, and we propose possible ways to overcome them.</p>
+    <p><strong>Categories:</strong> Evaluation, Recommendation Systems, Counterfactual Evaluation, Offline Evaluation, Bias Reduction, Scalability, Statistical Methods, Methodology Improvement, Research Limitations, Theoretical Foundations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/814/">See reasoning</a></p>
   </div>
 
     </div>
@@ -271,11 +247,35 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Offline Evaluation Standards for Recommender Systems (2021)</h3>
-    <p><strong>Authors:</strong> Fernando Mourão</p>
-    <p>Offline evaluation has nowadays become a major step in developing Recommendation Systems in both academia and industry [4, 5]. While academia anchors on offline evaluation due to the lack of proper environments for conducting online tests with real users, the industry uses offline evaluation to filter the most promising solutions for further online testing, aiming at reducing costs and potential damage to customers. Despite the blunt advances observed on this topic recently, consolidating a reliable, replicable, flexible and efficient offline evaluation process capable of satisfactorily predicting online test results remains an open challenge [2]. The community still lacks an integrated and updated view on this topic, useful for practitioners to inspect and refine their current offline evaluation stack.<br>The main Recommendation Systems venues have plenty of studies with relevant findings, presenting new challenges, pitfalls and divergent guidelines for better offline evaluation procedures [3, 5]. However, inspecting all those studies and keeping an updated perspective about where they agree is impractical, especially for the industry, given the need for fast iterations and deliveries. Thus, it is not rare to observe professionals struggle to obtain solid answers to practical and high-impact questions, such as: What are the main existing pitfalls we should be aware of when setting up an offline evaluation in a given domain? What is the desired evaluation framework for a given recommendation task? How reliable is a given offline evaluation stack, and how far is it from an ideal setting?<br>In this work, we bring an updated snapshot of offline evaluation standards for Recommendation Systems. For this, we reviewed dozens of studies published in the main Recommendation Systems venues in the last five years, dealing with recurring questions related to offline evaluation design and compiling the main findings in the literature. Then, we contrasted this curated body of knowledge against practical issues we face internally at SEEK, aiming to identify the most valuable guidelines. As a result of this process, we propose an integrated evaluation framework for offline stacks, a reliability score to monitor signs of progress on our stack over time, and a list of best practices to bear in mind when starting a new evaluation. Hence, we have organised the work into three parts:<br>Part I - Integrated Evaluation Framework. We present an offline evaluation framework that compiles the primary directives, pitfalls, and knowledge raised in the last five years by representative studies in the Recommendation Systems literature. This framework aims to compile the main steps, flaws and decisions to be aware of when designing offline tests. Also, it aims to present the leading solutions suggested in the literature for each known issue. The proposed framework can be seen as an extension of Cañamares’ work [1], in which we expand the factors, steps and decisions related to the design of offline experiments for recommenders. Figure 1 depicts the main steps of the framework along with some of the main pitfalls recurrently related to each step. It is noteworthy that this framework should not be deemed as a rigid and thorough set of steps and rules that all professionals must consider in every scenario. It is rather an organized collection of concerns raised in different situations, in which the strength and potential impact of each of them should be carefully inspected through the lens of each evaluation scenario.<br>Part II - Reliability Score. We also propose a Reliability Score to quantify how close a given offline evaluation setting is from the idealised framework instantiated to a given domain and task. This score is derived from a question-driven process that estimates the current state, effort, and impact that each known issue has for each team or company. These questions represent a non-closed set of concerns related to distinct steps of the evaluation process that should be addressed by a reliable evaluation framework. The final score ranges from 0 to 1 and the higher its value, the more reliable a given offline evaluation setting is, considering the specific needs and perspectives of a team or company. Further, this score allows teams of professionals to monitor progress in their offline evaluation settings over time. The proposed score empowers companies to compare the maturity of different teams w.r.t. offline assessments using a unified view. In order to illustrate the practical utility of the Reliability Score, we also present a few internal use cases that demonstrate how the proposed score helped us at SEEK to identify the main flaws in our offline settings and outline strategies for refining our current evaluation stack.<br>Part III - Best Practices & Limitations. Finally, we compiled a list of best practices derived from academic works, experience reports from other companies, and our own experience at SEEK. We expect the proposed list to serve as a starting point for practitioners to qualitatively review their decisions when designing offline assessments, as well as that these professionals would contribute to refining and growing it over time.</p>
-    <p><strong>Categories:</strong> Evaluation Methods, Recommender Systems, Offline Evaluation, Best Practices, Research Methodology, Industry Applications, Algorithm Design, Data Analysis, Practical Guidelines, Reproducibility (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/729/">See reasoning</a></p>
+    <h3>Scalable Linear Shallow Autoencoder for Collaborative Filtering (2022)</h3>
+    <p><strong>Authors:</strong> Vojtěch Vančura, Petr Kasalicky, Pavel Kordík, Rodrigo Alves</p>
+    <p>Recently, the RS research community has witnessed a surge in popularity for shallow autoencoder-based CF methods. Due to its straightforward implementation and high accuracy on item retrieval metrics, EASE is potentially the most prominent of these models. Despite its accuracy and simplicity, EASE cannot be employed in some real-world recommender system applications due to its inability to scale to huge interaction matrices. In this paper, we proposed ELSA, a scalable shallow autoencoder method for implicit feedback recommenders. ELSA is a scalable autoencoder in which the hidden layer is factorizable into a low-rank plus sparse structure, thereby drastically lowering memory consumption and computation time. We conducted a comprehensive offline experimental section that combined synthetic and several real-world datasets. We also validated our strategy in an online setting by comparing ELSA to baselines in a live recommender system using an A/B test. Experiments demonstrate that ELSA is scalable and has competitive performance. Finally, we demonstrate the explainability of ELSA by illustrating the recovered latent space.</p>
+    <p><strong>Categories:</strong> Scalable Linear Shallow Autoencoder, Collaborative Filtering, Recommender Systems, Matrix Factorization, Implicit Feedback, Autoencoder, Offline Evaluation, Online Evaluation, Scalability, Explainability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/796/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A new sequential dataset logging interactions, all viewed items and click responses/no-click for recommender systems research (2021)</h3>
+    <p><strong>Authors:</strong> Simen Eide</p>
+    <p>We present a novel recommender systems dataset that records the sequential interactions between users and an online marketplace. The users are sequentially presented with both recommendations and search results in the form of ranked lists of items, called slates, from the marketplace (figure 1). The dataset includes the presented slates at each round, whether the user clicked on any of these items and which item the user clicked on. Although the usage of exposure data in recommender systems is growing [ 2, 5, 6 , 9 ], to our knowledge there is no open large-scale recommender systems dataset that includes the slates of items presented to the users at each interaction. As a result, most articles on recommender systems do not utilize this exposure information. Instead, the proposed models only depend on the user’s click responses, and assume that the user is exposed to all the items in the item universe at each step, often called uniform candidate sampling ([3 , 7, 8]). This is an incomplete assumption, as it takes into account items the user might not have been exposed to. This way items might be incorrectly considered as not of interest to the user. Taking into account the actually shown slates allows the models to use a more natural likelihood, based on the click probability given the exposure set of items, as is prevalent in the bandit and reinforcement learning literature [1 , 10 , 13, 14 , 17]. [ 6] shows that likelihoods based on uniform candidate sampling (and similar assumptions) are implicitly assuming that the platform only shows the most relevant items to the user. This causes the recommender system to implicitly reinforce feedback loops and to be biased towards previously exposed items to the user. We hope that the release of this dataset can assist researchers to construct more realistic user preference models by utilizing the exposed slates and contribute to more robust offline evaluation criteria using for example importance sampling [ 12 ]. The dataset along with quickstarts and tutorials are available at https://github.com/finn-no/recsys-slates-dataset.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Sequential Data, Exposure Data, User Interaction, Evaluation Methods, Offline Evaluation, Reinforcement Learning, Marketplace Recommendations, Bias in Recommendation, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/737/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Towards Unified Metrics for Accuracy and Diversity for Recommender Systems (2021)</h3>
+    <p><strong>Authors:</strong> Filip Radlinski, Javier Parapar</p>
+    <p>Recommender systems evaluation has evolved rapidly in recent years. However, for offline evaluation, accuracy is the de facto standard for assessing the superiority of one method over another, with most research comparisons focused on tasks ranging from rating prediction to ranking metrics for top-n recommendation. Simultaneously, recommendation diversity and novelty have become recognized as critical to users’ perceived utility, with several new metrics recently proposed for evaluating these aspects of recommendation lists. Consequently, the accuracy-diversity dilemma frequently shows up as a choice to make when creating new recommendation algorithms.<br>We propose a novel adaptation of a unified metric, derived from one commonly used for search system evaluation, to Recommender Systems. The proposed metric combines topical diversity and accuracy, and we show it to satisfy a set of desired properties that we formulate axiomatically. These axioms are defined as fundamental constraints that a good unified metric should always satisfy. Moreover, beyond the axiomatic analysis, we present an experimental evaluation of the metric with collaborative filtering data. Our analysis shows that the metric respects the desired theoretical constraints and behaves as expected when performing offline evaluation.</p>
+    <p><strong>Categories:</strong> Evaluation Metrics, Accuracy, Diversity, Recommender Systems, Collaborative Filtering, Combined Metrics, Recommendation Lists, User Perceived Utility, Offline Evaluation, Accuracy-Diversity Dilemma, Application (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/667/">See reasoning</a></p>
   </div>
 
     </div>

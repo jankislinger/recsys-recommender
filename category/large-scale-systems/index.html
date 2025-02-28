@@ -34,18 +34,23 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Large-Scale Systems</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/multi-task-learning/">Multi-Task Learning</a>
+        
+      
+        
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/fairness/">Fairness</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+             href="/recsys-recommender/category/explainability/">Explainability</a>
         
       
         
@@ -60,27 +65,22 @@
       
         
           <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/deep-learning/">Deep Learning</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
         
       
     </div>
@@ -127,30 +127,6 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Loss Harmonizing for Multi-Scenario CTR Prediction (2023)</h3>
-    <p><strong>Authors:</strong> Congcong Liu, Zhangang Lin, Changping Peng, Jingping Shao, Fei Teng, Xue Jiang, Pei Wang, Liang Shi</p>
-    <p>Large-scale industrial systems often include multiple scenarios to satisfy diverse user needs. The common approach of using one model per scenario does not scale well and not suitable for minor scenarios with limited samples. An solution is to train a model on all scenarios, which can introduce domination and bias from the main scenario. MMoE-like structures have been proposed for multi-scenario prediction, but they do not explicitly address the issue of gradient unbalancing. This work proposes an adaptive loss harmonizing (ALH) algorithm for multi-scenario CTR prediction. It balances training by dynamically adjusting the learning speed, resulting in improved prediction performance. Experiments conducted on real production dataset and a rigorous A/B test prove the superiority of our method.</p>
-    <p><strong>Categories:</strong> Click-Through Rate (CTR) Prediction, Multi-Scenario Prediction, Machine Learning Optimization, Large-Scale Systems, Recommendation Systems, Real-World Applications, Model Efficiency, Multi-Task Learning, Adaptive Algorithms (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1003/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>InTune: Reinforcement Learning-based Data Pipeline Optimization for Deep Recommendation Models (2023)</h3>
-    <p><strong>Authors:</strong> Pablo Delgado, Kabir Nagrecha, Lingyi Liu, Prasanna Padmanabhan</p>
-    <p>Deep learning-based recommendation models (DLRMs) have become an essential component of many modern recommender systems. Several companies are now building large compute clusters reserved only for DLRM training, driving new interest in cost- & time- saving optimizations. The systems challenges faced in this setting are unique; while typical deep learning (DL) training jobs are dominated by model execution times, the most important factor in DLRM training performance is often online data ingestion. In this paper, we explore the unique characteristics of this data ingestion problem and provide insights into the specific bottlenecks and challenges of the DLRM training pipeline at scale. We study real-world DLRM data processing pipelines taken from our compute cluster to both observe the performance impacts of online ingestion and to identify shortfalls in existing data pipeline optimizers. We find that current tooling either yields sub-optimal performance, frequent crashes, or else requires impractical cluster re-organization to adopt. Our studies lead us to design and build a new solution for data pipeline optimization, InTune. InTune employs a reinforcement learning (RL) agent to learn how to distribute CPU resources across a DLRM data pipeline to more effectively parallelize data-loading and improve throughput. Our experiments show that InTune can build an optimized data pipeline configuration within only a few minutes, and can easily be integrated into existing training workflows. By exploiting the responsiveness and adaptability of RL, InTune achieves significantly higher online data ingestion rates than existing optimizers, thus reducing idle times in model execution and increasing efficiency. We apply InTune to our real-world cluster, and find that it increases data ingestion throughput by as much as 2.29X versus current state-of-the-art data pipeline optimizers while also improving both CPU & GPU utilization.</p>
-    <p><strong>Categories:</strong> Reinforcement Learning, Deep Learning Recommender Models, Data Pipeline Optimization, Resource Allocation, Performance Optimization, Real-World Applications, Large-Scale Systems, Compute Clusters, Resource Utilization, Deep Learning, Scalability (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/873/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
     <h3>Unleash the Power of Context: Enhancing Large-Scale Recommender Systems with Context-Based Prediction Models (2023)</h3>
     <p><strong>Authors:</strong> Davorin Kopič, Jan Hartman, Assaf Klein, Natalia Silberstein</p>
     <p>In this work, we introduce the notion of Context-Based Prediction Models. A Context-Based Prediction Model determines the probability of a user’s action (such as a click or a conversion) solely by relying on user and contextual features, without considering any specific features of the item itself. We have identified numerous valuable applications for this modeling approach, including training an auxiliary context-based model to estimate click probability and incorporating its prediction as a feature in CTR prediction models.Our experiments indicate that this enhancement brings significant improvements in offline and online business metrics while having minimal impact on the cost of serving. Overall, our work offers a simple and scalable, yet powerful approach for enhancing the performance of large-scale commercial recommender systems, with broad implications for the field of personalized recommendations.</p>
@@ -163,11 +139,35 @@
     <div class="ui segment">
       
   <div class="item">
+    <h3>Loss Harmonizing for Multi-Scenario CTR Prediction (2023)</h3>
+    <p><strong>Authors:</strong> Congcong Liu, Zhangang Lin, Changping Peng, Jingping Shao, Fei Teng, Xue Jiang, Pei Wang, Liang Shi</p>
+    <p>Large-scale industrial systems often include multiple scenarios to satisfy diverse user needs. The common approach of using one model per scenario does not scale well and not suitable for minor scenarios with limited samples. An solution is to train a model on all scenarios, which can introduce domination and bias from the main scenario. MMoE-like structures have been proposed for multi-scenario prediction, but they do not explicitly address the issue of gradient unbalancing. This work proposes an adaptive loss harmonizing (ALH) algorithm for multi-scenario CTR prediction. It balances training by dynamically adjusting the learning speed, resulting in improved prediction performance. Experiments conducted on real production dataset and a rigorous A/B test prove the superiority of our method.</p>
+    <p><strong>Categories:</strong> Click-Through Rate (CTR) Prediction, Multi-Scenario Prediction, Machine Learning Optimization, Large-Scale Systems, Recommendation Systems, Real-World Applications, Model Efficiency, Multi-Task Learning, Adaptive Algorithms (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1003/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
     <h3>Nonlinear Bandits Exploration for Recommendations (2023)</h3>
     <p><strong>Authors:</strong> Minmin Chen, Yi Su</p>
     <p>The paradigm of framing recommendations as (sequential) decision-making processes has gained significant interest. To achieve long-term user satisfaction, these interactive systems need to strikes a balance between exploitation (recommending high-reward items) and exploration (exploring uncertain regions for potentially better items). Classical bandit algorithms like Upper-Confidence-Bound and Thompson Sampling, and their contextual extensions with linear payoffs have exhibited strong theoretical guarantees and empirical success in managing the exploration-exploitation trade-off. Building efficient exploration-based systems for deep neural network powered real-world, large-scale industrial recommender systems remains under studied. In addition, these systems are often multi-stage, multi-objective and response time sensitive.  In this talk, we share our experience in addressing these challenges in building exploration based industrial recommender systems. Specifically, we adopt the Neural Linear Bandit algorithm, which effectively combines the representation power of deep neural networks, with the simplicity of linear bandits to incorporate exploration in DNN based recommender systems. We introduce  exploration capability to both the nomination and ranking stage of the industrial recommender system.  In the context of the ranking stage, we delve into the extension of this algorithm to accommodate the multi-task setup, enabling exploration in systems with multiple objectives. Moving on to the nomination stage, we will address the development of efficient bandit algorithms tailored to factorized bi-linear models. These algorithms play a crucial role in facilitating maximum inner product search, which is commonly employed in large-scale retrieval systems. We validate our algorithms and present findings from real-world live experiments.</p>
     <p><strong>Categories:</strong> Multi-Armed Bandits, Recommendation Systems, Deep Learning, Exploration, Exploitation, Neural Linear Bandit, Industrial Recommender Systems, Nomination Stage, Ranking Stage, Multi-Task Learning, Large Scale Systems, Real World Applications, Efficiency, Beyond Accuracy, Evaluation Metrics, Performance Evaluation, Algorithm Performance (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/1012/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>InTune: Reinforcement Learning-based Data Pipeline Optimization for Deep Recommendation Models (2023)</h3>
+    <p><strong>Authors:</strong> Pablo Delgado, Kabir Nagrecha, Lingyi Liu, Prasanna Padmanabhan</p>
+    <p>Deep learning-based recommendation models (DLRMs) have become an essential component of many modern recommender systems. Several companies are now building large compute clusters reserved only for DLRM training, driving new interest in cost- & time- saving optimizations. The systems challenges faced in this setting are unique; while typical deep learning (DL) training jobs are dominated by model execution times, the most important factor in DLRM training performance is often online data ingestion. In this paper, we explore the unique characteristics of this data ingestion problem and provide insights into the specific bottlenecks and challenges of the DLRM training pipeline at scale. We study real-world DLRM data processing pipelines taken from our compute cluster to both observe the performance impacts of online ingestion and to identify shortfalls in existing data pipeline optimizers. We find that current tooling either yields sub-optimal performance, frequent crashes, or else requires impractical cluster re-organization to adopt. Our studies lead us to design and build a new solution for data pipeline optimization, InTune. InTune employs a reinforcement learning (RL) agent to learn how to distribute CPU resources across a DLRM data pipeline to more effectively parallelize data-loading and improve throughput. Our experiments show that InTune can build an optimized data pipeline configuration within only a few minutes, and can easily be integrated into existing training workflows. By exploiting the responsiveness and adaptability of RL, InTune achieves significantly higher online data ingestion rates than existing optimizers, thus reducing idle times in model execution and increasing efficiency. We apply InTune to our real-world cluster, and find that it increases data ingestion throughput by as much as 2.29X versus current state-of-the-art data pipeline optimizers while also improving both CPU & GPU utilization.</p>
+    <p><strong>Categories:</strong> Reinforcement Learning, Deep Learning Recommender Models, Data Pipeline Optimization, Resource Allocation, Performance Optimization, Real-World Applications, Large-Scale Systems, Compute Clusters, Resource Utilization, Deep Learning, Scalability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/873/">See reasoning</a></p>
   </div>
 
     </div>
@@ -199,11 +199,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Jointly Optimize Capacity, Latency and Engagement in Large-scale Recommendation Systems (2021)</h3>
-    <p><strong>Authors:</strong> Hitesh Khandelwal</p>
-    <p>As the recommendation systems behind commercial services scale up and apply more and more sophisticated machine learning models, it becomes important to optimize computational cost (capacity) and runtime latency, besides the traditional objective of user engagement. Caching recommended results and reusing them later is a common technique used to reduce capacity and latency. However, the standard caching approach negatively impacts user engagement. To overcome the challenge, this paper presents an approach to optimizing capacity, latency and engagement simultaneously. We propose a smart caching system including a lightweight adjuster model to refresh the cached ranking scores, achieving significant capacity savings without impacting ranking quality. To further optimize latency, we introduce a prefetching strategy which leverages the smart cache. Our production deployment on Facebook Marketplace demonstrates that the approach reduces capacity demand by 50% and p75 end-to-end latency by 35%. While Facebook Marketplace is used as a case study, the approach is applicable to other industrial recommendation systems as well.</p>
-    <p><strong>Categories:</strong> System Optimization, Technical Challenges, Caching Strategies, Large-scale Systems, Recommendation Algorithms, Machine Learning Models, Real-World Applications, A/B Testing, Production Systems, User Engagement, Scalability, Industrial Applications (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/727/">See reasoning</a></p>
+    <h3>Automatic Collection Creation and Recommendation (2021)</h3>
+    <p><strong>Authors:</strong> Manjeet Dahiya, Piyush Singh, Sanidhya Singal</p>
+    <p>We present a collection recommender system that can automatically create and recommend collections of items at a user level. Unlike regular recommender systems, which output top-N relevant items, a collection recommender system outputs collections of items such that the items in the collections are relevant to a user, and the items within a collection follow a specific theme. Our system builds on top of the user-item representations learnt by item recommender systems. We employ dimensionality reduction and clustering techniques along with intuitive heuristics to create collections with their ratings and titles. We test these ideas in a real-world setting of music recommendation, within a popular music streaming service. We find that there is a 2.3x increase in recommendation-driven consumption when recommending collections over items. Further, it results in effective utilization of real estate and leads to recommending a more and diverse set of items. To our knowledge, these are first of its kind experiments at such a large scale.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Collection Recommendations, Music, Entertainment, Dimensionality Reduction, Clustering, User-Level Analysis, Top-N Recommendations, A/B Testing, Large-Scale Systems, Real-World Applications, Recommendation-Driven Consumption, Diversity of Recommendations, User-Item Representations, Heuristics. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/685/">See reasoning</a></p>
   </div>
 
     </div>
@@ -211,11 +211,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Automatic Collection Creation and Recommendation (2021)</h3>
-    <p><strong>Authors:</strong> Manjeet Dahiya, Piyush Singh, Sanidhya Singal</p>
-    <p>We present a collection recommender system that can automatically create and recommend collections of items at a user level. Unlike regular recommender systems, which output top-N relevant items, a collection recommender system outputs collections of items such that the items in the collections are relevant to a user, and the items within a collection follow a specific theme. Our system builds on top of the user-item representations learnt by item recommender systems. We employ dimensionality reduction and clustering techniques along with intuitive heuristics to create collections with their ratings and titles. We test these ideas in a real-world setting of music recommendation, within a popular music streaming service. We find that there is a 2.3x increase in recommendation-driven consumption when recommending collections over items. Further, it results in effective utilization of real estate and leads to recommending a more and diverse set of items. To our knowledge, these are first of its kind experiments at such a large scale.</p>
-    <p><strong>Categories:</strong> Recommender Systems, Collection Recommendations, Music, Entertainment, Dimensionality Reduction, Clustering, User-Level Analysis, Top-N Recommendations, A/B Testing, Large-Scale Systems, Real-World Applications, Recommendation-Driven Consumption, Diversity of Recommendations, User-Item Representations, Heuristics. (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/685/">See reasoning</a></p>
+    <h3>Jointly Optimize Capacity, Latency and Engagement in Large-scale Recommendation Systems (2021)</h3>
+    <p><strong>Authors:</strong> Hitesh Khandelwal</p>
+    <p>As the recommendation systems behind commercial services scale up and apply more and more sophisticated machine learning models, it becomes important to optimize computational cost (capacity) and runtime latency, besides the traditional objective of user engagement. Caching recommended results and reusing them later is a common technique used to reduce capacity and latency. However, the standard caching approach negatively impacts user engagement. To overcome the challenge, this paper presents an approach to optimizing capacity, latency and engagement simultaneously. We propose a smart caching system including a lightweight adjuster model to refresh the cached ranking scores, achieving significant capacity savings without impacting ranking quality. To further optimize latency, we introduce a prefetching strategy which leverages the smart cache. Our production deployment on Facebook Marketplace demonstrates that the approach reduces capacity demand by 50% and p75 end-to-end latency by 35%. While Facebook Marketplace is used as a case study, the approach is applicable to other industrial recommendation systems as well.</p>
+    <p><strong>Categories:</strong> System Optimization, Technical Challenges, Caching Strategies, Large-scale Systems, Recommendation Algorithms, Machine Learning Models, Real-World Applications, A/B Testing, Production Systems, User Engagement, Scalability, Industrial Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/727/">See reasoning</a></p>
   </div>
 
     </div>
@@ -259,11 +259,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>LORE: A Large-Scale Offer Recommendation Engine with Eligibility and Capacity Constraints (2019)</h3>
-    <p><strong>Authors:</strong> Dale Struble, Shreya Chakrabarti, Yi Liu, Rahul Makhijani</p>
-    <p>Businesses, such as Amazon, department store chains, home furnishing store chains, Uber, and Lyft, frequently offer deals, product discounts and incentives to drive sales, increase new product acceptance and engage with users. In order to appeal to diverse user groups, these businesses typically design more than one promotion offer but market different ones to different users. For instance, Uber offers a percentage discount in the rides to some users and a low fixed price to others. In this paper, we propose solutions to optimally recommend promotions and items to maximize user conversion constrained by user eligibility and item or offer capacity (limited quantity of items or offers) simultaneously. We achieve this through an offer recommendation model based on Min-Cost Flow network optimization, which enables us to satisfy the constraints within the optimization itself and solve it in polynomial time. We present two approaches that can be used in various settings: single period solution and sequential time period offering. We evaluate these approaches against competing methods using counterfactual evaluation in offline mode. We also discuss three practical aspects that may affect the online performance of constrained optimization: capacity determination, traffic arrival pattern and clustering for large scale setting.</p>
-    <p><strong>Categories:</strong> Large-Scale Systems, Offer Recommendation, Optimization-based Algorithms, E-commerce, Eligibility Constraints, Capacity Constraints, Resource Allocation, Cold Start, Evaluation Methods (Counterfactual), Real-World Applications (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/448/">See reasoning</a></p>
+    <h3>Ghosting: Contextualized Inline Query Completion in Large Scale Retail Search (2019)</h3>
+    <p><strong>Authors:</strong> Uma Murthy, Lakshmi Ramachandran</p>
+    <p>Query auto-completion presents a ranked list of queries as suggestions for a user-entered prefix. Ghosting is the process of auto-completing a search recommendation by highlighting the suggested text inline within the search box. We propose the use of a behavior-based recommendation model along with customer search context to ghost on high-confidence queries. We tested ghosting on a retail production system, on over 140 million search sessions. We found that session-context based ghosting significantly increased the acceptance of offered suggestions by 6.18%, reduced misspellings among searches by 4.42%, and improved net sales by 0.14%.</p>
+    <p><strong>Categories:</strong> Retail, E-commerce, Search Systems, Recommendation Systems, Real-World Application, Context-Aware, Large-Scale Systems, Behavioral Analysis, Sales Optimization, User Experience, Business Impact, Scalability (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/470/">See reasoning</a></p>
   </div>
 
     </div>
@@ -271,11 +271,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Ghosting: Contextualized Inline Query Completion in Large Scale Retail Search (2019)</h3>
-    <p><strong>Authors:</strong> Uma Murthy, Lakshmi Ramachandran</p>
-    <p>Query auto-completion presents a ranked list of queries as suggestions for a user-entered prefix. Ghosting is the process of auto-completing a search recommendation by highlighting the suggested text inline within the search box. We propose the use of a behavior-based recommendation model along with customer search context to ghost on high-confidence queries. We tested ghosting on a retail production system, on over 140 million search sessions. We found that session-context based ghosting significantly increased the acceptance of offered suggestions by 6.18%, reduced misspellings among searches by 4.42%, and improved net sales by 0.14%.</p>
-    <p><strong>Categories:</strong> Retail, E-commerce, Search Systems, Recommendation Systems, Real-World Application, Context-Aware, Large-Scale Systems, Behavioral Analysis, Sales Optimization, User Experience, Business Impact, Scalability (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/470/">See reasoning</a></p>
+    <h3>LORE: A Large-Scale Offer Recommendation Engine with Eligibility and Capacity Constraints (2019)</h3>
+    <p><strong>Authors:</strong> Dale Struble, Shreya Chakrabarti, Yi Liu, Rahul Makhijani</p>
+    <p>Businesses, such as Amazon, department store chains, home furnishing store chains, Uber, and Lyft, frequently offer deals, product discounts and incentives to drive sales, increase new product acceptance and engage with users. In order to appeal to diverse user groups, these businesses typically design more than one promotion offer but market different ones to different users. For instance, Uber offers a percentage discount in the rides to some users and a low fixed price to others. In this paper, we propose solutions to optimally recommend promotions and items to maximize user conversion constrained by user eligibility and item or offer capacity (limited quantity of items or offers) simultaneously. We achieve this through an offer recommendation model based on Min-Cost Flow network optimization, which enables us to satisfy the constraints within the optimization itself and solve it in polynomial time. We present two approaches that can be used in various settings: single period solution and sequential time period offering. We evaluate these approaches against competing methods using counterfactual evaluation in offline mode. We also discuss three practical aspects that may affect the online performance of constrained optimization: capacity determination, traffic arrival pattern and clustering for large scale setting.</p>
+    <p><strong>Categories:</strong> Large-Scale Systems, Offer Recommendation, Optimization-based Algorithms, E-commerce, Eligibility Constraints, Capacity Constraints, Resource Allocation, Cold Start, Evaluation Methods (Counterfactual), Real-World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/448/">See reasoning</a></p>
   </div>
 
     </div>

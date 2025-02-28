@@ -34,13 +34,13 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Cross-Entropy Loss</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
         
       
         
@@ -50,7 +50,17 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/explainability/">Explainability</a>
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
         
       
         
@@ -60,27 +70,17 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
         
       
     </div>
@@ -103,11 +103,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Turning Dross Into Gold Loss: is BERT4Rec really better than SASRec? (2023)</h3>
-    <p><strong>Authors:</strong> Alexey Vasilev, Anton Klenitskiy</p>
-    <p>Recently sequential recommendations and next-item prediction task has become increasingly popular in the field of recommender systems. Currently, two state-of-the-art baselines are Transformer-based models SASRec and BERT4Rec. Over the past few years, there have been quite a few publications comparing these two algorithms and proposing new state-of-the-art models. In most of the publications, BERT4Rec achieves better performance than SASRec. But BERT4Rec uses cross-entropy over softmax for all items, while SASRec uses negative sampling and calculates binary cross-entropy loss for one positive and one negative item. In our work, we show that if both models are trained with the same loss, which is used by BERT4Rec, then SASRec will significantly outperform BERT4Rec both in terms of quality and training speed. In addition, we show that SASRec could be effectively trained with negative sampling and still outperform BERT4Rec, but the number of negative examples should be much larger than one.</p>
-    <p><strong>Categories:</strong> Sequential Recommendations, Transformer-Based Models, BERT4Rec, SASRec, Algorithm Comparison, Loss Functions, Evaluation Metrics, State-of-the-Art Models, Training Efficiency, Model Performance, Recommender Systems, Negative Sampling, Cross-Entropy Loss, Binary Cross-Entropy Loss (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/966/">See reasoning</a></p>
+    <h3>gSASRec: Reducing Overconfidence in Sequential Recommendation Trained with Negative Sampling (2023)</h3>
+    <p><strong>Authors:</strong> Craig Macdonald, Aleksandr V. Petrov</p>
+    <p>Large catalogue size is one of the central challenges in training recommendation models: a large number of items makes it infeasible to compute scores for all items during training, forcing models to deploy negative sampling. However, negative sampling increases the proportion of positive interactions in the training data. Therefore models trained with negative sampling tend to overestimate the probabilities of positive interactions — a phenomenon we call overconfidence. While the absolute values of the predicted scores/probabilities are unimportant for ranking retrieved recommendations, overconfident models may fail to estimate nuanced differences in the top-ranked items, resulting in degraded performance. This paper shows that overconfidence explains why the popular SASRec model underperforms when compared to BERT4Rec (contrary to the BERT4Rec authors’ attribution to the bi-directional attention mechanism). We propose a novel Generalised Binary Cross-Entropy Loss function (gBCE) to mitigate overconfidence and theoretically prove that it can mitigate overconfidence. We further propose the gSASRec model, an improvement over SASRec that deploys an increased number of negatives and gBCE loss. We show through detailed experiments on three datasets that gSASRec does not exhibit the overconfidence problem. As a result, gSASRec can outperform BERT4Rec (e.g.\ +9.47\% NDCG on MovieLens-1M), while requiring less training time (e.g.\ -73\% training time on MovieLens-1M). Moreover, in contrast to BERT4Rec, gSASRec is suitable for large datasets that contain more than 1 million items.</p>
+    <p><strong>Categories:</strong> Sequential Recommendation, Negative Sampling, Cross-Entropy Loss, Overconfidence, Recommendation Systems, Movies, Diversity of Recommendations, Beyond Accuracy, Scalability, Training Efficiency (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/864/">See reasoning</a></p>
   </div>
 
     </div>
@@ -115,11 +115,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>gSASRec: Reducing Overconfidence in Sequential Recommendation Trained with Negative Sampling (2023)</h3>
-    <p><strong>Authors:</strong> Craig Macdonald, Aleksandr V. Petrov</p>
-    <p>Large catalogue size is one of the central challenges in training recommendation models: a large number of items makes it infeasible to compute scores for all items during training, forcing models to deploy negative sampling. However, negative sampling increases the proportion of positive interactions in the training data. Therefore models trained with negative sampling tend to overestimate the probabilities of positive interactions — a phenomenon we call overconfidence. While the absolute values of the predicted scores/probabilities are unimportant for ranking retrieved recommendations, overconfident models may fail to estimate nuanced differences in the top-ranked items, resulting in degraded performance. This paper shows that overconfidence explains why the popular SASRec model underperforms when compared to BERT4Rec (contrary to the BERT4Rec authors’ attribution to the bi-directional attention mechanism). We propose a novel Generalised Binary Cross-Entropy Loss function (gBCE) to mitigate overconfidence and theoretically prove that it can mitigate overconfidence. We further propose the gSASRec model, an improvement over SASRec that deploys an increased number of negatives and gBCE loss. We show through detailed experiments on three datasets that gSASRec does not exhibit the overconfidence problem. As a result, gSASRec can outperform BERT4Rec (e.g.\ +9.47\% NDCG on MovieLens-1M), while requiring less training time (e.g.\ -73\% training time on MovieLens-1M). Moreover, in contrast to BERT4Rec, gSASRec is suitable for large datasets that contain more than 1 million items.</p>
-    <p><strong>Categories:</strong> Sequential Recommendation, Negative Sampling, Cross-Entropy Loss, Overconfidence, Recommendation Systems, Movies, Diversity of Recommendations, Beyond Accuracy, Scalability, Training Efficiency (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/864/">See reasoning</a></p>
+    <h3>Turning Dross Into Gold Loss: is BERT4Rec really better than SASRec? (2023)</h3>
+    <p><strong>Authors:</strong> Alexey Vasilev, Anton Klenitskiy</p>
+    <p>Recently sequential recommendations and next-item prediction task has become increasingly popular in the field of recommender systems. Currently, two state-of-the-art baselines are Transformer-based models SASRec and BERT4Rec. Over the past few years, there have been quite a few publications comparing these two algorithms and proposing new state-of-the-art models. In most of the publications, BERT4Rec achieves better performance than SASRec. But BERT4Rec uses cross-entropy over softmax for all items, while SASRec uses negative sampling and calculates binary cross-entropy loss for one positive and one negative item. In our work, we show that if both models are trained with the same loss, which is used by BERT4Rec, then SASRec will significantly outperform BERT4Rec both in terms of quality and training speed. In addition, we show that SASRec could be effectively trained with negative sampling and still outperform BERT4Rec, but the number of negative examples should be much larger than one.</p>
+    <p><strong>Categories:</strong> Sequential Recommendations, Transformer-Based Models, BERT4Rec, SASRec, Algorithm Comparison, Loss Functions, Evaluation Metrics, State-of-the-Art Models, Training Efficiency, Model Performance, Recommender Systems, Negative Sampling, Cross-Entropy Loss, Binary Cross-Entropy Loss (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/966/">See reasoning</a></p>
   </div>
 
     </div>

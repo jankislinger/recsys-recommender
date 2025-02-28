@@ -34,6 +34,11 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Algorithm Optimization</a>
+        
+      
+        
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
         
@@ -45,7 +50,17 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+             href="/recsys-recommender/category/evaluation-metrics/">Evaluation Metrics</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/explainability/">Explainability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
         
       
         
@@ -60,27 +75,12 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/evaluation-metrics/">Evaluation Metrics</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
         
       
     </div>
@@ -91,11 +91,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Exploring Coresets for Efficient Training and Consistent Evaluation of Recommender Systems (2024)</h3>
-    <p><strong>Authors:</strong> Zheng Ju, Neil Hurley, Honghui Du, Elias Tragos, Aonghus Lawlor</p>
-    <p>Recommender systems have achieved remarkable success in various web applications, such as e-commerce, online advertising, and social media, harnessing the power of big data. To attain optimal model performance, recommender systems are typically trained on very large datasets, with substantial numbers of users and items. However, large datasets often present challenges in terms of processing time and computational resources. Coreset selection offers a method for obtaining a reduced yet representative subset from vast datasets, thereby enhancing the efficiency of training machine learning algorithms. Nevertheless, little research has been conducted to explore the practical implications of different coreset selection approaches on the performance of recommender systems algorithms. In this paper, we systematically investigate the impact of various coreset selection techniques. We evaluate the performance of the resulting coresets using inductive recommendation models which allow for consistent evaluations to be performed. The experimental results demonstrate that coreset methods are a powerful and useful approach for obtaining reduced datasets which preserve the properties of the large original dataset and have competitive performance compared to the time required to train with the full dataset.</p>
-    <p><strong>Categories:</strong> Coreset Selection, Recommender Systems, Algorithm Optimization, Evaluation Metrics, Data Reduction Techniques, Machine Learning, Big Data, Inductive Models, Web Applications, Computational Resources, Training Efficiency (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1191/">See reasoning</a></p>
+    <h3>Efficient Inference of Sub-Item Id-based Sequential Recommendation Models with Millions of Items (2024)</h3>
+    <p><strong>Authors:</strong> Aleksandr Petrov, Craig Macdonald, Nicola Tonellotto</p>
+    <p>Transformer-based recommender systems, such as BERT4Rec or SASRec, achieve state-of-the-art results in sequential recommendation. However, it is challenging to use these models in production environments with catalogues of millions of items: scaling Transformers beyond a few thousand items is problematic for several reasons, including high model memory consumption and slow inference. In this respect, RecJPQ is a state-of-the-art method of reducing the models’ memory consumption; RecJPQ compresses item catalogues by decomposing item IDs into a small number of shared sub-item IDs. Despite reporting the reduction of memory consumption by a factor of up to 50x, the original RecJPQ paper did not report inference efficiency improvements over the baseline Transformer-based models. On analysis of RecJPQ’s scoring algorithm, we find that its efficiency is limited by its use of item score accumulators, which prevent parallelisation. On the other hand, LightRec (a non-sequential method that uses a similar idea of sub-ids) reported large inference efficiency improvements using an algorithm we call PQTopK. We show that it is also possible to improve RecJPQ-based models’ inference efficiency using the PQTopK algorithm. In particular, we speed up RecJPQ-enhanced SASRec by a factor of 4.5x compared to the original SASRec’s inference method and by the factor of 1.56x compared to the method implemented in RecJPQ code on a large-scale Gowalla dataset with more than a million items. Further, using simulated data, we show that PQTopK remains efficient with catalogues of up to tens of millions of items, removing one of the last obstacles to using Transformer-based models in production environments with large catalogues.</p>
+    <p><strong>Categories:</strong> Sequential Recommendation, Transformer-based Models, Sub-item ID techniques, Scalability, Inference Efficiency, Memory Consumption Optimization, Algorithm Optimization, Production Environments, Large-scale Data Handling (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1085/">See reasoning</a></p>
   </div>
 
     </div>
@@ -115,23 +115,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Efficient Inference of Sub-Item Id-based Sequential Recommendation Models with Millions of Items (2024)</h3>
-    <p><strong>Authors:</strong> Aleksandr Petrov, Craig Macdonald, Nicola Tonellotto</p>
-    <p>Transformer-based recommender systems, such as BERT4Rec or SASRec, achieve state-of-the-art results in sequential recommendation. However, it is challenging to use these models in production environments with catalogues of millions of items: scaling Transformers beyond a few thousand items is problematic for several reasons, including high model memory consumption and slow inference. In this respect, RecJPQ is a state-of-the-art method of reducing the models’ memory consumption; RecJPQ compresses item catalogues by decomposing item IDs into a small number of shared sub-item IDs. Despite reporting the reduction of memory consumption by a factor of up to 50x, the original RecJPQ paper did not report inference efficiency improvements over the baseline Transformer-based models. On analysis of RecJPQ’s scoring algorithm, we find that its efficiency is limited by its use of item score accumulators, which prevent parallelisation. On the other hand, LightRec (a non-sequential method that uses a similar idea of sub-ids) reported large inference efficiency improvements using an algorithm we call PQTopK. We show that it is also possible to improve RecJPQ-based models’ inference efficiency using the PQTopK algorithm. In particular, we speed up RecJPQ-enhanced SASRec by a factor of 4.5x compared to the original SASRec’s inference method and by the factor of 1.56x compared to the method implemented in RecJPQ code on a large-scale Gowalla dataset with more than a million items. Further, using simulated data, we show that PQTopK remains efficient with catalogues of up to tens of millions of items, removing one of the last obstacles to using Transformer-based models in production environments with large catalogues.</p>
-    <p><strong>Categories:</strong> Sequential Recommendation, Transformer-based Models, Sub-item ID techniques, Scalability, Inference Efficiency, Memory Consumption Optimization, Algorithm Optimization, Production Environments, Large-scale Data Handling (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1085/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Top-N Recommendation with Missing Implicit Feedback (2015)</h3>
-    <p><strong>Authors:</strong> Gert Lanckriet, Daryl Lim, Julian McAuley</p>
-    <p>In implicit feedback datasets, non-interaction of a user with an item does not necessarily indicate that an item is irrelevant for the user. Thus, evaluation measures computed on the observed feedback may not accurately reflect performance on the complete data. In this paper, we discuss a missing data model for implicit feedback and propose a novel evaluation measure oriented towards Top-N recommendation. Our evaluation measure admits unbiased estimation under our missing data model, unlike the popular Normalized Discounted Cumulative Gain (NDCG) measure. We also derive an efficient algorithm to optimize the measure on the training data. We run several experiments which demonstrate the utility of our proposed measure.</p>
-    <p><strong>Categories:</strong> Top-N Recommendation, Implicit Feedback, Evaluation Metrics, Algorithm Optimization, Missing Data, Machine Learning, Model Evaluation, Recommendation Systems, Diversity of Recommendations, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/138/">See reasoning</a></p>
+    <h3>Exploring Coresets for Efficient Training and Consistent Evaluation of Recommender Systems (2024)</h3>
+    <p><strong>Authors:</strong> Zheng Ju, Neil Hurley, Honghui Du, Elias Tragos, Aonghus Lawlor</p>
+    <p>Recommender systems have achieved remarkable success in various web applications, such as e-commerce, online advertising, and social media, harnessing the power of big data. To attain optimal model performance, recommender systems are typically trained on very large datasets, with substantial numbers of users and items. However, large datasets often present challenges in terms of processing time and computational resources. Coreset selection offers a method for obtaining a reduced yet representative subset from vast datasets, thereby enhancing the efficiency of training machine learning algorithms. Nevertheless, little research has been conducted to explore the practical implications of different coreset selection approaches on the performance of recommender systems algorithms. In this paper, we systematically investigate the impact of various coreset selection techniques. We evaluate the performance of the resulting coresets using inductive recommendation models which allow for consistent evaluations to be performed. The experimental results demonstrate that coreset methods are a powerful and useful approach for obtaining reduced datasets which preserve the properties of the large original dataset and have competitive performance compared to the time required to train with the full dataset.</p>
+    <p><strong>Categories:</strong> Coreset Selection, Recommender Systems, Algorithm Optimization, Evaluation Metrics, Data Reduction Techniques, Machine Learning, Big Data, Inductive Models, Web Applications, Computational Resources, Training Efficiency (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1191/">See reasoning</a></p>
   </div>
 
     </div>
@@ -144,6 +132,18 @@
     <p>We investigate how metrics that can be measured offine can be used to predict the online performance of recommender systems, thus avoiding costly A-B testing. In addition to accuracy metrics, we combine diversity, coverage, and serendipity metrics to create a new performance model. Using the model, we quantify the trade-off between different metrics and propose to use it to tune the parameters of recommender algorithms without the need for online testing. Another application for the model is a self-adjusting algorithm blend that optimizes a recommender’s parameters over time. We evaluate our findings on data and experiments from news websites.</p>
     <p><strong>Categories:</strong> News, Recommender Systems, Evaluation Metrics, Diversity of Recommendations, Coverage, Serendipity, Richer Evaluation Metrics, Algorithm Optimization, Performance Prediction, Real World Applications, A/B Test (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/105/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Top-N Recommendation with Missing Implicit Feedback (2015)</h3>
+    <p><strong>Authors:</strong> Gert Lanckriet, Daryl Lim, Julian McAuley</p>
+    <p>In implicit feedback datasets, non-interaction of a user with an item does not necessarily indicate that an item is irrelevant for the user. Thus, evaluation measures computed on the observed feedback may not accurately reflect performance on the complete data. In this paper, we discuss a missing data model for implicit feedback and propose a novel evaluation measure oriented towards Top-N recommendation. Our evaluation measure admits unbiased estimation under our missing data model, unlike the popular Normalized Discounted Cumulative Gain (NDCG) measure. We also derive an efficient algorithm to optimize the measure on the training data. We run several experiments which demonstrate the utility of our proposed measure.</p>
+    <p><strong>Categories:</strong> Top-N Recommendation, Implicit Feedback, Evaluation Metrics, Algorithm Optimization, Missing Data, Machine Learning, Model Evaluation, Recommendation Systems, Diversity of Recommendations, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/138/">See reasoning</a></p>
   </div>
 
     </div>

@@ -34,13 +34,13 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Beyond Accuracy</a>
         
       
         
-          <a class="ui primary button" style="margin: 5px;"
-             href="/recsys-recommender/">Beyond Accuracy</a>
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/cold-start/">Cold Start</a>
         
       
         
@@ -55,38 +55,50 @@
       
         
           <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/evaluation-metrics/">Evaluation Metrics</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/healthcare/">Healthcare</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/performance-evaluation/">Performance Evaluation</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/user-satisfaction/">User Satisfaction</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
         
       
     </div>
   </div>
 
   
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Repeated Padding for Sequential Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Jianzhe Zhao, Linying Jiang, Yuting Liu, Yizhou Dang, Xingwei Wang, Guibing Guo, Enneng Yang</p>
+    <p>Sequential recommendation aims to provide users with personalized suggestions based on their historical interactions. When training sequential models, padding is a widely adopted technique for two main reasons: 1) The vast majority of models can only handle fixed-length sequences; 2) Batch-based training needs to ensure that the sequences in each batch have the same length. The special value 0 is usually used as the padding content, which does not contain the actual information and is ignored in the model calculations. This common-sense padding strategy leads us to a problem that has never been explored in the recommendation field: Can we utilize this idle input space by padding other content to improve model performance and training efficiency further? In this paper, we propose a simple yet effective padding method called Repeated Padding (RepPad). Specifically, we use the original interaction sequences as the padding content and fill it to the padding positions during model training. This operation can be performed a finite number of times or repeated until the input sequences’ length reaches the maximum limit. Our RepPad can be considered as a sequence-level data augmentation strategy. Unlike most existing works, our method contains no trainable parameters or hyperparameters and is a plug-and-play data augmentation operation. Extensive experiments on various categories of sequential models and five real-world datasets demonstrate the effectiveness and efficiency of our approach. The average recommendation performance improvement is up to 60.3% on GRU4Rec and 24.3% on SASRec. We also provide in-depth analysis and explanation of what makes RepPad effective from multiple perspectives. The source code will be released to ensure the complete reproducibility of our experiments.</p>
+    <p><strong>Categories:</strong> Sequential Models, Recommendation Systems, Data Augmentation, Sequence Padding, Model Performance, Training Efficiency, Real-World Datasets, Reproducibility, Deep Learning, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1061/">See reasoning</a></p>
+  </div>
+
+    </div>
   
     <div class="ui segment">
       
@@ -96,42 +108,6 @@
     <p>Recommendation systems play a pivotal role on digital platforms by curating content, products and services for users. These systems are widespread, and through customized recommendations, promise to match users with options they will like. To that end,  data on engagement is collected and used, with, e.g., measurements of clicks, but also  purchases or consumption times.   Most recommendation systems are ranking-based, where they rank and recommend items based on their predicted engagement.  However, the engagement signals  are often only a crude proxy for user utility, as data on the latter is rarely collected or available. This paper explores the following critical research question: By optimizing for measurable proxies, are recommendation systems at risk of significantly under-delivering on user utility? If that is indeed the case, how can one improve utility which is seldom measured? To study these questions, we introduce a model of repeated user consumption in which, at each interaction, users select between an outside option and the best option from a recommendation set. Our model accounts for user heterogeneity, with the majority preferring “popular” content, and a minority favoring “niche” content. The system initially lacks knowledge of individual user preferences but can learn these preferences through observations of users’ choices over time. Our theoretical and numerical analysis demonstrate that optimizing for engagement signals can lead to significant utility losses. Instead, we propose a utility-aware policy that initially recommends a mix of popular and niche content. We show that such a policy substantially improves  utility despite not measuring it. In fact, in the limit of a forward-looking platform with discount factor $\delta \to 1$, our utility-aware policy achieves the best of both worlds: near-optimal user utility and near-optimal engagement simultaneously. Our study elucidates  an important feature of recommendation systems; given the ability to suggest multiple items, one can perform significant exploration without incurring significant reductions in short term engagement. By recommending high-risk, high-reward items alongside popular items, systems can enhance discovery of high utility items without significantly affecting engagement.</p>
     <p><strong>Categories:</strong> Optimization, Evaluation Metrics, Recommendation Systems, User Behavior, Engagement, Machine Learning, Reinforcement Learning, Bandit Algorithms, Ranking Algorithms, Digital Platforms, Personalization, Cold Start, Exploration vs Exploitation, Long-term User Satisfaction, Scalability, Theoretical Modeling, Numerical Analysis, User Heterogeneity, Ethical Considerations in AI, Beyond Accuracy, High-Risk High-Reward Recommendations (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/1062/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>beeFormer: Bridging the Gap Between Semantic and Interaction Similarity in Recommender Systems (2024)</h3>
-    <p><strong>Authors:</strong> Vojtěch Vančura, Milan Straka, Pavel Kordík</p>
-    <p>Recommender systems often use text-side information to improve their predictions, especially in cold-start or zero-shot recommendation scenarios, where traditional collaborative filtering approaches cannot be used. Many approaches to text-mining side information for recommender systems have been proposed over recent years, with sentence Transformers being the most prominent one. However, these models are trained to predict semantic similarity without utilizing interaction data with hidden patterns specific to recommender systems. In this paper, we propose beeFormer, a framework for training sentence Transformer models with interaction data. We demonstrate that our models trained with beeFormer can transfer knowledge between datasets while outperforming not only semantic similarity sentence Transformers but also traditional collaborative filtering methods. We also show that training on multiple datasets from different domains accumulates knowledge in a single model, unlocking the possibility of training universal, domain-agnostic sentence Transformer models to mine text representations for recommender systems. We release the source code, trained models, and additional details allowing replication of our experiments at https://github.com/recombee/beeformer.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Text Mining/Side Information, Sentence Transformers, Interaction Data, Cold Start, Transfer Learning, Universal Models, Diversity of Recommendations, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1188/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>AIE: Auction Information Enhanced Framework for CTR Prediction in Online Advertising (2024)</h3>
-    <p><strong>Authors:</strong> Chenxu Zhu, Muyu Zhang, Yang Yang, Huifeng Guo, Menghui Zhu, Bo Chen, Ruiming Tang, Zhenhua Dong, Xinyi Dai</p>
-    <p>Click-Through Rate (CTR) prediction is a fundamental technique for online advertising recommendation and the complex online competitive auction process also brings many difficulties to CTR optimization. Recent studies have shown that introducing posterior auction information contributes to the performance of CTR prediction. However, existing work doesn’t fully capitalize on the benefits of auction information and overlooks the data bias brought by the auction, leading to biased and suboptimal results. To address these limitations, we propose Auction Information Enhanced Framework (AIE) for CTR prediction in online advertising, which delves into the problem of insufficient utilization of auction signals and first reveals the auction bias. Specifically, AIE introduces two pluggable modules, namely Adaptive Market-price AuxiliaryModule (AM2) and Bid Calibration Module (BCM), which work collaboratively to excavate the posterior auction signals better and enhance the performance of CTR prediction. Furthermore, the two proposed modules are lightweight, model-agnostic and friendly to inference latency. Extensive experiments are conducted on a public dataset and an industrial dataset to demonstrate the effectiveness and compatibility of AIE. Besides, a one-month online A/B test in a large-scale advertising platform shows that AIE improves the base model by 5.76% and 2.44% in terms of eCPM and CTR, respectively.</p>
-    <p><strong>Categories:</strong> Algorithm Design, Online Advertising, Recommendation Systems, Auction Mechanisms, CTR Prediction, Model Performance, Bias Mitigation, A/B Test, Evaluation Metrics, Scalability, Real-World Applications, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1021/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Ranking Across Different Content Types: The Robust Beauty of Multinomial Blending (2024)</h3>
-    <p><strong>Authors:</strong> Jan Malte Lichtenberg, Giuseppe Di Benedetto, Matteo Ruffini</p>
-    <p>An increasing number of media streaming services have expanded their offerings to include entities of multiple content types. For instance, audio streaming services that started by offering music only, now also offer podcasts, merchandise items, and (music) videos. Ranking items across different content types into a single slate poses a significant challenge for traditional learning-to-rank (LTR) algorithms due to differing feature sets and user engagement patterns for different content types. We explore a simple method, called multinomial blending (MB), which can be used in conjunction with most existing LTR algorithms. We compare MB to a range of baselines not only in terms of ranking quality but also from other industry-relevant perspectives such as interpretability, ease-of-use, and stability in dynamic online-learning environments.</p>
-    <p><strong>Categories:</strong> Learning-to-Rank, Multinomial Blending, Media Streaming Services, Content Types, Ranking Across Different Content Types, Cross-Content Type Recommendations, Real-World Applications, Beyond Accuracy, Scalability, Online Learning, Heterogeneous Data, User Engagement Patterns, Feature Engineering, Experimental Evaluation (<i>deepseek-r1:70b</i>)</p>
-    <p><a href="/recsys-recommender/response/1180/">See reasoning</a></p>
   </div>
 
     </div>
@@ -151,78 +127,6 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>MMGCL: Meta Knowledge-Enhanced Multi-view Graph Contrastive Learning for Recommendations (2024)</h3>
-    <p><strong>Authors:</strong> Wentao Zhang, Peng Jiang, Gaode Chen, Qi Zhang, Jingjian Lin, Changyu Li, Yuezihan Jiang, Peiyi Li, Fei Sun</p>
-    <p>Multi-view Graph Learning is popular in recommendations due to its ability to capture relationships and connections across multiple views. Existing multi-view graph learning methods generally involve constructing graphs of views and performing information aggregation on view representations. Despite their effectiveness, they face two data limitations: Multi-focal Multi-source data noise and multi-source Data Sparsity. The former arises from the combination of noise from individual views and conflicting edges between views when information from all views is combined. The latter occurs because multi-view learning exacerbate the negative influence of data sparsity because these methods require more model parameters to learn more view information. Motivated by these issues, we propose MMGCL, a meta knowledge-enhanced multi-view graph contrastive learning framework for recommendations. To tackle the data noise issue, MMGCL extract meta knowledge to preserve important information from all views to form a meta view representation. It then rectifies every view in multi-learning frameworks, thus simultaneously removing the view-private noisy edges and conflicting edges across different views. To address the data sparsity issue, MMGCL performs meta knowledge transfer contrastive learning optimization on all views to reduce the searching space for model parameters and add more supervised signal. Besides, we have deployed MMGCL in a real industrial recommender system in China, and we further evaluate it on four benchmark datasets and a practical industry online application. Extensive experiments on these datasets demonstrate the state-of-the-art recommendation performance of MMGCL.</p>
-    <p><strong>Categories:</strong> Recommendation Algorithms, Multi-View Graph Learning, Meta Knowledge Enhancement, Data Noise, Data Sparsity, Recommendations Domain, Challenges in Recommendations, Multi-View Learning, Real-World Applications, Industrial Applications, Unsupervised Learning, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1050/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>MODEM: Decoupling User Behavior for Shared-Account Video Recommendations on Large Screen Devices (2024)</h3>
-    <p><strong>Authors:</strong> Jiang Li, Lantao Hu, Zhen Zhang, Xiang Feng, Yongqi Liu, Muyang Li</p>
-    <p>In scenarios involving sequence recommendations on large screen devices, such as tablets or TVs, the equipment is often shared among multiple users. This sharing leads to a mixture of behaviors from different users, posing significant challenges to recommendation systems, especially when clear supervisory signals for distinguishing among users are absent. Current solutions tend to either operate in an unsupervised manner or rely on constructed supervisory signals that are not entirely reliable. Moreover, the peculiarities of short video recommendations in this context have not been thoroughly explored in existing research. In response to these challenges, this paper introduces Multi-User Contrastive Decoupling Model (MODEM), a novel short video recommendation model specifically designed for large screen devices. MODEM leverages an attention mechanism, grounded in session segmentation, to disentangle the intertwined user behavior histories. It also discriminates between the impacts of long and short viewing behaviors on short video recommendations by cross-analyzing sequences of both. Furthermore, we have developed a contrastive learning method to oversee the decoupling of user behaviors effectively. Our evaluations demonstrate noticeable improvements through both offline assessments within public datasets and online A/B testing within Kuaishou’s short video recommendation environment on large screen devices. Specifically, our online A/B tests resulted in a 0.55% increase in watch time. These results underscore MODEM’s efficacy in enhancing recommendation quality in shared account contexts.</p>
-    <p><strong>Categories:</strong> Video Recommendations, Large Screen Devices, Shared Accounts, User Behavior Analysis, Attention Mechanism, Contrastive Learning, Session Segmentation, A/B Testing, Real-World Application, Beyond Accuracy, Cold Start (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1098/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>A New Perspective in Health Recommendations: Integration of Human Pose Estimation (2024)</h3>
-    <p><strong>Authors:</strong> Gaetano Dibenedetto</p>
-    <p>In recent years, there has been a growing interest in multimodal and multi-source data due to their ability to introduce heterogeneous information. Studies have demonstrated that combining such information enhances the performance of Recommender Systems across various scenarios. In the context of Health Recommendation Systems (HRS), different types of data are utilized, primarily focusing on patient-based information, but data from Pose Estimations (PE) are not incorporated. The objective of my Ph.D. is to investigate methods to design and develop HRS that treat the PE as one of the input sources, taking into account aspects such as privacy concerns and balancing the trade-off between system quality and responsiveness. By leveraging the combination of diverse information sources, I intend to create a new model in the area of HRS capable of providing more precise and explainable recommendations.</p>
-    <p><strong>Categories:</strong> Healthcare, Recommender Systems, Human Pose Estimation, Multimodal Data, Explainable Recommendations, Precision, Privacy Concerns, Beyond Accuracy, Multi-Source Fusion, Cross-Modality, Machine Learning (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1126/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Scene-wise Adaptive Network for Dynamic Cold-start Scenes Optimization in CTR Prediction (2024)</h3>
-    <p><strong>Authors:</strong> Chao Tang, Wenhao Li, Jie Zhou, Shixiong Zhao, Chuan Luo, Kun Zhang</p>
-    <p>In the realm of modern mobile E-commerce, providing users with nearby commercial service recommendations through location-based online services has become increasingly vital. While machine learning approaches have shown promise in multi-scene recommendation, existing methodologies often struggle to address cold-start problems in unprecedented scenes: the increasing diversity of commercial choices, along with the short online lifespan of scenes, give rise to the complexity of effective recommendations in online and dynamic scenes. In this work, we propose Scene-wise Adaptive Network (SwAN), a novel approach that emphasizes high-performance cold-start online recommendations for new scenes. Our approach introduces several crucial capabilities, including scene similarity learning, user-specific scene transition cognition, scene-specific information construction for the new scene, and enhancing the diverged logical information between scenes. We demonstrate SwAN’s potential to optimize dynamic multi-scene recommendation problems by effectively online handling cold-start recommendations for any newly arrived scenes. More encouragingly, SwAN has been successfully deployed in Company M’s online catering recommendation service, which serves millions of customers per day, and SwAN has achieved a 5.64% CTR index improvement relative to the baselines and a 5.19% increase in daily order volume proportion.</p>
-    <p><strong>Categories:</strong> Scene-wise Adaptive Network (SwAN), Neural Networks, Cold Start, Multi-scene Recommendations, Dynamic Scenarios, Recommendation Systems, Mobile E-commerce, Catering Services, Location-based Services, Evaluation Metrics, Beyond Accuracy, Real-world Applications (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1063/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>A Novel Evaluation Perspective on GNNs-based Recommender Systems through the Topology of the User-Item Graph (2024)</h3>
-    <p><strong>Authors:</strong> Alberto Carlo Maria Mancino, Vito Walter Anelli, Claudio Pomo, Tommaso Di Noia, Eugenio Di Sciascio, Daniele Malitesta</p>
-    <p>Recently, graph neural networks (GNNs)-based recommender systems have encountered great success in recommendation. As the number of GNNs approaches rises, some works have started questioning the theoretical and empirical reasons behind their superior performance. Nevertheless, this investigation still disregards that GNNs treat the recommendation data as a topological graph structure. Building on this assumption, in this work, we provide a novel evaluation perspective on GNNs-based recommendation, which investigates the impact of the graph topology on the recommendation performance. To this end, we select some (topological) properties of the recommendation data and three GNNs-based recommender systems (i.e., LightGCN, DGCF, and SVD-GCN). Then, starting from three popular recommendation datasets (i.e., Yelp2018, Gowalla, and Amazon-Book) we sample them to obtain 1,800 size-reduced datasets that still resemble the original ones but can encompass a wider range of topological structures. We use this procedure to build a large pool of samples for which data characteristics and recommendation performance of the selected GNNs models are measured. Through an explanatory framework, we find strong correspondences between graph topology and GNNs performance, offering a novel evaluation perspective on these models.</p>
-    <p><strong>Categories:</strong> Graph Neural Networks, GNN-based Recommender Systems, Recommendation Systems, Real-World Applications, Evaluation Framework, Graph Topology Analysis, Data Characteristics, Recommendation Performance, Scalability, Robustness, Model Interpretability, Beyond Accuracy, Evaluation Metrics, Novel Evaluation Perspective (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1116/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Recommending Healthy and Sustainable Meals exploiting Food Retrieval and Large Language Models (2024)</h3>
-    <p><strong>Authors:</strong> Michele Ciro Di Carlo, Giovanni Semeraro, Giovanni Tempesta, Cataldo Musto, Alessandro Petruzzelli</p>
-    <p>Many people are constantly seeking to make healthy food choices, but increasingly, we are also considering the impact our dietary habits have on the environment. This creates a complex challenge: how can we ensure that we are eating nutritious foods that nourish our bodies while also minimizing the environmental footprint of our meals?To address this issue, this paper proposes a novel framework called Healthy And Sustainable eating (HeASe). Given the rising global concerns about nutrition and environmental sustainability, individuals need effective tools to help them navigate these issues. HeASe leverages the latest advancements in artificial intelligence to empower users with knowledge and self-awareness.The framework works in two steps. First, it uses a food retrieval strategy that takes into account macro-nutrient information to identify alternative meals for a chosen recipe. This ensures that the substitutions maintain a similar nutritional profile. Next, HeASe employs large language models to re-rank these potential replacements while considering factors beyond just nutrition, such as the recipe’s environmental impact and other user-defined preferences. The experimental phase of this research demonstrates the capabilities of LLM in identifying the more sustainable and healthy recipe within a set of candidate options. This highlights the potential of these models to guide users towards food choices that are both nutritious and environmentally responsible.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Healthy Eating, Sustainability, Food Retrieval, Large Language Models, Beyond Accuracy, Diversity of Recommendations, Real-world Applications (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1115/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
     <h3>AMBAR: A dataset for Assessing Multiple Beyond-Accuracy Recommenders (2024)</h3>
     <p><strong>Authors:</strong> David Contreras, Ludovico Boratto, Elizabeth Gómez, Maria Salamo</p>
     <p>Nowadays a recommendation model should exploit additional information from both the user and item perspectives, in addition to utilizing user-item interaction data. Datasets are central in offering the required information for evaluating new models or algorithms. Although there are many datasets in the literature with user and item properties, there are several issues not covered yet: (i) it is difficult to perform cross-analysis of properties at user and item level as they are not related in most cases; and (ii) on top of that, in many occasions datasets do not allow analysis at different granularity levels. In this paper, we propose a new dataset in the music domain, named AMBAR, that includes the above-mentioned issues. Besides detailing in depth the structure of the new dataset, we also show its application in contexts (i.e., multi-objective, fair, and calibrated recommendations) where both the effectiveness and the beyond-accuracy perspectives of recommendation are assessed.</p>
@@ -235,11 +139,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Towards Open-World Recommendation with Knowledge Augmentation from Large Language Models (2024)</h3>
-    <p><strong>Authors:</strong> Weiwen Liu, Bo Chen, Yong Yu, Hong Zhu, Yunjia Xi, Weinan Zhang, Jianghao Lin, Xiaoling Cai, Jieming Zhu, Ruiming Tang</p>
-    <p>Recommender system plays a vital role in various online services. However, its insulated nature of training and deploying separately within a specific closed domain limits its access to open-world knowledge. Recently, the emergence of large language models (LLMs) has shown promise in bridging this gap by encoding extensive world knowledge and demonstrating reasoning capabilities. Nevertheless, previous attempts to directly use LLMs as recommenders cannot meet the inference latency demand of industrial recommender systems. In this work, we propose an Open-World Knowledge Augmented Recommendation Framework with Large Language Models, dubbed KAR, to acquire two types of external knowledge from LLMs — the reasoning knowledge on user preferences and the factual knowledge on items. We introduce factorization prompting to elicit accurate reasoning on user preferences. The generated reasoning and factual knowledge are effectively transformed and condensed into augmented vectors by a hybrid-expert adaptor in order to be compatible with the recommendation task. The obtained vectors can then be directly used to enhance the performance of any recommendation model. We also ensure efficient inference by preprocessing and prestoring the knowledge from the LLM. Extensive experiments show that KAR significantly outperforms the state-of-the-art baselines and is compatible with a wide range of recommendation algorithms. We deploy KAR to Huawei’s news and music recommendation platforms and gain a 7% and 1.7% improvement in the online A/B test, respectively.</p>
-    <p><strong>Categories:</strong> Large Language Models (LLMs), Knowledge Augmentation, Recommender Systems, Open-World Recommendation, Knowledge Graphs, User Preference Modeling, Factorization Prompting, Feature Extraction, Representation Learning, Hybrid Models, Efficiency Optimization, Scalability, State-of-the-Art Methods, Real-World Applications, A/B Testing, News, Music, Beyond Accuracy, Compatibility (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1071/">See reasoning</a></p>
+    <h3>beeFormer: Bridging the Gap Between Semantic and Interaction Similarity in Recommender Systems (2024)</h3>
+    <p><strong>Authors:</strong> Vojtěch Vančura, Milan Straka, Pavel Kordík</p>
+    <p>Recommender systems often use text-side information to improve their predictions, especially in cold-start or zero-shot recommendation scenarios, where traditional collaborative filtering approaches cannot be used. Many approaches to text-mining side information for recommender systems have been proposed over recent years, with sentence Transformers being the most prominent one. However, these models are trained to predict semantic similarity without utilizing interaction data with hidden patterns specific to recommender systems. In this paper, we propose beeFormer, a framework for training sentence Transformer models with interaction data. We demonstrate that our models trained with beeFormer can transfer knowledge between datasets while outperforming not only semantic similarity sentence Transformers but also traditional collaborative filtering methods. We also show that training on multiple datasets from different domains accumulates knowledge in a single model, unlocking the possibility of training universal, domain-agnostic sentence Transformer models to mine text representations for recommender systems. We release the source code, trained models, and additional details allowing replication of our experiments at https://github.com/recombee/beeformer.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Text Mining/Side Information, Sentence Transformers, Interaction Data, Cold Start, Transfer Learning, Universal Models, Diversity of Recommendations, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1188/">See reasoning</a></p>
   </div>
 
     </div>
@@ -259,6 +163,102 @@
     <div class="ui segment">
       
   <div class="item">
+    <h3>Scene-wise Adaptive Network for Dynamic Cold-start Scenes Optimization in CTR Prediction (2024)</h3>
+    <p><strong>Authors:</strong> Chao Tang, Wenhao Li, Jie Zhou, Shixiong Zhao, Chuan Luo, Kun Zhang</p>
+    <p>In the realm of modern mobile E-commerce, providing users with nearby commercial service recommendations through location-based online services has become increasingly vital. While machine learning approaches have shown promise in multi-scene recommendation, existing methodologies often struggle to address cold-start problems in unprecedented scenes: the increasing diversity of commercial choices, along with the short online lifespan of scenes, give rise to the complexity of effective recommendations in online and dynamic scenes. In this work, we propose Scene-wise Adaptive Network (SwAN), a novel approach that emphasizes high-performance cold-start online recommendations for new scenes. Our approach introduces several crucial capabilities, including scene similarity learning, user-specific scene transition cognition, scene-specific information construction for the new scene, and enhancing the diverged logical information between scenes. We demonstrate SwAN’s potential to optimize dynamic multi-scene recommendation problems by effectively online handling cold-start recommendations for any newly arrived scenes. More encouragingly, SwAN has been successfully deployed in Company M’s online catering recommendation service, which serves millions of customers per day, and SwAN has achieved a 5.64% CTR index improvement relative to the baselines and a 5.19% increase in daily order volume proportion.</p>
+    <p><strong>Categories:</strong> Scene-wise Adaptive Network (SwAN), Neural Networks, Cold Start, Multi-scene Recommendations, Dynamic Scenarios, Recommendation Systems, Mobile E-commerce, Catering Services, Location-based Services, Evaluation Metrics, Beyond Accuracy, Real-world Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1063/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A New Perspective in Health Recommendations: Integration of Human Pose Estimation (2024)</h3>
+    <p><strong>Authors:</strong> Gaetano Dibenedetto</p>
+    <p>In recent years, there has been a growing interest in multimodal and multi-source data due to their ability to introduce heterogeneous information. Studies have demonstrated that combining such information enhances the performance of Recommender Systems across various scenarios. In the context of Health Recommendation Systems (HRS), different types of data are utilized, primarily focusing on patient-based information, but data from Pose Estimations (PE) are not incorporated. The objective of my Ph.D. is to investigate methods to design and develop HRS that treat the PE as one of the input sources, taking into account aspects such as privacy concerns and balancing the trade-off between system quality and responsiveness. By leveraging the combination of diverse information sources, I intend to create a new model in the area of HRS capable of providing more precise and explainable recommendations.</p>
+    <p><strong>Categories:</strong> Healthcare, Recommender Systems, Human Pose Estimation, Multimodal Data, Explainable Recommendations, Precision, Privacy Concerns, Beyond Accuracy, Multi-Source Fusion, Cross-Modality, Machine Learning (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1126/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Neighborhood-Based Collaborative Filtering for Conversational Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Julian Mcauley, Zhouhang Xie, Nathan Kallus, Dawen Liang, Rahul Jha, Hyunsik Jeon, Zhankui He, Harald Steck, Junda Wu</p>
+    <p>Conversational recommender systems (CRS) should understand users’ expressed interests that are frequently semantically rich and knowledge intensive. Prior works attempt to address this challenge by making use of external knowledge bases or parametric knowledge in large language models (LLMs). In this paper, we study a complementary solution, exploiting item knowledge in the training data. We hypothesise that many inference-time user requests can be answered via reusing popular crowd-written answers associated with similar training queries. Following this intuition, we define a class of neighborhood-based CRS that make recommendations by identifying popular items associated with similar training dialogue contexts. Experiments on Inspired, Redial, and Reddit benchmarks show that despite its simplicity, our method achieves comparable to better performance than state-of-the-art LLM-based methods with over 200 times more parameters. We also show neighborhood and model-based predictions can be combined to achieve further performance improvements over both components.</p>
+    <p><strong>Categories:</strong> Collaborative Filtering, Conversational Recommender Systems, Neighborhood-Based Methods, Similarity-Based Recommendations, Hybrid Recommendations, Performance Evaluation, Recommendation Quality, Crowd-Written Answers, Item Knowledge Utilization, Beyond Accuracy, Efficiency, Recommendation Systems (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1100/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>CAPRI-FAIR: Integration of Multi-sided Fairness in Contextual POI Recommendation Framework (2024)</h3>
+    <p><strong>Authors:</strong> Yonchanok Khaokaew, Jeffrey Chan, Flora D. Salim, Francis Dela Cruz</p>
+    <p>Point-of-interest (POI) recommendation, a form of context-aware recommendation, takes into account spatio-temporal constraints and contexts like distance, peak business hours, and previous user check-ins. Given the ability of these kinds of systems to influence not just the consumer’s travel experience, but also the POI’s business, it is important to consider fairness from multiple perspectives. Unfortunately, these systems tend to provide less accurate recommendations to inactive users, and less exposure to unpopular POIs. The goal of this paper is to develop a post-filter methodology that incorporates provider and consumer fairness factors into pre-existing recommendation models, to satisfy fairness metrics like item exposure, and performance metrics like precision and distance, making the system more sustainable to both consumers and providers. Experiments have shown that using a linear scoring model for provider fairness in re-scoring recommended items yields the best tradeoff between performance and long-tail exposure, in some cases without a significant decrease in precision. When attempting to address consumer fairness by recommending more popular POIs to inactive users, the result was an increase in precision for only some recommendation models and datasets. Finally, when considering the tradeoff between both parameters, the combinations that reached the Pareto front of consumer and provider fairness, unfortunately, achieved the lowest precision values. We find that the nature of this tradeoff depends heavily on the model and the dataset.</p>
+    <p><strong>Categories:</strong> Fairness in Recommendations, Context-Aware Recommendations, Point of Interest (POI) Recommendations, Post-Filter Methodology, Provider Fairness, Consumer Fairness, Spatio-Temporal Recommendations, Long-Tail Recommendations, Diversity of Recommendations, Beyond Accuracy (<i>deepseek-r1:70b</i>)</p>
+    <p><a href="/recsys-recommender/response/1078/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>MMGCL: Meta Knowledge-Enhanced Multi-view Graph Contrastive Learning for Recommendations (2024)</h3>
+    <p><strong>Authors:</strong> Wentao Zhang, Peng Jiang, Gaode Chen, Qi Zhang, Jingjian Lin, Changyu Li, Yuezihan Jiang, Peiyi Li, Fei Sun</p>
+    <p>Multi-view Graph Learning is popular in recommendations due to its ability to capture relationships and connections across multiple views. Existing multi-view graph learning methods generally involve constructing graphs of views and performing information aggregation on view representations. Despite their effectiveness, they face two data limitations: Multi-focal Multi-source data noise and multi-source Data Sparsity. The former arises from the combination of noise from individual views and conflicting edges between views when information from all views is combined. The latter occurs because multi-view learning exacerbate the negative influence of data sparsity because these methods require more model parameters to learn more view information. Motivated by these issues, we propose MMGCL, a meta knowledge-enhanced multi-view graph contrastive learning framework for recommendations. To tackle the data noise issue, MMGCL extract meta knowledge to preserve important information from all views to form a meta view representation. It then rectifies every view in multi-learning frameworks, thus simultaneously removing the view-private noisy edges and conflicting edges across different views. To address the data sparsity issue, MMGCL performs meta knowledge transfer contrastive learning optimization on all views to reduce the searching space for model parameters and add more supervised signal. Besides, we have deployed MMGCL in a real industrial recommender system in China, and we further evaluate it on four benchmark datasets and a practical industry online application. Extensive experiments on these datasets demonstrate the state-of-the-art recommendation performance of MMGCL.</p>
+    <p><strong>Categories:</strong> Recommendation Algorithms, Multi-View Graph Learning, Meta Knowledge Enhancement, Data Noise, Data Sparsity, Recommendations Domain, Challenges in Recommendations, Multi-View Learning, Real-World Applications, Industrial Applications, Unsupervised Learning, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1050/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Encouraging Exploration in Spotify Search through Query Recommendations (2024)</h3>
+    <p><strong>Authors:</strong> Henrik Lindstrom, Humberto Jesús Corona Pampín, Alva Liu, Enrico Palumbo</p>
+    <p>At Spotify, search has been traditionally seen as a tool for retrieving content, with the search system optimized for when the user has a specific search target in mind. In particular we have relied on an instant search system providing results for each keystroke, which works well for known-item search, when queries are straightforward, and the catalog is small. However, as Spotify’s catalog grows in size and variety, it becomes increasingly difficult for users to define their search intents accurately. Furthermore, as we expand the offering, we need to help users discover more content both when it comes to new content types, e.g. audiobooks, as well as for new content/creators within existing content types. To solve this we have introduced a hybrid Query Recommendation system (QR) that helps the user formulate more complex exploratory search intents, while still serving known-item lookups efficiently. This experience has been rolled out worldwide to all mobile users resulting in an increase in exploratory intent queries of ~9% in online A/B tests.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Search, Exploration vs Exploitation, Query Recommendations, Music/Media, Audiobooks, A/B Test, Beyond Accuracy, Content Discovery, Real World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1160/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Multimodal Representation Learning for high-quality Recommendations in Cold-start and Beyond-Accuracy (2024)</h3>
+    <p><strong>Authors:</strong> Marta Moscati</p>
+    <p>Recommender systems (RS) traditionally leverage the large amount of user–item interaction data. This exposes RS to a lower recommendation quality in cold-start scenarios, as well as to a low recommendation quality in terms of beyond-accuracy evaluation metrics. State-of-the-art (SotA) models for cold-start scenarios rely on the use of side information on the items or the users, therefore relating recommendation to multimodal machine learning (ML). However, the most recent techniques from multimodal ML are often not applied to the domain of recommendation. Additionally, the evaluation of SotA multimodal RS often neglects beyond-accuracy aspects of recommendation. In this work, we outline research into designing novel multimodal RS based on SotA multimodal ML architectures for cold-start recommendation, and their evaluation and benchmark with preexisting multimodal RS in terms of accuracy and beyond-accuracy aspects of recommendation quality.</p>
+    <p><strong>Categories:</strong> Multimodal Representation Learning, Cold Start, Beyond Accuracy, Recommender Systems, Machine Learning, Evaluation Metrics, Scalability, Architecture Design, Benchmarking, Side Information (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1144/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Towards Open-World Recommendation with Knowledge Augmentation from Large Language Models (2024)</h3>
+    <p><strong>Authors:</strong> Weiwen Liu, Bo Chen, Yong Yu, Hong Zhu, Yunjia Xi, Weinan Zhang, Jianghao Lin, Xiaoling Cai, Jieming Zhu, Ruiming Tang</p>
+    <p>Recommender system plays a vital role in various online services. However, its insulated nature of training and deploying separately within a specific closed domain limits its access to open-world knowledge. Recently, the emergence of large language models (LLMs) has shown promise in bridging this gap by encoding extensive world knowledge and demonstrating reasoning capabilities. Nevertheless, previous attempts to directly use LLMs as recommenders cannot meet the inference latency demand of industrial recommender systems. In this work, we propose an Open-World Knowledge Augmented Recommendation Framework with Large Language Models, dubbed KAR, to acquire two types of external knowledge from LLMs — the reasoning knowledge on user preferences and the factual knowledge on items. We introduce factorization prompting to elicit accurate reasoning on user preferences. The generated reasoning and factual knowledge are effectively transformed and condensed into augmented vectors by a hybrid-expert adaptor in order to be compatible with the recommendation task. The obtained vectors can then be directly used to enhance the performance of any recommendation model. We also ensure efficient inference by preprocessing and prestoring the knowledge from the LLM. Extensive experiments show that KAR significantly outperforms the state-of-the-art baselines and is compatible with a wide range of recommendation algorithms. We deploy KAR to Huawei’s news and music recommendation platforms and gain a 7% and 1.7% improvement in the online A/B test, respectively.</p>
+    <p><strong>Categories:</strong> Large Language Models (LLMs), Knowledge Augmentation, Recommender Systems, Open-World Recommendation, Knowledge Graphs, User Preference Modeling, Factorization Prompting, Feature Extraction, Representation Learning, Hybrid Models, Efficiency Optimization, Scalability, State-of-the-Art Methods, Real-World Applications, A/B Testing, News, Music, Beyond Accuracy, Compatibility (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1071/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
     <h3>Optimizing for Participation in Recommender System (2024)</h3>
     <p><strong>Authors:</strong> Sourabh Bansod, Yaping Zhang, Bibang Liu, Mingyan Gao, Yuan Shao, Arnab Bhadury</p>
     <p>The traditional recommender system has been designed to mostly optimize for viewer consumption, and with the rise of short form videos, the boundaries between consumption and participation have blurred. This shift presents an opportunity to optimize recommender systems not only for passive consumption, but also for active participation in content creation. In this paper, we document the development of a recommender system that provides inspiration to existing content uploaders and new future content uploaders to encourage participation. Our contributions are two-fold: 1) Inspiration Framework: We present a novel framework for building a recommender system that goes beyond traditional consumption-focused metrics, specifically addressing the need for creative inspiration to lower barriers for participation. This framework is adaptable in the design of large-scale recommender systems in other domains. 2) Empirical Evaluation: We conduct systematic evaluation via live experiments to prove the values of the proposed system in increasing daily participation and participants.</p>
@@ -271,11 +271,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>It’s (not) all about that CTR: A Multi-Stakeholder Perspective on News Recommender Metrics (2024)</h3>
-    <p><strong>Authors:</strong> Hanne Vandenbroucke, Annelien Smets</p>
-    <p>Recommendation systems are increasingly adopted by news media organizations. Existing literature examines various aspects of news recommendation systems (NRS) from a computational, user-centric, or normative perspective. Yet, scholars have argued to study the complexity of real-world applications surrounding the development and evaluation of NRS. More specifically, understand why different stakeholders within the organization prioritize different values for developing NRS and how those values are operationalized into metrics. Recently, a multi-stakeholder approach to NRS has been adopted, allowing to capture this complexity more comprehensively. However, limited research has focused on the distinct key performance indicators (KPIs) and metrics considered valuable by different stakeholders in evaluating NRS. Based on 11 interviews conducted with different professionals from two commercial media organizations in Flanders and The Netherlands, this paper shows that stakeholders prioritize different KPIs and metrics related to the reach-engagement-conversion-retention funnel. The evaluation of NRS performance is often limited to short-term metrics like CTR, overlooking the multiplicity of stakeholders involved. Our findings reveal how different purposes, KPIs, and metrics are valued from the journalistic, commercial, and tech logic. In doing so, this paper contributes to the multi-stakeholder approach to NRS, advancing our understanding of the real-world complexity of NRS development and evaluation.</p>
-    <p><strong>Categories:</strong> News, Recommendation Systems, Stakeholder Analysis, Evaluation Metrics, Multi-Stakeholder Approach, KPIs, Beyond Accuracy, Real-World Applications, Organizational Development, User Behavior (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1097/">See reasoning</a></p>
+    <h3>Recommending Healthy and Sustainable Meals exploiting Food Retrieval and Large Language Models (2024)</h3>
+    <p><strong>Authors:</strong> Michele Ciro Di Carlo, Giovanni Semeraro, Giovanni Tempesta, Cataldo Musto, Alessandro Petruzzelli</p>
+    <p>Many people are constantly seeking to make healthy food choices, but increasingly, we are also considering the impact our dietary habits have on the environment. This creates a complex challenge: how can we ensure that we are eating nutritious foods that nourish our bodies while also minimizing the environmental footprint of our meals?To address this issue, this paper proposes a novel framework called Healthy And Sustainable eating (HeASe). Given the rising global concerns about nutrition and environmental sustainability, individuals need effective tools to help them navigate these issues. HeASe leverages the latest advancements in artificial intelligence to empower users with knowledge and self-awareness.The framework works in two steps. First, it uses a food retrieval strategy that takes into account macro-nutrient information to identify alternative meals for a chosen recipe. This ensures that the substitutions maintain a similar nutritional profile. Next, HeASe employs large language models to re-rank these potential replacements while considering factors beyond just nutrition, such as the recipe’s environmental impact and other user-defined preferences. The experimental phase of this research demonstrates the capabilities of LLM in identifying the more sustainable and healthy recipe within a set of candidate options. This highlights the potential of these models to guide users towards food choices that are both nutritious and environmentally responsible.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Healthy Eating, Sustainability, Food Retrieval, Large Language Models, Beyond Accuracy, Diversity of Recommendations, Real-world Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1115/">See reasoning</a></p>
   </div>
 
     </div>

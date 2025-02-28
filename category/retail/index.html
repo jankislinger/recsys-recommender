@@ -34,6 +34,11 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Retail</a>
+        
+      
+        
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
         
@@ -45,27 +50,7 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/fairness/">Fairness</a>
         
       
         
@@ -75,12 +60,27 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+             href="/recsys-recommender/category/explainability/">Explainability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/offline-evaluation/">Offline Evaluation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
         
       
     </div>
@@ -115,18 +115,6 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>In-Store Augmented Reality-Enabled Product Comparison and Recommendation (2020)</h3>
-    <p><strong>Authors:</strong> Jürgen Ziegler, Jesús Omar Álvarez Márquez</p>
-    <p>We present an approach combining the AR-based presentation of product attributes in a physical retail store with recommendations for items only available online. The system supports users’ decision-making process by offering functions for comparing product features between items, both physical and online, and by providing recommendations based on selecting in-store products. The physical products may thus serve as anchors for forming the user’s preferences, also offering a richer and more engaging experience when exploring the products hands-on. Both objective product attributes as well as the visual appearance of a physical product are employed for generating recommendations from the online space. In this way, the advantages of online and in-store shopping can be combined, creating novel multi-channel opportunities for businesses. An empirical evaluation showed that the comparison and recommendation functions were appreciated by users, and hinted some possible benefits of a hybrid physical-online shopping support system. Despite the limitations of the study, there is sufficient evidence to consider this a viable approach worth to be further explored.</p>
-    <p><strong>Categories:</strong> Augmented Reality (AR), Recommendation Systems, Retail, Product Comparison, User Experience, In-Store Technology, Multi-Channel, Hybrid Shopping, Business Applications, Innovation in Retail, User Interaction (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/540/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
     <h3>Balancing relevance and discovery to inspire customers in the IKEA App (2020)</h3>
     <p><strong>Authors:</strong> Balazs Toth</p>
     <p>IKEA stores are designed to engage and inspire customers as they make their way from the entrance to check-out. To enable a great experience for every individual, our home-furnishing experts strive to provide the best possible input and advice, catering to individual needs and helping customers realise their vision for life at home.<br>As we move rapidly towards a multi touch point shopping vision with digital at heart, data and machine learning are crucial to 1) enable a consistent journey across, and 2) extend the domain expertise found in stores to our purely digital touch points, like the new IKEA App. A specific example of a digital product where we aim to inspire is our newly launched Inspirational Feed. In the Feed, customers browse their way through ”shoppable” images, in which our products are displayed in purposefully atmospheric settings for a wide range of room types. In this talk, we present our newest algorithmic approach to personalise the Feed based on contextual bandits [2, 3, 4], and highlight some of the technical challenges regarding implementation at scale.<br>The past decade has led to an explosion in research on recommender systems, often with personalised content as a motivating factor [1]. To identify a suitable class of algorithmic strategies for the Feed, note that: To capture the described trade-off between relevance and discovery, as well as matching data for how customers on average shop with IKEA, contextual bandits with batch learning from logged bandit feedback inspired by [4] have shown especially promising results among numerous other exploitation-exploration strategies. This approach induces a fair amount of exploration and minimizes the risk of showing irrelevant images to the customer based on the principle of counterfactual risk minimisation. In our contextual bandit setup, a bandit session is defined as a user session of the Feed taking place in the App (the home of the Feed). An action is displaying an image, while a reward is generated whenever the user clicks on it. The bandit context consists of previous user behaviour collected from the App, combined with product metadata. Our model takes advantage of embeddings of the input features, similar to [1].<br>The implementation of the strategy requires us to handle several interesting edge cases, e.g. we are looking into various techniques for increasing exploration as new images are added to our dynamic content catalogue.</p>
@@ -144,6 +132,18 @@
     <p>E-commerce applications rely heavily on session-based recommendation algorithms to improve the shopping experience of their customers. Recent progress in session-based recommendation algorithms shows great promise. However, translating that promise to real-world outcomes is a challenging task for several reasons, but mostly due to the large number and varying characteristics of the available models. In this paper, we discuss the approach and lessons learned from the process of identifying and deploying a successful session-based recommendation algorithm for a leading e-commerce application in the home-improvement domain. To this end, we initially evaluate fourteen session-based recommendation algorithms in an offline setting using eight different popular evaluation metrics on three datasets. The results indicate that offline evaluation does not provide enough insight to make an informed decision since there is no clear winning method on all metrics. Additionally, we observe that standard offline evaluation metrics fall short for this application. Specifically, they reward an algorithm only when it predicts the exact same item that the user clicked next or eventually purchased. In a practical scenario, however, there are near-identical products which, although they are assigned different identifiers, they should be considered as equally-good recommendations. To overcome these limitations, we perform an additional round of evaluation, where human experts provide both objective and subjective feedback for the recommendations of five algorithms that performed the best in the offline evaluation. We find that the experts’ opinion is oftentimes different from the offline evaluation results. Analysis of the feedback confirms that the performance of all models is significantly higher when we evaluate near-identical product recommendations as relevant. Finally, we run an A/B test with one of the models that performed the best in the human evaluation phase. The treatment model increased conversion rate by 15.6% and revenue per visit by 18.5% when compared with a leading third-party solution.</p>
     <p><strong>Categories:</strong> Session-Based Recommendations, Case Study, E-commerce, Retail, Home Improvement, Algorithm Evaluation, Human Evaluation, A/B Test, Offline Evaluation, Deployment, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/536/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>In-Store Augmented Reality-Enabled Product Comparison and Recommendation (2020)</h3>
+    <p><strong>Authors:</strong> Jürgen Ziegler, Jesús Omar Álvarez Márquez</p>
+    <p>We present an approach combining the AR-based presentation of product attributes in a physical retail store with recommendations for items only available online. The system supports users’ decision-making process by offering functions for comparing product features between items, both physical and online, and by providing recommendations based on selecting in-store products. The physical products may thus serve as anchors for forming the user’s preferences, also offering a richer and more engaging experience when exploring the products hands-on. Both objective product attributes as well as the visual appearance of a physical product are employed for generating recommendations from the online space. In this way, the advantages of online and in-store shopping can be combined, creating novel multi-channel opportunities for businesses. An empirical evaluation showed that the comparison and recommendation functions were appreciated by users, and hinted some possible benefits of a hybrid physical-online shopping support system. Despite the limitations of the study, there is sufficient evidence to consider this a viable approach worth to be further explored.</p>
+    <p><strong>Categories:</strong> Augmented Reality (AR), Recommendation Systems, Retail, Product Comparison, User Experience, In-Store Technology, Multi-Channel, Hybrid Shopping, Business Applications, Innovation in Retail, User Interaction (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/540/">See reasoning</a></p>
   </div>
 
     </div>

@@ -34,6 +34,11 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Fine-Tuning</a>
+        
+      
+        
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
         
@@ -45,17 +50,17 @@
       
         
           <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/fairness/">Fairness</a>
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
         
       
         
@@ -65,12 +70,7 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/cold-start/">Cold Start</a>
+             href="/recsys-recommender/category/fairness/">Fairness</a>
         
       
         
@@ -80,7 +80,7 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+             href="/recsys-recommender/category/offline-evaluation/">Offline Evaluation</a>
         
       
     </div>
@@ -91,11 +91,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>TLRec: A Transfer Learning Framework to Enhance Large Language Models for Sequential Recommendation Tasks (2024)</h3>
-    <p><strong>Authors:</strong> Shuang Peng, Jiaye Lin, Zhong Zhang, Peilin Zhao</p>
-    <p>Recently, Large Language Models (LLMs) have garnered significant attention in recommendation systems, improving recommendation performance through in-context learning or parameter-efficient fine-tuning. However, cross-domain generalization, i.e., model training in one scenario (source domain) but inference in another (target domain), is underexplored. In this paper, we present TLRec, a transfer learning framework aimed at enhancing LLMs for sequential recommendation tasks. TLRec specifically focuses on text inputs to mitigate the challenge of limited transferability across diverse domains, offering promising advantages over traditional recommendation models that heavily depend on unique identities (IDs) like user IDs and item IDs. Moreover, we leverage the source domain data to further enhance LLMs’ performance in the target domain. Initially, we employ powerful closed-source LLMs (e.g., GPT-4) and chain-of-thought techniques to construct instruction tuning data from the third-party scenario (source domain). Subsequently, we apply curriculum learning to fine-tune LLMs for effective knowledge injection and perform recommendations in the target domain. Experimental results demonstrate that TLRec achieves superior performance under the zero-shot and few-shot settings.</p>
-    <p><strong>Categories:</strong> Transfer Learning, Large Language Models, Recommendation Systems, Cross-Domain Recommendations, Instruction Tuning, Curriculum Learning, Fine-Tuning, Domain Adaptation, Zero-Shot Learning, Few-Shot Learning, Text-Based Recommendations, Sequential Recommendations, Chain of Thought (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1203/">See reasoning</a></p>
+    <h3>CALRec: Contrastive Alignment of Generative LLMs For Sequential Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Mohamed Hammad, Ivan Vulić, Xiang Zhai, Yaoyiran Li, Anna Korhonen, Keyi Yu, Moustafa Alzantot</p>
+    <p>Traditional recommender systems such as matrix factorization methods rely on learning a shared dense embedding space to represent both items and user preferences. Sequence models such as RNN, GRUs, and, recently, Transformers have also excelled in the task of sequential recommendation. The sequential recommendation task requires understanding the sequential structure present in users’ historical interactions to predict the next item they may like. Building upon the success of Large Language Models (LLMs) in a variety of tasks, researchers have recently explored using LLMs that are pretrained on giant corpora of text for sequential recommendation. To use LLMs in sequential recommendations, both the history of user interactions and the model’s prediction of the next item are expressed in text form. We propose CALRec, a two-stage LLM finetuning framework that finetunes a pretrained LLM in a two-tower fashion using a mixture of two contrastive losses and a language modeling loss: the LLM is first finetuned on a data mixture from multiple domains followed by another round of target domain finetuning. Our model significantly outperforms many state-of-the-art baselines (+37% in Recall@1 and +24% in NDCG@10) and systematic ablation studies reveal that (i) both stages of finetuning are crucial, and, when combined, we achieve improved performance, and (ii) contrastive alignment is effective among the target domains explored in our experiments.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Sequential Recommendation, Large Language Models (LLMs), Contrastive Learning, Transformers, Fine-tuning, Performance Improvement, Text Representation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1031/">See reasoning</a></p>
   </div>
 
     </div>
@@ -103,11 +103,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>CALRec: Contrastive Alignment of Generative LLMs For Sequential Recommendation (2024)</h3>
-    <p><strong>Authors:</strong> Mohamed Hammad, Ivan Vulić, Xiang Zhai, Yaoyiran Li, Anna Korhonen, Keyi Yu, Moustafa Alzantot</p>
-    <p>Traditional recommender systems such as matrix factorization methods rely on learning a shared dense embedding space to represent both items and user preferences. Sequence models such as RNN, GRUs, and, recently, Transformers have also excelled in the task of sequential recommendation. The sequential recommendation task requires understanding the sequential structure present in users’ historical interactions to predict the next item they may like. Building upon the success of Large Language Models (LLMs) in a variety of tasks, researchers have recently explored using LLMs that are pretrained on giant corpora of text for sequential recommendation. To use LLMs in sequential recommendations, both the history of user interactions and the model’s prediction of the next item are expressed in text form. We propose CALRec, a two-stage LLM finetuning framework that finetunes a pretrained LLM in a two-tower fashion using a mixture of two contrastive losses and a language modeling loss: the LLM is first finetuned on a data mixture from multiple domains followed by another round of target domain finetuning. Our model significantly outperforms many state-of-the-art baselines (+37% in Recall@1 and +24% in NDCG@10) and systematic ablation studies reveal that (i) both stages of finetuning are crucial, and, when combined, we achieve improved performance, and (ii) contrastive alignment is effective among the target domains explored in our experiments.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Sequential Recommendation, Large Language Models (LLMs), Contrastive Learning, Transformers, Fine-tuning, Performance Improvement, Text Representation (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1031/">See reasoning</a></p>
+    <h3>TLRec: A Transfer Learning Framework to Enhance Large Language Models for Sequential Recommendation Tasks (2024)</h3>
+    <p><strong>Authors:</strong> Shuang Peng, Jiaye Lin, Zhong Zhang, Peilin Zhao</p>
+    <p>Recently, Large Language Models (LLMs) have garnered significant attention in recommendation systems, improving recommendation performance through in-context learning or parameter-efficient fine-tuning. However, cross-domain generalization, i.e., model training in one scenario (source domain) but inference in another (target domain), is underexplored. In this paper, we present TLRec, a transfer learning framework aimed at enhancing LLMs for sequential recommendation tasks. TLRec specifically focuses on text inputs to mitigate the challenge of limited transferability across diverse domains, offering promising advantages over traditional recommendation models that heavily depend on unique identities (IDs) like user IDs and item IDs. Moreover, we leverage the source domain data to further enhance LLMs’ performance in the target domain. Initially, we employ powerful closed-source LLMs (e.g., GPT-4) and chain-of-thought techniques to construct instruction tuning data from the third-party scenario (source domain). Subsequently, we apply curriculum learning to fine-tune LLMs for effective knowledge injection and perform recommendations in the target domain. Experimental results demonstrate that TLRec achieves superior performance under the zero-shot and few-shot settings.</p>
+    <p><strong>Categories:</strong> Transfer Learning, Large Language Models, Recommendation Systems, Cross-Domain Recommendations, Instruction Tuning, Curriculum Learning, Fine-Tuning, Domain Adaptation, Zero-Shot Learning, Few-Shot Learning, Text-Based Recommendations, Sequential Recommendations, Chain of Thought (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1203/">See reasoning</a></p>
   </div>
 
     </div>

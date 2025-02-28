@@ -50,12 +50,22 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/fairness/">Fairness</a>
         
       
         
@@ -65,22 +75,12 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+             href="/recsys-recommender/category/optimization-techniques/">Optimization Techniques</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/user-centric-design/">User-Centric Design</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/fairness/">Fairness</a>
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
         
       
     </div>
@@ -91,11 +91,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>A Multimodal Single-Branch Embedding Network for Recommendation in Cold-Start and Missing Modality Scenarios (2024)</h3>
-    <p><strong>Authors:</strong> Anna Hausberger, Markus Schedl, Christian Ganhör, Shah Nawaz, Marta Moscati</p>
-    <p>Most recommender systems adopt collaborative filtering (CF) and provide recommendations based on past collective interactions. Therefore, the performance of CF algorithms degrades when few or no interactions are available, a scenario referred to as cold-start. To address this issue, previous work relies on models leveraging both collaborative data and side information on the users or items. Similar to multimodal learning, these models aim at combining collaborative and content representations in a shared embedding space. In this work we propose a novel technique for multimodal recommendation, relying on a multimodal Single-Branch embedding network for Recommendation (SiBraR). Leveraging weight-sharing, SiBraR encodes interaction data as well as multimodal side information using the same single-branch embedding network on different modalities. This makes SiBraR effective in scenarios of missing modality, including cold start. Our extensive experiments on large-scale recommendation datasets from three different recommendation domains (music, movie, and e-commerce) and providing multimodal content information (audio, text, image, labels, and interactions) show that SiBraR significantly outperforms CF as well as state-of-the-art content-based RSs in cold-start scenarios, and is competitive in warm scenarios. We show that SiBraR’s recommendations are accurate in missing modality scenarios, and that the model is able to map different modalities to the same region of the shared embedding space, hence reducing the modality gap.</p>
-    <p><strong>Categories:</strong> Recommender Systems, Multimodal Learning, Cold Start, Missing Modality, Embedding Networks, Collaborative Filtering, Content-Based Recommendations, Music, Movies, E-commerce, Large-Scale Datasets, Performance Improvement (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1018/">See reasoning</a></p>
+    <h3>Knowledge-Enhanced Multi-Behaviour Contrastive Learning for Effective Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Iadh Ounis, Zeyuan Meng, Zixuan Yi</p>
+    <p>Real-world recommendation scenarios usually need to handle diverse user-item interaction behaviours, including page views, adding items into carts, and purchasing activities. The interactions that precede the actual target behaviour (e.g. purchasing an item) allow to better capture the user’s preferences from different angles, and are used  as auxiliary information (e.g. page views) to enrich the system’s knowledge about the users’ preferences, thereby helping to enhance recommendation for the target behaviour. Despite efforts in modelling the users’ multi-behaviour interaction information, the existing multi-behaviour recommenders  still face two challenges: (1) Data sparsity across multiple user behaviours is a common issue that limits the recommendation performance, particularly for the target behaviour, which typically exhibits fewer interactions compared to other auxiliary behaviours. (2) Noisy auxiliary interactive behaviour where the information in the auxiliary information  might be non-relevant to recommendation.  In this case, a direct  adoption of  contrastive learning between the target behaviour and the auxiliary behaviours will amplify the noise in the auxiliary behaviours, thereby negatively impacting the real semantics that can be derived from the target behaviour. To address these two challenges, we propose a new model called Knowledge-Enhanced Multi-behaviour Contrastive Learning for Recommendation (KEMCL). In particular, to address the problem of sparse user multi-behaviour interaction information, we leverage a tailored knowledge graph (KG) to enrich the semantic representations of items, and generate supervision signals through self-supervised learning so as to enhance  recommendation. In addition, we develop two contrastive learning (CL) methods, inter CL and intra CL, to alleviate the problem of noisy auxiliary interactions. Extensive experiments on three public recommendation datasets show that our proposed KEMCL model significantly outperforms the existing state-of-the-art (SOTA) methods. In particular, our KEMCL model outperforms the best baseline performance, namely KMCLR,  by 5.42% on the large Tmall dataset.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, User Interaction, Auxiliary Information, Data Sparsity, Noisy Data, Contrastive Learning, Knowledge Graphs, Self-Supervised Learning, Real-World Applications, Performance Improvement, E-Commerce (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1095/">See reasoning</a></p>
   </div>
 
     </div>
@@ -115,11 +115,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>CALRec: Contrastive Alignment of Generative LLMs For Sequential Recommendation (2024)</h3>
-    <p><strong>Authors:</strong> Mohamed Hammad, Ivan Vulić, Xiang Zhai, Yaoyiran Li, Anna Korhonen, Keyi Yu, Moustafa Alzantot</p>
-    <p>Traditional recommender systems such as matrix factorization methods rely on learning a shared dense embedding space to represent both items and user preferences. Sequence models such as RNN, GRUs, and, recently, Transformers have also excelled in the task of sequential recommendation. The sequential recommendation task requires understanding the sequential structure present in users’ historical interactions to predict the next item they may like. Building upon the success of Large Language Models (LLMs) in a variety of tasks, researchers have recently explored using LLMs that are pretrained on giant corpora of text for sequential recommendation. To use LLMs in sequential recommendations, both the history of user interactions and the model’s prediction of the next item are expressed in text form. We propose CALRec, a two-stage LLM finetuning framework that finetunes a pretrained LLM in a two-tower fashion using a mixture of two contrastive losses and a language modeling loss: the LLM is first finetuned on a data mixture from multiple domains followed by another round of target domain finetuning. Our model significantly outperforms many state-of-the-art baselines (+37% in Recall@1 and +24% in NDCG@10) and systematic ablation studies reveal that (i) both stages of finetuning are crucial, and, when combined, we achieve improved performance, and (ii) contrastive alignment is effective among the target domains explored in our experiments.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Sequential Recommendation, Large Language Models (LLMs), Contrastive Learning, Transformers, Fine-tuning, Performance Improvement, Text Representation (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1031/">See reasoning</a></p>
+    <h3>A Multimodal Single-Branch Embedding Network for Recommendation in Cold-Start and Missing Modality Scenarios (2024)</h3>
+    <p><strong>Authors:</strong> Anna Hausberger, Markus Schedl, Christian Ganhör, Shah Nawaz, Marta Moscati</p>
+    <p>Most recommender systems adopt collaborative filtering (CF) and provide recommendations based on past collective interactions. Therefore, the performance of CF algorithms degrades when few or no interactions are available, a scenario referred to as cold-start. To address this issue, previous work relies on models leveraging both collaborative data and side information on the users or items. Similar to multimodal learning, these models aim at combining collaborative and content representations in a shared embedding space. In this work we propose a novel technique for multimodal recommendation, relying on a multimodal Single-Branch embedding network for Recommendation (SiBraR). Leveraging weight-sharing, SiBraR encodes interaction data as well as multimodal side information using the same single-branch embedding network on different modalities. This makes SiBraR effective in scenarios of missing modality, including cold start. Our extensive experiments on large-scale recommendation datasets from three different recommendation domains (music, movie, and e-commerce) and providing multimodal content information (audio, text, image, labels, and interactions) show that SiBraR significantly outperforms CF as well as state-of-the-art content-based RSs in cold-start scenarios, and is competitive in warm scenarios. We show that SiBraR’s recommendations are accurate in missing modality scenarios, and that the model is able to map different modalities to the same region of the shared embedding space, hence reducing the modality gap.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Multimodal Learning, Cold Start, Missing Modality, Embedding Networks, Collaborative Filtering, Content-Based Recommendations, Music, Movies, E-commerce, Large-Scale Datasets, Performance Improvement (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1018/">See reasoning</a></p>
   </div>
 
     </div>
@@ -127,11 +127,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Knowledge-Enhanced Multi-Behaviour Contrastive Learning for Effective Recommendation (2024)</h3>
-    <p><strong>Authors:</strong> Iadh Ounis, Zeyuan Meng, Zixuan Yi</p>
-    <p>Real-world recommendation scenarios usually need to handle diverse user-item interaction behaviours, including page views, adding items into carts, and purchasing activities. The interactions that precede the actual target behaviour (e.g. purchasing an item) allow to better capture the user’s preferences from different angles, and are used  as auxiliary information (e.g. page views) to enrich the system’s knowledge about the users’ preferences, thereby helping to enhance recommendation for the target behaviour. Despite efforts in modelling the users’ multi-behaviour interaction information, the existing multi-behaviour recommenders  still face two challenges: (1) Data sparsity across multiple user behaviours is a common issue that limits the recommendation performance, particularly for the target behaviour, which typically exhibits fewer interactions compared to other auxiliary behaviours. (2) Noisy auxiliary interactive behaviour where the information in the auxiliary information  might be non-relevant to recommendation.  In this case, a direct  adoption of  contrastive learning between the target behaviour and the auxiliary behaviours will amplify the noise in the auxiliary behaviours, thereby negatively impacting the real semantics that can be derived from the target behaviour. To address these two challenges, we propose a new model called Knowledge-Enhanced Multi-behaviour Contrastive Learning for Recommendation (KEMCL). In particular, to address the problem of sparse user multi-behaviour interaction information, we leverage a tailored knowledge graph (KG) to enrich the semantic representations of items, and generate supervision signals through self-supervised learning so as to enhance  recommendation. In addition, we develop two contrastive learning (CL) methods, inter CL and intra CL, to alleviate the problem of noisy auxiliary interactions. Extensive experiments on three public recommendation datasets show that our proposed KEMCL model significantly outperforms the existing state-of-the-art (SOTA) methods. In particular, our KEMCL model outperforms the best baseline performance, namely KMCLR,  by 5.42% on the large Tmall dataset.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, User Interaction, Auxiliary Information, Data Sparsity, Noisy Data, Contrastive Learning, Knowledge Graphs, Self-Supervised Learning, Real-World Applications, Performance Improvement, E-Commerce (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1095/">See reasoning</a></p>
+    <h3>CALRec: Contrastive Alignment of Generative LLMs For Sequential Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Mohamed Hammad, Ivan Vulić, Xiang Zhai, Yaoyiran Li, Anna Korhonen, Keyi Yu, Moustafa Alzantot</p>
+    <p>Traditional recommender systems such as matrix factorization methods rely on learning a shared dense embedding space to represent both items and user preferences. Sequence models such as RNN, GRUs, and, recently, Transformers have also excelled in the task of sequential recommendation. The sequential recommendation task requires understanding the sequential structure present in users’ historical interactions to predict the next item they may like. Building upon the success of Large Language Models (LLMs) in a variety of tasks, researchers have recently explored using LLMs that are pretrained on giant corpora of text for sequential recommendation. To use LLMs in sequential recommendations, both the history of user interactions and the model’s prediction of the next item are expressed in text form. We propose CALRec, a two-stage LLM finetuning framework that finetunes a pretrained LLM in a two-tower fashion using a mixture of two contrastive losses and a language modeling loss: the LLM is first finetuned on a data mixture from multiple domains followed by another round of target domain finetuning. Our model significantly outperforms many state-of-the-art baselines (+37% in Recall@1 and +24% in NDCG@10) and systematic ablation studies reveal that (i) both stages of finetuning are crucial, and, when combined, we achieve improved performance, and (ii) contrastive alignment is effective among the target domains explored in our experiments.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Sequential Recommendation, Large Language Models (LLMs), Contrastive Learning, Transformers, Fine-tuning, Performance Improvement, Text Representation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1031/">See reasoning</a></p>
   </div>
 
     </div>
@@ -151,30 +151,6 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Leveraging Large Language Models for Sequential Recommendation (2023)</h3>
-    <p><strong>Authors:</strong> Panos Louridas, Dietmar Jannach, Marios Fragkoulis, Wouter Zorgdrager, Jesse Harte, Asterios Katsifodimos</p>
-    <p>Sequential recommendation problems have received increasing attention in research during the past few years, leading to the inception of a large variety of algorithmic approaches. In this work, we explore how large language models (LLMs), which are nowadays introducing disruptive effects in many AI-based applications, can be used to build or improve sequential recommendation approaches. Specifically, we devise and evaluate three approaches to leverage the power of LLMs in different ways. Our results from experiments on two datasets show that initializing the state-of-the-art sequential recommendation model BERT4Rec with embeddings obtained from an LLM improves NDCG by 15-20% compared to the vanilla BERT4Rec model. Furthermore, we find that a simple approach that leverages LLM embeddings for producing recommendations, can provide competitive performance by highlighting semantically related items. We publicly share the code and data of our experiments to ensure reproducibility.</p>
-    <p><strong>Categories:</strong> Large Language Models, Sequential Recommendation, Algorithmic Approaches, Recommendation Systems, Evaluation Methods, Natural Language Processing, Performance Improvement, Embeddings, Reproducibility, Datasets, Research Methods (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/956/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Advancing Automation of Design Decisions in Recommender System Pipelines (2023)</h3>
-    <p><strong>Authors:</strong> Tobias Vente</p>
-    <p>Recommender systems have become essential in domains like streaming services, social media platforms, and e-commerce websites.  However, the development of a recommender system involves a complex pipeline with preprocessing, data splitting, algorithm and model selection, and postprocessing stages, requiring critical design decisions.  Every stage of the recommender systems pipeline requires design decisions that influence the performance of the recommender system. To ease design decisions, automated machine learning (AutoML) techniques have been adapted to the field of recommender systems, resulting in various AutoRecSys libraries.  Nevertheless, these libraries lack library independence and limit flexibility in integrating automation techniques from different sources. In response, our research aims to enhance the usability of AutoML techniques for design decisions in recommender system pipelines.  We focus on developing flexible and library-independent automation techniques for algorithm selection, model selection, and postprocessing steps.  By enabling developers to make informed choices and ease the recommender system development process, we decrease the developer’s effort while improving the performance of the recommender systems.  Moreover, we want to analyze the cost-to-benefit ratio of automation techniques in recommender systems, evaluating the computational overhead and the resulting improvements in predictive performance.  Our objective is to leverage AutoML concepts to automate design decisions in recommender system pipelines, reduce manual effort, and enhance the overall performance and usability of recommender systems.</p>
-    <p><strong>Categories:</strong> Recommender Systems, AutoML, Automation Techniques, Library Independence, Recommender System Pipelines, Cost-Benefit Analysis, Algorithm Selection, Usability, Performance Improvement (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/978/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
     <h3>Heterogeneous Knowledge Fusion: A Novel Approach for Personalized Recommendation via LLM (2023)</h3>
     <p><strong>Authors:</strong> Zhichao Feng, Wei Lin, Zixiang Ding, Xiang Li, Bin Yin, Yu Qin, Junjie Xie</p>
     <p>The analysis and mining of user heterogeneous behavior are of paramount importance in recommendation systems. However, the conventional approach of incorporating various types of heterogeneous behavior into recommendation models leads to feature sparsity and knowledge fragmentation issues. To address this challenge, we propose a novel approach for personalized recommendation via Large Language Model (LLM), by extracting and fusing heterogeneous knowledge from user heterogeneous behavior information. In addition, by combining heterogeneous knowledge and recommendation tasks, instruction tuning is performed on LLM for personalized recommendations. The experimental results demonstrate that our method can effectively integrate user heterogeneous behavior and significantly improve recommendation performance.</p>
@@ -187,11 +163,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Deep Situation-Aware Interaction Network for Click-Through Rate Prediction (2023)</h3>
-    <p><strong>Authors:</strong> Yongkang Wang, Dong Wang, Yisong Yu, Beihong Jin, Yapeng Zhang, Jian Dong, Xingxing Wang, Shuli Wang, Yimin Lv</p>
-    <p>User behavior sequence modeling plays a significant role in Click-Through Rate (CTR) prediction on e-commerce platforms. Except for the interacted items, user behaviors contain rich interaction information, such as the behavior type, time, location, etc. However, so far, the information related to user behaviors has not yet been fully exploited. In the paper, we propose the concept of a situation and situational features for distinguishing interaction behaviors and then design a CTR model named Deep Situation-Aware Interaction Network (DSAIN). DSAIN first adopts the reparameterization trick to reduce noise in the original user behavior sequences. Then it learns the embeddings of situational features by feature embedding parameterization and tri-directional correlation fusion. Finally, it obtains the embedding of behavior sequence via heterogeneous situation aggregation. We conduct extensive offline experiments on three real-world datasets. Experimental results demonstrate the superiority of the proposed DSAIN model. More importantly, DSAIN has increased the CTR by 2.70\%, the CPM by 2.62\%, and the GMV by 2.16\% in the online A/B test. Now, DSAIN has been deployed on the Meituan food delivery platform and serves the main traffic of the Meituan takeout app. Our source code is available at https://github.com/W-void/DSAIN</p>
-    <p><strong>Categories:</strong> Deep Learning, Matrix Factorization, Interaction Network, E-commerce, Food Delivery, Click-Through Rate Prediction, Situational Awareness, User Behavior Modeling, Contextual Features, Sequence Modeling, A/B Test, Performance Improvement, User Interaction Analysis (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/849/">See reasoning</a></p>
+    <h3>Leveraging Large Language Models for Sequential Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Panos Louridas, Dietmar Jannach, Marios Fragkoulis, Wouter Zorgdrager, Jesse Harte, Asterios Katsifodimos</p>
+    <p>Sequential recommendation problems have received increasing attention in research during the past few years, leading to the inception of a large variety of algorithmic approaches. In this work, we explore how large language models (LLMs), which are nowadays introducing disruptive effects in many AI-based applications, can be used to build or improve sequential recommendation approaches. Specifically, we devise and evaluate three approaches to leverage the power of LLMs in different ways. Our results from experiments on two datasets show that initializing the state-of-the-art sequential recommendation model BERT4Rec with embeddings obtained from an LLM improves NDCG by 15-20% compared to the vanilla BERT4Rec model. Furthermore, we find that a simple approach that leverages LLM embeddings for producing recommendations, can provide competitive performance by highlighting semantically related items. We publicly share the code and data of our experiments to ensure reproducibility.</p>
+    <p><strong>Categories:</strong> Large Language Models, Sequential Recommendation, Algorithmic Approaches, Recommendation Systems, Evaluation Methods, Natural Language Processing, Performance Improvement, Embeddings, Reproducibility, Datasets, Research Methods (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/956/">See reasoning</a></p>
   </div>
 
     </div>
@@ -211,11 +187,23 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>A Systematic Review and Replicability Study of BERT4Rec for Sequential Recommendation (2022)</h3>
-    <p><strong>Authors:</strong> Aleksandr Petrov, Craig Macdonald</p>
-    <p>BERT4Rec is an effective model for sequential recommendation based on the Transformer architecture. In the original publication, BERT4Rec claimed superiority over other available sequential recommendation approaches (e.g. SASRec), and it is now frequently being used as a state-of-the art baseline for sequential recommendation. However, not all subsequent publications confirmed its superiority and have proposed other models that were shown to outperform BERT4Rec in effectiveness. In this paper we systematically review all publications that compare BERT4Rec with another popular Transformer-based model, namely SASRec, and show that BERT4Rec results are not consistent within these publications. To understand the reasons behind this inconsistency, we analyse the available implementations of BERT4Rec and show that we fail to reproduce results of the original BERT4Rec publication when using their default configuration parameters. However, we are able to replicate the reported results with the original code if training for a much longer amount of time (up to 30x) compared to the default configuration. We also propose our own implementation of BERT4Rec based on the HuggingFace Transformers library, which we demonstrate replicates the originally reported results on 3 out 4 datasets, while requiring up to 95% less training time to converge. Overall, from our systematic review and detailed experiments, we conclude that BERT4Rec does indeed exhibit state-of-the-art effectiveness for sequential recommendation, but only when trained for a sufficient amount of time. Additionally, we show that our implementation can further benefit from adapting other Transformer architectures that are available in the HuggingFace Transformers library (e.g. using disentangled attention, as provided by DeBERTa, or larger hidden layer size cf. ALBERT). For example, on the MovieLens-1M dataset, we demonstrate that both these models can improve BERT4Rec performance by up to 9%. Moreover, we show that an ALBERT-based BERT4Rec model achieves better performance on that dataset than state-of-the-art results reported in the most recent publications.</p>
-    <p><strong>Categories:</strong> BERT4Rec, SASRec, Transformer-based Models, Sequential Recommendation, Systematic Review, Replicability Study, HuggingFace Transformers Library, Training Time Optimization, Effectiveness, Performance Improvement (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/785/">See reasoning</a></p>
+    <h3>Deep Situation-Aware Interaction Network for Click-Through Rate Prediction (2023)</h3>
+    <p><strong>Authors:</strong> Yongkang Wang, Dong Wang, Yisong Yu, Beihong Jin, Yapeng Zhang, Jian Dong, Xingxing Wang, Shuli Wang, Yimin Lv</p>
+    <p>User behavior sequence modeling plays a significant role in Click-Through Rate (CTR) prediction on e-commerce platforms. Except for the interacted items, user behaviors contain rich interaction information, such as the behavior type, time, location, etc. However, so far, the information related to user behaviors has not yet been fully exploited. In the paper, we propose the concept of a situation and situational features for distinguishing interaction behaviors and then design a CTR model named Deep Situation-Aware Interaction Network (DSAIN). DSAIN first adopts the reparameterization trick to reduce noise in the original user behavior sequences. Then it learns the embeddings of situational features by feature embedding parameterization and tri-directional correlation fusion. Finally, it obtains the embedding of behavior sequence via heterogeneous situation aggregation. We conduct extensive offline experiments on three real-world datasets. Experimental results demonstrate the superiority of the proposed DSAIN model. More importantly, DSAIN has increased the CTR by 2.70\%, the CPM by 2.62\%, and the GMV by 2.16\% in the online A/B test. Now, DSAIN has been deployed on the Meituan food delivery platform and serves the main traffic of the Meituan takeout app. Our source code is available at https://github.com/W-void/DSAIN</p>
+    <p><strong>Categories:</strong> Deep Learning, Matrix Factorization, Interaction Network, E-commerce, Food Delivery, Click-Through Rate Prediction, Situational Awareness, User Behavior Modeling, Contextual Features, Sequence Modeling, A/B Test, Performance Improvement, User Interaction Analysis (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/849/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Advancing Automation of Design Decisions in Recommender System Pipelines (2023)</h3>
+    <p><strong>Authors:</strong> Tobias Vente</p>
+    <p>Recommender systems have become essential in domains like streaming services, social media platforms, and e-commerce websites.  However, the development of a recommender system involves a complex pipeline with preprocessing, data splitting, algorithm and model selection, and postprocessing stages, requiring critical design decisions.  Every stage of the recommender systems pipeline requires design decisions that influence the performance of the recommender system. To ease design decisions, automated machine learning (AutoML) techniques have been adapted to the field of recommender systems, resulting in various AutoRecSys libraries.  Nevertheless, these libraries lack library independence and limit flexibility in integrating automation techniques from different sources. In response, our research aims to enhance the usability of AutoML techniques for design decisions in recommender system pipelines.  We focus on developing flexible and library-independent automation techniques for algorithm selection, model selection, and postprocessing steps.  By enabling developers to make informed choices and ease the recommender system development process, we decrease the developer’s effort while improving the performance of the recommender systems.  Moreover, we want to analyze the cost-to-benefit ratio of automation techniques in recommender systems, evaluating the computational overhead and the resulting improvements in predictive performance.  Our objective is to leverage AutoML concepts to automate design decisions in recommender system pipelines, reduce manual effort, and enhance the overall performance and usability of recommender systems.</p>
+    <p><strong>Categories:</strong> Recommender Systems, AutoML, Automation Techniques, Library Independence, Recommender System Pipelines, Cost-Benefit Analysis, Algorithm Selection, Usability, Performance Improvement (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/978/">See reasoning</a></p>
   </div>
 
     </div>
@@ -228,6 +216,18 @@
     <p>In sparse recommender settings, users’ context and item attributes play a crucial role in deciding which items to recommend next. Despite that, recent works in sequential and time-aware recommendations usually either ignore both aspects or only consider one of them, limiting their predictive performance. In this paper, we address these limitations by proposing a context and attribute-aware recommender model (CARCA) that can capture the dynamic nature of the user profiles in terms of contextual features and item attributes via dedicated multi-head self-attention blocks that extract profile-level features and predict item scores. Also, unlike many of the current state-of-the-art sequential item recommendation approaches that use a simple dot-product between the most recent item’s latent features and the target items embeddings for scoring, CARCA uses cross-attention between all profile items and the target items to predict their final scores. This cross-attention allows CARCA to harness the correlation between old and recent items in the user profile and their influence on deciding which item to recommend next. Experiments on four real-world recommender system datasets show that the proposed model significantly outperforms all state-of-the-art models in the task of item recommendation and achieving improvements of up to 53% in Normalized Discounted Cumulative Gain (NDCG) and Hit-Ratio. Results also show that CARCA outperformed several state-of-the-art dedicated image-based recommender systems by merely utilizing image attributes extracted from a pre-trained ResNet50 in a black-box fashion.</p>
     <p><strong>Categories:</strong> Sequential Recommendation, Context-Aware, Attribute-Based, Cross-Attention, Recommender Systems, Effectiveness Evaluation, Recommendation Algorithm, Visual Attributes, Transfer Learning, Dynamic Profiling, Performance Improvement (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/752/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>A Systematic Review and Replicability Study of BERT4Rec for Sequential Recommendation (2022)</h3>
+    <p><strong>Authors:</strong> Aleksandr Petrov, Craig Macdonald</p>
+    <p>BERT4Rec is an effective model for sequential recommendation based on the Transformer architecture. In the original publication, BERT4Rec claimed superiority over other available sequential recommendation approaches (e.g. SASRec), and it is now frequently being used as a state-of-the art baseline for sequential recommendation. However, not all subsequent publications confirmed its superiority and have proposed other models that were shown to outperform BERT4Rec in effectiveness. In this paper we systematically review all publications that compare BERT4Rec with another popular Transformer-based model, namely SASRec, and show that BERT4Rec results are not consistent within these publications. To understand the reasons behind this inconsistency, we analyse the available implementations of BERT4Rec and show that we fail to reproduce results of the original BERT4Rec publication when using their default configuration parameters. However, we are able to replicate the reported results with the original code if training for a much longer amount of time (up to 30x) compared to the default configuration. We also propose our own implementation of BERT4Rec based on the HuggingFace Transformers library, which we demonstrate replicates the originally reported results on 3 out 4 datasets, while requiring up to 95% less training time to converge. Overall, from our systematic review and detailed experiments, we conclude that BERT4Rec does indeed exhibit state-of-the-art effectiveness for sequential recommendation, but only when trained for a sufficient amount of time. Additionally, we show that our implementation can further benefit from adapting other Transformer architectures that are available in the HuggingFace Transformers library (e.g. using disentangled attention, as provided by DeBERTa, or larger hidden layer size cf. ALBERT). For example, on the MovieLens-1M dataset, we demonstrate that both these models can improve BERT4Rec performance by up to 9%. Moreover, we show that an ALBERT-based BERT4Rec model achieves better performance on that dataset than state-of-the-art results reported in the most recent publications.</p>
+    <p><strong>Categories:</strong> BERT4Rec, SASRec, Transformer-based Models, Sequential Recommendation, Systematic Review, Replicability Study, HuggingFace Transformers Library, Training Time Optimization, Effectiveness, Performance Improvement (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/785/">See reasoning</a></p>
   </div>
 
     </div>

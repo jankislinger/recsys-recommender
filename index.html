@@ -45,6 +45,11 @@
       
         
           <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
         
       
@@ -60,37 +65,32 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/evaluation-metrics/">Evaluation Metrics</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/knowledge-graphs/">Knowledge Graphs</a>
+             href="/recsys-recommender/category/cold-start/">Cold Start</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/offline-evaluation/">Offline Evaluation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/performance-evaluation/">Performance Evaluation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/scalability/">Scalability</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
         
       
     </div>
@@ -101,11 +101,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>The Elephant in the Room: Rethinking the Usage of Pre-trained Language Model in Sequential Recommendation (2024)</h3>
-    <p><strong>Authors:</strong> Zekai Qu, Chaojun Xiao, Zhanhui Kang, Ruobing Xie, Xingwu Sun</p>
-    <p>Sequential recommendation (SR) has seen significant advancements with the help of Pre-trained Language Models (PLMs). Some PLM-based SR models directly use PLM to encode user historical behavior’s text sequences to learn user representations, while there is seldom an in-depth exploration of the capability and suitability of PLM in behavior sequence modeling. In this work, we first conduct extensive model analyses between PLMs and PLM-based SR models, discovering great underutilization and parameter redundancy of PLMs in behavior sequence modeling. Inspired by this, we explore different lightweight usages of PLMs in SR, aiming to maximally stimulate the ability of PLMs for SR while satisfying the efficiency and usability demands of practical systems. We discover that adopting behavior-tuned PLMs for item initializations of conventional ID-based SR models is the most economical framework of PLM-based SR, which would not bring in any additional inference cost but could achieve a dramatic performance boost compared with the original version. Extensive experiments on five datasets show that our simple and universal framework leads to significant improvement compared to classical SR and SOTA PLM-based SR models without additional inference costs.</p>
-    <p><strong>Categories:</strong> Pre-trained Language Models, Sequential Recommendation, Model Analysis, Behavior Sequence Modeling, Efficiency in Recommendations, Lightweight Usage of PLMs, Parameter Redundancy, Model Adaptation (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1064/">See reasoning</a></p>
+    <h3>Improving the Shortest Plank: Vulnerability-Aware Adversarial Training for Robust Recommender System (2024)</h3>
+    <p><strong>Authors:</strong> Fei Sun, Qi Cao, Yunfan Wu, Huawei Shen, Xueqi Cheng, Kaike Zhang</p>
+    <p>Recommender systems play a pivotal role in mitigating information overload in diverse fields. Nonetheless, the inherent openness of these systems introduces vulnerabilities, allowing attackers to insert fake users to skew the exposure of certain items, known as poisoning attacks. Adversarial training emerges as a notable defense mechanism against such poisoning attacks within recommender systems. Traditional adversarial training methods apply perturbations with the same scale across all users to their embeddings to maintain system robustness against the worst-case attacks. Yet, in reality, attacks often affect only a subset of users who are actually vulnerable to the specific attacks. These indiscriminate perturbations make it difficult to balance effective protection for vulnerable users and avoidance of recommendation quality degradation for those who are not. To address this issue, our research delves into understanding user vulnerability. Considering that poisoning attacks pollutes the training data, we observe that the extent of a recommender system’s fit to users’ training data, particularly when high, correlates with an increased likelihood of users incorporating attack information, thus indicating their vulnerability. Leveraging these insights, we introduce the Vulnerability-aware Adversarial Training (VAT) method, designed to counteract poisoning attacks in recommender systems. VAT employs a novel vulnerability-aware function to estimate users’ vulnerability based on the degree to which they are fitted by the system. Guided by this evaluation, VAT applies user-specific perturbations to embeddings. thereby not only reducing the success rate of attacks but also preserving—and potentially enhancing—the quality of recommendations. Comprehensive experiments confirm VAT’s superior defensive capabilities against various attacks and recommendation models.</p>
+    <p><strong>Categories:</strong> Adversarial Training, Poisoning Attacks, Robustness, Security, User Vulnerability Analysis, Defense Mechanisms, Recommender Systems, Machine Learning, Adversarial Machine Learning, Security in Recommender Systems (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1045/">See reasoning</a></p>
   </div>
 
     </div>
@@ -113,11 +113,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Toward 100TB Recommendation Models with Embedding Offloading (2024)</h3>
-    <p><strong>Authors:</strong> Sarunya Pumma, Levy Zhao, Joshua Deng, Dennis Van Der Staay, Jian He, Intaik Park, Ehsan Ardestani, Damian Reeves, Yu Guo, Paul Zhang, Henry Tsang</p>
-    <p>Training recommendation models become memory-bound with large embedding tables, and fast GPU memory is scarce. In this paper, we explore embedding caches and prefetch pipelines to effectively leverage large but slow host memory for embedding tables. We introduce Locality-Aware Sharding and iterative planning that automatically size caches optimally and produce effective sharding plans. Embedding Offloading, a system that combines all of these components and techniques, is implemented on top of Meta’s open-source libraries, FBGEMM GPU and TorchRec, and it is used to improve scalability and efficiency of industry-scale production models. Embedding Offloading achieved 37x model scale to 100TB model size with only 26% training speed regression.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Embedding, Scalability, Memory Optimization, System Design, Cache Management, Sharding, Production Systems, Industry Applications, System Performance, GPU Memory, Resource Management (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1178/">See reasoning</a></p>
+    <h3>Optimizing for Participation in Recommender System (2024)</h3>
+    <p><strong>Authors:</strong> Sourabh Bansod, Yaping Zhang, Bibang Liu, Mingyan Gao, Yuan Shao, Arnab Bhadury</p>
+    <p>The traditional recommender system has been designed to mostly optimize for viewer consumption, and with the rise of short form videos, the boundaries between consumption and participation have blurred. This shift presents an opportunity to optimize recommender systems not only for passive consumption, but also for active participation in content creation. In this paper, we document the development of a recommender system that provides inspiration to existing content uploaders and new future content uploaders to encourage participation. Our contributions are two-fold: 1) Inspiration Framework: We present a novel framework for building a recommender system that goes beyond traditional consumption-focused metrics, specifically addressing the need for creative inspiration to lower barriers for participation. This framework is adaptable in the design of large-scale recommender systems in other domains. 2) Empirical Evaluation: We conduct systematic evaluation via live experiments to prove the values of the proposed system in increasing daily participation and participants.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Content Creation, Video Recommendation, Beyond Accuracy, User Engagement, Real-World Applications, Cold Start, Framework Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1167/">See reasoning</a></p>
   </div>
 
     </div>
@@ -125,11 +125,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Enhancing Cross-Domain Recommender Systems with LLMs: Evaluating Bias and Beyond-Accuracy Measures (2024)</h3>
-    <p><strong>Authors:</strong> Thomas Elmar Kolb</p>
-    <p>The research domain of recommender systems is rapidly evolving. Initially, optimization efforts focused primarily on accuracy. However, recent research has highlighted the importance of addressing bias and beyond-accuracy measures such as novelty, diversity, and serendipity. With the rise of multi-domain recommender systems, the need to re-examine bias and beyond-accuracy measures in cross-domain settings has become crucial. Traditional methods face challenges such as cold-start problems, which can potentially be mitigated by leveraging LLMs. This proposed work investigates how LLM-based recommendation methods can enhance cross-domain recommender systems, focusing on identifying, measuring, and mitigating bias while evaluating the impact of beyond-accuracy measures. We aim to provide new insights by comparing traditional and LLM-based systems within a real-world environment encompassing the domains of news, books, and various lifestyle areas. Our research seeks to address the outlined gaps and develop effective evaluation strategies for the unique challenges posed by LLMs in cross-domain recommender systems.</p>
-    <p><strong>Categories:</strong> Cross-Domain Recommender Systems, Large Language Models (LLMs), Bias, Novelty, Diversity, Serendipity, Beyond Accuracy, Cold Start Problem, News Domain, Books Domain, Lifestyle Domain, Real-World Applications, Traditional Recommenders, Neural Networks, Multi-Domain Evaluation, Enhancing Recommender Systems (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1137/">See reasoning</a></p>
+    <h3>Data Augmentation using Reverse Prompt for Cost-Efficient Cold-Start Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Genki Kusano</p>
+    <p>Recommendation systems that use auxiliary information such as product names and categories have been proposed to address the cold-start problem. However, these methods do not perform well when we only have insufficient warm-start training data. On the other hand, large language models (LLMs) can perform as effective cold-start recommendation systems even with limited warm-start data. However, they require numerous API calls for inferences, which leads to high operational costs in terms of time and money. This is a significant concern in industrial applications. In this paper, we introduce a new method, RevAug, which leverages LLMs as a data augmentation to enhance cost-efficient cold-start recommendation systems. To generate pseudo-samples, we have reversed the commonly used prompt for an LLM from “Would this user like this item?” to “What kind of items would this user like?”. Generated outputs by this reverse prompt are pseudo-auxiliary information utilized to enhance recommendation systems in the training phase. In numerical experiments with four real-world datasets, RevAug demonstrated superior performance in cold-start settings with limited warm-start data compared to existing methods. Moreover, RevAug significantly reduced API fees and processing time compared to an LLM-based recommendation method.</p>
+    <p><strong>Categories:</strong> Cold Start, Data Augmentation, Large Language Models (LLMs), Recommendation Systems, Reverse Prompt, Cost Efficiency, Methodology, Performance in Cold-Start Settings, Real-World Applications. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1081/">See reasoning</a></p>
   </div>
 
     </div>
@@ -137,11 +137,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Effective Off-Policy Evaluation and Learning in Contextual Combinatorial Bandits (2024)</h3>
-    <p><strong>Authors:</strong> Yuta Saito, Tatsuhiro Shimizu, Ren Kishimoto, Masahiro Nomura, Koichi Tanaka, Haruka Kiyohara</p>
-    <p>We explore off-policy evaluation and learning in contextual combinatorial bandits (CCB), where a policy selects a subset in the action space. For example, it might choose a set of furniture pieces (a bed and a drawer) from available items (bed, drawer, chair, etc.) for interior design sales. This setting is widespread in fields such as recommender systems and healthcare, yet OPE/L of CCB remains unexplored in the relevant literature. Standard OPE methods typically employ regression and importance sampling in the action subset space. However, they often face significant challenges due to high bias or variance, exacerbated by the exponential growth in the number of available subsets. To address these challenges, we introduce a concept of factored action space, which allows us to decompose each subset into binary indicators. These indicators signify whether each action is included in the selected subset. This formulation allows us to distinguish between the “main effect” derived from the main actions, and the “residual effect”, originating from the supplemental actions, facilitating more effective OPE. Specifically, our estimator, called OPCB, leverages an importance sampling-based approach to unbiasedly estimate the main effect, while employing regression-based approach to deal with the residual effect with low variance. OPCB achieves substantial variance reduction compared to conventional importance sampling methods and bias reduction relative to regression methods under certain conditions, as illustrated in our theoretical analysis. Experiments on both synthetic and real-world datasets demonstrate OPCB’s superior performance over the typical methods, particularly when navigating the complexities of a large action subset space.</p>
-    <p><strong>Categories:</strong> Combinatorial Bandits, Contextual Bandits, Off-Policy Evaluation, Importance Sampling, Regression Methods, Recommender Systems, Healthcare, Scalability, Evaluation Metrics, Multi-Armed Bandits, Real-World Applications, Theoretical Analysis. (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1040/">See reasoning</a></p>
+    <h3>Short-form Video Needs Long-term Interests: An Industrial Solution for Serving Large User Sequence Models (2024)</h3>
+    <p><strong>Authors:</strong> Ben Most, Yuening Li, Qingyun Liu, Liang Liu, Xinyang Yi, Junjie Shan, Shuchao Bi, Lichan Hong, Chuan He, Jiaxi Tang, Diego Uribe, Kaushik Kalyan, Ed Chi</p>
+    <p>Sequential models are invaluable for powering personalized recommendation systems. In the context of short-form video (SFV) feeds, where user behavior history is typically longer, there’s a need for a system to handle users’ long-term interests. However, deploying large sequence models to extensive web-scale applications faces challenges due to high serving cost. To address this, we propose an industrial framework designed for efficiently serving large user sequence models. Specifically, the proposed infrastructure decouples the serving of user sequence model and the main recommendation model, with user sequence model served offline (in an asynchronous manner) with periodical refresh. The proposed infrastructure is also model-agnostic; thus, it can be used to support any types of user sequence models (even LLMs) with controllable costs. Empirical results show that large user models deployed with our framework significantly and consistently enhances the quality of the main recommendation model, with minimal serving costs increase.</p>
+    <p><strong>Categories:</strong> User Sequence Models, Short-form Video, Recommendation Systems, Long-term Interests, Model Serving, Scalability, Cost Efficiency, Industrial Framework, Offline Serving, Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1175/">See reasoning</a></p>
   </div>
 
     </div>
@@ -149,11 +149,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Sliding Window Training – Utilizing Historical Recommender Systems Data for Foundation Models (2024)</h3>
-    <p><strong>Authors:</strong> Ko-Jen Hsiao, Yesu Feng, Sudarshan Lamkhede, Swanand Joshi, Zhe Zhang</p>
-    <p>Long-lived recommender systems (RecSys) often encounter lengthy user-item interaction histories that span many years. To effectively learn long term user preferences, Large RecSys foundation models (FM) need to encode this information in pretraining. Usually, this is done by either generating a long enough sequence length to take all history sequences as input at the cost of large model input dimension or by dropping some parts of the user history to accommodate model size and latency requirements on the production serving side. In this paper, we introduce a sliding window training technique to incorporate long user history sequences during training time without increasing the model input dimension. We show the quantitative \& qualitative improvements this technique brings to the RecSys FM in learning user long term preferences. We additionally show that the average quality of items in the catalog learnt in pretraining also improves.</p>
-    <p><strong>Categories:</strong> Recommender Systems (RecSys), Foundation Models, Training Techniques, Sliding Window, Historical Data Utilization, Model Optimization, User Preferences Learning, Catalog Quality, Pretraining Methods, Scalability, Time Series Analysis, Model Efficiency, Evaluation Metrics, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1176/">See reasoning</a></p>
+    <h3>Comparative Analysis of Pretrained Audio Representations in Music Recommender Systems (2024)</h3>
+    <p><strong>Authors:</strong> Yan-Martin Tamm, Anna Aljanaki</p>
+    <p>Over the years, Music Information Retrieval (MIR) has proposed various foundation models pretrained on large amounts of music data. Transfer learning showcases proven effectiveness of foundation models with a broad spectrum of downstream tasks, including auto-tagging and genre classification. However, MIR papers generally do not explore the efficiency of foundation models for Music Recommender Systems (MRS). In addition, the Recommender Systems (RS) community tends to favour traditional end-to-end neural network learning over these models. Our research addresses this gap and evaluates the applicability of six pretrained foundation models (MusicFM, Music2Vec, MERT, EncodecMAE, Jukebox, and MusiCNN) in the context of MRS. We assess their performance using three recommendation models: K-nearest neighbours (KNN), shallow neural network, and BERT4Rec. Our findings suggest that these models exhibit significant performance variability between traditional MIR tasks and MRS, indicating that valuable aspects of musical information captured by foundation models may differ depending on the task. This study establishes a foundation for further exploration of pretrained foundation models to enhance music recommendation systems.</p>
+    <p><strong>Categories:</strong> Pretrained Models, Music Recommender Systems, Transfer Learning, Evaluation Methods, Music Information Retrieval, Neural Networks, Recommendation Algorithms, Audio Representations (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1084/">See reasoning</a></p>
   </div>
 
     </div>
@@ -161,11 +161,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Playlist Search Reinvented: LLMs Behind the Curtain (2024)</h3>
-    <p><strong>Authors:</strong> Tarun Sharma, Siddharth Sharma, Geetha Aluri, Joaquin Delgado</p>
-    <p>Improving search functionality poses challenges such as data scarcity for model training, metadata enrichment for comprehensive document indexing, and the labor-intensive manual annotation for evaluation. Traditionally, iterative methods relying on human annotators and customer feedback have been used. However, recent advancements in Large Language Models (LLMs) offer new solutions. This paper focuses on applying LLMs to playlist search in Amazon Music. Leveraging LLMs’ contextual understanding and generative capabilities automates metadata enrichment, reducing manual efforts and expediting training. LLMs also address data scarcity by generating synthetic training data and serve as scalable judges for evaluation, enhancing search performance assessment. We demonstrate how these innovations enhance playlist search, overcoming traditional limitations to improve search result accuracy and relevance.</p>
-    <p><strong>Categories:</strong> Large Language Models (LLMs), Music, Entertainment, Search Functionality, Evaluation Methods, Data Generation/Synthesis, Real-World Applications, Automation, Scalability, Metadata Enrichment (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1169/">See reasoning</a></p>
+    <h3>Multi-Behavioral Sequential Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Shereen Elsayed, Lars Schmidt-Thieme, Ahmed Rashed</p>
+    <p>Sequential recommendation models are crucial for next-item prediction tasks in various online platforms, yet many focus on a single behavior, neglecting valuable implicit interactions. While multi-behavioral models address this using graph-based approaches, they often fail to capture sequential patterns simultaneously. Our proposed Multi-Behavioral Sequential Recommendation framework (MBSRec) captures the multi-behavior dependencies between the heterogeneous historical interactions via multi-head self-attention. Furthermore, we utilize a weighted binary cross-entropy loss for precise behavior control. Experimental results on four datasets demonstrate MBSRec’s significant outperformance of state-of-the-art approaches. The implementation code is available here (https://drive.google.com/drive/folders/1EGRQutc9xtVYbsbXswUcTb9nvT1Tc9cZ?usp=sharing) during the review and will be added to GitHub upon acceptance.</p>
+    <p><strong>Categories:</strong> Multi-Behavioral Models, Sequential Recommendation, Implicit Feedback, Attention Mechanism, Recommender Systems, Loss Function Optimization, Deep Learning, Evaluation Metrics, Implementation Details, Cross-Entropy Loss, Multi-Head Self Attention, Heterogeneous Interactions (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1101/">See reasoning</a></p>
   </div>
 
     </div>
@@ -185,11 +185,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Revisiting LightGCN: Unexpected Inflexibility, Inconsistency, and A Remedy Towards Improved Recommendation (2024)</h3>
-    <p><strong>Authors:</strong> Geon Lee, Kijung Shin, Kyungho Kim</p>
-    <p>Graph Neural Networks (GNNs) have emerged as effective tools in recommender systems. Among various GNN models, LightGCN is distinguished by its simplicity and outstanding performance. Its efficiency has led to widespread adoption across different domains, including social, bundle, and multimedia recommendations. In this paper, we thoroughly examine the mechanisms of LightGCN, focusing on its strategies for scaling embeddings, aggregating neighbors, and pooling embeddings across layers. Our analysis reveals that, contrary to expectations based on its design, LightGCN suffers from inflexibility and inconsistency when applied to real-world data. We introduce LightGCN++, an enhanced version of LightGCN designed to address the identified limitations. LightGCN++ incorporates flexible scaling of embedding norms and neighbor weighting, along with a tailored approach for pooling layer-wise embeddings to resolve the identified inconsistencies. Despite its remarkably simple remedy, extensive experimental results demonstrate that LightGCN++ significantly outperforms LightGCN, achieving an improvement of up to 17.81% in terms of NDCG@20. Furthermore, state-of-the-art models utilizing LightGCN as a backbone for item, bundle, multimedia, and knowledge-graph-based recommendations exhibit improved performance when equipped with LightGCN++.</p>
-    <p><strong>Categories:</strong> Graph Neural Networks (GNNs), Recommendation Systems, LightGCN, Algorithm Design, Evaluation Metrics, Embedding Techniques, Social Recommendations, Bundle Recommendations, Multimedia Recommendations, Model Limitations, Algorithm Optimization, Recommendation Quality (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1110/">See reasoning</a></p>
+    <h3>The MovieLens Beliefs Dataset: Collecting Pre-Choice Data for Online Recommender Systems (2024)</h3>
+    <p><strong>Authors:</strong> Guy Aridor, Duarte Goncalves, Daniel Kluver, Ruoyan Kong, Joseph Konstan</p>
+    <p>An increasingly important aspect of designing recommender systems involves considering how recommendations will influence consumer choices. This paper addresses this issue by introducing a method for collecting user beliefs about un-experienced items – a critical predictor of choice behavior. We implemented this method on the MovieLens platform, resulting in a rich dataset that combines user ratings, beliefs, and observed recommendations. We document challenges to such data collection, including selection bias in response and limited coverage of the product space. This unique resource empowers researchers to delve deeper into user behavior and analyze user choices absent recommendations, measure the effectiveness of recommendations, and prototype algorithms that leverage user belief data, ultimately leading to more impactful recommender systems.</p>
+    <p><strong>Categories:</strong> User Behavior, Pre-Choice Data, Recommender Systems, MovieLens, Dataset, User Feedback, Recommendation Algorithms, Research Methods, Movies, Data Collection Challenges, Recommender Systems Design, Evaluation Metrics, Algorithm Development, Belief Modeling, User Choices, Cold Start (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1106/">See reasoning</a></p>
   </div>
 
     </div>
@@ -197,11 +197,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Is It Really Complementary? Revisiting Behavior-based Labels for Complementary Recommendation (2024)</h3>
-    <p><strong>Authors:</strong> Kazushi Okamoto, Kai Sugahara, Chihiro Yamasaki</p>
-    <p>Complementary recommendation is a type of item-to-item recommendation that recommends what should be purchased together for an item. Previous studies have traditionally used behavior-based labels (BBLs) that are constructed from the co-purchase logs of users for training and evaluation because rigorous label construction for complements is inefficient. However, the fact that many item pairs in BBLs are not functionally complementary, even though they are frequently co-purchased, has been overlooked. This study aimed to re-evaluate the validity of BBLs through functional relationships and provide directions for their improvement. Quantitative analysis using manually annotated function-based labels (FBLs) as correct labels revealed that the accuracy of the complementary recommendations generated by BBLs was below 50%, suggesting potential functional incompatibility within BBLs. Existing models that were trained on BBLs were similarly inaccurate, indicating the unreliability of the evaluations in existing studies. Finally, we proposed a label correction method for BBLs using a small set of FBLs, thereby providing a direction for reliable complementary recommendations.</p>
-    <p><strong>Categories:</strong> Complementary Recommendations, Behavior-based Labels (BBLs), Item-to-Item Recommendations, Functional Relationships, Evaluation Metrics, Label Correction, Data Annotation, Recommendation Systems, E-commerce, Reliability. (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1196/">See reasoning</a></p>
+    <h3>Cross-Domain Latent Factors Sharing via Implicit Matrix Factorization (2024)</h3>
+    <p><strong>Authors:</strong> Alexey Vasilev, Anton Vakhrushev, Evgeny Frolov, Abdulaziz Samra, Alexander Grigorevskiy</p>
+    <p>Data sparsity has been one of the long-standing problems for recommender systems. One of the solutions to mitigate this issue is to exploit knowledge available in other source domains. However, many cross-domain recommender systems introduce a complex architecture that makes them less scalable in practice. On the other hand, matrix factorization methods are still considered to be strong baselines for single-domain recommendations. In this paper, we introduce the CDIMF, a model that extends the standard implicit matrix factorization with ALS to cross-domain scenarios. We apply the Alternating Direction Method of Multipliers to learn shared latent factors for overlapped users while factorizing the interaction matrix. In a dual-domain setting, experiments on industrial datasets demonstrate a competing performance of CDIMF for both cold-start and warm-start. The proposed model can outperform most other recent cross-domain and single-domain models.</p>
+    <p><strong>Categories:</strong> Matrix Factorization, Cross-Domain, Data Sparsity, Scalability, Cold Start, Recommender Systems, Implicit Feedback, Alternating Least Squares (ALS), Latent Factors, Evaluation Metrics Beyond Accuracy (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1029/">See reasoning</a></p>
   </div>
 
     </div>
@@ -209,11 +209,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>A Multimodal Single-Branch Embedding Network for Recommendation in Cold-Start and Missing Modality Scenarios (2024)</h3>
-    <p><strong>Authors:</strong> Anna Hausberger, Markus Schedl, Christian Ganhör, Shah Nawaz, Marta Moscati</p>
-    <p>Most recommender systems adopt collaborative filtering (CF) and provide recommendations based on past collective interactions. Therefore, the performance of CF algorithms degrades when few or no interactions are available, a scenario referred to as cold-start. To address this issue, previous work relies on models leveraging both collaborative data and side information on the users or items. Similar to multimodal learning, these models aim at combining collaborative and content representations in a shared embedding space. In this work we propose a novel technique for multimodal recommendation, relying on a multimodal Single-Branch embedding network for Recommendation (SiBraR). Leveraging weight-sharing, SiBraR encodes interaction data as well as multimodal side information using the same single-branch embedding network on different modalities. This makes SiBraR effective in scenarios of missing modality, including cold start. Our extensive experiments on large-scale recommendation datasets from three different recommendation domains (music, movie, and e-commerce) and providing multimodal content information (audio, text, image, labels, and interactions) show that SiBraR significantly outperforms CF as well as state-of-the-art content-based RSs in cold-start scenarios, and is competitive in warm scenarios. We show that SiBraR’s recommendations are accurate in missing modality scenarios, and that the model is able to map different modalities to the same region of the shared embedding space, hence reducing the modality gap.</p>
-    <p><strong>Categories:</strong> Recommender Systems, Multimodal Learning, Cold Start, Missing Modality, Embedding Networks, Collaborative Filtering, Content-Based Recommendations, Music, Movies, E-commerce, Large-Scale Datasets, Performance Improvement (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1018/">See reasoning</a></p>
+    <h3>Low Rank Field-Weighted Factorization Machines for Low Latency Item Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Ariel Raviv, Tularam Ban, Alex Shtoff, Oren Somekh, Michael Viderman, Naama Haramaty-Krasne</p>
+    <p>Factorization machine (FM) variants are widely used in recommendation systems that operate under strict throughput and latency requirements, such as online advertising systems. FMs have two prominent strengths. First, is their ability to model pairwise feature interactions while being resilient to data sparsity by learning factorized representations. Second, their computational graphs facilitate fast inference and training. Moreover, when items are ranked as a part of a query for each incoming user, these graphs facilitate computing the portion stemming from the user and context fields only once per query.  Thus, the computational cost for each ranked item is proportional only to the number of fields that vary among the ranked items. Consequently, in terms of inference cost, the number of user or context fields is practically unlimited. More advanced variants of FMs, such as field-aware and field-weighted FMs, provide better accuracy by learning a representation of field-wise interactions, but require computing all pairwise interaction terms explicitly. In particular, the computational cost during inference is proportional to the square of the number of fields, including user, context, and item. When the number of fields is large, this is prohibitive in systems with strict latency constraints, and imposes a limit on the number of user and context fields for a given computational budget. To mitigate this caveat, heuristic pruning of low intensity field interactions is commonly used to accelerate inference. In this work we propose an alternative to the pruning heuristic in field-weighted FMs using a diagonal plus symmetric low-rank decomposition. Our technique reduces the computational cost of inference, by allowing it to be proportional to the number of item fields only. Using a set of experiments on real-world datasets, we show that aggressive rank reduction outperforms similarly aggressive pruning, both in terms of accuracy and item recommendation speed. Beyond computational complexity analysis, we corroborate our claim of faster inference experimentally, both via a synthetic test, and by having deployed our solution to a major online advertising system, where we observed significant ranking latency improvements. We made the code to reproduce the results on public datasets and synthetic tests available at https://anonymous.4open.science/r/pytorch-fm-0EC0.</p>
+    <p><strong>Categories:</strong> Factorization Machines (FM), Matrix Factorization, Online Advertising, Low Latency, Computational Efficiency, Field-Weighted Factorization Machines, Inference Optimization, Real-World Applications, Performance Evaluation, Low Rank Decomposition (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1048/">See reasoning</a></p>
   </div>
 
     </div>
@@ -221,11 +221,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Context-based Entity Recommendation for Knowledge Workers: Establishing a Benchmark on Real-life Data (2024)</h3>
-    <p><strong>Authors:</strong> Mahta Bakhshizadeh, Heiko Maus, Andreas Dengel</p>
-    <p>In recent decades, recommender systems have undergone significant advancements, particularly in popular domains like movies, music, and product recommendations. Yet, progress has been notably slower in leveraging these systems for personal information management and knowledge assistance. In addition to challenges that complicate the adoption of recommender systems in this domain (such as privacy concerns, heterogeneous recommendation items, and frequent context switching), a significant barrier to progress in this area has been the absence of a standardized benchmark for researchers to evaluate their approaches. In response to this gap, this paper presents a benchmark built upon a publicly available dataset of real-life knowledge work in context (RLKWiC). This benchmark focuses on evaluating context-based entity recommendation, a use case for leveraging recommender systems to support knowledge workers in their daily digital tasks. By providing this benchmark, it is aimed to facilitate and accelerate research efforts in enhancing personal knowledge assistance through recommender systems.</p>
-    <p><strong>Categories:</strong> Recommender Systems, Knowledge Management, Information Management, Real-world Applications, Privacy, Heterogeneous Data, Context-based Recommendations, Benchmarking, Evaluation Metrics, Dataset Development, Workflows, User Behavior, Personalization, Knowledge Workers (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1107/">See reasoning</a></p>
+    <h3>End-to-End Cost-Effective Incentive Recommendation under Budget Constraint with Uplift Modeling (2024)</h3>
+    <p><strong>Authors:</strong> Yunpeng Weng, Xiuqiang He, Hao Yang, Dugang Liu, Xing Tang, Zexu Sun</p>
+    <p>In modern online platforms, incentive (<i>e.g</i>., discounts, bonus) are essential factors that enhance user engagement and increase platform revenue. Over recent years, uplift modeling has been introduced as a strategic approach to assign incentive to individual customers. Especially, in many real-world applications, online platforms can only incentivize customers with specific budget constraints. This problem can be reformulated as the multi-choice knapsack problem (MCKP). The objective of this optimization is to select the optimal incentive for each customer in order to maximize the return-on-investment (ROI). Recent works in this field frequently tackle the problem of budget allocation using a two-stage approach. %: the first stage utilizes causal inference algorithms to estimate the individual treatment effect or uplift, while the second stage employs integer programming techniques to determine the optimal solution for budget allocation. However, this solution is confronted with the following challenges: (1) The commonly used causal inference methods often ignore the domain knowledge in online marketing, where the expected response curve of a customer should be monotonic and smooth as the incentive increases. (2) There is an optimality gap between the two stages, resulting in inferior sub-optimal allocation performance, which is due to the loss of the incentive recommendation information for the uplift prediction under the limited budget constraint. To address these challenges, we propose a novel <u>E</u>nd-to-<u>E</u>nd Cost-<u>E</u>ffective <u>I</u>ncentive <u>R</u>ecommendation (E$^3$IR) model under the budget constraint. Specifically, our methods consist of two modules: the uplift prediction module and the differentiable allocation module. In the uplift prediction module, we construct prediction heads to capture the incremental improvement between adjacent treatments with the marketing domain constraints (<i>i.e.</i>, monotonic and smooth). %To obtain a monotonic user response curve, we constrain the output of each prediction head to be non-negative. In the differentiable allocation module, we incorporate integer linear programming (ILP) as a differentiable layer input. Furthermore, we conduct extensive experiments on both public and real product datasets, which demonstrate that our E$^3$IR improves allocation performance compared to existing two-stage approaches.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Marketing Strategies, E-commerce, Uplift Modeling, Resource Management, Optimization, Causal Inference, Integer Linear Programming, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1038/">See reasoning</a></p>
   </div>
 
     </div>
@@ -233,11 +233,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Scaling Law of Large Sequential Recommendation Models (2024)</h3>
-    <p><strong>Authors:</strong> Hongyu Lu, Yu Chen, Wayne Xin Zhao, Gaowei Zhang, Yupeng Hou, Ji-Rong Wen</p>
-    <p>Scaling of neural networks has recently shown great potential to improve the model capacity in various fields. Specifically, model performance has a power-law relationship with model size or data size, which provides important guidance for the development of large-scale models. However, there is still limited understanding on the scaling effect of user behavior models in recommender systems, where the unique data characteristics (e.g., data scarcity and sparsity) pose new challenges in recommendation tasks. In this work, we focus on investigating the scaling laws in large sequential recommendation models. Specifically, we consider a pure ID-based task formulation, where the interaction history of a user is formatted as a chronological sequence of item IDs. We don’t incorporate any side information (e.g., item text), to delve into the scaling law’s applicability from the perspective of user behavior. We successfully scale up the model size to 0.8B parameters, making it feasible to explore the scaling effect in a diverse range of model sizes. As the major findings, we empirically show that the scaling law still holds for these trained models, even in data-constrained scenarios. We then fit the curve for scaling law, and successfully predict the test loss of the two largest tested model scales. Furthermore, we examine the performance advantage of scaling effect on five challenging recommendation tasks, considering the unique issues (e.g., cold start, robustness, long-term preference) in recommender systems. We find that scaling up the model size can greatly boost the performance on these challenging tasks, which again verifies the benefits of large recommendation models.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Scaling Laws, Sequential Recommendations, Model Scalability, Large-Scale Models, User Behavior Modeling, Cold Start Problem, Evaluation Metrics, Data Sparsity, Model Capacity (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1065/">See reasoning</a></p>
+    <h3>Pay Attention to Attention for Sequential Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Xiaojing Liu, Yuli Liu, Min Liu</p>
+    <p>Transformer-based approaches have demonstrated remarkable success in various sequence-based tasks. However, traditional self-attention models may not sufficiently capture the intricate dependencies within items in sequential recommendation scenarios. This is due to the lack of explicit emphasis on attention weights, which play a critical role in allocating attention and understanding item-to-item correlations. To better exploit the potential of attention weights and improve the capability of sequential recommendation in learning high-order dependencies, we propose a novel sequential recommendation (SR) approach called attention weight refinement (AWRSR). AWRSR enhances the effectiveness of self-attention by additionally paying attention to attention weights, allowing for more refined attention distributions of correlations among items. We conduct comprehensive experiments on multiple real-world datasets, demonstrating that our approach consistently outperforms state-of-the-art SR models. Moreover, we provide a thorough analysis of AWRSR’s effectiveness in capturing higher-level dependencies. These findings suggest that AWRSR offers a promising new direction for enhancing the performance of self-attention architecture in SR tasks, with potential applications in other sequence-based problems as well.</p>
+    <p><strong>Categories:</strong> Sequential Recommendations, Attention Mechanisms, Transformer-Based Models, Recommendation Systems, Higher-Order Dependencies, Model Performance, Experimental Analysis, Item Correlations, Real-World Applications, Novel Methods, Attention Weight Refinement, Self-Attention Architecture, Machine Learning for Recommendations, Potential Applications in Other Domains (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1104/">See reasoning</a></p>
   </div>
 
     </div>
@@ -245,11 +245,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Accelerating the Surrogate Retraining for Poisoning Attacks against Recommender Systems (2024)</h3>
-    <p><strong>Authors:</strong> Yunfan Wu, Shuchang Tao, Qi Cao, Huawei Shen, Fei Sun, Kaike Zhang</p>
-    <p>Recent studies have demonstrated the vulnerability of recommender systems to data poisoning attacks, where adversaries inject carefully crafted fake user interactions into the training data to manipulate recommendations for target items.Current attack methods involve iterative retraining a surrogate recommender on the poisoned data with latest fake users to optimize the attack. However, this repetitive retraining is highly time-consuming, hindering the efficient assessment and optimization of fake users. To mitigate this computational bottleneck and develop a more effective attack in an affordable time, we analyze the retraining process and find that a change in the representation of one user/item will cause a cascading effect through the user-item interaction graph. Under theoretical guidance, we introduce Gradient Passing (GP),  a novel technique that explicitly passes gradients between interacted user-item pairs during backpropagation, thereby approximate the cascading effect and accelerating retraining. With just a single training step, GP can achieve effects comparable to multiple original steps. Under the same number of retraining epochs, GP enables a closer approximation of the surrogate recommender to the victim. This improved approximation provides better guidance for optimizing fake users, ultimately leading to enhanced data poisoning attacks. Extensive experiments on real-world datasets demonstrate the efficiency and effectiveness of our proposed GP.</p>
-    <p><strong>Categories:</strong> Recommender Systems, Data Poisoning Attacks, Adversarial Machine Learning, Gradient Passing, Surrogate Model Retraining, User/Item Interaction Graphs, Cascading Effects, Backpropagation Optimization (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1024/">See reasoning</a></p>
+    <h3>DNS-Rec: Data-aware Neural Architecture Search for Recommender Systems (2024)</h3>
+    <p><strong>Authors:</strong> Zijian Zhang, Xiangyu Zhao, Ruocheng Guo, Sheng Zhang, Chenyi Zhuang, Jinjie Gu, Yao Zhao, Hongzhi Yin, Maolin Wang</p>
+    <p>In the era of data proliferation, efficiently sifting through vast information to extract meaningful insights has become increasingly crucial. This paper addresses the computational and resource inefficiencies prevalent in existing Sequential Recommender Systems (SRSs). However, existing SRSs are often plagued by significant computational overhead and resource inefficiency during the inference stage. To address these challenges, we introduce an innovative approach combining pruning methods with advanced model designs. Furthermore, we delve into resource-constrained Neural Architecture Search (NAS), an emerging technique in recommender systems, to optimize models in terms of FLOPs, latency, and energy consumption while maintaining or enhancing accuracy. Our principal contribution is the development of a Data-aware Neural Architecture Search for Recommender System (DNS-Rec). DNS-Rec is specifically designed to tailor compact network architectures for attention-based SRS models, thereby ensuring accuracy retention. It incorporates data-aware gates to enhance the performance of the recommendation network by learning information from historical user-item interactions. Moreover, DNS-Rec employs a dynamic resource constraint strategy, stabilizing the search process and yielding more suitable architectural solutions. We demonstrate the effectiveness of our approach through rigorous experiments conducted on three benchmark datasets, which highlight the superiority of DNS-Rec in SRSs. Our findings set a new standard for future research in efficient and accurate recommendation systems, marking a significant step forward in this rapidly evolving field.</p>
+    <p><strong>Categories:</strong> Neural Architecture Search, Recommender Systems, Sequential Recommender Systems (SRSs), Computational Efficiency, Resource Optimization, Attention-Based Models, Data-Aware Methods, Pruning Techniques, Scalability, Energy Efficiency, Dynamic Resource Allocation, Model Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1027/">See reasoning</a></p>
   </div>
 
     </div>
@@ -257,11 +257,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Neighborhood-Based Collaborative Filtering for Conversational Recommendation (2024)</h3>
-    <p><strong>Authors:</strong> Julian Mcauley, Zhouhang Xie, Nathan Kallus, Dawen Liang, Rahul Jha, Hyunsik Jeon, Zhankui He, Harald Steck, Junda Wu</p>
-    <p>Conversational recommender systems (CRS) should understand users’ expressed interests that are frequently semantically rich and knowledge intensive. Prior works attempt to address this challenge by making use of external knowledge bases or parametric knowledge in large language models (LLMs). In this paper, we study a complementary solution, exploiting item knowledge in the training data. We hypothesise that many inference-time user requests can be answered via reusing popular crowd-written answers associated with similar training queries. Following this intuition, we define a class of neighborhood-based CRS that make recommendations by identifying popular items associated with similar training dialogue contexts. Experiments on Inspired, Redial, and Reddit benchmarks show that despite its simplicity, our method achieves comparable to better performance than state-of-the-art LLM-based methods with over 200 times more parameters. We also show neighborhood and model-based predictions can be combined to achieve further performance improvements over both components.</p>
-    <p><strong>Categories:</strong> Collaborative Filtering, Conversational Recommender Systems, Neighborhood-Based Methods, Similarity-Based Recommendations, Hybrid Recommendations, Performance Evaluation, Recommendation Quality, Crowd-Written Answers, Item Knowledge Utilization, Beyond Accuracy, Efficiency, Recommendation Systems (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1100/">See reasoning</a></p>
+    <h3>Scene-wise Adaptive Network for Dynamic Cold-start Scenes Optimization in CTR Prediction (2024)</h3>
+    <p><strong>Authors:</strong> Chao Tang, Wenhao Li, Jie Zhou, Shixiong Zhao, Chuan Luo, Kun Zhang</p>
+    <p>In the realm of modern mobile E-commerce, providing users with nearby commercial service recommendations through location-based online services has become increasingly vital. While machine learning approaches have shown promise in multi-scene recommendation, existing methodologies often struggle to address cold-start problems in unprecedented scenes: the increasing diversity of commercial choices, along with the short online lifespan of scenes, give rise to the complexity of effective recommendations in online and dynamic scenes. In this work, we propose Scene-wise Adaptive Network (SwAN), a novel approach that emphasizes high-performance cold-start online recommendations for new scenes. Our approach introduces several crucial capabilities, including scene similarity learning, user-specific scene transition cognition, scene-specific information construction for the new scene, and enhancing the diverged logical information between scenes. We demonstrate SwAN’s potential to optimize dynamic multi-scene recommendation problems by effectively online handling cold-start recommendations for any newly arrived scenes. More encouragingly, SwAN has been successfully deployed in Company M’s online catering recommendation service, which serves millions of customers per day, and SwAN has achieved a 5.64% CTR index improvement relative to the baselines and a 5.19% increase in daily order volume proportion.</p>
+    <p><strong>Categories:</strong> Scene-wise Adaptive Network (SwAN), Neural Networks, Cold Start, Multi-scene Recommendations, Dynamic Scenarios, Recommendation Systems, Mobile E-commerce, Catering Services, Location-based Services, Evaluation Metrics, Beyond Accuracy, Real-world Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1063/">See reasoning</a></p>
   </div>
 
     </div>
@@ -269,11 +269,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Bridging Viewpoints in News with Recommender Systems (2024)</h3>
-    <p><strong>Authors:</strong> Jia Hua Jeng</p>
-    <p>News Recommender systems (NRSs) aid in decision-making in news media. However, undesired effects can emerge. Among these are selective exposures that may contribute to polarization, potentially reinforcing existing attitudes through belief perseverance—discounting contrary evidence due to their opposing attitudinal strength. This can be unsafe for people, making it difficult to accept information objectively. A crucial issue in news recommender system research is how to mitigate these undesired effects by designing recommender interfaces and machine learning models that enable people to consider to be more open to different perspectives. Alongside accurate models, the user experience is an equally important measure. Indeed, the core statistics are based on users’ behaviors and experiences in this research project. Therefore, this research agenda aims to steer the choices of readers’ based on altering their attitudes. The core methods plan to concentrate on the interface design and ML model building involving manipulations of cues, users’ behaviors prediction, NRSs algorithm and changing the nudges. In sum, the project aims to provide insight in the extent to which news recommender systems can be effective in mitigating polarized opinions.</p>
-    <p><strong>Categories:</strong> Machine Learning, News Recommender Systems, Bias Mitigation, Personalization, User Experience, Interface Design, Behavior Prediction, Nudge Theory, Selective Exposure, Diversity of Recommendations, Perspective Bridging, Accuracy in Recommendations, Attitude Alteration, Media, Public Opinion, Social Impact (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1135/">See reasoning</a></p>
+    <h3>Leveraging LLM generated labels to reduce bad matches in job recommendations (2024)</h3>
+    <p><strong>Authors:</strong> Dheeraj Toshniwal, Yingchi Pei, Yi Wei Pang, Nilanjan Sengupta</p>
+    <p>Negative signals are increasingly employed to enhance recommendation quality. However, explicit negative feedback is often sparse and may disproportionately reflect the preferences of more vocal users. Commonly used implicit negative feedback, such as impressions without positive interactions, has the limitation of not accurately capturing users’ true negative preferences because users mainly pursue information they consider interesting. In this work, we present an approach that leverages fine-tuned Large Language Models (LLMs) to evaluate matches and generate negative signals at scale while maintaining cost efficiency. We demonstrate significant improvements in recommendation quality by deploying a traditional classifier trained using LLM-generated labels.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Job Recommendations, Negative Feedback Mechanisms, Large Language Models (LLMs), Implicit Feedback Analysis, Model Fine-Tuning, Scalability in ML Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1171/">See reasoning</a></p>
   </div>
 
     </div>
@@ -281,11 +281,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Can editorial decisions impair journal recommendations? Analysing the impact of journal characteristics on recommendation systems (2024)</h3>
-    <p><strong>Authors:</strong> Elias Entrup, Anett Hoppe, Ralph Ewerth</p>
-    <p>Recommendation services for journals help scientists choose appropriate publication venues for their research results. They often use a semantic matching process to compare e.g. an abstract against already published articles. As these services can guide a researcher’s decision, their fairness and neutrality are critical qualities. However, the impact of journal characteristics (such as the abstract length) on recommendations is understudied. In this paper, we investigate whether editorial journal characteristics can lead to biased rankings from recommendation services, i.e. if editorial choices can systematically lead to a better ranking of one’s own journal. The performed experiments show that longer abstracts or a higher number of articles per journal can boost the rank of a journal in the recommendations. We apply these insights to an active, open-source journal recommendation system. The adaptation of the algorithm leads to an increased accuracy for smaller journals.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Journal Publishing, Bias in Recommendations, Editorial Decisions, Algorithm Adaptation, Open-Source Tools, Academic Publishing, Journal Characteristics, Fairness in AI/ML, Semantic Matching, User Impact (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1083/">See reasoning</a></p>
+    <h3>Pareto Front Approximation for Multi-Objective Session-Based Recommender Systems (2024)</h3>
+    <p><strong>Authors:</strong> Timo Wilm, Philipp Normann, Felix Stepprath</p>
+    <p>This work introduces MultiTRON, an approach that adapts Pareto front approximation techniques to multi-objective session-based recommender systems using a transformer neural network. Our approach optimizes trade-offs between key metrics such as click-through and conversion rates by training on sampled preference vectors. A significant advantage is that after training, a single model can access the entire Pareto front, allowing it to be tailored to meet the specific requirements of different stakeholders by adjusting an additional input vector that weights the objectives. We validate the model’s performance through extensive offline and online evaluation. For broader application and research, the source code is made available. The results confirm the model’s ability to manage multiple recommendation objectives effectively, offering a flexible tool for diverse business needs.</p>
+    <p><strong>Categories:</strong> Multi-objective optimization, Session-based recommendations, Pareto front approximation, Transformer neural networks, Offline evaluation, Online evaluation, Recommendation systems, Real-world applications, Evaluation techniques, Deep learning approaches (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1166/">See reasoning</a></p>
   </div>
 
     </div>

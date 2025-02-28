@@ -45,12 +45,17 @@
       
         
           <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+             href="/recsys-recommender/category/user-centric-design/">User-Centric Design</a>
         
       
         
@@ -60,17 +65,12 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+             href="/recsys-recommender/category/user-behavior/">User Behavior</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/fairness/">Fairness</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
         
       
         
@@ -80,7 +80,7 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
         
       
     </div>
@@ -91,35 +91,23 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Co-optimize Content Generation and Consumption in a Large Scale Video Recommendation System (2024)</h3>
-    <p><strong>Authors:</strong> Yuening Li, Mingyan Gao, Qingyun Liu, Sourabh Bansod, Shuchao Bi, Liang Liu, Yaping Zhang, Zhen Zhang</p>
-    <p>Multi-task prediction models and value models are the de-facto standard ranking components in modern large-scale content recommendation systems. However, they are typically optimized to model users’ passive consumption behaviors, and rank content in a way to grow only consumption-centric values. In this talk, we discuss the key insight that it is possible to model sparse participatory content-generation actions as well and grow ecosystem value through a new ranking system. We made the following key technical contributions in this system: (1) introducing ranking for content generation based on a categorization of user participation actions of different sparsity, including proxy intent action or access point clicks. (2) improving sparse task prediction quality and stability by causal task relationship modeling, conditional loss modeling and ResNet based shared bottom network. (3) personalizing the value model to minimize conflicts between different values, through e.g. ranking inspiring content higher for users who actively generate content. (4) conducting systematic evaluation of proposed approach in a large short-form video UGC (User-Generated Content) platform.</p>
-    <p><strong>Categories:</strong> Multi-Task Learning, Video Recommendation, User-Generated Content, Content Generation, Large-Scale Systems, Evaluation Metrics, Causal Modeling, Network Architecture, User Participation, Scalability, Content Creation, User-Centric Design (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1156/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Bridging Search and Recommendation in Generative Retrieval: Does One Task Help the Other? (2024)</h3>
-    <p><strong>Authors:</strong> Marco De Nadai, Ali Vardasbi, Enrico Palumbo, Hugues Bouchard, Gustavo Penha</p>
-    <p>Generative retrieval for search and recommendation is a promising paradigm for retrieving items, offering an alternative to traditional methods that depend on external indexes and nearest-neighbor searches. Instead, generative models directly associate inputs with item IDs. Given the impressive capabilities of Large Language Models (LLMs), these generative systems play a crucial role in centralizing a variety of Information Retrieval (IR) tasks in a single model that performs tasks such as query understanding, retrieval, recommendation, explanation, re-ranking, and response generation. Despite the growing interest in such a unified generative approach for IR systems, the advantages of using a single, multi-task model over multiple specialized models are not well established in the literature. This paper investigates whether and when such a unified approach can outperform task-specific models in the IR tasks of search and recommendation, broadly co-existing in multiple industrial online platforms, such as Spotify, YouTube, and Netflix. Previous work shows that (1) the latent representations of items, learned by generative recommenders, are biased towards popularity, and (2) content-based and collaborative-filtering-based information can improve an item’s representations. Motivated by this, our study is guided by two hypotheses: [H1] the joint training regularizes the estimation of each item’s popularity, and [H2] the joint training regularizes the item’s latent representations, where search captures content-based aspects of an item and recommendation captures collaborative-filtering aspects. Our extensive experiments with both simulated and real-world data support both [H1] and [H2] as key contributors to the effectiveness improvements observed in the unified search and recommendation generative models over the single-task approaches.</p>
-    <p><strong>Categories:</strong> Generative Models, Large Language Models (LLMs), Information Retrieval (IR), Search Systems, Recommendation Systems, Multi-Task Learning, Real-World Applications, Evaluation Metrics, Latent Representations, Popularity Bias, Collaborative Filtering, Content-Based Filtering, Explanation Generation, Industrial Applications (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1030/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
     <h3>Utilizing Non-click Samples via Semi-supervised Learning for Conversion Rate Prediction (2024)</h3>
     <p><strong>Authors:</strong> Junhao Wang, Dongbo Huang, Shanyang Jiang, Lan Zhang, Cheng Ding, Lan Xu, Jiahui Huang</p>
     <p>Conversion rate (CVR) prediction is essential in recommendation systems, facilitating precise matching between recommended items and users’ preferences. However, the sample selection bias (SSB) and data sparsity (DS) issues pose challenges to accurate prediction. Existing works have proposed the click-through and conversion rate (CTCVR) prediction task which models samples from exposure to “click and conversion” in entire space and incorporates multi-task learning. This approach has shown efficacy in mitigating these challenges. Nevertheless, it intensifies the false negative sample (FNS) problem. To be more specific, the CTCVR task implicitly treats all the CVR labels of non-click samples as negative, overlooking the possibility that some samples might convert if clicked. This oversight can negatively impact CVR model performance, as empirical analysis has confirmed. To this end, we advocate for discarding the CTCVR task and proposing a Non-click samples Improved Semi-supErvised (NISE) method for conversion rate prediction, where the non-click samples are treated as unlabeled. Our approach aims to predict their probabilities of conversion if clicked, utilizing these predictions as pseudo-labels for further model training. This strategy can help alleviate the FNS problem, and direct modeling of the CVR task across the entire space also mitigates the SSB and DS challenges. Additionally, we conduct multi-task learning by introducing an auxiliary click-through rate prediction task, thereby enhancing embedding layer representations. Our approach is applicable to various multi-task architectures. Comprehensive experiments are conducted on both public and production datasets, demonstrating the superiority of our proposed method in mitigating the FNS challenge and improving the CVR estimation.</p>
     <p><strong>Categories:</strong> Semi-Supervised Learning, Conversion Rate Prediction, Recommendation Systems, Click-Through Rate (CTR), Sample Selection Bias, Data Sparsity, Multi-Task Learning, Non-Click Samples, False Negative Samples, Model Improvement, User Behavior Prediction, Enhanced Models (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/1073/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Co-optimize Content Generation and Consumption in a Large Scale Video Recommendation System (2024)</h3>
+    <p><strong>Authors:</strong> Yuening Li, Mingyan Gao, Qingyun Liu, Sourabh Bansod, Shuchao Bi, Liang Liu, Yaping Zhang, Zhen Zhang</p>
+    <p>Multi-task prediction models and value models are the de-facto standard ranking components in modern large-scale content recommendation systems. However, they are typically optimized to model users’ passive consumption behaviors, and rank content in a way to grow only consumption-centric values. In this talk, we discuss the key insight that it is possible to model sparse participatory content-generation actions as well and grow ecosystem value through a new ranking system. We made the following key technical contributions in this system: (1) introducing ranking for content generation based on a categorization of user participation actions of different sparsity, including proxy intent action or access point clicks. (2) improving sparse task prediction quality and stability by causal task relationship modeling, conditional loss modeling and ResNet based shared bottom network. (3) personalizing the value model to minimize conflicts between different values, through e.g. ranking inspiring content higher for users who actively generate content. (4) conducting systematic evaluation of proposed approach in a large short-form video UGC (User-Generated Content) platform.</p>
+    <p><strong>Categories:</strong> Multi-Task Learning, Video Recommendation, User-Generated Content, Content Generation, Large-Scale Systems, Evaluation Metrics, Causal Modeling, Network Architecture, User Participation, Scalability, Content Creation, User-Centric Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1156/">See reasoning</a></p>
   </div>
 
     </div>
@@ -139,35 +127,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Multi-task Item-attribute Graph Pre-training for Strict Cold-start Item Recommendation (2023)</h3>
-    <p><strong>Authors:</strong> Hao Peng, Zhiwei Liu, Chenyu You, Philip Yu, Liangwei Yang, Chen Wang, Yuwei Cao</p>
-    <p>Recommendation systems suffer in the strict cold-start (SCS) scenario, where the user-item interactions are entirely unavailable. The well-established, dominating identity (ID)-based approaches completely fail to work. Cold-start recommenders, on the other hand, leverage item contents (brand, title, descriptions, etc.) to map the new items to the existing ones. However, the existing SCS recommenders explore item contents in coarse-grained manners that introduce noise or information loss. Moreover, informative data sources other than item contents, such as users’ purchase sequences and review texts, are largely ignored. In this work, we explore the role of the fine-grained item attributes in bridging the gaps between the existing and the SCS items and pre-train a knowledgeable item-attribute graph for SCS item recommendation. Our proposed framework, ColdGPT, models item-attribute correlations into an item-attribute graph by extracting fine-grained attributes from item contents. ColdGPT then transfers knowledge into the item-attribute graph from various available data sources, i.e., item contents, historical purchase sequences, and review texts of the existing items, via multi-task learning. To facilitate the positive transfer, ColdGPT designs specific submodules according to the natural forms of the data sources and proposes to coordinate the multiple pre-training tasks via unified alignment-and-uniformity losses. Our pre-trained item-attribute graph acts as an implicit, extendable item embedding matrix, which enables the SCS item embeddings to be easily acquired by inserting these items into the item-attribute graph and propagating their attributes’ embeddings. We carefully process three public datasets, i.e., Yelp, Amazon-home, and Amazon-sports, to guarantee the SCS setting for evaluation. Extensive experiments show that ColdGPT consistently outperforms the existing SCS recommenders by large margins and even surpasses models that are pre-trained on 75 – 224 times more, cross-domain data on two out of four datasets. Our code and pre-processed datasets for SCS evaluations are publicly available to help future SCS studies.</p>
-    <p><strong>Categories:</strong> Cold Start, Multi-Modal Learning, Fine-Grained Item Attributes, Graph Neural Networks, Recommendation Systems, Self-Supervised Learning, Multi-Task Learning, Real-World Applications, Pre-trained Models (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/872/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>BVAE: Behavior-aware Variational Autoencoder for Multi-Behavior Multi-Task Recommendation (2023)</h3>
-    <p><strong>Authors:</strong> Yang Liu, Qianzhen Rao, Weike Pan, Zhong Ming</p>
-    <p>A practical recommender system should be able to handle heterogeneous behavioral feedback as inputs and has multi-task outputs ability. Although the heterogeneous one-class collaborative filtering (HOCCF) and multi-task learning (MTL) methods has been well studied, there is still a lack of targeted manner in their combined fields, i.e., Multi-behavior Multi-task Recommendation (MMR). To fill the gap, we propose a novel recommendation framework called Behavior-aware Variational AutoEncoder (BVAE), which meliorates the parameter sharing and loss minimization method with the VAE structure to address the MMR problem. Specifically, our BVAE includes address behavior-aware semi-encoders and decoders, and a target feature fusion network with a global feature filtering network, while using standard deviation to weigh loss. These modules generate the behavior-aware recommended item list via constructing better semantic feature vectors for users, i.e., from dual perspectives of behavioral preference and global interaction. In addition, we optimize our BVAE in terms of adaptability and robustness, i.e., it is concise and flexible to consume any amount of behaviors with different distributions. Extensive empirical studies on two real and widely used datasets confirm the validity of our design and show that our BVAE can outperform the state-of-the-art related baseline methods under multiple evaluation metrics.</p>
-    <p><strong>Categories:</strong> Variational Autoencoder, Collaborative Filtering, Multi-Task Learning, Recommendation Systems, Multi-Behavior Recommendations, User Behavior Modeling, Empirical Evaluation, Beyond Accuracy, State-of-the-Art Comparisons, Adaptability, Robustness, Scalability, Model Efficiency, Heterogeneous Feedback (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/852/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Understanding and Modeling Passive-Negative Feedback for Short-video Sequential Recommendation (2023)</h3>
-    <p><strong>Authors:</strong> Chen Gao, Yong Li, Depeng Jin, Yunzhu Pan, Kun Gai, Yang Song</p>
-    <p>Sequential recommendation is one of the most important tasks in recommender systems, which aims to recommend the next interacted item with historical behaviors as input. Traditional sequential recommendation always mainly considers the collected positive feedback such as click, purchase, etc. However, in short-video platforms such as TikTok, video viewing behavior may not always represent positive feedback. Specifically, the videos are played automatically, and users passively receive the recommended videos. In this new scenario, users passively express negative feedback by skipping over videos they do not like, which provides valuable information about their preferences. Different from the negative feedback studied in traditional recommender systems, this passive-negative feedback can reflect users’ interests and serve as an important supervision signal in extracting users’ preferences. Therefore, it is essential to carefully design and utilize it in this novel recommendation scenario. In this work, we first conduct analyses based on a large-scale real-world short-video behavior dataset and illustrate the significance of leveraging passive feedback. We then propose a novel method that deploys the sub-interest encoder, which incorporates positive feedback and passive-negative feedback as supervision signals to learn the user’s current active sub-interest. Moreover, we introduce an adaptive fusion layer to integrate various sub-interests effectively. To enhance the robustness of our model, we then introduce a multi-task learning module to simultaneously optimize two kinds of feedback – passive-negative feedback and traditional randomly-sampled negative feedback. The experiments on two large-scale datasets verify that the proposed method can significantly outperform state-of-the-art approaches. The codes and collected datasets are anonymously released at https:// anonymous.4open.science/ r/ SINE-2047/ to benefit the community.</p>
-    <p><strong>Categories:</strong> Passive-Negative Feedback, Short-Video Recommendation, Sequential Recommendation, User Preferences Modeling, Recommendation Systems, Passive Feedback, Negative Feedback Handling, Behavior Analysis, Content Consumption Patterns, Modeling User Interests, Multi-Task Learning, Large-Scale Datasets (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/888/">See reasoning</a></p>
+    <h3>Bridging Search and Recommendation in Generative Retrieval: Does One Task Help the Other? (2024)</h3>
+    <p><strong>Authors:</strong> Marco De Nadai, Ali Vardasbi, Enrico Palumbo, Hugues Bouchard, Gustavo Penha</p>
+    <p>Generative retrieval for search and recommendation is a promising paradigm for retrieving items, offering an alternative to traditional methods that depend on external indexes and nearest-neighbor searches. Instead, generative models directly associate inputs with item IDs. Given the impressive capabilities of Large Language Models (LLMs), these generative systems play a crucial role in centralizing a variety of Information Retrieval (IR) tasks in a single model that performs tasks such as query understanding, retrieval, recommendation, explanation, re-ranking, and response generation. Despite the growing interest in such a unified generative approach for IR systems, the advantages of using a single, multi-task model over multiple specialized models are not well established in the literature. This paper investigates whether and when such a unified approach can outperform task-specific models in the IR tasks of search and recommendation, broadly co-existing in multiple industrial online platforms, such as Spotify, YouTube, and Netflix. Previous work shows that (1) the latent representations of items, learned by generative recommenders, are biased towards popularity, and (2) content-based and collaborative-filtering-based information can improve an item’s representations. Motivated by this, our study is guided by two hypotheses: [H1] the joint training regularizes the estimation of each item’s popularity, and [H2] the joint training regularizes the item’s latent representations, where search captures content-based aspects of an item and recommendation captures collaborative-filtering aspects. Our extensive experiments with both simulated and real-world data support both [H1] and [H2] as key contributors to the effectiveness improvements observed in the unified search and recommendation generative models over the single-task approaches.</p>
+    <p><strong>Categories:</strong> Generative Models, Large Language Models (LLMs), Information Retrieval (IR), Search Systems, Recommendation Systems, Multi-Task Learning, Real-World Applications, Evaluation Metrics, Latent Representations, Popularity Bias, Collaborative Filtering, Content-Based Filtering, Explanation Generation, Industrial Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1030/">See reasoning</a></p>
   </div>
 
     </div>
@@ -187,11 +151,23 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Nonlinear Bandits Exploration for Recommendations (2023)</h3>
-    <p><strong>Authors:</strong> Minmin Chen, Yi Su</p>
-    <p>The paradigm of framing recommendations as (sequential) decision-making processes has gained significant interest. To achieve long-term user satisfaction, these interactive systems need to strikes a balance between exploitation (recommending high-reward items) and exploration (exploring uncertain regions for potentially better items). Classical bandit algorithms like Upper-Confidence-Bound and Thompson Sampling, and their contextual extensions with linear payoffs have exhibited strong theoretical guarantees and empirical success in managing the exploration-exploitation trade-off. Building efficient exploration-based systems for deep neural network powered real-world, large-scale industrial recommender systems remains under studied. In addition, these systems are often multi-stage, multi-objective and response time sensitive.  In this talk, we share our experience in addressing these challenges in building exploration based industrial recommender systems. Specifically, we adopt the Neural Linear Bandit algorithm, which effectively combines the representation power of deep neural networks, with the simplicity of linear bandits to incorporate exploration in DNN based recommender systems. We introduce  exploration capability to both the nomination and ranking stage of the industrial recommender system.  In the context of the ranking stage, we delve into the extension of this algorithm to accommodate the multi-task setup, enabling exploration in systems with multiple objectives. Moving on to the nomination stage, we will address the development of efficient bandit algorithms tailored to factorized bi-linear models. These algorithms play a crucial role in facilitating maximum inner product search, which is commonly employed in large-scale retrieval systems. We validate our algorithms and present findings from real-world live experiments.</p>
-    <p><strong>Categories:</strong> Multi-Armed Bandits, Recommendation Systems, Deep Learning, Exploration, Exploitation, Neural Linear Bandit, Industrial Recommender Systems, Nomination Stage, Ranking Stage, Multi-Task Learning, Large Scale Systems, Real World Applications, Efficiency, Beyond Accuracy, Evaluation Metrics, Performance Evaluation, Algorithm Performance (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1012/">See reasoning</a></p>
+    <h3>Task Aware Feature Extraction Framework for Sequential Dependence Multi-Task Learning (2023)</h3>
+    <p><strong>Authors:</strong> Hongwei Cheng, Wenfang Lin, Xuewen Tao, Mingming Ha, Qiongxu Ma, Xiaobo Guo</p>
+    <p>In online recommendation, financial service, etc., the most common application of multi-task learning (MTL) is the multi-step conversion estimations. A core property of the multi-step conversion is the sequential dependence among tasks. Most existing works focus far more on the specific post-view click-through rate (CTR) and post-click conversion rate (CVR) estimations, which neglect the generalization of sequential dependence multi-task learning (SDMTL). Besides, the performance of the SDMTL framework is also deteriorated by the interference derived from implicitly conflict information passing between adjacent tasks. In this paper, a systematic learning paradigm of the SDMTL problem is established for the first time, which can transform the SDMTL problem into a general MTL problem and be applicable to more general multi-step conversion scenarios with longer conversion path or stronger task dependence. Also, the distribution dependence between adjacent task spaces is illustrated from a theoretical point of view. On the other hand, an SDMTL architecture, named Task Aware Feature Extraction (TAFE), is developed to enable dynamic task representation learning from a sample-wise view. TAFE selectively reconstructs the implicit shared information corresponding to each sample case and performs explicit task-specific extraction under dependence constraints. Extensive experiments on offline public and real-world industrial datasets, and online A/B implementations demonstrate the effectiveness and applicability of proposed theoretical and implementation frameworks.</p>
+    <p><strong>Categories:</strong> Multi-Task Learning, Sequential Dependence, Click-Through Rate Prediction, Conversion Rate Estimation, Online Recommendation, Financial Services, Feature Extraction, Multi-Step Conversion, Task Representation, A/B Testing, Real-World Applications, Theoretical Analysis, Generalization, Dynamic Task Representation, Frameworks and Architectures. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/887/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Understanding and Modeling Passive-Negative Feedback for Short-video Sequential Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Chen Gao, Yong Li, Depeng Jin, Yunzhu Pan, Kun Gai, Yang Song</p>
+    <p>Sequential recommendation is one of the most important tasks in recommender systems, which aims to recommend the next interacted item with historical behaviors as input. Traditional sequential recommendation always mainly considers the collected positive feedback such as click, purchase, etc. However, in short-video platforms such as TikTok, video viewing behavior may not always represent positive feedback. Specifically, the videos are played automatically, and users passively receive the recommended videos. In this new scenario, users passively express negative feedback by skipping over videos they do not like, which provides valuable information about their preferences. Different from the negative feedback studied in traditional recommender systems, this passive-negative feedback can reflect users’ interests and serve as an important supervision signal in extracting users’ preferences. Therefore, it is essential to carefully design and utilize it in this novel recommendation scenario. In this work, we first conduct analyses based on a large-scale real-world short-video behavior dataset and illustrate the significance of leveraging passive feedback. We then propose a novel method that deploys the sub-interest encoder, which incorporates positive feedback and passive-negative feedback as supervision signals to learn the user’s current active sub-interest. Moreover, we introduce an adaptive fusion layer to integrate various sub-interests effectively. To enhance the robustness of our model, we then introduce a multi-task learning module to simultaneously optimize two kinds of feedback – passive-negative feedback and traditional randomly-sampled negative feedback. The experiments on two large-scale datasets verify that the proposed method can significantly outperform state-of-the-art approaches. The codes and collected datasets are anonymously released at https:// anonymous.4open.science/ r/ SINE-2047/ to benefit the community.</p>
+    <p><strong>Categories:</strong> Passive-Negative Feedback, Short-Video Recommendation, Sequential Recommendation, User Preferences Modeling, Recommendation Systems, Passive Feedback, Negative Feedback Handling, Behavior Analysis, Content Consumption Patterns, Modeling User Interests, Multi-Task Learning, Large-Scale Datasets (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/888/">See reasoning</a></p>
   </div>
 
     </div>
@@ -211,11 +187,23 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Task Aware Feature Extraction Framework for Sequential Dependence Multi-Task Learning (2023)</h3>
-    <p><strong>Authors:</strong> Hongwei Cheng, Wenfang Lin, Xuewen Tao, Mingming Ha, Qiongxu Ma, Xiaobo Guo</p>
-    <p>In online recommendation, financial service, etc., the most common application of multi-task learning (MTL) is the multi-step conversion estimations. A core property of the multi-step conversion is the sequential dependence among tasks. Most existing works focus far more on the specific post-view click-through rate (CTR) and post-click conversion rate (CVR) estimations, which neglect the generalization of sequential dependence multi-task learning (SDMTL). Besides, the performance of the SDMTL framework is also deteriorated by the interference derived from implicitly conflict information passing between adjacent tasks. In this paper, a systematic learning paradigm of the SDMTL problem is established for the first time, which can transform the SDMTL problem into a general MTL problem and be applicable to more general multi-step conversion scenarios with longer conversion path or stronger task dependence. Also, the distribution dependence between adjacent task spaces is illustrated from a theoretical point of view. On the other hand, an SDMTL architecture, named Task Aware Feature Extraction (TAFE), is developed to enable dynamic task representation learning from a sample-wise view. TAFE selectively reconstructs the implicit shared information corresponding to each sample case and performs explicit task-specific extraction under dependence constraints. Extensive experiments on offline public and real-world industrial datasets, and online A/B implementations demonstrate the effectiveness and applicability of proposed theoretical and implementation frameworks.</p>
-    <p><strong>Categories:</strong> Multi-Task Learning, Sequential Dependence, Click-Through Rate Prediction, Conversion Rate Estimation, Online Recommendation, Financial Services, Feature Extraction, Multi-Step Conversion, Task Representation, A/B Testing, Real-World Applications, Theoretical Analysis, Generalization, Dynamic Task Representation, Frameworks and Architectures. (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/887/">See reasoning</a></p>
+    <h3>BVAE: Behavior-aware Variational Autoencoder for Multi-Behavior Multi-Task Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Yang Liu, Qianzhen Rao, Weike Pan, Zhong Ming</p>
+    <p>A practical recommender system should be able to handle heterogeneous behavioral feedback as inputs and has multi-task outputs ability. Although the heterogeneous one-class collaborative filtering (HOCCF) and multi-task learning (MTL) methods has been well studied, there is still a lack of targeted manner in their combined fields, i.e., Multi-behavior Multi-task Recommendation (MMR). To fill the gap, we propose a novel recommendation framework called Behavior-aware Variational AutoEncoder (BVAE), which meliorates the parameter sharing and loss minimization method with the VAE structure to address the MMR problem. Specifically, our BVAE includes address behavior-aware semi-encoders and decoders, and a target feature fusion network with a global feature filtering network, while using standard deviation to weigh loss. These modules generate the behavior-aware recommended item list via constructing better semantic feature vectors for users, i.e., from dual perspectives of behavioral preference and global interaction. In addition, we optimize our BVAE in terms of adaptability and robustness, i.e., it is concise and flexible to consume any amount of behaviors with different distributions. Extensive empirical studies on two real and widely used datasets confirm the validity of our design and show that our BVAE can outperform the state-of-the-art related baseline methods under multiple evaluation metrics.</p>
+    <p><strong>Categories:</strong> Variational Autoencoder, Collaborative Filtering, Multi-Task Learning, Recommendation Systems, Multi-Behavior Recommendations, User Behavior Modeling, Empirical Evaluation, Beyond Accuracy, State-of-the-Art Comparisons, Adaptability, Robustness, Scalability, Model Efficiency, Heterogeneous Feedback (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/852/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Multi-task Item-attribute Graph Pre-training for Strict Cold-start Item Recommendation (2023)</h3>
+    <p><strong>Authors:</strong> Hao Peng, Zhiwei Liu, Chenyu You, Philip Yu, Liangwei Yang, Chen Wang, Yuwei Cao</p>
+    <p>Recommendation systems suffer in the strict cold-start (SCS) scenario, where the user-item interactions are entirely unavailable. The well-established, dominating identity (ID)-based approaches completely fail to work. Cold-start recommenders, on the other hand, leverage item contents (brand, title, descriptions, etc.) to map the new items to the existing ones. However, the existing SCS recommenders explore item contents in coarse-grained manners that introduce noise or information loss. Moreover, informative data sources other than item contents, such as users’ purchase sequences and review texts, are largely ignored. In this work, we explore the role of the fine-grained item attributes in bridging the gaps between the existing and the SCS items and pre-train a knowledgeable item-attribute graph for SCS item recommendation. Our proposed framework, ColdGPT, models item-attribute correlations into an item-attribute graph by extracting fine-grained attributes from item contents. ColdGPT then transfers knowledge into the item-attribute graph from various available data sources, i.e., item contents, historical purchase sequences, and review texts of the existing items, via multi-task learning. To facilitate the positive transfer, ColdGPT designs specific submodules according to the natural forms of the data sources and proposes to coordinate the multiple pre-training tasks via unified alignment-and-uniformity losses. Our pre-trained item-attribute graph acts as an implicit, extendable item embedding matrix, which enables the SCS item embeddings to be easily acquired by inserting these items into the item-attribute graph and propagating their attributes’ embeddings. We carefully process three public datasets, i.e., Yelp, Amazon-home, and Amazon-sports, to guarantee the SCS setting for evaluation. Extensive experiments show that ColdGPT consistently outperforms the existing SCS recommenders by large margins and even surpasses models that are pre-trained on 75 – 224 times more, cross-domain data on two out of four datasets. Our code and pre-processed datasets for SCS evaluations are publicly available to help future SCS studies.</p>
+    <p><strong>Categories:</strong> Cold Start, Multi-Modal Learning, Fine-Grained Item Attributes, Graph Neural Networks, Recommendation Systems, Self-Supervised Learning, Multi-Task Learning, Real-World Applications, Pre-trained Models (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/872/">See reasoning</a></p>
   </div>
 
     </div>
@@ -240,6 +228,18 @@
     <p>Personalization plays a critical role in helping customers discover the products and contents they prefer for e-commerce stores.Personalized recommendations differ in contents, target customers, and UI. However, they require a common core capability – the ability to deeply understand customers’ preferences and shopping intents. In this paper, we introduce the MLCM (Multi-task Large pre-trained Customer Model), a large pre-trained BERT-based multi-task customer model with 10 million trainable parameters for e-commerce stores. This model aims to empower all personalization projects by providing commonly used preference scores for recommendations, customer embeddings for transfer learning, and a pre-trained model for fine-tuning. In this work, we improve the SOTA BERT4Rec framework to handle heterogeneous customer signals and multi-task training as well as innovate new data augmentation method that is suitable for recommendation task. Experimental results show that MLCM outperforms the original BERT4Rec by 17% on preference prediction tasks. Additionally, we demonstrate that the model can be easily fine-tuned to assist a specific recommendation task. For instance, after fine-tuning MLCM for an incentive based recommendation project, performance improves by 60% on the conversion prediction task and 25% on the click-through prediction task compared to the production baseline model.</p>
     <p><strong>Categories:</strong> Personalization, Recommendation Systems, Multi-Task Learning, Deep Learning, E-Commerce, Customer Modeling, Natural Language Processing, Transfer Learning, Data Augmentation, Model Fine-Tuning, Performance Improvement, Incentive-Based Recommendations, Conversion Prediction, Click-Through Rate, Real-World Applications. (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/1004/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Nonlinear Bandits Exploration for Recommendations (2023)</h3>
+    <p><strong>Authors:</strong> Minmin Chen, Yi Su</p>
+    <p>The paradigm of framing recommendations as (sequential) decision-making processes has gained significant interest. To achieve long-term user satisfaction, these interactive systems need to strikes a balance between exploitation (recommending high-reward items) and exploration (exploring uncertain regions for potentially better items). Classical bandit algorithms like Upper-Confidence-Bound and Thompson Sampling, and their contextual extensions with linear payoffs have exhibited strong theoretical guarantees and empirical success in managing the exploration-exploitation trade-off. Building efficient exploration-based systems for deep neural network powered real-world, large-scale industrial recommender systems remains under studied. In addition, these systems are often multi-stage, multi-objective and response time sensitive.  In this talk, we share our experience in addressing these challenges in building exploration based industrial recommender systems. Specifically, we adopt the Neural Linear Bandit algorithm, which effectively combines the representation power of deep neural networks, with the simplicity of linear bandits to incorporate exploration in DNN based recommender systems. We introduce  exploration capability to both the nomination and ranking stage of the industrial recommender system.  In the context of the ranking stage, we delve into the extension of this algorithm to accommodate the multi-task setup, enabling exploration in systems with multiple objectives. Moving on to the nomination stage, we will address the development of efficient bandit algorithms tailored to factorized bi-linear models. These algorithms play a crucial role in facilitating maximum inner product search, which is commonly employed in large-scale retrieval systems. We validate our algorithms and present findings from real-world live experiments.</p>
+    <p><strong>Categories:</strong> Multi-Armed Bandits, Recommendation Systems, Deep Learning, Exploration, Exploitation, Neural Linear Bandit, Industrial Recommender Systems, Nomination Stage, Ranking Stage, Multi-Task Learning, Large Scale Systems, Real World Applications, Efficiency, Beyond Accuracy, Evaluation Metrics, Performance Evaluation, Algorithm Performance (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1012/">See reasoning</a></p>
   </div>
 
     </div>

@@ -34,6 +34,11 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Algorithm Selection</a>
+        
+      
+        
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
         
@@ -50,12 +55,17 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/fairness/">Fairness</a>
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/beyond-accuracy/">Beyond Accuracy</a>
         
       
         
@@ -65,40 +75,18 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+             href="/recsys-recommender/category/offline-evaluation/">Offline Evaluation</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/evaluation-metrics/">Evaluation Metrics</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/explainability/">Explainability</a>
+             href="/recsys-recommender/category/fairness/">Fairness</a>
         
       
     </div>
   </div>
 
   
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Bayesian Optimization with LLM-Based Acquisition Functions for Natural Language Preference Elicitation (2024)</h3>
-    <p><strong>Authors:</strong> Armin Toroghi, David Austin, Anton Korikov, Scott Sanner</p>
-    <p>Designing preference elicitation (PE) methodologies that can quickly ascertain a user’s top item preferences in a cold-start setting is a key challenge for building effective and personalized conversational recommendation (ConvRec) systems. While large language models (LLMs) constitute a novel technology that enables fully natural language (NL) PE dialogues, we hypothesize that monolithic LLM NL-PE approaches lack the multi-turn, decision-theoretic reasoning required to effectively balance the NL exploration and exploitation of user preferences towards an arbitrary item set. In contrast, traditional Bayesian optimization PE methods define theoretically optimal PE strategies, but fail to use NL item descriptions or generate NL queries, unrealistically assuming users can express preferences with direct item ratings and comparisons. To overcome the limitations of both approaches, we formulate NL-PE in a Bayesian Optimization (BO) framework that seeks to actively elicit natural language feedback to reduce uncertainty over item utilities to identify the best recommendation. Key challenges in generalizing BO to deal with natural language feedback include determining (a) how to leverage LLMs to model the likelihood of NL preference feedback as a function of item utilities and (b) how to design an acquisition function that works for language-based BO that can elicit in the infinite space of language. We demonstrate our framework in a novel NL-PE algorithm, PEBOL, which uses Natural Language Inference (NLI) between user preference utterances and NL item descriptions to maintain preference beliefs and BO strategies such as Thompson Sampling (TS) and Upper Confidence Bound (UCB) to guide LLM query generation. We numerically evaluate our methods in controlled experiments, finding that PEBOL achieves up to 131% improvement in MAP@10 after 10 turns of cold start NL-PE dialogue compared to monolithic GPT-3.5, despite relying on a much smaller 400M parameter NLI model for preference inference.</p>
-    <p><strong>Categories:</strong> Bayesian Optimization, Large Language Models (LLMs), Natural Language Processing (NLP), Conversational Recommendation Systems, Preference Elicitation, Cold Start Problem, Algorithm Selection, Multi-Armed Bandits, Thompson Sampling, Upper Confidence Bound, Natural Language Inference (NLI), Evaluation Metrics, Machine Learning (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1020/">See reasoning</a></p>
-  </div>
-
-    </div>
   
     <div class="ui segment">
       
@@ -108,6 +96,18 @@
     <p>The recommender systems algorithm selection problem for ranking prediction on implicit feedback datasets is under-explored. Traditional approaches in recommender systems algorithm selection focus predominantly on rating prediction on explicit feedback datasets, leaving a research gap for ranking prediction on implicit feedback datasets. Algorithm selection is a critical challenge for nearly every practitioner in recommender systems. In this work, we take the first steps toward addressing this research gap.<br> We evaluate the NDCG@10 of 24 recommender systems algorithms, each with two hyperparameter configurations, on 72 recommender systems datasets. We train four optimized machine-learning meta-models and one automated machine-learning meta-model with three different settings on the resulting meta-dataset.<br> Our results show that the predictions of all tested meta-models exhibit a median Spearman correlation ranging from 0.857 to 0.918 with the ground truth. We show that the median Spearman correlation between meta-model predictions and the ground truth increases by an average of 0.124 when the meta-model is optimized to predict the ranking of algorithms instead of their performance. Furthermore, in terms of predicting the best algorithm for an unknown dataset, we demonstrate that the best optimized traditional meta-model, e.g., XGBoost, achieves a recall of 48.6%, outperforming the best tested automated machine learning meta-model, e.g., AutoGluon, which achieves a recall of 47.2%.</p>
     <p><strong>Categories:</strong> Recommendation Systems, Algorithm Selection, Ranking Prediction, Implicit Feedback Datasets, Meta-Model Selection, Hyperparameter Optimization, Beyond Accuracy, Evaluation Metrics (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/1199/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Bayesian Optimization with LLM-Based Acquisition Functions for Natural Language Preference Elicitation (2024)</h3>
+    <p><strong>Authors:</strong> Armin Toroghi, David Austin, Anton Korikov, Scott Sanner</p>
+    <p>Designing preference elicitation (PE) methodologies that can quickly ascertain a user’s top item preferences in a cold-start setting is a key challenge for building effective and personalized conversational recommendation (ConvRec) systems. While large language models (LLMs) constitute a novel technology that enables fully natural language (NL) PE dialogues, we hypothesize that monolithic LLM NL-PE approaches lack the multi-turn, decision-theoretic reasoning required to effectively balance the NL exploration and exploitation of user preferences towards an arbitrary item set. In contrast, traditional Bayesian optimization PE methods define theoretically optimal PE strategies, but fail to use NL item descriptions or generate NL queries, unrealistically assuming users can express preferences with direct item ratings and comparisons. To overcome the limitations of both approaches, we formulate NL-PE in a Bayesian Optimization (BO) framework that seeks to actively elicit natural language feedback to reduce uncertainty over item utilities to identify the best recommendation. Key challenges in generalizing BO to deal with natural language feedback include determining (a) how to leverage LLMs to model the likelihood of NL preference feedback as a function of item utilities and (b) how to design an acquisition function that works for language-based BO that can elicit in the infinite space of language. We demonstrate our framework in a novel NL-PE algorithm, PEBOL, which uses Natural Language Inference (NLI) between user preference utterances and NL item descriptions to maintain preference beliefs and BO strategies such as Thompson Sampling (TS) and Upper Confidence Bound (UCB) to guide LLM query generation. We numerically evaluate our methods in controlled experiments, finding that PEBOL achieves up to 131% improvement in MAP@10 after 10 turns of cold start NL-PE dialogue compared to monolithic GPT-3.5, despite relying on a much smaller 400M parameter NLI model for preference inference.</p>
+    <p><strong>Categories:</strong> Bayesian Optimization, Large Language Models (LLMs), Natural Language Processing (NLP), Conversational Recommendation Systems, Preference Elicitation, Cold Start Problem, Algorithm Selection, Multi-Armed Bandits, Thompson Sampling, Upper Confidence Bound, Natural Language Inference (NLI), Evaluation Metrics, Machine Learning (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1020/">See reasoning</a></p>
   </div>
 
     </div>
@@ -139,11 +139,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>A Low-Code Tool Supporting the Development of Recommender Systems (2021)</h3>
-    <p><strong>Authors:</strong> Claudio Di Sipio, Davide Di Ruscio, Juri Di Rocco, Phuong Thanh Nguyen</p>
-    <p>The design of recommender systems (RSs) to support software development encompasses the fulfillment of different steps, including data preprocessing, choice of the most appropriate algorithms, item delivery. Though RSs can alleviate the curse of information overload, existing approaches resemble black-box systems, in which the end-user is not expected to fine-tune or personalize the overall process.<br>In this work, we propose LEV4REC, a low-code environment to assist developers in designing, configuring, and delivering recommender systems. The first step supported by the proposed tool includes defining an initial model that allows for the configuration of the crucial components of the wanted RS. Then, a subsequent phase is performed to finalize the RS design, e.g., to specify configuration parameters. LEV4REC is eventually capable of generating source code for the desired RS. To evaluate the capabilities of the approach, we used LEV4REC to specify two existing RSs built on top of two different recommendation algorithms, i.e., collaborative filtering and supervised machine learning.</p>
-    <p><strong>Categories:</strong> Recommender Systems, Algorithm Selection, Collaborative Filtering, Supervised Machine Learning, Low-Code Development, Software Development Tools, Code Generation, System Design (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/696/">See reasoning</a></p>
+    <h3>Evaluating Off-Policy Evaluation: Sensitivity and Robustness (2021)</h3>
+    <p><strong>Authors:</strong> Kazuki Mogi, Yuta Saito, Kei Tateno, Yusuke Narita, Haruka Kiyohara, Takuma Udagawa</p>
+    <p>Off-policy Evaluation (OPE), or offline evaluation in general, evaluates the performance of hypothetical policies leveraging only offline log data. It is particularly useful in applications where the online interaction involves high stakes and expensive setting such as precision medicine and recommender systems. Since many OPE estimators have been proposed and some of them have hyperparameters to be tuned, there is an emerging challenge for practitioners to select and tune OPE estimators for their specific application. Unfortunately, identifying a reliable estimator from results reported in research papers is often difficult because the current experimental procedure evaluates and compares the estimators’ performance on a narrow set of hyperparameters and evaluation policies. Therefore, it is difficult to know which estimator is safe and reliable to use. In this work, we develop Interpretable Evaluation for Offline Evaluation (IEOE), an experimental procedure to evaluate OPE estimators’ robustness to changes in hyperparameters and/or evaluation policies in an interpretable manner. Then, using the IEOE procedure, we perform extensive evaluation of a wide variety of existing estimators on Open Bandit Dataset, a large-scale public real-world dataset for OPE. We demonstrate that our procedure can evaluate the estimators’ robustness to the hyperparamter choice, helping us avoid using unsafe estimators. Finally, we apply IEOE to real-world e-commerce platform data and demonstrate how to use our protocol in practice.</p>
+    <p><strong>Categories:</strong> Off-Policy Evaluation, Reinforcement Learning, Recommender Systems, Precision Medicine, Algorithm Selection, Hyperparameter Tuning, Experimental Design, Real-World Applications, Sensitivity Analysis, Robustness, Evaluation Metrics, Practical Implementation (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/639/">See reasoning</a></p>
   </div>
 
     </div>
@@ -151,11 +151,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Evaluating Off-Policy Evaluation: Sensitivity and Robustness (2021)</h3>
-    <p><strong>Authors:</strong> Kazuki Mogi, Yuta Saito, Kei Tateno, Yusuke Narita, Haruka Kiyohara, Takuma Udagawa</p>
-    <p>Off-policy Evaluation (OPE), or offline evaluation in general, evaluates the performance of hypothetical policies leveraging only offline log data. It is particularly useful in applications where the online interaction involves high stakes and expensive setting such as precision medicine and recommender systems. Since many OPE estimators have been proposed and some of them have hyperparameters to be tuned, there is an emerging challenge for practitioners to select and tune OPE estimators for their specific application. Unfortunately, identifying a reliable estimator from results reported in research papers is often difficult because the current experimental procedure evaluates and compares the estimators’ performance on a narrow set of hyperparameters and evaluation policies. Therefore, it is difficult to know which estimator is safe and reliable to use. In this work, we develop Interpretable Evaluation for Offline Evaluation (IEOE), an experimental procedure to evaluate OPE estimators’ robustness to changes in hyperparameters and/or evaluation policies in an interpretable manner. Then, using the IEOE procedure, we perform extensive evaluation of a wide variety of existing estimators on Open Bandit Dataset, a large-scale public real-world dataset for OPE. We demonstrate that our procedure can evaluate the estimators’ robustness to the hyperparamter choice, helping us avoid using unsafe estimators. Finally, we apply IEOE to real-world e-commerce platform data and demonstrate how to use our protocol in practice.</p>
-    <p><strong>Categories:</strong> Off-Policy Evaluation, Reinforcement Learning, Recommender Systems, Precision Medicine, Algorithm Selection, Hyperparameter Tuning, Experimental Design, Real-World Applications, Sensitivity Analysis, Robustness, Evaluation Metrics, Practical Implementation (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/639/">See reasoning</a></p>
+    <h3>A Low-Code Tool Supporting the Development of Recommender Systems (2021)</h3>
+    <p><strong>Authors:</strong> Claudio Di Sipio, Davide Di Ruscio, Juri Di Rocco, Phuong Thanh Nguyen</p>
+    <p>The design of recommender systems (RSs) to support software development encompasses the fulfillment of different steps, including data preprocessing, choice of the most appropriate algorithms, item delivery. Though RSs can alleviate the curse of information overload, existing approaches resemble black-box systems, in which the end-user is not expected to fine-tune or personalize the overall process.<br>In this work, we propose LEV4REC, a low-code environment to assist developers in designing, configuring, and delivering recommender systems. The first step supported by the proposed tool includes defining an initial model that allows for the configuration of the crucial components of the wanted RS. Then, a subsequent phase is performed to finalize the RS design, e.g., to specify configuration parameters. LEV4REC is eventually capable of generating source code for the desired RS. To evaluate the capabilities of the approach, we used LEV4REC to specify two existing RSs built on top of two different recommendation algorithms, i.e., collaborative filtering and supervised machine learning.</p>
+    <p><strong>Categories:</strong> Recommender Systems, Algorithm Selection, Collaborative Filtering, Supervised Machine Learning, Low-Code Development, Software Development Tools, Code Generation, System Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/696/">See reasoning</a></p>
   </div>
 
     </div>
@@ -211,18 +211,6 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Letting Users Choose Recommender Algorithms: An Experimental Study (2015)</h3>
-    <p><strong>Authors:</strong> F. Maxwell Harper, Daniel Kluver, Joseph A. Konstan, Michael D. Ekstrand</p>
-    <p>Recommender systems are not one-size-fits-all; different algorithms and data sources have different strengths, making them a better or worse fit for different users and use cases. As one way of taking advantage of the relative merits of different algorithms, we gave users the ability to change the algorithm providing their movie recommendations and studied how they make use of this power. We conducted our study with the launch of a new version of the MovieLens movie recommender that supports multiple recommender algorithms and allows users to choose the algorithm they want to provide their recommendations. We examine log data from user interactions with this new feature to understand whether and how users switch among recommender algorithms, and select a final algorithm to use. We also look at the properties of the algorithms as they were experienced by users and examine their relationships to user behavior. We found that a substantial portion of our user base (25%) used the recommender-switching feature. The majority of users who used the control only switched algorithms a few times, trying a few out and settling down on an algorithm that they would leave alone. The largest number of users prefer a matrix factorization algorithm, followed closely by item-item collaborative filtering; users selected both of these algorithms much more often than they chose a non-personalized mean recommender. The algorithms did produce measurably different recommender lists for the users in the study, but these differences were not directly predictive of user choice.</p>
-    <p><strong>Categories:</strong> Recommender Systems, User Behavior, Algorithm Selection, Movie Recommendations, Collaborative Filtering, Matrix Factorization, User Interface/UX Design, A/B Testing, Preference Modeling, User-Centered Design (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/109/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
     <h3>Selection and Ordering of Linear Online Video Ads (2015)</h3>
     <p><strong>Authors:</strong> Viswanathan Swaminathan, Wreetabrata Kar, Paulo Albuquerque</p>
     <p>This paper studies the selection and ordering of in-stream ads in videos shown in online content publishers. We propose an allocation algorithm that uses a collective measure of price and quality for each ad and factors in slot-specific continuation probabilities to maximize publisher revenue. The algorithm is based on cascade models and uses a dynamic programming method to assign linear (video) ads to slots in an online video. The approach accounts for the negative externality created by lower quality ads placed in a video, leading to viewer exit and thereby preventing the publisher from showing the subsequent ads scheduled in that session. Our algorithm is scalable and suited for real-time applications. A large log of viewer activity from a video ad platform is used to empirically test the algorithm. A series of simulations show that our algorithm, when compared to other algorithms currently practiced in industry, generates more revenue for the publisher and increases viewer retention.</p>
@@ -247,11 +235,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Recommendation-based Modeling Support for Data Mining Processes (2014)</h3>
-    <p><strong>Authors:</strong> Dietmar Jannach, Simon Fischer</p>
-    <p>RapidMiner is a software tool that allows users to define data mining processes based on a visual model and implements a variety of so-called operators for data extraction, manipulation, model learning and analysis. The large number of available operators can however make it challenging for the process designer to identify the appropriate operator for the problem at hand. At the same time, some operators are only meaningful when combined with certain others. In this work, we evaluate different strategies of recommending additional operators to the user during the design of the process. The recommendation models are learned using a pool of several thousand existing data mining processes and evaluated in an offline experimental design. The results indicate that good predictive accuracy can already be achieved with comparably simple co-occurrence based algorithms.</p>
-    <p><strong>Categories:</strong> Co-occurrence, Data Mining, Recommendation Systems, Software Tools, User Interaction, Evaluation Methods, Algorithm Selection, Operator Recommendation, Collaborative Filtering, Data Mining Processes, Process Design (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/52/">See reasoning</a></p>
+    <h3>Letting Users Choose Recommender Algorithms: An Experimental Study (2015)</h3>
+    <p><strong>Authors:</strong> F. Maxwell Harper, Daniel Kluver, Joseph A. Konstan, Michael D. Ekstrand</p>
+    <p>Recommender systems are not one-size-fits-all; different algorithms and data sources have different strengths, making them a better or worse fit for different users and use cases. As one way of taking advantage of the relative merits of different algorithms, we gave users the ability to change the algorithm providing their movie recommendations and studied how they make use of this power. We conducted our study with the launch of a new version of the MovieLens movie recommender that supports multiple recommender algorithms and allows users to choose the algorithm they want to provide their recommendations. We examine log data from user interactions with this new feature to understand whether and how users switch among recommender algorithms, and select a final algorithm to use. We also look at the properties of the algorithms as they were experienced by users and examine their relationships to user behavior. We found that a substantial portion of our user base (25%) used the recommender-switching feature. The majority of users who used the control only switched algorithms a few times, trying a few out and settling down on an algorithm that they would leave alone. The largest number of users prefer a matrix factorization algorithm, followed closely by item-item collaborative filtering; users selected both of these algorithms much more often than they chose a non-personalized mean recommender. The algorithms did produce measurably different recommender lists for the users in the study, but these differences were not directly predictive of user choice.</p>
+    <p><strong>Categories:</strong> Recommender Systems, User Behavior, Algorithm Selection, Movie Recommendations, Collaborative Filtering, Matrix Factorization, User Interface/UX Design, A/B Testing, Preference Modeling, User-Centered Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/109/">See reasoning</a></p>
   </div>
 
     </div>
@@ -264,6 +252,18 @@
     <p>Finding effective solutions for cold-starting context-aware recommender systems (CARSs) is important because usually low quality recommendations are produced for users, items or contextual situations that are new to the system. In this paper, we tackle this problem with a switching hybrid solution that exploits a custom selection of two CARS algorithms, each one suited for a particular cold start situation, and switches between these algorithms depending on the detected recommendation situation (new user, new item or new context). We evaluate the proposed algorithms in an offline experiment by using various contextually-tagged rating datasets. We illustrate some significant performance differences among the considered algorithms and show that they can be effectively combined into the proposed switching hybrid to cope with different types of cold-start problems.</p>
     <p><strong>Categories:</strong> Cold Start, Context-Aware Recommendations, Hybrid Algorithms, Recommendation Systems, Offline Experiments, Real-World Applications, Evaluation Metrics, Algorithm Selection, Scalability, Performance Analysis (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/55/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Recommendation-based Modeling Support for Data Mining Processes (2014)</h3>
+    <p><strong>Authors:</strong> Dietmar Jannach, Simon Fischer</p>
+    <p>RapidMiner is a software tool that allows users to define data mining processes based on a visual model and implements a variety of so-called operators for data extraction, manipulation, model learning and analysis. The large number of available operators can however make it challenging for the process designer to identify the appropriate operator for the problem at hand. At the same time, some operators are only meaningful when combined with certain others. In this work, we evaluate different strategies of recommending additional operators to the user during the design of the process. The recommendation models are learned using a pool of several thousand existing data mining processes and evaluated in an offline experimental design. The results indicate that good predictive accuracy can already be achieved with comparably simple co-occurrence based algorithms.</p>
+    <p><strong>Categories:</strong> Co-occurrence, Data Mining, Recommendation Systems, Software Tools, User Interaction, Evaluation Methods, Algorithm Selection, Operator Recommendation, Collaborative Filtering, Data Mining Processes, Process Design (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/52/">See reasoning</a></p>
   </div>
 
     </div>

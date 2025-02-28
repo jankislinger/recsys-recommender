@@ -34,18 +34,13 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Noise Handling</a>
+        
+      
+        
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
         
       
         
@@ -55,12 +50,12 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
         
       
         
@@ -70,7 +65,12 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/fairness/">Fairness</a>
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/user-centric-design/">User-Centric Design</a>
         
       
         
@@ -80,7 +80,7 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
         
       
     </div>
@@ -91,11 +91,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Unified Denoising Training for Recommendation (2024)</h3>
-    <p><strong>Authors:</strong> Yingpeng Du, Ziyan Wang, Haoyan Chua, Zhu Sun, Jie Zhang, Yew-Soon Ong</p>
-    <p>Most existing denoising recommendation methods mainly alleviate noisy implicit feedback (user behaviors) through empirical studies. However, such studies may lack theoretical explainability and fail to model comprehensive noise patterns, which hinders understanding and capturing different noise patterns that show distinct effects on users’ behaviors. Thus, we propose to capture comprehensive noise patterns through a holistic theoretical analysis for more effective denoising, whereby users’ behaviors are divided into the willingness (to interact with) and action (to interact with) phases to disentangle the independent noise patterns. Our analysis unveils that (1) in the willingness phase, the high uncertainty of the user’s willingness to interact with the item can lead to high expectation loss, unifying explainability for existing denoising methods; and (2) in the action phase, higher user-specific inconsistency between willingness and action can not only lead to more noise in the user’s overall behaviors but also make it harder to distinguish between her true and noisy behaviors. All these findings are also aligned with our empirical observations. Inspired by these findings, we propose a Unified Denoising Training (UDT) method for recommendation. To alleviate uncertainty in the willingness phase, we lower the importance of the user-item interaction with high willingness uncertainty recognized by high loss. To ease the inconsistency in the action phase, we lower the overall importance for users with high user-specific inconsistency as it may lead to more noisy behaviors, and then increase the importance gap between recognized true and noisy behaviors for users with low user-specific inconsistency as their behaviors are more distinguishable. Extensive experiments on three real-world datasets show that our proposed UDT outperforms state-of-the-art denoising recommendation methods.</p>
-    <p><strong>Categories:</strong> Recommendation Algorithms, Implicit Feedback, User Behavior Modeling, Noise Handling, Real-World Applications, Theoretical Analysis, Unified Approach, Willingness-Action Phases, Recommendation Quality, Denoising Methods (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1072/">See reasoning</a></p>
+    <h3>Self-Auxiliary Distillation for Sample Efficient Learning in Google-Scale Recommenders (2024)</h3>
+    <p><strong>Authors:</strong> Ruoxi Wang, Tiansheng Yao, Ed H. Chi, Andrew Evdokimov, Yuan Gao, Jerry Zhang, Evan Ettinger, Derek Zhiyuan Cheng, Yin Zhang, Jonathan Valverde, Xiang Li</p>
+    <p>Industrial recommendation systems process billions of daily user feedback which are complex and noisy. Efficiently uncovering user preference from these signals becomes crucial for high-quality recommendation. We argue that those signals are not inherently equal in terms of their informative value and training ability, which is particularly salient in industrial applications with multi-stage processes (e.g., augmentation, retrieval, ranking). Considering that, in this work, we propose a novel self-auxiliary distillation framework that prioritizes training on high-quality labels, and improves the resolution of low-quality labels through distillation by adding a bilateral branch-based auxiliary task. This approach enables flexible learning from diverse labels without additional computational costs, making it highly scalable and effective for Google-scale recommenders. Our framework consistently improved both offline and online key business metrics across three Google major products. Notably, self-auxiliary distillation proves to be highly effective in addressing the severe signal loss challenge posed by changes such as Apple iOS policy. It further delivered significant improvements in both offline (+17\% AUC) and online metrics for a Google Apps recommendation system. This highlights the opportunities of addressing real-world signal loss problems through self-auxiliary distillation techniques.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Self-Auxiliary Distillation, Large Scale Recommenders, Sample Efficient Learning, Noise Handling, Signal Loss Problems, Offline Evaluation, Online Evaluation, A/B Test, Scalability, User Feedback (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1179/">See reasoning</a></p>
   </div>
 
     </div>
@@ -103,11 +103,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Self-Auxiliary Distillation for Sample Efficient Learning in Google-Scale Recommenders (2024)</h3>
-    <p><strong>Authors:</strong> Ruoxi Wang, Tiansheng Yao, Ed H. Chi, Andrew Evdokimov, Yuan Gao, Jerry Zhang, Evan Ettinger, Derek Zhiyuan Cheng, Yin Zhang, Jonathan Valverde, Xiang Li</p>
-    <p>Industrial recommendation systems process billions of daily user feedback which are complex and noisy. Efficiently uncovering user preference from these signals becomes crucial for high-quality recommendation. We argue that those signals are not inherently equal in terms of their informative value and training ability, which is particularly salient in industrial applications with multi-stage processes (e.g., augmentation, retrieval, ranking). Considering that, in this work, we propose a novel self-auxiliary distillation framework that prioritizes training on high-quality labels, and improves the resolution of low-quality labels through distillation by adding a bilateral branch-based auxiliary task. This approach enables flexible learning from diverse labels without additional computational costs, making it highly scalable and effective for Google-scale recommenders. Our framework consistently improved both offline and online key business metrics across three Google major products. Notably, self-auxiliary distillation proves to be highly effective in addressing the severe signal loss challenge posed by changes such as Apple iOS policy. It further delivered significant improvements in both offline (+17\% AUC) and online metrics for a Google Apps recommendation system. This highlights the opportunities of addressing real-world signal loss problems through self-auxiliary distillation techniques.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Self-Auxiliary Distillation, Large Scale Recommenders, Sample Efficient Learning, Noise Handling, Signal Loss Problems, Offline Evaluation, Online Evaluation, A/B Test, Scalability, User Feedback (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1179/">See reasoning</a></p>
+    <h3>Unified Denoising Training for Recommendation (2024)</h3>
+    <p><strong>Authors:</strong> Yingpeng Du, Ziyan Wang, Haoyan Chua, Zhu Sun, Jie Zhang, Yew-Soon Ong</p>
+    <p>Most existing denoising recommendation methods mainly alleviate noisy implicit feedback (user behaviors) through empirical studies. However, such studies may lack theoretical explainability and fail to model comprehensive noise patterns, which hinders understanding and capturing different noise patterns that show distinct effects on users’ behaviors. Thus, we propose to capture comprehensive noise patterns through a holistic theoretical analysis for more effective denoising, whereby users’ behaviors are divided into the willingness (to interact with) and action (to interact with) phases to disentangle the independent noise patterns. Our analysis unveils that (1) in the willingness phase, the high uncertainty of the user’s willingness to interact with the item can lead to high expectation loss, unifying explainability for existing denoising methods; and (2) in the action phase, higher user-specific inconsistency between willingness and action can not only lead to more noise in the user’s overall behaviors but also make it harder to distinguish between her true and noisy behaviors. All these findings are also aligned with our empirical observations. Inspired by these findings, we propose a Unified Denoising Training (UDT) method for recommendation. To alleviate uncertainty in the willingness phase, we lower the importance of the user-item interaction with high willingness uncertainty recognized by high loss. To ease the inconsistency in the action phase, we lower the overall importance for users with high user-specific inconsistency as it may lead to more noisy behaviors, and then increase the importance gap between recognized true and noisy behaviors for users with low user-specific inconsistency as their behaviors are more distinguishable. Extensive experiments on three real-world datasets show that our proposed UDT outperforms state-of-the-art denoising recommendation methods.</p>
+    <p><strong>Categories:</strong> Recommendation Algorithms, Implicit Feedback, User Behavior Modeling, Noise Handling, Real-World Applications, Theoretical Analysis, Unified Approach, Willingness-Action Phases, Recommendation Quality, Denoising Methods (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1072/">See reasoning</a></p>
   </div>
 
     </div>

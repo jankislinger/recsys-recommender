@@ -34,18 +34,23 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
-        
-      
-        
           <a class="ui primary button" style="margin: 5px;"
              href="/recsys-recommender/">Attention Mechanisms</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+             href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/scalability/">Scalability</a>
         
       
         
@@ -55,12 +60,7 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
         
       
         
@@ -70,7 +70,7 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/fairness/">Fairness</a>
+             href="/recsys-recommender/category/performance-evaluation/">Performance Evaluation</a>
         
       
         
@@ -80,7 +80,7 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
+             href="/recsys-recommender/category/fairness/">Fairness</a>
         
       
     </div>
@@ -127,6 +127,18 @@
     <div class="ui segment">
       
   <div class="item">
+    <h3>Denoising Self-Attentive Sequential Recommendation (2022)</h3>
+    <p><strong>Authors:</strong> Yan Zheng, Fei Wang, Chin-Chia Michael Yeh, Huiyuan Chen, Menghai Pan, Yusan Lin, Xiaoting Li, Hao Yang, Lan Wang</p>
+    <p>Transformer-based sequential recommenders are very powerful for capturing both short-term and long-term sequential item dependencies. This is mainly attributed to their unique self-attention networks to exploit pairwise item-item interactions within the sequence. However, real-world item sequences are often noisy, which is particularly true for implicit feedback. For example, a large portion of clicks do not align well with user preferences, and many products end up with negative reviews or being returned. As such, the current user action only depends on a subset of items, not on the entire sequences. Many existing Transformer-based models use full attention distributions, which inevitably assign certain credits to irrelevant items. This may lead to sub-optimal performance if Transformers are not regularized properly.<br>Here we propose the Rec-denoiser model for better training of self-attentive recommender systems. In Rec-denoiser, we aim to adaptively prune noisy items that are unrelated to the next item prediction. To achieve this, we simply attach each self-attention layer with a trainable binary mask to prune noisy attentions, resulting in sparse and clean attention distributions. This largely purifies item-item dependencies and provides better model interpretability. In addition, the self-attention network is typically not Lipschitz continuous and is vulnerable to small perturbations. Jacobian regularization is further applied to the Transformer blocks to improve the robustness of Transformers for noisy sequences. Our Rec-denoiser is a general plugin that is compatible to many Transformers. Quantitative results on real-world datasets show that our Rec-denoiser outperforms the state-of-the-art baselines.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Implicit Feedback, Attention Mechanisms, Transformer-Based Models, Sequential Recommendations, Model Optimization, Noisy Data Handling, Real-World Applications, Algorithm Adaptation, Denoising Techniques, Robustness Enhancement. (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/758/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
     <h3>Dual Attentional Higher Order Factorization Machines (2022)</h3>
     <p><strong>Authors:</strong> Prakash Mandayam Comar, Dipankar Das, Vivek Sembium, Arindam Sarkar</p>
     <p>Numerous problems of practical significance such as clickthrough rate (CTR) prediction, forecasting, tagging and so on, involve complex interaction of various user, item and context features. Manual feature engineering has been used in the past to model these combinatorial features but it requires domain expertise and becomes prohibitively expensive as the number of features increases. Feedforward neural networks alleviate the need for manual feature engineering to a large extent and have shown impressive performance across multiple domains due to their ability to learn arbitrary functions. Despite multiple layers of non-linear projections, neural networks are limited in their ability to efficiently model functions with higher order interaction terms. In recent years, Factorization Machines and its variants have been proposed to explicitly capture higher order combinatorial interactions. However not all feature interactions are equally important, and in sparse data settings, without a suitable suppression mechanism, this might result into noisy terms during inference and hurt model generalization. In this work we present Dual Attentional Higher Order Factorization Machine (DA-HoFM), a unified attentional higher order factorization machine which leverages a compositional architecture to compute higher order terms with complexity linear in terms of maximum interaction degree. Equipped with sparse dual attention mechanism, DA-HoFM summarizes interaction terms at each layer, and is able to efficiently select important higher order terms. We empirically demonstrate effectiveness of our proposed models on the task of CTR prediction, where our model exhibits superior performance compared to the recent state-of-the-art models, outperforming them by up to 6.7% on the logloss metric.</p>
@@ -144,18 +156,6 @@
     <p>Content-based news recommenders learn words that correlate with user engagement and recommend articles accordingly. This can be problematic for users with diverse political preferences by topic — e.g., users that prefer conservative articles on one topic but liberal articles on another. In such instances, recommenders can have a homogenizing effect by recommending articles with the same political lean on both topics, particularly if both topics share salient, politically polarized terms like “far right” or “radical left.” In this paper, we propose attention-based neural network models to reduce this homogenization effect by increasing attention on words that are topic specific while decreasing attention on polarized, topic-general terms. We find that the proposed approach results in more accurate recommendations for simulated users with such diverse preferences.</p>
     <p><strong>Categories:</strong> Content-Based Recommendation, News Domain, Neural Networks, Attention Mechanisms, Political Polarization, Fairness and Bias Mitigation, Personalization, Recommendation Quality, Evaluation Metrics Beyond Accuracy, Real World Applications (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/781/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Denoising Self-Attentive Sequential Recommendation (2022)</h3>
-    <p><strong>Authors:</strong> Yan Zheng, Fei Wang, Chin-Chia Michael Yeh, Huiyuan Chen, Menghai Pan, Yusan Lin, Xiaoting Li, Hao Yang, Lan Wang</p>
-    <p>Transformer-based sequential recommenders are very powerful for capturing both short-term and long-term sequential item dependencies. This is mainly attributed to their unique self-attention networks to exploit pairwise item-item interactions within the sequence. However, real-world item sequences are often noisy, which is particularly true for implicit feedback. For example, a large portion of clicks do not align well with user preferences, and many products end up with negative reviews or being returned. As such, the current user action only depends on a subset of items, not on the entire sequences. Many existing Transformer-based models use full attention distributions, which inevitably assign certain credits to irrelevant items. This may lead to sub-optimal performance if Transformers are not regularized properly.<br>Here we propose the Rec-denoiser model for better training of self-attentive recommender systems. In Rec-denoiser, we aim to adaptively prune noisy items that are unrelated to the next item prediction. To achieve this, we simply attach each self-attention layer with a trainable binary mask to prune noisy attentions, resulting in sparse and clean attention distributions. This largely purifies item-item dependencies and provides better model interpretability. In addition, the self-attention network is typically not Lipschitz continuous and is vulnerable to small perturbations. Jacobian regularization is further applied to the Transformer blocks to improve the robustness of Transformers for noisy sequences. Our Rec-denoiser is a general plugin that is compatible to many Transformers. Quantitative results on real-world datasets show that our Rec-denoiser outperforms the state-of-the-art baselines.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Implicit Feedback, Attention Mechanisms, Transformer-Based Models, Sequential Recommendations, Model Optimization, Noisy Data Handling, Real-World Applications, Algorithm Adaptation, Denoising Techniques, Robustness Enhancement. (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/758/">See reasoning</a></p>
   </div>
 
     </div>
@@ -211,30 +211,6 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>SSE-PT: Sequential Recommendation Via Personalized Transformer (2020)</h3>
-    <p><strong>Authors:</strong> Shuqing Li, James Sharpnack, Liwei Wu, Cho-Jui Hsieh</p>
-    <p>Temporal information is crucial for recommendation problems because user preferences are naturally dynamic in the real world. Recent advances in deep learning, especially the discovery of various attention mechanisms and newer architectures in addition to widely used RNN and CNN in natural language processing, have allowed for better use of the temporal ordering of items that each user has engaged with. In particular, the SASRec model, inspired by the popular Transformer model in natural languages processing, has achieved state-of-the-art results. However, SASRec, just like the original Transformer model, is inherently an un-personalized model and does not include personalized user embeddings. To overcome this limitation, we propose a Personalized Transformer (SSE-PT) model, outperforming SASRec by almost 5% in terms of NDCG@10 on 5 real-world datasets. Furthermore, after examining some random users’ engagement history, we find our model not only more interpretable but also able to focus on recent engagement patterns for each user. Moreover, our SSE-PT model with a slight modification, which we call SSE-PT++, can handle extremely long sequences and outperform SASRec in ranking results with comparable training speed, striking a balance between performance and speed requirements. Our novel application of the Stochastic Shared Embeddings (SSE) regularization is essential to the success of personalization. Code and data are open-sourced at https://github.com/wuliwei9278/SSE-PT.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Sequential Recommendations, Personalization, Transformer Models, Attention Mechanisms, Deep Learning, User Engagement History, Scalability, Model Interpretability, Evaluation Metrics, Real-World Applications, Regularization Techniques (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/554/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Interpretable Contextual Team-aware Item Recommendation: Application in Multiplayer Online Battle Arena Games (2020)</h3>
-    <p><strong>Authors:</strong> Vladimir Araujo, Denis Parra, Andrés Villa, Francisca Cattan</p>
-    <p>The video game industry has adopted recommendation systems to boost users interest with a focus on game sales. Other exciting applications within video games are those that help the player make decisions that would maximize their playing experience, which is a desirable feature in real-time strategy video games such as Multiplayer Online Battle Arena (MOBA) like as DotA and LoL. Among these tasks, the recommendation of items is challenging, given both the contextual nature of the game and how it exposes the dependence on the formation of each team. Existing works on this topic do not take advantage of all the available contextual match data and dismiss potentially valuable information. To address this problem we develop TTIR, a contextual recommender model derived from the Transformer neural architecture that suggests a set of items to every team member, based on the contexts of teams and roles that describe the match. TTIR outperforms several approaches and provides interpretable recommendations through visualization of attention weights. Our evaluation indicates that both the Transformer architecture and the contextual information are essential to get the best results for this item recommendation task. Furthermore, a preliminary user survey indicates the usefulness of attention weights for explaining recommendations as well as ideas for future work. The code and dataset are available at https://github.com/ojedaf/IC-TIR-Lol .</p>
-    <p><strong>Categories:</strong> Video Games, Multiplayer Online Battle Arenas (MOBA), Team-Aware Recommendations, Contextual Recommendations, Transformer Architecture, Interpretable AI, User Survey, Real-World Applications, Deep Learning Models, Attention Mechanisms (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/578/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
     <h3>MEANTIME: Mixture of Attention Mechanisms with Multi-temporal Embeddings for Sequential Recommendation (2020)</h3>
     <p><strong>Authors:</strong> Sung Min Cho, Eunhyeok Park, Sungjoo Yoo</p>
     <p>Recently, self-attention based models have achieved state-of-the-art performance in sequential recommendation task. Following the custom from language processing, most of these models rely on a simple positional embedding to exploit the sequential nature of the user’s history. However, there are some limitations regarding the current approaches. First, sequential recommendation is different from language processing in that timestamp information is available. Previous models have not made good use of it to extract additional contextual information. Second, using a simple embedding scheme can lead to information bottleneck since the same embedding has to represent all possible contextual biases. Third, since previous models use the same positional embedding in each attention head, they can wastefully learn overlapping patterns. To address these limitations, we propose MEANTIME (MixturE of AtteNTIon mechanisms with Multi-temporal Embeddings) which employs multiple types of temporal embeddings designed to capture various patterns from the user’s behavior sequence, and an attention structure that fully leverages such diversity. Experiments on real-world data show that our proposed method outperforms current state-of-the-art sequential recommendation methods, and we provide an extensive ablation study to analyze how the model gains from the diverse positional information.</p>
@@ -247,11 +223,35 @@
     <div class="ui segment">
       
   <div class="item">
+    <h3>SSE-PT: Sequential Recommendation Via Personalized Transformer (2020)</h3>
+    <p><strong>Authors:</strong> Shuqing Li, James Sharpnack, Liwei Wu, Cho-Jui Hsieh</p>
+    <p>Temporal information is crucial for recommendation problems because user preferences are naturally dynamic in the real world. Recent advances in deep learning, especially the discovery of various attention mechanisms and newer architectures in addition to widely used RNN and CNN in natural language processing, have allowed for better use of the temporal ordering of items that each user has engaged with. In particular, the SASRec model, inspired by the popular Transformer model in natural languages processing, has achieved state-of-the-art results. However, SASRec, just like the original Transformer model, is inherently an un-personalized model and does not include personalized user embeddings. To overcome this limitation, we propose a Personalized Transformer (SSE-PT) model, outperforming SASRec by almost 5% in terms of NDCG@10 on 5 real-world datasets. Furthermore, after examining some random users’ engagement history, we find our model not only more interpretable but also able to focus on recent engagement patterns for each user. Moreover, our SSE-PT model with a slight modification, which we call SSE-PT++, can handle extremely long sequences and outperform SASRec in ranking results with comparable training speed, striking a balance between performance and speed requirements. Our novel application of the Stochastic Shared Embeddings (SSE) regularization is essential to the success of personalization. Code and data are open-sourced at https://github.com/wuliwei9278/SSE-PT.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Sequential Recommendations, Personalization, Transformer Models, Attention Mechanisms, Deep Learning, User Engagement History, Scalability, Model Interpretability, Evaluation Metrics, Real-World Applications, Regularization Techniques (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/554/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
     <h3>TAFA: Two-headed Attention Fused Autoencoder for Context-Aware Recommendations (2020)</h3>
     <p><strong>Authors:</strong> Jin Peng Zhou, Felipe Perez, Maksims Volkovs, Zhaoyue Cheng</p>
     <p>Collaborative filtering with implicit feedback is a ubiquitous class of recommendation problems where only positive interactions such as purchases or clicks are observed. Autoencoder-based recommendation models have shown strong performance on many implicit feedback benchmarks. However, these models tend to suffer from popularity bias making recommendations less personalized. User-generated reviews contain a rich source of preference information, often with specific details that are important to each user, and can help mitigate the popularity bias. Since not all reviews are equally useful, existing work has been exploring various forms of attention to distill relevant information. In the majority of proposed approaches, representations from implicit feedback and review branches are simply concatenated at the end to generate predictions. This can prevent the model from learning deeper correlations between the two modalities and affect prediction accuracy. To address these problems, we propose a novel Two-headed Attention Fused Autoencoder (TAFA) model that jointly learns representations from user reviews and implicit feedback to make recommendations. We apply early and late modality fusion which allows the model to fully correlate and extract relevant information from both input sources. To further combat popularity bias, we leverage the Noise Contrastive Estimation (NCE) objective to “de-popularize” the fused user representation via a two-headed decoder architecture. Empirically, we show that TAFA outperforms leading baselines on multiple real-world benchmarks. Moreover, by tracing attention weights back to reviews we can provide explanations for the generated recommendations and gain further insights into user preferences. Full code for this work is available here: https://github.com/layer6ai-labs/TAFA.</p>
     <p><strong>Categories:</strong> Collaborative Filtering, Implicit Feedback, Autoencoder, Popularity Bias, User Reviews, Attention Mechanisms, Early and Late Fusion, Noise Contrastive Estimation (NCE), Real-World Applications, Interpretability/Explainability, Recommendation Systems, Context-Aware Recommendations (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/555/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Interpretable Contextual Team-aware Item Recommendation: Application in Multiplayer Online Battle Arena Games (2020)</h3>
+    <p><strong>Authors:</strong> Vladimir Araujo, Denis Parra, Andrés Villa, Francisca Cattan</p>
+    <p>The video game industry has adopted recommendation systems to boost users interest with a focus on game sales. Other exciting applications within video games are those that help the player make decisions that would maximize their playing experience, which is a desirable feature in real-time strategy video games such as Multiplayer Online Battle Arena (MOBA) like as DotA and LoL. Among these tasks, the recommendation of items is challenging, given both the contextual nature of the game and how it exposes the dependence on the formation of each team. Existing works on this topic do not take advantage of all the available contextual match data and dismiss potentially valuable information. To address this problem we develop TTIR, a contextual recommender model derived from the Transformer neural architecture that suggests a set of items to every team member, based on the contexts of teams and roles that describe the match. TTIR outperforms several approaches and provides interpretable recommendations through visualization of attention weights. Our evaluation indicates that both the Transformer architecture and the contextual information are essential to get the best results for this item recommendation task. Furthermore, a preliminary user survey indicates the usefulness of attention weights for explaining recommendations as well as ideas for future work. The code and dataset are available at https://github.com/ojedaf/IC-TIR-Lol .</p>
+    <p><strong>Categories:</strong> Video Games, Multiplayer Online Battle Arenas (MOBA), Team-Aware Recommendations, Contextual Recommendations, Transformer Architecture, Interpretable AI, User Survey, Real-World Applications, Deep Learning Models, Attention Mechanisms (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/578/">See reasoning</a></p>
   </div>
 
     </div>

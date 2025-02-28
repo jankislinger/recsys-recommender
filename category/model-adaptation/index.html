@@ -34,13 +34,18 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Model Adaptation</a>
+        
+      
+        
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
         
       
         
@@ -55,50 +60,33 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+             href="/recsys-recommender/category/transfer-learning/">Transfer Learning</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/cold-start/">Cold Start</a>
+             href="/recsys-recommender/category/scalability/">Scalability</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
+             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/multi-task-learning/">Multi-Task Learning</a>
+             href="/recsys-recommender/category/performance-evaluation/">Performance Evaluation</a>
         
       
     </div>
   </div>
 
   
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Better Generalization with Semantic IDs: A Case Study in Ranking for Recommendations (2024)</h3>
-    <p><strong>Authors:</strong> Raghunandan Keshavan, Lichan Hong, Devansh Tandon, Ed Chi, Xinyang Yi, Yilin Zheng, Trung Vu, Maheswaran Sathiamoorthy, Lukasz Heldt, Li Wei, Nikhil Mehta, Anima Singh</p>
-    <p>Randomly-hashed item ids are used ubiquitously in recommendation models. However, the learned representations of random ids lack generalization across similar items, causing problems of learning unseen and long-tail items, especially when item corpus is large, power-law distributed, and evolving dynamically. In this paper, we first show that simply replacing ID features with content-based embeddings can cause a drop in quality due to reduced memorization capability. To strike a good balance of memorization and generalization, we further propose to use Semantic IDs — a compact discrete item representation learned from frozen content embeddings using RQ-VAE that captures the hierarchy of concepts in items — as a replacement for random item ids. Similar to content embeddings, the compactness of Semantic IDs poses a problem of easy adaption in recommendation models. We propose a few methods of adapting Semantic IDs in industry-scale ranking models, through hashing sub-pieces of of the Semantic-ID sequences. In particular, we find that the SentencePiece model that is commonly used in LLM tokenization outperforms manually crafted pieces such as bigrams. To the end, we evaluate our approaches in a real-world ranking model for YouTube recommendations. Our experiments demonstrate that Semantic IDs can replace the direct use of video IDs by improving the generalization ability on new and long-tail item slices without sacrificing overall model quality, while significantly reducing the model size.</p>
-    <p><strong>Categories:</strong> Recommendation Systems, Semantic IDs, Content-Based Embeddings, Generalization, Item Representation, Industry-Scale Models, Model Adaptation, YouTube Recommendations, SentencePiece Model, Long-Tail Items (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1077/">See reasoning</a></p>
-  </div>
-
-    </div>
   
     <div class="ui segment">
       
@@ -108,6 +96,18 @@
     <p>Sequential recommendation (SR) has seen significant advancements with the help of Pre-trained Language Models (PLMs). Some PLM-based SR models directly use PLM to encode user historical behavior’s text sequences to learn user representations, while there is seldom an in-depth exploration of the capability and suitability of PLM in behavior sequence modeling. In this work, we first conduct extensive model analyses between PLMs and PLM-based SR models, discovering great underutilization and parameter redundancy of PLMs in behavior sequence modeling. Inspired by this, we explore different lightweight usages of PLMs in SR, aiming to maximally stimulate the ability of PLMs for SR while satisfying the efficiency and usability demands of practical systems. We discover that adopting behavior-tuned PLMs for item initializations of conventional ID-based SR models is the most economical framework of PLM-based SR, which would not bring in any additional inference cost but could achieve a dramatic performance boost compared with the original version. Extensive experiments on five datasets show that our simple and universal framework leads to significant improvement compared to classical SR and SOTA PLM-based SR models without additional inference costs.</p>
     <p><strong>Categories:</strong> Pre-trained Language Models, Sequential Recommendation, Model Analysis, Behavior Sequence Modeling, Efficiency in Recommendations, Lightweight Usage of PLMs, Parameter Redundancy, Model Adaptation (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/1064/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
+    <h3>Better Generalization with Semantic IDs: A Case Study in Ranking for Recommendations (2024)</h3>
+    <p><strong>Authors:</strong> Raghunandan Keshavan, Lichan Hong, Devansh Tandon, Ed Chi, Xinyang Yi, Yilin Zheng, Trung Vu, Maheswaran Sathiamoorthy, Lukasz Heldt, Li Wei, Nikhil Mehta, Anima Singh</p>
+    <p>Randomly-hashed item ids are used ubiquitously in recommendation models. However, the learned representations of random ids lack generalization across similar items, causing problems of learning unseen and long-tail items, especially when item corpus is large, power-law distributed, and evolving dynamically. In this paper, we first show that simply replacing ID features with content-based embeddings can cause a drop in quality due to reduced memorization capability. To strike a good balance of memorization and generalization, we further propose to use Semantic IDs — a compact discrete item representation learned from frozen content embeddings using RQ-VAE that captures the hierarchy of concepts in items — as a replacement for random item ids. Similar to content embeddings, the compactness of Semantic IDs poses a problem of easy adaption in recommendation models. We propose a few methods of adapting Semantic IDs in industry-scale ranking models, through hashing sub-pieces of of the Semantic-ID sequences. In particular, we find that the SentencePiece model that is commonly used in LLM tokenization outperforms manually crafted pieces such as bigrams. To the end, we evaluate our approaches in a real-world ranking model for YouTube recommendations. Our experiments demonstrate that Semantic IDs can replace the direct use of video IDs by improving the generalization ability on new and long-tail item slices without sacrificing overall model quality, while significantly reducing the model size.</p>
+    <p><strong>Categories:</strong> Recommendation Systems, Semantic IDs, Content-Based Embeddings, Generalization, Item Representation, Industry-Scale Models, Model Adaptation, YouTube Recommendations, SentencePiece Model, Long-Tail Items (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1077/">See reasoning</a></p>
   </div>
 
     </div>

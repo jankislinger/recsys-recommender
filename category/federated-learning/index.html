@@ -34,6 +34,11 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Federated Learning</a>
+        
+      
+        
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
         
@@ -45,27 +50,7 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/fairness/">Fairness</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/performance-evaluation/">Performance Evaluation</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/cold-start/">Cold Start</a>
+             href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
         
       
         
@@ -75,12 +60,27 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/evaluation-metrics/">Evaluation Metrics</a>
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/evaluation-methods/">Evaluation Methods</a>
+             href="/recsys-recommender/category/fairness/">Fairness</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reinforcement-learning/">Reinforcement Learning</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/cold-start/">Cold Start</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
         
       
     </div>
@@ -103,11 +103,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>FedLoCA: Low-Rank Coordinated Adaptation with Knowledge Decoupling for Federated Recommendations (2024)</h3>
-    <p><strong>Authors:</strong> Yong Liao, Boyu Fan, Pengyuan Zhou, Siqing Zhang, Yuchen Ding, Wei Sun</p>
-    <p>Privacy protection in recommendation systems is gaining increasing attention, for which federated learning has emerged as a promising solution. Current federated recommendation systems grapple with high communication overhead due to sharing dense global embeddings, and also poorly reflect user preferences due to data heterogeneity. To overcome these challenges, we propose a two-stage Federated Low-rank Coordinated Adaptation (FedLoCA) framework to decouple global and client-specific knowledge into low-rank embeddings, which significantly reduces communication overhead while enhancing the system’s ability to capture individual user preferences amidst data heterogeneity. Further, to tackle gradient estimation inaccuracies stemming from data sparsity in federated recommendation systems, we introduce an adversarial gradient projected descent approach in low-rank spaces, which significantly boosts model performance while maintaining robustness. Remarkably, FedLoCA also alleviates performance loss even under the stringent constraints of differential privacy. Extensive experiments on various real-world datasets demonstrate that FedLoCA significantly outperforms existing methods in both recommendation accuracy and communication efficiency.</p>
-    <p><strong>Categories:</strong> Federated Learning, Privacy Protection, Recommendation Systems, Communication Efficiency, Low-Rank Embeddings, Personalization, Gradient Estimation, Optimization, Differential Privacy, Data Heterogeneity, Cold Start, Evaluation Metrics (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1037/">See reasoning</a></p>
+    <h3>Privacy Preserving Conversion Modeling in Data Clean Room (2024)</h3>
+    <p><strong>Authors:</strong> Behnam Rezaei, Xiangyi Chen, Ling Leng, Jiajing Xu, Jiankai Sun, Kungang Li</p>
+    <p>In the realm of online advertising, accurately predicting the conversion rates (CVR) is crucial for enhancing advertising efficiency and user satisfaction. However, it faces the challenge that due to user privacy choices and advertiser requirements, the advertising platform cannot get the conversion data from some advertisers, making accurate CVR predictions difficult. Although current methods like split learning or vertical federated learning do not share label information directly, they still exchange sample-level gradients, which introduces a privacy risk as adversaries might infer label information through the shared gradients. To address these challenges, our proposed model training framework incorporates several innovative techniques. Firstly, we employ batch-level aggregated gradients instead of sample-level gradients to enhance privacy. Secondly, to minimize communication costs, we utilize adapter-based parameter-efficient fine-tuning methods such as Low-Rank Adaptation (LoRA) and gradient compression in conversion models. These methods allow for efficient collaboration between different parties while reducing the amount of data transferred. Lastly, we incorporate label differential privacy to protect model privacy. Given that this privacy protection alters the data distribution and can result in significant calibration error, we propose a de-biasing technique to ensure accurate model predictions even with perturbed label information. Our experimental results on industrial datasets demonstrate that our method achieves competitive performance while significantly reducing the communication overhead and complying with advertisers’ privacy requirements and user privacy choice. This framework establishes a new benchmark for privacy-preserving and high-performance CVR prediction in the digital advertising industry.</p>
+    <p><strong>Categories:</strong> Privacy Preservation, Conversion Rate Prediction, Online Advertising, Machine Learning, Federated Learning, Differential Privacy, Optimization Methods, Data Sharing Challenges, Low-Rank Adaptation (LoRA), Gradient Compression, Advertising Technology, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1181/">See reasoning</a></p>
   </div>
 
     </div>
@@ -115,11 +115,11 @@
     <div class="ui segment">
       
   <div class="item">
-    <h3>Privacy Preserving Conversion Modeling in Data Clean Room (2024)</h3>
-    <p><strong>Authors:</strong> Behnam Rezaei, Xiangyi Chen, Ling Leng, Jiajing Xu, Jiankai Sun, Kungang Li</p>
-    <p>In the realm of online advertising, accurately predicting the conversion rates (CVR) is crucial for enhancing advertising efficiency and user satisfaction. However, it faces the challenge that due to user privacy choices and advertiser requirements, the advertising platform cannot get the conversion data from some advertisers, making accurate CVR predictions difficult. Although current methods like split learning or vertical federated learning do not share label information directly, they still exchange sample-level gradients, which introduces a privacy risk as adversaries might infer label information through the shared gradients. To address these challenges, our proposed model training framework incorporates several innovative techniques. Firstly, we employ batch-level aggregated gradients instead of sample-level gradients to enhance privacy. Secondly, to minimize communication costs, we utilize adapter-based parameter-efficient fine-tuning methods such as Low-Rank Adaptation (LoRA) and gradient compression in conversion models. These methods allow for efficient collaboration between different parties while reducing the amount of data transferred. Lastly, we incorporate label differential privacy to protect model privacy. Given that this privacy protection alters the data distribution and can result in significant calibration error, we propose a de-biasing technique to ensure accurate model predictions even with perturbed label information. Our experimental results on industrial datasets demonstrate that our method achieves competitive performance while significantly reducing the communication overhead and complying with advertisers’ privacy requirements and user privacy choice. This framework establishes a new benchmark for privacy-preserving and high-performance CVR prediction in the digital advertising industry.</p>
-    <p><strong>Categories:</strong> Privacy Preservation, Conversion Rate Prediction, Online Advertising, Machine Learning, Federated Learning, Differential Privacy, Optimization Methods, Data Sharing Challenges, Low-Rank Adaptation (LoRA), Gradient Compression, Advertising Technology, Real-World Applications (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/1181/">See reasoning</a></p>
+    <h3>FedLoCA: Low-Rank Coordinated Adaptation with Knowledge Decoupling for Federated Recommendations (2024)</h3>
+    <p><strong>Authors:</strong> Yong Liao, Boyu Fan, Pengyuan Zhou, Siqing Zhang, Yuchen Ding, Wei Sun</p>
+    <p>Privacy protection in recommendation systems is gaining increasing attention, for which federated learning has emerged as a promising solution. Current federated recommendation systems grapple with high communication overhead due to sharing dense global embeddings, and also poorly reflect user preferences due to data heterogeneity. To overcome these challenges, we propose a two-stage Federated Low-rank Coordinated Adaptation (FedLoCA) framework to decouple global and client-specific knowledge into low-rank embeddings, which significantly reduces communication overhead while enhancing the system’s ability to capture individual user preferences amidst data heterogeneity. Further, to tackle gradient estimation inaccuracies stemming from data sparsity in federated recommendation systems, we introduce an adversarial gradient projected descent approach in low-rank spaces, which significantly boosts model performance while maintaining robustness. Remarkably, FedLoCA also alleviates performance loss even under the stringent constraints of differential privacy. Extensive experiments on various real-world datasets demonstrate that FedLoCA significantly outperforms existing methods in both recommendation accuracy and communication efficiency.</p>
+    <p><strong>Categories:</strong> Federated Learning, Privacy Protection, Recommendation Systems, Communication Efficiency, Low-Rank Embeddings, Personalization, Gradient Estimation, Optimization, Differential Privacy, Data Heterogeneity, Cold Start, Evaluation Metrics (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/1037/">See reasoning</a></p>
   </div>
 
     </div>

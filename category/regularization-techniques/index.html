@@ -34,6 +34,11 @@
     <div class="ui" style="flex-wrap: wrap; margin: 10px 0;">
       
         
+          <a class="ui primary button" style="margin: 5px;"
+             href="/recsys-recommender/">Regularization Techniques</a>
+        
+      
+        
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/large-language-models-llms/">Large Language Models (LLMs)</a>
         
@@ -45,32 +50,17 @@
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/bias-mitigation/">Bias Mitigation</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/real-world-applications/">Real-world Applications</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
+             href="/recsys-recommender/category/data-sparsity/">Data Sparsity</a>
         
       
         
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/sequential-recommendations/">Sequential Recommendations</a>
-        
-      
-        
-          <a class="ui button" style="margin: 5px;"
-             href="/recsys-recommender/category/offline-evaluation/">Offline Evaluation</a>
         
       
         
@@ -81,6 +71,16 @@
         
           <a class="ui button" style="margin: 5px;"
              href="/recsys-recommender/category/ab-testing/">A/B Testing</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/e-commerce/">E-commerce</a>
+        
+      
+        
+          <a class="ui button" style="margin: 5px;"
+             href="/recsys-recommender/category/reproducibility/">Reproducibility</a>
         
       
     </div>
@@ -115,6 +115,18 @@
     <div class="ui segment">
       
   <div class="item">
+    <h3>Asynchronous Distributed Matrix Factorization with Similar User and Item Based Regularization (2016)</h3>
+    <p><strong>Authors:</strong> Franck Iutzeler, Bikash Joshi, Massih-Reza Amini</p>
+    <p>We introduce an asynchronous distributed stochastic gradient algorithm for matrix factorization based collaborative filtering. The main idea of this approach is to distribute the user-rating matrix across different machines, each having access only to a part of the information, and to asynchronously propagate the updates of the stochastic gradient optimization across the network. Each time a machine receives a parameter vector, it averages its current parameter vector with the received one, and continues its iterations from this new point. Additionally, we introduce a similarity based regularization that constrains the user and item factors to be close to the average factors of their similar users and items found on subparts of the distributed user-rating matrix. We analyze the impact of the regularization terms on MovieLens (100K, 1M, 10M) and NetFlix datasets and show that it leads to a more efficient matrix factorization in terms of Root Mean Square Error (RMSE) and Mean Absolute Error (MAE), and that the asynchronous distributed approach significantly improves in convergence time as compared to an equivalent synchronous distributed approach.</p>
+    <p><strong>Categories:</strong> Matrix Factorization, Distributed Systems, Collaborative Filtering, Recommendation Algorithms, Asynchronous Methods, Regularization Techniques, Evaluation Metrics, Scalability, Data Distribution, Recommendation Systems (<i>deepseek-r1:32b</i>)</p>
+    <p><a href="/recsys-recommender/response/203/">See reasoning</a></p>
+  </div>
+
+    </div>
+  
+    <div class="ui segment">
+      
+  <div class="item">
     <h3>Factorization Meets the Item Embedding: Regularizing Matrix Factorization with Item Co-occurrence (2016)</h3>
     <p><strong>Authors:</strong> David M. Blei, Dawen Liang, Jaan Altosaar, Laurent Charlin</p>
     <p>Matrix factorization (MF) models and their extensions are standard in modern recommender systems. MF models decompose the observed user-item interaction matrix into user and item latent factors. In this paper, we propose a co-factorization model, CoFactor, which jointly decomposes the user-item interaction matrix and the item-item co-occurrence matrix with shared item latent factors. For each pair of items, the co-occurrence matrix encodes the number of users that have consumed both items. CoFactor is inspired by the recent success of word embedding models (e.g., word2vec) which can be interpreted as factorizing the word co-occurrence matrix. We show that this model significantly improves the performance over MF models on several datasets with little additional computational overhead. We provide qualitative results that explain how CoFactor improves the quality of the inferred factors and characterize the circumstances where it provides the most significant improvements.</p>
@@ -132,18 +144,6 @@
     <p>Determinantal point processes (DPPs) are an emerging model for encoding probabilities over subsets, such as shopping baskets, selected from a ground set, such as an item catalog. They have recently proved to be appealing models for a number of machine learning tasks, including product recommendation. DPPs are parametrized by a positive semi-definite kernel matrix. Prior work has shown that using a low-rank factorization of this kernel provides scalability improvements that open the door to training on large-scale datasets and computing online recommendations, both of which are infeasible with standard DPP models that use a full-rank kernel. A low-rank DPP model can be trained using an optimization-based method, such as stochastic gradient ascent, to find a point estimate of the kernel parameters, which can be performed efficiently on large-scale datasets. However, this approach requires careful tuning of regularization parameters to prevent overfitting and provide good predictive performance, which can be computationally expensive. In this paper we present a Bayesian method for learning a low-rank factorization of this kernel, which provides automatic control of regularization. We show that our Bayesian low-rank DPP model can be trained efficiently using stochastic gradient Hamiltonian Monte Carlo (SGHMC). Our Bayesian model generally provides better predictive performance on several real-world product recommendation datasets than optimization-based low-rank DPP models trained using stochastic gradient ascent, and better performance than several state-of-the art recommendation methods in many cases.</p>
     <p><strong>Categories:</strong> Determinantal Point Processes (DPPs), Bayesian Methods, Product Recommendation, Low-Rank Factorization, Scalability, State-of-the-Art Recommendations, Stochastic Gradient Hamiltonian Monte Carlo (SGHMC), Large-Scale Data, Regularization Techniques. (<i>deepseek-r1:32b</i>)</p>
     <p><a href="/recsys-recommender/response/167/">See reasoning</a></p>
-  </div>
-
-    </div>
-  
-    <div class="ui segment">
-      
-  <div class="item">
-    <h3>Asynchronous Distributed Matrix Factorization with Similar User and Item Based Regularization (2016)</h3>
-    <p><strong>Authors:</strong> Franck Iutzeler, Bikash Joshi, Massih-Reza Amini</p>
-    <p>We introduce an asynchronous distributed stochastic gradient algorithm for matrix factorization based collaborative filtering. The main idea of this approach is to distribute the user-rating matrix across different machines, each having access only to a part of the information, and to asynchronously propagate the updates of the stochastic gradient optimization across the network. Each time a machine receives a parameter vector, it averages its current parameter vector with the received one, and continues its iterations from this new point. Additionally, we introduce a similarity based regularization that constrains the user and item factors to be close to the average factors of their similar users and items found on subparts of the distributed user-rating matrix. We analyze the impact of the regularization terms on MovieLens (100K, 1M, 10M) and NetFlix datasets and show that it leads to a more efficient matrix factorization in terms of Root Mean Square Error (RMSE) and Mean Absolute Error (MAE), and that the asynchronous distributed approach significantly improves in convergence time as compared to an equivalent synchronous distributed approach.</p>
-    <p><strong>Categories:</strong> Matrix Factorization, Distributed Systems, Collaborative Filtering, Recommendation Algorithms, Asynchronous Methods, Regularization Techniques, Evaluation Metrics, Scalability, Data Distribution, Recommendation Systems (<i>deepseek-r1:32b</i>)</p>
-    <p><a href="/recsys-recommender/response/203/">See reasoning</a></p>
   </div>
 
     </div>
