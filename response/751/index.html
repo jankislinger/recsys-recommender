@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Bundle recommender systems recommend sets of items (e.g., pants, shirt, and shoes) to users, but they often suffer from two issues: significant interaction sparsity and a large output space. In this work, we extend multi-round conversational recommendation (MCR) to alleviate these issues. MCR—which uses a conversational paradigm to elicit user interests by asking user preferences on tags (e.g., categories or attributes) and handling user feedback across multiple rounds—is an emerging recommendation setting to acquire user feedback and narrow down the output space, but has not been explored in the context of bundle recommendation. In this work, we propose a novel recommendation task named Bundle MCR. Unlike traditional bundle recommendation (a bundle-aware user model and bundle generation), Bundle MCR studies how to encode user feedback as conversation states and how to post questions to users. Unlike existing MCR in which agents recommend individual items only, Bundle MCR handles more complicated user feedback on multiple items and related tags. To support this, we first propose a new framework to formulate Bundle MCR as Markov Decision Processes (MDPs) with multiple agents, for user modeling, consultation and feedback handling in bundle contexts. Under this framework, we propose a model architecture, called Bundle Bert (Bunt) to (1) recommend items, (2) post questions and (3) manage conversations based on bundle-aware conversation states. Moreover, to train Bunt effectively, we propose a two-stage training strategy. In an offline pre-training stage, Bunt is trained using multiple cloze tasks to mimic bundle interactions in conversations. Then in an online fine-tuning stage, Bunt agents are enhanced by user interactions. Our experiments on multiple offline datasets as well as the human evaluation show the value of extending MCR frameworks to bundle settings and the effectiveness of our Bunt design.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article into appropriate categories based on its content. Let&#39;s start by understanding what the article is about.
 
 The title mentions &#34;Bundle MCR: Towards Conversational Bundle Recommendation.&#34; So it&#39;s about recommendation systems but specifically for bundles, which are sets of items like clothes or accessories. The abstract explains that bundle recommenders face issues with interaction sparsity and a large output space. They propose extending multi-round conversational recommendation (MCR) to address these problems.
@@ -110,15 +124,11 @@ I should ensure each category is relevant and not redundant. The user guidelines
 Bundle Recommendation, Conversational Recommender Systems, Multi-Round Conversational Recommendation (MCR), User Feedback Handling, Recommender Systems, Markov Decision Processes (MDPs), Multi-Agent Systems, Conversation State Management, Cold Start, Human Evaluation, Tag-Based Recommendations, Scalability</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

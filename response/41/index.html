@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 In several applications, user preferences can be fairly dynamic, since users tend to exploit a wide range of items and modify their tastes accordingly over time. In this paper, we model continuous user-item interactions over time using a tensor that has time as a dimension (mode). To account for the fact that user preferences are dynamic and change individually, we propose a new measure of user-preference dynamics (UPD) that captures the rate with which the current preferences of each user have been shifted. We generate recommendations based on factorizing the tensor, by weighting the importance of past user preferences according to their UPD values. We additionally exploit users’ side data, such as demographics, which can help improving the accuracy of recommendations based on a coupled, tensor-matrix factorization scheme. Our empirical evaluation uses a real data set from last.fm, which allows us to demonstrate that user preferences can become very dynamic. Our experimental results show that the proposed method, by taking into account these dynamics, outperforms several baselines.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, so I need to categorize this research article. Let me start by reading through the title and abstract carefully.
 
 The title is &#34;Modeling the Dynamics of User Preferences in Coupled Tensor Factorization.&#34; Hmm, that suggests it&#39;s about how user preferences change over time, using tensor factorization as a method.
@@ -125,15 +139,11 @@ So, compiling these into the required list.
 Tensor Factorization, Collaborative Filtering, User Dynamics, Recommendation Accuracy, Side Information, Beyond Accuracy, Coupled Factorization, Real World Applications, A/B Testing, Music Recommendations, Temporal Data</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

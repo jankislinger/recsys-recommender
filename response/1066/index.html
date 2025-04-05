@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 The widespread adoption of location-based applications has created a growing demand for point-of-interest (POI) recommendation, which aims to predict a user’s next POI based on their historical check-in data and current location. However, existing methods often struggle to capture the intricate relationships within check-in data. This is largely due to their limitations in representing temporal and spatial information and underutilizing rich semantic features. While large language models (LLMs) offer powerful semantic comprehension to solve them, they are limited by hallucination and the inability to incorporate global collaborative information. To address these issues, we propose a novel method SeCor, which treats POI recommendation as a multi-modal task and integrates semantic and collaborative representations to form an efficient hybrid encoding. SeCor first employs a basic collaborative filtering model to mine interaction features. These embeddings, as one modal information, are fed into LLM to align with semantic representation, leading to efficient hybrid embeddings. To mitigate the hallucination, SeCor recommends based on the hybrid embeddings rather than directly using the LLM’s output text. Extensive experiments on three public real-world datasets show that SeCor outperforms all baselines, achieving improved recommendation performance by effectively integrating collaborative and semantic information through LLMs.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I&#39;m looking at this research article about SeCor, which seems to focus on point-of-interest recommendations using large language models. Let me break down how I came up with the categories.
 
 First, the title mentions &#34;Large Language Models,&#34; so that&#39;s a clear category. The method integrates semantic and collaborative representations, which points towards Hybrid Methods. It deals with POI recommendations specifically in location-based services, so that&#39;s another one.
@@ -95,14 +109,14 @@ The problem domain here is clearly Location-Based Services since it&#39;s about 
 Large Language Models, Hybrid Methods, Point-of-Interest Recommendation, Location-Based Services, Multi-Modal, Real World Application, Evaluation in Recommendations, Recommender Systems, Semantics, Collaborative Filtering</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -145,9 +159,11 @@ Abstract:
 The widespread adoption of location-based applications has created a growing demand for point-of-interest (POI) recommendation, which aims to predict a user’s next POI based on their historical check-in data and current location. However, existing methods often struggle to capture the intricate relationships within check-in data. This is largely due to their limitations in representing temporal and spatial information and underutilizing rich semantic features. While large language models (LLMs) offer powerful semantic comprehension to solve them, they are limited by hallucination and the inability to incorporate global collaborative information. To address these issues, we propose a novel method SeCor, which treats POI recommendation as a multi-modal task and integrates semantic and collaborative representations to form an efficient hybrid encoding. SeCor first employs a basic collaborative filtering model to mine interaction features. These embeddings, as one modal information, are fed into LLM to align with semantic representation, leading to efficient hybrid embeddings. To mitigate the hallucination, SeCor recommends based on the hybrid embeddings rather than directly using the LLM’s output text. Extensive experiments on three public real-world datasets show that SeCor outperforms all baselines, achieving improved recommendation performance by effectively integrating collaborative and semantic information through LLMs.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article into multiple relevant categories. Let me start by reading the title and abstract carefully.
 
 The title is &#34;SeCor: Aligning Semantic and Collaborative representations by Large Language Models for Next-Point-of-Interest Recommendations.&#34; So it&#39;s about POI recommendations using both semantic and collaborative methods with LLMs.
@@ -267,15 +283,11 @@ But I think the main ones are covered above.
 POI Recommendation, Collaborative Filtering, Large Language Models (LLMs), Next-POI Recommendations, Semantic Representation, Hybrid Recommendation Models, Temporal Data, Spatial Data, Real-World Applications, Check-In Data, User Trajectory</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 A dialog-based interactive recommendation task is where users can express natural-language feedback when interacting with the recommender system. However, the users’ feedback, which takes the form of natural-language critiques about the recommendation at each iteration, can only allow the recommender system to obtain a partial portrayal of the users’ preferences. Indeed, such partial observations of the users’ preferences from their natural-language feedback make it challenging to correctly track the users’ preferences over time, which can result in poor recommendation performances and a less effective satisfaction of the users’ information needs when in presence of limited iterations. Reinforcement learning, in the form of a partially observable Markov decision process (POMDP), can simulate the interactions between a partially observable environment (i.e. a user) and an agent (i.e. a recommender system). To alleviate such a partial observation issue, we propose a novel dialog-based recommendation model, the Estimator-Generator-Evaluator (EGE) model, with Q-learning for POMDP, to effectively incorporate the users’ preferences over time. Specifically, we leverage an Estimator to track and estimate users’ preferences, a Generator to match the estimated preferences with the candidate items to rank the next recommendations, and an Evaluator to judge the quality of the estimated preferences considering the users’ historical feedback. Following previous work, we train our EGE model by using a user simulator which itself is trained to describe the differences between the target users’ preferences and the recommended items in natural language. Thorough and extensive experiments conducted on two recommendation datasets – addressing images of fashion products (namely dresses and shoes) – demonstrate that our proposed EGE model yields significant improvements in comparison to the existing state-of-the-art baseline models.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let me start by reading through the title and abstract carefully.
 
 The title is &#34;Partially Observable Reinforcement Learning for Dialog- based Interactive Recommendation.&#34; So it&#39;s about recommendation systems that interact with users through dialogue using reinforcement learning, specifically Partially Observable Markov Decision Processes (POMDPs). 
@@ -126,15 +140,11 @@ That&#39;s 9 categories, which fits the 8-12 range. I think this covers the main
 Reinforcement Learning, Recommendation Systems, Interactive Recommendation, Natural Language Feedback, Partially Observable Environments, User Preferences Tracking, Q-Learning, Model Architectures, Simulation</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Online platforms which assist people in finding a suitable partner or match, such as online dating and job recruiting environments, have become increasingly popular in the last decade. Many of these platforms include recommender systems which aim to help users discover other people who will be also interested in them. These recommender systems benefit from contemplating the interest of both sides of the recommended match, however the question of how to optimally balance the interest and the response of both sides remains open. In this study we present a novel recommendation method for recommending people to people. For each user receiving a recommendation, our method finds the optimal balance of two criteria: a) the user’s likelihood to accept the recommendation; and b) the recommended user’s likelihood to positively respond. We extensively evaluate our recommendation method with a group of active users from an operational online dating site. We find that our method is significantly more effective in increasing the number of successful interactions compared to a current state-of-the-art recommendation method.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I&#39;m trying to categorize this research article about reciprocal recommender systems. Let&#39;s see, the title mentions balancing receiver and recommended users&#39; importance. The abstract talks about online platforms like dating or job recruiting where both sides need to be interested in each other.
 
 First, the family of algorithm here is Optimization because they&#39;re finding an optimal balance between two criteria. It seems specific since it&#39;s about people recommendations rather than products.
@@ -101,15 +115,11 @@ Putting it all together, I think these categories cover the article&#39;s focus 
 Optimization, Personalized Recommendations, Two-Sided Matching, Bipartite Matching, Recommendation Effectiveness, Real-World Applications, A/B Testing, User Interaction Dynamics, Beyond Accuracy, Social Recommendations, Operational Platforms, Interaction Success, Field Study Application</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:70b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:70b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 In this paper we present a time-based genre prediction strategy that can inform the book recommendation process. To explicitly consider time in predicting genres of interest, we rely on a popular time series forecasting model as well as reading patterns of each individual reader or group of readers (in case of libraries or publishing companies). Based on a conducted initial assessment using the Amazon dataset, we demonstrate our strategy outperforms its baseline counterpart.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article. The title is &#34;Genre Prediction to Inform the Recommendation Process&#34; and the abstract talks about a time-based genre prediction strategy for book recommendations.
 
 First, looking at the title and abstract, the main themes are genre prediction, recommendation systems, and using time-series forecasting models. So, categories related to genres and recommendations come to mind right away.
@@ -97,14 +111,14 @@ So compiling these thoughts, the categories would include Books, Genre Predictio
 Books, Genre Prediction, Recommendation Systems, Time Series Analysis, Temporal Recommendation, User Modeling, Time Series Forecasting, E-commerce Applications, Performance Metrics, Beyond Accuracy, Amazon Dataset Usage, Baseline Evaluation, Reading Patterns, Forecasting Models</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -147,9 +161,11 @@ Abstract:
 In this paper we present a time-based genre prediction strategy that can inform the book recommendation process. To explicitly consider time in predicting genres of interest, we rely on a popular time series forecasting model as well as reading patterns of each individual reader or group of readers (in case of libraries or publishing companies). Based on a conducted initial assessment using the Amazon dataset, we demonstrate our strategy outperforms its baseline counterpart.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let me start by reading the title and abstract carefully.
 
 The title is &#34;Genre Prediction to Inform the Recommendation Process.&#34; That immediately tells me it&#39;s about recommendation systems, specifically using genre prediction as a part of that process. The abstract mentions a time-based strategy for predicting genres, which uses a time series forecasting model. They also talk about individual readers or groups like libraries and publishing companies, so there&#39;s an aspect of personalization here.
@@ -168,15 +184,11 @@ I might also consider if there are any other aspects like scalability or user st
 Time Series Forecasting, Books, Recommendation Systems, Evaluation of Algorithms, Genre Analysis, Book Recommendations, Personalization</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

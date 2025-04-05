@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 The Creator Economy faces concerning levels of unfairness. Content creators (CCs) publicly accuse platforms of purposefully reducing the visibility of their content based on protected attributes, while platforms place the blame on viewer biases. Meanwhile, prior work warns about the “rich-get-richer”  effect perpetuated by existing popularity biases in recommender systems: Any initial advantage in visibility will likely be exacerbated over time. What remains unclear is how the biases based on protected attributes from platforms and viewers interact and contribute to the observed inequality in the context of popularity-biased recommender systems. The difficulty of the question lies in the complexity and opacity of the system. To overcome this challenge, we create a simple agent-based model (ABM) that unifies the platform systems which allocate the visibility of CCs (e.g., recommender systems, moderation) into a single popularity-based function, which we call the visibility allocation system (VAS). Through simulations, we find that although viewer homophilic biases do alone create inequalities, small levels of additional biases in VAS are more harmful. From the perspective of interventions, our results suggest that (a) attempts to reduce attribute-biases in moderation and recommendations should precede those reducing viewer homophilic tendencies, (b) decreasing the popularity-biases in VAS decreases but not eliminates inequalities, (c) boosting the visibility of protected CCs to overcome viewer homophily with respect to one metric is unlikely to produce fair outcomes with respect to all metrics, and (d) the process is also unfair for viewers and this unfairness could be overcome through the same interventions. More generally, this work demonstrates the potential of using ABMs to better understand the causes and effects of biases and interventions within complex sociotechnical systems.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. Let&#39;s start by reading through the provided information carefully.
 
 The title is &#34;Group Fairness for Content Creators: the Role of Human and Algorithmic Biases under Popularity- based Recommendations.&#34; From the title alone, it seems like the article discusses fairness issues related to content creators, touching upon both human biases (like viewer preferences) and algorithmic biases in recommendation systems. The focus is on how these factors contribute to unfairness when recommendations are popularity-based.
@@ -141,15 +155,11 @@ Now that makes 12 categories without overlapping too much.
 Fairness, Bias, Recommendation Systems, Algorithmic Fairness, Creator Economy, Agent-Based Modeling (ABM), Sociotechnical Systems, Interventions in Recommendation Systems, Human Biases, Algorithmic Biases, Complexity of Systems, Group Fairness</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

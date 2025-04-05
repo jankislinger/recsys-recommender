@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Accounting for the fact that users have different sequential patterns, the main drawback of state-of-the-art recommendation strategies is that a fixed sequence length of user-item interactions is required as input to train the models. This might limit the recommendation accuracy, as in practice users follow different trends on the sequential recommendations. Hence, baseline strategies might ignore important sequential interactions or add noise to the models with redundant interactions, depending on the variety of users’ sequential behaviours. To overcome this problem, in this study we propose the SAR model, which not only learns the sequential patterns but also adjusts the sequence length of user-item interactions in a personalized manner. We first design an actor-critic framework, where the RL agent tries to compute the optimal sequence length as an action, given the user’s state representation at a certain time step. In addition, we optimize a joint loss function to align the accuracy of the sequential recommendations with the expected cumulative rewards of the critic network, while at the same time we adapt the sequence length with the actor network in a personalized manner. Our experimental evaluation on four real-world datasets demonstrates the superiority of our proposed model over several baseline approaches. Finally, we make our implementation publicly available at https://github.com/stefanosantaris/sar.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to help users easily find the content they&#39;re interested in. Let me read through the information again.
 
 The title is &#34;Sequence Adaptation via Reinforcement Learning in Recommender Systems.&#34; That tells me it&#39;s about recommendation systems, specifically using reinforcement learning to adapt sequences. 
@@ -118,14 +132,14 @@ I think that covers the main aspects without being too granular. Each category s
 Reinforcement Learning, Recommender Systems, Sequence Modeling, Personalization, Model Optimization, Recommendation Accuracy, Sequential Recommendations, Practical Applications, Evaluation Methods, Machine Learning</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -168,9 +182,11 @@ Abstract:
 Accounting for the fact that users have different sequential patterns, the main drawback of state-of-the-art recommendation strategies is that a fixed sequence length of user-item interactions is required as input to train the models. This might limit the recommendation accuracy, as in practice users follow different trends on the sequential recommendations. Hence, baseline strategies might ignore important sequential interactions or add noise to the models with redundant interactions, depending on the variety of users’ sequential behaviours. To overcome this problem, in this study we propose the SAR model, which not only learns the sequential patterns but also adjusts the sequence length of user-item interactions in a personalized manner. We first design an actor-critic framework, where the RL agent tries to compute the optimal sequence length as an action, given the user’s state representation at a certain time step. In addition, we optimize a joint loss function to align the accuracy of the sequential recommendations with the expected cumulative rewards of the critic network, while at the same time we adapt the sequence length with the actor network in a personalized manner. Our experimental evaluation on four real-world datasets demonstrates the superiority of our proposed model over several baseline approaches. Finally, we make our implementation publicly available at https://github.com/stefanosantaris/sar.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article about sequence adaptation via reinforcement learning in recommender systems. Let&#39;s break it down.
 
 First, looking at the title: &#34;Sequence Adaptation via Reinforcement Learning in Recommender Systems.&#34; So, keywords here include Sequence Adaptation, Reinforcement Learning, and Recommender Systems.
@@ -194,15 +210,11 @@ I think these cover both the specific techniques used (like reinforcement learni
 Reinforcement Learning, Sequence Models, Adaptive Systems, Personalization, Actor-Critic Framework, Recommendation Systems, Dynamic Models, Evaluation Metrics</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

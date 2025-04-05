@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 In recommender systems based on low rank factorization of a partially observed user-item matrix, a common phenomenon that plagues many otherwise effective models is the interleaving of good and spurious recommendations in the top-K results. A single incongruous recommendation can dramatically impact the perceived quality of a recommender system. In this work, we investigate folding, a major contributing factor to spurious recommendations. Folding refers to the unintentional overlap of disparate groups of users and items in the low-rank embedding vector space, induced by improper handling of missing data. We formally define a metric that quantifies the severity of folding in a trained system, to assist in diagnosing its potential to shock users with inappropriate recommendations. The folding metric complements existing information retrieval metrics that focus on the number of good recommendations and their ranks but ignore the impact of undesired recommendations. We motivate our definition of the folding metric on synthetic data and evaluate its effectiveness on both synthetic and real world datasets. We study the relationship between the folding metric and other characteristics of recommender systems and observe that optimizing for goodness metrics can lead to high folding and thus more spurious recommendations.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article about &#34;Folding: Why Good Models Sometimes Make Spurious Recommendations.&#34; Let me start by reading the title and abstract carefully.
 
 The title suggests it&#39;s about a phenomenon in recommender systems where good models produce some bad recommendations. The abstract explains that folding is an issue caused by improper handling of missing data, leading to spurious recommendations. It talks about low-rank factorization, user-item matrices, and introduces a new metric called the folding metric.
@@ -107,15 +121,11 @@ Putting it all together, I should ensure each category is clear and covers both 
 Recommendation Systems, Matrix Factorization, Spurious Recommendations, Missing Data, Low-Rank Embedding, Folding, User-Item Matrix, Evaluation Metrics, Optimization, Metrics Development, Data Handling, User Trust, System Quality, Perceived Quality</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Determinantal point processes (DPPs) are an emerging model for encoding probabilities over subsets, such as shopping baskets, selected from a ground set, such as an item catalog. They have recently proved to be appealing models for a number of machine learning tasks, including product recommendation. DPPs are parametrized by a positive semi-definite kernel matrix. Prior work has shown that using a low-rank factorization of this kernel provides scalability improvements that open the door to training on large-scale datasets and computing online recommendations, both of which are infeasible with standard DPP models that use a full-rank kernel. A low-rank DPP model can be trained using an optimization-based method, such as stochastic gradient ascent, to find a point estimate of the kernel parameters, which can be performed efficiently on large-scale datasets. However, this approach requires careful tuning of regularization parameters to prevent overfitting and provide good predictive performance, which can be computationally expensive. In this paper we present a Bayesian method for learning a low-rank factorization of this kernel, which provides automatic control of regularization. We show that our Bayesian low-rank DPP model can be trained efficiently using stochastic gradient Hamiltonian Monte Carlo (SGHMC). Our Bayesian model generally provides better predictive performance on several real-world product recommendation datasets than optimization-based low-rank DPP models trained using stochastic gradient ascent, and better performance than several state-of-the art recommendation methods in many cases.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m trying to categorize this research article about Bayesian Low-Rank Determinantal Point Processes. The title already gives me some clues—Determinantal Point Processes (DPPs) are a statistical model used for selecting subsets, which is relevant for recommendations because it can help in suggesting diverse items. 
 
 Looking at the abstract, they mention that DPPs have been used in product recommendation tasks, so that&#39;s a key point. The article talks about low-rank factorization of the kernel matrix to improve scalability, which makes me think about algorithmic families and methods for handling large datasets. They compare Bayesian approaches with optimization-based methods like stochastic gradient ascent, emphasizing automatic regularization as an advantage.
@@ -103,14 +117,14 @@ Putting this all together, I need to list these points into clear, user-friendly
 Determinantal Point Processes (DPPs), Bayesian Methods, Product Recommendation, Low-Rank Factorization, Scalability, State-of-the-Art Recommendations, Stochastic Gradient Hamiltonian Monte Carlo (SGHMC), Large-Scale Data, Regularization Techniques.</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -153,9 +167,11 @@ Abstract:
 Determinantal point processes (DPPs) are an emerging model for encoding probabilities over subsets, such as shopping baskets, selected from a ground set, such as an item catalog. They have recently proved to be appealing models for a number of machine learning tasks, including product recommendation. DPPs are parametrized by a positive semi-definite kernel matrix. Prior work has shown that using a low-rank factorization of this kernel provides scalability improvements that open the door to training on large-scale datasets and computing online recommendations, both of which are infeasible with standard DPP models that use a full-rank kernel. A low-rank DPP model can be trained using an optimization-based method, such as stochastic gradient ascent, to find a point estimate of the kernel parameters, which can be performed efficiently on large-scale datasets. However, this approach requires careful tuning of regularization parameters to prevent overfitting and provide good predictive performance, which can be computationally expensive. In this paper we present a Bayesian method for learning a low-rank factorization of this kernel, which provides automatic control of regularization. We show that our Bayesian low-rank DPP model can be trained efficiently using stochastic gradient Hamiltonian Monte Carlo (SGHMC). Our Bayesian model generally provides better predictive performance on several real-world product recommendation datasets than optimization-based low-rank DPP models trained using stochastic gradient ascent, and better performance than several state-of-the art recommendation methods in many cases.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article. The title is &#34;Bayesian Low-Rank Determinantal Point Processes.&#34; Hmm, that sounds a bit technical. Let me read the abstract to get a better understanding.
 
 The abstract mentions that DPPs are used for modeling probabilities over subsets, like shopping baskets from an item catalog. They&#39;re being applied to machine learning tasks such as product recommendation. The kernel matrix in DPPs is positive semi-definite, and prior work uses low-rank factorization for scalability on large datasets. This makes training more feasible and allows online recommendations which aren&#39;t possible with standard DPP models.
@@ -182,15 +198,11 @@ So compiling all these thoughts, the categories would include DPPs, Low-Rank Mod
 Determinantal Point Processes, Low-Rank Models, Bayesian Methods, Product Recommendation, Scalability, Real-World Applications, Performance Evaluation, Optimization Techniques</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Scalability issue plays a crucial role in productionizing modern recommender systems. Even lightweight architectures may suffer from high computational overload due to intermediate calculations, limiting their practicality in real-world applications. Specifically, applying full Cross-Entropy (CE) loss often yields state-of-the-art performance in terms of recommendations quality. Still, it suffers from excessive GPU memory utilization when dealing with large item catalogs. This paper introduces a novel Scalable Cross-Entropy (SCE) loss function in the sequential learning setup. It approximates the CE loss for datasets with large-size catalogs, enhancing both time efficiency and memory usage without compromising recommendations quality. Unlike traditional negative sampling methods, our approach utilizes a selective GPU-efficient computation strategy, focusing on the most informative elements of the catalog, particularly those most likely to be false positives. This is achieved by approximating the softmax distribution over a subset of the model outputs through the maximum inner product search. Experimental results on multiple datasets demonstrate the effectiveness of SCE in reducing peak memory usage by a factor of up to 100 compared to the alternatives, retaining or even exceeding their metrics values. The proposed approach also opens new perspectives for large-scale developments in different domains, such as large language models.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I need to categorize this research article into multiple relevant categories based on its content and themes. Let me read through the title and abstract again to understand what it&#39;s about.
 
 The title is &#34;Scalable Cross-Entropy Loss for Sequential Recommendations with Large Item Catalogs.&#34; So right away, I know it&#39;s about recommendation systems, specifically dealing with scalability issues when using cross-entropy loss in sequential recommendations where there are a lot of items. 
@@ -108,15 +122,11 @@ I think these categories cover the main aspects of the research. They are specif
 Recommendation Systems, Loss Functions, Scalability, Sequential Recommendations, GPU Memory Optimization, Large Item Catalogs, Efficiency and Performance, False Positives Handling, Max Inner Product Search (MIPS), Large Language Models</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

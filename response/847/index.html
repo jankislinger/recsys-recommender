@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 A common practice to keep the freshness of an offline Recommender System (RS) is to train models that fit the user’s most recent behaviours while directly replacing the outdated historical model. However, many feature engineering and computing resources are used to train these historical models, but they are underutilized in the downstream RS model training. In this paper, to turn these historical models into treasures, we introduce a model inversed data synthesis framework, which can recover training data information from the historical model and use it for knowledge transfer. This framework synthesizes a new form of data from the historical model. Specifically, we ‘invert’ an off-the-shield pretrained model to synthesize binary class user-item pairs beginning from random noise without requiring any additional information from the training dataset. To synthesize new data from a pretrained model, we update the input from random float initialization rather than one- or multi-hot vectors. An additional statistical regularization is added to further improve the quality of the synthetic data inverted from the deep model with batch normalization. The experimental results show that our framework can generalize across different types of models. We can efficiently train different types of classical Click-Through-Rate (CTR) prediction models from scratch with significantly few inversed synthetic data (2 orders of magnitude). Moreover, our framework can also work well in the knowledge transfer scenarios such as continual updating and data-free knowledge distillation.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m trying to categorize this research article about Data-free Knowledge Distillation for Reusing Recommendation Models. Let&#39;s break it down step by step.
 
 First, the title mentions &#34;Knowledge Distillation,&#34; which I know is a technique where a smaller model (student) learns from a larger, already trained model (teacher). So that&#39;s one category right there: Knowledge Distillation.
@@ -114,14 +128,14 @@ I think that covers all aspects of the article without missing any key points. E
 Knowledge Distillation, Recommender Systems, Model Reuse, Data Efficiency, Deep Neural Networks, Inverse Modeling, Continual Learning, Optimization Techniques, Knowledge Transfer, Data-Free Learning, Generalization, CTR Prediction</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -164,9 +178,11 @@ Abstract:
 A common practice to keep the freshness of an offline Recommender System (RS) is to train models that fit the user’s most recent behaviours while directly replacing the outdated historical model. However, many feature engineering and computing resources are used to train these historical models, but they are underutilized in the downstream RS model training. In this paper, to turn these historical models into treasures, we introduce a model inversed data synthesis framework, which can recover training data information from the historical model and use it for knowledge transfer. This framework synthesizes a new form of data from the historical model. Specifically, we ‘invert’ an off-the-shield pretrained model to synthesize binary class user-item pairs beginning from random noise without requiring any additional information from the training dataset. To synthesize new data from a pretrained model, we update the input from random float initialization rather than one- or multi-hot vectors. An additional statistical regularization is added to further improve the quality of the synthetic data inverted from the deep model with batch normalization. The experimental results show that our framework can generalize across different types of models. We can efficiently train different types of classical Click-Through-Rate (CTR) prediction models from scratch with significantly few inversed synthetic data (2 orders of magnitude). Moreover, our framework can also work well in the knowledge transfer scenarios such as continual updating and data-free knowledge distillation.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I&#39;m trying to categorize this research article. Let me start by reading through the title and abstract carefully.
 
 The title is &#34;Data-free Knowledge Distillation for Reusing Recommendation Models.&#34; That immediately makes me think of recommendation systems and knowledge distillation. From what I know, knowledge distillation is a technique where you transfer knowledge from a larger model to a smaller one, often for efficiency purposes.
@@ -199,15 +215,11 @@ Putting it all together, I&#39;ll list these categories: Recommendation Systems,
 Recommendation Systems, e-commerce, Reuse of Models/Model Recycling, Knowledge Distillation, Efficiency, Real World Applications, Synthetic Data, Inversion-Based Training, Model Updates</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Recommendation systems suffer in the strict cold-start (SCS) scenario, where the user-item interactions are entirely unavailable. The well-established, dominating identity (ID)-based approaches completely fail to work. Cold-start recommenders, on the other hand, leverage item contents (brand, title, descriptions, etc.) to map the new items to the existing ones. However, the existing SCS recommenders explore item contents in coarse-grained manners that introduce noise or information loss. Moreover, informative data sources other than item contents, such as users’ purchase sequences and review texts, are largely ignored. In this work, we explore the role of the fine-grained item attributes in bridging the gaps between the existing and the SCS items and pre-train a knowledgeable item-attribute graph for SCS item recommendation. Our proposed framework, ColdGPT, models item-attribute correlations into an item-attribute graph by extracting fine-grained attributes from item contents. ColdGPT then transfers knowledge into the item-attribute graph from various available data sources, i.e., item contents, historical purchase sequences, and review texts of the existing items, via multi-task learning. To facilitate the positive transfer, ColdGPT designs specific submodules according to the natural forms of the data sources and proposes to coordinate the multiple pre-training tasks via unified alignment-and-uniformity losses. Our pre-trained item-attribute graph acts as an implicit, extendable item embedding matrix, which enables the SCS item embeddings to be easily acquired by inserting these items into the item-attribute graph and propagating their attributes’ embeddings. We carefully process three public datasets, i.e., Yelp, Amazon-home, and Amazon-sports, to guarantee the SCS setting for evaluation. Extensive experiments show that ColdGPT consistently outperforms the existing SCS recommenders by large margins and even surpasses models that are pre-trained on 75 – 224 times more, cross-domain data on two out of four datasets. Our code and pre-processed datasets for SCS evaluations are publicly available to help future SCS studies.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I&#39;m trying to categorize this research article about recommendation systems focusing on the cold-start problem. Let me break it down step by step.
 
 First, looking at the title: &#34;Multi-Task Item-attribute Graph Pre-Training for Strict Cold-Start Item Recommendation.&#34; So it&#39;s about handling new items in a recommendation system when there&#39;s no historical data. That&#39;s definitely related to Cold Start.
@@ -103,14 +117,14 @@ Putting this all together, I think the categories are: Cold Start, Multi-Modal L
 Cold Start, Multi-Modal Learning, Fine-Grained Item Attributes, Graph Neural Networks, Recommendation Systems, Self-Supervised Learning, Multi-Task Learning, Real-World Applications, Pre-trained Models</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -153,9 +167,11 @@ Abstract:
 Recommendation systems suffer in the strict cold-start (SCS) scenario, where the user-item interactions are entirely unavailable. The well-established, dominating identity (ID)-based approaches completely fail to work. Cold-start recommenders, on the other hand, leverage item contents (brand, title, descriptions, etc.) to map the new items to the existing ones. However, the existing SCS recommenders explore item contents in coarse-grained manners that introduce noise or information loss. Moreover, informative data sources other than item contents, such as users’ purchase sequences and review texts, are largely ignored. In this work, we explore the role of the fine-grained item attributes in bridging the gaps between the existing and the SCS items and pre-train a knowledgeable item-attribute graph for SCS item recommendation. Our proposed framework, ColdGPT, models item-attribute correlations into an item-attribute graph by extracting fine-grained attributes from item contents. ColdGPT then transfers knowledge into the item-attribute graph from various available data sources, i.e., item contents, historical purchase sequences, and review texts of the existing items, via multi-task learning. To facilitate the positive transfer, ColdGPT designs specific submodules according to the natural forms of the data sources and proposes to coordinate the multiple pre-training tasks via unified alignment-and-uniformity losses. Our pre-trained item-attribute graph acts as an implicit, extendable item embedding matrix, which enables the SCS item embeddings to be easily acquired by inserting these items into the item-attribute graph and propagating their attributes’ embeddings. We carefully process three public datasets, i.e., Yelp, Amazon-home, and Amazon-sports, to guarantee the SCS setting for evaluation. Extensive experiments show that ColdGPT consistently outperforms the existing SCS recommenders by large margins and even surpasses models that are pre-trained on 75 – 224 times more, cross-domain data on two out of four datasets. Our code and pre-processed datasets for SCS evaluations are publicly available to help future SCS studies.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article based on its title and abstract. The main focus seems to be on recommendation systems, specifically addressing the strict cold-start (SCS) problem where there&#39;s no user interaction data.
 
 First, I should identify the core themes. The article talks about item-attribute graphs and multi-task pre-training for recommendation in SCS scenarios. So &#34;Cold Start&#34; is definitely a primary category.
@@ -178,15 +194,11 @@ Lastly, their approach deals with user behavior indirectly through purchase sequ
 Cold Start, Item Attributes, Recommendation Systems, Multi-task Learning, Pre-training, Knowledge Transfer, Scalability, Real World Applications, User Behavior</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

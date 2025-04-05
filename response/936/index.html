@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:70b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:70b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 The impressive performance of Large Language Models (LLMs) across various fields has encouraged researchers to investigate their potential in recommendation tasks. To harness the LLMs’ extensive knowledge and powerful generalization abilities, initial efforts have tried to design instructions for recommendation tasks through In-context Learning. However, the recommendation performance of LLMs remains limited due to (i) significant differences between LLMs’ language-related pre-training tasks and recommendation tasks, and (ii) inadequate recommendation data during the LLMs’ pre-training. To fill the gap, we consider further tuning LLMs for recommendation tasks. To this end, we propose a lightweight tuning framework for LLMs-based recommendation, namely LLM4Rec, which constructs the recommendation data as tuning samples and utilizes LoRA for lightweight tuning. We conduct experiments on two datasets, validating that LLM4Rec is highly efficient w.r.t. computing costs (e.g., a single RTX 3090 is sufficient for tuning LLaMA-7B), and meanwhile, it can significantly enhance the recommendation capabilities of LLMs in the movie and book domains, even with limited tuning samples (&lt; 100 samples). Furthermore, LLM4Rec exhibits strong generalization ability in cross-domain recommendation. Our code and data are available at https://anonymous.4open.science/r/LLM4rec.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I have this research article to categorize. The title is &#34;TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation.&#34; Hmm, that&#39;s a mouthful. Let me try to break it down.
 
 First, the abstract says that they&#39;re looking into using Large Language Models (LLMs) for recommendation tasks. They mention that while LLMs have done well in other areas, their performance in recommendations isn&#39;t great yet because of differences between pre-training tasks and recommendation tasks, plus limited data during pre-training.
@@ -111,14 +125,14 @@ I don&#39;t see any overlap that would cause confusion, and each category is dis
 Large Language Models, LoRA (Low-Rank Adaptation), Movies, Books, In-Context Learning, Cross-Domain Recommendation, Computational Efficiency, Dataset Evaluation, Recommendation Systems, Tuning Frameworks, Lightweight Fine-Tuning, Generalization Ability, Open-Source Implementation</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -161,9 +175,11 @@ Abstract:
 The impressive performance of Large Language Models (LLMs) across various fields has encouraged researchers to investigate their potential in recommendation tasks. To harness the LLMs’ extensive knowledge and powerful generalization abilities, initial efforts have tried to design instructions for recommendation tasks through In-context Learning. However, the recommendation performance of LLMs remains limited due to (i) significant differences between LLMs’ language-related pre-training tasks and recommendation tasks, and (ii) inadequate recommendation data during the LLMs’ pre-training. To fill the gap, we consider further tuning LLMs for recommendation tasks. To this end, we propose a lightweight tuning framework for LLMs-based recommendation, namely LLM4Rec, which constructs the recommendation data as tuning samples and utilizes LoRA for lightweight tuning. We conduct experiments on two datasets, validating that LLM4Rec is highly efficient w.r.t. computing costs (e.g., a single RTX 3090 is sufficient for tuning LLaMA-7B), and meanwhile, it can significantly enhance the recommendation capabilities of LLMs in the movie and book domains, even with limited tuning samples (&lt; 100 samples). Furthermore, LLM4Rec exhibits strong generalization ability in cross-domain recommendation. Our code and data are available at https://anonymous.4open.science/r/LLM4rec.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I need to categorize this research article into multiple relevant categories based on the given guidelines. Let me start by reading through the title and abstract carefully.
 
 The title is &#34;TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation.&#34; So it&#39;s about using a tuning framework for LLMs in recommendation tasks.
@@ -202,15 +218,11 @@ Putting it all together, I should list these categories making sure each is clea
 Large Language Models, Recommendation Systems, LoRA, Movie Recommendations, Book Recommendations, In-Context Learning, Fine-Tuning, Model Tuning, Computational Efficiency, Generalization Ability, Efficient Training</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

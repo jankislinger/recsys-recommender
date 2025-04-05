@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 We revisit the cold-start task for new users of a recommender system whereby a new user is asked to rate a few items with the aim of discovering the user’s preferences. This is a combinatorial stochastic learning task, and so difficult in general. In this paper we propose using Monte Carlo Tree Search (MCTS) to dynamically select the sequence of items presented to a new user. We find that this new MCTS-based cold-start approach is able to consistently quickly identify the preferences of a user with significantly higher accuracy than with either a decision-tree or a state of the art bandit-based approach without incurring higher regret i.e the learning performance is fundamentally superior to that of the state of the art. This boost in recommender accuracy is achieved in a computationally lightweight fashion.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m trying to categorize this research article about cold-start recommendation using Monte Carlo Tree Search. Let me start by reading through the title and abstract again to make sure I understand what it&#39;s about.
 
 The title mentions &#34;Fast And Accurate User Cold-Start Learning Using Monte Carlo Tree Search.&#34; So right away, I know this is related to cold-start problems in recommendation systems. The abstract explains that when a new user joins a recommender system, they&#39;re asked to rate a few items so the system can learn their preferences. This is tricky because it&#39;s a stochastic learning task.
@@ -124,14 +138,14 @@ So, finalizing the list: Monte Carlo Tree Search, Multi-Armed Bandits, Cold Star
 Monte Carlo Tree Search, Multi-Armed Bandits, Cold Start, Recommendation Systems, Evaluation Metrics, Beyond Accuracy, Combinatorial Optimization, User Modeling</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -174,9 +188,11 @@ Abstract:
 We revisit the cold-start task for new users of a recommender system whereby a new user is asked to rate a few items with the aim of discovering the user’s preferences. This is a combinatorial stochastic learning task, and so difficult in general. In this paper we propose using Monte Carlo Tree Search (MCTS) to dynamically select the sequence of items presented to a new user. We find that this new MCTS-based cold-start approach is able to consistently quickly identify the preferences of a user with significantly higher accuracy than with either a decision-tree or a state of the art bandit-based approach without incurring higher regret i.e the learning performance is fundamentally superior to that of the state of the art. This boost in recommender accuracy is achieved in a computationally lightweight fashion.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m trying to figure out how to categorize this research article. The title is &#34;Fast And Accurate User Cold-Start Learning Using Monte Carlo Tree Search,&#34; and the abstract talks about using MCTS for cold-start problems in recommendation systems.
 
 First, I&#39;ll start by identifying the key elements from the title and abstract. The main topics here are cold-start learning, which refers to handling new users who haven&#39;t rated many items yet. The method used is Monte Carlo Tree Search (MCTS), which is a strategy selection approach often used in games like Go. The paper claims this method improves accuracy quickly without higher computational costs.
@@ -223,15 +239,11 @@ The categories for the article are:
 - Collaborative Filtering</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

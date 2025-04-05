@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Recently, deep learning methods have been shown to improve the performance of recommender systems over traditional methods, especially when review text is available.  For example, a recent model, DeepCoNN, uses neural nets to learn one latent representation for the text of all reviews written by a target user, and a second latent representation for the text of all reviews for a target item, and then combines these latent representations to obtain state-of-the-art performance on recommendation tasks.  We show that (unsurprisingly) much of the predictive value of review text comes from reviews of the target user for the target item. We then introduce a way in which this information can be used in recommendation, even when the target user’s review for the target item is not available.  Our model, called TransNets, extends the DeepCoNN model by introducing an additional latent layer representing the target user-target item pair.  We then regularize this layer, at training time, to be similar to another latent representation of the target user’s review of the target item.  We show that TransNets and extensions of it improve substantially over the previous state-of-the-art.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article about TransNets into multiple relevant categories based on its content. The title is &#34;TransNets: Learning to Transform for Recommendation,&#34; and the abstract discusses using deep learning methods in recommender systems, specifically utilizing review text. They mention extending DeepCoNN by adding a latent layer for user-item pairs and regularizing it.
 
 First, I&#39;ll start by identifying the main themes. It&#39;s about recommendation systems, so that&#39;s a primary category. The method used is based on deep learning, so &#34;Deep Learning&#34; should be included. Since they&#39;re working with text data from reviews, &#34;Text Data&#34; makes sense. 
@@ -101,14 +115,14 @@ Putting it all together, the categories should cover the methodology (Deep Learn
 Deep Learning, Neural Networks, Recommendation Systems, Latent Representations, Reviews, Text Data, User-Item Interactions, Neural Transformation, Evaluation Metrics, Innovation, Beyond Accuracy, Performance Analysis</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -151,9 +165,11 @@ Abstract:
 Recently, deep learning methods have been shown to improve the performance of recommender systems over traditional methods, especially when review text is available.  For example, a recent model, DeepCoNN, uses neural nets to learn one latent representation for the text of all reviews written by a target user, and a second latent representation for the text of all reviews for a target item, and then combines these latent representations to obtain state-of-the-art performance on recommendation tasks.  We show that (unsurprisingly) much of the predictive value of review text comes from reviews of the target user for the target item. We then introduce a way in which this information can be used in recommendation, even when the target user’s review for the target item is not available.  Our model, called TransNets, extends the DeepCoNN model by introducing an additional latent layer representing the target user-target item pair.  We then regularize this layer, at training time, to be similar to another latent representation of the target user’s review of the target item.  We show that TransNets and extensions of it improve substantially over the previous state-of-the-art.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article titled &#34;TransNets: Learning to Transform for Recommendation&#34;. Let me start by reading through the title and abstract carefully.
 
 The article discusses deep learning methods enhancing recommender systems, specifically using review text. It mentions a model called DeepCoNN which uses neural nets to create latent representations for user and item reviews. The authors then introduce TransNets, an extension that adds a layer representing the target user-item pair and regularizes it based on the user&#39;s review of the item.
@@ -173,15 +189,11 @@ I should make sure each category is clear and descriptive. Also, considering the
 Deep Learning, Recommender Systems, Review Text Analysis, Latent Representations, Model Extensions, User-Item Interactions, Regularization Techniques</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

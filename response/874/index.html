@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Contextual bandit algorithms have been popularly used to address interactive recommendation, where the users are assumed to be cooperative to explore all recommendations from a system. In this paper, we relax this strong assumption and study the problem of incentivized exploration with myopic users, where the users are only interested in recommendations with their currently highest estimated reward. As a result, in order to obtain long-term optimality, the system needs to offer compensation to incentivize the users to take the exploratory recommendations. We consider a new and practically motivated setting where the context features employed by the user are more \emph{informative} than those used by the system: for example, features based on users’ private information are not accessible by the system. We develop an effective solution for incentivized exploration under such an information gap, and prove that the method achieves a sublinear rate in both regret and compensation. We theoretically and empirically analyze the added compensation due to the information gap, compared with the case where the system has access to the same context features as the user does, i.e., without information gap. Moreover, we also provide a compensation lower bound of this problem.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to assign at least 8-12 categories that accurately reflect the content and help users navigate easily.
 
 First, looking at the title: &#34;Incentivizing Exploration in Linear Contextual Bandits under Information Gap.&#34; This immediately tells me the main topics are contextual bandits, which fall under reinforcement learning. Also, there&#39;s a focus on exploration, which is a key concept in bandit algorithms. The term &#34;incentivizing&#34; suggests that there&#39;s some mechanism or strategy to encourage user behavior, so maybe something related to incentives or user behavior.
@@ -112,14 +126,14 @@ I think I&#39;ve covered 12 categories, which meets the guideline of assigning a
 Contextual Bandits, Reinforcement Learning, Exploration vs Exploitation, Incentivizing Exploration, User Behavior Modeling, Interactive Recommendations, Information Gap, Regret Analysis, Compensation Mechanisms, Theoretical Analysis, Empirical Evaluation, Multi-Armed Bandits</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -162,9 +176,11 @@ Abstract:
 Contextual bandit algorithms have been popularly used to address interactive recommendation, where the users are assumed to be cooperative to explore all recommendations from a system. In this paper, we relax this strong assumption and study the problem of incentivized exploration with myopic users, where the users are only interested in recommendations with their currently highest estimated reward. As a result, in order to obtain long-term optimality, the system needs to offer compensation to incentivize the users to take the exploratory recommendations. We consider a new and practically motivated setting where the context features employed by the user are more \emph{informative} than those used by the system: for example, features based on users’ private information are not accessible by the system. We develop an effective solution for incentivized exploration under such an information gap, and prove that the method achieves a sublinear rate in both regret and compensation. We theoretically and empirically analyze the added compensation due to the information gap, compared with the case where the system has access to the same context features as the user does, i.e., without information gap. Moreover, we also provide a compensation lower bound of this problem.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article based on its title and abstract. Let me start by reading through them carefully.
 
 The title is &#34;Incentivizing Exploration in Linear Contextual Bandits under Information Gap.&#34; Hmm, that mentions contextual bandits, which are a type of reinforcement learning algorithm used for sequential decision-making problems where the agent learns a policy that maximizes cumulative reward. The term &#34;linear&#34; suggests it&#39;s using linear models or perhaps linear representations of the problem.
@@ -203,15 +219,11 @@ I should also check if any other categories apply, but these seem to cover it co
 Contextual Bandits, Recommendation Systems, Exploration vs Exploitation, Incentivized Exploration, Information Gap, Regret Analysis, Compensation, Lower Bounds, Real-World Applications, Theoretical Analysis</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

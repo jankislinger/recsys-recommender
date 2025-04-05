@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Bibliographic reference parsers extract metadata (e.g. author names, title, year) from bibliographic reference strings. No reference parser consistently gives the best results in every scenario. For instance, one tool may be best in extracting titles, and another tool in extracting author names. In this paper, we address the problem of reference parsing from a recommender-systems perspective. We propose ParsRec, a meta-learning approach that recommends the potentially best parser(s) for a given reference string. We evaluate ParsRec on 105k references from chemistry. We propose two approaches to meta-learning recommendations. The first approach learns the best parser for an entire reference string. The second approach learns the best parser for each field of a reference string. The second approach achieved a 2.6% increase in F1 (0.909 vs. 0.886, p &lt; 0.001) over the best single parser (GROBID), reducing the false positive rate by 20.2% (0.075 vs. 0.094), and the false negative rate by 18.9% (0.107 vs. 0.132).
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article into multiple relevant categories based on its content. Let me start by reading through the title and abstract carefully.
 
 The title is &#34;ParsRec: A Meta-Learning Recommender System for Bibliographic Reference Parsing Tools.&#34; From the title alone, I can tell that it&#39;s about a recommender system, specifically using meta-learning, applied to bibliographic reference parsing tools. 
@@ -110,14 +124,14 @@ I should ensure that each category is relevant and aligns with the content. I&#3
 Recommender Systems, Meta-Learning, Bibliographic Parsing, Natural Language Processing (NLP), Evaluation Metrics, Chemistry Domain, Multi-Model Recommendations, False Positive Rate, False Negative Rate, Scalability, Data Mining, Bibliography Management, Research Tools.</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -160,9 +174,11 @@ Abstract:
 Bibliographic reference parsers extract metadata (e.g. author names, title, year) from bibliographic reference strings. No reference parser consistently gives the best results in every scenario. For instance, one tool may be best in extracting titles, and another tool in extracting author names. In this paper, we address the problem of reference parsing from a recommender-systems perspective. We propose ParsRec, a meta-learning approach that recommends the potentially best parser(s) for a given reference string. We evaluate ParsRec on 105k references from chemistry. We propose two approaches to meta-learning recommendations. The first approach learns the best parser for an entire reference string. The second approach learns the best parser for each field of a reference string. The second approach achieved a 2.6% increase in F1 (0.909 vs. 0.886, p &lt; 0.001) over the best single parser (GROBID), reducing the false positive rate by 20.2% (0.075 vs. 0.094), and the false negative rate by 18.9% (0.107 vs. 0.132).
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m looking at this research article titled &#34;ParsRec: A Meta-Learning Recommender System for Bibliographic Reference Parsing Tools.&#34; The abstract talks about using a meta-learning approach to recommend the best parsers for bibliographic references. Let me break down what&#39;s going on here.
 
 First off, the main goal is improving how we parse bibliographic data—things like authors, titles, years from reference strings. They mention that different tools are better at extracting specific parts, so their system, ParsRec, recommends the best tool or combination for each reference string.
@@ -185,15 +201,11 @@ So sticking with the main points: Recommender Systems, Meta-Learning, their appl
 Recommender Systems, Meta-Learning, Bibliographic Parsing, Natural Language Processing, Evaluation Metrics, Multi-Task Learning, Applications in Research/Science</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

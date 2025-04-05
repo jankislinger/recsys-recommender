@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 E-commerce applications rely heavily on session-based recommendation algorithms to improve the shopping experience of their customers. Recent progress in session-based recommendation algorithms shows great promise. However, translating that promise to real-world outcomes is a challenging task for several reasons, but mostly due to the large number and varying characteristics of the available models. In this paper, we discuss the approach and lessons learned from the process of identifying and deploying a successful session-based recommendation algorithm for a leading e-commerce application in the home-improvement domain. To this end, we initially evaluate fourteen session-based recommendation algorithms in an offline setting using eight different popular evaluation metrics on three datasets. The results indicate that offline evaluation does not provide enough insight to make an informed decision since there is no clear winning method on all metrics. Additionally, we observe that standard offline evaluation metrics fall short for this application. Specifically, they reward an algorithm only when it predicts the exact same item that the user clicked next or eventually purchased. In a practical scenario, however, there are near-identical products which, although they are assigned different identifiers, they should be considered as equally-good recommendations. To overcome these limitations, we perform an additional round of evaluation, where human experts provide both objective and subjective feedback for the recommendations of five algorithms that performed the best in the offline evaluation. We find that the experts’ opinion is oftentimes different from the offline evaluation results. Analysis of the feedback confirms that the performance of all models is significantly higher when we evaluate near-identical product recommendations as relevant. Finally, we run an A/B test with one of the models that performed the best in the human evaluation phase. The treatment model increased conversion rate by 15.6% and revenue per visit by 18.5% when compared with a leading third-party solution.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, so I&#39;m trying to categorize this research article based on its title and abstract. Let&#39;s see what it&#39;s about.
 
 The title is &#34;From the Lab to Production: A Case Study of Session-Based Recommendations in the Home-Improvement Domain.&#34; Okay, so it&#39;s a case study in e-commerce, specifically home improvement. The focus seems to be on session-based recommendations. 
@@ -149,14 +163,14 @@ Also, considering the 8-12 categories guideline, I think that&#39;s a good numbe
 Session-Based Recommendations, Case Study, E-commerce, Retail, Home Improvement, Algorithm Evaluation, Human Evaluation, A/B Test, Offline Evaluation, Deployment, Beyond Accuracy</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -199,9 +213,11 @@ Abstract:
 E-commerce applications rely heavily on session-based recommendation algorithms to improve the shopping experience of their customers. Recent progress in session-based recommendation algorithms shows great promise. However, translating that promise to real-world outcomes is a challenging task for several reasons, but mostly due to the large number and varying characteristics of the available models. In this paper, we discuss the approach and lessons learned from the process of identifying and deploying a successful session-based recommendation algorithm for a leading e-commerce application in the home-improvement domain. To this end, we initially evaluate fourteen session-based recommendation algorithms in an offline setting using eight different popular evaluation metrics on three datasets. The results indicate that offline evaluation does not provide enough insight to make an informed decision since there is no clear winning method on all metrics. Additionally, we observe that standard offline evaluation metrics fall short for this application. Specifically, they reward an algorithm only when it predicts the exact same item that the user clicked next or eventually purchased. In a practical scenario, however, there are near-identical products which, although they are assigned different identifiers, they should be considered as equally-good recommendations. To overcome these limitations, we perform an additional round of evaluation, where human experts provide both objective and subjective feedback for the recommendations of five algorithms that performed the best in the offline evaluation. We find that the experts’ opinion is oftentimes different from the offline evaluation results. Analysis of the feedback confirms that the performance of all models is significantly higher when we evaluate near-identical product recommendations as relevant. Finally, we run an A/B test with one of the models that performed the best in the human evaluation phase. The treatment model increased conversion rate by 15.6% and revenue per visit by 18.5% when compared with a leading third-party solution.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I need to categorize this research article based on its title and abstract. Let me start by reading through them carefully.
 
 The title is &#34;From the Lab to Production: A Case Study of Session-Based Recommendations in the Home-Improvement Domain.&#34; So, it&#39;s about session-based recommendations applied in a real-world e-commerce setting, specifically for home improvement products.
@@ -227,15 +243,11 @@ I think these categories cover all aspects of the paper, from methodology to app
 Session-Based Recommendations, Home Improvement Domain, Case Study, Algorithm Selection, Evaluation Metrics, Offline Evaluation, Human Evaluation, A/B Testing, Conversion Rate, Revenue Impact</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

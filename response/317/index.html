@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Music recommender systems often operate in sequential mode by suggesting a collection of songs that constitute a listening session. This task is usually called automated music playlist generation and it has been previously studied in the literature with different successful approaches based on, e.g., variations of collaborative filtering or content-based similarity. Some of the proposed playlist models take into consideration the current song and a number of previous songs, i.e., the song context , in order to predict the next song. However, it is not yet clear to what extent knowing this song context improves next-song predictions. To shed light on this question, we conduct a numerical experiment on two datasets of hand-curated music playlists, where we compare playlist models that account for different song context lengths. Our results indicate that knowing the song context seems, at first, uninformative. However, we explain this effect by a strong bias in the data towards very popular songs and observe that, in fact, songs in the long tail are more accurately predicted when the song context is considered.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, let me try to figure out how to categorize this article about music recommendation systems. So, the title is &#34;The Importance of Song Context in Music Playlists&#34; and the abstract talks about automated playlist generation using different approaches like collaborative filtering or content-based similarity. It specifically looks at song context—like the current and previous songs—to predict the next one.
 
 First, I&#39;ll think about the family of algorithms mentioned here. They talk about collaborative filtering and content-based methods, so those should definitely be included as categories. Also, since they&#39;re dealing with sequences, maybe something like Sequence Modeling would fit.
@@ -101,15 +115,11 @@ Putting it all together, I should make sure each article goes into at least 8-12
 Music Recommender Systems, Collaborative Filtering, Content-Based Recommendations, Playlist Generation, Song Context, Sequential Recommendations, Experimental Design, Dataset Analysis, Accuracy Improvement, Data Bias, Long-tail Recommendations, Context-aware Recommendations, Recommendation Algorithms, Automated Playlist Generation, Evaluation Methods, Understanding Recommendation Context, Implications for Recommender Systems</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

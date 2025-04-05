@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 In real-world datasets, the presence of a certain amount of missing data is inevitable. If the data is not missing at random (MAR), the missing mechanism can not be ignored, and has to be modelled precisely as to obtain correct results. However, although there are strong possibilities of violation of MAR assumption on rating datasets collected from recommendation systems, most prior researches on collaborative prediction ignore the missing data mechanism. Exceptions are recent works on multinomial mixture model with CPT-v and Logit-vd, which employ conditional Bernoulli selection models for the response variables. In this paper, we present a Bayesian binomial mixture model for collaborative prediction with non-random missing data. We consider three factors for reason of observation: user, item, and rating value. Each factor is modelled by Bernoulli random variable, and the observation of rating is determined by the OR operation of three binary variables. Because of the property of OR operation, one of three factors can override others, hence it naturally models the 80-20 rule, which commonly arise in the recommendation systems. We develop efficient variational inference algorithms with closed-form update rules for all variational parameters, where the computational complexity depends on the number of observation, not on the size of the rating data matrix. Finally, we present experimental results showing that 1) binomial mixture model is more suitable than multinomial mixture model for modelling discrete, finite, and ordered rating values; 2) our model find meaningful solutions instead of boundary solutions, if hyper-parameters are estimated by empirical Bayes; 3) our model can capture different rating trend between domain (e.g. songs and movies).
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let me start by carefully reading the title and abstract to understand the core themes of the article.
 
 The title is &#34;Bayesian Binomial Mixture Model for Collaborative Prediction with Non-Random Missing Data.&#34; The abstract discusses the issue of non-random missing data in recommendation systems, particularly focusing on rating datasets where the MAR (Missing At Random) assumption might be violated. The authors propose a Bayesian binomial mixture model that considers three factors: user, item, and rating value, each modeled by Bernoulli variables using an OR operation. They also mention variational inference algorithms and experimental results comparing their model with others.
@@ -106,15 +120,11 @@ I should ensure that these categories are broad enough for discoverability but s
 Bayesian Models, Collaborative Filtering, Missing Data Mechanisms, Variational Inference, Recommendation Systems, User Modeling, Item Modeling, Rating Prediction, Non-Random Missing Data, Mixture Models, Matrix Factorization, Content-Based Filtering</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

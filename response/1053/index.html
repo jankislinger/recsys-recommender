@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Short-video recommender systems often exhibit a biased preference to recently released videos. However, not all videos become outdated; certain classic videos can still attract user’s attention. Such bias along temporal dimension can be further aggravated by the matching model between users and videos, because the model learns from preexisting interactions. From real data, we observe that different videos have varying sensitivities to recency in attracting users’ attention. Our analysis, based on a causal graph modeling short-video recommendation, suggests that the release interval serves as a confounder, establishing a backdoor path between users and videos. To address this confounding effect, we propose a model-agnostic causal architecture called Learning to Deconfound the Release Interval Bias (LDRI). LDRI enables jointly learning of the matching model and the video recency sensitivity perceptron. In the inference stage, we apply a backdoor adjustment, effectively blocking the backdoor path by intervening on each video. Extensive experiments on two benchmarks demonstrate that LDRI consistently outperforms backbone models and exhibits superior performance against state-of-the-art models. Additional comprehensive analyses confirm the deconfounding capability of LDRI. Our code is available online: https://anonymous.4open.science/r/LDRI/.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to help create a user-friendly interface where users can easily find the content they&#39;re interested in.
 
 First, looking at the title: &#34;Not All Videos Become Outdated: Short-Video Recommendation by Learning to Deconfound Release Interval Bias.&#34; It mentions short-video recommendation systems, so that&#39;s a primary category. The focus seems to be on addressing bias related to the release interval of videos. So, I should include categories related to bias mitigation and temporal dynamics.
@@ -115,14 +129,14 @@ That should cover all the necessary aspects without overcrowding any single cate
 Recommendation Systems, Short-Video Recommendations, Bias Mitigation, Temporal Dynamics, Model Agnostic, Causal Inference, User Modeling, Evaluation Methods, Matching Models, Confounding Variables, Recency Sensitivity</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -165,9 +179,11 @@ Abstract:
 Short-video recommender systems often exhibit a biased preference to recently released videos. However, not all videos become outdated; certain classic videos can still attract user’s attention. Such bias along temporal dimension can be further aggravated by the matching model between users and videos, because the model learns from preexisting interactions. From real data, we observe that different videos have varying sensitivities to recency in attracting users’ attention. Our analysis, based on a causal graph modeling short-video recommendation, suggests that the release interval serves as a confounder, establishing a backdoor path between users and videos. To address this confounding effect, we propose a model-agnostic causal architecture called Learning to Deconfound the Release Interval Bias (LDRI). LDRI enables jointly learning of the matching model and the video recency sensitivity perceptron. In the inference stage, we apply a backdoor adjustment, effectively blocking the backdoor path by intervening on each video. Extensive experiments on two benchmarks demonstrate that LDRI consistently outperforms backbone models and exhibits superior performance against state-of-the-art models. Additional comprehensive analyses confirm the deconfounding capability of LDRI. Our code is available online: https://anonymous.4open.science/r/LDRI/.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, so I need to categorize this research article about short-video recommendation systems. Let&#39;s start by reading through the title and abstract carefully.
 
 The title mentions &#34;Short-Video Recommendation&#34; and talks about learning to deconfound release interval bias. That suggests they&#39;re dealing with temporal aspects of video popularity and trying to correct for biases in their models.
@@ -196,15 +212,11 @@ I think these cover the main aspects without making any category too narrow or t
 Short-Video, Recommendation Systems, Temporal Dynamics, Causality, Bias and Fairness, Evaluation Metrics, Model-Agnostic Methods, Real-World Applications, Debiasing Techniques</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

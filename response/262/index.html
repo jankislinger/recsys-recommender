@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Students’ performance in Massive Open Online Courses (MOOCs) is enhanced by high quality discussion forums or recently emerging educational Community Question Answering (CQA) systems. Nevertheless, only a small number of students answer questions asked by their peers. This results in instructor overload, and many unanswered questions. To increase students’ participation, we present an approach for recommendation of new questions to students who are likely to provide answers. Existing approaches to such question routing proposed for non-educational CQA systems tend to rely on a few experts, which is not suitable because we want students to be engaged as it positively influences their learning outcomes. In tackling this novel educational question routing problem, our method (1) goes beyond previous question-answering data as it incorporate additional non-QA data from the course (to improve prediction accuracy and to involve a larger part of community) and (2) applies constraints on users’ workload (to prevent user overloading). We use an ensemble classifier for predicting students’ willingness to answer a question, as well as the students’ expertise for answering. We conducted an online evaluation of the proposed method using an A/B test in our CQA system deployed at an edX MOOC. The proposed method outperformed a baseline method (non-educational question routing enhanced with workload restriction) in recommendation accuracy, involving more community members, and average number of contributions.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m trying to categorize this research article about Educational Question Routing in Online Student Communities. Let me go through it step by step.
 
 First, looking at the title: it&#39;s about routing questions in educational communities, specifically online ones. The abstract mentions MOOCs and CQA systems, which are Community Question Answering platforms. So right away, I can note that the domain is Education or maybe Online Learning.
@@ -103,14 +117,14 @@ I think that&#39;s all the relevant categories. Let me list them out to make sur
 Education, Online Learning, Educational Technology, Community Building, Question Routing, Recommender Systems, Student Engagement, Collaboration, Feature Engineering, User Experience, Real World Application, A/B Test, Online Evaluation, Method Comparison, Ensemble Methods.</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -153,9 +167,11 @@ Abstract:
 Students’ performance in Massive Open Online Courses (MOOCs) is enhanced by high quality discussion forums or recently emerging educational Community Question Answering (CQA) systems. Nevertheless, only a small number of students answer questions asked by their peers. This results in instructor overload, and many unanswered questions. To increase students’ participation, we present an approach for recommendation of new questions to students who are likely to provide answers. Existing approaches to such question routing proposed for non-educational CQA systems tend to rely on a few experts, which is not suitable because we want students to be engaged as it positively influences their learning outcomes. In tackling this novel educational question routing problem, our method (1) goes beyond previous question-answering data as it incorporate additional non-QA data from the course (to improve prediction accuracy and to involve a larger part of community) and (2) applies constraints on users’ workload (to prevent user overloading). We use an ensemble classifier for predicting students’ willingness to answer a question, as well as the students’ expertise for answering. We conducted an online evaluation of the proposed method using an A/B test in our CQA system deployed at an edX MOOC. The proposed method outperformed a baseline method (non-educational question routing enhanced with workload restriction) in recommendation accuracy, involving more community members, and average number of contributions.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, let&#39;s tackle this categorization task step by step. First, I&#39;ll read through the title and abstract to understand what the article is about. 
 
 The title mentions &#34;Educational Question Routing in Online Student Communities.&#34; So it&#39;s clearly related to education and online communities where students ask questions. The abstract talks about improving student participation in MOOCs by routing questions to students who are more likely to answer them. They mention using an ensemble classifier for prediction, an A/B test evaluation, and focus on educational aspects like cold start problems.
@@ -174,15 +190,11 @@ Putting it all together, I can identify several categories: Education, Recommend
 Education, Recommendation Systems, User Engagement, Cold Start, Evaluation (A/B Test), User Profiling, Scalability, Real-World Applications, MOOCs</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

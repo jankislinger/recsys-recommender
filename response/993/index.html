@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Content metadata plays a very important role in movie recommender systems as it provides valuable information about various aspects of a movie such as genre, cast, plot synopsis, box office summary, etc. Analyzing the metadata can help understand the user preferences and generate personalized recommendations catering to the niche tastes of the users. It can also help with content cold starting when the recommender system has little or no interaction data available to perform collaborative filtering. In this talk, we will focus on one particular type of metadata – genre labels. Genre labels associated with a movie or a TV series such as “horror” or “comedy” or “romance” help categorize a collection of movies into different themes and correspondingly setting up the audience expectation for a title. We present some of the challenges associated with using genre label information via traditional methods and propose a new way of examining the genre information that we call as the Genre Spectrum. The Genre Spectrum helps capture the various nuanced genres in a title and our offline and online experiments corroborate the effectiveness of the approach.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let me start by reading the title and abstract carefully.
 
 The title is &#34;Beyond Labels: Leveraging Deep Learning and LLMs for Content Metadata.&#34; Hmm, that suggests it&#39;s about using advanced techniques like deep learning and large language models (LLMs) in handling content metadata. The abstract expands on this, mentioning movie recommender systems where content metadata is crucial because it provides details like genre, cast, plot, etc.
@@ -131,14 +145,14 @@ So, compiling all these into the required format, making sure each is concise an
 Deep Learning, Large Language Models (LLMs), Recommendation Systems, Content Metadata, Genre Analysis, Cold Start Problem, Personalized Recommendations, User Preferences, Offline Experiments, Online Experiments</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -181,9 +195,11 @@ Abstract:
 Content metadata plays a very important role in movie recommender systems as it provides valuable information about various aspects of a movie such as genre, cast, plot synopsis, box office summary, etc. Analyzing the metadata can help understand the user preferences and generate personalized recommendations catering to the niche tastes of the users. It can also help with content cold starting when the recommender system has little or no interaction data available to perform collaborative filtering. In this talk, we will focus on one particular type of metadata – genre labels. Genre labels associated with a movie or a TV series such as “horror” or “comedy” or “romance” help categorize a collection of movies into different themes and correspondingly setting up the audience expectation for a title. We present some of the challenges associated with using genre label information via traditional methods and propose a new way of examining the genre information that we call as the Genre Spectrum. The Genre Spectrum helps capture the various nuanced genres in a title and our offline and online experiments corroborate the effectiveness of the approach.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, so I&#39;m trying to categorize this research article about using deep learning and LLMs for content metadata in movie recommender systems. Let me go through the process step by step.
 
 First, I&#39;ll read the title: &#34;Beyond Labels: Leveraging Deep Learning and LLMs for Content Metadata.&#34; The title suggests that they&#39;re moving beyond traditional labels (like genre tags) to use more advanced methods like deep learning and large language models (LLMs) for handling content metadata. So, I&#39;m thinking categories related to machine learning techniques might be relevant here.
@@ -259,15 +275,11 @@ So final list: Deep Learning, Content-Based Filtering, Cold Start Problem, Genre
 Deep Learning, Content-Based Filtering, Cold Start Problem, Genre Analysis, Metadata, Movies, Evaluation</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

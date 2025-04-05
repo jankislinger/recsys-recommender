@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Critiquing is a method for conversational recommendation that incrementally adapts recommendations in response to user preference feedback. Specifically, a user is iteratively provided with item recommendations and attribute descriptions for those items; the user may then either accept the recommendation or choose to critique an attribute to generate a new recommendation. A recent direction known as latent linear critiquing (LLC) takes a modern embedding-based approach that seeks to optimize the combination of user preference embeddings with embeddings of critiques based on subjective item descriptions (i.e., keyphrases from user reviews); LLC does so by exploiting the linear structure of the embeddings to efficiently optimize their weights in a linear programming (LP) formulation. In this paper, we revisit LLC and note that it’s score-based optimization approach inherently encourages extreme weightings in order to maximize predicted score gaps between preferred and non-preferred items. Noting that the overall end task objective in critiquing is to re-rank rather than re-score, in this paper we take a ranking optimization approach that seeks to optimize embedding weights based on observed rank violations from earlier critiquing iterations. We evaluate the proposed framework on two recommendation datasets containing user reviews. Empirical results demonstrate that ranking-based LLC generally outperforms scoring-based LLC and other baselines across a variety of datasets, critiquing styles, and both satisfaction and session-length performance metrics.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m trying to categorize this research article about a Ranking Optimization Approach for Latent Linear Critiquing in Conversational Recommender Systems. Let me start by reading the title and abstract carefully.
 
 The title mentions &#34;Ranking Optimization,&#34; which suggests that the focus is on how items are ordered or ranked within recommendations. It&#39;s part of a conversational recommender system, so it involves interactions where users can provide feedback through critiques. 
@@ -105,15 +119,11 @@ Putting this all together, I should list these as clear, descriptive keywords. I
 Ranking Optimization, Conversational Recommender Systems, User Feedback Mechanisms, Preference Learning, Critiquing, Re-ranking, Embeddings, Linear Programming, Session-Based Recommendations, Satisfaction Metrics, Session Length, Optimization Techniques, User Reviews, Evaluation in Real-World Settings.</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

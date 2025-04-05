@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 After decades of being mainly confined to theoretical research, Quantum Computing is now becoming a useful tool for solving realistic problems. This work aims to experimentally explore the feasibility of using currently available quantum computers, based on the Quantum Annealing paradigm, to build a recommender system exploiting community detection. Community detection, by partitioning users and items into densely connected clusters, can boost the accuracy of non-personalized recommendation by assuming that users within each community share similar tastes. However, community detection is a computationally expensive process. The recent availability of Quantum Annealers as cloud-based devices, constitutes a new and promising direction to explore community detection, although effectively leveraging this new technology is a long-term path that still requires advancements in both hardware and algorithms. This work aims to begin this path by assessing the quality of community detection formulated as a Quadratic Unconstrained Binary Optimization problem on a real recommendation scenario. Results on several datasets show that the quantum solver is able to detect communities of comparable quality with respect to classical solvers, but with better speedup, and the non-personalized recommendation models built on top of these communities exhibit improved recommendation quality. The takeaway is that quantum computing, although in its early stages of maturity and applicability, shows promise in its ability to support new recommendation models and to bring improved scalability as technology evolves.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, let&#39;s tackle this categorization task step by step. I&#39;m looking at the article titled &#34;Towards Recommender Systems with Community Detection and Quantum Computing&#34; and its abstract. The first thing that stands out is the combination of two major areas: recommender systems and quantum computing.
 
 Starting with the title, &#34;Recommender Systems&#34; is clearly a primary category since the entire work revolves around improving these systems. The mention of &#34;Community Detection&#34; suggests another key area because it&#39;s about partitioning users and items into clusters to enhance recommendations. 
@@ -103,15 +117,11 @@ Putting it all together, these categories should help users find the article eas
 Quantum Computing, Recommender Systems, Community Detection, Quantum Annealing, Quadratic Unconstrained Binary Optimization (QUBO), Non-Personalized Recommendations, Recommendation Accuracy, Cloud Computing, Evaluation in Recommendation, Interdisciplinary Research, Emerging Technologies, Scalability.</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

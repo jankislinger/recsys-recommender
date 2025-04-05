@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Large neural recommendation models can be a challenge to deploy at scale. For recommendation services with a large number of users, the most powerful models may require an impractical amount of space to store the large dense vectors encoding each of the users’ tastes. Combining ideas from auto-encoder-based recommender systems, neural discrete representation learning (VQ-VAE), and product quantization (PQ), we propose PQ-VAE, a recommendation model that learns compact, discrete embeddings at only a small cost in accuracy.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I&#39;m trying to categorize this research article about PQ-VAE: Efficient Recommendation Using Quantized Embeddings. Let me start by reading the title and abstract carefully.
 
 The title mentions &#34;Efficient Recommendation&#34; which tells me it&#39;s about recommendation systems. It also talks about &#34;Quantized Embeddings,&#34; so that probably relates to how user preferences are represented in a compressed form.
@@ -113,14 +127,14 @@ I think this covers all necessary bases without going too broad or too narrow. E
 Autoencoder, Variational Autoencoder (VQ-VAE), Product Quantization, Scalability, Recommendation Systems, Model Efficiency, Embedding Techniques, Space Optimization</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -163,9 +177,11 @@ Abstract:
 Large neural recommendation models can be a challenge to deploy at scale. For recommendation services with a large number of users, the most powerful models may require an impractical amount of space to store the large dense vectors encoding each of the users’ tastes. Combining ideas from auto-encoder-based recommender systems, neural discrete representation learning (VQ-VAE), and product quantization (PQ), we propose PQ-VAE, a recommendation model that learns compact, discrete embeddings at only a small cost in accuracy.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article titled &#34;PQ-VAE: Efficient Recommendation Using Quantized Embeddings&#34;. Let&#39;s start by reading the abstract carefully. The article talks about large neural recommendation models being difficult to deploy because they require too much storage for user embeddings. They mention combining auto-encoder-based systems, VQ-VAE (which I know stands for Vector Quantization - Variational Autoencoder), and Product Quantization (PQ). The goal is to create a model that uses compact, discrete embeddings without losing much accuracy.
 
 First, I should identify the key themes here. The main focus seems to be on improving recommendation systems by making them more efficient in terms of storage and possibly computation. They&#39;re using techniques related to dimensionality reduction or quantization to achieve this.
@@ -234,15 +250,11 @@ That makes ten categories. I think this covers the main points without being too
 Variational Autoencoders (VAE), Product Quantization (PQ), Recommendation Systems, Embeddings, Scalability, Model Efficiency, Neural Networks, Memory Efficiency, Large-Scale Systems, Dimensionality Reduction</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

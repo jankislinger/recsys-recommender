@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Music streaming companies collectively serve billions of songs per day. Radio-based music services may intersperse audio advertisements among the songs as a means to generate revenue, much like traditional FM radio. Regardless of the monetization approach, the recommender system should decide when to play content that the listener is known to enjoy (exploit) and content that is novel to the listener (explore). Recommender systems that rely on this explore/exploit type framework have been deployed in a wide variety of applications such as movies, books, music, shopping and more. In this work, we investigate the impact of different ad/song sequences on listener behavior. In particular, we focus on the impact of exploring new song content for the listener given the previous sequence of ads and songs in the listener’s session. Our results show that the prior sequence matters when considering song exploration and that this prior sequence has an impact on the listener’s tendency to interrupt their current session.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article about sequential music recommendation into multiple categories based on the guidelines provided. Let&#39;s start by reading the title and abstract carefully.
 
 The title is &#34;Towards Effective Exploration/Exploitation in Sequential Music Recommendation.&#34; The abstract mentions that it&#39;s about music streaming companies serving billions of songs daily, using radio-based services with ads like traditional FM radio. It talks about how recommender systems should decide when to exploit (play known liked content) or explore (new content). They&#39;ve applied this framework in various areas like movies, books, music, shopping, etc. The study looks at the impact of different ad/song sequences on listener behavior, especially how previous ads and songs affect the listener&#39;s tendency to interrupt their session when exploring new songs.
@@ -111,14 +125,14 @@ So, compiling all these thoughts into a list of 8-12 categories as per the guide
 Exploration/Exploitation, Music, Sequential Recommendations, Radio-Based Services, Recommender Systems, Real-World Applications, User Behavior Analysis, Interrupted Sessions, Content Exploration, Known Content Exploitation.</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -161,9 +175,11 @@ Abstract:
 Music streaming companies collectively serve billions of songs per day. Radio-based music services may intersperse audio advertisements among the songs as a means to generate revenue, much like traditional FM radio. Regardless of the monetization approach, the recommender system should decide when to play content that the listener is known to enjoy (exploit) and content that is novel to the listener (explore). Recommender systems that rely on this explore/exploit type framework have been deployed in a wide variety of applications such as movies, books, music, shopping and more. In this work, we investigate the impact of different ad/song sequences on listener behavior. In particular, we focus on the impact of exploring new song content for the listener given the previous sequence of ads and songs in the listener’s session. Our results show that the prior sequence matters when considering song exploration and that this prior sequence has an impact on the listener’s tendency to interrupt their current session.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, so I need to categorize this research article about music recommendation systems. Let me start by reading the title and abstract carefully.
 
 The title is &#34;Towards Effective Exploration/Exploitation in Sequential Music Recommendation.&#34; Okay, so it&#39;s talking about explore/exploit frameworks, which I know are common in recommendation systems to balance between suggesting known preferences (exploit) and introducing new options (explore). The abstract mentions music streaming companies serving billions of songs and using radio-based services with ads. It discusses how recommenders should decide when to play familiar content versus new stuff.
@@ -180,15 +196,11 @@ I should make sure each category is clearly relevant and that together they cove
 Exploration-Exploitation, Music, Sequential Recommendation, Ad Insertion, Listener Behavior, Session Analysis</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

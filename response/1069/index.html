@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Matrix factorization is a well-known and effective methodology for top-k list recommendation. It became widely known during the Netflix challenge in 2006, and since then, many adapted and improved versions have been published. A particularly interesting matrix factorization algorithm called iALS (for implicit Alternating Least Squares) adapts the method for implicit feedback, i.e.\ a setting where only a very small amount of positive labels are available along with a majority of unknown labels. Compared to the classical task of rating prediction, learning from implicit feedback is applicable to many more domains, as the data is more abundant and requires less effort to elicit from users. However, the sparsity, imbalance, and implicit nature of the signal also pose unique challenges to retrieving the most relevant items to recommend. We revisit the role of unknown interactions in implicit matrix factorization. Traditionally, all unknowns are interpreted as negative samples and their importance in the training objective is then down-weighted to balance them out with the known, positive interactions. Interestingly, by adapting a probabilistic view of matrix factorization, we can retain the unknown nature of these interactions by modelling them as either positive or negative. With this new formulation that better fits the underlying data, we gain improved performance on the downstream recommendation task without any computational overhead compared to the popular iALS method. This paper outlines the key insights needed to adapt iALS to use logistic regression. Furthermore, the popular full-rank EASE model is identified as a special case of iALS. With this knowledge, EASE was trivially adapted to use logistic regression as well. An extensive experimental evaluation on several real-world datasets demonstrates the effectiveness of our approach. Additionally, a discrepancy between the need for weighting between factorization and regression models is discovered, leading towards a better understanding of these methods.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I&#39;m trying to categorize this research article about implicit matrix factorization from a probabilistic view. Let me go through the key points step by step.
 
 First, the title mentions &#34;Implicit Matrix Factorization&#34; and &#34;Probabilistic View.&#34; That tells me right away that the main algorithm family here is Matrix Factorization, specifically looking at the implicit version which deals with unknown interactions.
@@ -101,14 +115,14 @@ Putting it all together, I need to assign this article to at least 8-12 categori
 Matrix Factorization, Implicit Feedback, Recommendation Systems, Algorithm Adaptation, Probabilistic Models, iALS, Real-World Applications, Cold Start, Evaluation Methods, Model Interpretation</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -151,9 +165,11 @@ Abstract:
 Matrix factorization is a well-known and effective methodology for top-k list recommendation. It became widely known during the Netflix challenge in 2006, and since then, many adapted and improved versions have been published. A particularly interesting matrix factorization algorithm called iALS (for implicit Alternating Least Squares) adapts the method for implicit feedback, i.e.\ a setting where only a very small amount of positive labels are available along with a majority of unknown labels. Compared to the classical task of rating prediction, learning from implicit feedback is applicable to many more domains, as the data is more abundant and requires less effort to elicit from users. However, the sparsity, imbalance, and implicit nature of the signal also pose unique challenges to retrieving the most relevant items to recommend. We revisit the role of unknown interactions in implicit matrix factorization. Traditionally, all unknowns are interpreted as negative samples and their importance in the training objective is then down-weighted to balance them out with the known, positive interactions. Interestingly, by adapting a probabilistic view of matrix factorization, we can retain the unknown nature of these interactions by modelling them as either positive or negative. With this new formulation that better fits the underlying data, we gain improved performance on the downstream recommendation task without any computational overhead compared to the popular iALS method. This paper outlines the key insights needed to adapt iALS to use logistic regression. Furthermore, the popular full-rank EASE model is identified as a special case of iALS. With this knowledge, EASE was trivially adapted to use logistic regression as well. An extensive experimental evaluation on several real-world datasets demonstrates the effectiveness of our approach. Additionally, a discrepancy between the need for weighting between factorization and regression models is discovered, leading towards a better understanding of these methods.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I&#39;m trying to categorize this research article based on its title and abstract. The title mentions &#34;The Role of Unknown Interactions in Implicit Matrix Factorization&#34; and takes a probabilistic view. Let me break this down.
 
 First, the main topic is matrix factorization, which is a family of algorithms used in recommendation systems. So that&#39;s one category: Matrix Factorization.
@@ -182,15 +198,11 @@ I need to ensure each category is relevant and not too narrow. Also, checking th
 Matrix Factorization, Implicit Feedback, Recommendation Systems, iALS, Probabilistic Models, Cold Start, Evaluation Methods, Novel Algorithms, Real-World Applications, Logistic Regression</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

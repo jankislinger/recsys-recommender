@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Sequential Recommendation aims to predict the next item by mining out the dynamic preference from user previous interactions. However, most methods represent each item as a single fixed vector, which is incapable of capturing the uncertainty of item-item transitions that result from time-dependent and multifarious interests of users. Besides, they fail to effectively exploit side information that helps to better express user preferences. At last, the noise in user’s access sequence, which is due to accidental clicks, can interfere with the next item prediction and lead to lower recommendation performance. To deal with these issues, we propose DLFS-Rec, a novel model that combines Distribution-based Learnable Filters with Side information for sequential Recommendation. Specifically, items and their side information are represented by stochastic Gaussian distribution, which is described by mean and covariance embeddings, and then the corresponding embeddings are fused to generate a final representation for each item. To attenuate noise, stacked learnable filter layers are applied to smooth the fused embeddings. The similarities between the distributions inferred from the last filter layer and candidates are measured by 2-Wasserstein distance for generating recommendation list. Extensive experiments on four public real-world datasets demonstrate the superiority of the proposed model over state-of-the-art baselines, especially on cold start users and items.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me read through them again carefully.
 
 The title is &#34;Distribution-based Learnable Filters with Side Information for Sequential Recommendation.&#34; Hmm, that gives a few keywords: distribution-based, learnable filters, side information, sequential recommendation. So the main focus seems to be on sequential recommendations using these specific techniques.
@@ -107,15 +121,11 @@ I think the provided example response includes a good mix of specific techniques
 Distribution-Based Methods, Learnable Filters, Sequential Recommendation, Recommendation Systems, Side Information, Noise Reduction, Cold Start, Probabilistic Models, Model-Based Methods, Real-World Applications, Recommendation Quality</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

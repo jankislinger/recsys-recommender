@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Recommender systems offer critical services in the age of mass information. Personalized ranking have been attractive both for content providers and customers due to its ability of creating a user-specific ranking on the item set. Although the powerful factor-analysis methods including latent factor model and deep neural network models have achieved promising results, they still suffer from the challenging issues, such as sparsity of recommendation data, uncertainty of optimization, and etc. To enhance the accuracy and generalization of recommender system, in this paper, we propose a deep generative ranking (DGR) model under the Wasserstein auto-encoder framework. Specifically, DGR simultaneously generates the pointwise implicit feedback data (via a Beta-Bernoulli distribution) and creates the pairwise ranking list by sufficient exploiting both interacted and non-interacted items for each user. DGR can be efficiently inferred by minimizing its penalized evidence lower bound. Meanwhile, we theoretically analyze the generalization error bounds of DGR model to guarantee its performance in extremely sparse feedback data. A series of experiments on four large-scale datasets (Movielens (20M), Netflix, Epinions and Yelp in movie, product and business domains) have been conducted. By comparing with the state-of-the-art methods, the experimental results demonstrate that DGR consistently benefit the recommendation system in ranking estimation task, especially for the near-cold-start-users (with less than five interacted items).
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, so I&#39;m trying to categorize this research article about Deep Generative Ranking for Personalized Recommendation. Let me start by reading through the title and abstract carefully.
 
 The title mentions &#34;Deep Generative Ranking&#34; which immediately tells me it&#39;s related to recommendation systems using deep learning techniques. The abstract goes into more detail: it talks about personalized ranking, which is a key aspect of recommendation systems. It also mentions challenges like sparsity in data and uncertainty in optimization, so those are important points.
@@ -110,15 +124,11 @@ I think these cover the main points without being too specific or too broad. Eac
 Recommendation Systems, Deep Learning, Generative Models, Personalization, Implicit Feedback, Cold Start Problem, Matrix Factorization, Large-Scale Datasets, Theoretical Analysis, Cross-Domain Applications</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

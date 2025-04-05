@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 News publishers, who are seeking to grow their digital audience, face a challenge in providing relevant content recommendations for unregistered users arriving directly to article pages. In these cold start scenarios, classic techniques, like asking a user to register and select topics of interest, fall short. We present a contextual targeting approach that leverages the user’s current article choice itself as an implicit signal of user interests. We designed and developed an interface with recommendations to help users discover more articles. Our online A/B testing demonstrated that our models increased click-through rates by 39.4% over a popularity baseline. One of them, a large language model (LLM), generates relevant recommendations that balance immersion and novelty. We discuss the implications of using LLMs for responsibly enhancing user experiences while upholding editorial standards. We identify key opportunities in detecting nuanced user preferences and identifying and interrupting filter bubbles on news publisher sites.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, so I&#39;m trying to categorize this research article about solving a cold start problem at the Los Angeles Times using large language models (LLMs). The title is “More to Read” at the Los Angeles Times: Solving a Cold Start Problem with LLMs to Improve Story Discovery. Let me break down the abstract and see how I can assign appropriate categories.
 
 First, the article discusses a challenge faced by news publishers in providing relevant recommendations for unregistered users when they arrive directly at an article page. This is a classic cold start problem because there&#39;s no existing user data to work with. They mention using the user&#39;s current article choice as an implicit signal of their interests, which falls under implicit feedback.
@@ -97,14 +111,14 @@ So, compiling all these elements, I think the categories should include things l
 Cold Start, Large Language Models (LLMs), News, Recommendation Systems, Implicit Feedback, Contextual Targeting, A/B Test, Online Media, User Engagement, Editorial Standards, Filter Bubbles, Content Diversity, Personalization</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -147,9 +161,11 @@ Abstract:
 News publishers, who are seeking to grow their digital audience, face a challenge in providing relevant content recommendations for unregistered users arriving directly to article pages. In these cold start scenarios, classic techniques, like asking a user to register and select topics of interest, fall short. We present a contextual targeting approach that leverages the user’s current article choice itself as an implicit signal of user interests. We designed and developed an interface with recommendations to help users discover more articles. Our online A/B testing demonstrated that our models increased click-through rates by 39.4% over a popularity baseline. One of them, a large language model (LLM), generates relevant recommendations that balance immersion and novelty. We discuss the implications of using LLMs for responsibly enhancing user experiences while upholding editorial standards. We identify key opportunities in detecting nuanced user preferences and identifying and interrupting filter bubbles on news publisher sites.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m trying to figure out how to categorize this research article. The title is about solving a cold start problem using LLMs at the Los Angeles Times. From the abstract, it seems they&#39;re addressing the challenge of providing recommendations when users haven&#39;t registered or given explicit preferences. They used implicit signals from the current article choice and did an A/B test which showed improved click-through rates.
 
 First, I&#39;ll note that the core theme here is recommendation systems in a news context, specifically dealing with cold start issues. The fact that they&#39;re using LLMs suggests it&#39;s related to machine learning and natural language processing. The application is real-world since they mention an online A/B test, so that&#39;s another category.
@@ -166,15 +182,11 @@ Are there any other aspects? Maybe something about user experience or editorial 
 Cold Start, Large Language Models (LLMs), News, Recommendation Systems, Evaluation Metrics, Real-World Applications, User Preferences, A/B Testing, Diversity of Recommendations, Immersion and Novelty</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

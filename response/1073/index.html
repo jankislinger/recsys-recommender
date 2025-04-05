@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Conversion rate (CVR) prediction is essential in recommendation systems, facilitating precise matching between recommended items and users’ preferences. However, the sample selection bias (SSB) and data sparsity (DS) issues pose challenges to accurate prediction. Existing works have proposed the click-through and conversion rate (CTCVR) prediction task which models samples from exposure to “click and conversion” in entire space and incorporates multi-task learning. This approach has shown efficacy in mitigating these challenges. Nevertheless, it intensifies the false negative sample (FNS) problem. To be more specific, the CTCVR task implicitly treats all the CVR labels of non-click samples as negative, overlooking the possibility that some samples might convert if clicked. This oversight can negatively impact CVR model performance, as empirical analysis has confirmed. To this end, we advocate for discarding the CTCVR task and proposing a Non-click samples Improved Semi-supErvised (NISE) method for conversion rate prediction, where the non-click samples are treated as unlabeled. Our approach aims to predict their probabilities of conversion if clicked, utilizing these predictions as pseudo-labels for further model training. This strategy can help alleviate the FNS problem, and direct modeling of the CVR task across the entire space also mitigates the SSB and DS challenges. Additionally, we conduct multi-task learning by introducing an auxiliary click-through rate prediction task, thereby enhancing embedding layer representations. Our approach is applicable to various multi-task architectures. Comprehensive experiments are conducted on both public and production datasets, demonstrating the superiority of our proposed method in mitigating the FNS challenge and improving the CVR estimation.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article into multiple relevant categories based on its title and abstract. The goal is to make it easy for users to find the article when exploring different topics. Let&#39;s start by reading through the provided information carefully.
 
 The title of the article is &#34;Utilizing Non-Click Samples via Semi-Supervised Learning for Conversion Rate Prediction.&#34; From this, I can gather that the main focus is on improving conversion rate prediction in recommendation systems using non-click data and semi-supervised learning methods. 
@@ -126,14 +140,14 @@ I think that covers all relevant aspects. Each category is specific enough but a
 Semi-Supervised Learning, Conversion Rate Prediction, Recommendation Systems, Click-Through Rate (CTR), Sample Selection Bias, Data Sparsity, Multi-Task Learning, Non-Click Samples, False Negative Samples, Model Improvement, User Behavior Prediction, Enhanced Models</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -176,9 +190,11 @@ Abstract:
 Conversion rate (CVR) prediction is essential in recommendation systems, facilitating precise matching between recommended items and users’ preferences. However, the sample selection bias (SSB) and data sparsity (DS) issues pose challenges to accurate prediction. Existing works have proposed the click-through and conversion rate (CTCVR) prediction task which models samples from exposure to “click and conversion” in entire space and incorporates multi-task learning. This approach has shown efficacy in mitigating these challenges. Nevertheless, it intensifies the false negative sample (FNS) problem. To be more specific, the CTCVR task implicitly treats all the CVR labels of non-click samples as negative, overlooking the possibility that some samples might convert if clicked. This oversight can negatively impact CVR model performance, as empirical analysis has confirmed. To this end, we advocate for discarding the CTCVR task and proposing a Non-click samples Improved Semi-supErvised (NISE) method for conversion rate prediction, where the non-click samples are treated as unlabeled. Our approach aims to predict their probabilities of conversion if clicked, utilizing these predictions as pseudo-labels for further model training. This strategy can help alleviate the FNS problem, and direct modeling of the CVR task across the entire space also mitigates the SSB and DS challenges. Additionally, we conduct multi-task learning by introducing an auxiliary click-through rate prediction task, thereby enhancing embedding layer representations. Our approach is applicable to various multi-task architectures. Comprehensive experiments are conducted on both public and production datasets, demonstrating the superiority of our proposed method in mitigating the FNS challenge and improving the CVR estimation.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I&#39;m looking at this article titled &#34;Utilizing Non-click Samples via Semi-supervised Learning for Conversion Rate Prediction.&#34; The abstract discusses conversion rate prediction in recommendation systems, focusing on challenges like sample selection bias and data sparsity. It introduces a new method called NISE that treats non-click samples as unlabeled data and uses semi-supervised learning to improve predictions.
 
 First, I need to categorize this article accurately. The main focus is on conversion rate prediction, which falls under recommendation systems. So &#34;Conversion Rate Prediction&#34; and &#34;Recommendation Systems&#34; are primary categories.
@@ -195,15 +211,11 @@ Finally, the article improves model performance through better training strategi
 Conversion Rate Prediction, Recommendation Systems, Sample Selection Bias, Data Sparsity, Semi-supervised Learning, Non-click Samples, Multi-task Learning, Click Behavior, Model Performance Improvement, Evaluation Metrics</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 In many domains, user preferences are similar locally within like-minded subgroups of users, but typically differ globally between those subgroups. Local recommendation models were shown to substantially improve top-K recommendation performance in such settings. However, existing local models do not scale to large-scale datasets with an increasing number of subgroups and do not support inductive recommendations for users not appearing in the training set. Key reasons for this are that subgroup detection and recommendation get implemented as separate steps in the model or that local models are explicitly instantiated for each subgroup. In this paper, we propose an End-to-end Local Factor Model (Elfm) which overcomes these limitations by combining both steps and incorporating local structures through an inductive bias. Our model can be optimized end-to-end and supports incremental inference, does not require a full separate model for each subgroup, and has overall small memory and computational costs for incorporating local structures. Empirical results show that our method substantially improves recommendation performance on large-scale datasets with millions of users and items with considerably smaller model size. Our user study also shows that our approach produces coherent item subgroups which could aid in the generation of explainable recommendations.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, let me try to categorize this research article based on its title and abstract. The title is &#34;Local Factor Models for Large-Scale Inductive Recommendation,&#34; so right away I can see it&#39;s about recommendation systems, specifically focusing on local models and large-scale applications.
 
 Looking at the abstract, it mentions that user preferences are similar within subgroups but differ globally. This suggests a focus on subgroup-based recommendations or community detection in recommendations. The paper talks about improving top-K performance, which relates to recommendation quality metrics.
@@ -103,14 +117,14 @@ I think I&#39;ve covered all bases now. The categories should reflect both the t
 Recommendation Algorithms, Factor Models, Large-Scale Recommendations, Subgroup Detection, Cold Start, Scalability, Top-K Performance, Explainable Recommendations, Incremental Inference, User Study.</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -153,9 +167,11 @@ Abstract:
 In many domains, user preferences are similar locally within like-minded subgroups of users, but typically differ globally between those subgroups. Local recommendation models were shown to substantially improve top-K recommendation performance in such settings. However, existing local models do not scale to large-scale datasets with an increasing number of subgroups and do not support inductive recommendations for users not appearing in the training set. Key reasons for this are that subgroup detection and recommendation get implemented as separate steps in the model or that local models are explicitly instantiated for each subgroup. In this paper, we propose an End-to-end Local Factor Model (Elfm) which overcomes these limitations by combining both steps and incorporating local structures through an inductive bias. Our model can be optimized end-to-end and supports incremental inference, does not require a full separate model for each subgroup, and has overall small memory and computational costs for incorporating local structures. Empirical results show that our method substantially improves recommendation performance on large-scale datasets with millions of users and items with considerably smaller model size. Our user study also shows that our approach produces coherent item subgroups which could aid in the generation of explainable recommendations.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me read through them carefully.
 
 The title is &#34;Local Factor Models for Large-Scale Inductive Recommendation.&#34; It mentions local factor models and large-scale datasets, which suggests it&#39;s about recommendation systems at scale.
@@ -220,15 +236,11 @@ I think these cover multiple aspects without overlapping too much. Each category
 Factorization, Local Models, Large-Scale Systems, Subgroup Recommendations, Inductive Learning, Scalability, Explainability, Computational Efficiency, Incremental Inference</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

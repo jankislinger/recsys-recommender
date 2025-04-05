@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Providing effective suggestions is of predominant importance for successful Recommender Systems (RSs). Nonetheless, the need of accounting for additional multiple objectives has become prominent, from both the final users’ and the item providers’ points of view. This need has led to a new class of RSs, called Multi-Objective Recommender Systems (MORSs). These systems are designed to provide suggestions by considering multiple (conflicting) objectives simultaneously, such as diverse, novel, and fairness-aware recommendations. In this work, we reproduce a state-of-the-art study on MORSs that exploits a reinforcement learning agent to satisfy three objectives, i.e., accuracy, diversity, and novelty of recommendations. The selected study is one of the few MORSs where the source code and datasets are released to ensure the reproducibility of the proposed approach. Interestingly, we find that some challenges arise when replicating the results of the original work, due to the nature of multiple-objective problems. We also extend the evaluation of the approach to analyze the impact of improving user-centred objectives of recommendations (i.e., diversity and novelty) in terms of algorithmic bias. To this end, we take into consideration both popularity and category of the items. We discover some interesting trends in the recommendation performance according to different evaluation metrics. In addition, we see that the multi-objective reinforcement learning approach is responsible for increasing the bias disparity in the output of the recommendation algorithm for those items belonging to positively/negatively biased categories. We publicly release datasets and codes in the following GitHub repository: https://anonymous.4open.science/r/MORS_reproducibility-BD60
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article based on its title and abstract. Let me start by reading through them carefully.
 
 The title is about &#34;Reproducibility of Multi-Objective Reinforcement Learning Recommendation: Interplay between Effectiveness and Beyond-Accuracy Perspectives.&#34; So it&#39;s focusing on reproducibility in recommendation systems, specifically using multi-objective reinforcement learning.
@@ -117,15 +131,11 @@ I think these cover the main themes and ensure discoverability across different 
 Recommender Systems, Multi-Objective Recommender Systems, Reinforcement Learning, Reproducibility, Algorithmic Bias, Diversity of Recommendations, Novelty, Fairness-aware Recommendations, Beyond Accuracy, Evaluation Metrics, Multi-Objective Optimization, Open Source</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

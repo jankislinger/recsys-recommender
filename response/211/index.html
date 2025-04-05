@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 We study the effect of the volume of consumer reviews on the purchase likelihood (conversion rate) of users browsing a product page. We propose using the exponential learning curve model to study how conversion rates change with the number of reviews. We call the difference in conversion rate between having no reviews and an infinite number the value of reviews. We find that, on average, the conversion rate of a product can increase by as much as 270% as it accumulates reviews, amongst the users that choose to display them. We also find diminishing marginal value as a product accumu- lates reviews, with the first five reviews driving the bulk of the aforementioned increase. To address the problem of si- multaneity of increase of reviews and conversion rate, we use customer sessions in which reviews were not displayed as a control for trends that would have happened regardless of the increase in the review volume. Using our framework, we further find that high priced items have a higher value for reviews than lower priced items. High priced items can see their conversion rate increase by as much as 380% as they accumulate reviews compared to 190% for low priced items.We infer that the existence of reviews provides valu- able signals to the customers, increasing their propensity to purchase. We also infer that users usually don’t pay atten- tion to the entire set of reviews, especially if there are a lot of them, but instead they focus on the first few available. Our approach can be extended and applied in a variety of settings to gain further insights.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m trying to categorize this research article about online customer reviews. The title is &#34;The Value of Online Customer Reviews,&#34; and the abstract talks about how the number of consumer reviews affects purchase likelihood or conversion rates on product pages.
 
 First, let me break down what the article is about. It uses an exponential learning curve model to study how conversion rates change with more reviews. They found that having reviews can increase conversion rates a lot—like 270% on average, and even higher for high-priced items. The first five reviews make the biggest difference, and people don&#39;t really look at all the reviews, just the first few.
@@ -117,15 +131,11 @@ I think that&#39;s about 9 categories, which fits the requirement of assigning a
 Consumer Behavior, Conversion Rate Optimization, Customer Reviews, Exponential Learning Curve Model, Online Shopping/Commerce, User Behavior Analysis, Retail Industry, E-commerce Platforms, Purchase Decision-Making.</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 With the clinical environment becoming more data-reliant, healthcare professionals now have unparalleled access to comprehensive clinical information from numerous sources. Then, one of the main issues is how to avoid overloading practitioners with large amounts of (irrelevant) information while guiding them to the relevant documents for specific patient cases. Additional challenges appear due to the shortness of queries and the presence of long (and maybe noisy) contextual information. This demo presents Re2Dan, a web Retrieval and recommender of Danish medical documents. Re2Dan leverages several techniques to improve the quality of retrieved documents. First, it combines lexical and semantic searches to understand the meaning and context of user queries, allowing the retrieval of documents that are conceptually similar to the user’s query. Second, it recommends similar queries, allowing users to discover related documents and insights. Third, when given contextual information (e.g., from patients’ clinical notes), it suggests medical concepts to expand the user query, enabling a more focused search scope and thus obtaining more accurate recommendations. Preliminary analyses showed the effectiveness of the recommender in improving the relevance and comprehensiveness of recommendations, thereby assisting healthcare professionals in finding relevant information for informed decision-making.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, so I need to categorize this research article about Re2Dan: Retrieval of medical documents for e-Health in Danish. Let me start by reading through the title and abstract carefully.
 
 The title mentions it&#39;s about retrieving medical documents for e-Health in丹麦 (Denmark). So right away, I can note that the domain is healthcare or specifically e-Health. The focus seems to be on improving information retrieval for healthcare professionals, which suggests categories related to medical information retrieval.
@@ -118,15 +132,11 @@ I think that&#39;s 12 categories, covering both specific techniques and broader 
 Medical Information Retrieval, Healthcare Domain, E-Health, Lexical Search, Semantic Search, Query Recommendation, Context-Aware Systems,丹麦 (Danish), Web-Based Systems, Clinical Decision-Making, Recommendation Quality, Evaluation Metrics</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

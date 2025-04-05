@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 The design of modern recommender systems relies on understanding which parts of the feature space are relevant for solving a given recommendation task. However, real-world data sets in this domain are often characterized by their large size, sparsity, and noise, making it challenging to identify meaningful signals. Feature ranking represents an efficient branch of algorithms that can help address these challenges by identifying the most informative features and facilitating the automated search for more compact and better-performing models (AutoML). We introduce OutRank, a system for versatile feature ranking and data quality-related anomaly detection. OutRank was built with categorical data in mind, utilizing a variant of mutual information that is normalized with regard to the noise produced by features of the same cardinality. We further extend the similarity measure by incorporating information on feature similarity and combined relevance. The proposed approach’s feasibility is demonstrated by speeding up the state-of-the-art AutoML system on a synthetic data set with no performance loss. Furthermore, we considered a real-life click-through-rate prediction data set where it outperformed strong baselines such as random forest-based approaches. The proposed approach enables exploration of up to 300% larger feature spaces compared to AutoML-only approaches, enabling faster search for better models on off-the-shelf hardware.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I need to categorize this research article into multiple relevant categories based on the given guidelines. Let&#39;s start by understanding the title and abstract.
 
 The title is &#34;OutRank: Speeding up AutoML-based Model Search for Large Sparse Data sets with Cardinality-aware Feature Ranking.&#34; This tells me that the article discusses a system called OutRank, which is designed to improve AutoML processes, especially when dealing with large and sparse datasets. The key elements here are AutoML, feature ranking, and handling large, sparse data.
@@ -99,14 +113,14 @@ Putting this all together, the categories should include aspects related to reco
 Recommendation Algorithms, Feature Ranking, AutoML, Large Data Sets, Sparse Data, Categorical Data, Cardinality-aware Methods, Anomaly Detection, Information Theory, Synthetic Data, Real-world Applications, Computational Efficiency, Model Search</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -149,9 +163,11 @@ Abstract:
 The design of modern recommender systems relies on understanding which parts of the feature space are relevant for solving a given recommendation task. However, real-world data sets in this domain are often characterized by their large size, sparsity, and noise, making it challenging to identify meaningful signals. Feature ranking represents an efficient branch of algorithms that can help address these challenges by identifying the most informative features and facilitating the automated search for more compact and better-performing models (AutoML). We introduce OutRank, a system for versatile feature ranking and data quality-related anomaly detection. OutRank was built with categorical data in mind, utilizing a variant of mutual information that is normalized with regard to the noise produced by features of the same cardinality. We further extend the similarity measure by incorporating information on feature similarity and combined relevance. The proposed approach’s feasibility is demonstrated by speeding up the state-of-the-art AutoML system on a synthetic data set with no performance loss. Furthermore, we considered a real-life click-through-rate prediction data set where it outperformed strong baselines such as random forest-based approaches. The proposed approach enables exploration of up to 300% larger feature spaces compared to AutoML-only approaches, enabling faster search for better models on off-the-shelf hardware.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article based on the given guidelines. Let&#39;s go through it step by step.
 
 First, looking at the title: &#34;OutRank: Speeding up AutoML-based Model Search for Large Sparse Data sets with Cardinality-aware Feature Ranking.&#34; The key terms here are AutoML, feature ranking, large sparse datasets. So categories related to AutoML and feature selection come to mind.
@@ -176,15 +192,11 @@ I should check if these categories are clear and user-friendly. They seem releva
 AutoML, Recommender Systems, Feature Selection, Scalability, Categorical Data, Mutual Information, Anomaly Detection, Performance Optimization, Web Systems, Feature Engineering</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

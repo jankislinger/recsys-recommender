@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 At present, most recommender systems involve two stakeholders, providers and customers. Apart from maximizing the recommendation accuracy, the fairness issue for both sides should also be considered. However, there is a trade-off for multi-objective optimization problems, where optimizing one objective (e.g. provider-side fairness) may degrade the performance of others (e.g. accuracy). Most of previous studies try to improve two-sided fairness with post-processing algorithms or fairness-aware loss constraints, which are highly dependent on the heuristic adjustments without respect to the optimization goal of accuracy. In contrast, we propose a novel training framework, adaptive weighting  towards two-sided fairness-aware recommendation (named Ada2Fair), which lies in the extension of the accuracy-focused objective to a controllable preference learning loss over the interaction data. Specifically, we adjust the optimization scale of an interaction sample with an adaptive weight generator, and estimate the two-sided fairness-aware weights within model training. During the training process, the recommender is trained with two-sided fairness-aware weights to boost the utility of niche providers and inactive customers in a unified way. Extensive experiments on three public datasets verify the effectiveness of Ada2Fair, which can achieve Pareto improvements in two-sided fairness-aware recommendation. Our code implementation is available at https://anonymous.4open.science/r/Ada2Fair.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me start by reading through the provided information carefully.
 
 The title is &#34;Promoting Two- s Fairness with Adaptive Weights for Providers and Customers in Recommendation.&#34; So it&#39;s about fairness in recommendation systems, specifically considering both providers and customers.
@@ -120,14 +134,14 @@ That&#39;s 11 categories. I think this covers the necessary aspects without bein
 Adaptive Weights, Recommender Systems, Fairness, Two-sided Fairness, Multi-objective Optimization, Recommendation Frameworks, Provider-Customer Dynamics, User-Centric Design, Real-world Applications, Adaptive Learning, Evaluation Metrics</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -170,9 +184,11 @@ Abstract:
 At present, most recommender systems involve two stakeholders, providers and customers. Apart from maximizing the recommendation accuracy, the fairness issue for both sides should also be considered. However, there is a trade-off for multi-objective optimization problems, where optimizing one objective (e.g. provider-side fairness) may degrade the performance of others (e.g. accuracy). Most of previous studies try to improve two-sided fairness with post-processing algorithms or fairness-aware loss constraints, which are highly dependent on the heuristic adjustments without respect to the optimization goal of accuracy. In contrast, we propose a novel training framework, adaptive weighting  towards two-sided fairness-aware recommendation (named Ada2Fair), which lies in the extension of the accuracy-focused objective to a controllable preference learning loss over the interaction data. Specifically, we adjust the optimization scale of an interaction sample with an adaptive weight generator, and estimate the two-sided fairness-aware weights within model training. During the training process, the recommender is trained with two-sided fairness-aware weights to boost the utility of niche providers and inactive customers in a unified way. Extensive experiments on three public datasets verify the effectiveness of Ada2Fair, which can achieve Pareto improvements in two-sided fairness-aware recommendation. Our code implementation is available at https://anonymous.4open.science/r/Ada2Fair.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article into multiple relevant categories based on its title and abstract. Let me start by reading through the provided information carefully.
 
 The title of the article is &#34;Promoting Two-sided Fairness with Adaptive Weights for Providers and Customers in Recommendation.&#34; From the title, it&#39;s clear that the focus is on recommendation systems, specifically dealing with fairness from both providers&#39; and customers&#39; perspectives. The abstract adds more details: it discusses a novel training framework called Ada2Fair, which adjusts weights adaptively to improve two-sided fairness without compromising accuracy. It mentions multi-objective optimization, adaptive weighting, and improving utility for niche providers and inactive users.
@@ -211,15 +227,11 @@ Putting it all together, I have 12 categories that cover the main aspects of the
 Two-Sided Fairness, Adaptive Algorithms, Multi-Objective Optimization, Recommendation Systems, Provider-Customer Dynamics, Utility Maximization, Two-Sided Marketplaces, Beyond Accuracy, Real-World Applications, Provider Recommendations, Customer-Centric Recommendations, Balanced Optimization</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

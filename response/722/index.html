@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Building recommendation systems for enterprise software has many unique challenges that are different from consumer-facing systems. When applied to different organizations, the data used to power those recommendation systems vary substantially in both quality and quantity due to differences in their operational practices, marketing strategies, and targeted audiences. At Salesforce, as a cloud provider of such a system with data across many different organizations, naturally, it makes sense to pool data from different organizations to build a model that combines all values from different brands. However, multiple issues like how do we make sure a model trained with pooled data can still capture customer specific characteristics, how do we design the system to handle those data responsibly and ethically, i.e., respecting contractual agreements with our clients, legal and compliance requirements, and the privacy of all the consumers. In this proposal, We present a framework that not only utilizes enriched user-level data across organizations, but also boosts business-specific characteristics in generating personal recommendations. We will also walk through key privacy considerations when designing such a system.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article about recommendation systems for enterprise software. Let me start by reading the title and abstract carefully.
 
 The title is &#34;Boosting Local Recommendations With Partially Trained Global Model.&#34; That suggests they&#39;re combining global data with local or organization-specific models to improve recommendations. 
@@ -114,14 +128,14 @@ Putting it all together, I should assign the article to categories that cover it
 Enterprise Recommendations, Cross-Organizational Data Pooling, Privacy Considerations, Model Adaptation, Data Quality and Quantity Variability, Ethical Data Handling, Scalability, Hybrid Recommendation Systems, Multi-Tenant Systems, Personalization at Scale</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -164,9 +178,11 @@ Abstract:
 Building recommendation systems for enterprise software has many unique challenges that are different from consumer-facing systems. When applied to different organizations, the data used to power those recommendation systems vary substantially in both quality and quantity due to differences in their operational practices, marketing strategies, and targeted audiences. At Salesforce, as a cloud provider of such a system with data across many different organizations, naturally, it makes sense to pool data from different organizations to build a model that combines all values from different brands. However, multiple issues like how do we make sure a model trained with pooled data can still capture customer specific characteristics, how do we design the system to handle those data responsibly and ethically, i.e., respecting contractual agreements with our clients, legal and compliance requirements, and the privacy of all the consumers. In this proposal, We present a framework that not only utilizes enriched user-level data across organizations, but also boosts business-specific characteristics in generating personal recommendations. We will also walk through key privacy considerations when designing such a system.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m trying to categorize this research article about recommendation systems for enterprise software. The title is &#34;Boosting Local Recommendations With Partially Trained Global Model&#34; and the abstract talks about challenges faced by enterprise systems compared to consumer ones.
 
 First, looking at the key themes. It mentions building a global model using data from multiple organizations but ensuring that each organization&#39;s specific characteristics are captured. That makes me think about scalability because handling data across many organizations must involve scaling up resources and infrastructure. Also, when dealing with large datasets, computational efficiency is crucial to train models without excessive resource consumption.
@@ -185,15 +201,11 @@ So putting it all together, I&#39;d categorize this article under Scalability, C
 Scalability, Computational Efficiency, Ethical Considerations, System Architecture, Customization, Local Recommendations, Privacy-PreservingRecommendations, Compliance in AI</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

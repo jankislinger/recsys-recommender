@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 We develop a highly scalable and effective contextual bandit approach towards periodical personalized recommendations. The online bootstrapping-based technique provides a principled way for UCB-type exploitation-exploration algorithms, while being able to handle arbitrary sized datasets, well suited to learn the ever evolving user preference drift from streaming data, and essentially parameter-free. We further introduce techniques to handle arbitrary sized feature spaces using feature hashing, leverage existing state-of-art machine learning via learning reduction, and increase cache hits by managing bootstrapped models in memory effectively. The resulted model trains on millions of examples and billions of features within minutes on a single personal computer. It shows persistent performance in both offline and online evaluation. We observe around 10% click through rate (CTR) and conversion lift over a collaborative filtering approach in real-world A/B testing across more than 40 million users on the major Ticketmaster email recommendation product.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I&#39;m looking at this research article titled &#34;A Scalable Approach for Periodical Personalized Recommendations.&#34; The abstract talks about developing a scalable contextual bandit approach for personalized recommendations. Let me break down the key elements here.
 
 First, the title mentions &#34;scalable,&#34; so that&#39;s a big clue. It&#39;s about making recommendations work efficiently even as data grows, which points directly to Scalability. Then, it&#39;s focused on periodical recommendations, meaning it&#39;s dealing with something that changes over time—like user preferences or contextual factors. That fits under Periodical Recommendations.
@@ -101,14 +115,14 @@ Putting this all together, I need to make sure each category is relevant and cov
 Scalability, Contextual Bandits, Periodical Recommendations, Exploitation-Exploration, Feature Hashing, Cache Management, Learning Reduction, Collaborative Filtering, Evaluation Metrics, Real-World Applications, A/B Testing, Email Recommendations, Big Data Processing, High-Dimensional Features</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -151,9 +165,11 @@ Abstract:
 We develop a highly scalable and effective contextual bandit approach towards periodical personalized recommendations. The online bootstrapping-based technique provides a principled way for UCB-type exploitation-exploration algorithms, while being able to handle arbitrary sized datasets, well suited to learn the ever evolving user preference drift from streaming data, and essentially parameter-free. We further introduce techniques to handle arbitrary sized feature spaces using feature hashing, leverage existing state-of-art machine learning via learning reduction, and increase cache hits by managing bootstrapped models in memory effectively. The resulted model trains on millions of examples and billions of features within minutes on a single personal computer. It shows persistent performance in both offline and online evaluation. We observe around 10% click through rate (CTR) and conversion lift over a collaborative filtering approach in real-world A/B testing across more than 40 million users on the major Ticketmaster email recommendation product.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, let&#39;s tackle this categorization task. The user has provided an article about a scalable approach for periodical personalized recommendations using contextual bandits. I need to assign it to multiple relevant categories.
 
 First, I&#39;ll read through the title and abstract carefully. The key points are scalability, contextual bandit (which is a type of multi-armed bandit algorithm), personalized recommendations, handling large datasets, feature spaces with techniques like feature hashing, machine learning via reduction, cache management, performance metrics like CTR and conversion lift, and real-world application at Ticketmaster.
@@ -184,15 +200,11 @@ Wait, that&#39;s more than the example, but each is distinct and relevant. I thi
 Multi-Armed Bandits, Tickets, Personalized Recommendations, Click-Through Rate (CTR), Conversion Lift, Real World Applications, Scalability, Memory Management, Feature Engineering, User Preference Drift</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

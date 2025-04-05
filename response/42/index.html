@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 We propose a novel mechanism to infer topics of interest of individual users in the Twitter microblogging site. We observe that in Twitter, a user generally follows experts on various topics of her interest to acquire authentic information on those topics. We use a methodology based on social annotations (proposed earlier by us) to deduce the topical expertise of popular Twitter users, and then transitively infer the interests of the users who are following them. This methodology of inferring user-interests is a sharp departure from the traditional techniques of inferring interests of a user from the tweets that she posts or receives. The topics of interest inferred by the proposed methodology are found to be much superior than the topics extracted by state-of-the-art techniques such as using topic models (Labeled LDA) on tweets. Based upon the proposed methodology, we build a system Who Likes What, which can infer the interests of millions of Twitter users. To our knowledge, this is the first methodology / system that can infer interests for such large number of Twitter users, which would be particularly beneficial in developing personalized recommendation services over the Twitter platform.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article about inferring user interests on Twitter into multiple relevant categories. Let me start by reading through the title and abstract carefully.
 
 The title is &#34;Inferring User Interests in the Twitter Social Network.&#34; The abstract explains that they&#39;re proposing a new way to figure out what topics individual users are interested in on Twitter. Instead of looking at the tweets the user posts or receives, which is traditional, they use who the user follows. They mention something called social annotations and topical expertise of popular users. They built a system called Who Likes What to infer interests for millions of users, which could help with personalized recommendations.
@@ -119,14 +133,14 @@ That gives 9 categories, which fits within the 8-12 range. Each should help user
 Social Network, Interest Inference, Expertise Inference, User Behavior Analysis, Twitter, Algorithm Comparison, Network Analysis, System Development, Scalability</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -169,9 +183,11 @@ Abstract:
 We propose a novel mechanism to infer topics of interest of individual users in the Twitter microblogging site. We observe that in Twitter, a user generally follows experts on various topics of her interest to acquire authentic information on those topics. We use a methodology based on social annotations (proposed earlier by us) to deduce the topical expertise of popular Twitter users, and then transitively infer the interests of the users who are following them. This methodology of inferring user-interests is a sharp departure from the traditional techniques of inferring interests of a user from the tweets that she posts or receives. The topics of interest inferred by the proposed methodology are found to be much superior than the topics extracted by state-of-the-art techniques such as using topic models (Labeled LDA) on tweets. Based upon the proposed methodology, we build a system Who Likes What, which can infer the interests of millions of Twitter users. To our knowledge, this is the first methodology / system that can infer interests for such large number of Twitter users, which would be particularly beneficial in developing personalized recommendation services over the Twitter platform.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, so I need to categorize this research article titled &#34;Inferring User Interests in the Twitter Social Network.&#34; The abstract talks about a novel method to determine what topics individual users are interested in by looking at whom they follow on Twitter. It mentions using social annotations and inferring interests transitively through following experts. They compare their approach to traditional methods like analyzing tweets, which is different.
 
 First, I&#39;ll break down the key elements from the title and abstract:
@@ -271,15 +287,11 @@ I think this list covers a good range of aspects without being too narrow or too
 These categories are designed to capture the essence of the study, making it easily searchable for researchers and developers interested in recommendation systems, social media analytics, and user-centric design.</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

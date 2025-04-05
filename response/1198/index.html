@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 The large language model (LLM) based recommendation system is effective for sequential recommendation, because general knowledge of popular items is included in the LLM. To add domain knowledge of items, the conventional method uses a knowledge prompt obtained from the item knowledge graphs and has achieved SOTA performance. However, for personalized recommendation, it is necessary to consider user knowledge, which the conventional method does not fully consider because user knowledge is not included in the item knowledge graphs; thus, we propose a user knowledge prompt, which converts a user knowledge graph into a prompt using the relationship template. The existing prompt denoising framework is extended to prevent hallucination caused by undesirable interactions between knowledge graph prompts. We propose user knowledge prompts of user traits and user preferences and associate relevant items. Experiments on three types of dataset (movie, music, and book) show the significant and consistent improvement of our proposed user knowledge prompt.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m trying to categorize this research article about a user knowledge prompt for sequential recommendation. The title is &#34;User knowledge prompt for sequential recommendation,&#34; and the abstract talks about using large language models (LLMs) in recommendation systems. They mention that LLMs are effective because they include general knowledge of popular items. But the conventional method uses a knowledge prompt from item knowledge graphs, which doesn&#39;t fully consider user knowledge.
 
 The authors propose adding a user knowledge prompt by converting user traits and preferences into prompts using relationship templates. They also extend an existing prompt denoising framework to prevent hallucination issues between the prompts. Their experiments show significant improvement across movie, music, and book datasets.
@@ -138,15 +152,11 @@ I think this covers all relevant aspects: the algorithm family, problem domain, 
 Large Language Models (LLMs), Knowledge Graphs, Sequential Recommendations, Personalized Recommendation, Prompt Engineering, Movies, Music, Books, User Modeling, Empirical Evaluation, Prompt Denoising</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

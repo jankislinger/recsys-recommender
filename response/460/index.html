@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Maximizing sales and revenue is an important goal of online commercial retailers. Recommender systems are designed to maximize users’ click or purchase probability, but often disregard users’ eventual satisfaction with purchased items. As result, such systems promote items with high appeal at the selling stage (e.g. an eye-catching presentation) over items that would yield more satisfaction to users in the long run. This work presents a novel unified model that considers both goals and can be tuned to balance between them according to the needs of the business scenario. We propose a multi-task probabilistic matrix factorization model with a dual task objective: predicting binary purchase/no purchase variables combined with predicting continuous satisfaction scores. Model parameters are optimized using Variational Bayes which allows learning a posterior distribution over model parameters. This model allows making predictions that balance the two goals of  maximizing the probability for an immediate purchase and maximizing user satisfaction and engagement down the line. These goals lie at the heart of most commercial recommendation scenario and enabling their balance has the potential to improve value for millions of users worldwide. Finally, we present experimental evaluation on different types of consumer retail datasets that demonstrate the benefits of the model over popular baselines on a number of well-known ranking metrics.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article into multiple relevant categories based on its content and themes. Let me start by reading through the title and abstract carefully.
 
 The title is &#34;When Actions Speak Louder than Clicks: A Combined Model of Purchase Probability and Long-term Customer Satisfaction.&#34; The abstract talks about maximizing sales and revenue for online retailers, using recommender systems that not only focus on click or purchase probability but also consider long-term customer satisfaction. They mention a unified model combining purchase probability with satisfaction scores, using a multi-task probabilistic matrix factorization approach optimized with Variational Bayes. They evaluated it on consumer retail datasets and compared it to popular baselines.
@@ -128,15 +142,11 @@ Now it&#39;s ten categories, which is appropriate.
 Recommender Systems, Purchase Probability, Customer Satisfaction, Matrix Factorization, Commerce, Consumer Retail, Multi-Task Learning, Evaluation Metrics, Real World Applications, Dual Objective, Beyond Accuracy</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

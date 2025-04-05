@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Modern music streaming services are heavily based on recommen- dation engines to serve continuous content to users. Sequential recommendation—continuously providing new items within a sin- gle session in a contextually coherent manner—has been an emerg- ing topic in current literature. User feedback—a positive or negative response to the item presented—is used to drive content recom- mendations by learning user preferences. We extend this idea to the session-based recommendation domain to improve learning of context-coherent music recommendations by modelling negative user feedback, i.e., skips, in the loss function. To this end, we propose a sequence-aware contrastive sub-task to structure item embeddings in session-based music recommen- dation, such that true next-positive items (ignoring skipped items) are structured closer in the embedding space, while skipped tracks are structured farther away from all items in the session. Since this causes skipped item embeddings in a session to be farther than unskipped items in the learned space, this directly affects item rankings using a K-nearest-neighbors search for next-item recom- mendations, while also promoting the rank of the true next item. Experiments incorporating this task into SoTA methods for sequen- tial item recommendation show consistent performance gains in terms of next-item hit rate, item ranking, and skip down-ranking on three music recommendation datasets, strongly benefiting from increasing presence of user feedback.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I need to categorize the given research article into multiple relevant categories based on its title and abstract. Let me read through it carefully.
 
 The title is &#34;Enhancing Sequential Music Recommendation with Negative Feedback-informed Contrastive Learning.&#34; So, it&#39;s about music recommendations, specifically sequential ones, which means recommending items in a sequence during a user session. They&#39;re using negative feedback—in this case, skips—as part of their model.
@@ -108,14 +122,14 @@ I think these cover the main aspects: the type of recommendation (music and sequ
 Recommendation Systems, Music Recommendation, Sequential Recommendations, Negative Feedback, Contrastive Learning, User Feedback, Session-Based Recommendation, Evaluation Metrics, Embeddings, Music Streaming Services</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -158,9 +172,11 @@ Abstract:
 Modern music streaming services are heavily based on recommen- dation engines to serve continuous content to users. Sequential recommendation—continuously providing new items within a sin- gle session in a contextually coherent manner—has been an emerg- ing topic in current literature. User feedback—a positive or negative response to the item presented—is used to drive content recom- mendations by learning user preferences. We extend this idea to the session-based recommendation domain to improve learning of context-coherent music recommendations by modelling negative user feedback, i.e., skips, in the loss function. To this end, we propose a sequence-aware contrastive sub-task to structure item embeddings in session-based music recommen- dation, such that true next-positive items (ignoring skipped items) are structured closer in the embedding space, while skipped tracks are structured farther away from all items in the session. Since this causes skipped item embeddings in a session to be farther than unskipped items in the learned space, this directly affects item rankings using a K-nearest-neighbors search for next-item recom- mendations, while also promoting the rank of the true next item. Experiments incorporating this task into SoTA methods for sequen- tial item recommendation show consistent performance gains in terms of next-item hit rate, item ranking, and skip down-ranking on three music recommendation datasets, strongly benefiting from increasing presence of user feedback.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article based on its title and abstract. The article is about enhancing sequential music recommendations using negative feedback-informed contrastive learning. 
 
 First, looking at the title, it mentions &#34;sequential music recommendation,&#34; so that&#39;s definitely one category. Negative feedback is part of their approach, so I&#39;ll include Negative Feedback.
@@ -179,15 +195,11 @@ I should make sure each category is relevant and avoid too many or too few. Let 
 Sequential Music Recommendation, Negative Feedback, Contrastive Learning, Sequence Models, Music Streaming, Recommendation Systems, Nearest Neighbors, Real-World Applications</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

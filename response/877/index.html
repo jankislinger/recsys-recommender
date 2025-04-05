@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Since Knowledge Graphs (KGs) contain rich semantic information, recently there has been an influx of KG-enhanced recommendation methods. Most of existing methods are entirely designed based on euclidean space without considering curvature. However, recent studies have revealed that a tremendous graph-structured data exhibits highly non-euclidean properties. Motivated by these observations, in this work, we propose a knowledge-based multiple adaptive spaces fusion method for recommendation, namely MCKG. Unlike existing methods that solely adopt a specific manifold, we introduce the unified space that is compatible with hyperbolic, euclidean and spherical spaces. Furthermore, we fuse the multiple unified spaces in an attention manner to obtain the high-quality embeddings for better knowledge propagation. In addition, we propose a geometry-aware optimization strategy which enables the pull and push processes benefited from both hyperbolic and spherical spaces. Specifically, in hyperbolic space, we set smaller margins in the area near to the origin, which is conducive to distinguishing between highly similar positive items and negative ones. At the same time, we set larger margins in the area far from the origin to ensure the model has sufficient error tolerance. The similar manner also applies to spherical spaces. Extensive experiments on three real-world datasets demonstrate that the MCKG has a significant improvement over state-of-the-art recommendation methods. Further ablation experiments verify the importance of multi-space fusion and geometry-aware optimization strategy, justifying the rationality and effectiveness of MCKG.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I&#39;m trying to categorize this research article titled &#34;Knowledge- based Multiple Adaptive Spaces Fusion for Recommendation.&#34; The goal is to assign it to multiple relevant categories so that users can easily find it in a navigable interface.
 
 First, I&#39;ll look at the title and abstract to understand the core themes. The article discusses knowledge graphs (KGs) being used in recommendation methods. It mentions that most existing methods use Euclidean space but have started exploring non-Euclidean properties because many graph-structured data isn&#39;t suited for Euclidean geometry.
@@ -149,15 +163,11 @@ I think these cover the main aspects of the article without being too specific o
 Knowledge Graphs, Recommendation Systems, Hyperbolic Space, Spherical Space, Multi-Space Fusion, Geometry-Aware Optimization, Embedding Techniques, Attention Mechanism, Non-Euclidean Geometry</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

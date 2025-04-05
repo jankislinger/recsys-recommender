@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Automatic expert assignment is a common problem encountered in both industry and academia. For example, for conference program chairs and journal editors, in order to collect “good” judgments for a paper, it is necessary for them to assign the paper to the most appropriate reviewers. Choosing appropriate reviewers of course includes a number of considerations such as expertise and authority, but also diversity and avoiding conflicts. In this paper, we explore the expert retrieval problem and implement an automatic paper-reviewer recommendation system that considers aspects of expertise, authority, and diversity. In particular, a graph is first constructed on the possible reviewers and the query paper, incorporating expertise and authority information. Then a Random Walk with Restart (RWR) model is employed on the graph with a sparsity constraint, incorporating diversity information. Extensive experiments on two reviewer recommendation benchmark datasets show that the proposed method obtains performance gains over the state-of-the-art reviewer recommendation systems in terms of expertise, authority, diversity, and, most importantly, relevance as judged by human experts.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article into multiple relevant categories based on its title and abstract. The title is &#34;A Robust Model for Paper-Reviewer Assignment,&#34; which immediately tells me it&#39;s about recommendation systems, specifically in the context of academic paper reviews.
 
 Looking at the abstract, the main focus is on developing an automatic system that assigns papers to reviewers. It mentions factors like expertise, authority, diversity, and avoiding conflicts. The methodology involves constructing a graph with expertise and authority information and using a Random Walk with Restart (RWR) model with a sparsity constraint for diversity.
@@ -116,14 +130,14 @@ I think these categories cover the main aspects of the article without overlappi
 Recommendation Systems, Reviewer Recommendation, Graph-Based Methods, Machine Learning, Random Walk with Restart (RWR), Expertise, Authority, Diversity, Relevance, Academic Context, Assignment Problem, Fairness</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -166,9 +180,11 @@ Abstract:
 Automatic expert assignment is a common problem encountered in both industry and academia. For example, for conference program chairs and journal editors, in order to collect “good” judgments for a paper, it is necessary for them to assign the paper to the most appropriate reviewers. Choosing appropriate reviewers of course includes a number of considerations such as expertise and authority, but also diversity and avoiding conflicts. In this paper, we explore the expert retrieval problem and implement an automatic paper-reviewer recommendation system that considers aspects of expertise, authority, and diversity. In particular, a graph is first constructed on the possible reviewers and the query paper, incorporating expertise and authority information. Then a Random Walk with Restart (RWR) model is employed on the graph with a sparsity constraint, incorporating diversity information. Extensive experiments on two reviewer recommendation benchmark datasets show that the proposed method obtains performance gains over the state-of-the-art reviewer recommendation systems in terms of expertise, authority, diversity, and, most importantly, relevance as judged by human experts.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article titled &#34;A Robust Model for Paper-Reviewer Assignment.&#34; Let me start by reading through the title and abstract carefully.
 
 The article is about automatically assigning reviewers to papers, which is a common issue in both industry and academia. The problem involves conference program chairs or journal editors trying to assign the right reviewers to ensure good judgments on papers. The key considerations mentioned are expertise, authority, diversity, and avoiding conflicts. 
@@ -318,15 +334,11 @@ The categories for the given paper are determined by analyzing its themes and me
 8. Model Testing</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

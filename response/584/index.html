@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:70b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:70b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 With tremendous amount of recommendation algorithms proposed every year, one critical issue has attracted a considerable amount of attention: there are no effective benchmarks for evaluation, which leads to two major concerns, i.e., unreproducible evaluation and unfair comparison. This paper aims to conduct rigorous (i.e., reproducible and fair) evaluation for implicit-feedback based top-N recommendation algorithms. We first systematically review 85 recommendation papers published at eight top-tier conferences (e.g., RecSys, SIGIR) to summarize important evaluation factors, e.g., data splitting and parameter tuning strategies, etc. Through a holistic empirical study, the impacts of different factors on recommendation performance are then analyzed in-depth. Following that, we create benchmarks with standardized procedures and provide the performance of seven well-tuned state-of-the-arts across six metrics on six widely-used datasets as a reference for later study. Additionally, we release a user-friendly Python toolkit, which differs from existing ones in addressing the broad scope of rigorous evaluation for recommendation. Overall, our work sheds light on the issues in recommendation evaluation and lays the foundation for further investigation. Our code and datasets are available at GitHub (https://github.com/AmazingDD/daisyRec).
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, so I&#39;ve got this article to categorize. Let&#39;s break down what it&#39;s about.
 
 The title is &#34;Are We Evaluating Rigorously? Benchmarking Recommendation for Reproducible Evaluation and Fair Comparison.&#34; That immediately tells me the focus is on evaluation methods in recommendation systems. The abstract mentions that there&#39;s a lack of effective benchmarks, leading to issues with reproducibility and fair comparisons. 
@@ -107,14 +121,14 @@ I think that covers 12 categories, each relevant to the paper&#39;s content.
 Recommender Systems, Methodology, Reproducibility in Science, Benchmarking, Evaluation Protocols, Implicit Feedback, Fairness in AI, Performance Metrics, Reproducible Research, Open Source Tools, Literature Review, RecSys, SIGIR, Research Methodology</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -157,9 +171,11 @@ Abstract:
 With tremendous amount of recommendation algorithms proposed every year, one critical issue has attracted a considerable amount of attention: there are no effective benchmarks for evaluation, which leads to two major concerns, i.e., unreproducible evaluation and unfair comparison. This paper aims to conduct rigorous (i.e., reproducible and fair) evaluation for implicit-feedback based top-N recommendation algorithms. We first systematically review 85 recommendation papers published at eight top-tier conferences (e.g., RecSys, SIGIR) to summarize important evaluation factors, e.g., data splitting and parameter tuning strategies, etc. Through a holistic empirical study, the impacts of different factors on recommendation performance are then analyzed in-depth. Following that, we create benchmarks with standardized procedures and provide the performance of seven well-tuned state-of-the-arts across six metrics on six widely-used datasets as a reference for later study. Additionally, we release a user-friendly Python toolkit, which differs from existing ones in addressing the broad scope of rigorous evaluation for recommendation. Overall, our work sheds light on the issues in recommendation evaluation and lays the foundation for further investigation. Our code and datasets are available at GitHub (https://github.com/AmazingDD/daisyRec).
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article into multiple relevant categories based on the guidelines provided. Let me start by reading through the title and abstract carefully.
 
 The title is &#34;Are We Evaluating Rigorously? Benchmarking Recommendation for Reproducible Evaluation and Fair Comparison.&#34; The abstract mentions that they&#39;re focusing on implicit-feedback recommendation algorithms, discussing issues with evaluation benchmarks leading to unreproducible results and unfair comparisons. They review 85 papers, analyze evaluation factors like data splitting and parameter tuning, create standardized benchmarks, and provide a Python toolkit for others.
@@ -193,15 +209,11 @@ I think these cover all the key aspects without being too specific or broad. The
 Evaluation Practices, Benchmarking, Implicit Feedback, Reproducibility, Fair Comparison, Recommendation Systems, Academic Context, Evaluation Metrics, Tools &amp; Frameworks, Data Splitting Strategies, Parameter Tuning, Future Work Implications</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

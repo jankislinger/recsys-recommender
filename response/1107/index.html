@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 In recent decades, recommender systems have undergone significant advancements, particularly in popular domains like movies, music, and product recommendations. Yet, progress has been notably slower in leveraging these systems for personal information management and knowledge assistance. In addition to challenges that complicate the adoption of recommender systems in this domain (such as privacy concerns, heterogeneous recommendation items, and frequent context switching), a significant barrier to progress in this area has been the absence of a standardized benchmark for researchers to evaluate their approaches. In response to this gap, this paper presents a benchmark built upon a publicly available dataset of real-life knowledge work in context (RLKWiC). This benchmark focuses on evaluating context-based entity recommendation, a use case for leveraging recommender systems to support knowledge workers in their daily digital tasks. By providing this benchmark, it is aimed to facilitate and accelerate research efforts in enhancing personal knowledge assistance through recommender systems.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I&#39;m trying to categorize this research article about context-based entity recommendation for knowledge workers. The title mentions establishing a benchmark using real-life data, which immediately tells me that the categories should include something related to benchmarks or evaluation.
 
 Looking at the abstract, it talks about recommender systems being advanced in domains like movies and music but lagging in personal information management and knowledge assistance. So I&#39;ll need categories for Recommender Systems, Knowledge Management, and Information Management. The mention of real-life data suggests that Real-world Applications is another important category.
@@ -99,14 +113,14 @@ Putting this all together, I need to make sure each article is assigned multiple
 Recommender Systems, Knowledge Management, Information Management, Real-world Applications, Privacy, Heterogeneous Data, Context-based Recommendations, Benchmarking, Evaluation Metrics, Dataset Development, Workflows, User Behavior, Personalization, Knowledge Workers</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -149,9 +163,11 @@ Abstract:
 In recent decades, recommender systems have undergone significant advancements, particularly in popular domains like movies, music, and product recommendations. Yet, progress has been notably slower in leveraging these systems for personal information management and knowledge assistance. In addition to challenges that complicate the adoption of recommender systems in this domain (such as privacy concerns, heterogeneous recommendation items, and frequent context switching), a significant barrier to progress in this area has been the absence of a standardized benchmark for researchers to evaluate their approaches. In response to this gap, this paper presents a benchmark built upon a publicly available dataset of real-life knowledge work in context (RLKWiC). This benchmark focuses on evaluating context-based entity recommendation, a use case for leveraging recommender systems to support knowledge workers in their daily digital tasks. By providing this benchmark, it is aimed to facilitate and accelerate research efforts in enhancing personal knowledge assistance through recommender systems.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, I&#39;m trying to categorize this research article about context-based entity recommendations for knowledge workers. The title mentions establishing a benchmark using real-life data, so that&#39;s a clue.
 
 First, the paper addresses recommendation systems specifically for knowledge workers, which are people who manage and process information as part of their jobs. So the domain here is personal information management or knowledge assistance.
@@ -176,15 +192,11 @@ So putting it all together, the categories would cover the specific use case, ev
 Benchmarking, Context-Aware Recommendations, Entity Recommendations, Evaluation Frameworks, Real-World Applications, User-Centered Design, Standardization, Knowledge Workflows, Research Acceleration</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

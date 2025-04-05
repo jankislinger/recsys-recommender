@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Users of ecommerce portals commonly use customer reviews for making purchase decisions. Many products contain tens or hundreds of reviews which makes it impossible for the customer to read all of them in order to get a good idea about the product. A review recommendation system that can recommend a subset of the reviews is thus useful for e-commerce websites. However customer reviews are of varied quality and different reviews cover different aspects or issues about the product. We follow previous work that maintain the statistical distribution of product aspects along with their associated sentiments of the entire review set for that particular product. However we address the challenge which arises due to the fact that similar aspects are mentioned in different reviews using different natural language expressions (e.g. camera, photo and picture refers to the same product aspect of camera). We use vector representations to identify mentions of similar aspects and group them together under single product aspect. Review helpfulness score may act as a proxy for quality of reviews, but this approach suffers from cold start problem as new reviews do not have any helpfulness score. We measure the quality of the review based on its content by doing supervised training using a convolutional neural network. Though  our neural network model is trained with reviews from Amazon dataset which have helpfulness score, our model can be used to predict the quality score of new reviews which do not have any helpfulness score. The recommended subset of reviews have high content score and the coverage of the product aspects, issues and sentiments are representative of the entire review set. The system is evaluated on datasets from Amazon and is found to be more useful than the competing methods.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article about recommending high-quality representative reviews in e-commerce. Let me start by reading through the title and abstract carefully.
 
 The title mentions &#34;Recommendation of High Quality Representative Reviews,&#34; which immediately tells me it&#39;s related to recommendation systems, specifically within e-commerce. The focus is on customer reviews that help users make purchase decisions. So, categories like &#34;Recommendation Systems&#34; and &#34;E-Commerce&#34; definitely fit here.
@@ -103,14 +117,14 @@ Putting this all together, the categories should reflect both the technical meth
 Recommendation Systems, E-Commerce, Review Quality, Natural Language Processing (NLP), Product Aspects, Cold Start, Machine Learning, Sentiment Analysis, Neural Networks, Information Overload, Real-World Applications, Diversity of Recommendations, Evaluation Metrics</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -153,9 +167,11 @@ Abstract:
 Users of ecommerce portals commonly use customer reviews for making purchase decisions. Many products contain tens or hundreds of reviews which makes it impossible for the customer to read all of them in order to get a good idea about the product. A review recommendation system that can recommend a subset of the reviews is thus useful for e-commerce websites. However customer reviews are of varied quality and different reviews cover different aspects or issues about the product. We follow previous work that maintain the statistical distribution of product aspects along with their associated sentiments of the entire review set for that particular product. However we address the challenge which arises due to the fact that similar aspects are mentioned in different reviews using different natural language expressions (e.g. camera, photo and picture refers to the same product aspect of camera). We use vector representations to identify mentions of similar aspects and group them together under single product aspect. Review helpfulness score may act as a proxy for quality of reviews, but this approach suffers from cold start problem as new reviews do not have any helpfulness score. We measure the quality of the review based on its content by doing supervised training using a convolutional neural network. Though  our neural network model is trained with reviews from Amazon dataset which have helpfulness score, our model can be used to predict the quality score of new reviews which do not have any helpfulness score. The recommended subset of reviews have high content score and the coverage of the product aspects, issues and sentiments are representative of the entire review set. The system is evaluated on datasets from Amazon and is found to be more useful than the competing methods.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, let&#39;s tackle this categorization task step by step. I&#39;ve got an article titled &#34;Recommendation of High Quality Representative Reviews in e-commerce&#34; with a detailed abstract. My goal is to assign it to 8-12 relevant categories based on the guidelines provided.
 
 First, I&#39;ll read through the abstract carefully to understand the main themes and focus areas of the article. It&#39;s about improving how e-commerce platforms recommend reviews to users. The key issues addressed include the overwhelming number of reviews, varying review quality, different aspects covered in reviews, and the cold start problem for new reviews.
@@ -183,15 +199,11 @@ I need to ensure each category is clear and relevant, avoiding overcrowding any 
 E-commerce, Review Recommendation, Aspect-Based Sentiment Analysis, Cold Start Problem, Neural Networks, User Experience, Product Feedback, Evaluation Metrics, Implicit Feedback, Content-Based Filtering, Scalability, Representation Learning</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 News articles usually contain knowledge entities such as celebrities or organizations. Important entities in articles carry key messages and help to understand the content in a more direct way. An industrial news recommender system contains various key applications, such as personalized recommendation, item-to-item recommendation, news category classification, news popularity prediction and local news detection. We find that incorporating knowledge entities for better document understanding benefits these applications consistently. However, existing document understanding models either represent news articles without considering knowledge entities (e.g., BERT) or rely on a specific type of text encoding model (e.g., DKN) so that the generalization ability and efficiency is compromised. In this paper, we propose KRED, which is a fast and effective model to enhance arbitrary document representation with a knowledge graph. KRED first enriches entities’ embeddings by attentively aggregating information from their neighborhood in the knowledge graph. Then a context embedding layer is applied to annotate the dynamic context of different entities such as frequency, category and position. Finally, an information distillation layer aggregates the entity embeddings under the guidance of the original document representation and transforms the document vector into a new one. We advocate to optimize the model with a multi-task framework, so that different news recommendation applications can be united and useful information can be shared across different tasks. Experiments on a real-world Microsoft News dataset demonstrate that KRED greatly benefits a variety of news recommendation applications.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, let&#39;s tackle this categorization task for the article titled &#34;KRED: Knowledge-Aware Document Representation for News Recommendations.&#34; The goal is to assign it to multiple relevant categories based on its content and ensure that users can easily discover it through these categories.
 
 First, I&#39;ll read the title and abstract carefully. The title mentions &#34;Knowledge-Aware Document Representation,&#34; which immediately tells me this article is about improving how documents (in this case, news articles) are represented by incorporating knowledge entities. So, one category could be &#34;Document Representation.&#34;
@@ -113,15 +127,11 @@ After considering all these points, I think the selected categories cover the ma
 Knowledge-Aware Recommendation, Document Representation, News Recommendation, Knowledge Graphs, Multi-Task Learning, Personalization, Entity Representation, Multi-Task Framework, Applied Machine Learning, End-to-End Learning, Component-Based Systems</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

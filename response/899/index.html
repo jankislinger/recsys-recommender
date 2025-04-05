@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 The sequential recommendation task aims to predict the item that user is interested in according to his/her historical action sequence. However, inevitable random action, i.e. user randomly accesses an item among multiple candidates or clicks several items at random order, cause the sequence fails to provide stable and high-quality signals. To alleviate the issue, we propose the StatisTics-Driven Pre-traing framework (called STDP briefly). The main idea of the work lies in the exploration of utilizing the statistics information along with the pre-training paradigm to stabilize the optimization of recommendation model. Specifically, we derive two types of statistical information: item co-occurrence across sequence and attribute frequency within the sequence. And we design the following pre-training tasks: 1) The co-occurred items prediction task, which encourages the model to distribute its attention on multiple suitable targets instead of just focusing on the next item that may be unstable. 2) We generate a paired sequence by replacing items with their co-occurred items and enforce its representation close with the original one, thus enhancing the model’s robustness to the random noise. 3) To reduce the impact of random on user’s long-term preferences, we encourage the model to capture sequence-level frequent attributes. The significant improvement over six datasets demonstrates the effectiveness and superiority of the proposal, and further analysis verified the generalization of the STDP framework on other models.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I need to categorize this research article based on its title and abstract into multiple relevant categories as per the given guidelines. Let me start by reading through the provided information carefully.
 
 The title is &#34;Beyond the Sequence: Statistics-Driven Pre-Training for Stabilizing Sequential Recommendation Model.&#34; This suggests that the article focuses on improving sequential recommendation models using statistics-driven pre-training methods. The abstract elaborates on this, explaining that random user actions can destabilize sequence signals in recommendations and introduces a framework called STDP to address this issue.
@@ -103,14 +117,14 @@ To summarize, the key aspects I identified include sequential recommendations, p
 Sequential Recommendations, Pre-Training Methods, Recommendation Quality, User Behavior Analysis, Co-Occurrence Analysis, Random Action Mitigation, Statistical Information Utilization, Model Robustness, Attribute Frequency Analysis, Machine Learning, Recommender Systems, User Preferences</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -153,9 +167,11 @@ Abstract:
 The sequential recommendation task aims to predict the item that user is interested in according to his/her historical action sequence. However, inevitable random action, i.e. user randomly accesses an item among multiple candidates or clicks several items at random order, cause the sequence fails to provide stable and high-quality signals. To alleviate the issue, we propose the StatisTics-Driven Pre-traing framework (called STDP briefly). The main idea of the work lies in the exploration of utilizing the statistics information along with the pre-training paradigm to stabilize the optimization of recommendation model. Specifically, we derive two types of statistical information: item co-occurrence across sequence and attribute frequency within the sequence. And we design the following pre-training tasks: 1) The co-occurred items prediction task, which encourages the model to distribute its attention on multiple suitable targets instead of just focusing on the next item that may be unstable. 2) We generate a paired sequence by replacing items with their co-occurred items and enforce its representation close with the original one, thus enhancing the model’s robustness to the random noise. 3) To reduce the impact of random on user’s long-term preferences, we encourage the model to capture sequence-level frequent attributes. The significant improvement over six datasets demonstrates the effectiveness and superiority of the proposal, and further analysis verified the generalization of the STDP framework on other models.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, let me try to figure out how to categorize this research article based on its title and abstract. 
 
 The title is &#34;Beyond the Sequence: Statistics-driven Pre-training for Stabilizing Sequential Recommendation Model.&#34; So it&#39;s about recommendation systems, specifically sequential ones where the order of user actions matters. The main issue they&#39;re addressing is random actions or noise in the sequences, which affects the model&#39;s stability.
@@ -177,15 +193,11 @@ I think these categories cover the main aspects without being too specific or to
 Sequential Recommendation, Pre-training, Statistics, Robustness, Recommendation Systems, Model Stabilization</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Online social networks have become predominant in recent years and have grown to encompass massive scales of data. In addition to data scale, these networks can be heterogeneous and contain complex structures between different users, between social entities and various interactions between users and social entities. This is especially true in enterprise social networks where hierarchies explicitly exist between employees as well. In such networks, producing the best recommendations for each user is a very challenging problem for two main reasons. First, the complex structures in the social network need to be properly mined and exploited by the algorithm. Second, these networks contain millions or even billions of edges making the problem very difficult computationally. In this paper we present Guided Walk, a supervised graph based algorithm that learns the significance of different network links for each user and then produces entity recommendations based on this learning phase. We compare the algorithm with a set of baseline algorithms using offline evaluation techniques as well as a user survey. The offline results show that the algorithm outperforms the next best algorithm by a factor of 3.6. The user survey further confirms that the recommendation are not only relevant but also rank high in terms of personal relevance for each user. To deal with large scale social networks, the Guided Walk algorithm is formulated as a Pregel program which allows us to utilize the power of distributed parallel computing. This would allow horizontally scaling the algorithm for larger social networks by simply adding more compute nodes to the cluster.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, I&#39;m trying to categorize this research article about the Guided Walk recommendation algorithm. Let&#39;s break it down step by step.
 
 First, looking at the title: &#34;Guided Walk: A Scalable Recommendation Algorithm for Complex Heterogeneous Social Networks.&#34; Okay, so it&#39;s about a recommendation algorithm specifically designed for social networks that are complex and heterogeneous. That tells me right away some key categories might include Social Networks, Recommendation Systems, and Scalability.
@@ -113,15 +127,11 @@ I think these cover the main points without being too specific or overlapping to
 Social Networks, Recommendation Systems, Scalability, Graph-Based Algorithms, Enterprise Social Networks, Offline Evaluation Techniques, User Surveys, Personalization, Distributed Computing</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

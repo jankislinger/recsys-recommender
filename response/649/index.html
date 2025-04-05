@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 The recommendation-accuracy of collaborative filtering approaches is typically improved when taking into account higher-order interactions [5, 6, 9, 10, 11, 16, 18, 24, 25, 28, 31, 34, 36, 41, 42, 44]. While deep nonlinear models are theoretically able to learn higher-order interactions, their capabilities were, however, found to be quite limited in practice [5]. Moreover, the use of low-dimensional embeddings in deep networks may severely limit their expressiveness [8]. This motivated us in this paper to explore a simple extension of linear full-rank models that allow for higher-order interactions as additional explicit input-features. Interestingly, we observed that this model-class obtained by far the best ranking accuracies on the largest data set in our experiments, while it was still competitive with various state-of-the-art deep-learning models on the smaller data sets. Moreover, our approach can also be interpreted as a simple yet effective improvement of the (linear) HOSLIM [11] model: by simply removing the constraint that the learned higher-order interactions have to be non-negative, we observed that the accuracy-gains due to higher-order interactions more than doubled in our experiments. The reason for this large improvement was that large positive higher-order interactions (as used in HOSLIM [11]) are relatively infrequent compared to the number of large negative higher-order interactions in the three well-known data-sets used in our experiments. We further characterize the circumstances where the higher-order interactions provide the most significant improvements.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, let&#39;s tackle this categorization task. The article is about improving collaborative filtering by considering negative interactions and using higher-order interactions without the non-negativity constraint. 
 
 First, I&#39;ll look at the title: &#34;Negative Interactions for Improved Collaborative-Filtering: Don’t go Deeper, go Higher.&#34; This suggests that negative interactions are a key focus and that higher-order interactions are being utilized instead of deeper models.
@@ -101,15 +115,11 @@ Putting it all together: Collaborative Filtering, Higher-Order Interactions, Neg
 Collaborative Filtering, Higher-Order Interactions, Negative Interactions, Deep Learning, Recommendation Accuracy, Real-world Applications, HOSLIM, Beyond Accuracy, Explicit Features, Model Improvements</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

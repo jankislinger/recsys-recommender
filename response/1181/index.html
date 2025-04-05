@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 In the realm of online advertising, accurately predicting the conversion rates (CVR) is crucial for enhancing advertising efficiency and user satisfaction. However, it faces the challenge that due to user privacy choices and advertiser requirements, the advertising platform cannot get the conversion data from some advertisers, making accurate CVR predictions difficult. Although current methods like split learning or vertical federated learning do not share label information directly, they still exchange sample-level gradients, which introduces a privacy risk as adversaries might infer label information through the shared gradients. To address these challenges, our proposed model training framework incorporates several innovative techniques. Firstly, we employ batch-level aggregated gradients instead of sample-level gradients to enhance privacy. Secondly, to minimize communication costs, we utilize adapter-based parameter-efficient fine-tuning methods such as Low-Rank Adaptation (LoRA) and gradient compression in conversion models. These methods allow for efficient collaboration between different parties while reducing the amount of data transferred. Lastly, we incorporate label differential privacy to protect model privacy. Given that this privacy protection alters the data distribution and can result in significant calibration error, we propose a de-biasing technique to ensure accurate model predictions even with perturbed label information. Our experimental results on industrial datasets demonstrate that our method achieves competitive performance while significantly reducing the communication overhead and complying with advertisers’ privacy requirements and user privacy choice. This framework establishes a new benchmark for privacy-preserving and high-performance CVR prediction in the digital advertising industry.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Alright, let&#39;s tackle this categorization task step by step. The article is about &#34;Privacy Preserving Conversion Modeling in Data Clean Room.&#34; I need to assign it to multiple relevant categories based on its content.
 
 First, looking at the title and abstract, the main focus is on privacy-preserving techniques applied to conversion rate (CVR) prediction in online advertising. The authors address challenges with user privacy and advertiser requirements where conversion data isn&#39;t always accessible.
@@ -113,14 +127,14 @@ In summary, by analyzing each component of the article—privacy techniques, mac
 Privacy Preservation, Conversion Rate Prediction, Online Advertising, Machine Learning, Federated Learning, Differential Privacy, Optimization Methods, Data Sharing Challenges, Low-Rank Adaptation (LoRA), Gradient Compression, Advertising Technology, Real-World Applications</code></pre>
       </div>
     </div>
-
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:14b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:14b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -163,9 +177,11 @@ Abstract:
 In the realm of online advertising, accurately predicting the conversion rates (CVR) is crucial for enhancing advertising efficiency and user satisfaction. However, it faces the challenge that due to user privacy choices and advertiser requirements, the advertising platform cannot get the conversion data from some advertisers, making accurate CVR predictions difficult. Although current methods like split learning or vertical federated learning do not share label information directly, they still exchange sample-level gradients, which introduces a privacy risk as adversaries might infer label information through the shared gradients. To address these challenges, our proposed model training framework incorporates several innovative techniques. Firstly, we employ batch-level aggregated gradients instead of sample-level gradients to enhance privacy. Secondly, to minimize communication costs, we utilize adapter-based parameter-efficient fine-tuning methods such as Low-Rank Adaptation (LoRA) and gradient compression in conversion models. These methods allow for efficient collaboration between different parties while reducing the amount of data transferred. Lastly, we incorporate label differential privacy to protect model privacy. Given that this privacy protection alters the data distribution and can result in significant calibration error, we propose a de-biasing technique to ensure accurate model predictions even with perturbed label information. Our experimental results on industrial datasets demonstrate that our method achieves competitive performance while significantly reducing the communication overhead and complying with advertisers’ privacy requirements and user privacy choice. This framework establishes a new benchmark for privacy-preserving and high-performance CVR prediction in the digital advertising industry.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article titled &#34;Privacy Preserving Conversion Modeling in Data Clean Room.&#34; Let me start by reading through the abstract to understand what it&#39;s about.
 
 The article talks about predicting conversion rates (CVR) in online advertising. The challenge is that some advertisers don&#39;t share their conversion data due to privacy concerns, making accurate predictions tough. Current methods like split learning or vertical federated learning still exchange sample-level gradients, which can pose privacy risks since adversaries might infer labels from these gradients.
@@ -206,15 +222,11 @@ I think that covers the main points. Each category should be relevant and descri
 Split Learning, Vertical Federated Learning, LoRA (Low-Rank Adaptation), Differential Privacy, Online Advertising, Label Differential Privacy, Model Privacy, A/B Test, Gradient Compression</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 

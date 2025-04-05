@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecSys Articles</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/recsys-recommender/static/custom.css">
   <link rel="shortcut icon" href="/recsys-recommender/static/favicon.svg">
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<div class="ui menu container">
-  <div class="header item">
-    RecSys Recommender
+  <!-- Navigation -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between bg-white p-4 rounded shadow">
+      <div class="text-xl font-bold">
+        RecSys Recommender
+      </div>
+      <div class="flex space-x-4">
+        <a href="/recsys-recommender/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Recommendations
+        </a>
+        <a href="/recsys-recommender/items/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Items
+        </a>
+        <a href="/recsys-recommender/collections/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Collections
+        </a>
+        <a href="/recsys-recommender/embedding/" class="text-gray-700 hover:text-blue-600 font-medium">
+          Embedding
+        </a>
+      </div>
+    </nav>
   </div>
-  <a class="item" href="/recsys-recommender/">
-    Recommendations
-  </a>
-  <a class="item" href="/recsys-recommender/embedding/">
-    Embedding
-  </a>
-</div>
 
-<div class="ui inverted main container">
-  <div class="ui masthead vertical segment">
-    
-
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded shadow">
+      
 
   
+    <div class="mb-8 space-y-4">
+      <h3 class="text-xl font-semibold">deepseek-r1:32b</h3>
 
-    <div class="item">
-      <h3>deepseek-r1:32b</h3>
-      <div class="ui segment">
-        <h4>Prompt</h4>
-        <pre><code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Prompt</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>You are an intelligent assistant tasked with categorizing research articles to create a user-friendly, navigable interface. Your goal is to assign each article to multiple relevant categories to ensure that users can seamlessly explore and discover content.
 
 Key Objectives:
 
@@ -78,9 +90,11 @@ Abstract:
 Recommendation systems rely on user-provided data to learn about item quality and provide personalized recommendations. An implicit assumption when aggregating ratings into item quality is that ratings are strong indicators of item quality. In this work, we analyze this assumption using data collected from a music discovery application. Our study focuses on two factors that cause rating inflation: heterogeneous user rating behavior and the dynamics of personalized recommendations. We show that user rating behavior is significantly variable, leading to item quality estimates that reflect the users who rated an item more than the item quality itself. Additionally, items that are more likely to be shown via personalized recommendations can experience a substantial increase in their exposure and potential bias toward them. To mitigate these effects, we conducted a randomized controlled trial where the rating interface was modified. This resulted in a substantial improvement in user rating behavior and a reduction in item quality inflation. These findings highlight the importance of carefully considering the assumptions underlying recommendation systems and designing interfaces that encourage accurate rating behavior.
 </code></pre>
       </div>
-      <div class="ui segment">
-        <h4>Response</h4>
-        <pre><code>&lt;think&gt;
+
+      <div class="bg-gray-100 rounded p-4">
+        <h4 class="font-medium mb-2">Response</h4>
+        <pre class="whitespace-pre-wrap break-words bg-white p-2 rounded text-sm">
+<code>&lt;think&gt;
 Okay, so I need to categorize this research article into multiple relevant categories based on its content. The title is &#34;Interface Design to Mitigate Inflation in Recommender Systems,&#34; and the abstract talks about how recommendation systems use user ratings but sometimes those ratings aren&#39;t accurate because of things like heterogeneous user behavior and personalized recommendations causing inflation. They did a study using a music discovery app, modified the rating interface, and saw improvements.
 
 First, I should look at the main themes here. The article is about recommendation systems, so that&#39;s a broad category. It specifically discusses user ratings and how they can be inflated, which ties into issues like bias in recommendations. They mention interface design as a solution, so that&#39;s another category. 
@@ -97,15 +111,11 @@ So putting it all together, I need to map these themes into categories without o
 Recommendation Systems, User Behavior, Rating Inflation, Interface Design, Randomized Controlled Trials, Personalization Strategies, Music Discovery, Bias Mitigation, Data Quality, Evaluation of Recommendations</code></pre>
       </div>
     </div>
-
   
 
 
+    </div>
   </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </body>
 
