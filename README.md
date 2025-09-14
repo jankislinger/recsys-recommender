@@ -20,9 +20,9 @@ make docker-run
 ## Testing
 
 ```shell
-curl -X POST "http://127.0.0.1:8000/rank-categories" \
+curl -X POST -s "http://127.0.0.1:8000/rank-categories" \
     -H "Content-Type: application/json" \
-    -d '{"item_ids": ["15", "174", "53", "22"]}'
+    -d '{"item_ids": ["15", "174", "53", "22"]}' | jq
 ```
 
 ```

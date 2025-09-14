@@ -22,8 +22,8 @@ RUN --mount=type=cache,target=/root/.cache/rustup \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
     uv sync --locked --no-dev --compile-bytecode
 
-COPY app /recsys-recommender/app
-COPY gunicorn.conf.py /recsys-recommender/gunicorn.conf.py
+COPY app ./app
+COPY gunicorn.conf.py ./gunicorn.conf.py
 
 EXPOSE 8000
 ENV PORT=8000

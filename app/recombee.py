@@ -1,15 +1,11 @@
 import os
-from typing import TypedDict
 
 from recombee_api_client import api_client, api_requests
 
-
-class ItemResponse(TypedDict):
-    itemId: str
-    labels: list[str]
+from app.recommender import ItemGetter, ItemResponse
 
 
-class RecombeeClient:
+class RecombeeClient(ItemGetter):
     def __init__(self):
         self.base_client = api_client.RecombeeClient(
             database_id=os.environ["RECOMBEE_DATABASE_ID"],

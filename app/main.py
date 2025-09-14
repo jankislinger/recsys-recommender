@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from app.recommender import create_backend
+from app.recombee import RecombeeClient
+from app.recommender import Backend
 
 
 class RankCategoriesRequest(BaseModel):
@@ -13,7 +14,8 @@ class RankCategoriesResponse(BaseModel):
 
 
 app = FastAPI(title="RecSys Recommender")
-backend = create_backend()
+recombee = RecombeeClient()
+backend = Backend(recombee)
 backend.summary()
 
 OFFSET = 5  # score of item[offset] is 0.5

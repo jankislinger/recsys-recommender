@@ -1,8 +1,7 @@
-import multiprocessing
 import os
 
 bind = os.getenv("BIND", "0.0.0.0:8000")
-workers = int(os.getenv("WORKERS", multiprocessing.cpu_count() * 2 + 1))
+workers = 1  # to share the updated set of items
 worker_class = "uvicorn.workers.UvicornWorker"
 threads = int(os.getenv("THREADS", "1"))
 
